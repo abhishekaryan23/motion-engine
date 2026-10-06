@@ -1,0 +1,22 @@
+{
+  "version": "0.2",
+  "title": "kinetic_poster",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "Attention is the scarcest thing",
+      "primary": { "kind": "phrase", "value": "every alert costs focus", "meaning": "attention" },
+      "secondary": { "kind": "phrase", "value": "protect it deliberately" },
+      "relationship": "replace",
+      "energy": "building",
+      "keyword": "scarcest"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "Quiet is a feature",
+      "primary": { "kind": "phrase", "value": "silence ships", "meaning": "result" },
+      "energy": "building"
+    }
+  ]
+}

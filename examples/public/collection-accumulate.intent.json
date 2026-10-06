@@ -1,0 +1,25 @@
+{
+  "version": "0.2",
+  "title": "backpack_weight",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "Small things fill the bag.",
+      "primary": {
+        "kind": "collection",
+        "meaning": "things packed",
+        "items": [
+          { "kind": "phrase", "value": "Water bottle" },
+          { "kind": "phrase", "value": "Jacket" },
+          { "kind": "phrase", "value": "Laptop" },
+          { "kind": "phrase", "value": "Books" }
+        ]
+      },
+      "secondary": { "kind": "number", "value": "9 kg", "meaning": "on your back" },
+      "relationship": "accumulate",
+      "energy": "building",
+      "keyword": "weight"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "version": "0.2",
+  "title": "ai_learns",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "How AI actually learns",
+      "narration": "Every chatbot you have ever talked to started out knowing absolutely nothing.",
+      "primary": { "kind": "object", "asset": "robot", "meaning": "a blank model" },
+      "energy": "impact",
+      "keyword": "learns"
+    },
+    {
+      "purpose": "explain",
+      "statement": "It reads. A lot.",
+      "narration": "So we feed it text: billions of sentences from books, websites and everyday conversations.",
+      "primary": { "kind": "phrase", "value": "Billions of sentences", "meaning": "training data" },
+      "secondary": { "kind": "object", "asset": "server_rack", "meaning": "data centre" },
+      "energy": "building",
+      "keyword": "billions"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "Guess the next word",
+      "narration": "Its only job is to guess the next word, again and again, getting a tiny bit less wrong every time.",
+      "primary": { "kind": "object", "asset": "brain_circuit", "meaning": "prediction" },
+      "energy": "building",
+      "keyword": "guess"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "Patterns, not facts",
+      "narration": "After enough guesses it does not memorise facts. It learns the patterns behind them.",
+      "primary": { "kind": "object", "asset": "neural_network", "meaning": "patterns" },
+      "energy": "impact",
+      "keyword": "patterns"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "Why it sounds human",
+      "narration": "That is why it can sound so human, and also why it can be confidently wrong.",
+      "primary": { "kind": "object", "asset": "chat_bubbles", "meaning": "conversation" },
+      "energy": "calm",
+      "keyword": "human"
+    }
+  ]
+}

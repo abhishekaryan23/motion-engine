@@ -1,0 +1,9 @@
+{
+  "title": "Buffett cash",
+  "beats": [
+    {"say": "Warren Buffett is sitting on 381 billion dollars in cash.", "show": "Buffett's cash pile",
+     "number": "$381B", "meaning": "cash reserves", "picture": "money_stack"},
+    {"say": "He has been selling stocks for three straight years now.", "number": "36 months", "keyword": "selloff", "energy": "calm"},
+    {"say": "That is the biggest cash pile any company has ever held.", "number": "#1", "meaning": "record", "energy": "impact"}
+  ]
+}

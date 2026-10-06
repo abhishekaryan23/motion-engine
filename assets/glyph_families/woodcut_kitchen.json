@@ -1,0 +1,665 @@
+{
+ "family": "woodcut_kitchen",
+ "font": "Counterscraps.otf",
+ "licence": "CC0 1.0 (Raymond Larabie)",
+ "credit": "Counterscraps by Raymond Larabie (CC0)",
+ "ink": "#1d1b19",
+ "glyphs": [
+  {
+   "char": "!",
+   "id": "spatula",
+   "subject": "spatula",
+   "tags": [
+    "spatula",
+    "cooking",
+    "kitchen"
+   ]
+  },
+  {
+   "char": "\"",
+   "id": "spoon",
+   "subject": "spoon",
+   "tags": [
+    "spoon",
+    "eat",
+    "kitchen"
+   ]
+  },
+  {
+   "char": "#",
+   "id": "measuring_spoons",
+   "subject": "measuring spoons",
+   "tags": [
+    "measure",
+    "spoons",
+    "baking",
+    "recipe"
+   ]
+  },
+  {
+   "char": "$",
+   "id": "knife",
+   "subject": "knife",
+   "tags": [
+    "knife",
+    "cut",
+    "kitchen"
+   ]
+  },
+  {
+   "char": "%",
+   "id": "fork",
+   "subject": "fork",
+   "tags": [
+    "fork",
+    "eat",
+    "meal"
+   ]
+  },
+  {
+   "char": "&",
+   "id": "mixing_bowl",
+   "subject": "mixing bowl",
+   "tags": [
+    "bowl",
+    "mixing",
+    "baking"
+   ]
+  },
+  {
+   "char": "'",
+   "id": "hand_mixer",
+   "subject": "hand mixer",
+   "tags": [
+    "mixer",
+    "baking",
+    "whip"
+   ]
+  },
+  {
+   "char": "(",
+   "id": "frying_pan",
+   "subject": "frying pan",
+   "tags": [
+    "pan",
+    "frying",
+    "cook",
+    "cooking"
+   ]
+  },
+  {
+   "char": ")",
+   "id": "cooking_pot",
+   "subject": "steaming pot",
+   "tags": [
+    "pot",
+    "soup",
+    "cooking",
+    "stew",
+    "boil"
+   ]
+  },
+  {
+   "char": "*",
+   "id": "banana_bunch",
+   "subject": "banana bunch",
+   "tags": [
+    "bananas",
+    "banana",
+    "fruit"
+   ]
+  },
+  {
+   "char": "0",
+   "id": "salt_and_pepper",
+   "subject": "salt and pepper",
+   "tags": [
+    "salt",
+    "pepper",
+    "seasoning",
+    "spice"
+   ]
+  },
+  {
+   "char": "4",
+   "id": "steak",
+   "subject": "steak",
+   "tags": [
+    "steak",
+    "meat",
+    "beef",
+    "dinner"
+   ]
+  },
+  {
+   "char": "5",
+   "id": "stove",
+   "subject": "stove",
+   "tags": [
+    "stove",
+    "oven",
+    "kitchen",
+    "cook"
+   ]
+  },
+  {
+   "char": "6",
+   "id": "potato",
+   "subject": "potato",
+   "tags": [
+    "potato",
+    "vegetable",
+    "potatoes"
+   ]
+  },
+  {
+   "char": "7",
+   "id": "toaster",
+   "subject": "toaster",
+   "tags": [
+    "toaster",
+    "toast",
+    "breakfast"
+   ]
+  },
+  {
+   "char": "8",
+   "id": "tomato",
+   "subject": "tomato",
+   "tags": [
+    "tomato",
+    "vegetable",
+    "tomatoes"
+   ]
+  },
+  {
+   "char": "9",
+   "id": "wine",
+   "subject": "wine bottle and glass",
+   "tags": [
+    "wine",
+    "drink",
+    "alcohol",
+    "dinner"
+   ]
+  },
+  {
+   "char": "A",
+   "id": "banana",
+   "subject": "banana",
+   "tags": [
+    "banana",
+    "fruit"
+   ]
+  },
+  {
+   "char": "B",
+   "id": "beetroot",
+   "subject": "beetroot",
+   "tags": [
+    "beetroot",
+    "vegetable",
+    "beet"
+   ]
+  },
+  {
+   "char": "C",
+   "id": "strawberry",
+   "subject": "strawberry",
+   "tags": [
+    "strawberry",
+    "fruit",
+    "berry"
+   ]
+  },
+  {
+   "char": "D",
+   "id": "blender",
+   "subject": "blender",
+   "tags": [
+    "blender",
+    "smoothie",
+    "kitchen"
+   ]
+  },
+  {
+   "char": "E",
+   "id": "milk_jug",
+   "subject": "milk jug",
+   "tags": [
+    "milk",
+    "jug",
+    "dairy"
+   ]
+  },
+  {
+   "char": "F",
+   "id": "bread",
+   "subject": "loaf of bread",
+   "tags": [
+    "bread",
+    "loaf",
+    "bakery",
+    "groceries",
+    "food"
+   ]
+  },
+  {
+   "char": "G",
+   "id": "broccoli",
+   "subject": "broccoli",
+   "tags": [
+    "broccoli",
+    "vegetable",
+    "healthy"
+   ]
+  },
+  {
+   "char": "H",
+   "id": "cake",
+   "subject": "slice of cake",
+   "tags": [
+    "cake",
+    "dessert",
+    "birthday",
+    "sweet"
+   ]
+  },
+  {
+   "char": "I",
+   "id": "whisk",
+   "subject": "whisk",
+   "tags": [
+    "whisk",
+    "baking"
+   ]
+  },
+  {
+   "char": "J",
+   "id": "carrot",
+   "subject": "carrot",
+   "tags": [
+    "carrot",
+    "vegetable"
+   ]
+  },
+  {
+   "char": "K",
+   "id": "celery",
+   "subject": "celery",
+   "tags": [
+    "celery",
+    "vegetable"
+   ]
+  },
+  {
+   "char": "L",
+   "id": "cheese",
+   "subject": "cheese",
+   "tags": [
+    "cheese",
+    "dairy"
+   ]
+  },
+  {
+   "char": "M",
+   "id": "cleaver",
+   "subject": "cleaver",
+   "tags": [
+    "cleaver",
+    "butcher",
+    "cut"
+   ]
+  },
+  {
+   "char": "N",
+   "id": "orange",
+   "subject": "orange slice",
+   "tags": [
+    "orange",
+    "citrus",
+    "fruit"
+   ]
+  },
+  {
+   "char": "O",
+   "id": "ice_cream",
+   "subject": "ice cream cone",
+   "tags": [
+    "ice",
+    "cream",
+    "dessert",
+    "summer"
+   ]
+  },
+  {
+   "char": "P",
+   "id": "cucumber",
+   "subject": "cucumber",
+   "tags": [
+    "cucumber",
+    "vegetable",
+    "salad"
+   ]
+  },
+  {
+   "char": "Q",
+   "id": "coffee_mug",
+   "subject": "coffee mug",
+   "tags": [
+    "coffee",
+    "mug",
+    "tea",
+    "break",
+    "morning"
+   ]
+  },
+  {
+   "char": "R",
+   "id": "sundae",
+   "subject": "sundae",
+   "tags": [
+    "sundae",
+    "dessert",
+    "treat"
+   ]
+  },
+  {
+   "char": "S",
+   "id": "chicken_leg",
+   "subject": "chicken leg",
+   "tags": [
+    "chicken",
+    "meat",
+    "leg"
+   ]
+  },
+  {
+   "char": "T",
+   "id": "drumstick",
+   "subject": "drumstick",
+   "tags": [
+    "drumstick",
+    "chicken",
+    "meat"
+   ]
+  },
+  {
+   "char": "U",
+   "id": "egg",
+   "subject": "egg in a cup",
+   "tags": [
+    "egg",
+    "breakfast",
+    "eggs"
+   ]
+  },
+  {
+   "char": "V",
+   "id": "fish",
+   "subject": "fish",
+   "tags": [
+    "fish",
+    "seafood"
+   ]
+  },
+  {
+   "char": "W",
+   "id": "flour_sack",
+   "subject": "flour sack",
+   "tags": [
+    "flour",
+    "sack",
+    "baking",
+    "groceries"
+   ]
+  },
+  {
+   "char": "X",
+   "id": "food_processor",
+   "subject": "food processor",
+   "tags": [
+    "processor",
+    "kitchen",
+    "appliance"
+   ]
+  },
+  {
+   "char": "Z",
+   "id": "fried_egg",
+   "subject": "fried egg",
+   "tags": [
+    "egg",
+    "breakfast",
+    "fried"
+   ]
+  },
+  {
+   "char": "b",
+   "id": "garlic",
+   "subject": "garlic",
+   "tags": [
+    "garlic",
+    "spice"
+   ]
+  },
+  {
+   "char": "c",
+   "id": "grapes",
+   "subject": "grapes",
+   "tags": [
+    "grapes",
+    "fruit",
+    "wine"
+   ]
+  },
+  {
+   "char": "d",
+   "id": "chili",
+   "subject": "chili pepper",
+   "tags": [
+    "chili",
+    "spicy",
+    "hot",
+    "pepper"
+   ]
+  },
+  {
+   "char": "e",
+   "id": "kettle",
+   "subject": "kettle",
+   "tags": [
+    "kettle",
+    "tea",
+    "boil"
+   ]
+  },
+  {
+   "char": "g",
+   "id": "lemon",
+   "subject": "lemon",
+   "tags": [
+    "lemon",
+    "citrus",
+    "sour"
+   ]
+  },
+  {
+   "char": "h",
+   "id": "eggplant",
+   "subject": "eggplant",
+   "tags": [
+    "eggplant",
+    "vegetable",
+    "aubergine"
+   ]
+  },
+  {
+   "char": "i",
+   "id": "bowl",
+   "subject": "bowl",
+   "tags": [
+    "bowl",
+    "meal"
+   ]
+  },
+  {
+   "char": "j",
+   "id": "milk_carton",
+   "subject": "milk carton and glass",
+   "tags": [
+    "milk",
+    "carton",
+    "dairy",
+    "groceries"
+   ]
+  },
+  {
+   "char": "l",
+   "id": "muffin",
+   "subject": "muffin",
+   "tags": [
+    "muffin",
+    "bakery",
+    "snack"
+   ]
+  },
+  {
+   "char": "m",
+   "id": "mushrooms",
+   "subject": "mushrooms",
+   "tags": [
+    "mushrooms",
+    "mushroom",
+    "vegetable"
+   ]
+  },
+  {
+   "char": "n",
+   "id": "microwave",
+   "subject": "microwave oven",
+   "tags": [
+    "microwave",
+    "appliance",
+    "kitchen"
+   ]
+  },
+  {
+   "char": "o",
+   "id": "onion",
+   "subject": "onion",
+   "tags": [
+    "onion",
+    "vegetable"
+   ]
+  },
+  {
+   "char": "p",
+   "id": "peach",
+   "subject": "peach",
+   "tags": [
+    "peach",
+    "fruit"
+   ]
+  },
+  {
+   "char": "q",
+   "id": "pear",
+   "subject": "pear",
+   "tags": [
+    "pear",
+    "fruit"
+   ]
+  },
+  {
+   "char": "r",
+   "id": "peas",
+   "subject": "pea pod",
+   "tags": [
+    "peas",
+    "vegetable"
+   ]
+  },
+  {
+   "char": "s",
+   "id": "bell_pepper",
+   "subject": "bell pepper",
+   "tags": [
+    "pepper",
+    "vegetable",
+    "capsicum"
+   ]
+  },
+  {
+   "char": "t",
+   "id": "coffee_maker",
+   "subject": "coffee maker",
+   "tags": [
+    "coffee",
+    "maker",
+    "machine",
+    "morning"
+   ]
+  },
+  {
+   "char": "u",
+   "id": "pie",
+   "subject": "pie",
+   "tags": [
+    "pie",
+    "dessert",
+    "bakery"
+   ]
+  },
+  {
+   "char": "v",
+   "id": "pineapple",
+   "subject": "pineapple",
+   "tags": [
+    "pineapple",
+    "fruit",
+    "tropical"
+   ]
+  },
+  {
+   "char": "w",
+   "id": "soup_pot",
+   "subject": "pot of soup",
+   "tags": [
+    "soup",
+    "pot",
+    "cooking"
+   ]
+  },
+  {
+   "char": "x",
+   "id": "roast",
+   "subject": "roast leg",
+   "tags": [
+    "roast",
+    "meat",
+    "dinner"
+   ]
+  },
+  {
+   "char": "y",
+   "id": "salad_bowl",
+   "subject": "salad bowl",
+   "tags": [
+    "salad",
+    "healthy",
+    "bowl"
+   ]
+  },
+  {
+   "char": "z",
+   "id": "sandwich",
+   "subject": "sandwich",
+   "tags": [
+    "sandwich",
+    "lunch",
+    "snack"
+   ]
+  }
+ ]
+}

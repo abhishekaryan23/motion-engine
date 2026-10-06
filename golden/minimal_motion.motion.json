@@ -1,0 +1,273 @@
+{
+  "version": "0.2",
+  "project": {
+    "name": "golden_minimal_motion",
+    "duration_seconds": 3.0
+  },
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "background": "#ECE3D2"
+  },
+  "theme": {
+    "fonts": {
+      "display": "font.archivo_black",
+      "display_condensed": "font.anton",
+      "serif_emotional": "font.dm_serif_italic",
+      "body": "font.fira_sans",
+      "mono": "font.space_mono",
+      "number": "font.anton"
+    },
+    "palette": {
+      "accent": "#D63A2B",
+      "cobalt": "#1F3FBF",
+      "ink": "#16130F",
+      "paper": "#ECE3D2"
+    }
+  },
+  "assets": [
+    {
+      "id": "font.archivo_black",
+      "type": "font",
+      "path": "fonts/ArchivoBlack-Regular.ttf"
+    },
+    {
+      "id": "font.anton",
+      "type": "font",
+      "path": "fonts/Anton-Regular.ttf"
+    },
+    {
+      "id": "font.dm_serif_italic",
+      "type": "font",
+      "path": "fonts/DMSerifDisplay-Italic.ttf"
+    },
+    {
+      "id": "font.fira_sans",
+      "type": "font",
+      "path": "fonts/FiraSans-Regular.ttf"
+    },
+    {
+      "id": "font.space_mono",
+      "type": "font",
+      "path": "fonts/SpaceMono-Regular.ttf"
+    }
+  ],
+  "asset_root": "../assets",
+  "scenes": [
+    {
+      "id": "minimal",
+      "start_seconds": 0.0,
+      "duration_seconds": 3.0,
+      "layers": [
+        {
+          "id": "bg.paper",
+          "type": "texture",
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1920,
+          "material": "paper",
+          "seed": 33,
+          "color": "#ECE3D2",
+          "intensity": 0.6,
+          "scale": 10
+        },
+        {
+          "id": "kick",
+          "type": "text",
+          "x": 90,
+          "y": 700,
+          "width": 331.94,
+          "height": 27.44,
+          "text": "FIELD NOTES / 07",
+          "font_role": "mono",
+          "font_size": 28,
+          "color": "#16130F",
+          "align": "left",
+          "line_height": 0.98,
+          "letter_spacing": 0.12,
+          "opacity": 0.75
+        },
+        {
+          "id": "h0",
+          "type": "text",
+          "x": 90,
+          "y": 780,
+          "width": 790.02,
+          "height": 105.84,
+          "text": "LESS MOVES,",
+          "font_role": "display",
+          "font_size": 108,
+          "color": "#16130F",
+          "align": "left",
+          "line_height": 0.98,
+          "letter_spacing": -0.02,
+          "font_weight": 900
+        },
+        {
+          "id": "h1",
+          "type": "text",
+          "x": 90,
+          "y": 898,
+          "width": 837.98,
+          "height": 105.84,
+          "text": "MORE MEANS.",
+          "font_role": "display",
+          "font_size": 108,
+          "color": "#16130F",
+          "align": "left",
+          "line_height": 0.98,
+          "letter_spacing": -0.02,
+          "font_weight": 900
+        },
+        {
+          "id": "rule",
+          "type": "rectangle",
+          "x": 90,
+          "y": 1070,
+          "width": 300,
+          "height": 6,
+          "fill": "#D63A2B"
+        },
+        {
+          "id": "cap0",
+          "type": "text",
+          "x": 90,
+          "y": 1130,
+          "width": 574.8,
+          "height": 46.0,
+          "text": "Motion is a way of saying which",
+          "font_role": "body",
+          "font_size": 40,
+          "color": "#16130F",
+          "align": "left",
+          "line_height": 1.15
+        },
+        {
+          "id": "cap1",
+          "type": "text",
+          "x": 90,
+          "y": 1188,
+          "width": 616.6,
+          "height": 46.0,
+          "text": "thing matters right now. Restraint",
+          "font_role": "body",
+          "font_size": 40,
+          "color": "#16130F",
+          "align": "left",
+          "line_height": 1.15
+        },
+        {
+          "id": "cap2",
+          "type": "text",
+          "x": 90,
+          "y": 1246,
+          "width": 511.4,
+          "height": 46.0,
+          "text": "keeps every move readable.",
+          "font_role": "body",
+          "font_size": 40,
+          "color": "#16130F",
+          "align": "left",
+          "line_height": 1.15
+        }
+      ],
+      "motions": [
+        {
+          "target": "h0",
+          "start": 0.25,
+          "duration": 0.75,
+          "easing": "out_quint",
+          "op": "mask_reveal",
+          "direction": "right"
+        },
+        {
+          "target": "h0",
+          "start": 0.25,
+          "duration": 0.75,
+          "easing": "out_quint",
+          "op": "move",
+          "from": [
+            0,
+            32
+          ],
+          "to": [
+            0,
+            0
+          ]
+        },
+        {
+          "target": "h1",
+          "start": 0.47,
+          "duration": 0.75,
+          "easing": "out_quint",
+          "op": "mask_reveal",
+          "direction": "right"
+        },
+        {
+          "target": "h1",
+          "start": 0.47,
+          "duration": 0.75,
+          "easing": "out_quint",
+          "op": "move",
+          "from": [
+            0,
+            32
+          ],
+          "to": [
+            0,
+            0
+          ]
+        },
+        {
+          "target": "rule",
+          "start": 0.95,
+          "duration": 0.6,
+          "easing": "out_quint",
+          "op": "mask_reveal",
+          "direction": "right"
+        },
+        {
+          "target": "cap0",
+          "start": 1.3,
+          "duration": 0.6,
+          "easing": "out_cubic",
+          "op": "fade",
+          "from": 0.0,
+          "to": 0.85
+        },
+        {
+          "target": "cap1",
+          "start": 1.42,
+          "duration": 0.6,
+          "easing": "out_cubic",
+          "op": "fade",
+          "from": 0.0,
+          "to": 0.85
+        },
+        {
+          "target": "cap2",
+          "start": 1.54,
+          "duration": 0.6,
+          "easing": "out_cubic",
+          "op": "fade",
+          "from": 0.0,
+          "to": 0.85
+        }
+      ],
+      "camera": {
+        "motions": [
+          {
+            "start": 0.0,
+            "duration": 3.0,
+            "easing": "linear",
+            "op": "push",
+            "from": 1.0,
+            "to": 1.02
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,480 @@
+{
+  "version": "0.1",
+  "loops": [
+    {
+      "id": "ai_sparkles",
+      "host": "ai_sparkles",
+      "role": "hero_loop",
+      "path": "loops/ai_sparkles",
+      "frame_count": 47,
+      "fps": 12.0,
+      "mode": "loop",
+      "pattern": "frame_%04d.png",
+      "width": 384,
+      "height": 390,
+      "ssim_first_last": 0.974,
+      "source": {
+        "vendor": "openart",
+        "project": "MotionEngine Asset Library",
+        "model": "pixverseV6 image2video 540p 4s (start = end frame)",
+        "history_id": "lGEFYgy17An1yLmvKZ8t"
+      }
+    },
+    {
+      "id": "atom",
+      "host": "atom",
+      "role": "hero_loop",
+      "path": "loops/atom",
+      "frame_count": 47,
+      "fps": 12.0,
+      "mode": "loop",
+      "pattern": "frame_%04d.png",
+      "width": 384,
+      "height": 417,
+      "ssim_first_last": 0.9331,
+      "source": {
+        "vendor": "openart",
+        "project": "MotionEngine Asset Library",
+        "model": "pixverseV6 image2video 540p 4s (start = end frame)",
+        "history_id": "eDS23J3PzN6mI2BvP2Nr"
+      }
+    },
+    {
+      "id": "brain",
+      "host": "brain",
+      "role": "hero_loop",
+      "path": "loops/brain",
+      "frame_count": 47,
+      "fps": 12.0,
+      "mode": "loop",
+      "pattern": "frame_%04d.png",
+      "width": 408,
+      "height": 384,
+      "ssim_first_last": 0.959,
+      "source": {
+        "vendor": "openart",
+        "project": "MotionEngine Asset Library",
+        "model": "pixverseV6 image2video 540p 4s (start = end frame)",
+        "history_id": "WUIswh8lI6QUlnW19Y9P"
+      }
+    },
+    {
+      "id": "brain_circuit",
+      "host": "brain_circuit",
+      "role": "hero_loop",
+      "path": "loops/brain_circuit",
+      "frame_count": 47,
+      "fps": 12.0,
+      "mode": "loop",
+      "pattern": "frame_%04d.png",
+      "width": 415,
+      "height": 384,
+      "ssim_first_last": 0.9835,
+      "source": {
+        "vendor": "openart",
+        "project": "MotionEngine Asset Library",
+        "model": "pixverseV6 image2video 540p 4s (start = end frame)",
+        "history_id": "giixjvtcAZ2sVu0UqkBF"
+      }
+    },
+    {
+      "id": "chat_bubbles",
+      "host": "chat_bubbles",
+      "role": "hero_loop",
+      "path": "loops/chat_bubbles",
+      "frame_count": 47,
+      "fps": 12.0,
+      "mode": "loop",
+      "pattern": "frame_%04d.png",
+      "width": 453,
+      "height": 384,
+      "ssim_first_last": 0.9769,
+      "source": {
+        "vendor": "openart",
+        "project": "MotionEngine Asset Library",
+        "model": "pixverseV6 image2video 540p 4s (start = end frame)",
+        "history_id": "c22bOdQiRerp9jtn80Ip"
+      }
+    },
+    {
+      "id": "compass",
+      "host": "compass",
+      "role": "hero_loop",
+      "path": "loops/compass",
+      "frame_count": 47,
+      "fps": 12.0,
+      "mode": "loop",
+      "pattern": "frame_%04d.png",
+      "width": 384,
+      "height": 469,
+      "ssim_first_last": 0.9597,
+      "source": {
+        "vendor": "openart",
+        "project": "MotionEngine Asset Library",
+        "model": "pixverseV6 image2video 540p 4s (start = end frame)",
+        "history_id": "vBNv5IlVQ7z4e2T8ymiE"
+      }
+    },
+    {
+      "id": "dna_helix",
+      "host": "dna_helix",
+      "role": "hero_loop",
+      "path": "loops/dna_helix",
+      "frame_count": 47,
+      "fps": 12.0,
+      "mode": "loop",
+      "pattern": "frame_%04d.png",
+      "width": 372,
+      "height": 984,
+      "ssim_first_last": 0.9368,
+      "source": {
+        "vendor": "openart",
+        "project": "MotionEngine Asset Library",
+        "model": "pixverseV6 image2video 540p 4s (start = end frame)",
+        "history_id": "baGXF3rBy8nd1pNtOjUY"
+      }
+    },
+    {
+      "id": "drone",
+      "host": "drone",
+      "role": "hero_loop",
+      "path": "loops/drone",
+      "frame_count": 47,
+      "fps": 12.0,
+      "mode": "loop",
+      "pattern": "frame_%04d.png",
+      "width": 589,
+      "height": 384,
+      "ssim_first_last": 0.875,
+      "source": {
+        "vendor": "openart",
+        "project": "MotionEngine Asset Library",
+        "model": "pixverseV6 image2video 540p 4s (start = end frame)",
+        "history_id": "m6OnLcfKy2rEEwhMkIoA"
+      }
+    },
+    {
+      "id": "earth_globe",
+      "host": "earth_globe",
+      "role": "hero_loop",
+      "path": "loops/earth_globe",
+      "frame_count": 47,
+      "fps": 12.0,
+      "mode": "loop",
+      "pattern": "frame_%04d.png",
+      "width": 384,
+      "height": 398,
+      "ssim_first_last": 0.9779,
+      "source": {
+        "vendor": "openart",
+        "project": "MotionEngine Asset Library",
+        "model": "pixverseV6 image2video 540p 4s (start = end frame)",
+        "history_id": "E4Sq7H0gWTBPhrGmperJ"
+      }
+    },
+    {
+      "id": "flask",
+      "host": "flask",
+      "role": "hero_loop",
+      "path": "loops/flask",
+      "frame_count": 47,
+      "fps": 12.0,
+      "mode": "loop",
+      "pattern": "frame_%04d.png",
+      "width": 384,
+      "height": 547,
+      "ssim_first_last": 0.9729,
+      "source": {
+        "vendor": "openart",
+        "project": "MotionEngine Asset Library",
+        "model": "pixverseV6 image2video 540p 4s (start = end frame)",
+        "history_id": "6jcGMNIcoYEFNWFooAy2"
+      }
+    },
+    {
+      "id": "gears",
+      "host": "gears",
+      "role": "hero_loop",
+      "path": "loops/gears",
+      "frame_count": 47,
+      "fps": 12.0,
+      "mode": "loop",
+      "pattern": "frame_%04d.png",
+      "width": 427,
+      "height": 384,
+      "ssim_first_last": 0.9205,
+      "source": {
+        "vendor": "openart",
+        "project": "MotionEngine Asset Library",
+        "model": "pixverseV6 image2video 540p 4s (start = end frame)",
+        "history_id": "n7fiP1DwCkbBGZcRSI84"
+      }
+    },
+    {
+      "id": "heart",
+      "host": "heart",
+      "role": "hero_loop",
+      "path": "loops/heart",
+      "frame_count": 47,
+      "fps": 12.0,
+      "mode": "loop",
+      "pattern": "frame_%04d.png",
+      "width": 416,
+      "height": 384,
+      "ssim_first_last": 0.9142,
+      "source": {
+        "vendor": "openart",
+        "project": "MotionEngine Asset Library",
+        "model": "pixverseV6 image2video 540p 4s (start = end frame)",
+        "history_id": "FNNgnoZzjxy0eXT1KPMj"
+      }
+    },
+    {
+      "id": "microchip",
+      "host": "microchip",
+      "role": "hero_loop",
+      "path": "loops/microchip",
+      "frame_count": 47,
+      "fps": 12.0,
+      "mode": "loop",
+      "pattern": "frame_%04d.png",
+      "width": 384,
+      "height": 387,
+      "ssim_first_last": 0.9647,
+      "source": {
+        "vendor": "openart",
+        "project": "MotionEngine Asset Library",
+        "model": "pixverseV6 image2video 540p 4s (start = end frame)",
+        "history_id": "ZSo9wxax9a5OGZ9PrVPs"
+      }
+    },
+    {
+      "id": "money_bag",
+      "host": "money_bag",
+      "role": "hero_loop",
+      "path": "loops/money_bag",
+      "frame_count": 47,
+      "fps": 12.0,
+      "mode": "loop",
+      "pattern": "frame_%04d.png",
+      "width": 384,
+      "height": 469,
+      "ssim_first_last": 0.9765,
+      "source": {
+        "vendor": "openart",
+        "project": "MotionEngine Asset Library",
+        "model": "pixverseV6 image2video 540p 4s (start = end frame)",
+        "history_id": "JggHBkVFxgFrHBB51fsd"
+      }
+    },
+    {
+      "id": "pie_chart",
+      "host": "pie_chart",
+      "role": "hero_loop",
+      "path": "loops/pie_chart",
+      "frame_count": 47,
+      "fps": 12.0,
+      "mode": "loop",
+      "pattern": "frame_%04d.png",
+      "width": 384,
+      "height": 387,
+      "ssim_first_last": 0.9777,
+      "source": {
+        "vendor": "openart",
+        "project": "MotionEngine Asset Library",
+        "model": "pixverseV6 image2video 540p 4s (start = end frame)",
+        "history_id": "nrZ41PVX2FYAV2pe2Box"
+      }
+    },
+    {
+      "id": "ringed_planet",
+      "host": "ringed_planet",
+      "role": "hero_loop",
+      "path": "loops/ringed_planet",
+      "frame_count": 47,
+      "fps": 12.0,
+      "mode": "loop",
+      "pattern": "frame_%04d.png",
+      "width": 582,
+      "height": 384,
+      "ssim_first_last": 0.9622,
+      "source": {
+        "vendor": "openart",
+        "project": "MotionEngine Asset Library",
+        "model": "pixverseV6 image2video 540p 4s (start = end frame)",
+        "history_id": "JakoIdhbP4Uyy3EgfXzE"
+      }
+    },
+    {
+      "id": "robot",
+      "host": "robot",
+      "role": "hero_loop",
+      "path": "loops/robot",
+      "frame_count": 47,
+      "fps": 12.0,
+      "mode": "loop",
+      "pattern": "frame_%04d.png",
+      "width": 384,
+      "height": 451,
+      "ssim_first_last": 0.9644,
+      "source": {
+        "vendor": "openart",
+        "project": "MotionEngine Asset Library",
+        "model": "pixverseV6 image2video 540p 4s (start = end frame)",
+        "history_id": "RrpJJabI8mV13O5Rh3Ux"
+      }
+    },
+    {
+      "id": "satellite",
+      "host": "satellite",
+      "role": "hero_loop",
+      "path": "loops/satellite",
+      "frame_count": 47,
+      "fps": 12.0,
+      "mode": "loop",
+      "pattern": "frame_%04d.png",
+      "width": 624,
+      "height": 384,
+      "ssim_first_last": 0.9724,
+      "source": {
+        "vendor": "openart",
+        "project": "MotionEngine Asset Library",
+        "model": "pixverseV6 image2video 540p 4s (start = end frame)",
+        "history_id": "t6uK1RsUQ2JdAJgHU4Ei"
+      }
+    },
+    {
+      "id": "sleep_moon",
+      "host": "sleep_moon",
+      "role": "hero_loop",
+      "path": "loops/sleep_moon",
+      "frame_count": 47,
+      "fps": 12.0,
+      "mode": "loop",
+      "pattern": "frame_%04d.png",
+      "width": 384,
+      "height": 432,
+      "ssim_first_last": 0.8884,
+      "source": {
+        "vendor": "openart",
+        "project": "MotionEngine Asset Library",
+        "model": "pixverseV6 image2video 540p 4s (start = end frame)",
+        "history_id": "B1Ty2VQk9QcSCP0jDFza"
+      }
+    },
+    {
+      "id": "sprout",
+      "host": "sprout",
+      "role": "hero_loop",
+      "path": "loops/sprout",
+      "frame_count": 47,
+      "fps": 12.0,
+      "mode": "loop",
+      "pattern": "frame_%04d.png",
+      "width": 384,
+      "height": 471,
+      "ssim_first_last": 0.9482,
+      "source": {
+        "vendor": "openart",
+        "project": "MotionEngine Asset Library",
+        "model": "pixverseV6 image2video 540p 4s (start = end frame)",
+        "history_id": "kMu4W2GVPkki2rgN3Ml0"
+      }
+    },
+    {
+      "id": "stopwatch",
+      "host": "stopwatch",
+      "role": "hero_loop",
+      "path": "loops/stopwatch",
+      "frame_count": 47,
+      "fps": 12.0,
+      "mode": "loop",
+      "pattern": "frame_%04d.png",
+      "width": 384,
+      "height": 472,
+      "ssim_first_last": 0.9768,
+      "source": {
+        "vendor": "openart",
+        "project": "MotionEngine Asset Library",
+        "model": "pixverseV6 image2video 540p 4s (start = end frame)",
+        "history_id": "dUzI2bVkF7P28VyCMV96"
+      }
+    },
+    {
+      "id": "storm_cloud",
+      "host": "storm_cloud",
+      "role": "hero_loop",
+      "path": "loops/storm_cloud",
+      "frame_count": 47,
+      "fps": 12.0,
+      "mode": "loop",
+      "pattern": "frame_%04d.png",
+      "width": 384,
+      "height": 446,
+      "ssim_first_last": 0.9418,
+      "source": {
+        "vendor": "openart",
+        "project": "MotionEngine Asset Library",
+        "model": "pixverseV6 image2video 540p 4s (start = end frame)",
+        "history_id": "dFEmyTlORKghxZ9ejEPb"
+      }
+    },
+    {
+      "id": "thought_cloud",
+      "host": "thought_cloud",
+      "role": "hero_loop",
+      "path": "loops/thought_cloud",
+      "frame_count": 47,
+      "fps": 12.0,
+      "mode": "loop",
+      "pattern": "frame_%04d.png",
+      "width": 384,
+      "height": 411,
+      "ssim_first_last": 0.917,
+      "source": {
+        "vendor": "openart",
+        "project": "MotionEngine Asset Library",
+        "model": "pixverseV6 image2video 540p 4s (start = end frame)",
+        "history_id": "UtsXIB0ADuWsiYN9ExlP"
+      }
+    },
+    {
+      "id": "trend_arrow",
+      "host": "trend_arrow",
+      "role": "hero_loop",
+      "path": "loops/trend_arrow",
+      "frame_count": 47,
+      "fps": 12.0,
+      "mode": "loop",
+      "pattern": "frame_%04d.png",
+      "width": 462,
+      "height": 384,
+      "ssim_first_last": 0.954,
+      "source": {
+        "vendor": "openart",
+        "project": "MotionEngine Asset Library",
+        "model": "pixverseV6 image2video 540p 4s (start = end frame)",
+        "history_id": "ikJ6FEU6t1LubBh0jhrr"
+      }
+    },
+    {
+      "id": "virus",
+      "host": "virus",
+      "role": "hero_loop",
+      "path": "loops/virus",
+      "frame_count": 48,
+      "fps": 12.0,
+      "mode": "loop",
+      "pattern": "frame_%04d.png",
+      "width": 384,
+      "height": 401,
+      "ssim_first_last": 0.8618,
+      "source": {
+        "vendor": "openart",
+        "project": "MotionEngine Asset Library",
+        "model": "pixverseV6 image2video 540p 4s (start = end frame)",
+        "history_id": "OPaM81MEabgJPZfhKl9e"
+      }
+    }
+  ]
+}

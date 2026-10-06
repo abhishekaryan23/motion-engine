@@ -1,0 +1,499 @@
+{
+  "case": "dna-translesion-style-transfer-01",
+  "intent": "benchmark-v07/dna-translesion-style-transfer-01/intent/attempt-01.intent.json",
+  "intent_sha256": "5669b9ac8c653e7559ebe9cc0b1e7f35c68113423a921a59efd67f568fcd1c3a",
+  "runs": {
+    "baseline": {
+      "intent_sha256": "5669b9ac8c653e7559ebe9cc0b1e7f35c68113423a921a59efd67f568fcd1c3a",
+      "reference_fingerprint": null,
+      "profile_version": null,
+      "steps": {
+        "asset-prompts": 0,
+        "compile": 0,
+        "contact-sheet": 0,
+        "ffprobe": 0,
+        "plan-assets": 0,
+        "qa-json": 0,
+        "qa-text": 0,
+        "render": 0,
+        "resolve-style": 0,
+        "resolve-style-json": 0
+      },
+      "step_errors": {},
+      "coverage": null,
+      "unsupported_traits": [],
+      "beats": [
+        {
+          "beat": 1,
+          "grammar": "editorial_collage",
+          "decision_source": "procedural",
+          "requests": []
+        },
+        {
+          "beat": 2,
+          "grammar": "split_contrast",
+          "decision_source": "procedural",
+          "requests": []
+        },
+        {
+          "beat": 3,
+          "grammar": "spatial_cause_effect",
+          "decision_source": "procedural",
+          "requests": []
+        },
+        {
+          "beat": 4,
+          "grammar": "split_contrast",
+          "decision_source": "procedural",
+          "requests": []
+        },
+        {
+          "beat": 5,
+          "grammar": "kinetic_poster",
+          "decision_source": "none",
+          "requests": []
+        }
+      ],
+      "visual_qa": {
+        "beats": [
+          {
+            "scene": "beat_1",
+            "type_dominant": true,
+            "figure_share": 0.0
+          },
+          {
+            "scene": "beat_2",
+            "type_dominant": true,
+            "figure_share": 0.0
+          },
+          {
+            "scene": "beat_3",
+            "type_dominant": false,
+            "figure_share": 0.4157
+          },
+          {
+            "scene": "beat_4",
+            "type_dominant": true,
+            "figure_share": 0.0
+          },
+          {
+            "scene": "beat_5",
+            "type_dominant": true,
+            "figure_share": 0.0
+          }
+        ],
+        "pure_type_ratio": 0.8,
+        "verdict": null
+      },
+      "ffprobe": {
+        "width": 1080,
+        "height": 1920,
+        "fps": 30.0,
+        "duration_seconds": 26.167,
+        "codec": "h264"
+      }
+    },
+    "reference-a": {
+      "intent_sha256": "5669b9ac8c653e7559ebe9cc0b1e7f35c68113423a921a59efd67f568fcd1c3a",
+      "reference_fingerprint": "rf1-096ddb7c7cd08658",
+      "profile_version": "0.2",
+      "steps": {
+        "asset-prompts": 0,
+        "compile": 0,
+        "contact-sheet": 0,
+        "ffprobe": 0,
+        "plan-assets": 0,
+        "qa-json": 0,
+        "qa-text": 0,
+        "render": 0,
+        "resolve-style": 0,
+        "resolve-style-json": 0,
+        "validate-reference-style": 0
+      },
+      "step_errors": {},
+      "coverage": {
+        "row_status_counts": {
+          "match": 19,
+          "partial": 3,
+          "unknown": 2
+        },
+        "matched": 19,
+        "partial": 3,
+        "overridden": 0,
+        "unknown": 2,
+        "unsupported": 0,
+        "style_dims": {
+          "palette_character": "match",
+          "typography_character": "match",
+          "material_character": "match",
+          "composition_rhythm": "match",
+          "motion_temperament": "match",
+          "transition_character": "match",
+          "scale_contrast": "match",
+          "layer_activity": "match"
+        }
+      },
+      "unsupported_traits": [
+        "true3d",
+        "live_action_footage",
+        "ui_screen_recording",
+        "device_mockup",
+        "film_or_vhs_artifacts",
+        "motion_blur"
+      ],
+      "beats": [
+        {
+          "beat": 1,
+          "grammar": "hero_object",
+          "decision_source": "generated_image",
+          "requests": [
+            "beat_1.hero_object"
+          ]
+        },
+        {
+          "beat": 2,
+          "grammar": "spatial_cause_effect",
+          "decision_source": "procedural",
+          "requests": []
+        },
+        {
+          "beat": 3,
+          "grammar": "spatial_cause_effect",
+          "decision_source": "procedural",
+          "requests": []
+        },
+        {
+          "beat": 4,
+          "grammar": "spatial_cause_effect",
+          "decision_source": "procedural",
+          "requests": []
+        },
+        {
+          "beat": 5,
+          "grammar": "hero_object",
+          "decision_source": "generated_image",
+          "requests": [
+            "beat_5.hero_object"
+          ]
+        }
+      ],
+      "visual_qa": {
+        "beats": [
+          {
+            "scene": "beat_1",
+            "type_dominant": false,
+            "figure_share": 0.5096
+          },
+          {
+            "scene": "beat_2",
+            "type_dominant": false,
+            "figure_share": 0.4497
+          },
+          {
+            "scene": "beat_3",
+            "type_dominant": false,
+            "figure_share": 0.4246
+          },
+          {
+            "scene": "beat_4",
+            "type_dominant": false,
+            "figure_share": 0.5379
+          },
+          {
+            "scene": "beat_5",
+            "type_dominant": false,
+            "figure_share": 0.4965
+          }
+        ],
+        "pure_type_ratio": 0.0,
+        "verdict": "consistent"
+      },
+      "ffprobe": {
+        "width": 1080,
+        "height": 1920,
+        "fps": 30.0,
+        "duration_seconds": 21.667,
+        "codec": "h264"
+      },
+      "gate": {
+        "style": {
+          "result": "PASS",
+          "applicable": 8,
+          "match_or_partial": 8,
+          "fraction": 1.0,
+          "overridden": []
+        },
+        "visual_language": {
+          "result": "PASS",
+          "weight": "visual",
+          "checks": {
+            "a_verdict_consistent": true,
+            "b_two_distinct_grammars_in_carrying_beats": true,
+            "c_no_avoided_grammar": true,
+            "d_preferred_grammar_used": true,
+            "e_three_carrying_beats": true
+          },
+          "carrying_beats": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "carrying_grammars": [
+            "hero_object",
+            "spatial_cause_effect"
+          ],
+          "avoid": [
+            "cinematic_multiplane",
+            "data_story",
+            "split_contrast"
+          ],
+          "preferred": [
+            "hero_object",
+            "kinetic_poster",
+            "sequential_stack"
+          ]
+        },
+        "overall": "PASS"
+      }
+    },
+    "reference-b": {
+      "intent_sha256": "5669b9ac8c653e7559ebe9cc0b1e7f35c68113423a921a59efd67f568fcd1c3a",
+      "reference_fingerprint": "rf1-b86f9e59dbd08a41",
+      "profile_version": "0.2",
+      "steps": {
+        "asset-prompts": 0,
+        "compile": 0,
+        "contact-sheet": 0,
+        "ffprobe": 0,
+        "plan-assets": 0,
+        "qa-json": 0,
+        "qa-text": 0,
+        "render": 0,
+        "resolve-style": 0,
+        "resolve-style-json": 0,
+        "validate-reference-style": 0
+      },
+      "step_errors": {},
+      "coverage": {
+        "row_status_counts": {
+          "match": 14,
+          "partial": 7,
+          "unknown": 3
+        },
+        "matched": 14,
+        "partial": 7,
+        "overridden": 0,
+        "unknown": 3,
+        "unsupported": 0,
+        "style_dims": {
+          "palette_character": "partial",
+          "typography_character": "partial",
+          "material_character": "unknown",
+          "composition_rhythm": "match",
+          "motion_temperament": "partial",
+          "transition_character": "unknown",
+          "scale_contrast": "match",
+          "layer_activity": "match"
+        }
+      },
+      "unsupported_traits": [
+        "gradient_background",
+        "motion_blur"
+      ],
+      "beats": [
+        {
+          "beat": 1,
+          "grammar": "hero_object",
+          "decision_source": "generated_image",
+          "requests": [
+            "beat_1.hero_object"
+          ]
+        },
+        {
+          "beat": 2,
+          "grammar": "spatial_cause_effect",
+          "decision_source": "procedural",
+          "requests": []
+        },
+        {
+          "beat": 3,
+          "grammar": "spatial_cause_effect",
+          "decision_source": "procedural",
+          "requests": []
+        },
+        {
+          "beat": 4,
+          "grammar": "spatial_cause_effect",
+          "decision_source": "procedural",
+          "requests": []
+        },
+        {
+          "beat": 5,
+          "grammar": "hero_object",
+          "decision_source": "generated_image",
+          "requests": [
+            "beat_5.hero_object"
+          ]
+        }
+      ],
+      "visual_qa": {
+        "beats": [
+          {
+            "scene": "beat_1",
+            "type_dominant": false,
+            "figure_share": 0.4873
+          },
+          {
+            "scene": "beat_2",
+            "type_dominant": false,
+            "figure_share": 0.3351
+          },
+          {
+            "scene": "beat_3",
+            "type_dominant": false,
+            "figure_share": 0.4284
+          },
+          {
+            "scene": "beat_4",
+            "type_dominant": false,
+            "figure_share": 0.3839
+          },
+          {
+            "scene": "beat_5",
+            "type_dominant": false,
+            "figure_share": 0.4495
+          }
+        ],
+        "pure_type_ratio": 0.0,
+        "verdict": "consistent"
+      },
+      "ffprobe": {
+        "width": 1080,
+        "height": 1920,
+        "fps": 30.0,
+        "duration_seconds": 26.167,
+        "codec": "h264"
+      },
+      "gate": {
+        "style": {
+          "result": "PASS",
+          "applicable": 6,
+          "match_or_partial": 6,
+          "fraction": 1.0,
+          "overridden": []
+        },
+        "visual_language": {
+          "result": "PASS",
+          "weight": "visual",
+          "checks": {
+            "a_verdict_consistent": true,
+            "b_two_distinct_grammars_in_carrying_beats": true,
+            "c_no_avoided_grammar": true,
+            "d_preferred_grammar_used": true,
+            "e_three_carrying_beats": true
+          },
+          "carrying_beats": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "carrying_grammars": [
+            "hero_object",
+            "spatial_cause_effect"
+          ],
+          "avoid": [
+            "data_story",
+            "kinetic_poster",
+            "split_contrast"
+          ],
+          "preferred": [
+            "hero_object",
+            "type_image_interlock"
+          ]
+        },
+        "overall": "PASS"
+      }
+    }
+  },
+  "intent_identical_across_runs": true,
+  "data_regression": {
+    "regression": false,
+    "structured_grammars": [
+      "data_story",
+      "evidence_stack",
+      "sequential_stack"
+    ],
+    "findings": [],
+    "runs": {
+      "baseline": {
+        "steps": {
+          "compile": 0,
+          "plan-assets": 0
+        },
+        "step_errors": {},
+        "beats": [
+          {
+            "beat": 1,
+            "grammar": "data_story",
+            "decision_source": "none",
+            "requests": []
+          },
+          {
+            "beat": 2,
+            "grammar": "data_story",
+            "decision_source": "none",
+            "requests": []
+          }
+        ]
+      },
+      "reference-a": {
+        "steps": {
+          "compile": 0,
+          "plan-assets": 0
+        },
+        "step_errors": {},
+        "beats": [
+          {
+            "beat": 1,
+            "grammar": "data_story",
+            "decision_source": "none",
+            "requests": []
+          },
+          {
+            "beat": 2,
+            "grammar": "data_story",
+            "decision_source": "none",
+            "requests": []
+          }
+        ]
+      },
+      "reference-b": {
+        "steps": {
+          "compile": 0,
+          "plan-assets": 0
+        },
+        "step_errors": {},
+        "beats": [
+          {
+            "beat": 1,
+            "grammar": "data_story",
+            "decision_source": "none",
+            "requests": []
+          },
+          {
+            "beat": 2,
+            "grammar": "data_story",
+            "decision_source": "none",
+            "requests": []
+          }
+        ]
+      }
+    },
+    "intent": "benchmark-v02/complaint-rate-reversal-02/attempt-01.intent.json",
+    "intent_sha256": "b470871c5d6340d1aadf1cb00a6cb3f02400cb475d82afdff331108026f4ab73"
+  }
+}

@@ -1,0 +1,344 @@
+{
+  "version": "0.2",
+  "project": {
+    "name": "golden_layout_dynamic_center",
+    "duration_seconds": 3.2
+  },
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "background": "#ECE3D2"
+  },
+  "theme": {
+    "fonts": {
+      "display": "font.archivo_black",
+      "display_condensed": "font.anton",
+      "serif_emotional": "font.dm_serif_italic",
+      "body": "font.fira_sans",
+      "mono": "font.space_mono",
+      "number": "font.anton"
+    },
+    "palette": {
+      "accent": "#D63A2B",
+      "cobalt": "#1F3FBF",
+      "ink": "#16130F",
+      "paper": "#ECE3D2"
+    }
+  },
+  "assets": [
+    {
+      "id": "font.archivo_black",
+      "type": "font",
+      "path": "fonts/ArchivoBlack-Regular.ttf"
+    },
+    {
+      "id": "font.anton",
+      "type": "font",
+      "path": "fonts/Anton-Regular.ttf"
+    },
+    {
+      "id": "font.dm_serif_italic",
+      "type": "font",
+      "path": "fonts/DMSerifDisplay-Italic.ttf"
+    },
+    {
+      "id": "font.fira_sans",
+      "type": "font",
+      "path": "fonts/FiraSans-Regular.ttf"
+    },
+    {
+      "id": "font.space_mono",
+      "type": "font",
+      "path": "fonts/SpaceMono-Regular.ttf"
+    }
+  ],
+  "asset_root": "../assets",
+  "scenes": [
+    {
+      "id": "layout",
+      "start_seconds": 0.0,
+      "duration_seconds": 3.2,
+      "layers": [
+        {
+          "id": "bg.paper",
+          "type": "texture",
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1920,
+          "material": "paper",
+          "seed": 21,
+          "color": "#ECE3D2",
+          "intensity": 0.6,
+          "scale": 10
+        },
+        {
+          "id": "kicker",
+          "type": "text",
+          "x": 90,
+          "y": 70,
+          "width": 393.42,
+          "height": 27.44,
+          "text": "TEXT STAYS ATTACHED",
+          "font_role": "mono",
+          "font_size": 28,
+          "color": "#16130F",
+          "align": "left",
+          "line_height": 0.98,
+          "letter_spacing": 0.12,
+          "opacity": 0.7
+        },
+        {
+          "id": "c1",
+          "type": "rounded_rectangle",
+          "x": 90,
+          "y": 140,
+          "width": 900,
+          "height": 420,
+          "fill": "#1F3FBF",
+          "radius": 36
+        },
+        {
+          "id": "c1.t",
+          "type": "text",
+          "x": 0,
+          "y": 0,
+          "width": 620,
+          "height": 94.08,
+          "text": "COMPRESS",
+          "font_role": "display",
+          "font_size": 96,
+          "color": "#ECE3D2",
+          "align": "center",
+          "line_height": 0.98,
+          "font_weight": 900,
+          "ink": {
+            "top": 15.072,
+            "bottom": 84.672
+          },
+          "layout": {
+            "parent": "c1",
+            "horizontal": "center",
+            "vertical": "center"
+          }
+        },
+        {
+          "id": "c2",
+          "type": "rounded_rectangle",
+          "x": 90,
+          "y": 640,
+          "width": 380,
+          "height": 320,
+          "fill": "#D63A2B",
+          "radius": 28
+        },
+        {
+          "id": "c2.t",
+          "type": "text",
+          "x": 0,
+          "y": 0,
+          "width": 293.3,
+          "height": 82.32,
+          "text": "GROW",
+          "font_role": "display",
+          "font_size": 84,
+          "color": "#ECE3D2",
+          "align": "left",
+          "line_height": 0.98,
+          "font_weight": 900,
+          "ink": {
+            "top": 13.188,
+            "bottom": 74.088
+          },
+          "layout": {
+            "parent": "c2",
+            "horizontal": "left",
+            "vertical": "top",
+            "padding": {
+              "left": 40,
+              "top": 40,
+              "right": 40,
+              "bottom": 40
+            }
+          }
+        },
+        {
+          "id": "c3",
+          "type": "rounded_rectangle",
+          "x": 540,
+          "y": 1260,
+          "width": 560,
+          "height": 300,
+          "fill": "#16130F",
+          "radius": 32,
+          "anchor_x": 0.5,
+          "anchor_y": 0.5
+        },
+        {
+          "id": "c3.t",
+          "type": "text",
+          "x": 0,
+          "y": 0,
+          "width": 340.02,
+          "height": 70.56,
+          "text": "FOLLOW",
+          "font_role": "display",
+          "font_size": 72,
+          "color": "#ECE3D2",
+          "align": "right",
+          "line_height": 0.98,
+          "font_weight": 900,
+          "ink": {
+            "top": 11.304,
+            "bottom": 63.504
+          },
+          "layout": {
+            "parent": "c3",
+            "horizontal": "right",
+            "vertical": "bottom",
+            "offset": [
+              0,
+              -6
+            ],
+            "padding": {
+              "left": 36,
+              "top": 36,
+              "right": 36,
+              "bottom": 36
+            }
+          }
+        },
+        {
+          "id": "g",
+          "type": "group",
+          "x": 540,
+          "y": 1690,
+          "children": [
+            {
+              "id": "g.card",
+              "type": "rounded_rectangle",
+              "x": -260,
+              "y": -110,
+              "width": 520,
+              "height": 220,
+              "fill": "#F5EFE2",
+              "radius": 30,
+              "stroke": {
+                "color": "#16130F",
+                "width": 6
+              }
+            },
+            {
+              "id": "g.t",
+              "type": "text",
+              "x": 0,
+              "y": 0,
+              "width": 480,
+              "height": 45.08,
+              "text": "IN A GROUP",
+              "font_role": "display",
+              "font_size": 46,
+              "color": "#16130F",
+              "align": "center",
+              "line_height": 0.98,
+              "font_weight": 900,
+              "ink": {
+                "top": 7.222,
+                "bottom": 40.572
+              },
+              "layout": {
+                "parent": "g.card",
+                "horizontal": "center",
+                "vertical": "center"
+              }
+            }
+          ]
+        }
+      ],
+      "motions": [
+        {
+          "target": "c1",
+          "start": 0.4,
+          "duration": 1.5,
+          "easing": "in_out_cubic",
+          "op": "accent_expand",
+          "to": {
+            "x": 90,
+            "y": 280,
+            "width": 900,
+            "height": 140
+          }
+        },
+        {
+          "target": "c2",
+          "start": 0.5,
+          "duration": 1.6,
+          "easing": "in_out_cubic",
+          "op": "accent_expand",
+          "to": {
+            "x": 90,
+            "y": 640,
+            "width": 900,
+            "height": 320
+          }
+        },
+        {
+          "target": "c3",
+          "start": 0.3,
+          "duration": 2.2,
+          "easing": "in_out_cubic",
+          "op": "move",
+          "from": [
+            -120,
+            30
+          ],
+          "to": [
+            110,
+            -40
+          ]
+        },
+        {
+          "target": "c3",
+          "start": 0.3,
+          "duration": 2.2,
+          "easing": "in_out_cubic",
+          "op": "scale",
+          "from": 0.7,
+          "to": 1.2
+        },
+        {
+          "target": "g",
+          "start": 0.4,
+          "duration": 2.3,
+          "easing": "in_out_cubic",
+          "op": "rotate",
+          "from": -9,
+          "to": 7
+        },
+        {
+          "target": "g",
+          "start": 0.4,
+          "duration": 2.3,
+          "easing": "in_out_cubic",
+          "op": "scale",
+          "from": 0.85,
+          "to": 1.1
+        },
+        {
+          "target": "g.card",
+          "start": 0.6,
+          "duration": 1.6,
+          "easing": "in_out_cubic",
+          "op": "accent_expand",
+          "to": {
+            "x": -200,
+            "y": -110,
+            "width": 400,
+            "height": 220
+          }
+        }
+      ]
+    }
+  ]
+}

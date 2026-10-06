@@ -1,0 +1,262 @@
+{
+  "version": "0.2",
+  "title": "five_wait_what",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "Think you know it all?",
+      "narration": "Think you already know all the interesting facts about the world? Nope.",
+      "primary": {
+        "kind": "object",
+        "asset": "world_globe",
+        "meaning": "the world"
+      },
+      "secondary": {
+        "kind": "object",
+        "asset": "magnifying_glass",
+        "meaning": "curiosity"
+      },
+      "energy": "building",
+      "continuity": "carry_primary",
+      "keyword": "world"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "Five real facts",
+      "narration": "These five facts might actually make you say... wait, what? And yes... they're all real.",
+      "primary": {
+        "kind": "object",
+        "asset": "magnifying_glass",
+        "meaning": "five facts"
+      },
+      "secondary": {
+        "kind": "object",
+        "asset": "world_globe",
+        "meaning": "the world"
+      },
+      "energy": "building",
+      "keyword": "real"
+    },
+    {
+      "purpose": "compare",
+      "statement": "Bananas are berries",
+      "narration": "First... bananas are technically berries. And strawberries? Not berries.",
+      "primary": {
+        "kind": "object",
+        "asset": "banana",
+        "meaning": "a true berry"
+      },
+      "secondary": {
+        "kind": "object",
+        "asset": "strawberry",
+        "meaning": "not a berry"
+      },
+      "energy": "building",
+      "keyword": "berries",
+      "relationship": "separate"
+    },
+    {
+      "purpose": "compare",
+      "statement": "Even fruit is confusing",
+      "narration": "According to botanical rules, bananas fit the definition of a berry, while strawberries don't. Basically... even fruits are confusing us.",
+      "primary": {
+        "kind": "object",
+        "asset": "strawberry",
+        "meaning": "doesn't fit"
+      },
+      "secondary": {
+        "kind": "object",
+        "asset": "banana",
+        "meaning": "fits the definition"
+      },
+      "energy": "calm",
+      "keyword": "botany",
+      "relationship": "separate"
+    },
+    {
+      "purpose": "compare",
+      "statement": "Sharks are older than trees",
+      "narration": "Now this one... sharks are older than trees. Sharks have been around for roughly 450 million years.",
+      "primary": {
+        "kind": "object",
+        "asset": "shark",
+        "meaning": "ancient hunter",
+        "value": "450M years"
+      },
+      "secondary": {
+        "kind": "object",
+        "asset": "tree",
+        "meaning": "late arrival",
+        "value": "much later"
+      },
+      "energy": "building",
+      "keyword": "sharks",
+      "relationship": "separate"
+    },
+    {
+      "purpose": "compare",
+      "statement": "Before there were trees",
+      "narration": "Large-scale trees appeared much later. So when Earth didn't even have proper trees yet... sharks were already swimming around.",
+      "primary": {
+        "kind": "object",
+        "asset": "shark",
+        "meaning": "already swimming"
+      },
+      "secondary": {
+        "kind": "object",
+        "asset": "tree",
+        "meaning": "appeared later"
+      },
+      "energy": "calm",
+      "keyword": "later",
+      "relationship": "replace"
+    },
+    {
+      "purpose": "compare",
+      "statement": "Taller in summer",
+      "narration": "Here's something crazy... the Eiffel Tower is actually slightly taller in summer than in winter. Why? Heat.",
+      "primary": {
+        "kind": "object",
+        "asset": "sun",
+        "meaning": "heat"
+      },
+      "secondary": {
+        "kind": "object",
+        "asset": "eiffel_tower",
+        "meaning": "stretches"
+      },
+      "energy": "building",
+      "keyword": "summer",
+      "relationship": "grow"
+    },
+    {
+      "purpose": "compare",
+      "statement": "10 to 15 cm",
+      "narration": "Metal expands when it gets warmer. The Eiffel Tower can change in height by roughly 10 to 15 centimeters. So technically... the Eiffel Tower stretches with the weather.",
+      "primary": {
+        "kind": "object",
+        "asset": "thermometer",
+        "meaning": "warmer"
+      },
+      "secondary": {
+        "kind": "object",
+        "asset": "eiffel_tower",
+        "meaning": "taller"
+      },
+      "energy": "building",
+      "keyword": "expands",
+      "relationship": "grow"
+    },
+    {
+      "purpose": "compare",
+      "statement": "Wombats make cubes",
+      "narration": "There's an animal called the wombat... and its poop? It's cube-shaped. Yes. A cube.",
+      "primary": {
+        "kind": "object",
+        "asset": "wombat",
+        "meaning": "cube maker"
+      },
+      "secondary": {
+        "kind": "object",
+        "asset": "brown_cubes",
+        "meaning": "cubes"
+      },
+      "energy": "building",
+      "keyword": "cube",
+      "relationship": "grow"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "Round is too boring",
+      "narration": "And no, it's not random. The structure of its intestines and the way its muscles contract help create that shape. Nature basically said... round is too boring.",
+      "primary": {
+        "kind": "object",
+        "asset": "brown_cubes",
+        "meaning": "not random"
+      },
+      "secondary": {
+        "kind": "object",
+        "asset": "wombat",
+        "meaning": "cube maker"
+      },
+      "energy": "building",
+      "keyword": "boring"
+    },
+    {
+      "purpose": "compare",
+      "statement": "Older than the Aztecs",
+      "narration": "And now the craziest one... Oxford University is older than the Aztec Empire. Teaching at Oxford dates back to around 1096.",
+      "primary": {
+        "kind": "object",
+        "asset": "oxford_college",
+        "meaning": "teaching began",
+        "value": "1096"
+      },
+      "secondary": {
+        "kind": "object",
+        "asset": "aztec_pyramid",
+        "meaning": "empire rose",
+        "value": "1400s"
+      },
+      "energy": "building",
+      "keyword": "Oxford",
+      "relationship": "separate"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "Centuries",
+      "narration": "The Aztec Empire rose much later, around the fifteenth century. So while the Aztec Empire was still centuries away... people were already studying at Oxford.",
+      "primary": {
+        "kind": "object",
+        "asset": "aztec_pyramid",
+        "meaning": "a later empire"
+      },
+      "secondary": {
+        "kind": "object",
+        "asset": "oxford_college",
+        "meaning": "studying already"
+      },
+      "energy": "impact",
+      "keyword": "centuries"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "Stranger than fiction",
+      "narration": "Next time someone says, “That's impossible”... remember the banana, the shark, the Eiffel Tower, the wombat, and Oxford. The real world is stranger than it looks.",
+      "primary": {
+        "kind": "collection",
+        "meaning": "five real facts",
+        "items": [
+          {
+            "kind": "object",
+            "asset": "banana",
+            "meaning": "banana"
+          },
+          {
+            "kind": "object",
+            "asset": "shark",
+            "meaning": "shark"
+          },
+          {
+            "kind": "object",
+            "asset": "eiffel_tower",
+            "meaning": "Eiffel Tower"
+          },
+          {
+            "kind": "object",
+            "asset": "wombat",
+            "meaning": "wombat"
+          },
+          {
+            "kind": "object",
+            "asset": "oxford_college",
+            "meaning": "Oxford"
+          }
+        ]
+      },
+      "energy": "building",
+      "keyword": "real"
+    }
+  ]
+}

@@ -1,0 +1,1824 @@
+{
+  "version": "0.2",
+  "assets": [
+    {
+      "id": "library.retro_tv",
+      "path": "retro_tv.png",
+      "width": 1044,
+      "height": 801,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.retro_tv"
+      ],
+      "fingerprint": "fp1-f14336250903cf9f",
+      "continuity_key": "retro_tv",
+      "content_hash": "fnv1a64:02e34d20d3797b2a",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.053639848,
+          "y": 0.06991261,
+          "width": 0.8927203,
+          "height": 0.8601748
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.40388572,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "2dddddddddddddd2",
+            "2fffdcccdefffff2",
+            "2f900000002efff2",
+            "2f600000000dfff2",
+            "2f500000000cfff2",
+            "2f400000000bfff2",
+            "2f400000000bfff2",
+            "2f400000000bfff2",
+            "2f500000000cfff2",
+            "2f600000000dfff2",
+            "2fb31000025ffff2",
+            "2ffffeeefffffff2",
+            "2deccccccccccfd2",
+            "0480000000000850",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "left_middle",
+            "rect": {
+              "x": 0.1875,
+              "y": 0.25,
+              "width": 0.3125,
+              "height": 0.4375
+            },
+            "occupancy": 0.0,
+            "score": 0.13671875
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.1875,
+              "y": 0.1875,
+              "width": 0.3125,
+              "height": 0.3125
+            },
+            "occupancy": 0.0,
+            "score": 0.09765625
+          },
+          {
+            "name": "right_middle",
+            "rect": {
+              "x": 0.5,
+              "y": 0.25,
+              "width": 0.1875,
+              "height": 0.4375
+            },
+            "occupancy": 0.0,
+            "score": 0.08203125
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.1875,
+              "y": 0.875,
+              "width": 0.625,
+              "height": 0.125
+            },
+            "occupancy": 0.0,
+            "score": 0.078125
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.25,
+              "y": 0.5,
+              "width": 0.25,
+              "height": 0.25
+            },
+            "occupancy": 0.004166667,
+            "score": 0.062239584
+          },
+          {
+            "name": "right_upper",
+            "rect": {
+              "x": 0.5,
+              "y": 0.1875,
+              "width": 0.1875,
+              "height": 0.3125
+            },
+            "occupancy": 0.008888889,
+            "score": 0.058072917
+          }
+        ],
+        "mean_color": [
+          74,
+          74,
+          74
+        ]
+      },
+      "generator": {
+        "history_id": "cWA55gG9CweTSVXk3ZBY",
+        "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)",
+        "model": "gpt-image-2-5-flare (low, 1k)",
+        "project": "MotionEngine Asset Library",
+        "vendor": "openart"
+      }
+    },
+    {
+      "id": "library.keyboard",
+      "path": "keyboard.png",
+      "width": 1600,
+      "height": 779,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.keyboard"
+      ],
+      "fingerprint": "fp1-b020a72c54ca9553",
+      "continuity_key": "keyboard",
+      "content_hash": "fnv1a64:76a81f04901c1438",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05375,
+          "y": 0.11039794,
+          "width": 0.8925,
+          "height": 0.77920413
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.48064023,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000000000001100",
+            "00000000259cf900",
+            "0000269dfffffc00",
+            "06adffffffffff10",
+            "1fffffffffffff40",
+            "2fffffffffffff70",
+            "0fffffffffffffb0",
+            "0dffffffffffffe0",
+            "0bfffffffffffff2",
+            "09fffffffffffc70",
+            "07fffffffea61000",
+            "05ffffd940000000",
+            "03fc830000000000",
+            "0020000000000000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 1.0,
+              "height": 0.125
+            },
+            "occupancy": 0.004166667,
+            "score": 0.12447917
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.875,
+              "width": 1.0,
+              "height": 0.125
+            },
+            "occupancy": 0.004166667,
+            "score": 0.12447917
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.5625,
+              "y": 0.75,
+              "width": 0.4375,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.109375
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.5,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.09375
+          },
+          {
+            "name": "right_upper",
+            "rect": {
+              "x": 0.5,
+              "y": 0.0,
+              "width": 0.5,
+              "height": 0.125
+            },
+            "occupancy": 0.008333334,
+            "score": 0.061979167
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.875,
+              "width": 0.5,
+              "height": 0.125
+            },
+            "occupancy": 0.008333334,
+            "score": 0.061979167
+          }
+        ],
+        "mean_color": [
+          158,
+          158,
+          158
+        ]
+      },
+      "generator": {
+        "history_id": "7uJT2pGjsr0k2kfKhoez",
+        "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)",
+        "model": "gpt-image-2-5-flare (low, 1k)",
+        "project": "MotionEngine Asset Library",
+        "vendor": "openart"
+      }
+    },
+    {
+      "id": "library.megaphone",
+      "path": "megaphone.png",
+      "width": 919,
+      "height": 794,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.megaphone"
+      ],
+      "fingerprint": "fp1-9e661542a003f559",
+      "continuity_key": "megaphone",
+      "content_hash": "fnv1a64:c93ceddca3e561b5",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.053318825,
+          "y": 0.061712846,
+          "width": 0.89336234,
+          "height": 0.8765743
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.37213266,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000000000000c50",
+            "000000000002cfb0",
+            "00000000039fffe0",
+            "039ccdbadffffff1",
+            "0efffffffffffff2",
+            "2ffffffffffffff2",
+            "0efffffffffffff2",
+            "03aeffb9befffff2",
+            "000aff10016dfff0",
+            "0001ff400001afc0",
+            "0000cf2000000c70",
+            "00008f7000000000",
+            "00003fc000000000",
+            "00000da000000000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.4375,
+              "y": 0.75,
+              "width": 0.5625,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.140625
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.75,
+              "height": 0.1875
+            },
+            "occupancy": 0.0037037036,
+            "score": 0.14010416
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.5,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.125
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.5,
+              "y": 0.75,
+              "width": 0.5,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.125
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.625,
+              "width": 0.25,
+              "height": 0.375
+            },
+            "occupancy": 0.0027777778,
+            "score": 0.09348959
+          },
+          {
+            "name": "right_upper",
+            "rect": {
+              "x": 0.5,
+              "y": 0.0,
+              "width": 0.25,
+              "height": 0.1875
+            },
+            "occupancy": 0.011111111,
+            "score": 0.046354167
+          }
+        ],
+        "mean_color": [
+          110,
+          110,
+          110
+        ]
+      },
+      "generator": {
+        "history_id": "lBgwpE7rSquxrDTXxiC3",
+        "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)",
+        "model": "gpt-image-2-5-flare (low, 1k)",
+        "project": "MotionEngine Asset Library",
+        "vendor": "openart"
+      }
+    },
+    {
+      "id": "library.rotary_phone",
+      "path": "rotary_phone.png",
+      "width": 901,
+      "height": 717,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.rotary_phone"
+      ],
+      "fingerprint": "fp1-78ea41445328f64a",
+      "continuity_key": "rotary_phone",
+      "content_hash": "fnv1a64:6f735f2b8e964594",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05327414,
+          "y": 0.066945605,
+          "width": 0.8934517,
+          "height": 0.8661088
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.55345446,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "000037adedb73000",
+            "001bfffffffffc30",
+            "01affdea99eaffd0",
+            "08bffeeffffbfff1",
+            "0c9ffffffffffff2",
+            "0d275fffffff9ba0",
+            "0e005fffffff7000",
+            "1d00afffffffb000",
+            "2e06ffffffffe000",
+            "2e3efffffffff100",
+            "0edafffffffff300",
+            "0595fffffffff400",
+            "0006fffffffff500",
+            "0002d978888ad200",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.875,
+              "y": 0.5,
+              "width": 0.125,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.9375,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          },
+          {
+            "name": "right_middle",
+            "rect": {
+              "x": 0.8125,
+              "y": 0.4375,
+              "width": 0.1875,
+              "height": 0.25
+            },
+            "occupancy": 0.0055555557,
+            "score": 0.046614584
+          }
+        ],
+        "mean_color": [
+          65,
+          65,
+          65
+        ]
+      },
+      "generator": {
+        "history_id": "3lSBfkpOUHb7Jo02CAnA",
+        "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)",
+        "model": "gpt-image-2-5-flare (low, 1k)",
+        "project": "MotionEngine Asset Library",
+        "vendor": "openart"
+      }
+    },
+    {
+      "id": "library.cassette",
+      "path": "cassette.png",
+      "width": 920,
+      "height": 632,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.cassette"
+      ],
+      "fingerprint": "fp1-e72f9ae68f1c704b",
+      "continuity_key": "cassette",
+      "content_hash": "fnv1a64:41ca4317f1e3bb55",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05326087,
+          "y": 0.07753164,
+          "width": 0.8934783,
+          "height": 0.8449367
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.7378629,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0abbbbbbbbbbbba0",
+            "0ffffffffffffff0",
+            "0ffffffffffffff0",
+            "0ffffffffffffff0",
+            "0ffffffffffffff0",
+            "0ffffffffffffff0",
+            "0ffffffffffffff0",
+            "0ffffffffffffff0",
+            "1ffffffffffffff1",
+            "2ffffffffffffff2",
+            "2ffffffffffffff2",
+            "2ffffffffffffff2",
+            "0fffcffffffcfff1",
+            "0abc9cccccc9bba0",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.9375,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          }
+        ],
+        "mean_color": [
+          121,
+          121,
+          121
+        ]
+      },
+      "generator": {
+        "history_id": "U7S38H3RzSWsxeAikw18",
+        "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)",
+        "model": "gpt-image-2-5-flare (low, 1k)",
+        "project": "MotionEngine Asset Library",
+        "vendor": "openart"
+      }
+    },
+    {
+      "id": "library.film_camera",
+      "path": "film_camera.png",
+      "width": 913,
+      "height": 548,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.film_camera"
+      ],
+      "fingerprint": "fp1-8ce6e7f7209a2fa0",
+      "continuity_key": "film_camera",
+      "content_hash": "fnv1a64:6e0dd1352f7d16fb",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05366922,
+          "y": 0.08941606,
+          "width": 0.8926616,
+          "height": 0.8211679
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.6629484,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0023681110002830",
+            "05dfffefffeeef80",
+            "09ffffffffffffa0",
+            "09ffffffffffffa0",
+            "0bffffffffffffb0",
+            "2fffffffffffffd2",
+            "0bffffffffffffb0",
+            "09ffffffffffffa0",
+            "09ffffffffffffa0",
+            "09ffffffffffffa0",
+            "09ffffffffffffa0",
+            "09ffffffffffffb0",
+            "0affffffffffffa0",
+            "0599999999988850",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.9375,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          }
+        ],
+        "mean_color": [
+          90,
+          90,
+          90
+        ]
+      },
+      "generator": {
+        "history_id": "ObgSwZwSluwkLnVtczQB",
+        "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)",
+        "model": "gpt-image-2-5-flare (low, 1k)",
+        "project": "MotionEngine Asset Library",
+        "vendor": "openart"
+      }
+    },
+    {
+      "id": "library.typewriter",
+      "path": "typewriter.png",
+      "width": 870,
+      "height": 819,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.typewriter"
+      ],
+      "fingerprint": "fp1-3ab56c09a27a7601",
+      "continuity_key": "typewriter",
+      "content_hash": "fnv1a64:90215446f0ed86b9",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05402299,
+          "y": 0.057387058,
+          "width": 0.891954,
+          "height": 0.8852259
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.612777,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000011111110000",
+            "00006fffffff8000",
+            "00007fffffff9100",
+            "007dfffffffffe40",
+            "04dfffffffffffc2",
+            "078fffffffffffa1",
+            "111fffffffffff30",
+            "003fffffffffff60",
+            "003fffffffffff60",
+            "003fffffffffff60",
+            "004fffffffffff70",
+            "006fffffffffff80",
+            "007fffffffffffa0",
+            "008eaeeddeeebeb0",
+            "006eccccccccce90",
+            "0001000000000100"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.5,
+              "width": 0.125,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.9375,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.008333334,
+            "score": 0.061979167
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.029166667,
+            "score": 0.060677085
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.25,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.046875
+          },
+          {
+            "name": "left_middle",
+            "rect": {
+              "x": 0.0,
+              "y": 0.375,
+              "width": 0.125,
+              "height": 0.375
+            },
+            "occupancy": 0.011111111,
+            "score": 0.046354167
+          }
+        ],
+        "mean_color": [
+          92,
+          92,
+          92
+        ]
+      },
+      "generator": {
+        "history_id": "WAIebSNbNQ4WDCMZCU2q",
+        "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)",
+        "model": "gpt-image-2-5-flare (low, 1k)",
+        "project": "MotionEngine Asset Library",
+        "vendor": "openart"
+      }
+    },
+    {
+      "id": "library.hand_with_phone",
+      "path": "hand_with_phone.png",
+      "width": 832,
+      "height": 1205,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.4646,
+        "y": 0.5282
+      },
+      "serves": [
+        "library.hand_with_phone"
+      ],
+      "fingerprint": "fp1-d5d30f616493965b",
+      "continuity_key": "hand_with_phone",
+      "content_hash": "fnv1a64:cde9ebb963262395",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.010817308,
+          "y": 0.056431536,
+          "width": 0.9074519,
+          "height": 0.94356847
+        },
+        "edges": {
+          "top": false,
+          "bottom": true,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.48271725,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000111111000",
+            "0000008fffffe000",
+            "000000affffff100",
+            "000000affffff100",
+            "00000aeffffffa20",
+            "00003ffffffffe20",
+            "0000cfefffffff50",
+            "0002ffefffffff80",
+            "0007ffffffffff60",
+            "0006ffffffffff60",
+            "0005ffffffffb200",
+            "0004fffffffa0000",
+            "001dffffff800000",
+            "00bfffffa2000000",
+            "08fffff800000000",
+            "6fffffc000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.25,
+              "height": 0.5
+            },
+            "occupancy": 0.004166667,
+            "score": 0.12447917
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.3125,
+              "height": 0.3125
+            },
+            "occupancy": 0.0,
+            "score": 0.09765625
+          },
+          {
+            "name": "left_middle",
+            "rect": {
+              "x": 0.0,
+              "y": 0.25,
+              "width": 0.1875,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.09375
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.5625,
+              "y": 0.8125,
+              "width": 0.4375,
+              "height": 0.1875
+            },
+            "occupancy": 0.0063492064,
+            "score": 0.08151042
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.5625,
+              "y": 0.8125,
+              "width": 0.4375,
+              "height": 0.1875
+            },
+            "occupancy": 0.0063492064,
+            "score": 0.08151042
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.5,
+              "width": 0.1875,
+              "height": 0.3125
+            },
+            "occupancy": 0.0044444446,
+            "score": 0.058333334
+          },
+          {
+            "name": "right_upper",
+            "rect": {
+              "x": 0.8125,
+              "y": 0.0,
+              "width": 0.1875,
+              "height": 0.25
+            },
+            "occupancy": 0.011111111,
+            "score": 0.046354167
+          }
+        ],
+        "mean_color": [
+          90,
+          90,
+          90
+        ]
+      },
+      "generator": {
+        "history_id": "uTDEyjseG4t7qu64U7CC",
+        "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)",
+        "model": "gpt-image-2-5-flare (low, 1k)",
+        "project": "MotionEngine Asset Library",
+        "vendor": "openart"
+      }
+    },
+    {
+      "id": "library.flip_phone",
+      "path": "flip_phone.png",
+      "width": 512,
+      "height": 1174,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.499,
+        "y": 0.5
+      },
+      "serves": [
+        "library.flip_phone"
+      ],
+      "fingerprint": "fp1-b7e935bd5c4062cd",
+      "continuity_key": "flip_phone",
+      "content_hash": "fnv1a64:db49edd9d0a27316",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.20703125,
+          "y": 0.05366269,
+          "width": 0.5839844,
+          "height": 0.8926746
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.4842935,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000001221000000",
+            "0000afffffe90000",
+            "0005ffffffff4000",
+            "0007ffffffff7000",
+            "0008ffffffff8000",
+            "0008ffffffff8000",
+            "0007ffffffff7000",
+            "0003effffffe3000",
+            "0008ffffffff8000",
+            "0009ffffffff9000",
+            "000affffffffa000",
+            "000affffffffa000",
+            "0009ffffffff9000",
+            "0007ffffffff7000",
+            "0002cffffffb1000",
+            "0000012222100000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.1875,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.09375
+          },
+          {
+            "name": "right_upper",
+            "rect": {
+              "x": 0.8125,
+              "y": 0.0,
+              "width": 0.1875,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.09375
+          },
+          {
+            "name": "left_middle",
+            "rect": {
+              "x": 0.0,
+              "y": 0.25,
+              "width": 0.1875,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.09375
+          },
+          {
+            "name": "right_middle",
+            "rect": {
+              "x": 0.8125,
+              "y": 0.25,
+              "width": 0.1875,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.09375
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.5,
+              "width": 0.1875,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.09375
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.8125,
+              "y": 0.5,
+              "width": 0.1875,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.09375
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.025,
+            "score": 0.0609375
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.9375,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.041666668,
+            "score": 0.059895832
+          }
+        ],
+        "mean_color": [
+          74,
+          74,
+          74
+        ]
+      },
+      "generator": {
+        "history_id": "g6FNcPcoQbXnHImzGlBr",
+        "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)",
+        "model": "gpt-image-2-5-flare (low, 1k)",
+        "project": "MotionEngine Asset Library",
+        "vendor": "openart"
+      }
+    },
+    {
+      "id": "library.radio",
+      "path": "radio.png",
+      "width": 623,
+      "height": 917,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.radio"
+      ],
+      "fingerprint": "fp1-0bd1e7b4edf82cbb",
+      "continuity_key": "radio",
+      "content_hash": "fnv1a64:a7732b3fb377a371",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.07865169,
+          "y": 0.053435113,
+          "width": 0.8426966,
+          "height": 0.89312977
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.48396352,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0010000000000000",
+            "0070000000000000",
+            "0080000000000000",
+            "00a0122332210000",
+            "00c4332222345610",
+            "04b5a311003a5150",
+            "06fffffffffffd70",
+            "0affffffffffffa0",
+            "02ffffffffffff30",
+            "02ffffffffffff30",
+            "02ffffffffffff20",
+            "02ffffffffffff20",
+            "02ffffffffffff20",
+            "02ffffffffffff20",
+            "01ffffffffffff10",
+            "0012222222222100"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.1875,
+              "y": 0.0,
+              "width": 0.8125,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.15234375
+          },
+          {
+            "name": "right_upper",
+            "rect": {
+              "x": 0.5625,
+              "y": 0.0,
+              "width": 0.4375,
+              "height": 0.25
+            },
+            "occupancy": 0.011904762,
+            "score": 0.108072914
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.1875,
+              "y": 0.0,
+              "width": 0.25,
+              "height": 0.25
+            },
+            "occupancy": 0.020833334,
+            "score": 0.061197918
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.5,
+              "width": 0.125,
+              "height": 0.5
+            },
+            "occupancy": 0.054166667,
+            "score": 0.059114583
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.9375,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.09166667,
+            "score": 0.05677083
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.875,
+              "y": 0.625,
+              "width": 0.125,
+              "height": 0.375
+            },
+            "occupancy": 0.05,
+            "score": 0.04453125
+          }
+        ],
+        "mean_color": [
+          80,
+          80,
+          80
+        ]
+      },
+      "generator": {
+        "history_id": "VelPBmXv2Np6RMJtlob3",
+        "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)",
+        "model": "gpt-image-2-5-flare (low, 1k)",
+        "project": "MotionEngine Asset Library",
+        "vendor": "openart"
+      }
+    },
+    {
+      "id": "library.vinyl",
+      "path": "vinyl.png",
+      "width": 634,
+      "height": 880,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.vinyl"
+      ],
+      "fingerprint": "fp1-2886648ca5e3ff84",
+      "continuity_key": "vinyl",
+      "content_hash": "fnv1a64:506bc7aa4bef0bc4",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.074132495,
+          "y": 0.053409092,
+          "width": 0.851735,
+          "height": 0.8931818
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.6979531,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000220000000",
+            "00006cffffc60000",
+            "002cffffffffc200",
+            "00cffffffffffd10",
+            "05ffffffffffff60",
+            "09ffffffffffffa0",
+            "0cffffffffffffc0",
+            "0cffffffffffffc0",
+            "0cffffffffffffc0",
+            "0cffffffffffffc0",
+            "0cffffffffffffc0",
+            "0cffffffffffffc0",
+            "0cffffffffffffc0",
+            "0cffffffffffffc0",
+            "0cffffffffffffc0",
+            "0122222222222220"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.016666668,
+            "score": 0.061458334
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.9375,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.1125,
+            "score": 0.05546875
+          }
+        ],
+        "mean_color": [
+          166,
+          166,
+          166
+        ]
+      },
+      "generator": {
+        "history_id": "vaMeo0De1gEuQ8YtuuJw",
+        "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)",
+        "model": "gpt-image-2-5-flare (low, 1k)",
+        "project": "MotionEngine Asset Library",
+        "vendor": "openart"
+      }
+    },
+    {
+      "id": "library.joystick",
+      "path": "joystick.png",
+      "width": 741,
+      "height": 871,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.joystick"
+      ],
+      "fingerprint": "fp1-a8b85cd2f800b7c4",
+      "continuity_key": "joystick",
+      "content_hash": "fnv1a64:c7cb1aff7f12e711",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.0634278,
+          "y": 0.053960964,
+          "width": 0.8731444,
+          "height": 0.89207804
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.41655472,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000200000000",
+            "000000bfd2000000",
+            "000003fff6000000",
+            "000000bfd1000000",
+            "0000004f80000000",
+            "0000003f80000000",
+            "00005effe8420000",
+            "0009ffffffffeb70",
+            "02cffffffffffff0",
+            "0dffffffffffffe0",
+            "0fffffffffffffb0",
+            "0cffffffffffff30",
+            "06effffffffff900",
+            "00037befffffe100",
+            "000000047bff7000",
+            "0000000000120000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "right_upper",
+            "rect": {
+              "x": 0.625,
+              "y": 0.0,
+              "width": 0.375,
+              "height": 0.375
+            },
+            "occupancy": 0.0,
+            "score": 0.140625
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.3125,
+              "height": 0.375
+            },
+            "occupancy": 0.0,
+            "score": 0.1171875
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.625,
+              "y": 0.0,
+              "width": 0.375,
+              "height": 0.3125
+            },
+            "occupancy": 0.0,
+            "score": 0.1171875
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.9375,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.0125,
+            "score": 0.06171875
+          },
+          {
+            "name": "right_middle",
+            "rect": {
+              "x": 0.6875,
+              "y": 0.25,
+              "width": 0.3125,
+              "height": 0.1875
+            },
+            "occupancy": 0.008888889,
+            "score": 0.058072917
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.875,
+              "width": 0.4375,
+              "height": 0.125
+            },
+            "occupancy": 0.0,
+            "score": 0.0546875
+          },
+          {
+            "name": "left_middle",
+            "rect": {
+              "x": 0.0,
+              "y": 0.25,
+              "width": 0.375,
+              "height": 0.125
+            },
+            "occupancy": 0.0,
+            "score": 0.046875
+          }
+        ],
+        "mean_color": [
+          59,
+          59,
+          59
+        ]
+      },
+      "generator": {
+        "history_id": "PlDc2mDyy3ldGjRv1SNm",
+        "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)",
+        "model": "gpt-image-2-5-flare (low, 1k)",
+        "project": "MotionEngine Asset Library",
+        "vendor": "openart"
+      }
+    },
+    {
+      "id": "library.boombox",
+      "path": "boombox.png",
+      "width": 1229,
+      "height": 815,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.boombox"
+      ],
+      "fingerprint": "fp1-08f8ddd68c588226",
+      "continuity_key": "boombox",
+      "content_hash": "fnv1a64:116a5e24c061ef0c",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.053702198,
+          "y": 0.0809816,
+          "width": 0.8925956,
+          "height": 0.83803684
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.6514978,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "03aaaaaaaaaaaa30",
+            "0311111111111130",
+            "0366625555236630",
+            "2ffffffffffffff2",
+            "2ffffffffffffff2",
+            "2ffffffffffffff2",
+            "2ffffffffffffff2",
+            "2ffffffffffffff2",
+            "2ffffffffffffff2",
+            "2ffffffffffffff2",
+            "2ffffffffffffff2",
+            "2ffffffffffffff2",
+            "2ffffffffffffff2",
+            "1aaaabaaaaaaaaa1",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.9375,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          }
+        ],
+        "mean_color": [
+          75,
+          75,
+          75
+        ]
+      },
+      "generator": {
+        "history_id": "jKvGWG8JlBjmWPOS0kF3",
+        "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)",
+        "model": "gpt-image-2-5-flare (low, 1k)",
+        "project": "MotionEngine Asset Library",
+        "vendor": "openart"
+      }
+    },
+    {
+      "id": "library.instant_camera",
+      "path": "instant_camera.png",
+      "width": 632,
+      "height": 784,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.instant_camera"
+      ],
+      "fingerprint": "fp1-2b8675be87387295",
+      "continuity_key": "instant_camera",
+      "content_hash": "fnv1a64:a6c4acf118faa3cf",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.0664557,
+          "y": 0.05357143,
+          "width": 0.8670886,
+          "height": 0.89285713
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.65318435,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0012222222222100",
+            "01ffffffffffff00",
+            "01ffffffffffff10",
+            "01feeeddddeeee10",
+            "00d0000000000d00",
+            "01ebaaaaaaaabe10",
+            "04ffffffffffff40",
+            "05ffffffffffff50",
+            "05ffffffffffff50",
+            "06ffffffffffff60",
+            "09ffffffffffff90",
+            "0effffffffffffe0",
+            "0dffffffffffffe0",
+            "0cffffffffffffc0",
+            "09ffffffffffffa0",
+            "0022222222222200"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.09166667,
+            "score": 0.05677083
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.9375,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.1,
+            "score": 0.05625
+          },
+          {
+            "name": "right_upper",
+            "rect": {
+              "x": 0.875,
+              "y": 0.0,
+              "width": 0.125,
+              "height": 0.375
+            },
+            "occupancy": 0.016666668,
+            "score": 0.04609375
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.125,
+              "height": 0.375
+            },
+            "occupancy": 0.022222223,
+            "score": 0.045833334
+          }
+        ],
+        "mean_color": [
+          83,
+          83,
+          83
+        ]
+      },
+      "generator": {
+        "history_id": "Uw71fNrGiDmRgnheENo0",
+        "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)",
+        "model": "gpt-image-2-5-flare (low, 1k)",
+        "project": "MotionEngine Asset Library",
+        "vendor": "openart"
+      }
+    },
+    {
+      "id": "library.walkman",
+      "path": "walkman.png",
+      "width": 795,
+      "height": 763,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.walkman"
+      ],
+      "fingerprint": "fp1-502e943af43fb9af",
+      "continuity_key": "walkman",
+      "content_hash": "fnv1a64:021b79bcca2ca122",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05408805,
+          "y": 0.056356486,
+          "width": 0.8918239,
+          "height": 0.887287
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.40963262,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0003996004400000",
+            "008b524822620000",
+            "0590000291953300",
+            "0a0000009dffffd0",
+            "18000000aefffff1",
+            "28000002aefffff1",
+            "0a5101687efffff1",
+            "0dfb0cfe3efffff1",
+            "1fff9ffe3efffff1",
+            "0efffffa3efffff0",
+            "06ffefe23effffe0",
+            "005315233effffe0",
+            "00137544599bdfb0",
+            "0002897786000100",
+            "0000001100000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.1875,
+              "y": 0.1875,
+              "width": 0.3125,
+              "height": 0.25
+            },
+            "occupancy": 0.013333334,
+            "score": 0.077083334
+          },
+          {
+            "name": "left_middle",
+            "rect": {
+              "x": 0.125,
+              "y": 0.25,
+              "width": 0.375,
+              "height": 0.1875
+            },
+            "occupancy": 0.0074074073,
+            "score": 0.06979167
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.9375,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.008333334,
+            "score": 0.061979167
+          },
+          {
+            "name": "right_upper",
+            "rect": {
+              "x": 0.6875,
+              "y": 0.0,
+              "width": 0.3125,
+              "height": 0.1875
+            },
+            "occupancy": 0.008888889,
+            "score": 0.058072917
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.625,
+              "y": 0.875,
+              "width": 0.375,
+              "height": 0.125
+            },
+            "occupancy": 0.0055555557,
+            "score": 0.046614584
+          }
+        ],
+        "mean_color": [
+          53,
+          53,
+          53
+        ]
+      },
+      "generator": {
+        "history_id": "q3Nk1lwBLm3v8EW0PK0V",
+        "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)",
+        "model": "gpt-image-2-5-flare (low, 1k)",
+        "project": "MotionEngine Asset Library",
+        "vendor": "openart"
+      }
+    }
+  ]
+}

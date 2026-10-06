@@ -1,0 +1,90 @@
+{
+  "version": "0.2",
+  "title": "dna_translesion_synthesis",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "High-accuracy copying machinery stalls at damaged DNA.",
+      "primary": {
+        "kind": "phrase",
+        "value": "High-accuracy polymerase",
+        "meaning": "copying stalls"
+      },
+      "secondary": {
+        "kind": "phrase",
+        "value": "Damaged DNA",
+        "meaning": "stalled site"
+      },
+      "energy": "calm",
+      "keyword": "stalls"
+    },
+    {
+      "purpose": "contrast",
+      "relationship": "replace",
+      "statement": "An emergency polymerase swaps in to bypass damage.",
+      "primary": {
+        "kind": "phrase",
+        "value": "Stalled machinery",
+        "meaning": "blocked replication"
+      },
+      "secondary": {
+        "kind": "phrase",
+        "value": "Emergency polymerase",
+        "meaning": "damage bypass"
+      },
+      "energy": "building",
+      "keyword": "bypass"
+    },
+    {
+      "purpose": "contrast",
+      "relationship": "compress",
+      "statement": "Damage-bypass copying carries higher mutation risk.",
+      "primary": {
+        "kind": "phrase",
+        "value": "Continued replication",
+        "meaning": "active strand"
+      },
+      "secondary": {
+        "kind": "phrase",
+        "value": "Mutation risk",
+        "meaning": "error-prone trade-off"
+      },
+      "energy": "building",
+      "keyword": "mutation"
+    },
+    {
+      "purpose": "contrast",
+      "relationship": "replace",
+      "statement": "Normal high-accuracy machinery returns across the lesion.",
+      "primary": {
+        "kind": "phrase",
+        "value": "Emergency polymerase",
+        "meaning": "temporary bypass"
+      },
+      "secondary": {
+        "kind": "phrase",
+        "value": "High-accuracy machinery",
+        "meaning": "normal copying"
+      },
+      "energy": "building",
+      "keyword": "returns"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "Replication continuity is prioritized over perfect accuracy.",
+      "primary": {
+        "kind": "phrase",
+        "value": "Replication continuity",
+        "meaning": "unfinished genome prevented"
+      },
+      "secondary": {
+        "kind": "phrase",
+        "value": "Sacrificed accuracy",
+        "meaning": "tolerated mutation"
+      },
+      "energy": "impact",
+      "keyword": "continuity"
+    }
+  ]
+}

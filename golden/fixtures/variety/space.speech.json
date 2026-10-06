@@ -1,0 +1,346 @@
+{
+  "version": "0.1",
+  "audio": "our_place_in_space.voice.wav",
+  "sample_rate": 48000,
+  "duration": 19.282458333333334,
+  "provider": "macos_say",
+  "model": "macos/say",
+  "voice": "Daniel",
+  "words": [
+    {
+      "text": "Everything",
+      "start": 0.35,
+      "end": 1.0166883468834687,
+      "confidence": 0.9
+    },
+    {
+      "text": "you",
+      "start": 1.0166883468834687,
+      "end": 1.25,
+      "confidence": 0.5
+    },
+    {
+      "text": "have",
+      "start": 1.25,
+      "end": 1.4,
+      "confidence": 0.9
+    },
+    {
+      "text": "ever",
+      "start": 1.4,
+      "end": 1.857295392953929,
+      "confidence": 0.7
+    },
+    {
+      "text": "known",
+      "start": 1.857295392953929,
+      "end": 2.06,
+      "confidence": 0.5
+    },
+    {
+      "text": "happened",
+      "start": 2.06,
+      "end": 2.6109430894308936,
+      "confidence": 0.9
+    },
+    {
+      "text": "on",
+      "start": 2.6109430894308936,
+      "end": 2.8200000000000003,
+      "confidence": 0.5
+    },
+    {
+      "text": "one",
+      "start": 2.8200000000000003,
+      "end": 3.12,
+      "confidence": 0.9
+    },
+    {
+      "text": "small",
+      "start": 3.12,
+      "end": 3.35,
+      "confidence": 0.7
+    },
+    {
+      "text": "blue",
+      "start": 3.3800000000000003,
+      "end": 3.5700000000000003,
+      "confidence": 0.7
+    },
+    {
+      "text": "planet",
+      "start": 3.5700000000000003,
+      "end": 3.9153333333333333,
+      "confidence": 0.9
+    },
+    {
+      "text": "Sunlight",
+      "start": 4.165333333333334,
+      "end": 4.586326933551199,
+      "confidence": 0.9
+    },
+    {
+      "text": "takes",
+      "start": 4.586326933551199,
+      "end": 5.005333333333334,
+      "confidence": 0.5
+    },
+    {
+      "text": "eight",
+      "start": 5.005333333333334,
+      "end": 5.295333333333334,
+      "confidence": 0.9
+    },
+    {
+      "text": "minutes",
+      "start": 5.295333333333334,
+      "end": 5.775333333333334,
+      "confidence": 0.9
+    },
+    {
+      "text": "to",
+      "start": 5.775333333333334,
+      "end": 6.108380718954248,
+      "confidence": 0.7
+    },
+    {
+      "text": "reach",
+      "start": 6.108380718954248,
+      "end": 6.3853333333333335,
+      "confidence": 0.5
+    },
+    {
+      "text": "us",
+      "start": 6.3853333333333335,
+      "end": 6.626526688453158,
+      "confidence": 0.9
+    },
+    {
+      "text": "so",
+      "start": 6.626526688453158,
+      "end": 6.8853333333333335,
+      "confidence": 0.5
+    },
+    {
+      "text": "you",
+      "start": 6.8853333333333335,
+      "end": 7.144672657952069,
+      "confidence": 0.9
+    },
+    {
+      "text": "always",
+      "start": 7.144672657952069,
+      "end": 7.565666258169934,
+      "confidence": 0.5
+    },
+    {
+      "text": "see",
+      "start": 7.565666258169934,
+      "end": 7.8053333333333335,
+      "confidence": 0.5
+    },
+    {
+      "text": "the",
+      "start": 7.8053333333333335,
+      "end": 7.995333333333334,
+      "confidence": 0.9
+    },
+    {
+      "text": "sun",
+      "start": 7.995333333333334,
+      "end": 8.3428852124183,
+      "confidence": 0.7
+    },
+    {
+      "text": "as",
+      "start": 8.3428852124183,
+      "end": 8.645333333333333,
+      "confidence": 0.5
+    },
+    {
+      "text": "it",
+      "start": 8.645333333333333,
+      "end": 8.865333333333334,
+      "confidence": 0.7
+    },
+    {
+      "text": "was",
+      "start": 8.865333333333334,
+      "end": 9.120104166666666,
+      "confidence": 0.9
+    },
+    {
+      "text": "Saturn",
+      "start": 9.390104166666667,
+      "end": 9.837400243309002,
+      "confidence": 0.9
+    },
+    {
+      "text": "is",
+      "start": 9.837400243309002,
+      "end": 10.112659367396594,
+      "confidence": 0.5
+    },
+    {
+      "text": "so",
+      "start": 10.112659367396594,
+      "end": 10.387918491484186,
+      "confidence": 0.5
+    },
+    {
+      "text": "light",
+      "start": 10.387918491484186,
+      "end": 10.740104166666667,
+      "confidence": 0.5
+    },
+    {
+      "text": "that",
+      "start": 10.740104166666667,
+      "end": 10.860104166666668,
+      "confidence": 0.7
+    },
+    {
+      "text": "in",
+      "start": 10.860104166666668,
+      "end": 11.170104166666667,
+      "confidence": 0.7
+    },
+    {
+      "text": "a",
+      "start": 11.170104166666667,
+      "end": 11.430104166666666,
+      "confidence": 0.7
+    },
+    {
+      "text": "big",
+      "start": 11.430104166666666,
+      "end": 11.630104166666667,
+      "confidence": 0.7
+    },
+    {
+      "text": "enough",
+      "start": 11.630104166666667,
+      "end": 12.230104166666667,
+      "confidence": 0.7
+    },
+    {
+      "text": "ocean",
+      "start": 12.230104166666667,
+      "end": 12.500104166666667,
+      "confidence": 0.9
+    },
+    {
+      "text": "it",
+      "start": 12.700104166666668,
+      "end": 12.880104166666667,
+      "confidence": 0.7
+    },
+    {
+      "text": "would",
+      "start": 12.880104166666667,
+      "end": 13.200104166666668,
+      "confidence": 0.7
+    },
+    {
+      "text": "actually",
+      "start": 13.200104166666668,
+      "end": 13.870104166666668,
+      "confidence": 0.9
+    },
+    {
+      "text": "float",
+      "start": 13.870104166666668,
+      "end": 14.103916666666667,
+      "confidence": 0.7
+    },
+    {
+      "text": "And",
+      "start": 14.353916666666667,
+      "end": 14.563916666666668,
+      "confidence": 0.9
+    },
+    {
+      "text": "we",
+      "start": 14.563916666666668,
+      "end": 14.873916666666666,
+      "confidence": 0.7
+    },
+    {
+      "text": "have",
+      "start": 14.873916666666666,
+      "end": 15.263916666666667,
+      "confidence": 0.9
+    },
+    {
+      "text": "only",
+      "start": 15.263916666666667,
+      "end": 15.653916666666667,
+      "confidence": 0.7
+    },
+    {
+      "text": "just",
+      "start": 15.663916666666667,
+      "end": 16.043916666666668,
+      "confidence": 0.7
+    },
+    {
+      "text": "started",
+      "start": 16.043916666666668,
+      "end": 16.273916666666665,
+      "confidence": 0.7
+    },
+    {
+      "text": "looking",
+      "start": 16.273916666666665,
+      "end": 16.613916666666668,
+      "confidence": 0.7
+    },
+    {
+      "text": "The",
+      "start": 16.843916666666665,
+      "end": 16.913916666666665,
+      "confidence": 0.7
+    },
+    {
+      "text": "universe",
+      "start": 16.913916666666665,
+      "end": 17.593916666666665,
+      "confidence": 0.7
+    },
+    {
+      "text": "is",
+      "start": 17.593916666666665,
+      "end": 17.938635946327683,
+      "confidence": 0.7
+    },
+    {
+      "text": "waiting",
+      "start": 17.938635946327683,
+      "end": 18.382458333333332,
+      "confidence": 0.5
+    }
+  ],
+  "sentences": [
+    {
+      "beat": 0,
+      "start": 0.35,
+      "end": 3.9153333333333333
+    },
+    {
+      "beat": 1,
+      "start": 4.165333333333334,
+      "end": 9.120104166666666
+    },
+    {
+      "beat": 2,
+      "start": 9.390104166666667,
+      "end": 14.103916666666667
+    },
+    {
+      "beat": 3,
+      "start": 14.353916666666667,
+      "end": 18.382458333333332
+    }
+  ],
+  "alignment": "onset"
+}

@@ -1,0 +1,315 @@
+{
+  "family": "people_work",
+  "project": "MotionEngine Asset Library",
+  "project_id": "jR0xTD3dUZ28WeDiZEj4",
+  "emotions": [
+    "warmth",
+    "trust",
+    "energy",
+    "calm",
+    "precision"
+  ],
+  "medium": "documentary photographic people at work (professions, wellbeing)",
+  "assets": [
+    {
+      "id": "scientist_lab",
+      "role": "figure",
+      "subject": "scientist",
+      "tags": [
+        "scientist",
+        "researcher",
+        "science",
+        "lab",
+        "laboratory",
+        "research",
+        "chemist"
+      ],
+      "model": "flare",
+      "aspect": "3:4",
+      "prompt": "Natural colour editorial photograph of a young Indian woman scientist in a white lab coat holding a test tube up to the light, seen in lost profile. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "software_developer",
+      "role": "figure",
+      "subject": "software developer",
+      "tags": [
+        "developer",
+        "programmer",
+        "coder",
+        "engineer",
+        "software engineer",
+        "coding",
+        "tech worker"
+      ],
+      "model": "flare",
+      "aspect": "3:4",
+      "prompt": "Natural colour editorial photograph of a young Indian man in a hoodie seated on an office chair typing on a laptop at a small desk, seen from behind at three-quarter view. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "doctor",
+      "role": "figure",
+      "subject": "doctor",
+      "tags": [
+        "doctor",
+        "physician",
+        "medical",
+        "health",
+        "hospital",
+        "nurse",
+        "healthcare"
+      ],
+      "model": "flare",
+      "aspect": "3:4",
+      "prompt": "Natural colour editorial photograph of an Indian woman doctor in a white coat with a stethoscope around her neck walking to the right, seen in lost profile. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "teacher",
+      "role": "figure",
+      "subject": "teacher",
+      "tags": [
+        "teacher",
+        "professor",
+        "lecturer",
+        "education",
+        "class",
+        "school",
+        "mentor"
+      ],
+      "model": "flare",
+      "aspect": "3:4",
+      "prompt": "Natural colour editorial photograph of a middle-aged Indian man teacher holding a book and pointing upward with a marker, seen in lost profile. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "presenter",
+      "role": "figure",
+      "subject": "presenter",
+      "tags": [
+        "presenter",
+        "presentation",
+        "pitch",
+        "speaker",
+        "explain",
+        "meeting"
+      ],
+      "model": "flare",
+      "aspect": "3:4",
+      "prompt": "Natural colour editorial photograph of an Indian businesswoman in a blazer presenting, gesturing with an open hand, side view. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "business_walk",
+      "role": "figure",
+      "subject": "business person",
+      "tags": [
+        "businessman",
+        "business person",
+        "executive",
+        "manager",
+        "professional",
+        "office worker",
+        "corporate"
+      ],
+      "model": "flare",
+      "aspect": "3:4",
+      "prompt": "Natural colour editorial photograph of an Indian man in a dark suit carrying a briefcase walking to the right, seen in lost profile. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "startup_founder",
+      "role": "figure",
+      "subject": "startup founder",
+      "tags": [
+        "founder",
+        "entrepreneur",
+        "startup",
+        "ceo",
+        "business owner",
+        "boss"
+      ],
+      "model": "flare",
+      "aspect": "3:4",
+      "prompt": "Natural colour editorial photograph of a young Indian woman in a casual blazer holding a tablet and walking to the right, seen in lost profile. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "engineer",
+      "role": "figure",
+      "subject": "engineer",
+      "tags": [
+        "engineer",
+        "construction",
+        "builder",
+        "infrastructure",
+        "worker",
+        "site"
+      ],
+      "model": "flare",
+      "aspect": "3:4",
+      "prompt": "Natural colour editorial photograph of an Indian engineer in a yellow hard hat and safety vest holding rolled blueprints, seen in lost profile. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "therapy_session",
+      "role": "figure",
+      "subject": "therapy session",
+      "tags": [
+        "therapy",
+        "therapist",
+        "counselling",
+        "counselor",
+        "psychologist",
+        "session",
+        "mental health"
+      ],
+      "model": "flare",
+      "aspect": "3:4",
+      "prompt": "Natural colour editorial photograph of two people seated in armchairs facing each other, a therapist holding a notepad and a client talking, side view. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "stressed_person",
+      "role": "figure",
+      "subject": "stressed person",
+      "tags": [
+        "stress",
+        "stressed",
+        "anxiety",
+        "burnout",
+        "overwhelmed",
+        "depression",
+        "tired"
+      ],
+      "model": "flare",
+      "aspect": "3:4",
+      "prompt": "Natural colour editorial photograph of a person sitting on a chair bent forward with their head in their hands, face hidden. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "meditating",
+      "role": "figure",
+      "subject": "meditating person",
+      "tags": [
+        "meditation",
+        "meditating",
+        "mindfulness",
+        "calm",
+        "yoga",
+        "peace"
+      ],
+      "model": "flare",
+      "aspect": "3:4",
+      "prompt": "Natural colour editorial photograph of a person seated cross-legged meditating with hands resting on knees, seen from behind. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "celebrating",
+      "role": "figure",
+      "subject": "celebrating person",
+      "tags": [
+        "success",
+        "celebrate",
+        "celebration",
+        "win",
+        "happy",
+        "achievement",
+        "victory"
+      ],
+      "model": "flare",
+      "aspect": "3:4",
+      "prompt": "Natural colour editorial photograph of a young person jumping with both fists raised in celebration, seen from behind. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "team_meeting",
+      "role": "figure",
+      "subject": "team",
+      "tags": [
+        "team",
+        "teamwork",
+        "colleagues",
+        "collaboration",
+        "meeting",
+        "coworkers",
+        "group"
+      ],
+      "model": "flare",
+      "aspect": "3:4",
+      "prompt": "Natural colour editorial photograph of three colleagues standing close together discussing, one pointing at a tablet, seen from behind and in lost profile. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "researcher_reading",
+      "role": "figure",
+      "subject": "reader",
+      "tags": [
+        "reading",
+        "research",
+        "study",
+        "learning",
+        "books",
+        "knowledge"
+      ],
+      "model": "flare",
+      "aspect": "3:4",
+      "prompt": "Natural colour editorial photograph of a person standing and reading a thick open book, seen in lost profile. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "astronaut",
+      "role": "figure",
+      "subject": "astronaut",
+      "tags": [
+        "astronaut",
+        "space",
+        "nasa",
+        "isro",
+        "mission",
+        "spaceflight"
+      ],
+      "model": "flare",
+      "aspect": "3:4",
+      "prompt": "Natural colour editorial photograph of an astronaut in a white spacesuit with a dark mirrored visor, standing and waving. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "public_speaker",
+      "role": "figure",
+      "subject": "public speaker",
+      "tags": [
+        "speaker",
+        "public speaking",
+        "talk",
+        "speech",
+        "microphone",
+        "host",
+        "influencer"
+      ],
+      "model": "flare",
+      "aspect": "3:4",
+      "prompt": "Natural colour editorial photograph of a person speaking into a handheld microphone with the other hand raised, side view. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "climbing_steps",
+      "role": "figure",
+      "subject": "person climbing steps",
+      "tags": [
+        "progress",
+        "growth",
+        "steps",
+        "improvement",
+        "climb",
+        "journey",
+        "goals"
+      ],
+      "model": "flare",
+      "aspect": "3:4",
+      "prompt": "Natural colour editorial photograph of a person stepping up a short flight of three wooden steps, seen from behind. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "factory_worker",
+      "role": "figure",
+      "subject": "factory worker",
+      "tags": [
+        "worker",
+        "factory",
+        "manufacturing",
+        "technician",
+        "mechanic",
+        "labour",
+        "industry"
+      ],
+      "model": "flare",
+      "aspect": "3:4",
+      "prompt": "Natural colour editorial photograph of a factory worker in blue overalls carrying a red toolbox, walking to the right, seen in lost profile. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    }
+  ]
+}

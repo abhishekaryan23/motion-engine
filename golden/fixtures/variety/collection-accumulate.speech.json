@@ -1,0 +1,49 @@
+{
+  "version": "0.1",
+  "audio": "backpack_weight.voice.wav",
+  "sample_rate": 48000,
+  "duration": 2.8217708333333333,
+  "provider": "macos_say",
+  "model": "macos/say",
+  "voice": "Daniel",
+  "words": [
+    {
+      "text": "Small",
+      "start": 0.35,
+      "end": 0.6643541666666667,
+      "confidence": 0.9
+    },
+    {
+      "text": "things",
+      "start": 0.6643541666666667,
+      "end": 0.89,
+      "confidence": 0.5
+    },
+    {
+      "text": "fill",
+      "start": 0.89,
+      "end": 1.2930625,
+      "confidence": 0.7
+    },
+    {
+      "text": "the",
+      "start": 1.2930625,
+      "end": 1.6,
+      "confidence": 0.5
+    },
+    {
+      "text": "bag",
+      "start": 1.6,
+      "end": 1.9217708333333334,
+      "confidence": 0.9
+    }
+  ],
+  "sentences": [
+    {
+      "beat": 0,
+      "start": 0.35,
+      "end": 1.9217708333333334
+    }
+  ],
+  "alignment": "onset"
+}

@@ -1,0 +1,46 @@
+{
+  "version": "0.1",
+  "title": "complaint_rate_reversal",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "Customer complaints dropped from 1,000 to 800.",
+      "primary": {
+        "kind": "number",
+        "value": "800",
+        "meaning": "fewer complaints"
+      },
+      "energy": "calm",
+      "keyword": "complaints"
+    },
+    {
+      "purpose": "contrast",
+      "statement": "Customers dropped from 100,000 to 60,000.",
+      "primary": {
+        "kind": "number",
+        "value": "60,000",
+        "meaning": "active customers"
+      },
+      "secondary": {
+        "kind": "number",
+        "value": "100,000",
+        "meaning": "previous base"
+      },
+      "relationship": "compress",
+      "energy": "building",
+      "keyword": "customers"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "The complaint rate per customer actually went up.",
+      "primary": {
+        "kind": "phrase",
+        "value": "Higher complaint rate",
+        "meaning": "per customer"
+      },
+      "energy": "impact",
+      "keyword": "rate"
+    }
+  ]
+}

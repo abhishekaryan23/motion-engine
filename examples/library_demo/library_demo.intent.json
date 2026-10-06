@@ -1,0 +1,31 @@
+{
+  "version": "0.2",
+  "title": "small_receipts",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "Every receipt tells a quiet story",
+      "primary": { "kind": "object", "asset": "receipt", "meaning": "a crumpled till receipt" },
+      "energy": "calm"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "The parcel arrives two days late",
+      "primary": { "kind": "object", "asset": "parcel", "meaning": "a cardboard parcel" },
+      "energy": "building"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "A tired office worker checks the numbers again",
+      "primary": { "kind": "phrase", "value": "office worker", "meaning": "a tired worker" },
+      "energy": "building"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "The key was in the drawer all along",
+      "primary": { "kind": "object", "asset": "key", "meaning": "the missing key" },
+      "energy": "impact"
+    }
+  ]
+}

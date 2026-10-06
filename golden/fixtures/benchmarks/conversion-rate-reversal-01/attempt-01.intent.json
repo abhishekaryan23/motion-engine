@@ -1,0 +1,39 @@
+{
+  "version": "0.2",
+  "title": "conversion_rate_reversal",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "contrast",
+      "statement": "Sales grew, yet the conversion rate fell.",
+      "primary": {
+        "kind": "derived_metric",
+        "meaning": "conversion rate",
+        "format": "percent",
+        "numerator": {
+          "value": 500,
+          "meaning": "sales"
+        },
+        "denominator": {
+          "value": 10000,
+          "meaning": "visitors"
+        }
+      },
+      "secondary": {
+        "kind": "derived_metric",
+        "meaning": "conversion rate",
+        "format": "percent",
+        "numerator": {
+          "value": 600,
+          "meaning": "sales"
+        },
+        "denominator": {
+          "value": 20000,
+          "meaning": "visitors"
+        }
+      },
+      "energy": "building",
+      "keyword": "conversion"
+    }
+  ]
+}

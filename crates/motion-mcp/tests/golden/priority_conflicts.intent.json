@@ -1,0 +1,102 @@
+{
+  "beats": [
+    {
+      "continuity": "none",
+      "energy": "building",
+      "narration": "Four apps now fight for every minute of your attention.",
+      "primary": {
+        "items": [
+          {
+            "asset": "robot",
+            "kind": "object"
+          },
+          {
+            "asset": "clock",
+            "kind": "object"
+          },
+          {
+            "asset": "chat_bubbles",
+            "kind": "object"
+          },
+          {
+            "kind": "phrase",
+            "value": "phone"
+          }
+        ],
+        "kind": "collection"
+      },
+      "purpose": "emphasize",
+      "statement": "Four apps now fight for every…"
+    },
+    {
+      "continuity": "none",
+      "energy": "building",
+      "narration": "Costs fell while delivery got faster at the same time.",
+      "primary": {
+        "kind": "phrase",
+        "value": "cost"
+      },
+      "purpose": "compare",
+      "relationship": "separate",
+      "secondary": {
+        "kind": "phrase",
+        "value": "speed"
+      },
+      "statement": "Costs fell while delivery got faster…"
+    },
+    {
+      "continuity": "none",
+      "energy": "building",
+      "narration": "The deep layers hold most of the ocean's water by far.",
+      "primary": {
+        "focus": "deep",
+        "kind": "layers",
+        "layers": [
+          {
+            "name": "surface"
+          },
+          {
+            "name": "deep"
+          }
+        ]
+      },
+      "purpose": "emphasize",
+      "secondary": {
+        "asset": "fish",
+        "kind": "object"
+      },
+      "statement": "The deep layers hold most of…"
+    },
+    {
+      "continuity": "none",
+      "energy": "building",
+      "narration": "Delivery went from three days to one day for most people.",
+      "primary": {
+        "entity": "delivery",
+        "from": "3 days",
+        "kind": "state_change",
+        "to": "1 day"
+      },
+      "purpose": "emphasize",
+      "statement": "Delivery went from three days to…"
+    },
+    {
+      "continuity": "none",
+      "energy": "building",
+      "narration": "Revenue hit a record two billion dollars this year alone.",
+      "primary": {
+        "kind": "number",
+        "value": "$2B"
+      },
+      "purpose": "reveal",
+      "secondary": {
+        "asset": "money_stack",
+        "kind": "object"
+      },
+      "statement": "Revenue hit a record two billion…"
+    }
+  ],
+  "format": "vertical",
+  "title": "conflicts",
+  "version": "0.2"
+}

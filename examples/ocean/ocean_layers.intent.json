@@ -1,0 +1,52 @@
+{
+  "version": "0.2",
+  "title": "ocean_layers",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "The sunlit surface",
+      "narration": "Photosynthesis happens in the sun-lit surface layer, called the photic zone,",
+      "primary": { "kind": "object", "asset": "photic_zone", "meaning": "sunlit surface" },
+      "secondary": { "kind": "object", "asset": "phytoplankton", "meaning": "photosynthesis" },
+      "energy": "calm",
+      "keyword": "photic"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "Decay in the dark",
+      "narration": "but the decomposition occurs way, way deeper, in the aphotic zone,",
+      "primary": { "kind": "object", "asset": "fish_skeleton", "meaning": "decomposition" },
+      "secondary": { "kind": "object", "asset": "bacteria", "meaning": "decomposers" },
+      "energy": "building",
+      "keyword": "aphotic"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "The thermocline",
+      "narration": "below the density boundary called the thermocline, or pycnocline.",
+      "primary": { "kind": "object", "asset": "ocean_layers", "meaning": "density boundary" },
+      "secondary": { "kind": "object", "asset": "thermometer", "meaning": "temperature drop" },
+      "energy": "impact",
+      "keyword": "boundary"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "Stratification",
+      "narration": "This boundary keeps the surface and deeper waters from mixing, a phenomenon called stratification,",
+      "primary": { "kind": "object", "asset": "density_column", "meaning": "layers that never mix" },
+      "secondary": { "kind": "object", "asset": "padlock", "meaning": "sealed" },
+      "energy": "building",
+      "keyword": "stratification"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "No oxygen gets down",
+      "narration": "thus preventing oxygen from mixing from the surface down into the aphotic.",
+      "primary": { "kind": "object", "asset": "oxygen_molecule", "meaning": "oxygen" },
+      "secondary": { "kind": "object", "asset": "bubbles", "meaning": "cut off" },
+      "energy": "impact",
+      "keyword": "oxygen"
+    }
+  ]
+}

@@ -1,0 +1,680 @@
+{
+ "version": "0.1",
+ "specs": [
+  {
+   "id": "library.retro_tv",
+   "fingerprint": "fp1-f14336250903cf9f",
+   "continuity_key": "retro_tv",
+   "serves": [
+    "library.retro_tv"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "retro television",
+   "context": "library asset: retro television",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "black-and-white retro object photograph (engine applies halftone)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "retro_tv",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "4:3"
+   },
+   "prompt": "Black-and-white photograph, high-contrast monochrome, of a 1970s wooden-cabinet CRT television set facing the camera, its screen area filled edge to edge with flat solid pure magenta (#FF00FF). Vintage product photograph, the object itself entirely in black, white and grey. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.keyboard",
+   "fingerprint": "fp1-b020a72c54ca9553",
+   "continuity_key": "keyboard",
+   "serves": [
+    "library.keyboard"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "computer keyboard",
+   "context": "library asset: computer keyboard",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "black-and-white retro object photograph (engine applies halftone)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "keyboard",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "16:9"
+   },
+   "prompt": "Black-and-white photograph, high-contrast monochrome, of a retro beige mechanical computer keyboard at a slight angle with blank keycaps. Vintage product photograph, the object itself entirely in black, white and grey. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.megaphone",
+   "fingerprint": "fp1-9e661542a003f559",
+   "continuity_key": "megaphone",
+   "serves": [
+    "library.megaphone"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "megaphone",
+   "context": "library asset: megaphone",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "black-and-white retro object photograph (engine applies halftone)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "megaphone",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Black-and-white photograph, high-contrast monochrome, of a vintage handheld megaphone pointing to the right. Vintage product photograph, the object itself entirely in black, white and grey. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.rotary_phone",
+   "fingerprint": "fp1-78ea41445328f64a",
+   "continuity_key": "rotary_phone",
+   "serves": [
+    "library.rotary_phone"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "rotary telephone",
+   "context": "library asset: rotary telephone",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "black-and-white retro object photograph (engine applies halftone)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "rotary_phone",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Black-and-white photograph, high-contrast monochrome, of a 1960s rotary dial desk telephone with handset on its cradle. Vintage product photograph, the object itself entirely in black, white and grey. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.cassette",
+   "fingerprint": "fp1-e72f9ae68f1c704b",
+   "continuity_key": "cassette",
+   "serves": [
+    "library.cassette"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "cassette tape",
+   "context": "library asset: cassette tape",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "black-and-white retro object photograph (engine applies halftone)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "cassette",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Black-and-white photograph, high-contrast monochrome, of an audio cassette tape seen face on with a blank label. Vintage product photograph, the object itself entirely in black, white and grey. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.film_camera",
+   "fingerprint": "fp1-8ce6e7f7209a2fa0",
+   "continuity_key": "film_camera",
+   "serves": [
+    "library.film_camera"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "film camera",
+   "context": "library asset: film camera",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "black-and-white retro object photograph (engine applies halftone)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "film_camera",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Black-and-white photograph, high-contrast monochrome, of a vintage 35mm rangefinder film camera, front view. Vintage product photograph, the object itself entirely in black, white and grey. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.typewriter",
+   "fingerprint": "fp1-3ab56c09a27a7601",
+   "continuity_key": "typewriter",
+   "serves": [
+    "library.typewriter"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "typewriter",
+   "context": "library asset: typewriter",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "black-and-white retro object photograph (engine applies halftone)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "typewriter",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Black-and-white photograph, high-contrast monochrome, of a vintage manual typewriter with a blank sheet of paper loaded. Vintage product photograph, the object itself entirely in black, white and grey. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.hand_with_phone",
+   "fingerprint": "fp1-d5d30f616493965b",
+   "continuity_key": "hand_with_phone",
+   "serves": [
+    "library.hand_with_phone"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "hand holding a phone",
+   "context": "library asset: hand holding a phone",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "black-and-white retro object photograph (engine applies halftone)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "hand_with_phone",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "3:4"
+   },
+   "prompt": "Black-and-white photograph, high-contrast monochrome, of a hand holding a modern smartphone upright, the screen dark and blank. Vintage product photograph, the object itself entirely in black, white and grey. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.flip_phone",
+   "fingerprint": "fp1-b7e935bd5c4062cd",
+   "continuity_key": "flip_phone",
+   "serves": [
+    "library.flip_phone"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "flip phone",
+   "context": "library asset: flip phone",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "black-and-white retro object photograph (engine applies halftone)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "flip_phone",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "3:4"
+   },
+   "prompt": "Black-and-white photograph, high-contrast monochrome, of an open early-2000s flip phone with blank screen. Vintage product photograph, the object itself entirely in black, white and grey. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.radio",
+   "fingerprint": "fp1-0bd1e7b4edf82cbb",
+   "continuity_key": "radio",
+   "serves": [
+    "library.radio"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "transistor radio",
+   "context": "library asset: transistor radio",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "black-and-white retro object photograph (engine applies halftone)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "radio",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Black-and-white photograph, high-contrast monochrome, of a vintage portable transistor radio with a round speaker grille. Vintage product photograph, the object itself entirely in black, white and grey. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.vinyl",
+   "fingerprint": "fp1-2886648ca5e3ff84",
+   "continuity_key": "vinyl",
+   "serves": [
+    "library.vinyl"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "vinyl record",
+   "context": "library asset: vinyl record",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "black-and-white retro object photograph (engine applies halftone)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "vinyl",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Black-and-white photograph, high-contrast monochrome, of a vinyl record half pulled out of a plain blank sleeve. Vintage product photograph, the object itself entirely in black, white and grey. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.joystick",
+   "fingerprint": "fp1-a8b85cd2f800b7c4",
+   "continuity_key": "joystick",
+   "serves": [
+    "library.joystick"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "joystick",
+   "context": "library asset: joystick",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "black-and-white retro object photograph (engine applies halftone)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "joystick",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Black-and-white photograph, high-contrast monochrome, of a retro 1980s arcade-style joystick controller with one red button rendered in grey. Vintage product photograph, the object itself entirely in black, white and grey. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.boombox",
+   "fingerprint": "fp1-08f8ddd68c588226",
+   "continuity_key": "boombox",
+   "serves": [
+    "library.boombox"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "boombox",
+   "context": "library asset: boombox",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "black-and-white retro object photograph (engine applies halftone)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "boombox",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "16:9"
+   },
+   "prompt": "Black-and-white photograph, high-contrast monochrome, of a 1980s boombox portable stereo with two speakers, front view. Vintage product photograph, the object itself entirely in black, white and grey. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.instant_camera",
+   "fingerprint": "fp1-2b8675be87387295",
+   "continuity_key": "instant_camera",
+   "serves": [
+    "library.instant_camera"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "instant camera",
+   "context": "library asset: instant camera",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "black-and-white retro object photograph (engine applies halftone)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "instant_camera",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Black-and-white photograph, high-contrast monochrome, of a vintage instant camera, front view, without brand marks. Vintage product photograph, the object itself entirely in black, white and grey. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.walkman",
+   "fingerprint": "fp1-502e943af43fb9af",
+   "continuity_key": "walkman",
+   "serves": [
+    "library.walkman"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "portable cassette player",
+   "context": "library asset: portable cassette player",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "black-and-white retro object photograph (engine applies halftone)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "walkman",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Black-and-white photograph, high-contrast monochrome, of a portable cassette player with wired over-ear headphones beside it. Vintage product photograph, the object itself entirely in black, white and grey. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  }
+ ]
+}

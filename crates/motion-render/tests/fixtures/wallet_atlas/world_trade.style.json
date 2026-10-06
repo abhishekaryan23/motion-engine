@@ -1,0 +1,21 @@
+{
+  "tone": "documentary",
+  "polarity": "auto",
+  "temperature": "auto",
+  "temperament": "auto",
+  "density": "auto",
+  "family": "editorial_collage",
+  "material": "paper",
+  "typography_style": "grotesk_serif",
+  "depth": "layered",
+  "camera_style": "slow_push",
+  "motion_language": "auto",
+  "texture_style": "subtle_print",
+  "accent_role": "signal_red",
+  "seed": 0,
+  "brand": {
+    "primary": "#F4B93F",
+    "secondary": "#0DAC83",
+    "background": "#0B1A2C"
+  }
+}

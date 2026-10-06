@@ -1,0 +1,364 @@
+{
+  "family": "fun_facts",
+  "project": "MotionEngine Asset Library",
+  "project_id": "jR0xTD3dUZ28WeDiZEj4",
+  "emotions": [
+    "joy",
+    "energy",
+    "curiosity"
+  ],
+  "medium": "mixed media for surprising-fact stories: one medium per fact (vector poster, macro photo, antique engraving, paper-cut, voxel, oil painting)",
+  "assets": [
+    {
+      "id": "world_globe",
+      "role": "object",
+      "subject": "world globe",
+      "tags": [
+        "globe",
+        "world",
+        "earth",
+        "planet",
+        "geography",
+        "facts"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Bold flat vector screen-print illustration of a desk globe of planet Earth tilted on a simple curved stand, thick dark navy outlines, flat colour fills of ocean blue, land green and cream, a small white highlight, crisp clean shapes, limited palette, poster style (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "magnifying_glass",
+      "role": "object",
+      "subject": "magnifying glass",
+      "tags": [
+        "magnifying glass",
+        "magnifier",
+        "search",
+        "curious",
+        "discover",
+        "investigate"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Bold flat vector screen-print illustration of a magnifying glass with a thick teal handle, a round golden rim and a pale blue glass lens with a white highlight, thick dark navy outlines, flat colour fills, crisp clean shapes, limited palette, poster style (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "banana",
+      "role": "object",
+      "subject": "banana",
+      "tags": [
+        "banana",
+        "bananas",
+        "berry",
+        "berries",
+        "fruit"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Macro studio photograph of a single ripe yellow banana with tiny brown sugar speckles and a few glossy fresh water droplets on its skin, crisp focus, soft diffused studio light, photorealistic, high detail, natural colours (no pink or magenta reflections on the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "strawberry",
+      "role": "object",
+      "subject": "strawberry",
+      "tags": [
+        "strawberry",
+        "strawberries",
+        "fruit"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Macro studio photograph of a single ripe deep red strawberry with a fresh green leafy crown, tiny yellow seeds and a few glossy water droplets, crisp focus, soft diffused studio light, photorealistic, high detail, natural colours (no pink or magenta reflections on the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "shark",
+      "role": "object",
+      "subject": "shark",
+      "tags": [
+        "shark",
+        "sharks",
+        "ocean",
+        "fish",
+        "ancient"
+      ],
+      "model": "flare",
+      "aspect": "3:2",
+      "prompt": "Antique natural-history engraving of a great white shark in side view, fine black ink cross-hatching and stippling, hand-tinted with a soft watercolour wash of slate blue and cream, aged copper-plate illustration style, detailed gills, fins and rows of teeth (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "tree",
+      "role": "object",
+      "subject": "tree",
+      "tags": [
+        "tree",
+        "trees",
+        "forest",
+        "wood",
+        "nature"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Antique botanical engraving of a large spreading deciduous tree with a thick trunk, visible roots and a layered leafy canopy, fine black ink hatching, hand-tinted with a soft watercolour wash of sage green and ochre brown, aged copper-plate illustration style (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "eiffel_tower",
+      "role": "object",
+      "subject": "Eiffel Tower",
+      "tags": [
+        "eiffel tower",
+        "eiffel",
+        "tower",
+        "paris",
+        "france",
+        "landmark"
+      ],
+      "model": "flare",
+      "aspect": "2:3",
+      "prompt": "Layered paper-cut craft artwork of the Eiffel Tower, built from stacked sheets of bronze, rust orange and sand coloured cut paper with intricate lattice cut-outs, subtle depth shadows between the paper layers, visible paper fibre texture (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "sun",
+      "role": "object",
+      "subject": "sun",
+      "tags": [
+        "sun",
+        "summer",
+        "heat",
+        "hot",
+        "warm",
+        "sunshine"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Layered paper-cut craft artwork of a radiant sun, stacked sheets of golden yellow, orange and cream cut paper with scalloped rays, subtle depth shadows between the paper layers, visible paper fibre texture (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "thermometer",
+      "role": "object",
+      "subject": "thermometer",
+      "tags": [
+        "thermometer",
+        "temperature",
+        "heat",
+        "degrees"
+      ],
+      "model": "flare",
+      "aspect": "2:3",
+      "prompt": "Layered paper-cut craft artwork of a tall upright thermometer with a round bulb and a tall column of red liquid, stacked sheets of red, cream and teal paper, plain evenly spaced tick marks without any numbers, subtle depth shadows between the paper layers, visible paper fibre texture (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "wombat",
+      "role": "object",
+      "subject": "wombat",
+      "tags": [
+        "wombat",
+        "wombats",
+        "animal",
+        "australia",
+        "marsupial"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Voxel art 3D model of a cute stocky wombat standing on four short legs in three-quarter view, built from small visible cubic voxel blocks in brown, grey and cream, crisp blocky edges, soft studio lighting, game-asset style (no pink, no purple, no magenta in the object, no pink nose). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "brown_cubes",
+      "role": "object",
+      "subject": "brown cubes",
+      "tags": [
+        "cube",
+        "cubes",
+        "brown cubes",
+        "square",
+        "block",
+        "blocks",
+        "dice"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Voxel art 3D model of a neat pile of five chunky chocolate-brown cubes, each made of tiny cubic voxel blocks, slightly different shades of brown, crisp blocky edges, plain faces with no dots, soft studio lighting, game-asset style (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "oxford_college",
+      "role": "object",
+      "subject": "Oxford college",
+      "tags": [
+        "oxford",
+        "university",
+        "college",
+        "school",
+        "study",
+        "medieval"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Oil painting of a medieval English university college in honey-coloured stone with a tall gothic tower in the middle, pointed arched windows, battlements and a wide arched wooden door, rich visible brushstrokes and impasto texture, warm classical painterly style, golden light (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "aztec_pyramid",
+      "role": "object",
+      "subject": "Aztec pyramid",
+      "tags": [
+        "aztec",
+        "pyramid",
+        "temple",
+        "empire",
+        "ancient",
+        "mexico"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Oil painting of a stepped Aztec stone temple pyramid with a wide central staircase climbing the front and a small flat-roofed shrine on top, sandy stone with teal and orange painted bands, rich visible brushstrokes and impasto texture, warm classical painterly style, golden light (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "env_world",
+      "role": "texture",
+      "subject": "vector world map night sky",
+      "tags": [
+        "world",
+        "globe",
+        "earth",
+        "planet",
+        "magnifying",
+        "glass",
+        "curiosity",
+        "know",
+        "facts",
+        "geography"
+      ],
+      "model": "flare",
+      "aspect": "9:16",
+      "prompt": "Bold flat vector screen-print illustration used as a vertical video background: a deep navy night sky with a faint dotted world-map pattern, tiny constellations and a soft teal glow near the horizon, limited palette of navy, teal and cream. The centre is empty and quiet. No people, no text, no letters, no numbers, no logos."
+    },
+    {
+      "id": "env_fruit_market",
+      "role": "texture",
+      "subject": "sunlit fruit market in bokeh",
+      "tags": [
+        "banana",
+        "bananas",
+        "strawberry",
+        "strawberries",
+        "berry",
+        "berries",
+        "fruit",
+        "fruits",
+        "botany",
+        "botanical",
+        "market"
+      ],
+      "model": "flare",
+      "aspect": "9:16",
+      "prompt": "Soft out-of-focus photograph used as a vertical video background: a sunlit fruit market stall at golden hour, crates of bananas, strawberries and citrus in creamy bokeh. The centre is empty and quiet. No people, no text, no letters, no numbers, no logos."
+    },
+    {
+      "id": "env_prehistoric_sea",
+      "role": "texture",
+      "subject": "engraved prehistoric coastline",
+      "tags": [
+        "shark",
+        "sharks",
+        "tree",
+        "trees",
+        "ancient",
+        "hunter",
+        "ocean",
+        "sea",
+        "prehistoric",
+        "fern",
+        "late",
+        "arrival",
+        "later",
+        "swimming"
+      ],
+      "model": "flare",
+      "aspect": "9:16",
+      "prompt": "Antique natural-history engraving, hand-tinted with watercolour, used as a vertical video background: a prehistoric coastline with rolling waves, giant ferns and horsetails. The centre is empty and quiet. No people, no text, no letters, no numbers, no logos."
+    },
+    {
+      "id": "env_paris_sky",
+      "role": "texture",
+      "subject": "paper-cut Paris sunrise",
+      "tags": [
+        "eiffel",
+        "tower",
+        "paris",
+        "sun",
+        "summer",
+        "heat",
+        "sunrise",
+        "thermometer",
+        "metal",
+        "expands",
+        "expand",
+        "temperature",
+        "growth",
+        "weather"
+      ],
+      "model": "flare",
+      "aspect": "9:16",
+      "prompt": "Layered paper-cut craft artwork used as a vertical video background: a Paris skyline at sunrise with a large glowing sun disc rising behind stacked cut-paper layers. The centre is empty and quiet. No people, no text, no letters, no numbers, no logos."
+    },
+    {
+      "id": "env_outback",
+      "role": "texture",
+      "subject": "voxel Australian outback",
+      "tags": [
+        "wombat",
+        "wombats",
+        "cube",
+        "cubes",
+        "brown",
+        "australia",
+        "outback",
+        "maker",
+        "random",
+        "round",
+        "boring"
+      ],
+      "model": "flare",
+      "aspect": "9:16",
+      "prompt": "Voxel art landscape used as a vertical video background: the Australian outback at sunset with red earth, blocky eucalyptus trees and distant mesas. The centre is empty and quiet. No people, no text, no letters, no numbers, no logos."
+    },
+    {
+      "id": "env_old_world",
+      "role": "texture",
+      "subject": "painted golden-hour sky over spires and a temple",
+      "tags": [
+        "oxford",
+        "college",
+        "university",
+        "aztec",
+        "aztecs",
+        "pyramid",
+        "empire",
+        "temple",
+        "medieval",
+        "teaching",
+        "centuries",
+        "studying",
+        "ahead"
+      ],
+      "model": "flare",
+      "aspect": "9:16",
+      "prompt": "Oil painting used as a vertical video background: a dramatic golden-hour sky over a hazy medieval town with church spires and a distant stepped stone temple. The centre is empty and quiet. No people, no text, no letters, no numbers, no logos."
+    },
+    {
+      "id": "env_night_sky",
+      "role": "texture",
+      "subject": "painted midnight starry sky",
+      "tags": [
+        "stranger",
+        "fiction",
+        "impossible",
+        "remember",
+        "looks",
+        "stars",
+        "night",
+        "universe"
+      ],
+      "model": "flare",
+      "aspect": "9:16",
+      "prompt": "Painterly illustration used as a vertical video background: a deep midnight-blue starry sky with a soft nebula glow and an amber horizon glow. The centre is empty and quiet. No people, no text, no letters, no numbers, no logos."
+    }
+  ]
+}

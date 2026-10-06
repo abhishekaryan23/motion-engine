@@ -1,0 +1,1032 @@
+{
+  "family": "clay_concepts_3d",
+  "project": "MotionEngine Asset Library",
+  "project_id": "jR0xTD3dUZ28WeDiZEj4",
+  "emotions": [
+    "joy",
+    "energy",
+    "calm",
+    "precision"
+  ],
+  "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+  "assets": [
+    {
+      "id": "robot",
+      "role": "object",
+      "subject": "robot",
+      "tags": [
+        "robot",
+        "robots",
+        "bot",
+        "ai",
+        "artificial intelligence",
+        "automation",
+        "machine",
+        "assistant"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a friendly small robot standing upright, rounded boxy head with two round glowing eyes and a short antenna, stubby arms, simple chunky body. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "robot_arm",
+      "role": "object",
+      "subject": "robot arm",
+      "tags": [
+        "robot arm",
+        "automation",
+        "factory",
+        "manufacturing",
+        "machine",
+        "industry",
+        "robotics"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of an industrial robot arm with three rounded joints and a two-finger gripper, standing on a round base. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "brain_circuit",
+      "role": "object",
+      "subject": "brain with circuits",
+      "tags": [
+        "ai",
+        "artificial intelligence",
+        "neural network",
+        "machine learning",
+        "brain",
+        "intelligence",
+        "model",
+        "deep learning"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a brain whose surface is covered with raised circuit-board traces ending in small round dots, half warm coral and half teal. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "microchip",
+      "role": "object",
+      "subject": "microchip",
+      "tags": [
+        "chip",
+        "microchip",
+        "processor",
+        "cpu",
+        "gpu",
+        "semiconductor",
+        "hardware",
+        "computer"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a square computer microchip with short metal pins on all four sides and a raised square core. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "chat_bubbles",
+      "role": "object",
+      "subject": "chat bubbles",
+      "tags": [
+        "chat",
+        "chatbot",
+        "message",
+        "messages",
+        "conversation",
+        "assistant",
+        "reply",
+        "texting"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of two overlapping rounded speech bubbles, the front one holding three round dots. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "neural_network",
+      "role": "object",
+      "subject": "neural network",
+      "tags": [
+        "neural network",
+        "network",
+        "nodes",
+        "connections",
+        "graph",
+        "data",
+        "model"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a small sculpture of round balls connected by thin rods in three layers, like a neural network diagram. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "ai_sparkles",
+      "role": "object",
+      "subject": "sparkles",
+      "tags": [
+        "ai",
+        "magic",
+        "sparkle",
+        "generate",
+        "generative",
+        "new",
+        "shine",
+        "idea"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a cluster of three plump four-pointed sparkle stars of different sizes. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "server_rack",
+      "role": "object",
+      "subject": "server rack",
+      "tags": [
+        "server",
+        "servers",
+        "data center",
+        "cloud computing",
+        "compute",
+        "hosting",
+        "infrastructure"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a tall server rack cabinet with stacked server units and small round status lights. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "cloud_data",
+      "role": "object",
+      "subject": "cloud with arrow",
+      "tags": [
+        "cloud",
+        "upload",
+        "storage",
+        "online",
+        "backup",
+        "cloud computing",
+        "sync"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a puffy cloud with a chunky upward arrow in front of it. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "camera_lens",
+      "role": "object",
+      "subject": "camera lens",
+      "tags": [
+        "camera",
+        "lens",
+        "vision",
+        "computer vision",
+        "see",
+        "watch",
+        "surveillance",
+        "focus"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a chunky round camera lens seen at three-quarter view with glossy layered glass. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "magic_wand",
+      "role": "object",
+      "subject": "magic wand",
+      "tags": [
+        "magic",
+        "wand",
+        "automate",
+        "transform",
+        "trick",
+        "easy"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a magic wand with a star tip and two tiny sparkles. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "android_head",
+      "role": "object",
+      "subject": "robot head",
+      "tags": [
+        "android",
+        "humanoid",
+        "robot head",
+        "ai",
+        "cyborg",
+        "future"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a rounded humanoid robot head in side profile with a small antenna and a glowing round ear light. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "laptop",
+      "role": "object",
+      "subject": "laptop",
+      "tags": [
+        "laptop",
+        "computer",
+        "coding",
+        "work",
+        "programming",
+        "remote work",
+        "software"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of an open laptop with a blank teal screen and a chunky keyboard. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "smartphone",
+      "role": "object",
+      "subject": "smartphone",
+      "tags": [
+        "phone",
+        "smartphone",
+        "mobile",
+        "app",
+        "apps",
+        "screen time",
+        "social media"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a chunky smartphone standing upright with a blank teal screen and rounded corners. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "desktop_monitor",
+      "role": "object",
+      "subject": "computer monitor",
+      "tags": [
+        "monitor",
+        "screen",
+        "desktop",
+        "display",
+        "computer",
+        "pc"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a desktop computer monitor on a small stand with a blank teal screen. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "wifi_signal",
+      "role": "object",
+      "subject": "wifi signal",
+      "tags": [
+        "wifi",
+        "internet",
+        "connection",
+        "signal",
+        "wireless",
+        "online",
+        "network"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a wifi signal symbol made of three thick curved arcs above a round dot. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "satellite",
+      "role": "object",
+      "subject": "satellite",
+      "tags": [
+        "satellite",
+        "space",
+        "signal",
+        "orbit",
+        "gps",
+        "communication"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a small satellite with a round body and two rectangular solar panel wings. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "vr_headset",
+      "role": "object",
+      "subject": "vr headset",
+      "tags": [
+        "vr",
+        "virtual reality",
+        "headset",
+        "metaverse",
+        "ar",
+        "immersive"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a virtual reality headset with a strap, seen at three-quarter view. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "drone",
+      "role": "object",
+      "subject": "drone",
+      "tags": [
+        "drone",
+        "drones",
+        "delivery",
+        "flying",
+        "aerial",
+        "quadcopter"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a quadcopter drone with four round propellers. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "battery",
+      "role": "object",
+      "subject": "battery",
+      "tags": [
+        "battery",
+        "energy",
+        "charge",
+        "charging",
+        "power",
+        "electric"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of an upright battery with three charge bars and a small lightning bolt. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "gears",
+      "role": "object",
+      "subject": "gears",
+      "tags": [
+        "gears",
+        "settings",
+        "process",
+        "engineering",
+        "system",
+        "mechanism",
+        "workflow",
+        "machine"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of two interlocking chunky gears, one larger teal and one smaller yellow. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "power_plug",
+      "role": "object",
+      "subject": "power plug",
+      "tags": [
+        "plug",
+        "connect",
+        "power",
+        "electricity",
+        "integration",
+        "connection"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of an electric plug with a short curled cable about to connect to a round socket. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "game_controller",
+      "role": "object",
+      "subject": "game controller",
+      "tags": [
+        "game",
+        "gaming",
+        "controller",
+        "play",
+        "video game",
+        "esports"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a rounded video game controller with a cross pad and round buttons. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "headphones",
+      "role": "object",
+      "subject": "headphones",
+      "tags": [
+        "headphones",
+        "music",
+        "audio",
+        "listen",
+        "podcast",
+        "sound"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a pair of over-ear headphones with a curved headband. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "atom",
+      "role": "object",
+      "subject": "atom",
+      "tags": [
+        "atom",
+        "physics",
+        "science",
+        "nuclear",
+        "electron",
+        "quantum",
+        "energy"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of an atom model with a round nucleus of small balls and three elliptical electron orbits each carrying a small ball. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "dna_helix",
+      "role": "object",
+      "subject": "dna helix",
+      "tags": [
+        "dna",
+        "genetics",
+        "biology",
+        "gene",
+        "genes",
+        "life",
+        "heredity",
+        "genome"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a vertical DNA double helix with two twisting strands joined by short rungs. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "microscope",
+      "role": "object",
+      "subject": "microscope",
+      "tags": [
+        "microscope",
+        "research",
+        "biology",
+        "lab",
+        "laboratory",
+        "science",
+        "cells"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a laboratory microscope with a curved arm and a round base. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "flask",
+      "role": "object",
+      "subject": "lab flask",
+      "tags": [
+        "chemistry",
+        "flask",
+        "experiment",
+        "lab",
+        "laboratory",
+        "potion",
+        "reaction",
+        "science"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a conical laboratory flask half filled with bubbling teal liquid. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "telescope",
+      "role": "object",
+      "subject": "telescope",
+      "tags": [
+        "telescope",
+        "astronomy",
+        "stars",
+        "discovery",
+        "space",
+        "observe"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a telescope on a three-legged tripod pointing up to the right. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "ringed_planet",
+      "role": "object",
+      "subject": "ringed planet",
+      "tags": [
+        "planet",
+        "space",
+        "universe",
+        "astronomy",
+        "saturn",
+        "cosmos"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a ringed planet like Saturn, slightly tilted, with a wide flat ring. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "magnet",
+      "role": "object",
+      "subject": "magnet",
+      "tags": [
+        "magnet",
+        "attract",
+        "attraction",
+        "physics",
+        "pull",
+        "magnetic"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a horseshoe magnet with lighter tips. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "molecule",
+      "role": "object",
+      "subject": "molecule",
+      "tags": [
+        "molecule",
+        "chemistry",
+        "compound",
+        "chemical",
+        "atoms"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a ball-and-stick molecule model with five round atoms of two sizes. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "petri_dish",
+      "role": "object",
+      "subject": "petri dish",
+      "tags": [
+        "bacteria",
+        "petri dish",
+        "cells",
+        "microbes",
+        "culture",
+        "lab"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a shallow round petri dish with small round colonies inside. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "virus",
+      "role": "object",
+      "subject": "virus",
+      "tags": [
+        "virus",
+        "germ",
+        "disease",
+        "infection",
+        "pandemic",
+        "flu",
+        "immunity"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a round virus particle covered in short rounded spikes. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "sprout",
+      "role": "object",
+      "subject": "sprout",
+      "tags": [
+        "plant",
+        "growth",
+        "sprout",
+        "nature",
+        "ecology",
+        "climate",
+        "seed",
+        "grow"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a small green-teal sprout with two leaves growing from a mound of soil. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "earth_globe",
+      "role": "object",
+      "subject": "earth",
+      "tags": [
+        "earth",
+        "planet",
+        "climate",
+        "world",
+        "globe",
+        "environment",
+        "global"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of the planet Earth as a sphere with simple teal oceans and yellow-cream continents. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "brain",
+      "role": "object",
+      "subject": "brain",
+      "tags": [
+        "brain",
+        "mind",
+        "think",
+        "thinking",
+        "memory",
+        "psychology",
+        "mental",
+        "neuroscience"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a plump human brain with soft rounded folds in warm coral. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "heart",
+      "role": "object",
+      "subject": "heart",
+      "tags": [
+        "heart",
+        "love",
+        "emotion",
+        "emotions",
+        "feelings",
+        "care",
+        "kindness"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a plump glossy heart shape in warm coral. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "thought_cloud",
+      "role": "object",
+      "subject": "thought cloud",
+      "tags": [
+        "thought",
+        "think",
+        "dream",
+        "imagine",
+        "wonder",
+        "idea",
+        "overthinking"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a thought bubble cloud with two small trailing bubbles. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "puzzle_pieces",
+      "role": "object",
+      "subject": "puzzle pieces",
+      "tags": [
+        "puzzle",
+        "solve",
+        "problem",
+        "fit",
+        "together",
+        "solution",
+        "match"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of two jigsaw puzzle pieces about to click together, one teal one yellow. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "maze",
+      "role": "object",
+      "subject": "maze",
+      "tags": [
+        "maze",
+        "confusion",
+        "problem",
+        "path",
+        "labyrinth",
+        "lost",
+        "choices"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a small square maze block with raised walls and a little ball inside. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "theatre_masks",
+      "role": "object",
+      "subject": "theatre masks",
+      "tags": [
+        "masks",
+        "emotions",
+        "personality",
+        "mood",
+        "theatre",
+        "identity",
+        "mood swings"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a pair of comedy and tragedy theatre masks overlapping. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "sleep_moon",
+      "role": "object",
+      "subject": "sleeping moon",
+      "tags": [
+        "sleep",
+        "night",
+        "rest",
+        "dream",
+        "insomnia",
+        "bedtime",
+        "nap"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a crescent moon with two small stars beside it and a soft round cloud. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "zen_stones",
+      "role": "object",
+      "subject": "zen stones",
+      "tags": [
+        "calm",
+        "balance",
+        "meditation",
+        "mindfulness",
+        "stress relief",
+        "peace",
+        "zen"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a balanced stack of four smooth flat stones of decreasing size. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "storm_cloud",
+      "role": "object",
+      "subject": "storm cloud",
+      "tags": [
+        "stress",
+        "anxiety",
+        "storm",
+        "sad",
+        "sadness",
+        "mood",
+        "worry",
+        "depression",
+        "trouble"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a dark grey-teal rain cloud with a yellow lightning bolt and a few rain drops. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "therapy_couch",
+      "role": "object",
+      "subject": "therapy couch",
+      "tags": [
+        "therapy",
+        "therapist",
+        "counselling",
+        "couch",
+        "psychology",
+        "mental health"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a classic therapy chaise couch with a rolled headrest and a small pillow. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "dominoes",
+      "role": "object",
+      "subject": "dominoes",
+      "tags": [
+        "habit",
+        "habits",
+        "chain reaction",
+        "domino",
+        "cause",
+        "effect",
+        "momentum"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a short row of five standing domino tiles with dots, the first one tipping over. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "emotion_faces",
+      "role": "object",
+      "subject": "emotion faces",
+      "tags": [
+        "mood",
+        "emotion",
+        "emotions",
+        "happy",
+        "sad",
+        "feelings",
+        "emotional"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of three round balls side by side with simple happy, neutral and sad faces. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "briefcase",
+      "role": "object",
+      "subject": "briefcase",
+      "tags": [
+        "briefcase",
+        "business",
+        "work",
+        "job",
+        "office",
+        "career",
+        "corporate"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a classic briefcase with a handle and two clasps. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "handshake",
+      "role": "object",
+      "subject": "handshake",
+      "tags": [
+        "handshake",
+        "deal",
+        "agreement",
+        "partnership",
+        "trust",
+        "business",
+        "contract"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of two clay hands shaking firmly, one teal sleeve and one yellow sleeve. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "money_bag",
+      "role": "object",
+      "subject": "money bag",
+      "tags": [
+        "money",
+        "money bag",
+        "wealth",
+        "profit",
+        "income",
+        "funding",
+        "revenue"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a plump tied money sack with a few gold coins beside it. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "pie_chart",
+      "role": "object",
+      "subject": "pie chart",
+      "tags": [
+        "pie chart",
+        "share",
+        "market share",
+        "statistics",
+        "data",
+        "percentage",
+        "analytics"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a thick pie chart disc with one wedge pulled slightly out. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "trend_arrow",
+      "role": "object",
+      "subject": "trend arrow",
+      "tags": [
+        "growth",
+        "trend",
+        "increase",
+        "rise",
+        "up",
+        "progress",
+        "profit",
+        "success"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a chunky zig-zag arrow climbing up to the right. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "career_ladder",
+      "role": "object",
+      "subject": "ladder",
+      "tags": [
+        "career",
+        "ladder",
+        "promotion",
+        "climb",
+        "progress",
+        "goals",
+        "ambition"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a short wooden ladder leaning slightly, with a small star at the top. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "shopping_cart",
+      "role": "object",
+      "subject": "shopping cart",
+      "tags": [
+        "shopping",
+        "cart",
+        "ecommerce",
+        "buy",
+        "purchase",
+        "retail",
+        "online shopping"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a shopping cart with a few small boxes inside. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "shop_front",
+      "role": "object",
+      "subject": "shop front",
+      "tags": [
+        "shop",
+        "store",
+        "small business",
+        "retail",
+        "startup",
+        "market",
+        "business"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a tiny shop building with a striped awning and a door. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "chess_knight",
+      "role": "object",
+      "subject": "chess knight",
+      "tags": [
+        "strategy",
+        "chess",
+        "plan",
+        "move",
+        "tactics",
+        "competition",
+        "smart move"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a chess knight piece. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "crown",
+      "role": "object",
+      "subject": "crown",
+      "tags": [
+        "leader",
+        "leadership",
+        "king",
+        "queen",
+        "crown",
+        "winner",
+        "power",
+        "boss"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a royal crown with five rounded points tipped with balls. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "compass",
+      "role": "object",
+      "subject": "compass",
+      "tags": [
+        "direction",
+        "compass",
+        "strategy",
+        "navigation",
+        "guide",
+        "vision",
+        "purpose"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a round navigation compass with a needle pointing up. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "stopwatch",
+      "role": "object",
+      "subject": "stopwatch",
+      "tags": [
+        "deadline",
+        "time",
+        "speed",
+        "fast",
+        "timer",
+        "productivity",
+        "urgent"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Soft 3D clay render of a round stopwatch with a top button and a single hand. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "title": "faster delivery",
+  "beats": [
+    {"say": "Delivery went from three whole days to the very same day.", "change": {"what": "delivery", "from": "3 days", "to": "same day"}, "meaning": "faster"},
+    {"say": "And prices dropped from nine dollars to just two.", "change": {"what": "price", "from": "$9", "to": "$2"}, "show": "Cheaper too"}
+  ]
+}

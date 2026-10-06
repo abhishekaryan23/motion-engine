@@ -1,0 +1,47 @@
+{
+  "version": "0.2",
+  "title": "the_reach_for_trust",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "The customer reaches for trust",
+      "primary": {
+        "kind": "object",
+        "asset": "hands",
+        "meaning": "two hands that almost touch"
+      },
+      "energy": "calm"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "Every promise is weighed",
+      "primary": {
+        "kind": "object",
+        "asset": "scales",
+        "meaning": "the scales of justice"
+      },
+      "energy": "building"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "Patience still wins customers",
+      "primary": {
+        "kind": "object",
+        "asset": "hourglass",
+        "meaning": "time running out"
+      },
+      "energy": "building"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "Trust is the real victory",
+      "primary": {
+        "kind": "object",
+        "asset": "laurel",
+        "meaning": "a victory laurel"
+      },
+      "energy": "impact"
+    }
+  ]
+}

@@ -1,0 +1,515 @@
+{
+ "version": "0.1",
+ "family": "grounds",
+ "emotions": [
+  "trust",
+  "warmth",
+  "calm",
+  "precision",
+  "joy",
+  "energy",
+  "drama",
+  "luxury",
+  "urgency",
+  "handmade",
+  "playful_retro"
+ ],
+ "medium": "full-frame background plates",
+ "assets": [
+  {
+   "id": "neon_purple_gradient",
+   "file": "neon_purple_gradient.png",
+   "role": "texture",
+   "subject": "dark neon purple gradient",
+   "tags": [
+    "dark",
+    "gradient",
+    "neon",
+    "night",
+    "purple"
+   ],
+   "alpha": false,
+   "cutout_bbox": null,
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "oRmjRkEHfEeBeMvSokvg",
+    "keyed": null
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.0,
+     "y": 0.0,
+     "width": 1.0,
+     "height": 1.0
+    },
+    "coverage": 1.0,
+    "edges": {
+     "top": true,
+     "bottom": true,
+     "left": true,
+     "right": true
+    }
+   },
+   "width": 1008,
+   "height": 1792
+  },
+  {
+   "id": "black_grain",
+   "file": "black_grain.png",
+   "role": "texture",
+   "subject": "near-black grain",
+   "tags": [
+    "black",
+    "dark",
+    "film",
+    "grain",
+    "night"
+   ],
+   "alpha": false,
+   "cutout_bbox": null,
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "gn1UKoWQ9mjrJzL4Hrc4",
+    "keyed": null
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.0,
+     "y": 0.0,
+     "width": 1.0,
+     "height": 1.0
+    },
+    "coverage": 1.0,
+    "edges": {
+     "top": true,
+     "bottom": true,
+     "left": true,
+     "right": true
+    }
+   },
+   "width": 1008,
+   "height": 1792
+  },
+  {
+   "id": "grey_studio",
+   "file": "grey_studio.png",
+   "role": "texture",
+   "subject": "light grey studio",
+   "tags": [
+    "clean",
+    "gray",
+    "grey",
+    "light",
+    "neutral",
+    "studio"
+   ],
+   "alpha": false,
+   "cutout_bbox": null,
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "3JJk1HYzXAR9JABHcW9l",
+    "keyed": null
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.0,
+     "y": 0.0,
+     "width": 1.0,
+     "height": 1.0
+    },
+    "coverage": 1.0,
+    "edges": {
+     "top": true,
+     "bottom": true,
+     "left": true,
+     "right": true
+    }
+   },
+   "width": 1008,
+   "height": 1792
+  },
+  {
+   "id": "warm_paper",
+   "file": "warm_paper.png",
+   "role": "texture",
+   "subject": "warm paper",
+   "tags": [
+    "cream",
+    "page",
+    "paper",
+    "print",
+    "warm"
+   ],
+   "alpha": false,
+   "cutout_bbox": null,
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "89NZer6Av2Bx6SM6bKuc",
+    "keyed": null
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.0,
+     "y": 0.0,
+     "width": 1.0,
+     "height": 1.0
+    },
+    "coverage": 1.0,
+    "edges": {
+     "top": true,
+     "bottom": true,
+     "left": true,
+     "right": true
+    }
+   },
+   "width": 1008,
+   "height": 1792
+  },
+  {
+   "id": "kraft",
+   "file": "kraft.png",
+   "role": "texture",
+   "subject": "kraft paper",
+   "tags": [
+    "brown",
+    "cardboard",
+    "handmade",
+    "kraft",
+    "paper"
+   ],
+   "alpha": false,
+   "cutout_bbox": null,
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "BorCEv8hWrvEq74K00BV",
+    "keyed": null
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.0,
+     "y": 0.0,
+     "width": 1.0,
+     "height": 1.0
+    },
+    "coverage": 1.0,
+    "edges": {
+     "top": true,
+     "bottom": true,
+     "left": true,
+     "right": true
+    }
+   },
+   "width": 1008,
+   "height": 1792
+  },
+  {
+   "id": "sky_gradient",
+   "file": "sky_gradient.png",
+   "role": "texture",
+   "subject": "sky gradient",
+   "tags": [
+    "air",
+    "blue",
+    "calm",
+    "gradient",
+    "morning",
+    "sky"
+   ],
+   "alpha": false,
+   "cutout_bbox": null,
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "uCUpCMPXOWo6FPYZRhLI",
+    "keyed": null
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.0,
+     "y": 0.0,
+     "width": 1.0,
+     "height": 1.0
+    },
+    "coverage": 1.0,
+    "edges": {
+     "top": true,
+     "bottom": true,
+     "left": true,
+     "right": true
+    }
+   },
+   "width": 1008,
+   "height": 1792
+  },
+  {
+   "id": "deep_teal",
+   "file": "deep_teal.png",
+   "role": "texture",
+   "subject": "deep teal",
+   "tags": [
+    "dark",
+    "deep",
+    "green",
+    "ocean",
+    "teal"
+   ],
+   "alpha": false,
+   "cutout_bbox": null,
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "LbTy4OekZiWahbws2d9U",
+    "keyed": null
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.0,
+     "y": 0.0,
+     "width": 1.0,
+     "height": 1.0
+    },
+    "coverage": 1.0,
+    "edges": {
+     "top": true,
+     "bottom": true,
+     "left": true,
+     "right": true
+    }
+   },
+   "width": 1008,
+   "height": 1792
+  },
+  {
+   "id": "blush",
+   "file": "blush.png",
+   "role": "texture",
+   "subject": "blush",
+   "tags": [
+    "blush",
+    "gentle",
+    "rose",
+    "soft",
+    "warm"
+   ],
+   "alpha": false,
+   "cutout_bbox": null,
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "E2pIuCOeAMEbEGcl0NA0",
+    "keyed": null
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.0,
+     "y": 0.0,
+     "width": 1.0,
+     "height": 1.0
+    },
+    "coverage": 1.0,
+    "edges": {
+     "top": true,
+     "bottom": true,
+     "left": true,
+     "right": true
+    }
+   },
+   "width": 1008,
+   "height": 1792
+  },
+  {
+   "id": "halftone_dark",
+   "file": "halftone_dark.png",
+   "role": "texture",
+   "subject": "halftone dark field",
+   "tags": [
+    "dark",
+    "dots",
+    "halftone",
+    "print",
+    "retro"
+   ],
+   "alpha": false,
+   "cutout_bbox": null,
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "N1hKXIIneJ9ySVT8R7Ij",
+    "keyed": null
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.0,
+     "y": 0.0,
+     "width": 1.0,
+     "height": 1.0
+    },
+    "coverage": 1.0,
+    "edges": {
+     "top": true,
+     "bottom": true,
+     "left": true,
+     "right": true
+    }
+   },
+   "width": 1008,
+   "height": 1792
+  },
+  {
+   "id": "concrete",
+   "file": "concrete.png",
+   "role": "texture",
+   "subject": "concrete",
+   "tags": [
+    "concrete",
+    "grey",
+    "stone",
+    "urban",
+    "wall"
+   ],
+   "alpha": false,
+   "cutout_bbox": null,
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "inSzxra05pluuJDJyqb7",
+    "keyed": null
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.0,
+     "y": 0.0,
+     "width": 1.0,
+     "height": 1.0
+    },
+    "coverage": 1.0,
+    "edges": {
+     "top": true,
+     "bottom": true,
+     "left": true,
+     "right": true
+    }
+   },
+   "width": 1008,
+   "height": 1792
+  },
+  {
+   "id": "linen",
+   "file": "linen.png",
+   "role": "texture",
+   "subject": "linen",
+   "tags": [
+    "calm",
+    "cloth",
+    "fabric",
+    "linen",
+    "natural"
+   ],
+   "alpha": false,
+   "cutout_bbox": null,
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "lUtV4Rd33OBfXKx3J1fE",
+    "keyed": null
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.0,
+     "y": 0.0,
+     "width": 1.0,
+     "height": 1.0
+    },
+    "coverage": 1.0,
+    "edges": {
+     "top": true,
+     "bottom": true,
+     "left": true,
+     "right": true
+    }
+   },
+   "width": 1008,
+   "height": 1792
+  },
+  {
+   "id": "ink_wash_dark",
+   "file": "ink_wash_dark.png",
+   "role": "texture",
+   "subject": "dark ink wash",
+   "tags": [
+    "dark",
+    "dramatic",
+    "ink",
+    "wash",
+    "watercolor",
+    "watercolour"
+   ],
+   "alpha": false,
+   "cutout_bbox": null,
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "t5xCY0kALSaDpPuRJE6J",
+    "keyed": null
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.0,
+     "y": 0.0,
+     "width": 1.0,
+     "height": 1.0
+    },
+    "coverage": 1.0,
+    "edges": {
+     "top": true,
+     "bottom": true,
+     "left": true,
+     "right": true
+    }
+   },
+   "width": 1008,
+   "height": 1792
+  }
+ ]
+}

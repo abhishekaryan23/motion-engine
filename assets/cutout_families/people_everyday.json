@@ -1,0 +1,260 @@
+{
+ "family": "people_everyday",
+ "project": "MotionEngine Asset Library",
+ "project_id": "jR0xTD3dUZ28WeDiZEj4",
+ "emotions": [
+  "warmth",
+  "trust"
+ ],
+ "medium": "documentary photographic people cutouts",
+ "assets": [
+  {
+   "id": "person_walking",
+   "role": "figure",
+   "subject": "person walking",
+   "tags": [
+    "person",
+    "walking",
+    "walk",
+    "commute",
+    "pedestrian",
+    "journey"
+   ],
+   "model": "flare",
+   "aspect": "3:4",
+   "prompt": "Natural colour editorial photograph of a young Indian man in a casual shirt and trousers walking to the right. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "laptop_worker",
+   "role": "figure",
+   "subject": "person working at a laptop",
+   "tags": [
+    "person",
+    "worker",
+    "working",
+    "laptop",
+    "office",
+    "work",
+    "remote"
+   ],
+   "model": "flare",
+   "aspect": "1:1",
+   "prompt": "Natural colour editorial photograph of a woman in a cotton kurta sitting on a simple stool working on a laptop on her knees, seen from behind over the shoulder. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "grocery_shopper",
+   "role": "figure",
+   "subject": "person carrying groceries",
+   "tags": [
+    "person",
+    "groceries",
+    "grocery",
+    "shopping",
+    "shopper",
+    "bags",
+    "customer"
+   ],
+   "model": "flare",
+   "aspect": "3:4",
+   "prompt": "Natural colour editorial photograph of a middle-aged woman in a salwar kameez carrying two cloth grocery bags, walking away. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "person_on_phone",
+   "role": "figure",
+   "subject": "person on the phone",
+   "tags": [
+    "person",
+    "phone",
+    "call",
+    "calling",
+    "talking",
+    "mobile"
+   ],
+   "model": "flare",
+   "aspect": "3:4",
+   "prompt": "Natural colour editorial photograph of a young man in a jacket standing and talking on a mobile phone, seen in lost profile. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "person_thinking",
+   "role": "figure",
+   "subject": "person thinking",
+   "tags": [
+    "person",
+    "thinking",
+    "thought",
+    "decision",
+    "doubt",
+    "pondering"
+   ],
+   "model": "flare",
+   "aspect": "3:4",
+   "prompt": "Natural colour editorial photograph of a woman standing with one hand on her chin, pondering, seen in lost profile from behind. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "handshake",
+   "role": "figure",
+   "subject": "two people shaking hands",
+   "tags": [
+    "handshake",
+    "deal",
+    "agreement",
+    "partners",
+    "partnership",
+    "trust",
+    "people"
+   ],
+   "model": "flare",
+   "aspect": "4:3",
+   "prompt": "Natural colour editorial photograph of two business people in shirts shaking hands, one seen from behind, the other in lost profile. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "family_walk",
+   "role": "figure",
+   "subject": "parent and child walking",
+   "tags": [
+    "family",
+    "parent",
+    "child",
+    "mother",
+    "kid",
+    "together",
+    "people"
+   ],
+   "model": "flare",
+   "aspect": "3:4",
+   "prompt": "Natural colour editorial photograph of a mother in a saree walking hand in hand with a small child, both seen from behind. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "shopkeeper",
+   "role": "figure",
+   "subject": "shopkeeper",
+   "tags": [
+    "shopkeeper",
+    "shop",
+    "store",
+    "merchant",
+    "seller",
+    "owner",
+    "business"
+   ],
+   "model": "flare",
+   "aspect": "1:1",
+   "prompt": "Natural colour editorial photograph of an older Indian shopkeeper in a kurta arranging boxes on a small wooden counter, seen from behind. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "delivery_rider",
+   "role": "figure",
+   "subject": "delivery rider",
+   "tags": [
+    "delivery",
+    "rider",
+    "courier",
+    "scooter",
+    "order",
+    "parcel"
+   ],
+   "model": "flare",
+   "aspect": "4:3",
+   "prompt": "Natural colour editorial photograph of a delivery rider on a scooter with a plain insulated delivery box on the back, wearing a helmet, side view facing right. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "student",
+   "role": "figure",
+   "subject": "student",
+   "tags": [
+    "student",
+    "school",
+    "college",
+    "study",
+    "studying",
+    "learner",
+    "books"
+   ],
+   "model": "flare",
+   "aspect": "3:4",
+   "prompt": "Natural colour editorial photograph of a teenage student with a backpack carrying books, walking away. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "elderly_walker",
+   "role": "figure",
+   "subject": "elderly person with a walking stick",
+   "tags": [
+    "elderly",
+    "old",
+    "senior",
+    "grandfather",
+    "walking",
+    "stick",
+    "age"
+   ],
+   "model": "flare",
+   "aspect": "3:4",
+   "prompt": "Natural colour editorial photograph of an elderly man in a white kurta walking slowly with a wooden walking stick, side view from behind. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "colleagues_screen",
+   "role": "figure",
+   "subject": "two colleagues pointing at a screen",
+   "tags": [
+    "colleagues",
+    "team",
+    "teamwork",
+    "screen",
+    "monitor",
+    "pointing",
+    "office"
+   ],
+   "model": "flare",
+   "aspect": "4:3",
+   "prompt": "Natural colour editorial photograph of two colleagues standing beside a desktop computer monitor, one pointing at the blank screen, both seen from behind. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "woman_saree",
+   "role": "figure",
+   "subject": "woman in a saree",
+   "tags": [
+    "woman",
+    "saree",
+    "sari",
+    "walking",
+    "festival",
+    "person"
+   ],
+   "model": "flare",
+   "aspect": "3:4",
+   "prompt": "Natural colour editorial photograph of a woman in a mustard-yellow cotton saree walking to the left, seen from behind. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "newspaper_reader",
+   "role": "figure",
+   "subject": "man reading a newspaper",
+   "tags": [
+    "newspaper",
+    "news",
+    "reading",
+    "reader",
+    "man",
+    "morning"
+   ],
+   "model": "flare",
+   "aspect": "3:4",
+   "prompt": "Natural colour editorial photograph of an older man standing and reading an open blank newspaper, seen from behind. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "cyclist",
+   "role": "figure",
+   "subject": "person on a bicycle",
+   "tags": [
+    "cyclist",
+    "bicycle",
+    "cycle",
+    "bike",
+    "commute",
+    "riding"
+   ],
+   "model": "flare",
+   "aspect": "4:3",
+   "prompt": "Natural colour editorial photograph of a young person riding a bicycle to the right, side view, face hidden by a cap. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  }
+ ]
+}

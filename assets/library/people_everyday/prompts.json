@@ -1,0 +1,680 @@
+{
+ "version": "0.1",
+ "specs": [
+  {
+   "id": "library.person_walking",
+   "fingerprint": "fp1-49dd58eab278be26",
+   "continuity_key": "person_walking",
+   "serves": [
+    "library.person_walking"
+   ],
+   "role": "hero_subject",
+   "priority": "optional",
+   "subject": "person walking",
+   "context": "library asset: person walking",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "documentary photographic people cutouts",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "full_figure",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": true
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "person_walking",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "3:4"
+   },
+   "prompt": "Natural colour editorial photograph of a young Indian man in a casual shirt and trousers walking to the right. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.laptop_worker",
+   "fingerprint": "fp1-7ad4653be5d22b1c",
+   "continuity_key": "laptop_worker",
+   "serves": [
+    "library.laptop_worker"
+   ],
+   "role": "hero_subject",
+   "priority": "optional",
+   "subject": "person working at a laptop",
+   "context": "library asset: person working at a laptop",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "documentary photographic people cutouts",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "full_figure",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": true
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "laptop_worker",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Natural colour editorial photograph of a woman in a cotton kurta sitting on a simple stool working on a laptop on her knees, seen from behind over the shoulder. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.grocery_shopper",
+   "fingerprint": "fp1-89ffda95b36dcc79",
+   "continuity_key": "grocery_shopper",
+   "serves": [
+    "library.grocery_shopper"
+   ],
+   "role": "hero_subject",
+   "priority": "optional",
+   "subject": "person carrying groceries",
+   "context": "library asset: person carrying groceries",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "documentary photographic people cutouts",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "full_figure",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": true
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "grocery_shopper",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "3:4"
+   },
+   "prompt": "Natural colour editorial photograph of a middle-aged woman in a salwar kameez carrying two cloth grocery bags, walking away. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.person_on_phone",
+   "fingerprint": "fp1-4f4d41882b4b7e4a",
+   "continuity_key": "person_on_phone",
+   "serves": [
+    "library.person_on_phone"
+   ],
+   "role": "hero_subject",
+   "priority": "optional",
+   "subject": "person on the phone",
+   "context": "library asset: person on the phone",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "documentary photographic people cutouts",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "full_figure",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": true
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "person_on_phone",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "3:4"
+   },
+   "prompt": "Natural colour editorial photograph of a young man in a jacket standing and talking on a mobile phone, seen in lost profile. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.person_thinking",
+   "fingerprint": "fp1-a6293bdb256d420e",
+   "continuity_key": "person_thinking",
+   "serves": [
+    "library.person_thinking"
+   ],
+   "role": "hero_subject",
+   "priority": "optional",
+   "subject": "person thinking",
+   "context": "library asset: person thinking",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "documentary photographic people cutouts",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "full_figure",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": true
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "person_thinking",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "3:4"
+   },
+   "prompt": "Natural colour editorial photograph of a woman standing with one hand on her chin, pondering, seen in lost profile from behind. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.handshake",
+   "fingerprint": "fp1-08bb698acb517e6f",
+   "continuity_key": "handshake",
+   "serves": [
+    "library.handshake"
+   ],
+   "role": "hero_subject",
+   "priority": "optional",
+   "subject": "two people shaking hands",
+   "context": "library asset: two people shaking hands",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "documentary photographic people cutouts",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "full_figure",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": true
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "handshake",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "4:3"
+   },
+   "prompt": "Natural colour editorial photograph of two business people in shirts shaking hands, one seen from behind, the other in lost profile. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.family_walk",
+   "fingerprint": "fp1-22a1f7062d9dd676",
+   "continuity_key": "family_walk",
+   "serves": [
+    "library.family_walk"
+   ],
+   "role": "hero_subject",
+   "priority": "optional",
+   "subject": "parent and child walking",
+   "context": "library asset: parent and child walking",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "documentary photographic people cutouts",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "full_figure",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": true
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "family_walk",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "3:4"
+   },
+   "prompt": "Natural colour editorial photograph of a mother in a saree walking hand in hand with a small child, both seen from behind. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.shopkeeper",
+   "fingerprint": "fp1-fe6c57bda4334b58",
+   "continuity_key": "shopkeeper",
+   "serves": [
+    "library.shopkeeper"
+   ],
+   "role": "hero_subject",
+   "priority": "optional",
+   "subject": "shopkeeper",
+   "context": "library asset: shopkeeper",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "documentary photographic people cutouts",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "full_figure",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": true
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "shopkeeper",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Natural colour editorial photograph of an older Indian shopkeeper in a kurta arranging boxes on a small wooden counter, seen from behind. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.delivery_rider",
+   "fingerprint": "fp1-8d7bd037c2e3b46b",
+   "continuity_key": "delivery_rider",
+   "serves": [
+    "library.delivery_rider"
+   ],
+   "role": "hero_subject",
+   "priority": "optional",
+   "subject": "delivery rider",
+   "context": "library asset: delivery rider",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "documentary photographic people cutouts",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "full_figure",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": true
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "delivery_rider",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "4:3"
+   },
+   "prompt": "Natural colour editorial photograph of a delivery rider on a scooter with a plain insulated delivery box on the back, wearing a helmet, side view facing right. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.student",
+   "fingerprint": "fp1-81f3fd478e836e01",
+   "continuity_key": "student",
+   "serves": [
+    "library.student"
+   ],
+   "role": "hero_subject",
+   "priority": "optional",
+   "subject": "student",
+   "context": "library asset: student",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "documentary photographic people cutouts",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "full_figure",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": true
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "student",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "3:4"
+   },
+   "prompt": "Natural colour editorial photograph of a teenage student with a backpack carrying books, walking away. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.elderly_walker",
+   "fingerprint": "fp1-53b14a1c0e1cce46",
+   "continuity_key": "elderly_walker",
+   "serves": [
+    "library.elderly_walker"
+   ],
+   "role": "hero_subject",
+   "priority": "optional",
+   "subject": "elderly person with a walking stick",
+   "context": "library asset: elderly person with a walking stick",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "documentary photographic people cutouts",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "full_figure",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": true
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "elderly_walker",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "3:4"
+   },
+   "prompt": "Natural colour editorial photograph of an elderly man in a white kurta walking slowly with a wooden walking stick, side view from behind. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.colleagues_screen",
+   "fingerprint": "fp1-e938ce7cd4c32caa",
+   "continuity_key": "colleagues_screen",
+   "serves": [
+    "library.colleagues_screen"
+   ],
+   "role": "hero_subject",
+   "priority": "optional",
+   "subject": "two colleagues pointing at a screen",
+   "context": "library asset: two colleagues pointing at a screen",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "documentary photographic people cutouts",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "full_figure",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": true
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "colleagues_screen",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "4:3"
+   },
+   "prompt": "Natural colour editorial photograph of two colleagues standing beside a desktop computer monitor, one pointing at the blank screen, both seen from behind. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.woman_saree",
+   "fingerprint": "fp1-9a6d11cab8a8ff11",
+   "continuity_key": "woman_saree",
+   "serves": [
+    "library.woman_saree"
+   ],
+   "role": "hero_subject",
+   "priority": "optional",
+   "subject": "woman in a saree",
+   "context": "library asset: woman in a saree",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "documentary photographic people cutouts",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "full_figure",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": true
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "woman_saree",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "3:4"
+   },
+   "prompt": "Natural colour editorial photograph of a woman in a mustard-yellow cotton saree walking to the left, seen from behind. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.newspaper_reader",
+   "fingerprint": "fp1-1abc52394b59658d",
+   "continuity_key": "newspaper_reader",
+   "serves": [
+    "library.newspaper_reader"
+   ],
+   "role": "hero_subject",
+   "priority": "optional",
+   "subject": "man reading a newspaper",
+   "context": "library asset: man reading a newspaper",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "documentary photographic people cutouts",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "full_figure",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": true
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "newspaper_reader",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "3:4"
+   },
+   "prompt": "Natural colour editorial photograph of an older man standing and reading an open blank newspaper, seen from behind. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.cyclist",
+   "fingerprint": "fp1-1ac037631e6ab260",
+   "continuity_key": "cyclist",
+   "serves": [
+    "library.cyclist"
+   ],
+   "role": "hero_subject",
+   "priority": "optional",
+   "subject": "person on a bicycle",
+   "context": "library asset: person on a bicycle",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "documentary photographic people cutouts",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "full_figure",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": true
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "cyclist",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "4:3"
+   },
+   "prompt": "Natural colour editorial photograph of a young person riding a bicycle to the right, side view, face hidden by a cap. Generic, anonymous, non-identifiable person: face turned away from the camera or in lost profile, no recognisable facial features. Full figure from head to feet, soft natural daylight, muted realistic colours. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  }
+ ]
+}

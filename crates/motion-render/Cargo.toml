@@ -1,0 +1,27 @@
+[package]
+name = "motion-render"
+description = "MotionEngine rendering: Renderer trait, CPU backend (tiny-skia), asset cache, textures, FFmpeg export"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+motion-core.workspace = true
+resvg.workspace = true
+cosmic-text.workspace = true
+rayon.workspace = true
+thiserror.workspace = true
+zune-jpeg = "0.5"
+serde.workspace = true
+serde_json.workspace = true
+pathdiff.workspace = true
+sha2.workspace = true
+crc32fast.workspace = true
+# Optional GPU post-processing backend (`--features gpu`); see docs/POST_EFFECTS.md.
+wgpu = { version = "30", optional = true, default-features = false, features = ["std", "parking_lot", "wgsl", "metal", "vulkan", "dx12"] }
+pollster = { version = "1", optional = true }
+bytemuck = { version = "1", optional = true, features = ["derive"] }
+
+[features]
+default = []
+gpu = ["dep:wgpu", "dep:pollster", "dep:bytemuck"]

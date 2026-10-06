@@ -1,0 +1,1768 @@
+{
+ "version": "0.1",
+ "specs": [
+  {
+   "id": "library.car_b_01",
+   "fingerprint": "fp1-49beba92f9c096e7",
+   "continuity_key": "car_b_01",
+   "serves": [
+    "library.car_b_01"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_01",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+0041)"
+  },
+  {
+   "id": "library.car_b_02",
+   "fingerprint": "fp1-aa97f5d02e4ef6d6",
+   "continuity_key": "car_b_02",
+   "serves": [
+    "library.car_b_02"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_02",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+0042)"
+  },
+  {
+   "id": "library.car_b_03",
+   "fingerprint": "fp1-c25998cff5bddd65",
+   "continuity_key": "car_b_03",
+   "serves": [
+    "library.car_b_03"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_03",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+0043)"
+  },
+  {
+   "id": "library.car_b_04",
+   "fingerprint": "fp1-2ac59a8f7c0e97df",
+   "continuity_key": "car_b_04",
+   "serves": [
+    "library.car_b_04"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_04",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+0044)"
+  },
+  {
+   "id": "library.car_b_05",
+   "fingerprint": "fp1-491d08a1c72034e3",
+   "continuity_key": "car_b_05",
+   "serves": [
+    "library.car_b_05"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_05",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+0045)"
+  },
+  {
+   "id": "library.car_b_06",
+   "fingerprint": "fp1-71e4293e9234bd20",
+   "continuity_key": "car_b_06",
+   "serves": [
+    "library.car_b_06"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_06",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+0046)"
+  },
+  {
+   "id": "library.car_b_07",
+   "fingerprint": "fp1-168cba2bb252c6c8",
+   "continuity_key": "car_b_07",
+   "serves": [
+    "library.car_b_07"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_07",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+0047)"
+  },
+  {
+   "id": "library.car_b_08",
+   "fingerprint": "fp1-1045daa3f9270782",
+   "continuity_key": "car_b_08",
+   "serves": [
+    "library.car_b_08"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_08",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+0048)"
+  },
+  {
+   "id": "library.car_b_09",
+   "fingerprint": "fp1-526e343e06b66a2b",
+   "continuity_key": "car_b_09",
+   "serves": [
+    "library.car_b_09"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_09",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+0049)"
+  },
+  {
+   "id": "library.car_b_10",
+   "fingerprint": "fp1-7fa5778e57a98479",
+   "continuity_key": "car_b_10",
+   "serves": [
+    "library.car_b_10"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_10",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+004A)"
+  },
+  {
+   "id": "library.car_b_11",
+   "fingerprint": "fp1-3bff1c16a7d37750",
+   "continuity_key": "car_b_11",
+   "serves": [
+    "library.car_b_11"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_11",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+004B)"
+  },
+  {
+   "id": "library.car_b_12",
+   "fingerprint": "fp1-21fc397d51b4daa9",
+   "continuity_key": "car_b_12",
+   "serves": [
+    "library.car_b_12"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_12",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+004C)"
+  },
+  {
+   "id": "library.car_b_13",
+   "fingerprint": "fp1-035f3e9dca4197db",
+   "continuity_key": "car_b_13",
+   "serves": [
+    "library.car_b_13"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_13",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+004D)"
+  },
+  {
+   "id": "library.car_b_14",
+   "fingerprint": "fp1-190b2e019d7ecb37",
+   "continuity_key": "car_b_14",
+   "serves": [
+    "library.car_b_14"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_14",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+004E)"
+  },
+  {
+   "id": "library.car_b_15",
+   "fingerprint": "fp1-76fe15c030ff47bb",
+   "continuity_key": "car_b_15",
+   "serves": [
+    "library.car_b_15"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_15",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+004F)"
+  },
+  {
+   "id": "library.car_b_16",
+   "fingerprint": "fp1-a14fe470ac9194ab",
+   "continuity_key": "car_b_16",
+   "serves": [
+    "library.car_b_16"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_16",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+0050)"
+  },
+  {
+   "id": "library.car_b_17",
+   "fingerprint": "fp1-a5a798f1ad89f4cb",
+   "continuity_key": "car_b_17",
+   "serves": [
+    "library.car_b_17"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_17",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+0051)"
+  },
+  {
+   "id": "library.car_b_18",
+   "fingerprint": "fp1-e244e05d4090afdf",
+   "continuity_key": "car_b_18",
+   "serves": [
+    "library.car_b_18"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_18",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+0052)"
+  },
+  {
+   "id": "library.car_b_19",
+   "fingerprint": "fp1-90ab680a0029809e",
+   "continuity_key": "car_b_19",
+   "serves": [
+    "library.car_b_19"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_19",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+0053)"
+  },
+  {
+   "id": "library.car_b_20",
+   "fingerprint": "fp1-19f2551baebc226f",
+   "continuity_key": "car_b_20",
+   "serves": [
+    "library.car_b_20"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_20",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+0054)"
+  },
+  {
+   "id": "library.car_b_21",
+   "fingerprint": "fp1-a5ab06aaac07d669",
+   "continuity_key": "car_b_21",
+   "serves": [
+    "library.car_b_21"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_21",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+0055)"
+  },
+  {
+   "id": "library.car_b_22",
+   "fingerprint": "fp1-69617509ca1fe26a",
+   "continuity_key": "car_b_22",
+   "serves": [
+    "library.car_b_22"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_22",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+0056)"
+  },
+  {
+   "id": "library.car_b_23",
+   "fingerprint": "fp1-62960de770b15b1b",
+   "continuity_key": "car_b_23",
+   "serves": [
+    "library.car_b_23"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_23",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+0057)"
+  },
+  {
+   "id": "library.car_b_24",
+   "fingerprint": "fp1-633eed59675ecdc9",
+   "continuity_key": "car_b_24",
+   "serves": [
+    "library.car_b_24"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_24",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+0058)"
+  },
+  {
+   "id": "library.car_b_25",
+   "fingerprint": "fp1-c07c13096b5afd64",
+   "continuity_key": "car_b_25",
+   "serves": [
+    "library.car_b_25"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_25",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+0059)"
+  },
+  {
+   "id": "library.car_b_26",
+   "fingerprint": "fp1-f1e00129ce6cacae",
+   "continuity_key": "car_b_26",
+   "serves": [
+    "library.car_b_26"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_26",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+005A)"
+  },
+  {
+   "id": "library.car_b_27",
+   "fingerprint": "fp1-4bc5d02bcfc4a640",
+   "continuity_key": "car_b_27",
+   "serves": [
+    "library.car_b_27"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_27",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+0061)"
+  },
+  {
+   "id": "library.car_b_28",
+   "fingerprint": "fp1-1180b94ee74ca86d",
+   "continuity_key": "car_b_28",
+   "serves": [
+    "library.car_b_28"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_28",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+0062)"
+  },
+  {
+   "id": "library.car_b_29",
+   "fingerprint": "fp1-053632af8c4ff730",
+   "continuity_key": "car_b_29",
+   "serves": [
+    "library.car_b_29"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_29",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+0063)"
+  },
+  {
+   "id": "library.car_b_30",
+   "fingerprint": "fp1-88349b029aa52f3f",
+   "continuity_key": "car_b_30",
+   "serves": [
+    "library.car_b_30"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_30",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+0064)"
+  },
+  {
+   "id": "library.car_b_31",
+   "fingerprint": "fp1-daa7272d8e323e35",
+   "continuity_key": "car_b_31",
+   "serves": [
+    "library.car_b_31"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_31",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+0065)"
+  },
+  {
+   "id": "library.car_b_32",
+   "fingerprint": "fp1-9952be1234cff39e",
+   "continuity_key": "car_b_32",
+   "serves": [
+    "library.car_b_32"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_32",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+0066)"
+  },
+  {
+   "id": "library.car_b_33",
+   "fingerprint": "fp1-77c19ada1e3654a5",
+   "continuity_key": "car_b_33",
+   "serves": [
+    "library.car_b_33"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_33",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+0067)"
+  },
+  {
+   "id": "library.car_b_34",
+   "fingerprint": "fp1-4838887d9b9555d1",
+   "continuity_key": "car_b_34",
+   "serves": [
+    "library.car_b_34"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_34",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+0068)"
+  },
+  {
+   "id": "library.car_b_35",
+   "fingerprint": "fp1-796127df4b0b21ee",
+   "continuity_key": "car_b_35",
+   "serves": [
+    "library.car_b_35"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_35",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+0069)"
+  },
+  {
+   "id": "library.car_b_36",
+   "fingerprint": "fp1-b2a7b81a6953f876",
+   "continuity_key": "car_b_36",
+   "serves": [
+    "library.car_b_36"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_36",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+006A)"
+  },
+  {
+   "id": "library.car_b_37",
+   "fingerprint": "fp1-2c79165879f0f2e9",
+   "continuity_key": "car_b_37",
+   "serves": [
+    "library.car_b_37"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_37",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+006B)"
+  },
+  {
+   "id": "library.car_b_38",
+   "fingerprint": "fp1-cbfef651eebe8824",
+   "continuity_key": "car_b_38",
+   "serves": [
+    "library.car_b_38"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_38",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+006C)"
+  },
+  {
+   "id": "library.car_b_39",
+   "fingerprint": "fp1-e7fda089e46e8e32",
+   "continuity_key": "car_b_39",
+   "serves": [
+    "library.car_b_39"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_39",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+006D)"
+  },
+  {
+   "id": "library.car_b_40",
+   "fingerprint": "fp1-28f7add8a1645557",
+   "continuity_key": "car_b_40",
+   "serves": [
+    "library.car_b_40"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_40",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+006E)"
+  },
+  {
+   "id": "library.car_b_41",
+   "fingerprint": "fp1-a6ec6a6abf48c028",
+   "continuity_key": "car_b_41",
+   "serves": [
+    "library.car_b_41"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_41",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+006F)"
+  },
+  {
+   "id": "library.car_b_42",
+   "fingerprint": "fp1-02be8af3f67ece8c",
+   "continuity_key": "car_b_42",
+   "serves": [
+    "library.car_b_42"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_42",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+0070)"
+  },
+  {
+   "id": "library.car_b_43",
+   "fingerprint": "fp1-f0de8eaf5ff98f50",
+   "continuity_key": "car_b_43",
+   "serves": [
+    "library.car_b_43"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "1970s car",
+   "context": "library glyph: 1970s car",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the OilCrisis-B.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "car_b_43",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "1970s car (OilCrisis-B.otf U+0071)"
+  }
+ ]
+}

@@ -1,0 +1,495 @@
+{
+  "version": "0.1",
+  "audio": "ai_learns.voice.wav",
+  "sample_rate": 48000,
+  "duration": 30.566041666666667,
+  "provider": "macos_say",
+  "model": "macos/say",
+  "voice": "Daniel",
+  "words": [
+    {
+      "text": "Every",
+      "start": 0.35,
+      "end": 1.0899999999999999,
+      "confidence": 0.9
+    },
+    {
+      "text": "chatbot",
+      "start": 1.0899999999999999,
+      "end": 1.5699999999999998,
+      "confidence": 0.9
+    },
+    {
+      "text": "you",
+      "start": 1.5699999999999998,
+      "end": 1.92,
+      "confidence": 0.9
+    },
+    {
+      "text": "have",
+      "start": 1.92,
+      "end": 2.23,
+      "confidence": 0.9
+    },
+    {
+      "text": "ever",
+      "start": 2.24,
+      "end": 2.7670833333333333,
+      "confidence": 0.9
+    },
+    {
+      "text": "talked",
+      "start": 2.7670833333333333,
+      "end": 3.290784722222222,
+      "confidence": 0.5
+    },
+    {
+      "text": "to",
+      "start": 3.290784722222222,
+      "end": 3.73,
+      "confidence": 0.5
+    },
+    {
+      "text": "started",
+      "start": 3.73,
+      "end": 4.05,
+      "confidence": 0.7
+    },
+    {
+      "text": "out",
+      "start": 4.05,
+      "end": 4.59,
+      "confidence": 0.7
+    },
+    {
+      "text": "knowing",
+      "start": 4.59,
+      "end": 4.79,
+      "confidence": 0.7
+    },
+    {
+      "text": "absolutely",
+      "start": 5.01,
+      "end": 6.1899999999999995,
+      "confidence": 0.9
+    },
+    {
+      "text": "nothing",
+      "start": 6.1899999999999995,
+      "end": 6.634416666666667,
+      "confidence": 0.7
+    },
+    {
+      "text": "So",
+      "start": 6.854416666666666,
+      "end": 7.085286926147704,
+      "confidence": 0.9
+    },
+    {
+      "text": "we",
+      "start": 7.085286926147704,
+      "end": 7.316157185628742,
+      "confidence": 0.5
+    },
+    {
+      "text": "feed",
+      "start": 7.316157185628742,
+      "end": 7.564416666666666,
+      "confidence": 0.5
+    },
+    {
+      "text": "it",
+      "start": 7.564416666666666,
+      "end": 7.777897704590818,
+      "confidence": 0.9
+    },
+    {
+      "text": "text",
+      "start": 7.777897704590818,
+      "end": 7.994416666666666,
+      "confidence": 0.5
+    },
+    {
+      "text": "billions",
+      "start": 7.994416666666666,
+      "end": 8.414416666666666,
+      "confidence": 0.9
+    },
+    {
+      "text": "of",
+      "start": 8.414416666666666,
+      "end": 8.634416666666667,
+      "confidence": 0.9
+    },
+    {
+      "text": "sentences",
+      "start": 8.664416666666666,
+      "end": 9.134416666666667,
+      "confidence": 0.7
+    },
+    {
+      "text": "from",
+      "start": 9.134416666666667,
+      "end": 9.365130738522954,
+      "confidence": 0.9
+    },
+    {
+      "text": "books",
+      "start": 9.365130738522954,
+      "end": 9.684416666666667,
+      "confidence": 0.5
+    },
+    {
+      "text": "websites",
+      "start": 9.684416666666667,
+      "end": 10.054416666666667,
+      "confidence": 0.7
+    },
+    {
+      "text": "and",
+      "start": 10.054416666666667,
+      "end": 10.414416666666666,
+      "confidence": 0.7
+    },
+    {
+      "text": "everyday",
+      "start": 10.414416666666666,
+      "end": 10.904416666666666,
+      "confidence": 0.7
+    },
+    {
+      "text": "conversations",
+      "start": 10.904416666666666,
+      "end": 11.673833333333333,
+      "confidence": 0.7
+    },
+    {
+      "text": "Its",
+      "start": 11.933833333333334,
+      "end": 12.163833333333335,
+      "confidence": 0.9
+    },
+    {
+      "text": "only",
+      "start": 12.163833333333335,
+      "end": 12.573833333333335,
+      "confidence": 0.7
+    },
+    {
+      "text": "job",
+      "start": 12.573833333333335,
+      "end": 12.953833333333334,
+      "confidence": 0.7
+    },
+    {
+      "text": "is",
+      "start": 12.963833333333334,
+      "end": 13.163833333333335,
+      "confidence": 0.7
+    },
+    {
+      "text": "to",
+      "start": 13.163833333333335,
+      "end": 13.433833333333334,
+      "confidence": 0.9
+    },
+    {
+      "text": "guess",
+      "start": 13.433833333333334,
+      "end": 13.753833333333334,
+      "confidence": 0.9
+    },
+    {
+      "text": "the",
+      "start": 13.753833333333334,
+      "end": 13.903833333333335,
+      "confidence": 0.9
+    },
+    {
+      "text": "next",
+      "start": 13.903833333333335,
+      "end": 14.293833333333334,
+      "confidence": 0.7
+    },
+    {
+      "text": "word",
+      "start": 14.293833333333334,
+      "end": 14.383833333333335,
+      "confidence": 0.9
+    },
+    {
+      "text": "again",
+      "start": 14.573833333333335,
+      "end": 15.053833333333333,
+      "confidence": 0.9
+    },
+    {
+      "text": "and",
+      "start": 15.053833333333333,
+      "end": 15.203833333333334,
+      "confidence": 0.7
+    },
+    {
+      "text": "again",
+      "start": 15.203833333333334,
+      "end": 15.593833333333334,
+      "confidence": 0.7
+    },
+    {
+      "text": "getting",
+      "start": 15.793833333333334,
+      "end": 16.122542735042735,
+      "confidence": 0.7
+    },
+    {
+      "text": "a",
+      "start": 16.122542735042735,
+      "end": 16.393833333333333,
+      "confidence": 0.5
+    },
+    {
+      "text": "tiny",
+      "start": 16.393833333333333,
+      "end": 16.763833333333334,
+      "confidence": 0.9
+    },
+    {
+      "text": "bit",
+      "start": 16.763833333333334,
+      "end": 17.102160256410258,
+      "confidence": 0.7
+    },
+    {
+      "text": "less",
+      "start": 17.102160256410258,
+      "end": 17.372399572649574,
+      "confidence": 0.5
+    },
+    {
+      "text": "wrong",
+      "start": 17.372399572649574,
+      "end": 17.64263888888889,
+      "confidence": 0.5
+    },
+    {
+      "text": "every",
+      "start": 17.64263888888889,
+      "end": 18.263833333333334,
+      "confidence": 0.5
+    },
+    {
+      "text": "time",
+      "start": 18.263833333333334,
+      "end": 18.52091666666667,
+      "confidence": 0.9
+    },
+    {
+      "text": "After",
+      "start": 18.760916666666667,
+      "end": 19.100916666666667,
+      "confidence": 0.9
+    },
+    {
+      "text": "enough",
+      "start": 19.100916666666667,
+      "end": 19.830916666666667,
+      "confidence": 0.7
+    },
+    {
+      "text": "guesses",
+      "start": 19.830916666666667,
+      "end": 20.226793792517007,
+      "confidence": 0.7
+    },
+    {
+      "text": "it",
+      "start": 20.226793792517007,
+      "end": 20.600916666666667,
+      "confidence": 0.5
+    },
+    {
+      "text": "does",
+      "start": 20.600916666666667,
+      "end": 20.82817928004535,
+      "confidence": 0.7
+    },
+    {
+      "text": "not",
+      "start": 20.82817928004535,
+      "end": 21.128872023809524,
+      "confidence": 0.5
+    },
+    {
+      "text": "memorise",
+      "start": 21.128872023809524,
+      "end": 21.790916666666668,
+      "confidence": 0.5
+    },
+    {
+      "text": "facts",
+      "start": 21.790916666666668,
+      "end": 22.00091666666667,
+      "confidence": 0.9
+    },
+    {
+      "text": "It",
+      "start": 22.10612344104308,
+      "end": 22.400916666666667,
+      "confidence": 0.5
+    },
+    {
+      "text": "learns",
+      "start": 22.400916666666667,
+      "end": 22.800916666666666,
+      "confidence": 0.9
+    },
+    {
+      "text": "the",
+      "start": 22.800916666666666,
+      "end": 22.990916666666667,
+      "confidence": 0.7
+    },
+    {
+      "text": "patterns",
+      "start": 22.990916666666667,
+      "end": 23.490916666666667,
+      "confidence": 0.9
+    },
+    {
+      "text": "behind",
+      "start": 23.490916666666667,
+      "end": 24.080916666666667,
+      "confidence": 0.9
+    },
+    {
+      "text": "them",
+      "start": 24.080916666666667,
+      "end": 24.286145833333332,
+      "confidence": 0.7
+    },
+    {
+      "text": "That",
+      "start": 24.536145833333332,
+      "end": 24.77614583333333,
+      "confidence": 0.9
+    },
+    {
+      "text": "is",
+      "start": 24.77614583333333,
+      "end": 25.072605528322438,
+      "confidence": 0.9
+    },
+    {
+      "text": "why",
+      "start": 25.072605528322438,
+      "end": 25.32614583333333,
+      "confidence": 0.5
+    },
+    {
+      "text": "it",
+      "start": 25.366145833333334,
+      "end": 25.609065223311546,
+      "confidence": 0.9
+    },
+    {
+      "text": "can",
+      "start": 25.609065223311546,
+      "end": 25.8772950708061,
+      "confidence": 0.5
+    },
+    {
+      "text": "sound",
+      "start": 25.8772950708061,
+      "end": 26.126145833333332,
+      "confidence": 0.5
+    },
+    {
+      "text": "so",
+      "start": 26.126145833333332,
+      "end": 26.413754765795204,
+      "confidence": 0.9
+    },
+    {
+      "text": "human",
+      "start": 26.413754765795204,
+      "end": 26.77614583333333,
+      "confidence": 0.5
+    },
+    {
+      "text": "and",
+      "start": 26.849628267973856,
+      "end": 27.146145833333332,
+      "confidence": 0.5
+    },
+    {
+      "text": "also",
+      "start": 27.146145833333332,
+      "end": 27.553731617647056,
+      "confidence": 0.9
+    },
+    {
+      "text": "why",
+      "start": 27.553731617647056,
+      "end": 27.821961465141612,
+      "confidence": 0.5
+    },
+    {
+      "text": "it",
+      "start": 27.821961465141612,
+      "end": 28.036145833333332,
+      "confidence": 0.5
+    },
+    {
+      "text": "can",
+      "start": 28.036145833333332,
+      "end": 28.386145833333334,
+      "confidence": 0.7
+    },
+    {
+      "text": "be",
+      "start": 28.386145833333334,
+      "end": 28.696145833333333,
+      "confidence": 0.9
+    },
+    {
+      "text": "confidently",
+      "start": 28.696145833333333,
+      "end": 29.406145833333333,
+      "confidence": 0.7
+    },
+    {
+      "text": "wrong",
+      "start": 29.406145833333333,
+      "end": 29.666041666666665,
+      "confidence": 0.9
+    }
+  ],
+  "sentences": [
+    {
+      "beat": 0,
+      "start": 0.35,
+      "end": 6.634416666666667
+    },
+    {
+      "beat": 1,
+      "start": 6.854416666666666,
+      "end": 11.673833333333333
+    },
+    {
+      "beat": 2,
+      "start": 11.933833333333334,
+      "end": 18.52091666666667
+    },
+    {
+      "beat": 3,
+      "start": 18.760916666666667,
+      "end": 24.286145833333332
+    },
+    {
+      "beat": 4,
+      "start": 24.536145833333332,
+      "end": 29.66604166666667
+    }
+  ],
+  "alignment": "onset"
+}

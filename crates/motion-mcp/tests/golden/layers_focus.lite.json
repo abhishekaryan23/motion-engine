@@ -1,0 +1,8 @@
+{
+  "title": "ocean zones",
+  "beats": [
+    {"say": "The ocean is stacked in layers, from sunlit water to the deep.", "layers": {"names": ["sunlit", "twilight", "midnight"]}},
+    {"say": "Below the thermocline, the water turns cold and dark.", "layers": {"names": ["sunlit", "twilight", "midnight"], "focus": "twilight"}, "picture": "fish", "meaning": "lanternfish"},
+    {"say": "In the midnight zone, ninety percent of animals make their own light.", "layers": {"names": ["sunlit", "twilight", "midnight"], "focus": "midnight"}, "number": "90%", "meaning": "glow"}
+  ]
+}

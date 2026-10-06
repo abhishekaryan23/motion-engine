@@ -1,0 +1,15 @@
+{
+  "version": "0.2",
+  "title": "evidence_stack",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "reveal",
+      "statement": "The receipt shows what changed",
+      "primary": { "kind": "object", "asset": "shopping_basket", "meaning": "grocery receipt" },
+      "secondary": { "kind": "number", "value": "₹6,900", "meaning": "this week" },
+      "energy": "building",
+      "keyword": "changed"
+    }
+  ]
+}

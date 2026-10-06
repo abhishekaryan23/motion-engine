@@ -1,0 +1,1396 @@
+{
+  "$defs": {
+    "BackgroundCharacter": {
+      "oneOf": [
+        {
+          "const": "flat",
+          "description": "Plain flat ground.",
+          "type": "string"
+        },
+        {
+          "const": "paper",
+          "description": "Paper-like ground with fibre/grain.",
+          "type": "string"
+        },
+        {
+          "const": "gradient",
+          "description": "Smooth gradients or vignettes.",
+          "type": "string"
+        },
+        {
+          "const": "grid",
+          "description": "Measurement grids, guides, technical lines.",
+          "type": "string"
+        },
+        {
+          "const": "graphic_fields",
+          "description": "Large flat graphic color fields that recompose.",
+          "type": "string"
+        },
+        {
+          "const": "photographic",
+          "description": "Photographs or footage fill the background.",
+          "type": "string"
+        },
+        {
+          "const": "textured",
+          "description": "Visible texture (noise, halftone, pattern) over a ground.",
+          "type": "string"
+        }
+      ]
+    },
+    "EvidenceLinks": {
+      "additionalProperties": false,
+      "description": "Provenance: which samples, time ranges and deterministic metrics supported an inference.\nIdentifiers only; no reasoning text.",
+      "properties": {
+        "metrics": {
+          "description": "Metric keys from the evidence (e.g. \"temporal.changes_per_10s\").",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "samples": {
+          "description": "Sample ids from the request (e.g. \"s03\").",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "time_ranges": {
+          "description": "[start, end] in seconds.",
+          "items": {
+            "items": {
+              "format": "double",
+              "type": "number"
+            },
+            "maxItems": 2,
+            "minItems": 2,
+            "type": "array"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "ImageTreatmentCharacter": {
+      "oneOf": [
+        {
+          "const": "none",
+          "description": "The reference shows no photographs or illustrations.",
+          "type": "string"
+        },
+        {
+          "const": "natural",
+          "description": "Images shown as they are.",
+          "type": "string"
+        },
+        {
+          "const": "monochrome",
+          "description": "Black and white / single ink.",
+          "type": "string"
+        },
+        {
+          "const": "duotone",
+          "description": "Two-ink duotone.",
+          "type": "string"
+        },
+        {
+          "const": "muted",
+          "description": "Desaturated, low-contrast documentary look.",
+          "type": "string"
+        },
+        {
+          "const": "cutout",
+          "description": "Cut-out subjects with paper edges and shadows.",
+          "type": "string"
+        },
+        {
+          "const": "print_cutout",
+          "description": "Bold cut-outs on flat color fields.",
+          "type": "string"
+        },
+        {
+          "const": "high_contrast",
+          "description": "Crushed blacks, strong contrast.",
+          "type": "string"
+        }
+      ]
+    },
+    "MaterialCharacter": {
+      "oneOf": [
+        {
+          "const": "paper",
+          "description": "Uncoated paper, print grain.",
+          "type": "string"
+        },
+        {
+          "const": "flat",
+          "description": "Clean flat vector surfaces.",
+          "type": "string"
+        },
+        {
+          "const": "screen",
+          "description": "Emissive screen / UI surfaces.",
+          "type": "string"
+        },
+        {
+          "const": "print",
+          "description": "Coated print: flat saturated ink, fine grain.",
+          "type": "string"
+        },
+        {
+          "const": "glossy",
+          "description": "Glossy highlights and reflections.",
+          "type": "string"
+        },
+        {
+          "const": "metallic",
+          "description": "Chrome or metal.",
+          "type": "string"
+        },
+        {
+          "const": "rendered3d",
+          "description": "Rendered 3D surfaces and lighting.",
+          "type": "string"
+        }
+      ]
+    },
+    "PaletteCharacter": {
+      "oneOf": [
+        {
+          "const": "monochrome",
+          "description": "Essentially one hue or greyscale.",
+          "type": "string"
+        },
+        {
+          "const": "muted",
+          "description": "Desaturated colors throughout.",
+          "type": "string"
+        },
+        {
+          "const": "restrained_accent",
+          "description": "Neutral grounds with one sparing accent.",
+          "type": "string"
+        },
+        {
+          "const": "vivid",
+          "description": "Neutral grounds with strong saturated accents.",
+          "type": "string"
+        },
+        {
+          "const": "multicolor",
+          "description": "Several saturated colors used as large fields.",
+          "type": "string"
+        }
+      ]
+    },
+    "PaletteEvidenceSwatch": {
+      "additionalProperties": false,
+      "description": "An approximate color from the evidence.",
+      "properties": {
+        "hex": {
+          "description": "\"#RRGGBB\".",
+          "type": "string"
+        },
+        "prevalence": {
+          "description": "Share of the frame area, 0..1.",
+          "format": "float",
+          "type": "number"
+        }
+      },
+      "required": [
+        "hex",
+        "prevalence"
+      ],
+      "type": "object"
+    },
+    "RefActivity": {
+      "description": "Activity of a supporting layer.",
+      "oneOf": [
+        {
+          "enum": [
+            "still",
+            "quiet",
+            "active"
+          ],
+          "type": "string"
+        },
+        {
+          "const": "structured",
+          "description": "Regular, systematic motion (grids, ticks).",
+          "type": "string"
+        }
+      ]
+    },
+    "RefDensity": {
+      "enum": [
+        "sparse",
+        "balanced",
+        "dense"
+      ],
+      "type": "string"
+    },
+    "RefLayerActivity": {
+      "additionalProperties": false,
+      "description": "Per-layer activity; omit or null any part that is unclear.",
+      "properties": {
+        "background": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/RefActivity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "foreground": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/RefPresence"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "midground": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/RefActivity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "type": "object"
+    },
+    "RefLevel": {
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "type": "string"
+    },
+    "RefPolarity": {
+      "oneOf": [
+        {
+          "const": "light",
+          "description": "Light grounds, dark content.",
+          "type": "string"
+        },
+        {
+          "const": "dark",
+          "description": "Dark grounds, light content.",
+          "type": "string"
+        },
+        {
+          "const": "mixed",
+          "description": "Both light and dark compositions are substantial.",
+          "type": "string"
+        }
+      ]
+    },
+    "RefPresence": {
+      "description": "Presence of the foreground (main content).",
+      "enum": [
+        "recessive",
+        "balanced",
+        "dominant"
+      ],
+      "type": "string"
+    },
+    "RefRhythm": {
+      "oneOf": [
+        {
+          "const": "slow_breathing",
+          "description": "Long holds, few slow changes.",
+          "type": "string"
+        },
+        {
+          "const": "measured_editorial",
+          "description": "Steady editorial pace: read, then change.",
+          "type": "string"
+        },
+        {
+          "const": "progressive",
+          "description": "Compositions keep building within a scene.",
+          "type": "string"
+        },
+        {
+          "const": "active",
+          "description": "Frequent changes.",
+          "type": "string"
+        },
+        {
+          "const": "high_frequency",
+          "description": "Constant rapid change.",
+          "type": "string"
+        }
+      ]
+    },
+    "RefScale": {
+      "enum": [
+        "subtle",
+        "moderate",
+        "large",
+        "dramatic"
+      ],
+      "type": "string"
+    },
+    "RefTemperament": {
+      "oneOf": [
+        {
+          "const": "restrained",
+          "description": "Small, slow, soft moves.",
+          "type": "string"
+        },
+        {
+          "const": "fluid",
+          "description": "Smooth continuous easing.",
+          "type": "string"
+        },
+        {
+          "const": "snappy",
+          "description": "Quick decisive arrivals, short settles.",
+          "type": "string"
+        },
+        {
+          "const": "energetic",
+          "description": "Big fast moves, visible overshoot.",
+          "type": "string"
+        },
+        {
+          "const": "cinematic",
+          "description": "Slow dramatic camera-like moves.",
+          "type": "string"
+        },
+        {
+          "const": "playful",
+          "description": "Bouncy, elastic.",
+          "type": "string"
+        },
+        {
+          "const": "mechanical",
+          "description": "Linear, stepwise, machine-like.",
+          "type": "string"
+        }
+      ]
+    },
+    "RefTemperature": {
+      "oneOf": [
+        {
+          "enum": [
+            "warm",
+            "cool"
+          ],
+          "type": "string"
+        },
+        {
+          "const": "neutral",
+          "description": "Grey / balanced.",
+          "type": "string"
+        }
+      ]
+    },
+    "RefTone": {
+      "description": "Overall design character.",
+      "oneOf": [
+        {
+          "const": "editorial",
+          "description": "Magazine-like: typographic hierarchy, restraint, print sensibility.",
+          "type": "string"
+        },
+        {
+          "const": "technical",
+          "description": "Precise, systematic, data/UI-like: grids, mono or condensed type.",
+          "type": "string"
+        },
+        {
+          "const": "playful",
+          "description": "Bold graphic, colorful, bouncy.",
+          "type": "string"
+        }
+      ]
+    },
+    "RefTransition": {
+      "oneOf": [
+        {
+          "const": "subtle",
+          "description": "Soft crossfades.",
+          "type": "string"
+        },
+        {
+          "const": "editorial",
+          "description": "Crossfade/lift with occasional graphic accents.",
+          "type": "string"
+        },
+        {
+          "const": "geometric",
+          "description": "Straight-edged panel wipes and lateral handoffs.",
+          "type": "string"
+        },
+        {
+          "const": "kinetic",
+          "description": "Fast sweeps, punches, energetic wipes.",
+          "type": "string"
+        },
+        {
+          "const": "continuous",
+          "description": "Elements continue from one composition into the next.",
+          "type": "string"
+        },
+        {
+          "const": "hard",
+          "description": "Hard cuts.",
+          "type": "string"
+        },
+        {
+          "const": "cinematic",
+          "description": "Slow dissolves, camera-driven handoffs.",
+          "type": "string"
+        }
+      ]
+    },
+    "Trait": {
+      "additionalProperties": false,
+      "description": "One inferred dimension: a value from the closed vocabulary (or null = unknown), how sure\nthe interpreter is, and optionally which evidence supported it.",
+      "properties": {
+        "confidence": {
+          "description": "0..1. Values below 0.5 are recorded but not applied.",
+          "format": "float",
+          "type": "number"
+        },
+        "evidence": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/EvidenceLinks"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Optional provenance."
+        },
+        "value": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/RefTone"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The observed tendency, or null when unknown."
+        }
+      },
+      "required": [
+        "confidence"
+      ],
+      "type": "object"
+    },
+    "Trait10": {
+      "additionalProperties": false,
+      "description": "One inferred dimension: a value from the closed vocabulary (or null = unknown), how sure\nthe interpreter is, and optionally which evidence supported it.",
+      "properties": {
+        "confidence": {
+          "description": "0..1. Values below 0.5 are recorded but not applied.",
+          "format": "float",
+          "type": "number"
+        },
+        "evidence": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/EvidenceLinks"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Optional provenance."
+        },
+        "value": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/RefDensity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The observed tendency, or null when unknown."
+        }
+      },
+      "required": [
+        "confidence"
+      ],
+      "type": "object"
+    },
+    "Trait11": {
+      "additionalProperties": false,
+      "description": "One inferred dimension: a value from the closed vocabulary (or null = unknown), how sure\nthe interpreter is, and optionally which evidence supported it.",
+      "properties": {
+        "confidence": {
+          "description": "0..1. Values below 0.5 are recorded but not applied.",
+          "format": "float",
+          "type": "number"
+        },
+        "evidence": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/EvidenceLinks"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Optional provenance."
+        },
+        "value": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/RefRhythm"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The observed tendency, or null when unknown."
+        }
+      },
+      "required": [
+        "confidence"
+      ],
+      "type": "object"
+    },
+    "Trait12": {
+      "additionalProperties": false,
+      "description": "One inferred dimension: a value from the closed vocabulary (or null = unknown), how sure\nthe interpreter is, and optionally which evidence supported it.",
+      "properties": {
+        "confidence": {
+          "description": "0..1. Values below 0.5 are recorded but not applied.",
+          "format": "float",
+          "type": "number"
+        },
+        "evidence": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/EvidenceLinks"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Optional provenance."
+        },
+        "value": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/RefTemperament"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The observed tendency, or null when unknown."
+        }
+      },
+      "required": [
+        "confidence"
+      ],
+      "type": "object"
+    },
+    "Trait13": {
+      "additionalProperties": false,
+      "description": "One inferred dimension: a value from the closed vocabulary (or null = unknown), how sure\nthe interpreter is, and optionally which evidence supported it.",
+      "properties": {
+        "confidence": {
+          "description": "0..1. Values below 0.5 are recorded but not applied.",
+          "format": "float",
+          "type": "number"
+        },
+        "evidence": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/EvidenceLinks"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Optional provenance."
+        },
+        "value": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/RefTransition"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The observed tendency, or null when unknown."
+        }
+      },
+      "required": [
+        "confidence"
+      ],
+      "type": "object"
+    },
+    "Trait14": {
+      "additionalProperties": false,
+      "description": "One inferred dimension: a value from the closed vocabulary (or null = unknown), how sure\nthe interpreter is, and optionally which evidence supported it.",
+      "properties": {
+        "confidence": {
+          "description": "0..1. Values below 0.5 are recorded but not applied.",
+          "format": "float",
+          "type": "number"
+        },
+        "evidence": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/EvidenceLinks"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Optional provenance."
+        },
+        "value": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/RefScale"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The observed tendency, or null when unknown."
+        }
+      },
+      "required": [
+        "confidence"
+      ],
+      "type": "object"
+    },
+    "Trait15": {
+      "additionalProperties": false,
+      "description": "One inferred dimension: a value from the closed vocabulary (or null = unknown), how sure\nthe interpreter is, and optionally which evidence supported it.",
+      "properties": {
+        "confidence": {
+          "description": "0..1. Values below 0.5 are recorded but not applied.",
+          "format": "float",
+          "type": "number"
+        },
+        "evidence": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/EvidenceLinks"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Optional provenance."
+        },
+        "value": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/RefLayerActivity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The observed tendency, or null when unknown."
+        }
+      },
+      "required": [
+        "confidence"
+      ],
+      "type": "object"
+    },
+    "Trait2": {
+      "additionalProperties": false,
+      "description": "One inferred dimension: a value from the closed vocabulary (or null = unknown), how sure\nthe interpreter is, and optionally which evidence supported it.",
+      "properties": {
+        "confidence": {
+          "description": "0..1. Values below 0.5 are recorded but not applied.",
+          "format": "float",
+          "type": "number"
+        },
+        "evidence": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/EvidenceLinks"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Optional provenance."
+        },
+        "value": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/RefPolarity"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The observed tendency, or null when unknown."
+        }
+      },
+      "required": [
+        "confidence"
+      ],
+      "type": "object"
+    },
+    "Trait3": {
+      "additionalProperties": false,
+      "description": "One inferred dimension: a value from the closed vocabulary (or null = unknown), how sure\nthe interpreter is, and optionally which evidence supported it.",
+      "properties": {
+        "confidence": {
+          "description": "0..1. Values below 0.5 are recorded but not applied.",
+          "format": "float",
+          "type": "number"
+        },
+        "evidence": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/EvidenceLinks"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Optional provenance."
+        },
+        "value": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/RefTemperature"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The observed tendency, or null when unknown."
+        }
+      },
+      "required": [
+        "confidence"
+      ],
+      "type": "object"
+    },
+    "Trait4": {
+      "additionalProperties": false,
+      "description": "One inferred dimension: a value from the closed vocabulary (or null = unknown), how sure\nthe interpreter is, and optionally which evidence supported it.",
+      "properties": {
+        "confidence": {
+          "description": "0..1. Values below 0.5 are recorded but not applied.",
+          "format": "float",
+          "type": "number"
+        },
+        "evidence": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/EvidenceLinks"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Optional provenance."
+        },
+        "value": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/RefLevel"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The observed tendency, or null when unknown."
+        }
+      },
+      "required": [
+        "confidence"
+      ],
+      "type": "object"
+    },
+    "Trait5": {
+      "additionalProperties": false,
+      "description": "One inferred dimension: a value from the closed vocabulary (or null = unknown), how sure\nthe interpreter is, and optionally which evidence supported it.",
+      "properties": {
+        "confidence": {
+          "description": "0..1. Values below 0.5 are recorded but not applied.",
+          "format": "float",
+          "type": "number"
+        },
+        "evidence": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/EvidenceLinks"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Optional provenance."
+        },
+        "value": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/PaletteCharacter"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The observed tendency, or null when unknown."
+        }
+      },
+      "required": [
+        "confidence"
+      ],
+      "type": "object"
+    },
+    "Trait6": {
+      "additionalProperties": false,
+      "description": "One inferred dimension: a value from the closed vocabulary (or null = unknown), how sure\nthe interpreter is, and optionally which evidence supported it.",
+      "properties": {
+        "confidence": {
+          "description": "0..1. Values below 0.5 are recorded but not applied.",
+          "format": "float",
+          "type": "number"
+        },
+        "evidence": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/EvidenceLinks"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Optional provenance."
+        },
+        "value": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BackgroundCharacter"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The observed tendency, or null when unknown."
+        }
+      },
+      "required": [
+        "confidence"
+      ],
+      "type": "object"
+    },
+    "Trait7": {
+      "additionalProperties": false,
+      "description": "One inferred dimension: a value from the closed vocabulary (or null = unknown), how sure\nthe interpreter is, and optionally which evidence supported it.",
+      "properties": {
+        "confidence": {
+          "description": "0..1. Values below 0.5 are recorded but not applied.",
+          "format": "float",
+          "type": "number"
+        },
+        "evidence": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/EvidenceLinks"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Optional provenance."
+        },
+        "value": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/TypographyCharacter"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The observed tendency, or null when unknown."
+        }
+      },
+      "required": [
+        "confidence"
+      ],
+      "type": "object"
+    },
+    "Trait8": {
+      "additionalProperties": false,
+      "description": "One inferred dimension: a value from the closed vocabulary (or null = unknown), how sure\nthe interpreter is, and optionally which evidence supported it.",
+      "properties": {
+        "confidence": {
+          "description": "0..1. Values below 0.5 are recorded but not applied.",
+          "format": "float",
+          "type": "number"
+        },
+        "evidence": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/EvidenceLinks"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Optional provenance."
+        },
+        "value": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/MaterialCharacter"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The observed tendency, or null when unknown."
+        }
+      },
+      "required": [
+        "confidence"
+      ],
+      "type": "object"
+    },
+    "Trait9": {
+      "additionalProperties": false,
+      "description": "One inferred dimension: a value from the closed vocabulary (or null = unknown), how sure\nthe interpreter is, and optionally which evidence supported it.",
+      "properties": {
+        "confidence": {
+          "description": "0..1. Values below 0.5 are recorded but not applied.",
+          "format": "float",
+          "type": "number"
+        },
+        "evidence": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/EvidenceLinks"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Optional provenance."
+        },
+        "value": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ImageTreatmentCharacter"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "The observed tendency, or null when unknown."
+        }
+      },
+      "required": [
+        "confidence"
+      ],
+      "type": "object"
+    },
+    "TypographyCharacter": {
+      "oneOf": [
+        {
+          "const": "grotesk",
+          "description": "Heavy grotesk sans headlines.",
+          "type": "string"
+        },
+        {
+          "const": "geometric_sans",
+          "description": "Geometric sans (round, even strokes).",
+          "type": "string"
+        },
+        {
+          "const": "humanist_sans",
+          "description": "Humanist sans (calligraphic proportions).",
+          "type": "string"
+        },
+        {
+          "const": "condensed",
+          "description": "Tall condensed display type.",
+          "type": "string"
+        },
+        {
+          "const": "mono_technical",
+          "description": "Monospaced / technical labels dominate.",
+          "type": "string"
+        },
+        {
+          "const": "serif_editorial",
+          "description": "Serif display headlines.",
+          "type": "string"
+        },
+        {
+          "const": "poster_display",
+          "description": "Very heavy poster display type.",
+          "type": "string"
+        },
+        {
+          "const": "script",
+          "description": "Script lettering.",
+          "type": "string"
+        },
+        {
+          "const": "handwritten",
+          "description": "Hand-drawn lettering.",
+          "type": "string"
+        }
+      ]
+    },
+    "UnsupportedTrait": {
+      "additionalProperties": false,
+      "description": "A visible trait the engine cannot render.",
+      "properties": {
+        "confidence": {
+          "description": "0..1.",
+          "format": "float",
+          "type": "number"
+        },
+        "evidence": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/EvidenceLinks"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "trait": {
+          "$ref": "#/$defs/UnsupportedTraitKind"
+        }
+      },
+      "required": [
+        "trait",
+        "confidence"
+      ],
+      "type": "object"
+    },
+    "UnsupportedTraitKind": {
+      "oneOf": [
+        {
+          "const": "true3d",
+          "description": "True 3D geometry or 3D camera moves.",
+          "type": "string"
+        },
+        {
+          "const": "chrome_or_metallic",
+          "description": "Chrome, metal or glossy reflective surfaces.",
+          "type": "string"
+        },
+        {
+          "const": "particle_field",
+          "description": "Particle fields, sparks, dust.",
+          "type": "string"
+        },
+        {
+          "const": "fluid_simulation",
+          "description": "Liquid or smoke simulation.",
+          "type": "string"
+        },
+        {
+          "const": "character_animation",
+          "description": "Animated characters.",
+          "type": "string"
+        },
+        {
+          "const": "frame_by_frame_illustration",
+          "description": "Frame-by-frame drawn animation.",
+          "type": "string"
+        },
+        {
+          "const": "live_action_footage",
+          "description": "Live-action video footage.",
+          "type": "string"
+        },
+        {
+          "const": "photographic_background",
+          "description": "Photographs or footage filling the background.",
+          "type": "string"
+        },
+        {
+          "const": "ui_screen_recording",
+          "description": "Recorded app/UI screens.",
+          "type": "string"
+        },
+        {
+          "const": "device_mockup",
+          "description": "Phones, laptops or other device mockups.",
+          "type": "string"
+        },
+        {
+          "const": "gradient_background",
+          "description": "Smooth gradients, vignettes or glows as grounds.",
+          "type": "string"
+        },
+        {
+          "const": "glitch",
+          "description": "Glitch, datamosh, RGB split.",
+          "type": "string"
+        },
+        {
+          "const": "film_or_vhs_artifacts",
+          "description": "VHS, film damage, light leaks.",
+          "type": "string"
+        },
+        {
+          "const": "hand_lettering",
+          "description": "Script or hand-drawn lettering.",
+          "type": "string"
+        },
+        {
+          "const": "hand_drawn_elements",
+          "description": "Hand-drawn illustration elements (doodles, scribbles).",
+          "type": "string"
+        },
+        {
+          "const": "motion_blur",
+          "description": "Motion blur or speed ramps.",
+          "type": "string"
+        },
+        {
+          "const": "other",
+          "description": "Anything else the engine cannot render.",
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Reusable style principles observed in a reference video. Every dimension is optional:\nomit it, or give `\"value\": null`, when the reference does not show it clearly. Values are\ntendencies of the whole piece, never instructions for a particular frame.",
+  "properties": {
+    "approximate_palette_evidence": {
+      "description": "Up to 8 approximate colors copied from the deterministic evidence (`color.palette`).\nEvidence only: the engine maps them into its own curated palette families.",
+      "items": {
+        "$ref": "#/$defs/PaletteEvidenceSwatch"
+      },
+      "type": "array"
+    },
+    "background_character": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Trait6"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "What typically sits behind the content."
+    },
+    "composition_rhythm": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Trait11"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "How often the composition meaningfully changes (from visual change, never audio)."
+    },
+    "contrast": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Trait4"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Tonal contrast between grounds and content."
+    },
+    "image_treatment": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Trait9"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "How photographs or illustrations are treated. `none` when the reference has no images."
+    },
+    "layer_activity": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Trait15"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "How present/active the foreground, midground and background layers are."
+    },
+    "material_character": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Trait8"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Surface finish of grounds and graphic elements."
+    },
+    "motion_temperament": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Trait12"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "How elements generally move."
+    },
+    "palette_character": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Trait5"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "How color is used."
+    },
+    "polarity": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Trait2"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Light or dark design. `mixed` when both are substantial."
+    },
+    "reference_fingerprint": {
+      "description": "The `reference_fingerprint` of the analysis bundle this profile was written from\n(copy it from the request). Optional, but required for provenance checks.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "scale_contrast": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Trait14"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Size contrast between the dominant element and supporting elements."
+    },
+    "temperature": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Trait3"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Color temperature of grounds and dominant colors."
+    },
+    "tone": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Trait"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Overall design character."
+    },
+    "transition_character": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Trait13"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "How one composition hands off to the next."
+    },
+    "typography_character": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Trait7"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Dominant typographic voice of headlines."
+    },
+    "typography_contrast": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Trait4"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "How strongly type sizes/weights/styles contrast with each other."
+    },
+    "unsupported_reference_traits": {
+      "description": "Visible traits the engine cannot render. Recorded, never imitated.",
+      "items": {
+        "$ref": "#/$defs/UnsupportedTrait"
+      },
+      "type": "array"
+    },
+    "version": {
+      "description": "Must be \"0.1\".",
+      "type": "string"
+    },
+    "visual_density": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Trait10"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "How much visual information a typical frame holds around its main focus."
+    }
+  },
+  "required": [
+    "version"
+  ],
+  "title": "ReferenceStyleProfile",
+  "type": "object"
+}

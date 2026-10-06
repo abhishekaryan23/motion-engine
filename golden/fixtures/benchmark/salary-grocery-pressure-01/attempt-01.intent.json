@@ -1,0 +1,53 @@
+{
+  "version": "0.1",
+  "title": "salary_grocery_pressure_01",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "Your salary stayed flat",
+      "primary": {
+        "kind": "number",
+        "value": "₹50,000",
+        "meaning": "salary"
+      },
+      "secondary": {
+        "kind": "phrase",
+        "value": "for three straight years."
+      },
+      "energy": "calm",
+      "continuity": "carry_primary",
+      "keyword": "salary"
+    },
+    {
+      "purpose": "contrast",
+      "statement": "A ₹5,000 grocery basket now costs ₹6,900",
+      "primary": {
+        "kind": "number",
+        "value": "₹50,000",
+        "meaning": "salary"
+      },
+      "secondary": {
+        "kind": "object",
+        "asset": "shopping_basket",
+        "value": "₹6,900",
+        "meaning": "groceries"
+      },
+      "relationship": "compress",
+      "energy": "building",
+      "continuity": "carry_primary",
+      "keyword": "groceries"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "The amount of life your salary buys has become smaller.",
+      "primary": {
+        "kind": "phrase",
+        "value": "Purchasing Power",
+        "meaning": "real value"
+      },
+      "energy": "impact",
+      "keyword": "smaller"
+    }
+  ]
+}

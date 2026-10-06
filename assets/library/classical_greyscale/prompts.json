@@ -1,0 +1,905 @@
+{
+ "version": "0.1",
+ "specs": [
+  {
+   "id": "library.marble_bust",
+   "fingerprint": "fp1-60b44370cc12138f",
+   "continuity_key": "marble_bust",
+   "serves": [
+    "library.marble_bust"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "marble bust",
+   "context": "library asset: marble bust",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "greyscale classical sculpture photograph",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "marble_bust",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "3:4"
+   },
+   "prompt": "Black-and-white studio photograph, pure greyscale, of an anonymous classical marble bust seen from behind in three-quarter rear view so the face is not visible. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.bust_profile",
+   "fingerprint": "fp1-030edbf48c227534",
+   "continuity_key": "bust_profile",
+   "serves": [
+    "library.bust_profile"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "marble bust in profile",
+   "context": "library asset: marble bust in profile",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "greyscale classical sculpture photograph",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "bust_profile",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "3:4"
+   },
+   "prompt": "Black-and-white studio photograph, pure greyscale, of a generic, anonymous classical marble bust in strict side profile with blank sculpted eyes, not a portrait of any real person. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.hand_pointing",
+   "fingerprint": "fp1-4a9de4332ada6ffa",
+   "continuity_key": "hand_pointing",
+   "serves": [
+    "library.hand_pointing"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "marble hand pointing",
+   "context": "library asset: marble hand pointing",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "greyscale classical sculpture photograph",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "hand_pointing",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Black-and-white studio photograph, pure greyscale, of a single classical marble statue hand with the index finger pointing to the right, cut at the wrist. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.hand_reaching",
+   "fingerprint": "fp1-9ce27769ec2dd6a0",
+   "continuity_key": "hand_reaching",
+   "serves": [
+    "library.hand_reaching"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "marble hand reaching",
+   "context": "library asset: marble hand reaching",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "greyscale classical sculpture photograph",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "hand_reaching",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Black-and-white studio photograph, pure greyscale, of a single classical marble statue hand and forearm reaching upward with open relaxed fingers. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.hand_holding",
+   "fingerprint": "fp1-a6dfba78aa36435d",
+   "continuity_key": "hand_holding",
+   "serves": [
+    "library.hand_holding"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "marble hand holding a sphere",
+   "context": "library asset: marble hand holding a sphere",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "greyscale classical sculpture photograph",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "hand_holding",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Black-and-white studio photograph, pure greyscale, of a single classical marble statue hand gently holding a small smooth stone sphere in its palm. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.open_palm",
+   "fingerprint": "fp1-9302376ad7c30f4f",
+   "continuity_key": "open_palm",
+   "serves": [
+    "library.open_palm"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "marble open palm",
+   "context": "library asset: marble open palm",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "greyscale classical sculpture photograph",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "open_palm",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Black-and-white studio photograph, pure greyscale, of a single classical marble statue hand, palm open and facing up in an offering gesture. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.hands_touching",
+   "fingerprint": "fp1-43888471327e5e4b",
+   "continuity_key": "hands_touching",
+   "serves": [
+    "library.hands_touching"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "two marble hands nearly touching",
+   "context": "library asset: two marble hands nearly touching",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "greyscale classical sculpture photograph",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "hands_touching",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "16:9"
+   },
+   "prompt": "Black-and-white studio photograph, pure greyscale, of two classical marble statue hands reaching toward each other from left and right, index fingertips almost touching with a small gap between them. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.statue_eye",
+   "fingerprint": "fp1-485fb3b868347375",
+   "continuity_key": "statue_eye",
+   "serves": [
+    "library.statue_eye"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "sculpted marble eye",
+   "context": "library asset: sculpted marble eye",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "greyscale classical sculpture photograph",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "statue_eye",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Black-and-white studio photograph, pure greyscale, of a close fragment of a classical marble statue face showing only a single sculpted eye and brow, cropped as a broken stone fragment. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.statue_torso",
+   "fingerprint": "fp1-3d5ab3e2fd7f2020",
+   "continuity_key": "statue_torso",
+   "serves": [
+    "library.statue_torso"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "draped marble statue fragment",
+   "context": "library asset: draped marble statue fragment",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "greyscale classical sculpture photograph",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "statue_torso",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "3:4"
+   },
+   "prompt": "Black-and-white studio photograph, pure greyscale, of a classical marble statue fragment of a fully clothed figure's upper body in a heavily draped toga, armless and headless, only folds of carved fabric visible. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.column",
+   "fingerprint": "fp1-f397d9b0647b6e53",
+   "continuity_key": "column",
+   "serves": [
+    "library.column"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "marble column",
+   "context": "library asset: marble column",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "greyscale classical sculpture photograph",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "column",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "9:16"
+   },
+   "prompt": "Black-and-white studio photograph, pure greyscale, of a single tall Doric marble column with capital and base. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.broken_column",
+   "fingerprint": "fp1-0ad955cba2776291",
+   "continuity_key": "broken_column",
+   "serves": [
+    "library.broken_column"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "broken marble column",
+   "context": "library asset: broken marble column",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "greyscale classical sculpture photograph",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "broken_column",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Black-and-white studio photograph, pure greyscale, of a broken classical marble column drum fragment lying on its side with a rough fractured top. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.laurel",
+   "fingerprint": "fp1-d22ef336ff014094",
+   "continuity_key": "laurel",
+   "serves": [
+    "library.laurel"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "laurel wreath",
+   "context": "library asset: laurel wreath",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "greyscale classical sculpture photograph",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "laurel",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Black-and-white studio photograph, pure greyscale, of a classical laurel wreath sculpted in pale stone. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.hourglass",
+   "fingerprint": "fp1-15b589fff0f9e52b",
+   "continuity_key": "hourglass",
+   "serves": [
+    "library.hourglass"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "hourglass",
+   "context": "library asset: hourglass",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "greyscale classical sculpture photograph",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "hourglass",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Black-and-white studio photograph, pure greyscale, of an antique hourglass with turned wooden frame and flowing sand, photographed in greyscale. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.scales",
+   "fingerprint": "fp1-afd1805a3b83b607",
+   "continuity_key": "scales",
+   "serves": [
+    "library.scales"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "scales of justice",
+   "context": "library asset: scales of justice",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "greyscale classical sculpture photograph",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "scales",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Black-and-white studio photograph, pure greyscale, of an antique brass balance scale of justice with two hanging pans, photographed in greyscale. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.ancient_coin",
+   "fingerprint": "fp1-2882cac2486ec5e5",
+   "continuity_key": "ancient_coin",
+   "serves": [
+    "library.ancient_coin"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "ancient coin",
+   "context": "library asset: ancient coin",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "greyscale classical sculpture photograph",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "ancient_coin",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Black-and-white studio photograph, pure greyscale, of a worn ancient silver drachma coin with an owl relief, seen face on, photographed in greyscale. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.horse_head",
+   "fingerprint": "fp1-344c7f88ed3e3ede",
+   "continuity_key": "horse_head",
+   "serves": [
+    "library.horse_head"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "marble horse head",
+   "context": "library asset: marble horse head",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "greyscale classical sculpture photograph",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "horse_head",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Black-and-white studio photograph, pure greyscale, of a classical marble horse head sculpture. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.amphora",
+   "fingerprint": "fp1-51e438e68d2f3f64",
+   "continuity_key": "amphora",
+   "serves": [
+    "library.amphora"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "amphora vase",
+   "context": "library asset: amphora vase",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "greyscale classical sculpture photograph",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "amphora",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "3:4"
+   },
+   "prompt": "Black-and-white studio photograph, pure greyscale, of an ancient Greek amphora vase in pale stone without painted figures. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.clenched_fist",
+   "fingerprint": "fp1-d9242f06932d4d95",
+   "continuity_key": "clenched_fist",
+   "serves": [
+    "library.clenched_fist"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "marble clenched fist",
+   "context": "library asset: marble clenched fist",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "greyscale classical sculpture photograph",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "clenched_fist",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Black-and-white studio photograph, pure greyscale, of a single classical marble statue hand clenched into a fist, cut at the wrist. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.greek_helmet",
+   "fingerprint": "fp1-11010f9f4375aa6c",
+   "continuity_key": "greek_helmet",
+   "serves": [
+    "library.greek_helmet"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "ancient helmet",
+   "context": "library asset: ancient helmet",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "greyscale classical sculpture photograph",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "greek_helmet",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Black-and-white studio photograph, pure greyscale, of an ancient Corinthian bronze helmet, empty, photographed in greyscale. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.statue_foot",
+   "fingerprint": "fp1-7735e03d6bc70465",
+   "continuity_key": "statue_foot",
+   "serves": [
+    "library.statue_foot"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "marble foot on plinth",
+   "context": "library asset: marble foot on plinth",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "greyscale classical sculpture photograph",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "statue_foot",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Black-and-white studio photograph, pure greyscale, of a classical marble statue foot fragment standing on a small square plinth. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  }
+ ]
+}

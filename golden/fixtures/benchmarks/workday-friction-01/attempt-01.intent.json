@@ -1,0 +1,47 @@
+{
+  "version": "0.2",
+  "title": "workday_friction",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "At 9 AM you have one simple goal.",
+      "primary": {
+        "kind": "phrase",
+        "value": "Finish the presentation",
+        "meaning": "morning goal"
+      },
+      "energy": "calm",
+      "continuity": "carry_primary",
+      "keyword": "presentation"
+    },
+    {
+      "purpose": "contrast",
+      "statement": "None of these interruptions seems huge by itself.",
+      "primary": {
+        "kind": "collection",
+        "meaning": "interruptions",
+        "items": [
+          { "kind": "phrase", "value": "Stand-up meeting" },
+          { "kind": "phrase", "value": "Urgent email" },
+          { "kind": "phrase", "value": "Quick call" },
+          { "kind": "phrase", "value": "Production issue" }
+        ]
+      },
+      "relationship": "accumulate",
+      "energy": "building",
+      "keyword": "friction"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "By lunch, the presentation is untouched.",
+      "primary": {
+        "kind": "phrase",
+        "value": "Sitting exactly where you left it",
+        "meaning": "presentation"
+      },
+      "energy": "impact",
+      "keyword": "lunch"
+    }
+  ]
+}

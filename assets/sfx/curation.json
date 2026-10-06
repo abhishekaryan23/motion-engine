@@ -1,0 +1,455 @@
+{
+  "version": "0.1",
+  "sounds": [
+    {
+      "id": "whoosh_soft_01",
+      "family": "whoosh_soft",
+      "path": "Whoosh All type/Whoosh 3/deep-fast-whoosh-SBA-300070871.mp3",
+      "tags": []
+    },
+    {
+      "id": "whoosh_soft_02",
+      "family": "whoosh_soft",
+      "path": "Whoosh All type/Whoosh 2/Whoosh Fast 03.wav",
+      "tags": []
+    },
+    {
+      "id": "whoosh_soft_03",
+      "family": "whoosh_soft",
+      "path": "Whoosh All type/Whoosh 2/Whoosh Big 01.wav",
+      "tags": []
+    },
+    {
+      "id": "whoosh_soft_04",
+      "family": "whoosh_soft",
+      "path": "Whoosh All type/Whoosh 2/Whoosh Big 04.wav",
+      "tags": []
+    },
+    {
+      "id": "whoosh_soft_05",
+      "family": "whoosh_soft",
+      "path": "Whoosh All type/Whoosh 2/Whoosh Big 05.wav",
+      "tags": []
+    },
+    {
+      "id": "whoosh_soft_06",
+      "family": "whoosh_soft",
+      "path": "Whoosh All type/Whoosh 2/Whoosh Big 07.wav",
+      "tags": []
+    },
+    {
+      "id": "whoosh_hard_01",
+      "family": "whoosh_hard",
+      "path": "Whoosh All type/Whoosh 2/Whoosh Fast 01.wav",
+      "tags": []
+    },
+    {
+      "id": "whoosh_hard_02",
+      "family": "whoosh_hard",
+      "path": "Whoosh All type/Whoosh 2/Whoosh Fast 04.wav",
+      "tags": []
+    },
+    {
+      "id": "whoosh_hard_03",
+      "family": "whoosh_hard",
+      "path": "Whoosh All type/Whoosh 2/Whoosh Digital 04.wav",
+      "tags": []
+    },
+    {
+      "id": "whoosh_hard_04",
+      "family": "whoosh_hard",
+      "path": "Whoosh All type/Whoosh 2/Whoosh Digital 05.wav",
+      "tags": []
+    },
+    {
+      "id": "whoosh_hard_05",
+      "family": "whoosh_hard",
+      "path": "Whoosh All type/Whoosh 2/Whoosh Digital 07.wav",
+      "tags": []
+    },
+    {
+      "id": "whoosh_hard_06",
+      "family": "whoosh_hard",
+      "path": "Transitions/Abstract Transitions/Abstract.Transition.22.wav",
+      "tags": []
+    },
+    {
+      "id": "swipe_01",
+      "family": "swipe",
+      "path": "Whoosh All type/swipe and slides/VS_Short Whoosh 1.mp3",
+      "tags": []
+    },
+    {
+      "id": "swipe_02",
+      "family": "swipe",
+      "path": "Whoosh All type/swipe and slides/VS_Short Whoosh 2.mp3",
+      "tags": []
+    },
+    {
+      "id": "swipe_03",
+      "family": "swipe",
+      "path": "Whoosh All type/swipe and slides/VS_Short Whoosh 4.mp3",
+      "tags": []
+    },
+    {
+      "id": "swipe_04",
+      "family": "swipe",
+      "path": "Whoosh All type/swipe and slides/VS_Short Whoosh 5.mp3",
+      "tags": []
+    },
+    {
+      "id": "swipe_05",
+      "family": "swipe",
+      "path": "Whoosh All type/swipe and slides/VS_Short Whoosh 7.mp3",
+      "tags": []
+    },
+    {
+      "id": "swipe_06",
+      "family": "swipe",
+      "path": "Whoosh All type/swipe and slides/VS_Short Whoosh 8.mp3",
+      "tags": []
+    },
+    {
+      "id": "hit_soft_01",
+      "family": "hit_soft",
+      "path": "Hits/Hollow HITS/Hollow.HIT.2.wav",
+      "tags": []
+    },
+    {
+      "id": "hit_soft_02",
+      "family": "hit_soft",
+      "path": "Hits/Hollow HITS/Hollow.HIT.5.wav",
+      "tags": []
+    },
+    {
+      "id": "hit_soft_03",
+      "family": "hit_soft",
+      "path": "Hits/Hollow HITS/Hollow.HIT.12.wav",
+      "tags": []
+    },
+    {
+      "id": "hit_soft_04",
+      "family": "hit_soft",
+      "path": "Hits/Hollow HITS/Hollow.HIT.28.wav",
+      "tags": []
+    },
+    {
+      "id": "hit_soft_05",
+      "family": "hit_soft",
+      "path": "Hits/Hollow HITS/Hollow.HIT.29.wav",
+      "tags": []
+    },
+    {
+      "id": "hit_hard_01",
+      "family": "hit_hard",
+      "path": "Impact/Imapct 00001.wav",
+      "tags": []
+    },
+    {
+      "id": "hit_hard_02",
+      "family": "hit_hard",
+      "path": "Impact/Imapct 00007.wav",
+      "tags": []
+    },
+    {
+      "id": "hit_hard_03",
+      "family": "hit_hard",
+      "path": "Impact/Imapct 00009.wav",
+      "tags": []
+    },
+    {
+      "id": "hit_hard_04",
+      "family": "hit_hard",
+      "path": "Cinematic Riser/Cinematic Riser/Cinematic 15.wav",
+      "tags": []
+    },
+    {
+      "id": "hit_hard_05",
+      "family": "hit_hard",
+      "path": "Cinematic Riser/Cinematic Riser/Cinematic 21.wav",
+      "tags": []
+    },
+    {
+      "id": "hit_hard_06",
+      "family": "hit_hard",
+      "path": "Hits/Firey HITS/Firey.HIT.01.wav",
+      "tags": []
+    },
+    {
+      "id": "subdrop_01",
+      "family": "subdrop",
+      "path": "SUBDROP/Subdrop Low 02.wav",
+      "tags": []
+    },
+    {
+      "id": "subdrop_02",
+      "family": "subdrop",
+      "path": "SUBDROP/Subdrop Low 04.wav",
+      "tags": []
+    },
+    {
+      "id": "subdrop_03",
+      "family": "subdrop",
+      "path": "SUBDROP/Subdrop Low + High 01.wav",
+      "tags": []
+    },
+    {
+      "id": "subdrop_04",
+      "family": "subdrop",
+      "path": "SUBDROP/Subdrop Low + High 04.wav",
+      "tags": []
+    },
+    {
+      "id": "subdrop_05",
+      "family": "subdrop",
+      "path": "SUBDROP/Subdrop Low + High 07.wav",
+      "tags": []
+    },
+    {
+      "id": "riser_01",
+      "family": "riser",
+      "path": "CORPORATE RISER/Corporate Rise and Hit 01.wav",
+      "tags": []
+    },
+    {
+      "id": "riser_02",
+      "family": "riser",
+      "path": "CORPORATE RISER/Corporate Rise and Hit 02.wav",
+      "tags": []
+    },
+    {
+      "id": "riser_03",
+      "family": "riser",
+      "path": "CORPORATE RISER/Corporate Rise and Hit 04.wav",
+      "tags": []
+    },
+    {
+      "id": "riser_04",
+      "family": "riser",
+      "path": "Cinematic Riser/Cinematic Riser/Cinematic 25.wav",
+      "tags": []
+    },
+    {
+      "id": "riser_05",
+      "family": "riser",
+      "path": "Cinematic Riser/Cinematic Riser/Cinematic 29.wav",
+      "tags": []
+    },
+    {
+      "id": "click_01",
+      "family": "click",
+      "path": "CLICK/Click 10.wav",
+      "tags": []
+    },
+    {
+      "id": "click_02",
+      "family": "click",
+      "path": "CLICK/Click 08.wav",
+      "tags": []
+    },
+    {
+      "id": "click_03",
+      "family": "click",
+      "path": "CLICK/Click Digital 14.wav",
+      "tags": []
+    },
+    {
+      "id": "click_04",
+      "family": "click",
+      "path": "MOUSE/Mouse Click 04.wav",
+      "tags": []
+    },
+    {
+      "id": "click_05",
+      "family": "click",
+      "path": "MOUSE/Mouse Click 05.wav",
+      "tags": []
+    },
+    {
+      "id": "click_06",
+      "family": "click",
+      "path": "BUTTON/Button 03.wav",
+      "tags": []
+    },
+    {
+      "id": "tick_01",
+      "family": "tick",
+      "path": "CLICK/Click 14.wav",
+      "tags": []
+    },
+    {
+      "id": "tick_02",
+      "family": "tick",
+      "path": "CLICK/Click Digital 07.wav",
+      "tags": []
+    },
+    {
+      "id": "tick_03",
+      "family": "tick",
+      "path": "Coin/Coin 03.wav",
+      "tags": []
+    },
+    {
+      "id": "tick_04",
+      "family": "tick",
+      "path": "Coin/Coin 04.wav",
+      "tags": []
+    },
+    {
+      "id": "tick_05",
+      "family": "tick",
+      "path": "Beeps/UI 04.wav",
+      "tags": []
+    },
+    {
+      "id": "pop_01",
+      "family": "pop",
+      "path": "Pop/pop-1.mp3",
+      "tags": []
+    },
+    {
+      "id": "pop_02",
+      "family": "pop",
+      "path": "Pop/pop-3.mp3",
+      "tags": []
+    },
+    {
+      "id": "pop_03",
+      "family": "pop",
+      "path": "Pop/pop-4.mp3",
+      "tags": []
+    },
+    {
+      "id": "pop_04",
+      "family": "pop",
+      "path": "Pop/pop-6.mp3",
+      "tags": []
+    },
+    {
+      "id": "pop_05",
+      "family": "pop",
+      "path": "Pop/pop-7.mp3",
+      "tags": []
+    },
+    {
+      "id": "pop_06",
+      "family": "pop",
+      "path": "BUTTON/botton/sound-5.mp3",
+      "tags": []
+    },
+    {
+      "id": "paper_01",
+      "family": "paper",
+      "path": "PAPER/Paper Turn Fast 01.wav",
+      "tags": []
+    },
+    {
+      "id": "paper_02",
+      "family": "paper",
+      "path": "PAPER/Paper Turn Fast 02.wav",
+      "tags": []
+    },
+    {
+      "id": "paper_03",
+      "family": "paper",
+      "path": "PAPER/Paper Turn Fast 03.wav",
+      "tags": []
+    },
+    {
+      "id": "paper_04",
+      "family": "paper",
+      "path": "PAPER/Paper Whoosh.wav",
+      "tags": []
+    },
+    {
+      "id": "paper_05",
+      "family": "paper",
+      "path": "PAPER/Paper Crumple 01.wav",
+      "tags": []
+    },
+    {
+      "id": "data_01",
+      "family": "data",
+      "path": "Computer _ Robot/Computer _ Robot 00022.wav",
+      "tags": []
+    },
+    {
+      "id": "data_02",
+      "family": "data",
+      "path": "Computer _ Robot/Computer _ Robot 00025.wav",
+      "tags": []
+    },
+    {
+      "id": "data_03",
+      "family": "data",
+      "path": "Computer _ Robot/Computer _ Robot 00034.wav",
+      "tags": []
+    },
+    {
+      "id": "data_04",
+      "family": "data",
+      "path": "Computer _ Robot/Computer _ Robot 00055.wav",
+      "tags": []
+    },
+    {
+      "id": "data_05",
+      "family": "data",
+      "path": "Computer _ Robot/Computer _ Robot 00061.wav",
+      "tags": []
+    },
+    {
+      "id": "notification_01",
+      "family": "notification",
+      "path": "Notification/Notification 00003.wav",
+      "tags": []
+    },
+    {
+      "id": "notification_02",
+      "family": "notification",
+      "path": "Notification/Notification 00021.wav",
+      "tags": []
+    },
+    {
+      "id": "notification_03",
+      "family": "notification",
+      "path": "Notification/Notification 00025.wav",
+      "tags": []
+    },
+    {
+      "id": "notification_04",
+      "family": "notification",
+      "path": "Notification/Notification 00039.wav",
+      "tags": []
+    },
+    {
+      "id": "glitch_01",
+      "family": "glitch",
+      "path": "Glitch Sound/Glitch 2/glitch 15.wav",
+      "tags": []
+    },
+    {
+      "id": "glitch_02",
+      "family": "glitch",
+      "path": "Glitch Sound/Glitch 2/glitch 24.wav",
+      "tags": []
+    },
+    {
+      "id": "glitch_03",
+      "family": "glitch",
+      "path": "Glitch Sound/Glitch 2/glitch 37.wav",
+      "tags": []
+    },
+    {
+      "id": "glitch_04",
+      "family": "glitch",
+      "path": "Glitch Sound/Glitch 2/glitch 42.wav",
+      "tags": []
+    },
+    {
+      "id": "glitch_05",
+      "family": "glitch",
+      "path": "Glitch Sound/Glitch 2/glitch 46.wav",
+      "tags": []
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "version": "0.2",
+  "title": "ocean_zones",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "The sunlit surface",
+      "narration": "Photosynthesis happens in the sun-lit surface layer, called the photic zone,",
+      "primary": {
+        "kind": "layers",
+        "meaning": "ocean water column",
+        "layers": [
+          {
+            "name": "Photic zone",
+            "note": "sunlit, photosynthesis"
+          },
+          {
+            "name": "Thermocline",
+            "note": "density boundary",
+            "boundary": true
+          },
+          {
+            "name": "Aphotic zone",
+            "note": "dark, decomposition"
+          }
+        ],
+        "focus": "Photic zone"
+      },
+      "secondary": {
+        "kind": "object",
+        "asset": "phytoplankton",
+        "meaning": "photosynthesis"
+      },
+      "energy": "calm",
+      "keyword": "photic"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "Decay in the dark",
+      "narration": "but the decomposition occurs way, way deeper, in the aphotic zone,",
+      "primary": {
+        "kind": "layers",
+        "meaning": "ocean water column",
+        "layers": [
+          {
+            "name": "Photic zone",
+            "note": "sunlit, photosynthesis"
+          },
+          {
+            "name": "Thermocline",
+            "note": "density boundary",
+            "boundary": true
+          },
+          {
+            "name": "Aphotic zone",
+            "note": "dark, decomposition"
+          }
+        ],
+        "focus": "Aphotic zone"
+      },
+      "secondary": {
+        "kind": "object",
+        "asset": "fish_skeleton",
+        "meaning": "decomposition"
+      },
+      "energy": "building",
+      "keyword": "aphotic"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "The thermocline",
+      "narration": "below the density boundary called the thermocline, or pycnocline.",
+      "primary": {
+        "kind": "layers",
+        "meaning": "ocean water column",
+        "layers": [
+          {
+            "name": "Photic zone",
+            "note": "sunlit, photosynthesis"
+          },
+          {
+            "name": "Thermocline",
+            "note": "density boundary",
+            "boundary": true
+          },
+          {
+            "name": "Aphotic zone",
+            "note": "dark, decomposition"
+          }
+        ],
+        "focus": "Thermocline"
+      },
+      "secondary": {
+        "kind": "object",
+        "asset": "thermometer",
+        "meaning": "temperature drop"
+      },
+      "energy": "impact",
+      "keyword": "boundary"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "Stratification",
+      "narration": "This boundary keeps the surface and deeper waters from mixing, a phenomenon called stratification,",
+      "primary": {
+        "kind": "layers",
+        "meaning": "ocean water column",
+        "layers": [
+          {
+            "name": "Photic zone",
+            "note": "sunlit, photosynthesis"
+          },
+          {
+            "name": "Thermocline",
+            "note": "density boundary",
+            "boundary": true
+          },
+          {
+            "name": "Aphotic zone",
+            "note": "dark, decomposition"
+          }
+        ],
+        "focus": "Thermocline"
+      },
+      "secondary": {
+        "kind": "object",
+        "asset": "padlock",
+        "meaning": "sealed"
+      },
+      "energy": "building",
+      "keyword": "stratification",
+      "relationship": "separate"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "No oxygen gets down",
+      "narration": "thus preventing oxygen from mixing from the surface down into the aphotic.",
+      "primary": {
+        "kind": "layers",
+        "meaning": "ocean water column",
+        "layers": [
+          {
+            "name": "Photic zone",
+            "note": "sunlit, photosynthesis"
+          },
+          {
+            "name": "Thermocline",
+            "note": "density boundary",
+            "boundary": true
+          },
+          {
+            "name": "Aphotic zone",
+            "note": "dark, decomposition"
+          }
+        ],
+        "focus": "Photic zone"
+      },
+      "secondary": {
+        "kind": "object",
+        "asset": "oxygen_molecule",
+        "meaning": "oxygen"
+      },
+      "energy": "impact",
+      "keyword": "oxygen",
+      "relationship": "separate"
+    }
+  ]
+}

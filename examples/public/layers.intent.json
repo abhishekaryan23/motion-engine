@@ -1,0 +1,56 @@
+{
+  "version": "0.2",
+  "title": "atmosphere_layers",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "Weather lives low",
+      "primary": {
+        "kind": "layers",
+        "meaning": "the atmosphere",
+        "layers": [
+          { "name": "Troposphere", "note": "weather, clouds" },
+          { "name": "Tropopause", "note": "the lid", "boundary": true },
+          { "name": "Stratosphere", "note": "ozone, calm air" }
+        ],
+        "focus": "Troposphere"
+      },
+      "secondary": { "kind": "number", "value": "12 km", "meaning": "deep" },
+      "energy": "calm"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "A lid on the weather",
+      "primary": {
+        "kind": "layers",
+        "meaning": "the atmosphere",
+        "layers": [
+          { "name": "Troposphere", "note": "weather, clouds" },
+          { "name": "Tropopause", "note": "the lid", "boundary": true },
+          { "name": "Stratosphere", "note": "ozone, calm air" }
+        ],
+        "focus": "Tropopause"
+      },
+      "secondary": { "kind": "phrase", "value": "temperature stops falling" },
+      "relationship": "separate",
+      "energy": "building"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "Calm air above",
+      "primary": {
+        "kind": "layers",
+        "meaning": "the atmosphere",
+        "layers": [
+          { "name": "Troposphere", "note": "weather, clouds" },
+          { "name": "Tropopause", "note": "the lid", "boundary": true },
+          { "name": "Stratosphere", "note": "ozone, calm air" }
+        ],
+        "focus": "Stratosphere"
+      },
+      "secondary": { "kind": "number", "value": "50 km", "meaning": "top of the layer" },
+      "energy": "impact"
+    }
+  ]
+}

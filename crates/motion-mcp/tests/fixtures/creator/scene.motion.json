@@ -1,0 +1,77 @@
+{
+ "version": "0.2",
+ "project": {
+  "name": "creator_fixture",
+  "duration_seconds": 18.923
+ },
+ "canvas": {
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "background": "#E9E6E1"
+ },
+ "scenes": [
+  {
+   "id": "backdrop",
+   "start_seconds": 0.0,
+   "duration_seconds": 18.923
+  },
+  {
+   "id": "beat_1",
+   "start_seconds": 0.0,
+   "duration_seconds": 5.509,
+   "lifecycle": {
+    "enter": 0.25,
+    "settle": 1.22,
+    "read": 1.57,
+    "evolve": 2.448,
+    "anticipate": 4.359,
+    "bridge": 4.959
+   }
+  },
+  {
+   "id": "beat_2",
+   "start_seconds": 4.959,
+   "duration_seconds": 4.448,
+   "lifecycle": {
+    "enter": 0.413,
+    "settle": 1.333,
+    "read": 1.683,
+    "evolve": 2.183,
+    "anticipate": 3.41,
+    "bridge": 3.898
+   }
+  },
+  {
+   "id": "beat_3",
+   "start_seconds": 8.857,
+   "duration_seconds": 5.324,
+   "lifecycle": {
+    "enter": 0.413,
+    "settle": 1.533,
+    "read": 1.883,
+    "evolve": 2.411,
+    "anticipate": 4.174,
+    "bridge": 4.774
+   }
+  },
+  {
+   "id": "beat_4",
+   "start_seconds": 13.631,
+   "duration_seconds": 5.292,
+   "lifecycle": {
+    "enter": 0.679,
+    "settle": 1.569,
+    "read": 3.544,
+    "evolve": 4.02,
+    "anticipate": 4.902,
+    "bridge": 5.292
+   }
+  },
+  {
+   "id": "captions",
+   "start_seconds": 0.0,
+   "duration_seconds": 18.923000000000002
+  }
+ ]
+}

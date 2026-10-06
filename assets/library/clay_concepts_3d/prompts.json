@@ -1,0 +1,2705 @@
+{
+ "version": "0.1",
+ "specs": [
+  {
+   "id": "library.robot",
+   "fingerprint": "fp1-d6b51f66eb307120",
+   "continuity_key": "robot",
+   "serves": [
+    "library.robot"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "robot",
+   "context": "library asset: robot",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "robot",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a friendly small robot standing upright, rounded boxy head with two round glowing eyes and a short antenna, stubby arms, simple chunky body. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.robot_arm",
+   "fingerprint": "fp1-9f3480515a551bdd",
+   "continuity_key": "robot_arm",
+   "serves": [
+    "library.robot_arm"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "robot arm",
+   "context": "library asset: robot arm",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "robot_arm",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of an industrial robot arm with three rounded joints and a two-finger gripper, standing on a round base. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.brain_circuit",
+   "fingerprint": "fp1-36c862b12daf7cb9",
+   "continuity_key": "brain_circuit",
+   "serves": [
+    "library.brain_circuit"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "brain with circuits",
+   "context": "library asset: brain with circuits",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "brain_circuit",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a brain whose surface is covered with raised circuit-board traces ending in small round dots, half warm coral and half teal. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.microchip",
+   "fingerprint": "fp1-263e8a5d419d34df",
+   "continuity_key": "microchip",
+   "serves": [
+    "library.microchip"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "microchip",
+   "context": "library asset: microchip",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "microchip",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a square computer microchip with short metal pins on all four sides and a raised square core. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.chat_bubbles",
+   "fingerprint": "fp1-75b31277bd038afd",
+   "continuity_key": "chat_bubbles",
+   "serves": [
+    "library.chat_bubbles"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "chat bubbles",
+   "context": "library asset: chat bubbles",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "chat_bubbles",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of two overlapping rounded speech bubbles, the front one holding three round dots. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.neural_network",
+   "fingerprint": "fp1-63f4ba7a1c590725",
+   "continuity_key": "neural_network",
+   "serves": [
+    "library.neural_network"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "neural network",
+   "context": "library asset: neural network",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "neural_network",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a small sculpture of round balls connected by thin rods in three layers, like a neural network diagram. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.ai_sparkles",
+   "fingerprint": "fp1-d76a36b3646ac4e0",
+   "continuity_key": "ai_sparkles",
+   "serves": [
+    "library.ai_sparkles"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "sparkles",
+   "context": "library asset: sparkles",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "ai_sparkles",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a cluster of three plump four-pointed sparkle stars of different sizes. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.server_rack",
+   "fingerprint": "fp1-3359242ec1b45e0e",
+   "continuity_key": "server_rack",
+   "serves": [
+    "library.server_rack"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "server rack",
+   "context": "library asset: server rack",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "server_rack",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a tall server rack cabinet with stacked server units and small round status lights. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.cloud_data",
+   "fingerprint": "fp1-5e995c8a0ac3f8a8",
+   "continuity_key": "cloud_data",
+   "serves": [
+    "library.cloud_data"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "cloud with arrow",
+   "context": "library asset: cloud with arrow",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "cloud_data",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a puffy cloud with a chunky upward arrow in front of it. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.camera_lens",
+   "fingerprint": "fp1-21c40132c8f2ff5d",
+   "continuity_key": "camera_lens",
+   "serves": [
+    "library.camera_lens"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "camera lens",
+   "context": "library asset: camera lens",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "camera_lens",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a chunky round camera lens seen at three-quarter view with glossy layered glass. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.magic_wand",
+   "fingerprint": "fp1-7185410f35fb3309",
+   "continuity_key": "magic_wand",
+   "serves": [
+    "library.magic_wand"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "magic wand",
+   "context": "library asset: magic wand",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "magic_wand",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a magic wand with a star tip and two tiny sparkles. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.android_head",
+   "fingerprint": "fp1-4feec5b02cc5831e",
+   "continuity_key": "android_head",
+   "serves": [
+    "library.android_head"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "robot head",
+   "context": "library asset: robot head",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "android_head",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a rounded humanoid robot head in side profile with a small antenna and a glowing round ear light. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.laptop",
+   "fingerprint": "fp1-c6507e55caa2dd51",
+   "continuity_key": "laptop",
+   "serves": [
+    "library.laptop"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "laptop",
+   "context": "library asset: laptop",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "laptop",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of an open laptop with a blank teal screen and a chunky keyboard. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.smartphone",
+   "fingerprint": "fp1-7f3a5c37a9b639f3",
+   "continuity_key": "smartphone",
+   "serves": [
+    "library.smartphone"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "smartphone",
+   "context": "library asset: smartphone",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "smartphone",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a chunky smartphone standing upright with a blank teal screen and rounded corners. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.desktop_monitor",
+   "fingerprint": "fp1-249232fa02890b51",
+   "continuity_key": "desktop_monitor",
+   "serves": [
+    "library.desktop_monitor"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "computer monitor",
+   "context": "library asset: computer monitor",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "desktop_monitor",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a desktop computer monitor on a small stand with a blank teal screen. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.wifi_signal",
+   "fingerprint": "fp1-986cf4923c666e5b",
+   "continuity_key": "wifi_signal",
+   "serves": [
+    "library.wifi_signal"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "wifi signal",
+   "context": "library asset: wifi signal",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "wifi_signal",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a wifi signal symbol made of three thick curved arcs above a round dot. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.satellite",
+   "fingerprint": "fp1-4d8311590febace6",
+   "continuity_key": "satellite",
+   "serves": [
+    "library.satellite"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "satellite",
+   "context": "library asset: satellite",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "satellite",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a small satellite with a round body and two rectangular solar panel wings. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.vr_headset",
+   "fingerprint": "fp1-3e81b3d8fb9f159c",
+   "continuity_key": "vr_headset",
+   "serves": [
+    "library.vr_headset"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "vr headset",
+   "context": "library asset: vr headset",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "vr_headset",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a virtual reality headset with a strap, seen at three-quarter view. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.drone",
+   "fingerprint": "fp1-66e9be2dda1a1f57",
+   "continuity_key": "drone",
+   "serves": [
+    "library.drone"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "drone",
+   "context": "library asset: drone",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "drone",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a quadcopter drone with four round propellers. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.battery",
+   "fingerprint": "fp1-dda3ba0e280cb183",
+   "continuity_key": "battery",
+   "serves": [
+    "library.battery"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "battery",
+   "context": "library asset: battery",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "battery",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of an upright battery with three charge bars and a small lightning bolt. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.gears",
+   "fingerprint": "fp1-f199befefb48c216",
+   "continuity_key": "gears",
+   "serves": [
+    "library.gears"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "gears",
+   "context": "library asset: gears",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "gears",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of two interlocking chunky gears, one larger teal and one smaller yellow. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.power_plug",
+   "fingerprint": "fp1-d68cde5173c1f30d",
+   "continuity_key": "power_plug",
+   "serves": [
+    "library.power_plug"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "power plug",
+   "context": "library asset: power plug",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "power_plug",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of an electric plug with a short curled cable about to connect to a round socket. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.game_controller",
+   "fingerprint": "fp1-8cb50cdfab45dd87",
+   "continuity_key": "game_controller",
+   "serves": [
+    "library.game_controller"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "game controller",
+   "context": "library asset: game controller",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "game_controller",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a rounded video game controller with a cross pad and round buttons. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.headphones",
+   "fingerprint": "fp1-daa33c6fbdb7d8ed",
+   "continuity_key": "headphones",
+   "serves": [
+    "library.headphones"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "headphones",
+   "context": "library asset: headphones",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "headphones",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a pair of over-ear headphones with a curved headband. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.atom",
+   "fingerprint": "fp1-471ecf3eda1fed8a",
+   "continuity_key": "atom",
+   "serves": [
+    "library.atom"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "atom",
+   "context": "library asset: atom",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "atom",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of an atom model with a round nucleus of small balls and three elliptical electron orbits each carrying a small ball. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.dna_helix",
+   "fingerprint": "fp1-f9dce786057081e5",
+   "continuity_key": "dna_helix",
+   "serves": [
+    "library.dna_helix"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "dna helix",
+   "context": "library asset: dna helix",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "dna_helix",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a vertical DNA double helix with two twisting strands joined by short rungs. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.microscope",
+   "fingerprint": "fp1-72f17373f47150e2",
+   "continuity_key": "microscope",
+   "serves": [
+    "library.microscope"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "microscope",
+   "context": "library asset: microscope",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "microscope",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a laboratory microscope with a curved arm and a round base. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.flask",
+   "fingerprint": "fp1-269041c9dceccd00",
+   "continuity_key": "flask",
+   "serves": [
+    "library.flask"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "lab flask",
+   "context": "library asset: lab flask",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "flask",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a conical laboratory flask half filled with bubbling teal liquid. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.telescope",
+   "fingerprint": "fp1-1ac8f77a47efd84e",
+   "continuity_key": "telescope",
+   "serves": [
+    "library.telescope"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "telescope",
+   "context": "library asset: telescope",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "telescope",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a telescope on a three-legged tripod pointing up to the right. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.ringed_planet",
+   "fingerprint": "fp1-e789a018ae283254",
+   "continuity_key": "ringed_planet",
+   "serves": [
+    "library.ringed_planet"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "ringed planet",
+   "context": "library asset: ringed planet",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "ringed_planet",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a ringed planet like Saturn, slightly tilted, with a wide flat ring. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.magnet",
+   "fingerprint": "fp1-1a87d4cbfd484c3d",
+   "continuity_key": "magnet",
+   "serves": [
+    "library.magnet"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "magnet",
+   "context": "library asset: magnet",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "magnet",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a horseshoe magnet with lighter tips. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.molecule",
+   "fingerprint": "fp1-d89af20ffd44f675",
+   "continuity_key": "molecule",
+   "serves": [
+    "library.molecule"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "molecule",
+   "context": "library asset: molecule",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "molecule",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a ball-and-stick molecule model with five round atoms of two sizes. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.petri_dish",
+   "fingerprint": "fp1-e5ffb8a3c9366947",
+   "continuity_key": "petri_dish",
+   "serves": [
+    "library.petri_dish"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "petri dish",
+   "context": "library asset: petri dish",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "petri_dish",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a shallow round petri dish with small round colonies inside. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.virus",
+   "fingerprint": "fp1-fd51c98242b585dc",
+   "continuity_key": "virus",
+   "serves": [
+    "library.virus"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "virus",
+   "context": "library asset: virus",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "virus",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a round virus particle covered in short rounded spikes. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.sprout",
+   "fingerprint": "fp1-88628786640c1ddd",
+   "continuity_key": "sprout",
+   "serves": [
+    "library.sprout"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "sprout",
+   "context": "library asset: sprout",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "sprout",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a small green-teal sprout with two leaves growing from a mound of soil. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.earth_globe",
+   "fingerprint": "fp1-ea750f69767cdade",
+   "continuity_key": "earth_globe",
+   "serves": [
+    "library.earth_globe"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "earth",
+   "context": "library asset: earth",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "earth_globe",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of the planet Earth as a sphere with simple teal oceans and yellow-cream continents. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.brain",
+   "fingerprint": "fp1-e071246c38dacb1a",
+   "continuity_key": "brain",
+   "serves": [
+    "library.brain"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "brain",
+   "context": "library asset: brain",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "brain",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a plump human brain with soft rounded folds in warm coral. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.heart",
+   "fingerprint": "fp1-e3d70dd2e8fdd0e6",
+   "continuity_key": "heart",
+   "serves": [
+    "library.heart"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "heart",
+   "context": "library asset: heart",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "heart",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a plump glossy heart shape in warm coral. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.thought_cloud",
+   "fingerprint": "fp1-7d3967340a80ed1b",
+   "continuity_key": "thought_cloud",
+   "serves": [
+    "library.thought_cloud"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "thought cloud",
+   "context": "library asset: thought cloud",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "thought_cloud",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a thought bubble cloud with two small trailing bubbles. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.puzzle_pieces",
+   "fingerprint": "fp1-e3f0dd17cb2e7582",
+   "continuity_key": "puzzle_pieces",
+   "serves": [
+    "library.puzzle_pieces"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "puzzle pieces",
+   "context": "library asset: puzzle pieces",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "puzzle_pieces",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of two jigsaw puzzle pieces about to click together, one teal one yellow. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.maze",
+   "fingerprint": "fp1-7d94801203aab2e4",
+   "continuity_key": "maze",
+   "serves": [
+    "library.maze"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "maze",
+   "context": "library asset: maze",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "maze",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a small square maze block with raised walls and a little ball inside. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.theatre_masks",
+   "fingerprint": "fp1-f5e99442bff45fea",
+   "continuity_key": "theatre_masks",
+   "serves": [
+    "library.theatre_masks"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "theatre masks",
+   "context": "library asset: theatre masks",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "theatre_masks",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a pair of comedy and tragedy theatre masks overlapping. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.sleep_moon",
+   "fingerprint": "fp1-5f1d286599dbe4b8",
+   "continuity_key": "sleep_moon",
+   "serves": [
+    "library.sleep_moon"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "sleeping moon",
+   "context": "library asset: sleeping moon",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "sleep_moon",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a crescent moon with two small stars beside it and a soft round cloud. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.zen_stones",
+   "fingerprint": "fp1-ce1fb969c9cfe79a",
+   "continuity_key": "zen_stones",
+   "serves": [
+    "library.zen_stones"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "zen stones",
+   "context": "library asset: zen stones",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "zen_stones",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a balanced stack of four smooth flat stones of decreasing size. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.storm_cloud",
+   "fingerprint": "fp1-8753e62c30e27d04",
+   "continuity_key": "storm_cloud",
+   "serves": [
+    "library.storm_cloud"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "storm cloud",
+   "context": "library asset: storm cloud",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "storm_cloud",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a dark grey-teal rain cloud with a yellow lightning bolt and a few rain drops. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.therapy_couch",
+   "fingerprint": "fp1-5f81a1770faefb9e",
+   "continuity_key": "therapy_couch",
+   "serves": [
+    "library.therapy_couch"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "therapy couch",
+   "context": "library asset: therapy couch",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "therapy_couch",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a classic therapy chaise couch with a rolled headrest and a small pillow. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.dominoes",
+   "fingerprint": "fp1-ceee756e897a85e0",
+   "continuity_key": "dominoes",
+   "serves": [
+    "library.dominoes"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "dominoes",
+   "context": "library asset: dominoes",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "dominoes",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a short row of five standing domino tiles with dots, the first one tipping over. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.emotion_faces",
+   "fingerprint": "fp1-9b543228480023cf",
+   "continuity_key": "emotion_faces",
+   "serves": [
+    "library.emotion_faces"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "emotion faces",
+   "context": "library asset: emotion faces",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "emotion_faces",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of three round balls side by side with simple happy, neutral and sad faces. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.briefcase",
+   "fingerprint": "fp1-a51c7ca88d77a7bd",
+   "continuity_key": "briefcase",
+   "serves": [
+    "library.briefcase"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "briefcase",
+   "context": "library asset: briefcase",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "briefcase",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a classic briefcase with a handle and two clasps. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.handshake",
+   "fingerprint": "fp1-74000ec4245f78a3",
+   "continuity_key": "handshake",
+   "serves": [
+    "library.handshake"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "handshake",
+   "context": "library asset: handshake",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "handshake",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of two clay hands shaking firmly, one teal sleeve and one yellow sleeve. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.money_bag",
+   "fingerprint": "fp1-da8d8b686486cdfa",
+   "continuity_key": "money_bag",
+   "serves": [
+    "library.money_bag"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "money bag",
+   "context": "library asset: money bag",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "money_bag",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a plump tied money sack with a few gold coins beside it. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.pie_chart",
+   "fingerprint": "fp1-462d967f81a49605",
+   "continuity_key": "pie_chart",
+   "serves": [
+    "library.pie_chart"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "pie chart",
+   "context": "library asset: pie chart",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "pie_chart",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a thick pie chart disc with one wedge pulled slightly out. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.trend_arrow",
+   "fingerprint": "fp1-de55a6be90b9aba4",
+   "continuity_key": "trend_arrow",
+   "serves": [
+    "library.trend_arrow"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "trend arrow",
+   "context": "library asset: trend arrow",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "trend_arrow",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a chunky zig-zag arrow climbing up to the right. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.career_ladder",
+   "fingerprint": "fp1-0a664dd2d231c46f",
+   "continuity_key": "career_ladder",
+   "serves": [
+    "library.career_ladder"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "ladder",
+   "context": "library asset: ladder",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "career_ladder",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a short wooden ladder leaning slightly, with a small star at the top. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.shopping_cart",
+   "fingerprint": "fp1-2e3162271c9ae57b",
+   "continuity_key": "shopping_cart",
+   "serves": [
+    "library.shopping_cart"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "shopping cart",
+   "context": "library asset: shopping cart",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "shopping_cart",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a shopping cart with a few small boxes inside. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.shop_front",
+   "fingerprint": "fp1-beecd4dab4ae3c66",
+   "continuity_key": "shop_front",
+   "serves": [
+    "library.shop_front"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "shop front",
+   "context": "library asset: shop front",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "shop_front",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a tiny shop building with a striped awning and a door. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.chess_knight",
+   "fingerprint": "fp1-54198bee57be4a5b",
+   "continuity_key": "chess_knight",
+   "serves": [
+    "library.chess_knight"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "chess knight",
+   "context": "library asset: chess knight",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "chess_knight",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a chess knight piece. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.crown",
+   "fingerprint": "fp1-20a46255467756d5",
+   "continuity_key": "crown",
+   "serves": [
+    "library.crown"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "crown",
+   "context": "library asset: crown",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "crown",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a royal crown with five rounded points tipped with balls. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.compass",
+   "fingerprint": "fp1-279aa1df4e193244",
+   "continuity_key": "compass",
+   "serves": [
+    "library.compass"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "compass",
+   "context": "library asset: compass",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "compass",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a round navigation compass with a needle pointing up. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.stopwatch",
+   "fingerprint": "fp1-d5e4dfd525246bc8",
+   "continuity_key": "stopwatch",
+   "serves": [
+    "library.stopwatch"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "stopwatch",
+   "context": "library asset: stopwatch",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "soft clay 3D concept props (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "stopwatch",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Soft 3D clay render of a round stopwatch with a top button and a single hand. Matte modelling-clay material with gentle fingerprints and rounded edges, cute simple shape, soft studio light from the upper left, palette of warm yellow, teal, coral orange and cream only (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  }
+ ]
+}

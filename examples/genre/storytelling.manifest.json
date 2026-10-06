@@ -1,0 +1,26 @@
+{
+  "version": "0.1",
+  "assets": [
+    {
+      "id": "beat_1.hero_subject",
+      "path": "../../assets/library/people_work/presenter.png",
+      "width": 592,
+      "height": 1270,
+      "alpha": true
+    },
+    {
+      "id": "beat_2.hero_subject",
+      "path": "../../assets/library/people_work/public_speaker.png",
+      "width": 512,
+      "height": 1252,
+      "alpha": true
+    },
+    {
+      "id": "beat_3.hero_subject",
+      "path": "../../assets/library/people_work/celebrating.png",
+      "width": 599,
+      "height": 1107,
+      "alpha": true
+    }
+  ]
+}

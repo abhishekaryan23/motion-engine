@@ -1,0 +1,14 @@
+{
+  "version": "0.1",
+  "title": "train_example",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "One train carried 120 passengers",
+      "primary": { "kind": "number", "value": "120", "meaning": "passengers" },
+      "secondary": { "kind": "phrase", "value": "on its very first run." },
+      "energy": "calm"
+    }
+  ]
+}

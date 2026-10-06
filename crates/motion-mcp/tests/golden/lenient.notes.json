@@ -1,0 +1,11 @@
+[
+  "beat 6: no 'say'; the narrator reads the 'show' text",
+  "beat 1: plain text read as 'say'",
+  "beat 2: ignored unknown field 'colour'",
+  "beat 2: number 381 read as text '381'",
+  "beat 3: 'text' read as 'say'",
+  "beat 3: list written as text, split into 3 items",
+  "beat 4: compare written as [a, b], read as {a, b}",
+  "beat 5: energy 'wobbly' unknown (calm, building or impact), dropped",
+  "beat 5: picture 'Money Stack' → 'money_stack'"
+]

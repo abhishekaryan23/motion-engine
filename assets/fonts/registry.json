@@ -1,0 +1,1775 @@
+{
+ "version": "0.1",
+ "notes": "Curated emotion typography table (0.9). Option 1 of each emotion is canonical for an explicit emotion; exploration level 0 without --emotion keeps the 0.8 tone pairings (legacy). Every option also loads `fallback_face` for glyph fallback (₹ € digits). `substitutes`: a missing face file is replaced role-wise by its substitute (recorded in fallback_from as '<option>:<from>-><to>'); Necto Mono (Collletttivo) -> IBM Plex Mono until bundled.",
+ "fallback_face": "font.plex_mono",
+ "always_loaded": [
+  "font.dm_serif",
+  "font.dm_serif_italic",
+  "font.fira_sans_semibold",
+  "font.space_mono_bold"
+ ],
+ "faces": [
+  {
+   "id": "font.archivo_black",
+   "file": "fonts/ArchivoBlack-Regular.ttf",
+   "family": "Archivo Black",
+   "weight": 900,
+   "italic": false,
+   "roles": [
+    "display",
+    "number"
+   ],
+   "emotions": [
+    "energy",
+    "urgency"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": false,
+    "eur": true
+   },
+   "readability": "display",
+   "licence": "OFL"
+  },
+  {
+   "id": "font.anton",
+   "file": "fonts/Anton-Regular.ttf",
+   "family": "Anton",
+   "weight": 400,
+   "italic": false,
+   "roles": [
+    "display",
+    "display_condensed",
+    "number"
+   ],
+   "emotions": [
+    "drama",
+    "energy",
+    "urgency"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": true,
+    "eur": true
+   },
+   "readability": "display",
+   "licence": "OFL"
+  },
+  {
+   "id": "font.bebas_neue",
+   "file": "fonts/BebasNeue-Regular.ttf",
+   "family": "Bebas Neue",
+   "weight": 400,
+   "italic": false,
+   "roles": [
+    "display",
+    "display_condensed",
+    "number"
+   ],
+   "emotions": [
+    "playful_retro",
+    "urgency"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": true,
+    "eur": true
+   },
+   "readability": "display",
+   "licence": "OFL"
+  },
+  {
+   "id": "font.dm_serif",
+   "file": "fonts/DMSerifDisplay-Regular.ttf",
+   "family": "DM Serif Display",
+   "weight": 400,
+   "italic": false,
+   "roles": [
+    "display",
+    "number",
+    "serif_emotional"
+   ],
+   "emotions": [
+    "calm",
+    "energy",
+    "trust"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": false,
+    "eur": true
+   },
+   "readability": "display",
+   "licence": "OFL"
+  },
+  {
+   "id": "font.dm_serif_italic",
+   "file": "fonts/DMSerifDisplay-Italic.ttf",
+   "family": "DM Serif Display",
+   "weight": 400,
+   "italic": true,
+   "roles": [
+    "serif_emotional"
+   ],
+   "emotions": [
+    "calm",
+    "drama",
+    "trust",
+    "urgency"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": false,
+    "eur": true
+   },
+   "readability": "display",
+   "licence": "OFL"
+  },
+  {
+   "id": "font.fira_sans",
+   "file": "fonts/FiraSans-Regular.ttf",
+   "family": "Fira Sans",
+   "weight": 400,
+   "italic": false,
+   "roles": [
+    "body"
+   ],
+   "emotions": [
+    "calm"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": true,
+    "eur": true
+   },
+   "readability": "text",
+   "licence": "OFL"
+  },
+  {
+   "id": "font.fira_sans_semibold",
+   "file": "fonts/FiraSans-SemiBold.ttf",
+   "family": "Fira Sans",
+   "weight": 600,
+   "italic": false,
+   "roles": [
+    "body"
+   ],
+   "emotions": [
+    "energy"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": true,
+    "eur": true
+   },
+   "readability": "text",
+   "licence": "OFL"
+  },
+  {
+   "id": "font.space_mono",
+   "file": "fonts/SpaceMono-Regular.ttf",
+   "family": "Space Mono",
+   "weight": 400,
+   "italic": false,
+   "roles": [
+    "mono"
+   ],
+   "emotions": [
+    "playful_retro"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": true,
+    "eur": true
+   },
+   "readability": "text",
+   "licence": "OFL"
+  },
+  {
+   "id": "font.space_mono_bold",
+   "file": "fonts/SpaceMono-Bold.ttf",
+   "family": "Space Mono",
+   "weight": 700,
+   "italic": false,
+   "roles": [
+    "mono"
+   ],
+   "emotions": [
+    "energy",
+    "urgency"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": true,
+    "eur": true
+   },
+   "readability": "text",
+   "licence": "OFL"
+  },
+  {
+   "id": "font.lato",
+   "file": "fonts/Lato-Regular.ttf",
+   "family": "Lato",
+   "weight": 400,
+   "italic": false,
+   "roles": [
+    "body"
+   ],
+   "emotions": [
+    "calm",
+    "drama",
+    "handmade",
+    "trust",
+    "warmth"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": true,
+    "eur": true
+   },
+   "readability": "text",
+   "licence": "OFL"
+  },
+  {
+   "id": "font.lato_bold",
+   "file": "fonts/Lato-Bold.ttf",
+   "family": "Lato",
+   "weight": 700,
+   "italic": false,
+   "roles": [],
+   "emotions": [],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": true,
+    "eur": true
+   },
+   "readability": "text",
+   "licence": "OFL"
+  },
+  {
+   "id": "font.plex_mono",
+   "file": "fonts/IBMPlexMono-Regular.ttf",
+   "family": "IBM Plex Mono",
+   "weight": 400,
+   "italic": false,
+   "roles": [
+    "mono"
+   ],
+   "emotions": [
+    "calm",
+    "drama",
+    "handmade",
+    "joy",
+    "luxury",
+    "playful_retro",
+    "trust",
+    "warmth"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": true,
+    "eur": true
+   },
+   "readability": "text",
+   "licence": "OFL"
+  },
+  {
+   "id": "font.plex_mono_medium",
+   "file": "fonts/IBMPlexMono-Medium.ttf",
+   "family": "IBM Plex Mono",
+   "weight": 500,
+   "italic": false,
+   "roles": [
+    "mono"
+   ],
+   "emotions": [
+    "precision",
+    "urgency"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": true,
+    "eur": true
+   },
+   "readability": "text",
+   "licence": "OFL"
+  },
+  {
+   "id": "font.plex_mono_semibold",
+   "file": "fonts/IBMPlexMono-SemiBold.ttf",
+   "family": "IBM Plex Mono",
+   "weight": 600,
+   "italic": false,
+   "roles": [
+    "mono"
+   ],
+   "emotions": [
+    "joy"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": true,
+    "eur": true
+   },
+   "readability": "text",
+   "licence": "OFL"
+  },
+  {
+   "id": "font.plex_serif_italic",
+   "file": "fonts/IBMPlexSerif-Italic.ttf",
+   "family": "IBM Plex Serif",
+   "weight": 400,
+   "italic": true,
+   "roles": [
+    "serif_emotional"
+   ],
+   "emotions": [
+    "precision"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": true,
+    "eur": true
+   },
+   "readability": "text",
+   "licence": "OFL"
+  },
+  {
+   "id": "font.barlow_condensed_bold",
+   "file": "fonts/BarlowCondensed-Bold.ttf",
+   "family": "Barlow Condensed",
+   "weight": 700,
+   "italic": false,
+   "roles": [
+    "display",
+    "number"
+   ],
+   "emotions": [
+    "precision"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": false,
+    "eur": true
+   },
+   "readability": "display",
+   "licence": "OFL"
+  },
+  {
+   "id": "font.barlow_condensed_semibold",
+   "file": "fonts/BarlowCondensed-SemiBold.ttf",
+   "family": "Barlow Condensed",
+   "weight": 600,
+   "italic": false,
+   "roles": [
+    "display_condensed"
+   ],
+   "emotions": [
+    "calm",
+    "precision",
+    "trust"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": false,
+    "eur": true
+   },
+   "readability": "display",
+   "licence": "OFL"
+  },
+  {
+   "id": "font.barlow_medium",
+   "file": "fonts/Barlow-Medium.ttf",
+   "family": "Barlow",
+   "weight": 500,
+   "italic": false,
+   "roles": [
+    "body"
+   ],
+   "emotions": [
+    "playful_retro",
+    "precision",
+    "urgency"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": false,
+    "eur": true
+   },
+   "readability": "text",
+   "licence": "OFL"
+  },
+  {
+   "id": "font.poppins_black",
+   "file": "fonts/Poppins-Black.ttf",
+   "family": "Poppins",
+   "weight": 900,
+   "italic": false,
+   "roles": [
+    "number"
+   ],
+   "emotions": [
+    "joy"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": true,
+    "eur": true
+   },
+   "readability": "display",
+   "licence": "OFL"
+  },
+  {
+   "id": "font.poppins_extrabold",
+   "file": "fonts/Poppins-ExtraBold.ttf",
+   "family": "Poppins",
+   "weight": 800,
+   "italic": false,
+   "roles": [
+    "display"
+   ],
+   "emotions": [
+    "joy"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": true,
+    "eur": true
+   },
+   "readability": "display",
+   "licence": "OFL"
+  },
+  {
+   "id": "font.poppins_bold",
+   "file": "fonts/Poppins-Bold.ttf",
+   "family": "Poppins",
+   "weight": 700,
+   "italic": false,
+   "roles": [
+    "display_condensed"
+   ],
+   "emotions": [
+    "joy"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": true,
+    "eur": true
+   },
+   "readability": "display",
+   "licence": "OFL"
+  },
+  {
+   "id": "font.poppins_medium",
+   "file": "fonts/Poppins-Medium.ttf",
+   "family": "Poppins",
+   "weight": 500,
+   "italic": false,
+   "roles": [
+    "body"
+   ],
+   "emotions": [
+    "joy",
+    "playful_retro"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": true,
+    "eur": true
+   },
+   "readability": "text",
+   "licence": "OFL"
+  },
+  {
+   "id": "font.zilla_slab_semibold_italic",
+   "file": "fonts/ZillaSlab-SemiBoldItalic.ttf",
+   "family": "Zilla Slab",
+   "weight": 600,
+   "italic": true,
+   "roles": [
+    "serif_emotional"
+   ],
+   "emotions": [
+    "joy",
+    "warmth"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": true,
+    "eur": true
+   },
+   "readability": "text",
+   "licence": "OFL"
+  },
+  {
+   "id": "font.zilla_slab_italic",
+   "file": "fonts/ZillaSlab-Italic.ttf",
+   "family": "Zilla Slab",
+   "weight": 400,
+   "italic": true,
+   "roles": [
+    "serif_emotional"
+   ],
+   "emotions": [
+    "joy",
+    "playful_retro"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": true,
+    "eur": true
+   },
+   "readability": "text",
+   "licence": "OFL"
+  },
+  {
+   "id": "font.zilla_slab_semibold",
+   "file": "fonts/ZillaSlab-SemiBold.ttf",
+   "family": "Zilla Slab",
+   "weight": 600,
+   "italic": false,
+   "roles": [
+    "display",
+    "display_condensed",
+    "number"
+   ],
+   "emotions": [
+    "handmade"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": true,
+    "eur": true
+   },
+   "readability": "text",
+   "licence": "OFL"
+  },
+  {
+   "id": "font.zilla_slab_bold",
+   "file": "fonts/ZillaSlab-Bold.ttf",
+   "family": "Zilla Slab",
+   "weight": 700,
+   "italic": false,
+   "roles": [
+    "display",
+    "display_condensed",
+    "number"
+   ],
+   "emotions": [
+    "handmade",
+    "playful_retro"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": true,
+    "eur": true
+   },
+   "readability": "display",
+   "licence": "OFL"
+  },
+  {
+   "id": "font.instrument_serif",
+   "file": "fonts/InstrumentSerif-Regular.ttf",
+   "family": "Instrument Serif",
+   "weight": 400,
+   "italic": false,
+   "roles": [
+    "display",
+    "display_condensed",
+    "number"
+   ],
+   "emotions": [
+    "calm",
+    "handmade",
+    "trust",
+    "warmth"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": false,
+    "eur": true
+   },
+   "readability": "display",
+   "licence": "OFL"
+  },
+  {
+   "id": "font.instrument_serif_italic",
+   "file": "fonts/InstrumentSerif-Italic.ttf",
+   "family": "Instrument Serif",
+   "weight": 400,
+   "italic": true,
+   "roles": [
+    "serif_emotional"
+   ],
+   "emotions": [
+    "calm",
+    "luxury",
+    "trust",
+    "warmth"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": false,
+    "eur": true
+   },
+   "readability": "display",
+   "licence": "OFL"
+  },
+  {
+   "id": "font.zodiak_thin",
+   "file": "fonts/Zodiak-Thin.otf",
+   "family": "Zodiak",
+   "weight": 100,
+   "italic": false,
+   "roles": [
+    "display"
+   ],
+   "emotions": [
+    "luxury"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": true,
+    "eur": true
+   },
+   "readability": "display",
+   "licence": "FFL"
+  },
+  {
+   "id": "font.zodiak_light",
+   "file": "fonts/Zodiak-Light.otf",
+   "family": "Zodiak",
+   "weight": 300,
+   "italic": false,
+   "roles": [
+    "display",
+    "display_condensed",
+    "number"
+   ],
+   "emotions": [
+    "calm",
+    "luxury"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": true,
+    "eur": true
+   },
+   "readability": "display",
+   "licence": "FFL"
+  },
+  {
+   "id": "font.zodiak_light_italic",
+   "file": "fonts/Zodiak-LightItalic.otf",
+   "family": "Zodiak",
+   "weight": 300,
+   "italic": true,
+   "roles": [
+    "serif_emotional"
+   ],
+   "emotions": [
+    "calm",
+    "luxury"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": true,
+    "eur": true
+   },
+   "readability": "display",
+   "licence": "FFL"
+  },
+  {
+   "id": "font.zodiak_regular",
+   "file": "fonts/Zodiak-Regular.otf",
+   "family": "Zodiak",
+   "weight": 400,
+   "italic": false,
+   "roles": [
+    "display",
+    "display_condensed",
+    "number"
+   ],
+   "emotions": [
+    "calm",
+    "warmth"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": true,
+    "eur": true
+   },
+   "readability": "display",
+   "licence": "FFL"
+  },
+  {
+   "id": "font.zodiak_italic",
+   "file": "fonts/Zodiak-Italic.otf",
+   "family": "Zodiak",
+   "weight": 400,
+   "italic": true,
+   "roles": [
+    "serif_emotional"
+   ],
+   "emotions": [
+    "drama",
+    "energy",
+    "joy",
+    "luxury",
+    "precision",
+    "trust",
+    "urgency",
+    "warmth"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": true,
+    "eur": true
+   },
+   "readability": "display",
+   "licence": "FFL"
+  },
+  {
+   "id": "font.zodiak_bold",
+   "file": "fonts/Zodiak-Bold.otf",
+   "family": "Zodiak",
+   "weight": 700,
+   "italic": false,
+   "roles": [
+    "display",
+    "display_condensed",
+    "number"
+   ],
+   "emotions": [
+    "trust",
+    "warmth"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": true,
+    "eur": true
+   },
+   "readability": "display",
+   "licence": "FFL"
+  },
+  {
+   "id": "font.satoshi_light",
+   "file": "fonts/Satoshi-Light.otf",
+   "family": "Satoshi",
+   "weight": 300,
+   "italic": false,
+   "roles": [
+    "body"
+   ],
+   "emotions": [
+    "calm",
+    "luxury"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": false,
+    "eur": true
+   },
+   "readability": "text",
+   "licence": "FFL"
+  },
+  {
+   "id": "font.satoshi_regular",
+   "file": "fonts/Satoshi-Regular.otf",
+   "family": "Satoshi",
+   "weight": 400,
+   "italic": false,
+   "roles": [
+    "body"
+   ],
+   "emotions": [
+    "drama",
+    "handmade",
+    "luxury",
+    "precision",
+    "trust",
+    "warmth"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": false,
+    "eur": true
+   },
+   "readability": "text",
+   "licence": "FFL"
+  },
+  {
+   "id": "font.satoshi_medium",
+   "file": "fonts/Satoshi-Medium.otf",
+   "family": "Satoshi",
+   "weight": 500,
+   "italic": false,
+   "roles": [
+    "body"
+   ],
+   "emotions": [
+    "energy",
+    "joy"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": false,
+    "eur": true
+   },
+   "readability": "text",
+   "licence": "FFL"
+  },
+  {
+   "id": "font.satoshi_bold",
+   "file": "fonts/Satoshi-Bold.otf",
+   "family": "Satoshi",
+   "weight": 700,
+   "italic": false,
+   "roles": [
+    "body"
+   ],
+   "emotions": [
+    "urgency"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": false,
+    "eur": true
+   },
+   "readability": "text",
+   "licence": "FFL"
+  },
+  {
+   "id": "font.clash_medium",
+   "file": "fonts/ClashDisplay-Medium.otf",
+   "family": "Clash Display",
+   "weight": 500,
+   "italic": false,
+   "roles": [
+    "display",
+    "display_condensed",
+    "number"
+   ],
+   "emotions": [
+    "precision"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": true,
+    "eur": true
+   },
+   "readability": "display",
+   "licence": "FFL"
+  },
+  {
+   "id": "font.clash_semibold",
+   "file": "fonts/ClashDisplay-Semibold.otf",
+   "family": "Clash Display",
+   "weight": 600,
+   "italic": false,
+   "roles": [
+    "display",
+    "display_condensed"
+   ],
+   "emotions": [
+    "drama"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": true,
+    "eur": true
+   },
+   "readability": "display",
+   "licence": "FFL"
+  },
+  {
+   "id": "font.clash_bold",
+   "file": "fonts/ClashDisplay-Bold.otf",
+   "family": "Clash Display",
+   "weight": 700,
+   "italic": false,
+   "roles": [
+    "display",
+    "display_condensed",
+    "number"
+   ],
+   "emotions": [
+    "drama",
+    "energy"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": true,
+    "eur": true
+   },
+   "readability": "display",
+   "licence": "FFL"
+  },
+  {
+   "id": "font.cabinet_light",
+   "file": "fonts/CabinetGrotesk-Light.otf",
+   "family": "Cabinet Grotesk",
+   "weight": 300,
+   "italic": false,
+   "roles": [
+    "body"
+   ],
+   "emotions": [
+    "luxury"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": true,
+    "eur": true
+   },
+   "readability": "text",
+   "licence": "FFL"
+  },
+  {
+   "id": "font.cabinet_regular",
+   "file": "fonts/CabinetGrotesk-Regular.otf",
+   "family": "Cabinet Grotesk",
+   "weight": 400,
+   "italic": false,
+   "roles": [
+    "body"
+   ],
+   "emotions": [
+    "precision"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": true,
+    "eur": true
+   },
+   "readability": "text",
+   "licence": "FFL"
+  },
+  {
+   "id": "font.cabinet_medium",
+   "file": "fonts/CabinetGrotesk-Medium.otf",
+   "family": "Cabinet Grotesk",
+   "weight": 500,
+   "italic": false,
+   "roles": [
+    "body"
+   ],
+   "emotions": [
+    "energy"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": true,
+    "eur": true
+   },
+   "readability": "text",
+   "licence": "FFL"
+  },
+  {
+   "id": "font.cabinet_bold",
+   "file": "fonts/CabinetGrotesk-Bold.otf",
+   "family": "Cabinet Grotesk",
+   "weight": 700,
+   "italic": false,
+   "roles": [
+    "body",
+    "display",
+    "display_condensed"
+   ],
+   "emotions": [
+    "joy",
+    "precision",
+    "urgency"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": true,
+    "eur": true
+   },
+   "readability": "display",
+   "licence": "FFL"
+  },
+  {
+   "id": "font.cabinet_extrabold",
+   "file": "fonts/CabinetGrotesk-Extrabold.otf",
+   "family": "Cabinet Grotesk",
+   "weight": 800,
+   "italic": false,
+   "roles": [
+    "display",
+    "number"
+   ],
+   "emotions": [
+    "joy",
+    "precision"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": true,
+    "eur": true
+   },
+   "readability": "display",
+   "licence": "FFL"
+  },
+  {
+   "id": "font.panchang_bold",
+   "file": "fonts/Panchang-Bold.otf",
+   "family": "Panchang",
+   "weight": 700,
+   "italic": false,
+   "roles": [
+    "display",
+    "display_condensed"
+   ],
+   "emotions": [
+    "energy",
+    "urgency"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": false,
+    "eur": true
+   },
+   "readability": "display",
+   "licence": "FFL"
+  },
+  {
+   "id": "font.panchang_extrabold",
+   "file": "fonts/Panchang-Extrabold.otf",
+   "family": "Panchang",
+   "weight": 800,
+   "italic": false,
+   "roles": [
+    "display",
+    "number"
+   ],
+   "emotions": [
+    "energy",
+    "urgency"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": true,
+    "inr": false,
+    "eur": true
+   },
+   "readability": "display",
+   "licence": "FFL"
+  },
+  {
+   "id": "font.frantically",
+   "file": "fonts/Frantically-Regular.ttf",
+   "family": "Frantically",
+   "weight": 400,
+   "italic": false,
+   "roles": [
+    "display",
+    "serif_emotional"
+   ],
+   "emotions": [
+    "handmade",
+    "playful_retro"
+   ],
+   "coverage": {
+    "latin": true,
+    "digits": false,
+    "inr": false,
+    "eur": false
+   },
+   "readability": "display",
+   "licence": "1001Fonts FFC"
+  },
+  {
+   "id": "font.sprat_light",
+   "file": "fonts/Sprat-Light.otf",
+   "family": null,
+   "weight": 300,
+   "italic": false,
+   "roles": [
+    "display",
+    "display_condensed",
+    "number"
+   ],
+   "emotions": [
+    "luxury"
+   ],
+   "coverage": null,
+   "readability": "display",
+   "licence": "OFL (Collletttivo)"
+  },
+  {
+   "id": "font.sprat_regular",
+   "file": "fonts/Sprat-Regular.otf",
+   "family": null,
+   "weight": 400,
+   "italic": false,
+   "roles": [
+    "display",
+    "display_condensed",
+    "number"
+   ],
+   "emotions": [
+    "warmth"
+   ],
+   "coverage": null,
+   "readability": "display",
+   "licence": "OFL (Collletttivo)"
+  },
+  {
+   "id": "font.sprat_bold",
+   "file": "fonts/Sprat-Bold.otf",
+   "family": null,
+   "weight": 700,
+   "italic": false,
+   "roles": [
+    "display",
+    "display_condensed",
+    "number"
+   ],
+   "emotions": [
+    "joy",
+    "playful_retro"
+   ],
+   "coverage": null,
+   "readability": "display",
+   "licence": "OFL (Collletttivo)"
+  },
+  {
+   "id": "font.necto_mono",
+   "file": "fonts/NectoMono-Regular.otf",
+   "family": null,
+   "weight": 400,
+   "italic": false,
+   "roles": [
+    "mono"
+   ],
+   "emotions": [
+    "calm",
+    "drama",
+    "energy",
+    "handmade",
+    "joy",
+    "luxury",
+    "precision",
+    "trust",
+    "urgency",
+    "warmth"
+   ],
+   "coverage": null,
+   "readability": "text",
+   "licence": "OFL (Collletttivo)"
+  },
+  {
+   "id": "font.mazius_display",
+   "file": "fonts/MaziusDisplay-Regular.otf",
+   "family": null,
+   "weight": 400,
+   "italic": false,
+   "roles": [
+    "display",
+    "display_condensed",
+    "number"
+   ],
+   "emotions": [
+    "drama",
+    "luxury"
+   ],
+   "coverage": null,
+   "readability": "display",
+   "licence": "OFL (Collletttivo)"
+  },
+  {
+   "id": "font.mazius_display_italic",
+   "file": "fonts/MaziusDisplay-Italic.otf",
+   "family": null,
+   "weight": 400,
+   "italic": true,
+   "roles": [
+    "serif_emotional"
+   ],
+   "emotions": [
+    "drama"
+   ],
+   "coverage": null,
+   "readability": "display",
+   "licence": "OFL (Collletttivo)"
+  }
+ ],
+ "legacy_pairings": {
+  "grotesk_serif": {
+   "display": "font.archivo_black",
+   "display_condensed": "font.anton",
+   "serif_emotional": "font.dm_serif_italic",
+   "body": "font.fira_sans",
+   "mono": "font.space_mono",
+   "number": "font.anton"
+  },
+  "serif_sans": {
+   "display": "font.dm_serif",
+   "display_condensed": "font.anton",
+   "serif_emotional": "font.dm_serif_italic",
+   "body": "font.fira_sans",
+   "mono": "font.space_mono",
+   "number": "font.dm_serif"
+  },
+  "poster_bold": {
+   "display": "font.archivo_black",
+   "display_condensed": "font.archivo_black",
+   "serif_emotional": "font.dm_serif",
+   "body": "font.fira_sans_semibold",
+   "mono": "font.space_mono_bold",
+   "number": "font.archivo_black"
+  },
+  "humanist_serif": {
+   "display": "font.dm_serif",
+   "display_condensed": "font.barlow_condensed_semibold",
+   "serif_emotional": "font.dm_serif_italic",
+   "body": "font.lato",
+   "mono": "font.plex_mono",
+   "number": "font.dm_serif"
+  },
+  "precision_grotesk": {
+   "display": "font.barlow_condensed_bold",
+   "display_condensed": "font.barlow_condensed_semibold",
+   "serif_emotional": "font.plex_serif_italic",
+   "body": "font.barlow_medium",
+   "mono": "font.plex_mono_medium",
+   "number": "font.barlow_condensed_bold"
+  },
+  "friendly_geometric": {
+   "display": "font.poppins_extrabold",
+   "display_condensed": "font.poppins_bold",
+   "serif_emotional": "font.zilla_slab_semibold_italic",
+   "body": "font.poppins_medium",
+   "mono": "font.plex_mono_semibold",
+   "number": "font.poppins_black"
+  },
+  "condensed_mono": {
+   "display": "font.anton",
+   "display_condensed": "font.bebas_neue",
+   "serif_emotional": "font.dm_serif",
+   "body": "font.space_mono",
+   "mono": "font.space_mono",
+   "number": "font.bebas_neue"
+  }
+ },
+ "emotions": {
+  "trust": [
+   {
+    "id": "trust.1",
+    "roles": {
+     "display": "font.dm_serif",
+     "display_condensed": "font.barlow_condensed_semibold",
+     "serif_emotional": "font.dm_serif_italic",
+     "body": "font.lato",
+     "mono": "font.plex_mono",
+     "number": "font.dm_serif"
+    },
+    "legacy_pairing": "humanist_serif"
+   },
+   {
+    "id": "trust.2",
+    "roles": {
+     "display": "font.zodiak_bold",
+     "display_condensed": "font.zodiak_bold",
+     "serif_emotional": "font.zodiak_italic",
+     "body": "font.satoshi_regular",
+     "mono": "font.necto_mono",
+     "number": "font.zodiak_bold"
+    }
+   },
+   {
+    "id": "trust.3",
+    "roles": {
+     "display": "font.instrument_serif",
+     "display_condensed": "font.instrument_serif",
+     "serif_emotional": "font.instrument_serif_italic",
+     "body": "font.satoshi_regular",
+     "mono": "font.plex_mono",
+     "number": "font.instrument_serif"
+    }
+   }
+  ],
+  "warmth": [
+   {
+    "id": "warmth.1",
+    "roles": {
+     "display": "font.instrument_serif",
+     "display_condensed": "font.instrument_serif",
+     "serif_emotional": "font.instrument_serif_italic",
+     "body": "font.lato",
+     "mono": "font.plex_mono",
+     "number": "font.instrument_serif"
+    }
+   },
+   {
+    "id": "warmth.2",
+    "roles": {
+     "display": "font.zodiak_regular",
+     "display_condensed": "font.zodiak_bold",
+     "serif_emotional": "font.zilla_slab_semibold_italic",
+     "body": "font.satoshi_regular",
+     "mono": "font.necto_mono",
+     "number": "font.zodiak_regular"
+    }
+   },
+   {
+    "id": "warmth.3",
+    "roles": {
+     "display": "font.sprat_regular",
+     "display_condensed": "font.sprat_regular",
+     "serif_emotional": "font.zodiak_italic",
+     "body": "font.satoshi_regular",
+     "mono": "font.plex_mono",
+     "number": "font.sprat_regular"
+    }
+   }
+  ],
+  "calm": [
+   {
+    "id": "calm.1",
+    "roles": {
+     "display": "font.zodiak_light",
+     "display_condensed": "font.zodiak_regular",
+     "serif_emotional": "font.zodiak_light_italic",
+     "body": "font.satoshi_light",
+     "mono": "font.necto_mono",
+     "number": "font.zodiak_light"
+    }
+   },
+   {
+    "id": "calm.2",
+    "roles": {
+     "display": "font.dm_serif",
+     "display_condensed": "font.barlow_condensed_semibold",
+     "serif_emotional": "font.dm_serif_italic",
+     "body": "font.fira_sans",
+     "mono": "font.plex_mono",
+     "number": "font.dm_serif"
+    }
+   },
+   {
+    "id": "calm.3",
+    "roles": {
+     "display": "font.instrument_serif",
+     "display_condensed": "font.instrument_serif",
+     "serif_emotional": "font.instrument_serif_italic",
+     "body": "font.lato",
+     "mono": "font.necto_mono",
+     "number": "font.instrument_serif"
+    }
+   }
+  ],
+  "precision": [
+   {
+    "id": "precision.1",
+    "roles": {
+     "display": "font.barlow_condensed_bold",
+     "display_condensed": "font.barlow_condensed_semibold",
+     "serif_emotional": "font.plex_serif_italic",
+     "body": "font.barlow_medium",
+     "mono": "font.plex_mono_medium",
+     "number": "font.barlow_condensed_bold"
+    },
+    "legacy_pairing": "precision_grotesk"
+   },
+   {
+    "id": "precision.2",
+    "roles": {
+     "display": "font.cabinet_bold",
+     "display_condensed": "font.cabinet_bold",
+     "serif_emotional": "font.zodiak_italic",
+     "body": "font.satoshi_regular",
+     "mono": "font.necto_mono",
+     "number": "font.cabinet_extrabold"
+    }
+   },
+   {
+    "id": "precision.3",
+    "roles": {
+     "display": "font.clash_medium",
+     "display_condensed": "font.clash_medium",
+     "serif_emotional": "font.plex_serif_italic",
+     "body": "font.cabinet_regular",
+     "mono": "font.necto_mono",
+     "number": "font.clash_medium"
+    }
+   }
+  ],
+  "joy": [
+   {
+    "id": "joy.1",
+    "roles": {
+     "display": "font.poppins_extrabold",
+     "display_condensed": "font.poppins_bold",
+     "serif_emotional": "font.zilla_slab_semibold_italic",
+     "body": "font.poppins_medium",
+     "mono": "font.plex_mono_semibold",
+     "number": "font.poppins_black"
+    },
+    "legacy_pairing": "friendly_geometric"
+   },
+   {
+    "id": "joy.2",
+    "roles": {
+     "display": "font.cabinet_extrabold",
+     "display_condensed": "font.cabinet_bold",
+     "serif_emotional": "font.zilla_slab_italic",
+     "body": "font.satoshi_medium",
+     "mono": "font.necto_mono",
+     "number": "font.cabinet_extrabold"
+    }
+   },
+   {
+    "id": "joy.3",
+    "roles": {
+     "display": "font.sprat_bold",
+     "display_condensed": "font.sprat_bold",
+     "serif_emotional": "font.zodiak_italic",
+     "body": "font.poppins_medium",
+     "mono": "font.plex_mono",
+     "number": "font.sprat_bold"
+    }
+   }
+  ],
+  "energy": [
+   {
+    "id": "energy.1",
+    "roles": {
+     "display": "font.panchang_bold",
+     "display_condensed": "font.panchang_bold",
+     "serif_emotional": "font.zodiak_italic",
+     "body": "font.satoshi_medium",
+     "mono": "font.necto_mono",
+     "number": "font.panchang_extrabold"
+    }
+   },
+   {
+    "id": "energy.2",
+    "roles": {
+     "display": "font.clash_bold",
+     "display_condensed": "font.clash_bold",
+     "serif_emotional": "font.zodiak_italic",
+     "body": "font.cabinet_medium",
+     "mono": "font.necto_mono",
+     "number": "font.clash_bold"
+    }
+   },
+   {
+    "id": "energy.3",
+    "roles": {
+     "display": "font.archivo_black",
+     "display_condensed": "font.anton",
+     "serif_emotional": "font.dm_serif",
+     "body": "font.fira_sans_semibold",
+     "mono": "font.space_mono_bold",
+     "number": "font.archivo_black"
+    }
+   }
+  ],
+  "drama": [
+   {
+    "id": "drama.1",
+    "roles": {
+     "display": "font.clash_semibold",
+     "display_condensed": "font.clash_semibold",
+     "serif_emotional": "font.zodiak_italic",
+     "body": "font.satoshi_regular",
+     "mono": "font.necto_mono",
+     "number": "font.clash_bold"
+    }
+   },
+   {
+    "id": "drama.2",
+    "roles": {
+     "display": "font.mazius_display",
+     "display_condensed": "font.mazius_display",
+     "serif_emotional": "font.mazius_display_italic",
+     "body": "font.satoshi_regular",
+     "mono": "font.necto_mono",
+     "number": "font.mazius_display"
+    }
+   },
+   {
+    "id": "drama.3",
+    "roles": {
+     "display": "font.anton",
+     "display_condensed": "font.anton",
+     "serif_emotional": "font.dm_serif_italic",
+     "body": "font.lato",
+     "mono": "font.plex_mono",
+     "number": "font.anton"
+    }
+   }
+  ],
+  "luxury": [
+   {
+    "id": "luxury.1",
+    "roles": {
+     "display": "font.mazius_display",
+     "display_condensed": "font.mazius_display",
+     "serif_emotional": "font.zodiak_light_italic",
+     "body": "font.satoshi_light",
+     "mono": "font.necto_mono",
+     "number": "font.mazius_display"
+    }
+   },
+   {
+    "id": "luxury.2",
+    "roles": {
+     "display": "font.zodiak_thin",
+     "display_condensed": "font.zodiak_light",
+     "serif_emotional": "font.zodiak_italic",
+     "body": "font.cabinet_light",
+     "mono": "font.necto_mono",
+     "number": "font.zodiak_light"
+    }
+   },
+   {
+    "id": "luxury.3",
+    "roles": {
+     "display": "font.sprat_light",
+     "display_condensed": "font.sprat_light",
+     "serif_emotional": "font.instrument_serif_italic",
+     "body": "font.satoshi_regular",
+     "mono": "font.plex_mono",
+     "number": "font.sprat_light"
+    }
+   }
+  ],
+  "urgency": [
+   {
+    "id": "urgency.1",
+    "roles": {
+     "display": "font.anton",
+     "display_condensed": "font.bebas_neue",
+     "serif_emotional": "font.dm_serif_italic",
+     "body": "font.barlow_medium",
+     "mono": "font.plex_mono_medium",
+     "number": "font.anton"
+    }
+   },
+   {
+    "id": "urgency.2",
+    "roles": {
+     "display": "font.panchang_extrabold",
+     "display_condensed": "font.panchang_bold",
+     "serif_emotional": "font.zodiak_italic",
+     "body": "font.cabinet_bold",
+     "mono": "font.necto_mono",
+     "number": "font.panchang_extrabold"
+    }
+   },
+   {
+    "id": "urgency.3",
+    "roles": {
+     "display": "font.archivo_black",
+     "display_condensed": "font.anton",
+     "serif_emotional": "font.dm_serif_italic",
+     "body": "font.satoshi_bold",
+     "mono": "font.space_mono_bold",
+     "number": "font.archivo_black"
+    }
+   }
+  ],
+  "handmade": [
+   {
+    "id": "handmade.1",
+    "roles": {
+     "display": "font.frantically",
+     "display_condensed": "font.zilla_slab_semibold",
+     "serif_emotional": "font.frantically",
+     "body": "font.lato",
+     "mono": "font.plex_mono",
+     "number": "font.zilla_slab_semibold"
+    }
+   },
+   {
+    "id": "handmade.2",
+    "roles": {
+     "display": "font.zilla_slab_semibold",
+     "display_condensed": "font.zilla_slab_bold",
+     "serif_emotional": "font.frantically",
+     "body": "font.satoshi_regular",
+     "mono": "font.plex_mono",
+     "number": "font.zilla_slab_semibold"
+    }
+   },
+   {
+    "id": "handmade.3",
+    "roles": {
+     "display": "font.instrument_serif",
+     "display_condensed": "font.instrument_serif",
+     "serif_emotional": "font.frantically",
+     "body": "font.lato",
+     "mono": "font.necto_mono",
+     "number": "font.instrument_serif"
+    }
+   }
+  ],
+  "playful_retro": [
+   {
+    "id": "playful_retro.1",
+    "roles": {
+     "display": "font.sprat_bold",
+     "display_condensed": "font.bebas_neue",
+     "serif_emotional": "font.zilla_slab_italic",
+     "body": "font.poppins_medium",
+     "mono": "font.space_mono",
+     "number": "font.bebas_neue"
+    }
+   },
+   {
+    "id": "playful_retro.2",
+    "roles": {
+     "display": "font.bebas_neue",
+     "display_condensed": "font.bebas_neue",
+     "serif_emotional": "font.zilla_slab_italic",
+     "body": "font.barlow_medium",
+     "mono": "font.space_mono",
+     "number": "font.bebas_neue"
+    }
+   },
+   {
+    "id": "playful_retro.3",
+    "roles": {
+     "display": "font.zilla_slab_bold",
+     "display_condensed": "font.zilla_slab_bold",
+     "serif_emotional": "font.frantically",
+     "body": "font.poppins_medium",
+     "mono": "font.plex_mono",
+     "number": "font.zilla_slab_bold"
+    }
+   }
+  ]
+ },
+ "adjacency": [
+  [
+   "trust",
+   "calm"
+  ],
+  [
+   "calm",
+   "warmth"
+  ],
+  [
+   "warmth",
+   "handmade"
+  ],
+  [
+   "trust",
+   "precision"
+  ],
+  [
+   "precision",
+   "energy"
+  ],
+  [
+   "joy",
+   "energy"
+  ],
+  [
+   "energy",
+   "urgency"
+  ],
+  [
+   "joy",
+   "playful_retro"
+  ],
+  [
+   "playful_retro",
+   "handmade"
+  ],
+  [
+   "drama",
+   "luxury"
+  ],
+  [
+   "drama",
+   "urgency"
+  ],
+  [
+   "luxury",
+   "calm"
+  ]
+ ],
+ "tone_emotions": {
+  "classic": [
+   "energy",
+   "drama"
+  ],
+  "editorial": [
+   "trust",
+   "warmth",
+   "calm",
+   "handmade",
+   "luxury",
+   "drama"
+  ],
+  "technical": [
+   "precision",
+   "calm",
+   "energy",
+   "urgency",
+   "trust"
+  ],
+  "playful": [
+   "joy",
+   "energy",
+   "playful_retro",
+   "handmade",
+   "warmth",
+   "urgency"
+  ]
+ },
+ "substitutes": {
+  "font.necto_mono": "font.plex_mono"
+ }
+}

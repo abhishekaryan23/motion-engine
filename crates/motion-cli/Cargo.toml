@@ -1,0 +1,29 @@
+[package]
+name = "motion-cli"
+description = "motion-engine command line"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "motion-engine"
+path = "src/main.rs"
+
+[dependencies]
+motion-core.workspace = true
+motion-render.workspace = true
+motion-voice.workspace = true
+serde_json.workspace = true
+anyhow.workspace = true
+clap.workspace = true
+pathdiff.workspace = true
+
+[features]
+default = []
+# (0.20) Local word timing (`voice --align local`, `models fetch`): forwards to motion-voice/asr-local.
+asr-local = ["motion-voice/asr-local"]
+# (0.20 A3) CTC refinement of local word times (`voice --asr-ctc`): forwards to
+# motion-voice/asr-ctc. The release CLI is built with `--features asr-local,asr-ctc`.
+asr-ctc = ["motion-voice/asr-ctc"]
+# GPU post effects (`render --gpu`): forwards to motion-render/gpu.
+gpu = ["motion-render/gpu"]

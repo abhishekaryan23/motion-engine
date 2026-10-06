@@ -1,0 +1,255 @@
+{
+ "family": "halftone_retro_objects",
+ "project": "MotionEngine Asset Library",
+ "project_id": "jR0xTD3dUZ28WeDiZEj4",
+ "emotions": [
+  "energy",
+  "playful_retro"
+ ],
+ "medium": "black-and-white retro object photograph (engine applies halftone)",
+ "greyscale": true,
+ "assets": [
+  {
+   "id": "retro_tv",
+   "role": "object",
+   "subject": "retro television",
+   "tags": [
+    "tv",
+    "television",
+    "screen",
+    "advert",
+    "ad",
+    "broadcast",
+    "retro",
+    "old"
+   ],
+   "model": "flare",
+   "aspect": "4:3",
+   "prompt": "Black-and-white photograph, high-contrast monochrome, of a 1970s wooden-cabinet CRT television set facing the camera, its screen area filled edge to edge with flat solid pure magenta (#FF00FF). Vintage product photograph, the object itself entirely in black, white and grey. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark.",
+   "screen_box": true
+  },
+  {
+   "id": "keyboard",
+   "role": "object",
+   "subject": "computer keyboard",
+   "tags": [
+    "keyboard",
+    "typing",
+    "computer",
+    "keys",
+    "input"
+   ],
+   "model": "flare",
+   "aspect": "16:9",
+   "prompt": "Black-and-white photograph, high-contrast monochrome, of a retro beige mechanical computer keyboard at a slight angle with blank keycaps. Vintage product photograph, the object itself entirely in black, white and grey. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "megaphone",
+   "role": "object",
+   "subject": "megaphone",
+   "tags": [
+    "megaphone",
+    "announce",
+    "announcement",
+    "shout",
+    "loud",
+    "attention"
+   ],
+   "model": "flare",
+   "aspect": "1:1",
+   "prompt": "Black-and-white photograph, high-contrast monochrome, of a vintage handheld megaphone pointing to the right. Vintage product photograph, the object itself entirely in black, white and grey. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "rotary_phone",
+   "role": "object",
+   "subject": "rotary telephone",
+   "tags": [
+    "telephone",
+    "phone",
+    "rotary",
+    "call",
+    "calling",
+    "retro"
+   ],
+   "model": "flare",
+   "aspect": "1:1",
+   "prompt": "Black-and-white photograph, high-contrast monochrome, of a 1960s rotary dial desk telephone with handset on its cradle. Vintage product photograph, the object itself entirely in black, white and grey. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "cassette",
+   "role": "object",
+   "subject": "cassette tape",
+   "tags": [
+    "cassette",
+    "tape",
+    "music",
+    "mixtape",
+    "audio",
+    "retro"
+   ],
+   "model": "flare",
+   "aspect": "1:1",
+   "prompt": "Black-and-white photograph, high-contrast monochrome, of an audio cassette tape seen face on with a blank label. Vintage product photograph, the object itself entirely in black, white and grey. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "film_camera",
+   "role": "object",
+   "subject": "film camera",
+   "tags": [
+    "camera",
+    "film",
+    "photo",
+    "photograph",
+    "snapshot",
+    "retro"
+   ],
+   "model": "flare",
+   "aspect": "1:1",
+   "prompt": "Black-and-white photograph, high-contrast monochrome, of a vintage 35mm rangefinder film camera, front view. Vintage product photograph, the object itself entirely in black, white and grey. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "typewriter",
+   "role": "object",
+   "subject": "typewriter",
+   "tags": [
+    "typewriter",
+    "writing",
+    "writer",
+    "letter",
+    "typing",
+    "retro"
+   ],
+   "model": "flare",
+   "aspect": "1:1",
+   "prompt": "Black-and-white photograph, high-contrast monochrome, of a vintage manual typewriter with a blank sheet of paper loaded. Vintage product photograph, the object itself entirely in black, white and grey. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "hand_with_phone",
+   "role": "object",
+   "subject": "hand holding a phone",
+   "tags": [
+    "hand",
+    "phone",
+    "smartphone",
+    "mobile",
+    "scrolling",
+    "holding"
+   ],
+   "model": "flare",
+   "aspect": "3:4",
+   "prompt": "Black-and-white photograph, high-contrast monochrome, of a hand holding a modern smartphone upright, the screen dark and blank. Vintage product photograph, the object itself entirely in black, white and grey. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "flip_phone",
+   "role": "object",
+   "subject": "flip phone",
+   "tags": [
+    "phone",
+    "flip",
+    "mobile",
+    "cellphone",
+    "retro",
+    "call"
+   ],
+   "model": "flare",
+   "aspect": "3:4",
+   "prompt": "Black-and-white photograph, high-contrast monochrome, of an open early-2000s flip phone with blank screen. Vintage product photograph, the object itself entirely in black, white and grey. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "radio",
+   "role": "object",
+   "subject": "transistor radio",
+   "tags": [
+    "radio",
+    "broadcast",
+    "news",
+    "listen",
+    "transistor",
+    "retro"
+   ],
+   "model": "flare",
+   "aspect": "1:1",
+   "prompt": "Black-and-white photograph, high-contrast monochrome, of a vintage portable transistor radio with a round speaker grille. Vintage product photograph, the object itself entirely in black, white and grey. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "vinyl",
+   "role": "object",
+   "subject": "vinyl record",
+   "tags": [
+    "vinyl",
+    "record",
+    "music",
+    "album",
+    "disc",
+    "retro"
+   ],
+   "model": "flare",
+   "aspect": "1:1",
+   "prompt": "Black-and-white photograph, high-contrast monochrome, of a vinyl record half pulled out of a plain blank sleeve. Vintage product photograph, the object itself entirely in black, white and grey. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "joystick",
+   "role": "object",
+   "subject": "joystick",
+   "tags": [
+    "joystick",
+    "game",
+    "gaming",
+    "play",
+    "controller",
+    "arcade"
+   ],
+   "model": "flare",
+   "aspect": "1:1",
+   "prompt": "Black-and-white photograph, high-contrast monochrome, of a retro 1980s arcade-style joystick controller with one red button rendered in grey. Vintage product photograph, the object itself entirely in black, white and grey. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "boombox",
+   "role": "object",
+   "subject": "boombox",
+   "tags": [
+    "boombox",
+    "stereo",
+    "music",
+    "party",
+    "speaker",
+    "retro"
+   ],
+   "model": "flare",
+   "aspect": "16:9",
+   "prompt": "Black-and-white photograph, high-contrast monochrome, of a 1980s boombox portable stereo with two speakers, front view. Vintage product photograph, the object itself entirely in black, white and grey. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "instant_camera",
+   "role": "object",
+   "subject": "instant camera",
+   "tags": [
+    "camera",
+    "instant",
+    "polaroid",
+    "photo",
+    "snapshot",
+    "memory"
+   ],
+   "model": "flare",
+   "aspect": "1:1",
+   "prompt": "Black-and-white photograph, high-contrast monochrome, of a vintage instant camera, front view, without brand marks. Vintage product photograph, the object itself entirely in black, white and grey. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "walkman",
+   "role": "object",
+   "subject": "portable cassette player",
+   "tags": [
+    "walkman",
+    "headphones",
+    "music",
+    "player",
+    "cassette",
+    "listening"
+   ],
+   "model": "flare",
+   "aspect": "1:1",
+   "prompt": "Black-and-white photograph, high-contrast monochrome, of a portable cassette player with wired over-ear headphones beside it. Vintage product photograph, the object itself entirely in black, white and grey. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  }
+ ]
+}

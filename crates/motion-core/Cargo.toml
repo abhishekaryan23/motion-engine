@@ -1,0 +1,15 @@
+[package]
+name = "motion-core"
+description = "MotionEngine core: CreativeIntent, StyleProfile, MotionCompiler, MotionScene, validation, timeline evaluation"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+schemars.workspace = true
+
+[dev-dependencies]
+jsonschema.workspace = true

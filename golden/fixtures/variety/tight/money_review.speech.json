@@ -1,0 +1,405 @@
+{
+  "version": "0.1",
+  "audio": "money_review.voice.wav",
+  "sample_rate": 48000,
+  "duration": 23.210437,
+  "provider": "macos_say",
+  "model": "macos/say",
+  "voice": "Daniel",
+  "words": [
+    {
+      "text": "Put",
+      "start": 0.35,
+      "end": 0.589871,
+      "confidence": 0.9
+    },
+    {
+      "text": "a",
+      "start": 0.589871,
+      "end": 0.82,
+      "confidence": 0.5
+    },
+    {
+      "text": "little",
+      "start": 0.82,
+      "end": 1.219532,
+      "confidence": 0.9
+    },
+    {
+      "text": "money",
+      "start": 1.219532,
+      "end": 1.609322,
+      "confidence": 0.5
+    },
+    {
+      "text": "away",
+      "start": 1.609322,
+      "end": 1.999112,
+      "confidence": 0.5
+    },
+    {
+      "text": "every",
+      "start": 1.999112,
+      "end": 2.53,
+      "confidence": 0.5
+    },
+    {
+      "text": "month",
+      "start": 2.53,
+      "end": 2.84,
+      "confidence": 0.9
+    },
+    {
+      "text": "and",
+      "start": 2.84,
+      "end": 3.13,
+      "confidence": 0.7
+    },
+    {
+      "text": "something",
+      "start": 3.13,
+      "end": 3.54,
+      "confidence": 0.7
+    },
+    {
+      "text": "surprising",
+      "start": 3.54,
+      "end": 4.1,
+      "confidence": 0.9
+    },
+    {
+      "text": "happens",
+      "start": 4.1,
+      "end": 4.487771,
+      "confidence": 0.9
+    },
+    {
+      "text": "At",
+      "start": 4.787771,
+      "end": 5.077771,
+      "confidence": 0.9
+    },
+    {
+      "text": "seven",
+      "start": 5.077771,
+      "end": 5.447771,
+      "confidence": 0.9
+    },
+    {
+      "text": "percent",
+      "start": 5.447771,
+      "end": 5.889958,
+      "confidence": 0.9
+    },
+    {
+      "text": "a",
+      "start": 5.889958,
+      "end": 6.149296,
+      "confidence": 0.5
+    },
+    {
+      "text": "year",
+      "start": 6.149296,
+      "end": 6.367771,
+      "confidence": 0.5
+    },
+    {
+      "text": "your",
+      "start": 6.367771,
+      "end": 6.667972,
+      "confidence": 0.7
+    },
+    {
+      "text": "interest",
+      "start": 6.667972,
+      "end": 7.251483,
+      "confidence": 0.5
+    },
+    {
+      "text": "starts",
+      "start": 7.251483,
+      "end": 7.510821,
+      "confidence": 0.5
+    },
+    {
+      "text": "earning",
+      "start": 7.510821,
+      "end": 7.932246,
+      "confidence": 0.5
+    },
+    {
+      "text": "interest",
+      "start": 7.932246,
+      "end": 8.515756,
+      "confidence": 0.5
+    },
+    {
+      "text": "of",
+      "start": 8.515756,
+      "end": 8.775095,
+      "confidence": 0.5
+    },
+    {
+      "text": "its",
+      "start": 8.775095,
+      "end": 9.034433,
+      "confidence": 0.5
+    },
+    {
+      "text": "own",
+      "start": 9.034433,
+      "end": 9.293771,
+      "confidence": 0.5
+    },
+    {
+      "text": "Start",
+      "start": 9.593771,
+      "end": 9.963771,
+      "confidence": 0.9
+    },
+    {
+      "text": "at",
+      "start": 9.963771,
+      "end": 10.203771,
+      "confidence": 0.7
+    },
+    {
+      "text": "twenty-five",
+      "start": 10.203771,
+      "end": 10.923771,
+      "confidence": 0.7
+    },
+    {
+      "text": "and",
+      "start": 10.923771,
+      "end": 11.316611,
+      "confidence": 0.7
+    },
+    {
+      "text": "you",
+      "start": 11.316611,
+      "end": 11.603771,
+      "confidence": 0.5
+    },
+    {
+      "text": "end",
+      "start": 11.603771,
+      "end": 11.953771,
+      "confidence": 0.7
+    },
+    {
+      "text": "with",
+      "start": 11.983771,
+      "end": 12.363771,
+      "confidence": 0.9
+    },
+    {
+      "text": "about",
+      "start": 12.363771,
+      "end": 12.834351,
+      "confidence": 0.7
+    },
+    {
+      "text": "twice",
+      "start": 12.834351,
+      "end": 13.163771,
+      "confidence": 0.5
+    },
+    {
+      "text": "what",
+      "start": 13.163771,
+      "end": 13.490671,
+      "confidence": 0.9
+    },
+    {
+      "text": "you",
+      "start": 13.490671,
+      "end": 13.818831,
+      "confidence": 0.5
+    },
+    {
+      "text": "get",
+      "start": 13.818831,
+      "end": 13.983771,
+      "confidence": 0.5
+    },
+    {
+      "text": "starting",
+      "start": 13.983771,
+      "end": 14.603771,
+      "confidence": 0.7
+    },
+    {
+      "text": "at",
+      "start": 14.680251,
+      "end": 14.863771,
+      "confidence": 0.5
+    },
+    {
+      "text": "thirty-five",
+      "start": 14.863771,
+      "end": 15.746771,
+      "confidence": 0.7
+    },
+    {
+      "text": "Automate",
+      "start": 16.046771,
+      "end": 16.521229,
+      "confidence": 0.9
+    },
+    {
+      "text": "it",
+      "start": 16.521229,
+      "end": 16.736771,
+      "confidence": 0.5
+    },
+    {
+      "text": "raise",
+      "start": 16.736771,
+      "end": 16.942969,
+      "confidence": 0.9
+    },
+    {
+      "text": "it",
+      "start": 16.942969,
+      "end": 17.156771,
+      "confidence": 0.5
+    },
+    {
+      "text": "each",
+      "start": 17.156771,
+      "end": 17.216771,
+      "confidence": 0.9
+    },
+    {
+      "text": "year",
+      "start": 17.366771,
+      "end": 17.57558,
+      "confidence": 0.9
+    },
+    {
+      "text": "and",
+      "start": 17.57558,
+      "end": 17.766771,
+      "confidence": 0.5
+    },
+    {
+      "text": "never",
+      "start": 17.766771,
+      "end": 18.136771,
+      "confidence": 0.9
+    },
+    {
+      "text": "touch",
+      "start": 18.136771,
+      "end": 18.339984,
+      "confidence": 0.9
+    },
+    {
+      "text": "it",
+      "start": 18.339984,
+      "end": 18.550854,
+      "confidence": 0.5
+    },
+    {
+      "text": "You",
+      "start": 18.850854,
+      "end": 19.040854,
+      "confidence": 0.9
+    },
+    {
+      "text": "do",
+      "start": 19.040854,
+      "end": 19.430854,
+      "confidence": 0.7
+    },
+    {
+      "text": "not",
+      "start": 19.430854,
+      "end": 19.740854,
+      "confidence": 0.9
+    },
+    {
+      "text": "need",
+      "start": 19.740854,
+      "end": 20.004049,
+      "confidence": 0.9
+    },
+    {
+      "text": "to",
+      "start": 20.004049,
+      "end": 20.310854,
+      "confidence": 0.5
+    },
+    {
+      "text": "be",
+      "start": 20.310854,
+      "end": 20.560854,
+      "confidence": 0.9
+    },
+    {
+      "text": "rich",
+      "start": 20.570854,
+      "end": 20.860854,
+      "confidence": 0.9
+    },
+    {
+      "text": "to",
+      "start": 20.860854,
+      "end": 21.050854,
+      "confidence": 0.9
+    },
+    {
+      "text": "start",
+      "start": 21.157243,
+      "end": 21.445542,
+      "confidence": 0.5
+    },
+    {
+      "text": "You",
+      "start": 21.445542,
+      "end": 21.720854,
+      "confidence": 0.5
+    },
+    {
+      "text": "need",
+      "start": 21.740854,
+      "end": 22.050854,
+      "confidence": 0.9
+    },
+    {
+      "text": "time",
+      "start": 22.050854,
+      "end": 22.310437,
+      "confidence": 0.9
+    }
+  ],
+  "sentences": [
+    {
+      "beat": 0,
+      "start": 0.35,
+      "end": 4.487771
+    },
+    {
+      "beat": 1,
+      "start": 4.787771,
+      "end": 9.293771
+    },
+    {
+      "beat": 2,
+      "start": 9.593771,
+      "end": 15.746771
+    },
+    {
+      "beat": 3,
+      "start": 16.046771,
+      "end": 18.550854
+    },
+    {
+      "beat": 4,
+      "start": 18.850854,
+      "end": 22.310437
+    }
+  ],
+  "alignment": "onset"
+}

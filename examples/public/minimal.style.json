@@ -1,0 +1,10 @@
+{
+  "material": "paper",
+  "typography_style": "grotesk_serif",
+  "depth": "layered",
+  "camera_style": "slow_push",
+  "motion_language": "auto",
+  "texture_style": "subtle_print",
+  "accent_role": "cobalt",
+  "seed": 1
+}

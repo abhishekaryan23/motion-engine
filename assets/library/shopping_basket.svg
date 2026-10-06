@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Editorial line-art shopping basket with produce. Ink #171513, accent #E0331F. -->
+  <g fill="none" stroke="#171513" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M120 170 L170 70"/>
+    <path d="M280 170 L230 70"/>
+  </g>
+  <circle cx="160" cy="138" r="46" fill="#E0331F" stroke="#171513" stroke-width="10"/>
+  <path d="M160 92 q10 -22 28 -24" fill="none" stroke="#171513" stroke-width="9" stroke-linecap="round"/>
+  <ellipse cx="238" cy="140" rx="36" ry="44" fill="#F2C94C" stroke="#171513" stroke-width="10"/>
+  <path d="M205 120 q-8 -40 28 -58 q14 30 -10 62" fill="#3F7D4E" stroke="#171513" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M52 170 H348 L318 338 Q314 352 300 352 H100 Q86 352 82 338 Z" fill="#F6F1E6" stroke="#171513" stroke-width="12" stroke-linejoin="round"/>
+  <path d="M40 170 H360" stroke="#171513" stroke-width="16" stroke-linecap="round"/>
+  <g stroke="#171513" stroke-width="10" stroke-linecap="round">
+    <path d="M140 210 L150 312"/>
+    <path d="M200 210 V312"/>
+    <path d="M260 210 L250 312"/>
+  </g>
+  <path d="M74 250 H326" stroke="#E0331F" stroke-width="10" stroke-linecap="round"/>
+</svg>

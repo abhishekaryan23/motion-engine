@@ -1,0 +1,47 @@
+{
+  "version": "0.2",
+  "title": "everyday_city",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "A delivery worker starts before dawn",
+      "primary": {
+        "kind": "phrase",
+        "value": "delivery worker",
+        "meaning": "a delivery rider on a scooter"
+      },
+      "energy": "calm"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "A man lifts the shutters of his shop",
+      "primary": {
+        "kind": "phrase",
+        "value": "man",
+        "meaning": "the shopkeeper opens the store"
+      },
+      "energy": "building"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "A student runs for the bus",
+      "primary": {
+        "kind": "phrase",
+        "value": "student",
+        "meaning": "late for class"
+      },
+      "energy": "building"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "An elderly man waves them all through",
+      "primary": {
+        "kind": "phrase",
+        "value": "elderly man",
+        "meaning": "an old man walking with a stick"
+      },
+      "energy": "impact"
+    }
+  ]
+}

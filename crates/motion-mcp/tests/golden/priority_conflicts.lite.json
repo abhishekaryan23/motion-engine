@@ -1,0 +1,10 @@
+{
+  "title": "conflicts",
+  "beats": [
+    {"say": "Four apps now fight for every minute of your attention.", "list": ["robot", "clock", "chat_bubbles", "phone"], "number": "4", "picture": "rocket"},
+    {"say": "Costs fell while delivery got faster at the same time.", "compare": {"a": "cost", "b": "speed"}, "change": {"what": "delivery", "from": "slow", "to": "fast"}},
+    {"say": "The deep layers hold most of the ocean's water by far.", "layers": {"names": ["surface", "deep"], "focus": "deep"}, "list": ["fish", "whale", "squid"], "picture": "fish", "number": "90%"},
+    {"say": "Delivery went from three days to one day for most people.", "change": {"what": "delivery", "from": "3 days", "to": "1 day"}, "number": "3x", "picture": "rocket"},
+    {"say": "Revenue hit a record two billion dollars this year alone.", "number": "$2B", "picture": "money_stack", "picture2": "rocket"}
+  ]
+}

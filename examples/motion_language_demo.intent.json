@@ -1,0 +1,73 @@
+{
+  "version": "0.1",
+  "title": "attention_budget",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "Your best work needs quiet time.",
+      "primary": {
+        "kind": "phrase",
+        "value": "Deep work",
+        "meaning": "focus"
+      },
+      "energy": "calm",
+      "continuity": "carry_primary",
+      "keyword": "quiet"
+    },
+    {
+      "purpose": "contrast",
+      "statement": "Every ping takes a slice.",
+      "primary": {
+        "kind": "phrase",
+        "value": "Deep work",
+        "meaning": "focus"
+      },
+      "secondary": {
+        "kind": "phrase",
+        "value": "Pings",
+        "meaning": "interruptions"
+      },
+      "relationship": "compress",
+      "energy": "building",
+      "continuity": "none",
+      "keyword": "slice"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "Focus gets broken, not lost.",
+      "primary": {
+        "kind": "phrase",
+        "value": "Rebuild it",
+        "meaning": "recovery"
+      },
+      "energy": "impact",
+      "continuity": "none",
+      "keyword": "broken"
+    },
+    {
+      "purpose": "explain",
+      "statement": "Check them three times a day.",
+      "primary": {
+        "kind": "phrase",
+        "value": "Batch the alerts",
+        "meaning": "method"
+      },
+      "energy": "building",
+      "continuity": "none",
+      "keyword": "batch"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "The focus you win back.",
+      "primary": {
+        "kind": "number",
+        "value": "40%",
+        "meaning": "more deep work"
+      },
+      "energy": "impact",
+      "continuity": "none",
+      "keyword": "back"
+    }
+  ]
+}

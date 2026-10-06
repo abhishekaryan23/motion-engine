@@ -1,0 +1,19 @@
+{
+  "version": "0.2",
+  "title": "derived_metric",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "reveal",
+      "statement": "Most visitors never sign up.",
+      "energy": "building",
+      "primary": {
+        "kind": "derived_metric",
+        "numerator": { "value": 80, "meaning": "sign-ups" },
+        "denominator": { "value": 1000, "meaning": "visitors" },
+        "format": "percent",
+        "meaning": "sign-up rate"
+      }
+    }
+  ]
+}

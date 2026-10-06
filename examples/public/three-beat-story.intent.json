@@ -1,0 +1,31 @@
+{
+  "version": "0.1",
+  "title": "bridge_example",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "The ferry crossing took forty minutes",
+      "primary": { "kind": "number", "value": "40 min", "meaning": "crossing time" },
+      "energy": "calm",
+      "continuity": "carry_primary",
+      "keyword": "ferry"
+    },
+    {
+      "purpose": "contrast",
+      "statement": "Then the bridge opened",
+      "primary": { "kind": "number", "value": "40 min", "meaning": "crossing time" },
+      "secondary": { "kind": "number", "value": "6 min", "meaning": "by bridge" },
+      "relationship": "replace",
+      "energy": "building",
+      "keyword": "bridge"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "Crossing the river is now almost seven times faster.",
+      "primary": { "kind": "number", "value": "6.7x", "meaning": "faster crossing" },
+      "energy": "impact",
+      "keyword": "faster"
+    }
+  ]
+}

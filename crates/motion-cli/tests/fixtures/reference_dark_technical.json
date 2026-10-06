@@ -1,0 +1,15 @@
+{
+  "version": "0.1",
+  "tone": { "value": "technical", "confidence": 0.9 },
+  "polarity": { "value": "dark", "confidence": 0.9 },
+  "temperature": { "value": "cool", "confidence": 0.8 },
+  "palette_character": { "value": "monochrome", "confidence": 0.7 },
+  "background_character": { "value": "grid", "confidence": 0.8 },
+  "typography_character": { "value": "mono_technical", "confidence": 0.8 },
+  "material_character": { "value": "screen", "confidence": 0.7 },
+  "visual_density": { "value": "balanced", "confidence": 0.7 },
+  "composition_rhythm": { "value": "progressive", "confidence": 0.7 },
+  "motion_temperament": { "value": "snappy", "confidence": 0.8 },
+  "transition_character": { "value": "geometric", "confidence": 0.7 },
+  "scale_contrast": { "value": "moderate", "confidence": 0.7 }
+}

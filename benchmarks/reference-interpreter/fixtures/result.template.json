@@ -1,0 +1,28 @@
+{
+  "_comment": "TEMPLATE. One scored run; score.py writes this shape, do not fill by hand. null = not applicable / not emitted by the engine.",
+  "model": "free-form model id string (provider-neutral)",
+  "bundle_fingerprint": "rf1-... (from BUNDLE/evidence.json)",
+  "first_attempt_valid": true,
+  "repair_required": false,
+  "repair_valid": null,
+  "issues": [{"path": "$.tone.value", "message": "engine validation message"}],
+  "completeness": {
+    "style": {"applied": 0, "total": 0, "fraction": null},
+    "visual_language": {"applied": 0, "total": 0, "fraction": null}
+  },
+  "unknown_dimensions": [],
+  "low_confidence_dimensions": [],
+  "aliases": [],
+  "coverage": {"matched": 0, "partial": 0, "overridden": 0, "unsupported": 0, "unknown": 0},
+  "visual_language": {
+    "present": false,
+    "medium": "neutral",
+    "medium_non_neutral": false,
+    "weight": null,
+    "composition_lists_disjoint": null,
+    "prefers_procedural": null,
+    "wants_images": null
+  },
+  "agreement": {"tone": true, "polarity": false, "temperature": null},
+  "notes": ""
+}

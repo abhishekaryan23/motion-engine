@@ -1,0 +1,31 @@
+[package]
+name = "motion-voice"
+description = "Voice-over providers (OpenRouter TTS, macOS say, fixtures) and the content-addressed voice cache. Network lives here, never in motion-core/motion-render."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+motion-core.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+sha2.workspace = true
+ureq = { version = "2", default-features = false, features = ["tls"] }
+# (0.20) Local word timing: whisper.cpp bindings, behind `asr-local` (needs
+# cmake + a C++ toolchain to build; Metal on macOS, CPU elsewhere).
+whisper-rs = { version = "0.16", optional = true }
+# (0.20 A3) CTC forced alignment (wav2vec2, int8 ONNX) through ONNX Runtime,
+# behind `asr-ctc`. Default features: `download-binaries` fetches the ONNX
+# Runtime library at BUILD time (a build dependency like any crate); nothing
+# downloads at runtime except `motion-engine models fetch`.
+ort = { version = "=2.0.0-rc.13", optional = true }
+
+[target.'cfg(target_os = "macos")'.dependencies]
+whisper-rs = { version = "0.16", optional = true, features = ["metal"] }
+
+[features]
+default = []
+asr-local = ["dep:whisper-rs"]
+# (0.20 A3) CTC refinement of local word times (wav2vec2 through ONNX Runtime).
+asr-ctc = ["dep:ort"]

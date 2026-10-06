@@ -1,0 +1,41 @@
+{
+  "beats": [
+    {
+      "continuity": "none",
+      "energy": "building",
+      "narration": "Nobody expected the small town bakery to outlast the mall.",
+      "primary": {
+        "kind": "phrase",
+        "value": "The bakery won"
+      },
+      "purpose": "emphasize",
+      "statement": "The bakery won"
+    },
+    {
+      "continuity": "none",
+      "energy": "building",
+      "keyword": "craft",
+      "narration": "It simply kept doing one thing well for forty years.",
+      "primary": {
+        "kind": "phrase",
+        "value": "craft"
+      },
+      "purpose": "emphasize",
+      "statement": "craft"
+    },
+    {
+      "continuity": "none",
+      "energy": "building",
+      "narration": "And honestly that is the whole lesson here, nothing more and nothing less than that.",
+      "primary": {
+        "kind": "phrase",
+        "value": "And honestly that is the whole…"
+      },
+      "purpose": "emphasize",
+      "statement": "And honestly that is the whole…"
+    }
+  ],
+  "format": "vertical",
+  "title": "the_bakery_won",
+  "version": "0.2"
+}

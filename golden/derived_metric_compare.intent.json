@@ -1,0 +1,25 @@
+{
+  "version": "0.2",
+  "title": "derived_metric_compare",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "compare",
+      "statement": "Fewer sales, better rate.",
+      "energy": "building",
+      "primary": {
+        "kind": "derived_metric",
+        "numerator": { "value": 120, "meaning": "sales" },
+        "denominator": { "value": 4000, "meaning": "visits" },
+        "format": "percent",
+        "meaning": "conversion"
+      },
+      "secondary": {
+        "kind": "derived_metric",
+        "numerator": { "value": 90, "meaning": "sales" },
+        "denominator": { "value": 2000, "meaning": "visits" },
+        "format": "percent"
+      }
+    }
+  ]
+}

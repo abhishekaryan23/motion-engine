@@ -1,0 +1,8 @@
+{
+  "title": "saving habit",
+  "beats": [
+    {"say": "A simple piggy bank taught a whole generation how to save.", "picture": "piggy_bank", "meaning": "saving"},
+    {"say": "Time and money turn out to be the same thing in the end.", "picture": "clock", "picture2": "money_stack"},
+    {"say": "Even a zorb can be a reminder to put a little aside.", "picture": "zorb"}
+  ]
+}

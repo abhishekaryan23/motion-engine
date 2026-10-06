@@ -1,0 +1,13 @@
+{
+  "version": "0.2",
+  "title": "city_water",
+  "format": "vertical",
+  "beats": [
+    { "purpose": "emphasize", "statement": "Cities lose water before it reaches you.", "primary": { "kind": "phrase", "value": "lost water" }, "energy": "calm", "keyword": "water" },
+    { "purpose": "reveal", "statement": "Thirty percent leaks from old pipes.", "primary": { "kind": "number", "value": "30%", "meaning": "lost to leaks" }, "energy": "impact", "continuity": "carry_primary", "keyword": "leaks" },
+    { "purpose": "compare", "statement": "Modern networks lose under ten percent.", "primary": { "kind": "number", "value": "30%", "meaning": "old pipes" }, "secondary": { "kind": "number", "value": "10%", "meaning": "modern networks" }, "relationship": "compress", "energy": "building", "keyword": "modern" },
+    { "purpose": "explain", "statement": "Sensors find a leak within hours.", "primary": { "kind": "phrase", "value": "sensors" }, "secondary": { "kind": "phrase", "value": "leak found" }, "relationship": "carry", "energy": "building", "keyword": "sensors" },
+    { "purpose": "emphasize", "statement": "Fixing leaks is cheaper than new dams.", "primary": { "kind": "phrase", "value": "fix leaks" }, "secondary": { "kind": "phrase", "value": "build dams" }, "relationship": "replace", "energy": "building", "keyword": "cheaper" },
+    { "purpose": "reveal", "statement": "The cheapest water is the water we keep.", "primary": { "kind": "phrase", "value": "the water we keep" }, "energy": "impact", "keyword": "keep" }
+  ]
+}

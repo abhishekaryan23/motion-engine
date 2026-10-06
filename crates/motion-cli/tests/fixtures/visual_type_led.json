@@ -1,0 +1,7 @@
+{
+  "version": "0.2",
+  "tone": { "value": "editorial", "confidence": 0.9 },
+  "visual_language": {
+    "medium": { "value": "type_led", "confidence": 0.9 }
+  }
+}

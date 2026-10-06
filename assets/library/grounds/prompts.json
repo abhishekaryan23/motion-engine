@@ -1,0 +1,545 @@
+{
+ "version": "0.1",
+ "specs": [
+  {
+   "id": "library.neon_purple_gradient",
+   "fingerprint": "fp1-377beee4a788c9ab",
+   "continuity_key": "neon_purple_gradient",
+   "serves": [
+    "library.neon_purple_gradient"
+   ],
+   "role": "environment",
+   "priority": "optional",
+   "subject": "dark neon purple gradient",
+   "context": "library asset: dark neon purple gradient",
+   "presentation": "background_plate",
+   "background": "opaque",
+   "style": {
+    "medium": "full-frame background plates",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "scene",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "neon_purple_gradient",
+    "alpha_required": false,
+    "min_short_side": 512,
+    "aspect": "9:16"
+   },
+   "prompt": "A deep near-black to electric violet smooth gradient background with a soft neon glow from the lower corner. Full-frame vertical background plate, no objects, no people, no text, no logos, even and calm so typography can sit on it."
+  },
+  {
+   "id": "library.black_grain",
+   "fingerprint": "fp1-c7f0e5e870eefdf2",
+   "continuity_key": "black_grain",
+   "serves": [
+    "library.black_grain"
+   ],
+   "role": "environment",
+   "priority": "optional",
+   "subject": "near-black grain",
+   "context": "library asset: near-black grain",
+   "presentation": "background_plate",
+   "background": "opaque",
+   "style": {
+    "medium": "full-frame background plates",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "scene",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "black_grain",
+    "alpha_required": false,
+    "min_short_side": 512,
+    "aspect": "9:16"
+   },
+   "prompt": "A near-black background with fine analogue film grain. Full-frame vertical background plate, no objects, no people, no text, no logos, even and calm so typography can sit on it."
+  },
+  {
+   "id": "library.grey_studio",
+   "fingerprint": "fp1-36a91ef35d688aba",
+   "continuity_key": "grey_studio",
+   "serves": [
+    "library.grey_studio"
+   ],
+   "role": "environment",
+   "priority": "optional",
+   "subject": "light grey studio",
+   "context": "library asset: light grey studio",
+   "presentation": "background_plate",
+   "background": "opaque",
+   "style": {
+    "medium": "full-frame background plates",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "scene",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "grey_studio",
+    "alpha_required": false,
+    "min_short_side": 512,
+    "aspect": "9:16"
+   },
+   "prompt": "A light grey seamless photo studio backdrop with a soft vignette. Full-frame vertical background plate, no objects, no people, no text, no logos, even and calm so typography can sit on it."
+  },
+  {
+   "id": "library.warm_paper",
+   "fingerprint": "fp1-466555f0bda06a14",
+   "continuity_key": "warm_paper",
+   "serves": [
+    "library.warm_paper"
+   ],
+   "role": "environment",
+   "priority": "optional",
+   "subject": "warm paper",
+   "context": "library asset: warm paper",
+   "presentation": "background_plate",
+   "background": "opaque",
+   "style": {
+    "medium": "full-frame background plates",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "scene",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "warm_paper",
+    "alpha_required": false,
+    "min_short_side": 512,
+    "aspect": "9:16"
+   },
+   "prompt": "A warm cream uncoated paper texture, subtle fibres. Full-frame vertical background plate, no objects, no people, no text, no logos, even and calm so typography can sit on it."
+  },
+  {
+   "id": "library.kraft",
+   "fingerprint": "fp1-e323e6bd076a98d8",
+   "continuity_key": "kraft",
+   "serves": [
+    "library.kraft"
+   ],
+   "role": "environment",
+   "priority": "optional",
+   "subject": "kraft paper",
+   "context": "library asset: kraft paper",
+   "presentation": "background_plate",
+   "background": "opaque",
+   "style": {
+    "medium": "full-frame background plates",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "scene",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "kraft",
+    "alpha_required": false,
+    "min_short_side": 512,
+    "aspect": "9:16"
+   },
+   "prompt": "A brown kraft paper texture with subtle fibres and creases. Full-frame vertical background plate, no objects, no people, no text, no logos, even and calm so typography can sit on it."
+  },
+  {
+   "id": "library.sky_gradient",
+   "fingerprint": "fp1-7751218ef1ed9f76",
+   "continuity_key": "sky_gradient",
+   "serves": [
+    "library.sky_gradient"
+   ],
+   "role": "environment",
+   "priority": "optional",
+   "subject": "sky gradient",
+   "context": "library asset: sky gradient",
+   "presentation": "background_plate",
+   "background": "opaque",
+   "style": {
+    "medium": "full-frame background plates",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "scene",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "sky_gradient",
+    "alpha_required": false,
+    "min_short_side": 512,
+    "aspect": "9:16"
+   },
+   "prompt": "A soft clear sky gradient from pale blue at the top to warm haze near the bottom. Full-frame vertical background plate, no objects, no people, no text, no logos, even and calm so typography can sit on it."
+  },
+  {
+   "id": "library.deep_teal",
+   "fingerprint": "fp1-106dd2402f2b2cf9",
+   "continuity_key": "deep_teal",
+   "serves": [
+    "library.deep_teal"
+   ],
+   "role": "environment",
+   "priority": "optional",
+   "subject": "deep teal",
+   "context": "library asset: deep teal",
+   "presentation": "background_plate",
+   "background": "opaque",
+   "style": {
+    "medium": "full-frame background plates",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "scene",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "deep_teal",
+    "alpha_required": false,
+    "min_short_side": 512,
+    "aspect": "9:16"
+   },
+   "prompt": "A deep teal background with a very subtle painted texture. Full-frame vertical background plate, no objects, no people, no text, no logos, even and calm so typography can sit on it."
+  },
+  {
+   "id": "library.blush",
+   "fingerprint": "fp1-fbc7f9019e7ac803",
+   "continuity_key": "blush",
+   "serves": [
+    "library.blush"
+   ],
+   "role": "environment",
+   "priority": "optional",
+   "subject": "blush",
+   "context": "library asset: blush",
+   "presentation": "background_plate",
+   "background": "opaque",
+   "style": {
+    "medium": "full-frame background plates",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "scene",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "blush",
+    "alpha_required": false,
+    "min_short_side": 512,
+    "aspect": "9:16"
+   },
+   "prompt": "A soft blush peach background with a faint paper texture. Full-frame vertical background plate, no objects, no people, no text, no logos, even and calm so typography can sit on it."
+  },
+  {
+   "id": "library.halftone_dark",
+   "fingerprint": "fp1-e1c3d80a70a9c157",
+   "continuity_key": "halftone_dark",
+   "serves": [
+    "library.halftone_dark"
+   ],
+   "role": "environment",
+   "priority": "optional",
+   "subject": "halftone dark field",
+   "context": "library asset: halftone dark field",
+   "presentation": "background_plate",
+   "background": "opaque",
+   "style": {
+    "medium": "full-frame background plates",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "scene",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "halftone_dark",
+    "alpha_required": false,
+    "min_short_side": 512,
+    "aspect": "9:16"
+   },
+   "prompt": "A dark charcoal background with a subtle large halftone dot pattern fading across the frame. Full-frame vertical background plate, no objects, no people, no text, no logos, even and calm so typography can sit on it."
+  },
+  {
+   "id": "library.concrete",
+   "fingerprint": "fp1-f8e844feb83715db",
+   "continuity_key": "concrete",
+   "serves": [
+    "library.concrete"
+   ],
+   "role": "environment",
+   "priority": "optional",
+   "subject": "concrete",
+   "context": "library asset: concrete",
+   "presentation": "background_plate",
+   "background": "opaque",
+   "style": {
+    "medium": "full-frame background plates",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "scene",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "concrete",
+    "alpha_required": false,
+    "min_short_side": 512,
+    "aspect": "9:16"
+   },
+   "prompt": "A smooth grey concrete wall texture. Full-frame vertical background plate, no objects, no people, no text, no logos, even and calm so typography can sit on it."
+  },
+  {
+   "id": "library.linen",
+   "fingerprint": "fp1-1ba53c627970a76b",
+   "continuity_key": "linen",
+   "serves": [
+    "library.linen"
+   ],
+   "role": "environment",
+   "priority": "optional",
+   "subject": "linen",
+   "context": "library asset: linen",
+   "presentation": "background_plate",
+   "background": "opaque",
+   "style": {
+    "medium": "full-frame background plates",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "scene",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "linen",
+    "alpha_required": false,
+    "min_short_side": 512,
+    "aspect": "9:16"
+   },
+   "prompt": "A natural off-white linen fabric texture, flat and evenly lit. Full-frame vertical background plate, no objects, no people, no text, no logos, even and calm so typography can sit on it."
+  },
+  {
+   "id": "library.ink_wash_dark",
+   "fingerprint": "fp1-8fc81cfccc91876b",
+   "continuity_key": "ink_wash_dark",
+   "serves": [
+    "library.ink_wash_dark"
+   ],
+   "role": "environment",
+   "priority": "optional",
+   "subject": "dark ink wash",
+   "context": "library asset: dark ink wash",
+   "presentation": "background_plate",
+   "background": "opaque",
+   "style": {
+    "medium": "full-frame background plates",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "scene",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "ink_wash_dark",
+    "alpha_required": false,
+    "min_short_side": 512,
+    "aspect": "9:16"
+   },
+   "prompt": "A dark indigo-black ink wash watercolour background with soft blooms. Full-frame vertical background plate, no objects, no people, no text, no logos, even and calm so typography can sit on it."
+  }
+ ]
+}

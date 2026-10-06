@@ -1,0 +1,29 @@
+{
+  "version": "0.2",
+  "title": "data_story",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "compare",
+      "statement": "Same shop, two different months.",
+      "energy": "building",
+      "primary": { "kind": "number", "value": "₹42,000", "meaning": "March sales" },
+      "secondary": { "kind": "number", "value": "₹18,500", "meaning": "February sales" }
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "Signups climbed every quarter.",
+      "energy": "building",
+      "primary": {
+        "kind": "collection",
+        "meaning": "signups",
+        "items": [
+          { "kind": "number", "value": "120", "meaning": "Q1" },
+          { "kind": "number", "value": "180", "meaning": "Q2" },
+          { "kind": "number", "value": "260", "meaning": "Q3" },
+          { "kind": "number", "value": "410", "meaning": "Q4" }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "version": "0.1",
+  "audio": "atmosphere_layers.voice.wav",
+  "sample_rate": 48000,
+  "duration": 4.917354,
+  "provider": "macos_say",
+  "model": "macos/say",
+  "voice": "Daniel",
+  "words": [
+    {
+      "text": "Weather",
+      "start": 0.35,
+      "end": 0.788654,
+      "confidence": 0.9
+    },
+    {
+      "text": "lives",
+      "start": 0.788654,
+      "end": 1.227309,
+      "confidence": 0.5
+    },
+    {
+      "text": "low",
+      "start": 1.227309,
+      "end": 1.49725,
+      "confidence": 0.5
+    },
+    {
+      "text": "A",
+      "start": 1.79725,
+      "end": 1.977709,
+      "confidence": 0.9
+    },
+    {
+      "text": "lid",
+      "start": 1.977709,
+      "end": 2.158169,
+      "confidence": 0.5
+    },
+    {
+      "text": "on",
+      "start": 2.158169,
+      "end": 2.338628,
+      "confidence": 0.5
+    },
+    {
+      "text": "the",
+      "start": 2.338628,
+      "end": 2.58725,
+      "confidence": 0.5
+    },
+    {
+      "text": "weather",
+      "start": 2.58725,
+      "end": 2.812333,
+      "confidence": 0.7
+    },
+    {
+      "text": "Calm",
+      "start": 3.112333,
+      "end": 3.361994,
+      "confidence": 0.9
+    },
+    {
+      "text": "air",
+      "start": 3.361994,
+      "end": 3.742333,
+      "confidence": 0.5
+    },
+    {
+      "text": "above",
+      "start": 3.742333,
+      "end": 4.017354,
+      "confidence": 0.7
+    }
+  ],
+  "sentences": [
+    {
+      "beat": 0,
+      "start": 0.35,
+      "end": 1.49725
+    },
+    {
+      "beat": 1,
+      "start": 1.79725,
+      "end": 2.812333
+    },
+    {
+      "beat": 2,
+      "start": 3.112333,
+      "end": 4.017354
+    }
+  ],
+  "alignment": "onset"
+}

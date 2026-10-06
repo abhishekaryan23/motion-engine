@@ -1,0 +1,39 @@
+{
+  "version": "0.2",
+  "title": "vaccines",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "A wanted poster for germs",
+      "narration": "A vaccine is basically a wanted poster for a germ your body has never met.",
+      "primary": { "kind": "object", "asset": "virus", "meaning": "the germ" },
+      "energy": "impact",
+      "keyword": "wanted"
+    },
+    {
+      "purpose": "explain",
+      "statement": "Show the face, not the threat",
+      "narration": "It shows your immune system what the invader looks like, without the actual danger.",
+      "primary": { "kind": "object", "asset": "microscope", "meaning": "inspection" },
+      "energy": "building",
+      "keyword": "face"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "Your body takes notes",
+      "narration": "Your cells study it and build antibodies, then keep a memory of the shape for years.",
+      "primary": { "kind": "object", "asset": "dna_model", "meaning": "memory" },
+      "energy": "building",
+      "keyword": "memory"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "Ready on day one",
+      "narration": "So when the real thing shows up, your defences are ready from the very first day.",
+      "primary": { "kind": "object", "asset": "stethoscope", "meaning": "protection" },
+      "energy": "impact",
+      "keyword": "ready"
+    }
+  ]
+}

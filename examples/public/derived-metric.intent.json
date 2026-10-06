@@ -1,0 +1,25 @@
+{
+  "version": "0.2",
+  "title": "pass_rate",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "compare",
+      "statement": "The small class did better.",
+      "primary": {
+        "kind": "derived_metric",
+        "meaning": "pass rate",
+        "numerator": { "value": 540, "meaning": "passed" },
+        "denominator": { "value": 600, "meaning": "students" }
+      },
+      "secondary": {
+        "kind": "derived_metric",
+        "meaning": "pass rate",
+        "numerator": { "value": 190, "meaning": "passed" },
+        "denominator": { "value": 200, "meaning": "students" }
+      },
+      "energy": "building",
+      "keyword": "rate"
+    }
+  ]
+}

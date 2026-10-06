@@ -1,0 +1,21 @@
+{
+  "version": "0.2",
+  "title": "editorial_collage",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "Quiet streets after nine.",
+      "primary": {
+        "kind": "phrase",
+        "value": "after nine",
+        "meaning": "curfew"
+      },
+      "secondary": {
+        "kind": "phrase",
+        "value": "shops shut early"
+      },
+      "energy": "calm"
+    }
+  ]
+}

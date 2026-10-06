@@ -1,0 +1,2670 @@
+{
+ "version": "0.1",
+ "specs": [
+  {
+   "id": "library.spatula",
+   "fingerprint": "fp1-e700e069d6f1d854",
+   "continuity_key": "spatula",
+   "serves": [
+    "library.spatula"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "spatula",
+   "context": "library glyph: spatula",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "spatula",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "spatula (Counterscraps.otf U+0021)"
+  },
+  {
+   "id": "library.spoon",
+   "fingerprint": "fp1-6a0e459e09d61b86",
+   "continuity_key": "spoon",
+   "serves": [
+    "library.spoon"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "spoon",
+   "context": "library glyph: spoon",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "spoon",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "spoon (Counterscraps.otf U+0022)"
+  },
+  {
+   "id": "library.measuring_spoons",
+   "fingerprint": "fp1-a2020d2d2d63e8ee",
+   "continuity_key": "measuring_spoons",
+   "serves": [
+    "library.measuring_spoons"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "measuring spoons",
+   "context": "library glyph: measuring spoons",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "measuring_spoons",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "measuring spoons (Counterscraps.otf U+0023)"
+  },
+  {
+   "id": "library.knife",
+   "fingerprint": "fp1-64be65b9852925fe",
+   "continuity_key": "knife",
+   "serves": [
+    "library.knife"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "knife",
+   "context": "library glyph: knife",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "knife",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "knife (Counterscraps.otf U+0024)"
+  },
+  {
+   "id": "library.fork",
+   "fingerprint": "fp1-b24b1a23c80eb33e",
+   "continuity_key": "fork",
+   "serves": [
+    "library.fork"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "fork",
+   "context": "library glyph: fork",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "fork",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "fork (Counterscraps.otf U+0025)"
+  },
+  {
+   "id": "library.mixing_bowl",
+   "fingerprint": "fp1-d0b8aa846591fd0d",
+   "continuity_key": "mixing_bowl",
+   "serves": [
+    "library.mixing_bowl"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "mixing bowl",
+   "context": "library glyph: mixing bowl",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "mixing_bowl",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "mixing bowl (Counterscraps.otf U+0026)"
+  },
+  {
+   "id": "library.hand_mixer",
+   "fingerprint": "fp1-09d548d28ad2aeea",
+   "continuity_key": "hand_mixer",
+   "serves": [
+    "library.hand_mixer"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "hand mixer",
+   "context": "library glyph: hand mixer",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "hand_mixer",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "hand mixer (Counterscraps.otf U+0027)"
+  },
+  {
+   "id": "library.frying_pan",
+   "fingerprint": "fp1-1ffbea0a35d6ab1a",
+   "continuity_key": "frying_pan",
+   "serves": [
+    "library.frying_pan"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "frying pan",
+   "context": "library glyph: frying pan",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "frying_pan",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "frying pan (Counterscraps.otf U+0028)"
+  },
+  {
+   "id": "library.cooking_pot",
+   "fingerprint": "fp1-ae4e91048cdb10e7",
+   "continuity_key": "cooking_pot",
+   "serves": [
+    "library.cooking_pot"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "steaming pot",
+   "context": "library glyph: steaming pot",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "cooking_pot",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "steaming pot (Counterscraps.otf U+0029)"
+  },
+  {
+   "id": "library.banana_bunch",
+   "fingerprint": "fp1-a1b9b129f4ee9446",
+   "continuity_key": "banana_bunch",
+   "serves": [
+    "library.banana_bunch"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "banana bunch",
+   "context": "library glyph: banana bunch",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "banana_bunch",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "banana bunch (Counterscraps.otf U+002A)"
+  },
+  {
+   "id": "library.salt_and_pepper",
+   "fingerprint": "fp1-4720763d3ec7ae0f",
+   "continuity_key": "salt_and_pepper",
+   "serves": [
+    "library.salt_and_pepper"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "salt and pepper",
+   "context": "library glyph: salt and pepper",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "salt_and_pepper",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "salt and pepper (Counterscraps.otf U+0030)"
+  },
+  {
+   "id": "library.steak",
+   "fingerprint": "fp1-90185aea8050a5c0",
+   "continuity_key": "steak",
+   "serves": [
+    "library.steak"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "steak",
+   "context": "library glyph: steak",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "steak",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "steak (Counterscraps.otf U+0034)"
+  },
+  {
+   "id": "library.stove",
+   "fingerprint": "fp1-c976e47b4cb7e18c",
+   "continuity_key": "stove",
+   "serves": [
+    "library.stove"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "stove",
+   "context": "library glyph: stove",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "stove",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "stove (Counterscraps.otf U+0035)"
+  },
+  {
+   "id": "library.potato",
+   "fingerprint": "fp1-f2772d5eaed0318c",
+   "continuity_key": "potato",
+   "serves": [
+    "library.potato"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "potato",
+   "context": "library glyph: potato",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "potato",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "potato (Counterscraps.otf U+0036)"
+  },
+  {
+   "id": "library.toaster",
+   "fingerprint": "fp1-3850b5d2e8259165",
+   "continuity_key": "toaster",
+   "serves": [
+    "library.toaster"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "toaster",
+   "context": "library glyph: toaster",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "toaster",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "toaster (Counterscraps.otf U+0037)"
+  },
+  {
+   "id": "library.tomato",
+   "fingerprint": "fp1-0d59c800e72a0f0f",
+   "continuity_key": "tomato",
+   "serves": [
+    "library.tomato"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "tomato",
+   "context": "library glyph: tomato",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "tomato",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "tomato (Counterscraps.otf U+0038)"
+  },
+  {
+   "id": "library.wine",
+   "fingerprint": "fp1-9538dac618291cca",
+   "continuity_key": "wine",
+   "serves": [
+    "library.wine"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "wine bottle and glass",
+   "context": "library glyph: wine bottle and glass",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "wine",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "wine bottle and glass (Counterscraps.otf U+0039)"
+  },
+  {
+   "id": "library.banana",
+   "fingerprint": "fp1-b0a200c0690e946b",
+   "continuity_key": "banana",
+   "serves": [
+    "library.banana"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "banana",
+   "context": "library glyph: banana",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "banana",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "banana (Counterscraps.otf U+0041)"
+  },
+  {
+   "id": "library.beetroot",
+   "fingerprint": "fp1-515f63adc29cd910",
+   "continuity_key": "beetroot",
+   "serves": [
+    "library.beetroot"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "beetroot",
+   "context": "library glyph: beetroot",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "beetroot",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "beetroot (Counterscraps.otf U+0042)"
+  },
+  {
+   "id": "library.strawberry",
+   "fingerprint": "fp1-e53891d2cf1b01af",
+   "continuity_key": "strawberry",
+   "serves": [
+    "library.strawberry"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "strawberry",
+   "context": "library glyph: strawberry",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "strawberry",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "strawberry (Counterscraps.otf U+0043)"
+  },
+  {
+   "id": "library.blender",
+   "fingerprint": "fp1-ff0e664894952394",
+   "continuity_key": "blender",
+   "serves": [
+    "library.blender"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "blender",
+   "context": "library glyph: blender",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "blender",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "blender (Counterscraps.otf U+0044)"
+  },
+  {
+   "id": "library.milk_jug",
+   "fingerprint": "fp1-35b2336d8f321a6c",
+   "continuity_key": "milk_jug",
+   "serves": [
+    "library.milk_jug"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "milk jug",
+   "context": "library glyph: milk jug",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "milk_jug",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "milk jug (Counterscraps.otf U+0045)"
+  },
+  {
+   "id": "library.bread",
+   "fingerprint": "fp1-acaceceed84eda5d",
+   "continuity_key": "bread",
+   "serves": [
+    "library.bread"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "loaf of bread",
+   "context": "library glyph: loaf of bread",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "bread",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "loaf of bread (Counterscraps.otf U+0046)"
+  },
+  {
+   "id": "library.broccoli",
+   "fingerprint": "fp1-5d3dc25f515b15e8",
+   "continuity_key": "broccoli",
+   "serves": [
+    "library.broccoli"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "broccoli",
+   "context": "library glyph: broccoli",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "broccoli",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "broccoli (Counterscraps.otf U+0047)"
+  },
+  {
+   "id": "library.cake",
+   "fingerprint": "fp1-f396b57a9e9441e2",
+   "continuity_key": "cake",
+   "serves": [
+    "library.cake"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "slice of cake",
+   "context": "library glyph: slice of cake",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "cake",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "slice of cake (Counterscraps.otf U+0048)"
+  },
+  {
+   "id": "library.whisk",
+   "fingerprint": "fp1-4da0601923788fe4",
+   "continuity_key": "whisk",
+   "serves": [
+    "library.whisk"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "whisk",
+   "context": "library glyph: whisk",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "whisk",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "whisk (Counterscraps.otf U+0049)"
+  },
+  {
+   "id": "library.carrot",
+   "fingerprint": "fp1-ba60a4939f4d23aa",
+   "continuity_key": "carrot",
+   "serves": [
+    "library.carrot"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "carrot",
+   "context": "library glyph: carrot",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "carrot",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "carrot (Counterscraps.otf U+004A)"
+  },
+  {
+   "id": "library.celery",
+   "fingerprint": "fp1-c2f6daadcdac7a1a",
+   "continuity_key": "celery",
+   "serves": [
+    "library.celery"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "celery",
+   "context": "library glyph: celery",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "celery",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "celery (Counterscraps.otf U+004B)"
+  },
+  {
+   "id": "library.cheese",
+   "fingerprint": "fp1-fd10194e615a6a17",
+   "continuity_key": "cheese",
+   "serves": [
+    "library.cheese"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "cheese",
+   "context": "library glyph: cheese",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "cheese",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "cheese (Counterscraps.otf U+004C)"
+  },
+  {
+   "id": "library.cleaver",
+   "fingerprint": "fp1-57780f45fb5185c8",
+   "continuity_key": "cleaver",
+   "serves": [
+    "library.cleaver"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "cleaver",
+   "context": "library glyph: cleaver",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "cleaver",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "cleaver (Counterscraps.otf U+004D)"
+  },
+  {
+   "id": "library.orange",
+   "fingerprint": "fp1-6bb778414cb3410c",
+   "continuity_key": "orange",
+   "serves": [
+    "library.orange"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "orange slice",
+   "context": "library glyph: orange slice",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "orange",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "orange slice (Counterscraps.otf U+004E)"
+  },
+  {
+   "id": "library.ice_cream",
+   "fingerprint": "fp1-9ecfb94c2c1d05ad",
+   "continuity_key": "ice_cream",
+   "serves": [
+    "library.ice_cream"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "ice cream cone",
+   "context": "library glyph: ice cream cone",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "ice_cream",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "ice cream cone (Counterscraps.otf U+004F)"
+  },
+  {
+   "id": "library.cucumber",
+   "fingerprint": "fp1-01cb1b903fdc11b3",
+   "continuity_key": "cucumber",
+   "serves": [
+    "library.cucumber"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "cucumber",
+   "context": "library glyph: cucumber",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "cucumber",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "cucumber (Counterscraps.otf U+0050)"
+  },
+  {
+   "id": "library.coffee_mug",
+   "fingerprint": "fp1-d779ece680ef1250",
+   "continuity_key": "coffee_mug",
+   "serves": [
+    "library.coffee_mug"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "coffee mug",
+   "context": "library glyph: coffee mug",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "coffee_mug",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "coffee mug (Counterscraps.otf U+0051)"
+  },
+  {
+   "id": "library.sundae",
+   "fingerprint": "fp1-106803ec9168dc34",
+   "continuity_key": "sundae",
+   "serves": [
+    "library.sundae"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "sundae",
+   "context": "library glyph: sundae",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "sundae",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "sundae (Counterscraps.otf U+0052)"
+  },
+  {
+   "id": "library.chicken_leg",
+   "fingerprint": "fp1-278f8b13ab8e9c4f",
+   "continuity_key": "chicken_leg",
+   "serves": [
+    "library.chicken_leg"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "chicken leg",
+   "context": "library glyph: chicken leg",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "chicken_leg",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "chicken leg (Counterscraps.otf U+0053)"
+  },
+  {
+   "id": "library.drumstick",
+   "fingerprint": "fp1-70472bc7fa99fc80",
+   "continuity_key": "drumstick",
+   "serves": [
+    "library.drumstick"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "drumstick",
+   "context": "library glyph: drumstick",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "drumstick",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "drumstick (Counterscraps.otf U+0054)"
+  },
+  {
+   "id": "library.egg",
+   "fingerprint": "fp1-e37626a43dcc6a1c",
+   "continuity_key": "egg",
+   "serves": [
+    "library.egg"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "egg in a cup",
+   "context": "library glyph: egg in a cup",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "egg",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "egg in a cup (Counterscraps.otf U+0055)"
+  },
+  {
+   "id": "library.fish",
+   "fingerprint": "fp1-4422197c815fe098",
+   "continuity_key": "fish",
+   "serves": [
+    "library.fish"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "fish",
+   "context": "library glyph: fish",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "fish",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "fish (Counterscraps.otf U+0056)"
+  },
+  {
+   "id": "library.flour_sack",
+   "fingerprint": "fp1-220b95ecb4200125",
+   "continuity_key": "flour_sack",
+   "serves": [
+    "library.flour_sack"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "flour sack",
+   "context": "library glyph: flour sack",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "flour_sack",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "flour sack (Counterscraps.otf U+0057)"
+  },
+  {
+   "id": "library.food_processor",
+   "fingerprint": "fp1-0f4731b944ca1c7d",
+   "continuity_key": "food_processor",
+   "serves": [
+    "library.food_processor"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "food processor",
+   "context": "library glyph: food processor",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "food_processor",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "food processor (Counterscraps.otf U+0058)"
+  },
+  {
+   "id": "library.fried_egg",
+   "fingerprint": "fp1-e258c27d808bd7f7",
+   "continuity_key": "fried_egg",
+   "serves": [
+    "library.fried_egg"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "fried egg",
+   "context": "library glyph: fried egg",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "fried_egg",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "fried egg (Counterscraps.otf U+005A)"
+  },
+  {
+   "id": "library.garlic",
+   "fingerprint": "fp1-3328937a4e795663",
+   "continuity_key": "garlic",
+   "serves": [
+    "library.garlic"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "garlic",
+   "context": "library glyph: garlic",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "garlic",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "garlic (Counterscraps.otf U+0062)"
+  },
+  {
+   "id": "library.grapes",
+   "fingerprint": "fp1-094c4f62672079ca",
+   "continuity_key": "grapes",
+   "serves": [
+    "library.grapes"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "grapes",
+   "context": "library glyph: grapes",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "grapes",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "grapes (Counterscraps.otf U+0063)"
+  },
+  {
+   "id": "library.chili",
+   "fingerprint": "fp1-9bf0ab57654ba8b8",
+   "continuity_key": "chili",
+   "serves": [
+    "library.chili"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "chili pepper",
+   "context": "library glyph: chili pepper",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "chili",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "chili pepper (Counterscraps.otf U+0064)"
+  },
+  {
+   "id": "library.kettle",
+   "fingerprint": "fp1-56dc3f425f1581fd",
+   "continuity_key": "kettle",
+   "serves": [
+    "library.kettle"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "kettle",
+   "context": "library glyph: kettle",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "kettle",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "kettle (Counterscraps.otf U+0065)"
+  },
+  {
+   "id": "library.lemon",
+   "fingerprint": "fp1-c832ee5db5fdfad6",
+   "continuity_key": "lemon",
+   "serves": [
+    "library.lemon"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "lemon",
+   "context": "library glyph: lemon",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "lemon",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "lemon (Counterscraps.otf U+0067)"
+  },
+  {
+   "id": "library.eggplant",
+   "fingerprint": "fp1-e2fbb252d7b21d37",
+   "continuity_key": "eggplant",
+   "serves": [
+    "library.eggplant"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "eggplant",
+   "context": "library glyph: eggplant",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "eggplant",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "eggplant (Counterscraps.otf U+0068)"
+  },
+  {
+   "id": "library.bowl",
+   "fingerprint": "fp1-037878f31b7a74ba",
+   "continuity_key": "bowl",
+   "serves": [
+    "library.bowl"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "bowl",
+   "context": "library glyph: bowl",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "bowl",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "bowl (Counterscraps.otf U+0069)"
+  },
+  {
+   "id": "library.milk_carton",
+   "fingerprint": "fp1-da99f7c97e92c3a3",
+   "continuity_key": "milk_carton",
+   "serves": [
+    "library.milk_carton"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "milk carton and glass",
+   "context": "library glyph: milk carton and glass",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "milk_carton",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "milk carton and glass (Counterscraps.otf U+006A)"
+  },
+  {
+   "id": "library.muffin",
+   "fingerprint": "fp1-ad333318e79db37b",
+   "continuity_key": "muffin",
+   "serves": [
+    "library.muffin"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "muffin",
+   "context": "library glyph: muffin",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "muffin",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "muffin (Counterscraps.otf U+006C)"
+  },
+  {
+   "id": "library.mushrooms",
+   "fingerprint": "fp1-411e8e44444c2470",
+   "continuity_key": "mushrooms",
+   "serves": [
+    "library.mushrooms"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "mushrooms",
+   "context": "library glyph: mushrooms",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "mushrooms",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "mushrooms (Counterscraps.otf U+006D)"
+  },
+  {
+   "id": "library.microwave",
+   "fingerprint": "fp1-c3500139abb8f0dd",
+   "continuity_key": "microwave",
+   "serves": [
+    "library.microwave"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "microwave oven",
+   "context": "library glyph: microwave oven",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "microwave",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "microwave oven (Counterscraps.otf U+006E)"
+  },
+  {
+   "id": "library.onion",
+   "fingerprint": "fp1-739aa98e768fc735",
+   "continuity_key": "onion",
+   "serves": [
+    "library.onion"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "onion",
+   "context": "library glyph: onion",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "onion",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "onion (Counterscraps.otf U+006F)"
+  },
+  {
+   "id": "library.peach",
+   "fingerprint": "fp1-823e458933839413",
+   "continuity_key": "peach",
+   "serves": [
+    "library.peach"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "peach",
+   "context": "library glyph: peach",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "peach",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "peach (Counterscraps.otf U+0070)"
+  },
+  {
+   "id": "library.pear",
+   "fingerprint": "fp1-20b018623dac6536",
+   "continuity_key": "pear",
+   "serves": [
+    "library.pear"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "pear",
+   "context": "library glyph: pear",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "pear",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "pear (Counterscraps.otf U+0071)"
+  },
+  {
+   "id": "library.peas",
+   "fingerprint": "fp1-6808242601cab685",
+   "continuity_key": "peas",
+   "serves": [
+    "library.peas"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "pea pod",
+   "context": "library glyph: pea pod",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "peas",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "pea pod (Counterscraps.otf U+0072)"
+  },
+  {
+   "id": "library.bell_pepper",
+   "fingerprint": "fp1-7af66cfa7303b5a5",
+   "continuity_key": "bell_pepper",
+   "serves": [
+    "library.bell_pepper"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "bell pepper",
+   "context": "library glyph: bell pepper",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "bell_pepper",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "bell pepper (Counterscraps.otf U+0073)"
+  },
+  {
+   "id": "library.coffee_maker",
+   "fingerprint": "fp1-2d4330cbb9aa92e1",
+   "continuity_key": "coffee_maker",
+   "serves": [
+    "library.coffee_maker"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "coffee maker",
+   "context": "library glyph: coffee maker",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "coffee_maker",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "coffee maker (Counterscraps.otf U+0074)"
+  },
+  {
+   "id": "library.pie",
+   "fingerprint": "fp1-7a0fec0697e307ee",
+   "continuity_key": "pie",
+   "serves": [
+    "library.pie"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "pie",
+   "context": "library glyph: pie",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "pie",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "pie (Counterscraps.otf U+0075)"
+  },
+  {
+   "id": "library.pineapple",
+   "fingerprint": "fp1-e48c2586a8d6d061",
+   "continuity_key": "pineapple",
+   "serves": [
+    "library.pineapple"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "pineapple",
+   "context": "library glyph: pineapple",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "pineapple",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "pineapple (Counterscraps.otf U+0076)"
+  },
+  {
+   "id": "library.soup_pot",
+   "fingerprint": "fp1-a975a70ed2538da9",
+   "continuity_key": "soup_pot",
+   "serves": [
+    "library.soup_pot"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "pot of soup",
+   "context": "library glyph: pot of soup",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "soup_pot",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "pot of soup (Counterscraps.otf U+0077)"
+  },
+  {
+   "id": "library.roast",
+   "fingerprint": "fp1-91b4d134df626aa4",
+   "continuity_key": "roast",
+   "serves": [
+    "library.roast"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "roast leg",
+   "context": "library glyph: roast leg",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "roast",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "roast leg (Counterscraps.otf U+0078)"
+  },
+  {
+   "id": "library.salad_bowl",
+   "fingerprint": "fp1-d25620dae4fbbdc8",
+   "continuity_key": "salad_bowl",
+   "serves": [
+    "library.salad_bowl"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "salad bowl",
+   "context": "library glyph: salad bowl",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "salad_bowl",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "salad bowl (Counterscraps.otf U+0079)"
+  },
+  {
+   "id": "library.sandwich",
+   "fingerprint": "fp1-fdffe1254d9fd8c5",
+   "continuity_key": "sandwich",
+   "serves": [
+    "library.sandwich"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "sandwich",
+   "context": "library glyph: sandwich",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the Counterscraps.otf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "sandwich",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "sandwich (Counterscraps.otf U+007A)"
+  }
+ ]
+}

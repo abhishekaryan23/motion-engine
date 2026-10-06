@@ -1,0 +1,11 @@
+{
+  "version": "0.2",
+  "title": "small_business_day",
+  "format": "vertical",
+  "beats": [
+    { "purpose": "emphasize", "statement": "Your day starts before the shop opens", "primary": { "kind": "object", "asset": "clock", "meaning": "an early start" }, "energy": "calm" },
+    { "purpose": "emphasize", "statement": "Orders arrive from across the world", "primary": { "kind": "object", "asset": "globe", "meaning": "worldwide orders" }, "energy": "building" },
+    { "purpose": "emphasize", "statement": "Every payment needs to stay secure", "primary": { "kind": "object", "asset": "padlock", "meaning": "secure payments" }, "energy": "building" },
+    { "purpose": "reveal", "statement": "Fresh bread still sells out first", "primary": { "kind": "object", "asset": "bread", "meaning": "the bestseller" }, "energy": "impact" }
+  ]
+}

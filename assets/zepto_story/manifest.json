@@ -1,0 +1,59 @@
+{
+  "version": "0.1",
+  "assets": [
+    {
+      "id": "beat_1.hero_object",
+      "path": "cutout_b1_bag.png",
+      "width": 1024,
+      "height": 1024,
+      "alpha": true,
+      "subject_anchor": { "x": 0.5, "y": 0.5 },
+      "serves": ["cutout_b1_bag", "zepto_bag", "beat_1.hero_object"]
+    },
+    {
+      "id": "beat_2.hero_object",
+      "path": "cutout_b2_prefix.png",
+      "width": 1024,
+      "height": 1024,
+      "alpha": true,
+      "subject_anchor": { "x": 0.5, "y": 0.5 },
+      "serves": ["cutout_b2_prefix", "scientific_prefix", "beat_2.hero_object"]
+    },
+    {
+      "id": "beat_3.hero_object",
+      "path": "cutout_b3_kiranakart.png",
+      "width": 1024,
+      "height": 1024,
+      "alpha": true,
+      "subject_anchor": { "x": 0.5, "y": 0.5 },
+      "serves": ["cutout_b3_kiranakart", "kiranakart_pivot", "beat_3.hero_object"]
+    },
+    {
+      "id": "beat_4.hero_object",
+      "path": "cutout_b4_timer.png",
+      "width": 1024,
+      "height": 1024,
+      "alpha": true,
+      "subject_anchor": { "x": 0.5, "y": 0.5 },
+      "serves": ["cutout_b4_timer", "retention_timer", "beat_4.hero_object"]
+    },
+    {
+      "id": "beat_5.hero_object",
+      "path": "cutout_b5_darkstore.png",
+      "width": 1024,
+      "height": 1024,
+      "alpha": true,
+      "subject_anchor": { "x": 0.5, "y": 0.5 },
+      "serves": ["cutout_b5_darkstore", "dark_stores_network", "beat_5.hero_object"]
+    },
+    {
+      "id": "beat_6.hero_object",
+      "path": "cutout_b6_speedometer.png",
+      "width": 1024,
+      "height": 1024,
+      "alpha": true,
+      "subject_anchor": { "x": 0.5, "y": 0.5 },
+      "serves": ["cutout_b6_speedometer", "orders_speedometer", "beat_6.hero_object"]
+    }
+  ]
+}

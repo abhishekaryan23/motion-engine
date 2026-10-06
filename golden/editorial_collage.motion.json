@@ -1,0 +1,661 @@
+{
+  "version": "0.2",
+  "project": {
+    "name": "editorial_collage",
+    "duration_seconds": 4.72
+  },
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "background": "#ECE3D2"
+  },
+  "theme": {
+    "fonts": {
+      "display": "font.archivo_black",
+      "display_condensed": "font.anton",
+      "serif_emotional": "font.dm_serif_italic",
+      "body": "font.fira_sans",
+      "mono": "font.space_mono",
+      "number": "font.anton"
+    },
+    "palette": {
+      "accent": "#233FD1",
+      "card": "#F6F1E6",
+      "ink": "#171513",
+      "muted": "#6F665A",
+      "on_accent": "#F6F1E6",
+      "paper": "#ECE3D2"
+    }
+  },
+  "assets": [
+    {
+      "id": "font.anton",
+      "type": "font",
+      "path": "fonts/Anton-Regular.ttf"
+    },
+    {
+      "id": "font.archivo_black",
+      "type": "font",
+      "path": "fonts/ArchivoBlack-Regular.ttf"
+    },
+    {
+      "id": "font.dm_serif",
+      "type": "font",
+      "path": "fonts/DMSerifDisplay-Regular.ttf"
+    },
+    {
+      "id": "font.dm_serif_italic",
+      "type": "font",
+      "path": "fonts/DMSerifDisplay-Italic.ttf"
+    },
+    {
+      "id": "font.fira_sans",
+      "type": "font",
+      "path": "fonts/FiraSans-Regular.ttf"
+    },
+    {
+      "id": "font.fira_sans_semibold",
+      "type": "font",
+      "path": "fonts/FiraSans-SemiBold.ttf"
+    },
+    {
+      "id": "font.space_mono",
+      "type": "font",
+      "path": "fonts/SpaceMono-Regular.ttf"
+    },
+    {
+      "id": "font.space_mono_bold",
+      "type": "font",
+      "path": "fonts/SpaceMono-Bold.ttf"
+    }
+  ],
+  "asset_root": "../assets",
+  "scenes": [
+    {
+      "id": "backdrop",
+      "start_seconds": 0.0,
+      "duration_seconds": 4.72,
+      "layers": [
+        {
+          "id": "backdrop.paper",
+          "x": 0.0,
+          "y": 0.0,
+          "width": 1080.0,
+          "height": 1920.0,
+          "scale_x": 1.0,
+          "scale_y": 1.0,
+          "rotation_degrees": 0.0,
+          "anchor_x": 0.0,
+          "anchor_y": 0.0,
+          "opacity": 1.0,
+          "z_index": 0,
+          "visible": true,
+          "type": "texture",
+          "material": "paper",
+          "seed": 8865707873606744473,
+          "color": "#ECE3D2",
+          "intensity": 0.55,
+          "scale": 8.0
+        },
+        {
+          "id": "backdrop.grain",
+          "x": 0.0,
+          "y": 0.0,
+          "width": 1080.0,
+          "height": 1920.0,
+          "scale_x": 1.0,
+          "scale_y": 1.0,
+          "rotation_degrees": 0.0,
+          "anchor_x": 0.0,
+          "anchor_y": 0.0,
+          "opacity": 1.0,
+          "z_index": 90,
+          "visible": true,
+          "type": "texture",
+          "material": "grain",
+          "seed": 923307860488072175,
+          "color": "#171513",
+          "intensity": 0.32,
+          "scale": 2.0,
+          "animated": true
+        }
+      ],
+      "motions": []
+    },
+    {
+      "id": "beat_1",
+      "start_seconds": 0.0,
+      "duration_seconds": 4.72,
+      "layers": [
+        {
+          "id": "b1.stage",
+          "x": 540.0,
+          "y": 960.0,
+          "width": 1080.0,
+          "height": 1920.0,
+          "scale_x": 1.0,
+          "scale_y": 1.0,
+          "rotation_degrees": 0.0,
+          "anchor_x": 0.5,
+          "anchor_y": 0.5,
+          "opacity": 1.0,
+          "z_index": 10,
+          "visible": true,
+          "type": "group",
+          "children": [
+            {
+              "id": "b1.ghost",
+              "x": -54.0,
+              "y": 918.9824,
+              "width": 1379.0,
+              "height": 466.03513,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 0,
+              "visible": true,
+              "type": "text",
+              "text": "CURFEW",
+              "font_role": "display_condensed",
+              "font_size": 466.04,
+              "font_weight": 400,
+              "italic": false,
+              "color": "#1715130E",
+              "align": "left",
+              "line_height": 1.0,
+              "letter_spacing": -0.01,
+              "uppercase": false
+            },
+            {
+              "id": "b1.head.0",
+              "x": 84.0,
+              "y": 384.0,
+              "width": 462.27362,
+              "height": 129.34299,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 20,
+              "visible": true,
+              "type": "text",
+              "text": "QUIET",
+              "font_role": "display",
+              "font_size": 131.98,
+              "font_weight": 900,
+              "italic": false,
+              "color": "#171513",
+              "align": "left",
+              "line_height": 0.98,
+              "letter_spacing": -0.02,
+              "uppercase": false
+            },
+            {
+              "id": "b1.head.1",
+              "x": 84.0,
+              "y": 513.343,
+              "width": 673.76526,
+              "height": 129.34299,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 20,
+              "visible": true,
+              "type": "text",
+              "text": "STREETS",
+              "font_role": "display",
+              "font_size": 131.98,
+              "font_weight": 900,
+              "italic": false,
+              "color": "#171513",
+              "align": "left",
+              "line_height": 0.98,
+              "letter_spacing": -0.02,
+              "uppercase": false
+            },
+            {
+              "id": "b1.head.2",
+              "x": 84.0,
+              "y": 642.686,
+              "width": 932.24,
+              "height": 129.34299,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 20,
+              "visible": true,
+              "type": "text",
+              "text": "AFTER NINE.",
+              "font_role": "display",
+              "font_size": 131.98,
+              "font_weight": 900,
+              "italic": false,
+              "color": "#171513",
+              "align": "left",
+              "line_height": 0.98,
+              "letter_spacing": -0.02,
+              "uppercase": false
+            },
+            {
+              "id": "b1.hero.halftone",
+              "x": 13.0,
+              "y": 799.02893,
+              "width": 847.8,
+              "height": 408.59998,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 8,
+              "visible": true,
+              "type": "texture",
+              "material": "halftone",
+              "seed": 2310919525779120011,
+              "color": "#233FD1",
+              "intensity": 0.95,
+              "scale": 15.0
+            },
+            {
+              "id": "b1.hero.card",
+              "x": 540.0,
+              "y": 1074.0289,
+              "width": 942.0,
+              "height": 454.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": -2.2,
+              "anchor_x": 0.5,
+              "anchor_y": 0.5,
+              "opacity": 1.0,
+              "z_index": 10,
+              "visible": true,
+              "type": "rounded_rectangle",
+              "fill": "#F6F1E6",
+              "radius": 10.0,
+              "stroke": {
+                "color": "#17151322",
+                "width": 2.0
+              }
+            },
+            {
+              "id": "b1.hero.after_nine",
+              "x": 540.0,
+              "y": 1074.0289,
+              "width": 718.8144,
+              "height": 384.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.5,
+              "anchor_y": 0.5,
+              "opacity": 1.0,
+              "z_index": 22,
+              "visible": true,
+              "type": "text",
+              "text": "AFTER\nNINE",
+              "font_role": "display",
+              "font_size": 195.92,
+              "font_weight": 900,
+              "italic": false,
+              "color": "#171513",
+              "align": "center",
+              "line_height": 0.98,
+              "letter_spacing": -0.02,
+              "uppercase": false,
+              "ink": {
+                "top": 26.655487,
+                "bottom": 353.43674
+              }
+            },
+            {
+              "id": "b1.hero_rule",
+              "x": 84.0,
+              "y": 1328.0289,
+              "width": 140.0,
+              "height": 5.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 26,
+              "visible": true,
+              "type": "rectangle",
+              "fill": "#233FD1"
+            },
+            {
+              "id": "b1.serif.0",
+              "x": 84.0,
+              "y": 1376.0289,
+              "width": 576.05597,
+              "height": 90.72,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 20,
+              "visible": true,
+              "type": "text",
+              "text": "shops shut early",
+              "font_role": "serif_emotional",
+              "font_size": 84.0,
+              "font_weight": 400,
+              "italic": true,
+              "color": "#171513",
+              "align": "left",
+              "line_height": 1.08,
+              "letter_spacing": -0.01,
+              "uppercase": false
+            },
+            {
+              "id": "b1.serif_rule",
+              "x": 84.0,
+              "y": 1480.7489,
+              "width": 562.8,
+              "height": 9.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 26,
+              "visible": true,
+              "type": "rectangle",
+              "fill": "#233FD1"
+            },
+            {
+              "id": "b1.kicker",
+              "x": 84.0,
+              "y": 201.59999,
+              "width": 250.8392,
+              "height": 36.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 30,
+              "visible": true,
+              "type": "text",
+              "text": "01 — CURFEW",
+              "font_role": "mono",
+              "font_size": 30.0,
+              "font_weight": 400,
+              "italic": false,
+              "color": "#171513",
+              "align": "left",
+              "line_height": 1.2,
+              "letter_spacing": 0.14,
+              "uppercase": false
+            },
+            {
+              "id": "b1.kicker_rule",
+              "x": 84.0,
+              "y": 251.59999,
+              "width": 96.0,
+              "height": 7.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 31,
+              "visible": true,
+              "type": "rectangle",
+              "fill": "#233FD1"
+            }
+          ]
+        }
+      ],
+      "motions": [
+        {
+          "target": "b1.ghost",
+          "start": 0.25,
+          "duration": 1.2,
+          "easing": "in_out_cubic",
+          "op": "fade",
+          "from": 0.0,
+          "to": 1.0
+        },
+        {
+          "target": "b1.ghost",
+          "start": 0.0,
+          "duration": 4.72,
+          "easing": "linear",
+          "op": "move",
+          "from": [
+            46.0,
+            0.0
+          ],
+          "to": [
+            -46.0,
+            0.0
+          ]
+        },
+        {
+          "target": "b1.head.0",
+          "start": 0.35,
+          "duration": 1.271,
+          "easing": "out_cubic",
+          "op": "mask_reveal",
+          "direction": "right",
+          "mode": "reveal"
+        },
+        {
+          "target": "b1.head.0",
+          "start": 0.35,
+          "duration": 1.502,
+          "easing": "in_out_cubic",
+          "op": "move",
+          "from": [
+            0.0,
+            4.5
+          ],
+          "to": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "target": "b1.head.1",
+          "start": 0.55,
+          "duration": 1.271,
+          "easing": "out_cubic",
+          "op": "mask_reveal",
+          "direction": "right",
+          "mode": "reveal"
+        },
+        {
+          "target": "b1.head.1",
+          "start": 0.55,
+          "duration": 1.502,
+          "easing": "in_out_cubic",
+          "op": "move",
+          "from": [
+            0.0,
+            4.5
+          ],
+          "to": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "target": "b1.head.2",
+          "start": 0.717,
+          "duration": 1.271,
+          "easing": "out_cubic",
+          "op": "mask_reveal",
+          "direction": "right",
+          "mode": "reveal"
+        },
+        {
+          "target": "b1.head.2",
+          "start": 0.717,
+          "duration": 1.502,
+          "easing": "in_out_cubic",
+          "op": "move",
+          "from": [
+            0.0,
+            4.5
+          ],
+          "to": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "target": "b1.hero.halftone",
+          "start": 1.21,
+          "duration": 0.9,
+          "easing": "out_cubic",
+          "op": "mask_reveal",
+          "direction": "down",
+          "mode": "reveal"
+        },
+        {
+          "target": "b1.hero.card",
+          "start": 1.29,
+          "duration": 0.75,
+          "easing": "out_quint",
+          "op": "mask_reveal",
+          "direction": "up",
+          "mode": "reveal"
+        },
+        {
+          "target": "b1.hero.card",
+          "start": 1.29,
+          "duration": 1.2,
+          "easing": "out_cubic",
+          "op": "rotate",
+          "from": -1.1,
+          "to": 0.0
+        },
+        {
+          "target": "b1.hero.after_nine",
+          "start": 1.41,
+          "duration": 0.693,
+          "easing": "out_cubic",
+          "op": "fade",
+          "from": 0.0,
+          "to": 1.0
+        },
+        {
+          "target": "b1.hero.after_nine",
+          "start": 1.41,
+          "duration": 1.155,
+          "easing": "out_cubic",
+          "op": "move",
+          "from": [
+            0.0,
+            18.0
+          ],
+          "to": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "target": "b1.hero_rule",
+          "start": 3.646,
+          "duration": 0.7,
+          "easing": "out_quint",
+          "op": "mask_reveal",
+          "direction": "right",
+          "mode": "reveal"
+        },
+        {
+          "target": "b1.serif.0",
+          "start": 2.93,
+          "duration": 0.809,
+          "easing": "out_cubic",
+          "op": "fade",
+          "from": 0.0,
+          "to": 1.0
+        },
+        {
+          "target": "b1.serif.0",
+          "start": 2.93,
+          "duration": 1.155,
+          "easing": "out_cubic",
+          "op": "move",
+          "from": [
+            0.0,
+            9.0
+          ],
+          "to": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "target": "b1.serif_rule",
+          "start": 3.646,
+          "duration": 0.7,
+          "easing": "out_quint",
+          "op": "mask_reveal",
+          "direction": "right",
+          "mode": "reveal"
+        },
+        {
+          "target": "b1.kicker",
+          "start": 0.25,
+          "duration": 1.04,
+          "easing": "out_cubic",
+          "op": "clip_reveal",
+          "direction": "up",
+          "mode": "reveal"
+        },
+        {
+          "target": "b1.kicker_rule",
+          "start": 0.37,
+          "duration": 0.6,
+          "easing": "out_cubic",
+          "op": "mask_reveal",
+          "direction": "right",
+          "mode": "reveal"
+        }
+      ],
+      "camera": {
+        "motions": [
+          {
+            "start": 0.0,
+            "duration": 4.72,
+            "easing": "linear",
+            "op": "push",
+            "from": 1.0,
+            "to": 1.0225
+          }
+        ]
+      },
+      "lifecycle": {
+        "enter": 0.25,
+        "settle": 1.423,
+        "read": 1.71,
+        "evolve": 2.93,
+        "anticipate": 4.362,
+        "bridge": 4.72
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+[workspace]
+resolver = "2"
+members = ["crates/motion-core", "crates/motion-render", "crates/motion-voice", "crates/motion-cli", "crates/motion-mcp", "crates/motion-mcp/eval"]
+
+[workspace.package]
+version = "0.2.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+
+[workspace.dependencies]
+motion-core = { path = "crates/motion-core" }
+motion-render = { path = "crates/motion-render" }
+motion-voice = { path = "crates/motion-voice" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+anyhow = "1"
+resvg = "0.48"
+cosmic-text = "0.19"
+rayon = "1.12"
+clap = { version = "4.6", features = ["derive"] }
+pathdiff = "0.2"
+schemars = "1.2"
+jsonschema = { version = "0.58", default-features = false }
+sha2 = "0.10"
+crc32fast = "1"
+
+[profile.dev.package."*"]
+opt-level = 2

@@ -1,0 +1,47 @@
+{
+  "beats": [
+    {
+      "continuity": "none",
+      "energy": "building",
+      "narration": "Warren Buffett is sitting on 381 billion dollars in cash.",
+      "primary": {
+        "kind": "number",
+        "meaning": "cash reserves",
+        "value": "$381B"
+      },
+      "purpose": "emphasize",
+      "secondary": {
+        "asset": "money_stack",
+        "kind": "object"
+      },
+      "statement": "Buffett's cash pile"
+    },
+    {
+      "continuity": "none",
+      "energy": "calm",
+      "keyword": "selloff",
+      "narration": "He has been selling stocks for three straight years now.",
+      "primary": {
+        "kind": "number",
+        "value": "36 months"
+      },
+      "purpose": "emphasize",
+      "statement": "selloff"
+    },
+    {
+      "continuity": "none",
+      "energy": "impact",
+      "narration": "That is the biggest cash pile any company has ever held.",
+      "primary": {
+        "kind": "number",
+        "meaning": "record",
+        "value": "#1"
+      },
+      "purpose": "reveal",
+      "statement": "That is the biggest cash pile…"
+    }
+  ],
+  "format": "vertical",
+  "title": "buffett_cash",
+  "version": "0.2"
+}

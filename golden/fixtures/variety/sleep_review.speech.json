@@ -1,0 +1,411 @@
+{
+  "version": "0.1",
+  "audio": "sleep_review.voice.wav",
+  "sample_rate": 48000,
+  "duration": 26.8671875,
+  "provider": "macos_say",
+  "model": "macos/say",
+  "voice": "Daniel",
+  "words": [
+    {
+      "text": "Every",
+      "start": 0.35,
+      "end": 1.04,
+      "confidence": 0.9
+    },
+    {
+      "text": "night",
+      "start": 1.04,
+      "end": 1.1600000000000001,
+      "confidence": 0.9
+    },
+    {
+      "text": "while",
+      "start": 1.3599999999999999,
+      "end": 1.92,
+      "confidence": 0.9
+    },
+    {
+      "text": "you",
+      "start": 1.92,
+      "end": 2.18,
+      "confidence": 0.7
+    },
+    {
+      "text": "sleep",
+      "start": 2.23,
+      "end": 2.45,
+      "confidence": 0.7
+    },
+    {
+      "text": "your",
+      "start": 2.45,
+      "end": 2.7,
+      "confidence": 0.9
+    },
+    {
+      "text": "brain",
+      "start": 2.7,
+      "end": 3.0300000000000002,
+      "confidence": 0.7
+    },
+    {
+      "text": "quietly",
+      "start": 3.0300000000000002,
+      "end": 3.5497361111111108,
+      "confidence": 0.9
+    },
+    {
+      "text": "runs",
+      "start": 3.5497361111111108,
+      "end": 3.94,
+      "confidence": 0.5
+    },
+    {
+      "text": "a",
+      "start": 3.94,
+      "end": 4.15,
+      "confidence": 0.7
+    },
+    {
+      "text": "cleaning",
+      "start": 4.15,
+      "end": 4.654406911375661,
+      "confidence": 0.9
+    },
+    {
+      "text": "cycle",
+      "start": 4.654406911375661,
+      "end": 5.149604166666666,
+      "confidence": 0.5
+    },
+    {
+      "text": "During",
+      "start": 5.399604166666666,
+      "end": 5.8896041666666665,
+      "confidence": 0.9
+    },
+    {
+      "text": "deep",
+      "start": 5.8896041666666665,
+      "end": 6.0996041666666665,
+      "confidence": 0.7
+    },
+    {
+      "text": "sleep",
+      "start": 6.0996041666666665,
+      "end": 6.401564544989775,
+      "confidence": 0.9
+    },
+    {
+      "text": "waste",
+      "start": 6.401564544989775,
+      "end": 6.499604166666666,
+      "confidence": 0.5
+    },
+    {
+      "text": "is",
+      "start": 6.677967407975459,
+      "end": 6.954370270961144,
+      "confidence": 0.5
+    },
+    {
+      "text": "flushed",
+      "start": 6.954370270961144,
+      "end": 7.403524923312883,
+      "confidence": 0.5
+    },
+    {
+      "text": "out",
+      "start": 7.403524923312883,
+      "end": 7.679927786298567,
+      "confidence": 0.5
+    },
+    {
+      "text": "about",
+      "start": 7.679927786298567,
+      "end": 8.129082438650306,
+      "confidence": 0.5
+    },
+    {
+      "text": "sixty",
+      "start": 8.129082438650306,
+      "end": 8.578237091002043,
+      "confidence": 0.5
+    },
+    {
+      "text": "percent",
+      "start": 8.578237091002043,
+      "end": 9.027391743353782,
+      "confidence": 0.5
+    },
+    {
+      "text": "faster",
+      "start": 9.027391743353782,
+      "end": 9.47654639570552,
+      "confidence": 0.5
+    },
+    {
+      "text": "than",
+      "start": 9.47654639570552,
+      "end": 9.752949258691206,
+      "confidence": 0.5
+    },
+    {
+      "text": "when",
+      "start": 9.752949258691206,
+      "end": 10.02935212167689,
+      "confidence": 0.5
+    },
+    {
+      "text": "you",
+      "start": 10.02935212167689,
+      "end": 10.305754984662576,
+      "confidence": 0.5
+    },
+    {
+      "text": "are",
+      "start": 10.305754984662576,
+      "end": 10.582157847648261,
+      "confidence": 0.5
+    },
+    {
+      "text": "awake",
+      "start": 10.582157847648261,
+      "end": 11.031312499999999,
+      "confidence": 0.5
+    },
+    {
+      "text": "Adults",
+      "start": 11.2913125,
+      "end": 11.741162467700258,
+      "confidence": 0.9
+    },
+    {
+      "text": "need",
+      "start": 11.741162467700258,
+      "end": 11.9613125,
+      "confidence": 0.5
+    },
+    {
+      "text": "about",
+      "start": 11.9613125,
+      "end": 12.4613125,
+      "confidence": 0.7
+    },
+    {
+      "text": "seven",
+      "start": 12.4613125,
+      "end": 12.9513125,
+      "confidence": 0.9
+    },
+    {
+      "text": "hours",
+      "start": 12.9513125,
+      "end": 13.1413125,
+      "confidence": 0.9
+    },
+    {
+      "text": "but",
+      "start": 13.1413125,
+      "end": 13.2913125,
+      "confidence": 0.7
+    },
+    {
+      "text": "many",
+      "start": 13.501312500000001,
+      "end": 13.921204618863047,
+      "confidence": 0.9
+    },
+    {
+      "text": "of",
+      "start": 13.921204618863047,
+      "end": 14.1513125,
+      "confidence": 0.5
+    },
+    {
+      "text": "us",
+      "start": 14.1513125,
+      "end": 14.4313125,
+      "confidence": 0.7
+    },
+    {
+      "text": "get",
+      "start": 14.4313125,
+      "end": 14.7613125,
+      "confidence": 0.7
+    },
+    {
+      "text": "closer",
+      "start": 14.7613125,
+      "end": 15.171312499999999,
+      "confidence": 0.9
+    },
+    {
+      "text": "to",
+      "start": 15.171312499999999,
+      "end": 15.5213125,
+      "confidence": 0.9
+    },
+    {
+      "text": "five",
+      "start": 15.5213125,
+      "end": 15.755208333333332,
+      "confidence": 0.7
+    },
+    {
+      "text": "Those",
+      "start": 16.1963125,
+      "end": 16.4863125,
+      "confidence": 0.9
+    },
+    {
+      "text": "missing",
+      "start": 16.4863125,
+      "end": 17.2363125,
+      "confidence": 0.7
+    },
+    {
+      "text": "hours",
+      "start": 17.2663125,
+      "end": 17.546312500000003,
+      "confidence": 0.7
+    },
+    {
+      "text": "cost",
+      "start": 17.546312500000003,
+      "end": 17.91233168465228,
+      "confidence": 0.9
+    },
+    {
+      "text": "you",
+      "start": 17.91233168465228,
+      "end": 18.1963125,
+      "confidence": 0.5
+    },
+    {
+      "text": "memory",
+      "start": 18.1963125,
+      "end": 19.0963125,
+      "confidence": 0.7
+    },
+    {
+      "text": "mood",
+      "start": 19.0963125,
+      "end": 19.4263125,
+      "confidence": 0.9
+    },
+    {
+      "text": "focus",
+      "start": 19.4263125,
+      "end": 20.092139838129498,
+      "confidence": 0.7
+    },
+    {
+      "text": "and",
+      "start": 20.092139838129498,
+      "end": 20.46317101318945,
+      "confidence": 0.5
+    },
+    {
+      "text": "even",
+      "start": 20.46317101318945,
+      "end": 21.156312500000002,
+      "confidence": 0.5
+    },
+    {
+      "text": "your",
+      "start": 21.156312500000002,
+      "end": 21.296312500000003,
+      "confidence": 0.7
+    },
+    {
+      "text": "immune",
+      "start": 21.296312500000003,
+      "end": 22.040053507194244,
+      "confidence": 0.7
+    },
+    {
+      "text": "defence",
+      "start": 22.040053507194244,
+      "end": 22.642979166666667,
+      "confidence": 0.5
+    },
+    {
+      "text": "So",
+      "start": 22.882979166666665,
+      "end": 23.162979166666666,
+      "confidence": 0.9
+    },
+    {
+      "text": "tonight",
+      "start": 23.162979166666666,
+      "end": 23.562979166666665,
+      "confidence": 0.9
+    },
+    {
+      "text": "treat",
+      "start": 23.562979166666665,
+      "end": 23.88794592696629,
+      "confidence": 0.7
+    },
+    {
+      "text": "sleep",
+      "start": 23.88794592696629,
+      "end": 24.212979166666663,
+      "confidence": 0.5
+    },
+    {
+      "text": "as",
+      "start": 24.212979166666663,
+      "end": 24.292979166666665,
+      "confidence": 0.7
+    },
+    {
+      "text": "maintenance",
+      "start": 24.292979166666665,
+      "end": 25.072979166666666,
+      "confidence": 0.7
+    },
+    {
+      "text": "not",
+      "start": 25.072979166666666,
+      "end": 25.343415028089886,
+      "confidence": 0.9
+    },
+    {
+      "text": "laziness",
+      "start": 25.343415028089886,
+      "end": 25.967187499999998,
+      "confidence": 0.5
+    }
+  ],
+  "sentences": [
+    {
+      "beat": 0,
+      "start": 0.35,
+      "end": 5.149604166666666
+    },
+    {
+      "beat": 1,
+      "start": 5.399604166666666,
+      "end": 11.0313125
+    },
+    {
+      "beat": 2,
+      "start": 11.2913125,
+      "end": 15.755208333333334
+    },
+    {
+      "beat": 3,
+      "start": 16.1963125,
+      "end": 22.642979166666667
+    },
+    {
+      "beat": 4,
+      "start": 22.882979166666665,
+      "end": 25.9671875
+    }
+  ],
+  "alignment": "onset"
+}

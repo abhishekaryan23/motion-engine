@@ -1,0 +1,43 @@
+{
+  "version": "0.2",
+  "title": "storytelling",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "Editing is storytelling",
+      "narration": "Editing is not just cutting clips together. Editing is storytelling.",
+      "primary": {
+        "kind": "phrase",
+        "value": "STORYTELLING",
+        "meaning": "editing"
+      },
+      "energy": "impact",
+      "keyword": "storytelling"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "Every cut is a decision",
+      "narration": "Every single cut is a decision about what your viewer feels next.",
+      "primary": {
+        "kind": "phrase",
+        "value": "DECISION",
+        "meaning": "choice"
+      },
+      "energy": "building",
+      "keyword": "decision"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "Rhythm keeps them watching",
+      "narration": "Get the rhythm right, and they will watch until the very last frame.",
+      "primary": {
+        "kind": "phrase",
+        "value": "RHYTHM",
+        "meaning": "pacing"
+      },
+      "energy": "impact",
+      "keyword": "rhythm"
+    }
+  ]
+}

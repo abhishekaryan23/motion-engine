@@ -1,0 +1,17 @@
+{
+  "version": "0.2",
+  "visual_language": {
+    "medium": { "value": "diagrammatic", "confidence": 0.9 },
+    "asset_usage": { "value": "balanced", "confidence": 0.7 },
+    "type_image_balance": { "value": "visual_dominant", "confidence": 0.6 },
+    "asset_character": { "value": "diagrammatic", "confidence": 0.9 },
+    "asset_roles": [{ "role": "supporting_object", "confidence": 0.8 }],
+    "composition_language": {
+      "preferred": ["spatial_cause_effect", "sequential_stack"],
+      "secondary": ["split_contrast", "data_story"],
+      "avoid": ["kinetic_poster"],
+      "confidence": 0.8
+    },
+    "explanation_mode": { "value": "diagrammatic", "confidence": 0.9 }
+  }
+}

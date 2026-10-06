@@ -1,0 +1,47 @@
+{
+  "version": "0.2",
+  "title": "small_wins",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "Small savings add up",
+      "primary": {
+        "kind": "object",
+        "asset": "piggy",
+        "meaning": "a piggy bank"
+      },
+      "energy": "calm"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "One clear goal at a time",
+      "primary": {
+        "kind": "object",
+        "asset": "target",
+        "meaning": "a goal hit"
+      },
+      "energy": "building"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "Ideas need a little light",
+      "primary": {
+        "kind": "object",
+        "asset": "lightbulb",
+        "meaning": "a new idea"
+      },
+      "energy": "building"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "The trophy goes to consistency",
+      "primary": {
+        "kind": "object",
+        "asset": "trophy",
+        "meaning": "the winner's trophy"
+      },
+      "energy": "impact"
+    }
+  ]
+}

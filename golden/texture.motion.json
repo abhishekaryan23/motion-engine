@@ -1,0 +1,133 @@
+{
+  "version": "0.2",
+  "project": {
+    "name": "golden_texture",
+    "duration_seconds": 1.0
+  },
+  "canvas": {
+    "width": 540,
+    "height": 960,
+    "fps": 30,
+    "background": "#ECE3D2"
+  },
+  "theme": {
+    "fonts": {
+      "display": "font.archivo_black",
+      "display_condensed": "font.anton",
+      "serif_emotional": "font.dm_serif_italic",
+      "body": "font.fira_sans",
+      "mono": "font.space_mono",
+      "number": "font.anton"
+    },
+    "palette": {
+      "paper": "#ECE3D2",
+      "ink": "#16130F",
+      "accent": "#D63A2B",
+      "cobalt": "#1F3FBF"
+    }
+  },
+  "assets": [
+    {
+      "id": "font.archivo_black",
+      "type": "font",
+      "path": "fonts/ArchivoBlack-Regular.ttf"
+    },
+    {
+      "id": "font.anton",
+      "type": "font",
+      "path": "fonts/Anton-Regular.ttf"
+    },
+    {
+      "id": "font.dm_serif_italic",
+      "type": "font",
+      "path": "fonts/DMSerifDisplay-Italic.ttf"
+    },
+    {
+      "id": "font.fira_sans",
+      "type": "font",
+      "path": "fonts/FiraSans-Regular.ttf"
+    },
+    {
+      "id": "font.space_mono",
+      "type": "font",
+      "path": "fonts/SpaceMono-Regular.ttf"
+    }
+  ],
+  "asset_root": "../assets",
+  "scenes": [
+    {
+      "id": "texture",
+      "start_seconds": 0,
+      "duration_seconds": 1.0,
+      "layers": [
+        {
+          "id": "tx.paper",
+          "type": "texture",
+          "x": 0,
+          "y": 0,
+          "width": 540,
+          "height": 960,
+          "z_index": 0,
+          "material": "paper",
+          "seed": 11,
+          "color": "#ECE3D2",
+          "intensity": 0.6,
+          "scale": 10
+        },
+        {
+          "id": "tx.flat",
+          "type": "texture",
+          "x": 40,
+          "y": 60,
+          "width": 220,
+          "height": 160,
+          "z_index": 1,
+          "material": "flat",
+          "seed": 0,
+          "color": "#1F3FBF"
+        },
+        {
+          "id": "tx.halftone",
+          "type": "texture",
+          "x": 40,
+          "y": 300,
+          "width": 460,
+          "height": 320,
+          "z_index": 1,
+          "material": "halftone",
+          "seed": 5,
+          "color": "#D63A2B",
+          "intensity": 0.8,
+          "scale": 14
+        },
+        {
+          "id": "tx.text",
+          "type": "text",
+          "x": 40,
+          "y": 680,
+          "width": 460,
+          "height": 120,
+          "text": "PRINT",
+          "font_role": "display",
+          "font_size": 110,
+          "color": "#16130F",
+          "z_index": 2
+        },
+        {
+          "id": "tx.grain",
+          "type": "texture",
+          "x": 0,
+          "y": 0,
+          "width": 540,
+          "height": 960,
+          "z_index": 10,
+          "material": "grain",
+          "seed": 3,
+          "color": "#000000",
+          "intensity": 0.5,
+          "scale": 3
+        }
+      ]
+    }
+  ]
+}

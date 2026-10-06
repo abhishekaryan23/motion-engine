@@ -1,0 +1,3298 @@
+{
+ "family": "aikakirja_ornaments",
+ "font": "Aikakirja1-MAC.ttf",
+ "licence": "Free commercial/non-commercial use, modification and embedding; glyphs remain Lassi Peltomaa's artwork (see READ_ME_FIRST)",
+ "credit": "Aikakirja Ornaments 1 by Lassi Peltomaa (lassipeltomaa.com)",
+ "ink": "#1d1b19",
+ "glyphs": [
+  {
+   "char": "!",
+   "id": "ornament_0021",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\"",
+   "id": "ornament_0022",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "#",
+   "id": "ornament_0023",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "$",
+   "id": "ornament_0024",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "%",
+   "id": "ornament_0025",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "&",
+   "id": "ornament_0026",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "'",
+   "id": "ornament_0027",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "(",
+   "id": "ornament_0028",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": ")",
+   "id": "ornament_0029",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "*",
+   "id": "ornament_002a",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "+",
+   "id": "ornament_002b",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": ",",
+   "id": "ornament_002c",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "-",
+   "id": "ornament_002d",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": ".",
+   "id": "ornament_002e",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "/",
+   "id": "ornament_002f",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "0",
+   "id": "ornament_0030",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "1",
+   "id": "ornament_0031",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "2",
+   "id": "ornament_0032",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "3",
+   "id": "ornament_0033",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "4",
+   "id": "ornament_0034",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "5",
+   "id": "ornament_0035",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "6",
+   "id": "ornament_0036",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "7",
+   "id": "ornament_0037",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "8",
+   "id": "ornament_0038",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "9",
+   "id": "ornament_0039",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": ":",
+   "id": "ornament_003a",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": ";",
+   "id": "ornament_003b",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "<",
+   "id": "ornament_003c",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "=",
+   "id": "ornament_003d",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": ">",
+   "id": "ornament_003e",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "?",
+   "id": "ornament_003f",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "@",
+   "id": "ornament_0040",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "A",
+   "id": "ornament_0041",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "B",
+   "id": "ornament_0042",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "C",
+   "id": "ornament_0043",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "D",
+   "id": "ornament_0044",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "E",
+   "id": "ornament_0045",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "F",
+   "id": "ornament_0046",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "G",
+   "id": "ornament_0047",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "H",
+   "id": "ornament_0048",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "I",
+   "id": "ornament_0049",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "J",
+   "id": "ornament_004a",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "K",
+   "id": "ornament_004b",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "L",
+   "id": "ornament_004c",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "M",
+   "id": "ornament_004d",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "N",
+   "id": "ornament_004e",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "O",
+   "id": "ornament_004f",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "P",
+   "id": "ornament_0050",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "Q",
+   "id": "ornament_0051",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "R",
+   "id": "ornament_0052",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "S",
+   "id": "ornament_0053",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "T",
+   "id": "ornament_0054",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "U",
+   "id": "ornament_0055",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "V",
+   "id": "ornament_0056",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "W",
+   "id": "ornament_0057",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "X",
+   "id": "ornament_0058",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "Y",
+   "id": "ornament_0059",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "Z",
+   "id": "ornament_005a",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "[",
+   "id": "ornament_005b",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\\",
+   "id": "ornament_005c",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "]",
+   "id": "ornament_005d",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "^",
+   "id": "ornament_005e",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "_",
+   "id": "ornament_005f",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "`",
+   "id": "ornament_0060",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "a",
+   "id": "ornament_0061",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "b",
+   "id": "ornament_0062",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "c",
+   "id": "ornament_0063",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "d",
+   "id": "ornament_0064",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "e",
+   "id": "ornament_0065",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "f",
+   "id": "ornament_0066",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "g",
+   "id": "ornament_0067",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "h",
+   "id": "ornament_0068",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "i",
+   "id": "ornament_0069",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "j",
+   "id": "ornament_006a",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "k",
+   "id": "ornament_006b",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "l",
+   "id": "ornament_006c",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "m",
+   "id": "ornament_006d",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "n",
+   "id": "ornament_006e",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "o",
+   "id": "ornament_006f",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "p",
+   "id": "ornament_0070",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "q",
+   "id": "ornament_0071",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "r",
+   "id": "ornament_0072",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "s",
+   "id": "ornament_0073",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "t",
+   "id": "ornament_0074",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "u",
+   "id": "ornament_0075",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "v",
+   "id": "ornament_0076",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "w",
+   "id": "ornament_0077",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "x",
+   "id": "ornament_0078",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "y",
+   "id": "ornament_0079",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "z",
+   "id": "ornament_007a",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "{",
+   "id": "ornament_007b",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "|",
+   "id": "ornament_007c",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "}",
+   "id": "ornament_007d",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00a1",
+   "id": "ornament_00a1",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00a2",
+   "id": "ornament_00a2",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00a3",
+   "id": "ornament_00a3",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00a5",
+   "id": "ornament_00a5",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00a7",
+   "id": "ornament_00a7",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00a9",
+   "id": "ornament_00a9",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00ab",
+   "id": "ornament_00ab",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00ae",
+   "id": "ornament_00ae",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00b0",
+   "id": "ornament_00b0",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00b1",
+   "id": "ornament_00b1",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00b4",
+   "id": "ornament_00b4",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00b6",
+   "id": "ornament_00b6",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00b7",
+   "id": "ornament_00b7",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00bb",
+   "id": "ornament_00bb",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00bf",
+   "id": "ornament_00bf",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00c0",
+   "id": "ornament_00c0",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00c1",
+   "id": "ornament_00c1",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00c2",
+   "id": "ornament_00c2",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00c3",
+   "id": "ornament_00c3",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00c4",
+   "id": "ornament_00c4",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00c5",
+   "id": "ornament_00c5",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00c6",
+   "id": "ornament_00c6",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00c7",
+   "id": "ornament_00c7",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00c8",
+   "id": "ornament_00c8",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00c9",
+   "id": "ornament_00c9",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00ca",
+   "id": "ornament_00ca",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00cb",
+   "id": "ornament_00cb",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00cc",
+   "id": "ornament_00cc",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00cd",
+   "id": "ornament_00cd",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00ce",
+   "id": "ornament_00ce",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00cf",
+   "id": "ornament_00cf",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00d0",
+   "id": "ornament_00d0",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00d1",
+   "id": "ornament_00d1",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00d2",
+   "id": "ornament_00d2",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00d3",
+   "id": "ornament_00d3",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00d4",
+   "id": "ornament_00d4",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00d5",
+   "id": "ornament_00d5",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00d6",
+   "id": "ornament_00d6",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00d8",
+   "id": "ornament_00d8",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00d9",
+   "id": "ornament_00d9",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00da",
+   "id": "ornament_00da",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00db",
+   "id": "ornament_00db",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00dc",
+   "id": "ornament_00dc",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00dd",
+   "id": "ornament_00dd",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00de",
+   "id": "ornament_00de",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00df",
+   "id": "ornament_00df",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00e0",
+   "id": "ornament_00e0",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00e1",
+   "id": "ornament_00e1",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00e2",
+   "id": "ornament_00e2",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00e3",
+   "id": "ornament_00e3",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00e4",
+   "id": "ornament_00e4",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00e5",
+   "id": "ornament_00e5",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00e6",
+   "id": "ornament_00e6",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00e7",
+   "id": "ornament_00e7",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00e8",
+   "id": "ornament_00e8",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00e9",
+   "id": "ornament_00e9",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00ea",
+   "id": "ornament_00ea",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00eb",
+   "id": "ornament_00eb",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00ec",
+   "id": "ornament_00ec",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00ed",
+   "id": "ornament_00ed",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00ee",
+   "id": "ornament_00ee",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00ef",
+   "id": "ornament_00ef",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00f0",
+   "id": "ornament_00f0",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00f1",
+   "id": "ornament_00f1",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00f2",
+   "id": "ornament_00f2",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00f3",
+   "id": "ornament_00f3",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00f4",
+   "id": "ornament_00f4",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00f5",
+   "id": "ornament_00f5",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00f6",
+   "id": "ornament_00f6",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00f7",
+   "id": "ornament_00f7",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00f8",
+   "id": "ornament_00f8",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00f9",
+   "id": "ornament_00f9",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00fa",
+   "id": "ornament_00fa",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00fb",
+   "id": "ornament_00fb",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00fc",
+   "id": "ornament_00fc",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00fd",
+   "id": "ornament_00fd",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00fe",
+   "id": "ornament_00fe",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u00ff",
+   "id": "ornament_00ff",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0100",
+   "id": "ornament_0100",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0101",
+   "id": "ornament_0101",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0108",
+   "id": "ornament_0108",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0109",
+   "id": "ornament_0109",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u010c",
+   "id": "ornament_010c",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u010d",
+   "id": "ornament_010d",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u010e",
+   "id": "ornament_010e",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u010f",
+   "id": "ornament_010f",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0110",
+   "id": "ornament_0110",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0111",
+   "id": "ornament_0111",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0112",
+   "id": "ornament_0112",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0113",
+   "id": "ornament_0113",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0116",
+   "id": "ornament_0116",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0117",
+   "id": "ornament_0117",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0122",
+   "id": "ornament_0122",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0123",
+   "id": "ornament_0123",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0128",
+   "id": "ornament_0128",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0129",
+   "id": "ornament_0129",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u012a",
+   "id": "ornament_012a",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u012b",
+   "id": "ornament_012b",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0136",
+   "id": "ornament_0136",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0137",
+   "id": "ornament_0137",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0141",
+   "id": "ornament_0141",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0142",
+   "id": "ornament_0142",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0147",
+   "id": "ornament_0147",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0148",
+   "id": "ornament_0148",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u014a",
+   "id": "ornament_014a",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u014b",
+   "id": "ornament_014b",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u014c",
+   "id": "ornament_014c",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u014d",
+   "id": "ornament_014d",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0152",
+   "id": "ornament_0152",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0153",
+   "id": "ornament_0153",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u015a",
+   "id": "ornament_015a",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u015b",
+   "id": "ornament_015b",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u015c",
+   "id": "ornament_015c",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u015d",
+   "id": "ornament_015d",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0160",
+   "id": "ornament_0160",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0161",
+   "id": "ornament_0161",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0166",
+   "id": "ornament_0166",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0167",
+   "id": "ornament_0167",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0168",
+   "id": "ornament_0168",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0169",
+   "id": "ornament_0169",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u016a",
+   "id": "ornament_016a",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u016b",
+   "id": "ornament_016b",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u016e",
+   "id": "ornament_016e",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u016f",
+   "id": "ornament_016f",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0176",
+   "id": "ornament_0176",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0177",
+   "id": "ornament_0177",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0178",
+   "id": "ornament_0178",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0179",
+   "id": "ornament_0179",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u017a",
+   "id": "ornament_017a",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u017b",
+   "id": "ornament_017b",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u017c",
+   "id": "ornament_017c",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u017d",
+   "id": "ornament_017d",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u017e",
+   "id": "ornament_017e",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u018e",
+   "id": "ornament_018e",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0192",
+   "id": "ornament_0192",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u01b7",
+   "id": "ornament_01b7",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u01dd",
+   "id": "ornament_01dd",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u01e4",
+   "id": "ornament_01e4",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u01e5",
+   "id": "ornament_01e5",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u01e6",
+   "id": "ornament_01e6",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u01e7",
+   "id": "ornament_01e7",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u01e8",
+   "id": "ornament_01e8",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u01e9",
+   "id": "ornament_01e9",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u01ee",
+   "id": "ornament_01ee",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u01ef",
+   "id": "ornament_01ef",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0218",
+   "id": "ornament_0218",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0219",
+   "id": "ornament_0219",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u021a",
+   "id": "ornament_021a",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u021b",
+   "id": "ornament_021b",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u022e",
+   "id": "ornament_022e",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u022f",
+   "id": "ornament_022f",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0232",
+   "id": "ornament_0232",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0233",
+   "id": "ornament_0233",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u024e",
+   "id": "ornament_024e",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u024f",
+   "id": "ornament_024f",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u0292",
+   "id": "ornament_0292",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u02bc",
+   "id": "ornament_02bc",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u1e12",
+   "id": "ornament_1e12",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u1e13",
+   "id": "ornament_1e13",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u1e34",
+   "id": "ornament_1e34",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u1e35",
+   "id": "ornament_1e35",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u1e48",
+   "id": "ornament_1e48",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u1e49",
+   "id": "ornament_1e49",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u1e4a",
+   "id": "ornament_1e4a",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u1e4b",
+   "id": "ornament_1e4b",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u1e62",
+   "id": "ornament_1e62",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u1e63",
+   "id": "ornament_1e63",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u1e6e",
+   "id": "ornament_1e6e",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u1e6f",
+   "id": "ornament_1e6f",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u1e70",
+   "id": "ornament_1e70",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u1e71",
+   "id": "ornament_1e71",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u1e8e",
+   "id": "ornament_1e8e",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u1e8f",
+   "id": "ornament_1e8f",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u1ea0",
+   "id": "ornament_1ea0",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u1ea1",
+   "id": "ornament_1ea1",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u1eb8",
+   "id": "ornament_1eb8",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u1eb9",
+   "id": "ornament_1eb9",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u1ebc",
+   "id": "ornament_1ebc",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u1ebd",
+   "id": "ornament_1ebd",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u1eca",
+   "id": "ornament_1eca",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u1ecb",
+   "id": "ornament_1ecb",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u1ecc",
+   "id": "ornament_1ecc",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u1ecd",
+   "id": "ornament_1ecd",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u1ee4",
+   "id": "ornament_1ee4",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u1ee5",
+   "id": "ornament_1ee5",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u1ef2",
+   "id": "ornament_1ef2",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u1ef3",
+   "id": "ornament_1ef3",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u1ef8",
+   "id": "ornament_1ef8",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u1ef9",
+   "id": "ornament_1ef9",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u2011",
+   "id": "ornament_2011",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u2013",
+   "id": "ornament_2013",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u2014",
+   "id": "ornament_2014",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u2018",
+   "id": "ornament_2018",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u2019",
+   "id": "ornament_2019",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u201b",
+   "id": "ornament_201b",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u201c",
+   "id": "ornament_201c",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u201d",
+   "id": "ornament_201d",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u201e",
+   "id": "ornament_201e",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u2022",
+   "id": "ornament_2022",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u2039",
+   "id": "ornament_2039",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u203a",
+   "id": "ornament_203a",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u2044",
+   "id": "ornament_2044",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u20ac",
+   "id": "ornament_20ac",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u2122",
+   "id": "ornament_2122",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u2264",
+   "id": "ornament_2264",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  },
+  {
+   "char": "\u2265",
+   "id": "ornament_2265",
+   "subject": "decorative ornament",
+   "tags": [
+    "ornament",
+    "flourish",
+    "decoration",
+    "decorative"
+   ]
+  }
+ ]
+}

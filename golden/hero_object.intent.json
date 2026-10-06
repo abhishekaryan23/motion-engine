@@ -1,0 +1,14 @@
+{
+  "version": "0.2",
+  "title": "hero_object",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "The weekly shop keeps getting heavier",
+      "primary": { "kind": "object", "asset": "shopping_basket", "value": "₹6,900", "meaning": "weekly basket" },
+      "secondary": { "kind": "phrase", "value": "for the same twelve items." },
+      "energy": "building"
+    }
+  ]
+}

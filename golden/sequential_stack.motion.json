@@ -1,0 +1,751 @@
+{
+  "version": "0.2",
+  "project": {
+    "name": "sequential_stack",
+    "duration_seconds": 6.92
+  },
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "background": "#ECE3D2"
+  },
+  "theme": {
+    "fonts": {
+      "display": "font.archivo_black",
+      "display_condensed": "font.anton",
+      "serif_emotional": "font.dm_serif_italic",
+      "body": "font.fira_sans",
+      "mono": "font.space_mono",
+      "number": "font.anton"
+    },
+    "palette": {
+      "accent": "#233FD1",
+      "card": "#F6F1E6",
+      "ink": "#171513",
+      "muted": "#6F665A",
+      "on_accent": "#F6F1E6",
+      "paper": "#ECE3D2"
+    }
+  },
+  "assets": [
+    {
+      "id": "font.anton",
+      "type": "font",
+      "path": "fonts/Anton-Regular.ttf"
+    },
+    {
+      "id": "font.archivo_black",
+      "type": "font",
+      "path": "fonts/ArchivoBlack-Regular.ttf"
+    },
+    {
+      "id": "font.dm_serif",
+      "type": "font",
+      "path": "fonts/DMSerifDisplay-Regular.ttf"
+    },
+    {
+      "id": "font.dm_serif_italic",
+      "type": "font",
+      "path": "fonts/DMSerifDisplay-Italic.ttf"
+    },
+    {
+      "id": "font.fira_sans",
+      "type": "font",
+      "path": "fonts/FiraSans-Regular.ttf"
+    },
+    {
+      "id": "font.fira_sans_semibold",
+      "type": "font",
+      "path": "fonts/FiraSans-SemiBold.ttf"
+    },
+    {
+      "id": "font.space_mono",
+      "type": "font",
+      "path": "fonts/SpaceMono-Regular.ttf"
+    },
+    {
+      "id": "font.space_mono_bold",
+      "type": "font",
+      "path": "fonts/SpaceMono-Bold.ttf"
+    }
+  ],
+  "asset_root": "../assets",
+  "scenes": [
+    {
+      "id": "backdrop",
+      "start_seconds": 0.0,
+      "duration_seconds": 6.92,
+      "layers": [
+        {
+          "id": "backdrop.paper",
+          "x": 0.0,
+          "y": 0.0,
+          "width": 1080.0,
+          "height": 1920.0,
+          "scale_x": 1.0,
+          "scale_y": 1.0,
+          "rotation_degrees": 0.0,
+          "anchor_x": 0.0,
+          "anchor_y": 0.0,
+          "opacity": 1.0,
+          "z_index": 0,
+          "visible": true,
+          "type": "texture",
+          "material": "paper",
+          "seed": 8865707873606744473,
+          "color": "#ECE3D2",
+          "intensity": 0.55,
+          "scale": 8.0
+        },
+        {
+          "id": "backdrop.grain",
+          "x": 0.0,
+          "y": 0.0,
+          "width": 1080.0,
+          "height": 1920.0,
+          "scale_x": 1.0,
+          "scale_y": 1.0,
+          "rotation_degrees": 0.0,
+          "anchor_x": 0.0,
+          "anchor_y": 0.0,
+          "opacity": 1.0,
+          "z_index": 90,
+          "visible": true,
+          "type": "texture",
+          "material": "grain",
+          "seed": 923307860488072175,
+          "color": "#171513",
+          "intensity": 0.32,
+          "scale": 2.0,
+          "animated": true
+        }
+      ],
+      "motions": []
+    },
+    {
+      "id": "beat_1",
+      "start_seconds": 0.0,
+      "duration_seconds": 6.92,
+      "layers": [
+        {
+          "id": "b1.stage",
+          "x": 540.0,
+          "y": 960.0,
+          "width": 1080.0,
+          "height": 1920.0,
+          "scale_x": 1.0,
+          "scale_y": 1.0,
+          "rotation_degrees": 0.0,
+          "anchor_x": 0.5,
+          "anchor_y": 0.5,
+          "opacity": 1.0,
+          "z_index": 10,
+          "visible": true,
+          "type": "group",
+          "children": [
+            {
+              "id": "b1.ghost",
+              "x": -54.0,
+              "y": 878.2106,
+              "width": 1379.0,
+              "height": 624.37897,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 0,
+              "visible": true,
+              "type": "text",
+              "text": "STEPS",
+              "font_role": "display_condensed",
+              "font_size": 624.38,
+              "font_weight": 400,
+              "italic": false,
+              "color": "#1715130E",
+              "align": "left",
+              "line_height": 1.0,
+              "letter_spacing": -0.01,
+              "uppercase": false
+            },
+            {
+              "id": "b1.head.0",
+              "x": 84.0,
+              "y": 326.4,
+              "width": 418.06778,
+              "height": 93.5091,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 20,
+              "visible": true,
+              "type": "text",
+              "text": "WHAT A",
+              "font_role": "display",
+              "font_size": 95.42,
+              "font_weight": 900,
+              "italic": false,
+              "color": "#171513",
+              "align": "left",
+              "line_height": 0.98,
+              "letter_spacing": -0.02,
+              "uppercase": false
+            },
+            {
+              "id": "b1.head.1",
+              "x": 84.0,
+              "y": 419.9091,
+              "width": 932.24,
+              "height": 93.5091,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 20,
+              "visible": true,
+              "type": "text",
+              "text": "MORNING TAKES.",
+              "font_role": "display",
+              "font_size": 95.42,
+              "font_weight": 900,
+              "italic": false,
+              "color": "#171513",
+              "align": "left",
+              "line_height": 0.98,
+              "letter_spacing": -0.02,
+              "uppercase": false
+            },
+            {
+              "id": "b1.items.0.card",
+              "x": 84.0,
+              "y": 577.4182,
+              "width": 912.0,
+              "height": 200.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 12,
+              "visible": true,
+              "type": "rounded_rectangle",
+              "fill": "#F6F1E6",
+              "radius": 14.0,
+              "stroke": {
+                "color": "#171513",
+                "width": 2.0
+              }
+            },
+            {
+              "id": "b1.items.0.content",
+              "x": 0.0,
+              "y": 0.0,
+              "width": 611.95593,
+              "height": 82.32,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 16,
+              "visible": true,
+              "layout": {
+                "parent": "b1.items.0.card",
+                "horizontal": "center",
+                "vertical": "center"
+              },
+              "type": "text",
+              "text": "WAKE AT SIX",
+              "font_role": "display",
+              "font_size": 84.0,
+              "font_weight": 900,
+              "italic": false,
+              "color": "#171513",
+              "align": "center",
+              "line_height": 0.98,
+              "letter_spacing": -0.02,
+              "uppercase": false,
+              "ink": {
+                "top": 10.419128,
+                "bottom": 70.23163
+              }
+            },
+            {
+              "id": "b1.items.1.card",
+              "x": 84.0,
+              "y": 793.4182,
+              "width": 912.0,
+              "height": 200.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 12,
+              "visible": true,
+              "type": "rounded_rectangle",
+              "fill": "#F6F1E6",
+              "radius": 14.0,
+              "stroke": {
+                "color": "#171513",
+                "width": 2.0
+              }
+            },
+            {
+              "id": "b1.items.1.content",
+              "x": 0.0,
+              "y": 0.0,
+              "width": 608.5287,
+              "height": 82.32,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 16,
+              "visible": true,
+              "layout": {
+                "parent": "b1.items.1.card",
+                "horizontal": "center",
+                "vertical": "center"
+              },
+              "type": "text",
+              "text": "PACK LUNCH",
+              "font_role": "display",
+              "font_size": 84.0,
+              "font_weight": 900,
+              "italic": false,
+              "color": "#171513",
+              "align": "center",
+              "line_height": 0.98,
+              "letter_spacing": -0.02,
+              "uppercase": false,
+              "ink": {
+                "top": 10.419128,
+                "bottom": 70.23163
+              }
+            },
+            {
+              "id": "b1.items.2.card",
+              "x": 84.0,
+              "y": 1009.4182,
+              "width": 912.0,
+              "height": 200.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 12,
+              "visible": true,
+              "type": "rounded_rectangle",
+              "fill": "#F6F1E6",
+              "radius": 14.0,
+              "stroke": {
+                "color": "#171513",
+                "width": 2.0
+              }
+            },
+            {
+              "id": "b1.items.2.content",
+              "x": 0.0,
+              "y": 0.0,
+              "width": 755.64136,
+              "height": 82.32,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 16,
+              "visible": true,
+              "layout": {
+                "parent": "b1.items.2.card",
+                "horizontal": "center",
+                "vertical": "center"
+              },
+              "type": "text",
+              "text": "CATCH THE BUS",
+              "font_role": "display",
+              "font_size": 84.0,
+              "font_weight": 900,
+              "italic": false,
+              "color": "#171513",
+              "align": "center",
+              "line_height": 0.98,
+              "letter_spacing": -0.02,
+              "uppercase": false,
+              "ink": {
+                "top": 10.419128,
+                "bottom": 70.23163
+              }
+            },
+            {
+              "id": "b1.items.3.card",
+              "x": 84.0,
+              "y": 1225.4182,
+              "width": 912.0,
+              "height": 200.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 12,
+              "visible": true,
+              "type": "rounded_rectangle",
+              "fill": "#F6F1E6",
+              "radius": 14.0,
+              "stroke": {
+                "color": "#171513",
+                "width": 2.0
+              }
+            },
+            {
+              "id": "b1.items.3.content",
+              "x": 0.0,
+              "y": 0.0,
+              "width": 454.99014,
+              "height": 82.32,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 16,
+              "visible": true,
+              "layout": {
+                "parent": "b1.items.3.card",
+                "horizontal": "center",
+                "vertical": "center"
+              },
+              "type": "text",
+              "text": "CLOCK IN",
+              "font_role": "display",
+              "font_size": 84.0,
+              "font_weight": 900,
+              "italic": false,
+              "color": "#171513",
+              "align": "center",
+              "line_height": 0.98,
+              "letter_spacing": -0.02,
+              "uppercase": false,
+              "ink": {
+                "top": 10.419128,
+                "bottom": 70.23163
+              }
+            },
+            {
+              "id": "b1.kicker",
+              "x": 84.0,
+              "y": 201.59999,
+              "width": 227.82799,
+              "height": 36.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 30,
+              "visible": true,
+              "type": "text",
+              "text": "01 — STEPS",
+              "font_role": "mono",
+              "font_size": 30.0,
+              "font_weight": 400,
+              "italic": false,
+              "color": "#171513",
+              "align": "left",
+              "line_height": 1.2,
+              "letter_spacing": 0.14,
+              "uppercase": false
+            },
+            {
+              "id": "b1.kicker_rule",
+              "x": 84.0,
+              "y": 251.59999,
+              "width": 96.0,
+              "height": 7.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 31,
+              "visible": true,
+              "type": "rectangle",
+              "fill": "#233FD1"
+            }
+          ]
+        }
+      ],
+      "motions": [
+        {
+          "target": "b1.ghost",
+          "start": 0.25,
+          "duration": 1.2,
+          "easing": "in_out_cubic",
+          "op": "fade",
+          "from": 0.0,
+          "to": 1.0
+        },
+        {
+          "target": "b1.ghost",
+          "start": 0.0,
+          "duration": 6.92,
+          "easing": "linear",
+          "op": "move",
+          "from": [
+            46.0,
+            0.0
+          ],
+          "to": [
+            -46.0,
+            0.0
+          ]
+        },
+        {
+          "target": "b1.head.0",
+          "start": 0.3,
+          "duration": 1.1,
+          "easing": "out_cubic",
+          "op": "clip_reveal",
+          "direction": "up",
+          "mode": "reveal"
+        },
+        {
+          "target": "b1.head.1",
+          "start": 0.5,
+          "duration": 1.1,
+          "easing": "out_cubic",
+          "op": "clip_reveal",
+          "direction": "up",
+          "mode": "reveal"
+        },
+        {
+          "target": "b1.items.0.card",
+          "start": 1.446,
+          "duration": 0.9,
+          "easing": "out_quint",
+          "op": "mask_reveal",
+          "direction": "right",
+          "mode": "reveal"
+        },
+        {
+          "target": "b1.items.0.card",
+          "start": 1.446,
+          "duration": 0.5,
+          "easing": "out_cubic",
+          "op": "fade",
+          "from": 0.0,
+          "to": 1.0
+        },
+        {
+          "target": "b1.items.0.card",
+          "start": 1.446,
+          "duration": 1.1,
+          "easing": "out_cubic",
+          "op": "move",
+          "from": [
+            0.0,
+            20.0
+          ],
+          "to": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "target": "b1.items.0.content",
+          "start": 1.566,
+          "duration": 0.5,
+          "easing": "out_cubic",
+          "op": "fade",
+          "from": 0.0,
+          "to": 1.0
+        },
+        {
+          "target": "b1.items.1.card",
+          "start": 2.831,
+          "duration": 0.9,
+          "easing": "out_quint",
+          "op": "mask_reveal",
+          "direction": "right",
+          "mode": "reveal"
+        },
+        {
+          "target": "b1.items.1.card",
+          "start": 2.831,
+          "duration": 0.5,
+          "easing": "out_cubic",
+          "op": "fade",
+          "from": 0.0,
+          "to": 1.0
+        },
+        {
+          "target": "b1.items.1.card",
+          "start": 2.831,
+          "duration": 1.1,
+          "easing": "out_cubic",
+          "op": "move",
+          "from": [
+            0.0,
+            20.0
+          ],
+          "to": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "target": "b1.items.1.content",
+          "start": 2.951,
+          "duration": 0.5,
+          "easing": "out_cubic",
+          "op": "fade",
+          "from": 0.0,
+          "to": 1.0
+        },
+        {
+          "target": "b1.items.2.card",
+          "start": 4.061,
+          "duration": 0.9,
+          "easing": "out_quint",
+          "op": "mask_reveal",
+          "direction": "right",
+          "mode": "reveal"
+        },
+        {
+          "target": "b1.items.2.card",
+          "start": 4.061,
+          "duration": 0.5,
+          "easing": "out_cubic",
+          "op": "fade",
+          "from": 0.0,
+          "to": 1.0
+        },
+        {
+          "target": "b1.items.2.card",
+          "start": 4.061,
+          "duration": 1.1,
+          "easing": "out_cubic",
+          "op": "move",
+          "from": [
+            0.0,
+            20.0
+          ],
+          "to": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "target": "b1.items.2.content",
+          "start": 4.181,
+          "duration": 0.5,
+          "easing": "out_cubic",
+          "op": "fade",
+          "from": 0.0,
+          "to": 1.0
+        },
+        {
+          "target": "b1.items.3.card",
+          "start": 5.29,
+          "duration": 0.9,
+          "easing": "out_quint",
+          "op": "mask_reveal",
+          "direction": "right",
+          "mode": "reveal"
+        },
+        {
+          "target": "b1.items.3.card",
+          "start": 5.29,
+          "duration": 0.5,
+          "easing": "out_cubic",
+          "op": "fade",
+          "from": 0.0,
+          "to": 1.0
+        },
+        {
+          "target": "b1.items.3.card",
+          "start": 5.29,
+          "duration": 1.1,
+          "easing": "out_cubic",
+          "op": "move",
+          "from": [
+            0.0,
+            20.0
+          ],
+          "to": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "target": "b1.items.3.content",
+          "start": 5.41,
+          "duration": 0.5,
+          "easing": "out_cubic",
+          "op": "fade",
+          "from": 0.0,
+          "to": 1.0
+        },
+        {
+          "target": "b1.kicker",
+          "start": 0.25,
+          "duration": 0.99,
+          "easing": "out_cubic",
+          "op": "clip_reveal",
+          "direction": "up",
+          "mode": "reveal"
+        },
+        {
+          "target": "b1.kicker_rule",
+          "start": 0.37,
+          "duration": 0.6,
+          "easing": "out_cubic",
+          "op": "mask_reveal",
+          "direction": "right",
+          "mode": "reveal"
+        }
+      ],
+      "camera": {
+        "motions": [
+          {
+            "start": 0.0,
+            "duration": 6.92,
+            "easing": "linear",
+            "op": "push",
+            "from": 1.0,
+            "to": 1.045
+          }
+        ]
+      },
+      "lifecycle": {
+        "enter": 0.25,
+        "settle": 1.446,
+        "read": 1.791,
+        "evolve": 2.831,
+        "anticipate": 6.52,
+        "bridge": 6.92
+      }
+    }
+  ]
+}

@@ -1,0 +1,724 @@
+{
+ "version": "0.1",
+ "family": "people_everyday",
+ "emotions": [
+  "warmth",
+  "trust"
+ ],
+ "medium": "documentary photographic people cutouts",
+ "assets": [
+  {
+   "id": "person_walking",
+   "file": "person_walking.png",
+   "role": "figure",
+   "subject": "person walking",
+   "tags": [
+    "commute",
+    "journey",
+    "pedestrian",
+    "person",
+    "walk",
+    "walking"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.099,
+    0.054,
+    0.901,
+    0.946
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "NUTUXGohL2ih1XRCzJ9s",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.09904154,
+     "y": 0.053959966,
+     "width": 0.80191696,
+     "height": 0.89208007
+    },
+    "coverage": 0.25319418,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 626,
+   "height": 1149
+  },
+  {
+   "id": "laptop_worker",
+   "file": "laptop_worker.png",
+   "role": "figure",
+   "subject": "person working at a laptop",
+   "tags": [
+    "laptop",
+    "office",
+    "person",
+    "remote",
+    "work",
+    "worker",
+    "working"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.1289,
+    0.0532,
+    0.8691,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "qkK92os8Zw0MFg95Tazd",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.12890625,
+     "y": 0.053224154,
+     "width": 0.7402344,
+     "height": 0.8935517
+    },
+    "coverage": 0.3825446,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 512,
+   "height": 977
+  },
+  {
+   "id": "grocery_shopper",
+   "file": "grocery_shopper.png",
+   "role": "figure",
+   "subject": "person carrying groceries",
+   "tags": [
+    "bags",
+    "customer",
+    "groceries",
+    "grocery",
+    "person",
+    "shopper",
+    "shopping"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.098,
+    0.0533,
+    0.902,
+    0.9467
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "htHRbd7DfAAlwGDqhLpi",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.09800919,
+     "y": 0.053288925,
+     "width": 0.8039816,
+     "height": 0.8934221
+    },
+    "coverage": 0.39571795,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 653,
+   "height": 1201
+  },
+  {
+   "id": "person_on_phone",
+   "file": "person_on_phone.png",
+   "role": "figure",
+   "subject": "person on the phone",
+   "tags": [
+    "call",
+    "calling",
+    "mobile",
+    "person",
+    "phone",
+    "talking"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.25,
+    0.0537,
+    0.748,
+    0.9463
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "lhjxilydyorsn2QnRtJ8",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.25,
+     "y": 0.05367465,
+     "width": 0.49804688,
+     "height": 0.8926507
+    },
+    "coverage": 0.27869207,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 512,
+   "height": 1211
+  },
+  {
+   "id": "person_thinking",
+   "file": "person_thinking.png",
+   "role": "figure",
+   "subject": "person thinking",
+   "tags": [
+    "decision",
+    "doubt",
+    "person",
+    "pondering",
+    "thinking",
+    "thought"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.2676,
+    0.0537,
+    0.7324,
+    0.9463
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "HswSrFNOfUvjUZaC2IEk",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.26757812,
+     "y": 0.05370844,
+     "width": 0.46484375,
+     "height": 0.89258313
+    },
+    "coverage": 0.28417385,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 512,
+   "height": 1173
+  },
+  {
+   "id": "handshake",
+   "file": "handshake.png",
+   "role": "figure",
+   "subject": "two people shaking hands",
+   "tags": [
+    "agreement",
+    "deal",
+    "handshake",
+    "partners",
+    "partnership",
+    "people",
+    "trust"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0764,
+    0.0537,
+    0.9236,
+    0.9463
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "le9sIcDdYcjTbRqNQjth",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.076422766,
+     "y": 0.05365297,
+     "width": 0.8471545,
+     "height": 0.89269406
+    },
+    "coverage": 0.35620892,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 615,
+   "height": 876
+  },
+  {
+   "id": "family_walk",
+   "file": "family_walk.png",
+   "role": "figure",
+   "subject": "parent and child walking",
+   "tags": [
+    "child",
+    "family",
+    "kid",
+    "mother",
+    "parent",
+    "people",
+    "together"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0882,
+    0.0536,
+    0.9118,
+    0.9464
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "NheRZBAY7A88KmidY86k",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.0882353,
+     "y": 0.05357143,
+     "width": 0.8235294,
+     "height": 0.89285713
+    },
+    "coverage": 0.3803819,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 714,
+   "height": 1176
+  },
+  {
+   "id": "shopkeeper",
+   "file": "shopkeeper.png",
+   "role": "figure",
+   "subject": "shopkeeper",
+   "tags": [
+    "business",
+    "merchant",
+    "owner",
+    "seller",
+    "shop",
+    "shopkeeper",
+    "store"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0921,
+    0.0537,
+    0.9079,
+    0.9463
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "g6fewHKuddwwwYriA70m",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.09213052,
+     "y": 0.054809842,
+     "width": 0.815739,
+     "height": 0.89149886
+    },
+    "coverage": 0.49291933,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 521,
+   "height": 894
+  },
+  {
+   "id": "delivery_rider",
+   "file": "delivery_rider.png",
+   "role": "figure",
+   "subject": "delivery rider",
+   "tags": [
+    "courier",
+    "delivery",
+    "order",
+    "parcel",
+    "rider",
+    "scooter"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0536,
+    0.0605,
+    0.9464,
+    0.9395
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "LPcR4HcnPx8VciirnhVL",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.053608246,
+     "y": 0.060535505,
+     "width": 0.8927835,
+     "height": 0.87892896
+    },
+    "coverage": 0.40452096,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 970,
+   "height": 859
+  },
+  {
+   "id": "student",
+   "file": "student.png",
+   "role": "figure",
+   "subject": "student",
+   "tags": [
+    "books",
+    "college",
+    "learner",
+    "school",
+    "student",
+    "study",
+    "studying"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.1777,
+    0.0532,
+    0.8203,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "Bdz0UG88JG084VYWe71A",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.17773438,
+     "y": 0.054031588,
+     "width": 0.6425781,
+     "height": 0.8927681
+    },
+    "coverage": 0.31744045,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 512,
+   "height": 1203
+  },
+  {
+   "id": "elderly_walker",
+   "file": "elderly_walker.png",
+   "role": "figure",
+   "subject": "elderly person with a walking stick",
+   "tags": [
+    "age",
+    "elderly",
+    "grandfather",
+    "old",
+    "senior",
+    "stick",
+    "walking"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.1068,
+    0.0537,
+    0.8932,
+    0.9463
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "M1XIx7PvMcFOFfl9tuqi",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.10683012,
+     "y": 0.053697184,
+     "width": 0.78633976,
+     "height": 0.89260566
+    },
+    "coverage": 0.34103283,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 571,
+   "height": 1136
+  },
+  {
+   "id": "colleagues_screen",
+   "file": "colleagues_screen.png",
+   "role": "figure",
+   "subject": "two colleagues pointing at a screen",
+   "tags": [
+    "colleagues",
+    "monitor",
+    "office",
+    "pointing",
+    "screen",
+    "team",
+    "teamwork"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0729,
+    0.0535,
+    0.9271,
+    0.9465
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "LSPoEKTSgZS6o9PSvN2F",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.07290016,
+     "y": 0.053488374,
+     "width": 0.8541997,
+     "height": 0.89302325
+    },
+    "coverage": 0.4162201,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 631,
+   "height": 860
+  },
+  {
+   "id": "woman_saree",
+   "file": "woman_saree.png",
+   "role": "figure",
+   "subject": "woman in a saree",
+   "tags": [
+    "festival",
+    "person",
+    "saree",
+    "sari",
+    "walking",
+    "woman"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.1169,
+    0.0537,
+    0.8831,
+    0.9463
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "lO6RlM8OxEaaVxHVc5cM",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.11690647,
+     "y": 0.053719006,
+     "width": 0.7661871,
+     "height": 0.892562
+    },
+    "coverage": 0.35721356,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 556,
+   "height": 1210
+  },
+  {
+   "id": "newspaper_reader",
+   "file": "newspaper_reader.png",
+   "role": "figure",
+   "subject": "man reading a newspaper",
+   "tags": [
+    "man",
+    "morning",
+    "news",
+    "newspaper",
+    "reader",
+    "reading"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.1083,
+    0.0533,
+    0.8917,
+    0.9467
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "Rp7VkB4GpdyfC9Ful3Eh",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.10829103,
+     "y": 0.053288925,
+     "width": 0.78341794,
+     "height": 0.8934221
+    },
+    "coverage": 0.3776041,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 591,
+   "height": 1201
+  },
+  {
+   "id": "cyclist",
+   "file": "cyclist.png",
+   "role": "figure",
+   "subject": "person on a bicycle",
+   "tags": [
+    "bicycle",
+    "bike",
+    "commute",
+    "cycle",
+    "cyclist",
+    "riding"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0535,
+    0.0581,
+    0.9465,
+    0.9419
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "kRMR21D1qycenVi13DHp",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.053535353,
+     "y": 0.058114037,
+     "width": 0.8929293,
+     "height": 0.88377196
+    },
+    "coverage": 0.22732036,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 990,
+   "height": 912
+  }
+ ]
+}

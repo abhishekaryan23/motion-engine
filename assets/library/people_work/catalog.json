@@ -1,0 +1,872 @@
+{
+ "version": "0.1",
+ "family": "people_work",
+ "emotions": [
+  "warmth",
+  "trust",
+  "energy",
+  "calm",
+  "precision"
+ ],
+ "medium": "documentary photographic people at work (professions, wellbeing)",
+ "assets": [
+  {
+   "id": "scientist_lab",
+   "file": "scientist_lab.png",
+   "role": "figure",
+   "subject": "scientist",
+   "tags": [
+    "chemist",
+    "lab",
+    "laboratory",
+    "research",
+    "researcher",
+    "science",
+    "scientist"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.1523,
+    0.0533,
+    0.8477,
+    0.9467
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "tDCKfBzIw94j2BeUbN0c",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.15429688,
+     "y": 0.05327869,
+     "width": 0.6933594,
+     "height": 0.89344263
+    },
+    "coverage": 0.293758,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 512,
+   "height": 1220
+  },
+  {
+   "id": "software_developer",
+   "file": "software_developer.png",
+   "role": "figure",
+   "subject": "software developer",
+   "tags": [
+    "coder",
+    "coding",
+    "developer",
+    "engineer",
+    "programmer",
+    "software engineer",
+    "tech worker"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0708,
+    0.0534,
+    0.9292,
+    0.9466
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "iodbSPQxGDBDI2k2hEzo",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.07076102,
+     "y": 0.053373616,
+     "width": 0.85847795,
+     "height": 0.8932528
+    },
+    "coverage": 0.39024976,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 749,
+   "height": 993
+  },
+  {
+   "id": "doctor",
+   "file": "doctor.png",
+   "role": "figure",
+   "subject": "doctor",
+   "tags": [
+    "doctor",
+    "health",
+    "healthcare",
+    "hospital",
+    "medical",
+    "nurse",
+    "physician"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0979,
+    0.0535,
+    0.9021,
+    0.9465
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "ghZOq1JIkbasuzlo6VbL",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.097946286,
+     "y": 0.05349439,
+     "width": 0.8041074,
+     "height": 0.8930112
+    },
+    "coverage": 0.27295962,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 633,
+   "height": 1159
+  },
+  {
+   "id": "teacher",
+   "file": "teacher.png",
+   "role": "figure",
+   "subject": "teacher",
+   "tags": [
+    "class",
+    "education",
+    "lecturer",
+    "mentor",
+    "professor",
+    "school",
+    "teacher"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.1719,
+    0.0535,
+    0.8262,
+    0.9465
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "nn6N4pVJpMqIiJmmA71P",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.171875,
+     "y": 0.053497944,
+     "width": 0.6542969,
+     "height": 0.8930041
+    },
+    "coverage": 0.2831565,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 512,
+   "height": 1215
+  },
+  {
+   "id": "presenter",
+   "file": "presenter.png",
+   "role": "figure",
+   "subject": "presenter",
+   "tags": [
+    "explain",
+    "meeting",
+    "pitch",
+    "presentation",
+    "presenter",
+    "speaker"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.1149,
+    0.0535,
+    0.8851,
+    0.9465
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "5qH87lFIfBOfQtSFUJWO",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.11486486,
+     "y": 0.053543307,
+     "width": 0.7702703,
+     "height": 0.8929134
+    },
+    "coverage": 0.24907959,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 592,
+   "height": 1270
+  },
+  {
+   "id": "business_walk",
+   "file": "business_walk.png",
+   "role": "figure",
+   "subject": "business person",
+   "tags": [
+    "business person",
+    "businessman",
+    "corporate",
+    "executive",
+    "manager",
+    "office worker",
+    "professional"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.1013,
+    0.0536,
+    0.8987,
+    0.9464
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "YrjlekXkmJiRyffYyUma",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.10130719,
+     "y": 0.053586863,
+     "width": 0.79738563,
+     "height": 0.89282626
+    },
+    "coverage": 0.27796137,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 612,
+   "height": 1157
+  },
+  {
+   "id": "startup_founder",
+   "file": "startup_founder.png",
+   "role": "figure",
+   "subject": "startup founder",
+   "tags": [
+    "boss",
+    "business owner",
+    "ceo",
+    "entrepreneur",
+    "founder",
+    "startup"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0961,
+    0.0537,
+    0.9039,
+    0.9463
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "5gvqBUj50X8XIbuNXgjs",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.0960912,
+     "y": 0.05373406,
+     "width": 0.8078176,
+     "height": 0.8925319
+    },
+    "coverage": 0.26704907,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 614,
+   "height": 1098
+  },
+  {
+   "id": "engineer",
+   "file": "engineer.png",
+   "role": "figure",
+   "subject": "engineer",
+   "tags": [
+    "builder",
+    "construction",
+    "engineer",
+    "infrastructure",
+    "site",
+    "worker"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.1738,
+    0.0537,
+    0.8262,
+    0.9463
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "udcf8GS81A1bBaFoLPnj",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.17382812,
+     "y": 0.053736355,
+     "width": 0.65234375,
+     "height": 0.8925273
+    },
+    "coverage": 0.25169402,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 512,
+   "height": 1191
+  },
+  {
+   "id": "therapy_session",
+   "file": "therapy_session.png",
+   "role": "figure",
+   "subject": "therapy session",
+   "tags": [
+    "counselling",
+    "counselor",
+    "mental health",
+    "psychologist",
+    "session",
+    "therapist",
+    "therapy"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0337,
+    0.0755,
+    0.9623,
+    0.9245
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "tWYokxe3oeIvxrNhjdkZ",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "WARN",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.03373016,
+     "y": 0.0754717,
+     "width": 0.9285714,
+     "height": 0.8490566
+    },
+    "coverage": 0.33853966,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1008,
+   "height": 742
+  },
+  {
+   "id": "stressed_person",
+   "file": "stressed_person.png",
+   "role": "figure",
+   "subject": "stressed person",
+   "tags": [
+    "anxiety",
+    "burnout",
+    "depression",
+    "overwhelmed",
+    "stress",
+    "stressed",
+    "tired"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.1445,
+    0.0537,
+    0.8535,
+    0.9463
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "9dLFN0fbujZ0zgLMvF47",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.14453125,
+     "y": 0.053731345,
+     "width": 0.7089844,
+     "height": 0.8915423
+    },
+    "coverage": 0.42989543,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 512,
+   "height": 1005
+  },
+  {
+   "id": "meditating",
+   "file": "meditating.png",
+   "role": "figure",
+   "subject": "meditating person",
+   "tags": [
+    "calm",
+    "meditating",
+    "meditation",
+    "mindfulness",
+    "peace",
+    "yoga"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0622,
+    0.0541,
+    0.9378,
+    0.9459
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "S0LcHtPDcsxDg5s640mY",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.062176164,
+     "y": 0.054054055,
+     "width": 0.87564766,
+     "height": 0.8907658
+    },
+    "coverage": 0.35997525,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 772,
+   "height": 888
+  },
+  {
+   "id": "celebrating",
+   "file": "celebrating.png",
+   "role": "figure",
+   "subject": "celebrating person",
+   "tags": [
+    "achievement",
+    "celebrate",
+    "celebration",
+    "happy",
+    "success",
+    "victory",
+    "win"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0985,
+    0.0533,
+    0.9015,
+    0.9467
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "lhhrvpLrQgXCXOgBqH01",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.098497495,
+     "y": 0.0532972,
+     "width": 0.803005,
+     "height": 0.8934056
+    },
+    "coverage": 0.2380948,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 599,
+   "height": 1107
+  },
+  {
+   "id": "team_meeting",
+   "file": "team_meeting.png",
+   "role": "figure",
+   "subject": "team",
+   "tags": [
+    "collaboration",
+    "colleagues",
+    "coworkers",
+    "group",
+    "meeting",
+    "team",
+    "teamwork"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0787,
+    0.0534,
+    0.9213,
+    0.9466
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "2Dh8bcOeyLuCI7HvkDyM",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.0786802,
+     "y": 0.053356282,
+     "width": 0.84263957,
+     "height": 0.8932874
+    },
+    "coverage": 0.48920447,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 788,
+   "height": 1162
+  },
+  {
+   "id": "researcher_reading",
+   "file": "researcher_reading.png",
+   "role": "figure",
+   "subject": "reader",
+   "tags": [
+    "books",
+    "knowledge",
+    "learning",
+    "reading",
+    "research",
+    "study"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.1602,
+    0.0537,
+    0.8398,
+    0.9463
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "XcDyWCGWEOb8Eti4W5Pl",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.16015625,
+     "y": 0.053685896,
+     "width": 0.6796875,
+     "height": 0.8926282
+    },
+    "coverage": 0.26777062,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 512,
+   "height": 1248
+  },
+  {
+   "id": "astronaut",
+   "file": "astronaut.png",
+   "role": "figure",
+   "subject": "astronaut",
+   "tags": [
+    "astronaut",
+    "isro",
+    "mission",
+    "nasa",
+    "space",
+    "spaceflight"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.1043,
+    0.0536,
+    0.8957,
+    0.9464
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "nHbRcu1d40r66UvyzC2Y",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.1042654,
+     "y": 0.05357143,
+     "width": 0.7914692,
+     "height": 0.89285713
+    },
+    "coverage": 0.39536145,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 633,
+   "height": 1232
+  },
+  {
+   "id": "public_speaker",
+   "file": "public_speaker.png",
+   "role": "figure",
+   "subject": "public speaker",
+   "tags": [
+    "host",
+    "influencer",
+    "microphone",
+    "public speaking",
+    "speaker",
+    "speech",
+    "talk"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.1348,
+    0.0535,
+    0.8633,
+    0.9465
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "MX1iMNdCuaHjumwAumLJ",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.13476562,
+     "y": 0.053514376,
+     "width": 0.7285156,
+     "height": 0.8929712
+    },
+    "coverage": 0.2851469,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 512,
+   "height": 1252
+  },
+  {
+   "id": "climbing_steps",
+   "file": "climbing_steps.png",
+   "role": "figure",
+   "subject": "person climbing steps",
+   "tags": [
+    "climb",
+    "goals",
+    "growth",
+    "improvement",
+    "journey",
+    "progress",
+    "steps"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.1061,
+    0.0536,
+    0.8939,
+    0.9464
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "gUFY6DarVyfSbnGLDrRn",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.10606061,
+     "y": 0.05357143,
+     "width": 0.7878788,
+     "height": 0.89285713
+    },
+    "coverage": 0.38332734,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 594,
+   "height": 1176
+  },
+  {
+   "id": "factory_worker",
+   "file": "factory_worker.png",
+   "role": "figure",
+   "subject": "factory worker",
+   "tags": [
+    "factory",
+    "industry",
+    "labour",
+    "manufacturing",
+    "mechanic",
+    "technician",
+    "worker"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0976,
+    0.0539,
+    0.9024,
+    0.9461
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "rOzcoghuYvh2j9fsLms1",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.09756097,
+     "y": 0.053872053,
+     "width": 0.80487806,
+     "height": 0.8922559
+    },
+    "coverage": 0.25747567,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 656,
+   "height": 1188
+  }
+ ]
+}

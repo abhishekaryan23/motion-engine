@@ -1,0 +1,47 @@
+{
+  "version": "0.1",
+  "title": "subscription_accumulation",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "Each subscription feels cheap on its own.",
+      "primary": {
+        "kind": "phrase",
+        "value": "Small subscriptions",
+        "meaning": "single fee"
+      },
+      "energy": "calm",
+      "continuity": "carry_primary",
+      "keyword": "cheap"
+    },
+    {
+      "purpose": "contrast",
+      "statement": "Then all the auto-debits arrive together.",
+      "primary": {
+        "kind": "phrase",
+        "value": "Small subscriptions",
+        "meaning": "single fee"
+      },
+      "secondary": {
+        "kind": "phrase",
+        "value": "Monthly total",
+        "meaning": "combined debits"
+      },
+      "relationship": "compress",
+      "energy": "building",
+      "keyword": "debits"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "Tiny subscriptions become one large monthly expense.",
+      "primary": {
+        "kind": "phrase",
+        "value": "One large expense",
+        "meaning": "the true cost"
+      },
+      "energy": "impact",
+      "keyword": "expense"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "version": "0.2",
+  "reference_fingerprint": "rf1-0123456789abcdef",
+  "tone": { "value": "editorial", "confidence": 0.9 },
+  "polarity": { "value": "dark", "confidence": 0.9 },
+  "temperature": { "value": "warm", "confidence": 0.7 },
+  "contrast": { "value": "high", "confidence": 0.85 },
+  "image_treatment": { "value": "none", "confidence": 0.9 },
+  "motion_temperament": { "value": "snappy", "confidence": 0.8 },
+  "visual_language": {
+    "medium": { "value": "type_only", "confidence": 0.9, "evidence": { "samples": ["s01", "s02"] } },
+    "asset_usage": { "value": "none", "confidence": 0.85 },
+    "type_image_balance": { "value": "type_dominant", "confidence": 0.9 },
+    "asset_character": { "value": null, "confidence": 0.2 },
+    "asset_roles": [],
+    "composition_language": {
+      "preferred": ["kinetic_poster", "editorial_collage"],
+      "secondary": [],
+      "avoid": ["cinematic_multiplane"],
+      "confidence": 0.8
+    },
+    "explanation_mode": { "value": "literal", "confidence": 0.6 }
+  }
+}

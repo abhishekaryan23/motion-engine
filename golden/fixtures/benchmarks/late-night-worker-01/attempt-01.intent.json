@@ -1,0 +1,23 @@
+{
+  "version": "0.2",
+  "title": "late_night_worker",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "An office worker sits alone at 11:47 PM.",
+      "primary": {
+        "kind": "phrase",
+        "value": "Office worker",
+        "meaning": "worker"
+      },
+      "secondary": {
+        "kind": "phrase",
+        "value": "Unsure who to call",
+        "meaning": "parked car"
+      },
+      "energy": "calm",
+      "keyword": "night"
+    }
+  ]
+}

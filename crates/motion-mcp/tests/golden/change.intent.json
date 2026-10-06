@@ -1,0 +1,34 @@
+{
+  "beats": [
+    {
+      "continuity": "none",
+      "energy": "building",
+      "narration": "Delivery went from three whole days to the very same day.",
+      "primary": {
+        "entity": "delivery",
+        "from": "3 days",
+        "kind": "state_change",
+        "meaning": "faster",
+        "to": "same day"
+      },
+      "purpose": "emphasize",
+      "statement": "Delivery went from three whole days…"
+    },
+    {
+      "continuity": "none",
+      "energy": "building",
+      "narration": "And prices dropped from nine dollars to just two.",
+      "primary": {
+        "entity": "price",
+        "from": "$9",
+        "kind": "state_change",
+        "to": "$2"
+      },
+      "purpose": "emphasize",
+      "statement": "Cheaper too"
+    }
+  ],
+  "format": "vertical",
+  "title": "faster_delivery",
+  "version": "0.2"
+}

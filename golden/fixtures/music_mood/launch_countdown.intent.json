@@ -1,0 +1,28 @@
+{
+  "version": "0.2",
+  "title": "launch_countdown",
+  "format": "vertical",
+  "beats": [
+    { "purpose": "emphasize", "statement": "Ten seconds left",
+      "narration": "The countdown is at ten seconds, and nobody in the control room is breathing.",
+      "primary": { "kind": "number", "value": "T-10", "meaning": "seconds left" },
+      "energy": "building", "keyword": "countdown" },
+    { "purpose": "emphasize", "statement": "Every system must say go",
+      "narration": "Every engineer has to call go, and one wrong number scrubs the whole launch.",
+      "primary": { "kind": "phrase", "value": "GO FOR LAUNCH", "meaning": "final checks" },
+      "energy": "building" },
+    { "purpose": "contrast", "statement": "Fuel against the clock",
+      "narration": "The fuel is on a clock, and the weather window is closing fast.",
+      "primary": { "kind": "phrase", "value": "THE FUEL CLOCK", "meaning": "fuel" },
+      "secondary": { "kind": "phrase", "value": "THE WEATHER WINDOW", "meaning": "closing" },
+      "relationship": "compress", "energy": "impact" },
+    { "purpose": "reveal", "statement": "Ignition",
+      "narration": "Then the engines light, and the rocket leaves the pad.",
+      "primary": { "kind": "number", "value": "0", "meaning": "the clock stops" },
+      "energy": "impact" },
+    { "purpose": "emphasize", "statement": "Liftoff",
+      "narration": "It climbs into the dark, and the whole room finally lets out its breath.",
+      "primary": { "kind": "phrase", "value": "LIFTOFF", "meaning": "it flies" },
+      "energy": "impact" }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "version": "0.2",
+  "title": "the_old_tv_ad",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "The old TV ad still lives rent free",
+      "primary": {
+        "kind": "object",
+        "asset": "tv",
+        "meaning": "the old television ad"
+      },
+      "energy": "building"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "We taped our favourite songs",
+      "primary": {
+        "kind": "object",
+        "asset": "cassette",
+        "meaning": "a mixtape"
+      },
+      "energy": "calm"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "Someone always grabbed the megaphone",
+      "primary": {
+        "kind": "object",
+        "asset": "megaphone",
+        "meaning": "a loud announcement"
+      },
+      "energy": "building"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "Then the rotary telephone rang",
+      "primary": {
+        "kind": "object",
+        "asset": "telephone",
+        "meaning": "the call that changed things"
+      },
+      "energy": "impact"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+target/
+output/
+.DS_Store
+.claude/scheduled_tasks.lock
+benchmark/*/render/
+benchmark-v02/*/render/
+.claude/worktrees/
+benchmark-v04/*/render/
+# 0.7 reference bundles: frames derived from reference videos stay local
+references/**/samples/
+references/**/contact-sheet.png
+references/**/interpreter-prompt.md
+references/**/interpreter-request.json
+references/benchmark/*/work/
+references/benchmark/*/current/work/
+references/**/*-styled.mp4
+references/**/render-sheet.png
+benchmark-v07/*/baseline/
+benchmark-v07/*/render-*/
+benchmark-v07/*/comparison/frames/
+benchmark-v07/*/reference-*/evidence/samples/
+benchmark-v07/*/reference-*/evidence/contact-sheet.png
+benchmark-v07/*/reference-*/evidence/interpreter-*
+scripts/__pycache__/
+# 0.7.1 visual-language benchmark: bulky regenerable outputs
+benchmark-v071/*/*/render/
+benchmark-v071/*/*/cache/
+benchmark-v071/*/*/delivery/
+benchmark-v071/*/*/beat*.png
+benchmark-v071/*/*/logs/
+# 0.5 benchmark: regenerable renders and raw intermediates
+benchmark-v05/*/*-render/
+benchmark-v05/*/delivery/*.pam
+.DS_Store
+benchmark-v05/
+# 0.8 curated SFX pack copy (rebuilt by sfx-index from the owner's pack)
+assets/sfx/library
+*.speech-cache/
+output/voice*/
+# Secrets: provider keys live in env or ~/.config/motionengine (never in the repo)
+.env
+.env.*
+providers.toml
+# Archify receipts (contain local paths); the specs and HTML are tracked
+docs/architecture/*.finalize.json
+docs/architecture/*.finalize-summary.json
+docs/architecture/*.browser-check.json
+docs/architecture/*.delivery.json
+# Local test media (owner's test images and asset folders stay off the repo)
+/test_*.png
+assets/spotlight/
+assets/gym_engineer/
+assets/hiphop_collage/
+assets/vox_buffett/
+# 0.19 generated families and reel sources (redistribution confirmed 2026-10-04; still local until committed)
+assets/library/fun_facts/
+assets/library/ocean_layers/
+assets/mariana_trench/
+
+# (0.21) User images for the MCP server (bring your own images; never committed)
+assets/inbox/*
+!assets/inbox/README.md

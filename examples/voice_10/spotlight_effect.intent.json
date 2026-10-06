@@ -1,0 +1,51 @@
+{
+  "version": "0.2",
+  "title": "spotlight_effect",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "Your midnight replay",
+      "narration": "It's midnight. You're staring at the ceiling, and your brain is replaying that one awkward three-second mistake, again and again.",
+      "primary": { "kind": "phrase", "value": "12:00 AM", "meaning": "midnight replay" },
+      "energy": "impact",
+      "keyword": "replay"
+    },
+    {
+      "purpose": "contrast",
+      "statement": "Did everyone notice?",
+      "narration": "You're sure everyone in that meeting saw it and judged you for it. But cognitive science says you're dead wrong.",
+      "primary": { "kind": "phrase", "value": "DID THEY NOTICE?", "meaning": "paranoia" },
+      "secondary": { "kind": "phrase", "value": "DEAD WRONG", "meaning": "science" },
+      "relationship": "compress",
+      "energy": "building",
+      "keyword": "wrong"
+    },
+    {
+      "purpose": "compare",
+      "statement": "Guessed half. Only 23%.",
+      "narration": "Here's the proof. In a Cornell study, students wore an embarrassing T-shirt into a room and guessed half the people would notice. Only 23 percent did.",
+      "primary": { "kind": "number", "value": "50%", "meaning": "guess" },
+      "secondary": { "kind": "number", "value": "23%", "meaning": "reality" },
+      "relationship": "separate",
+      "energy": "building",
+      "keyword": "reality"
+    },
+    {
+      "purpose": "explain",
+      "statement": "The Spotlight Effect",
+      "narration": "That gap has a name: the spotlight effect. Inside your head, your flaws play at full volume, while everyone else is busy under their own spotlight.",
+      "primary": { "kind": "phrase", "value": "FLAWS AT FULL VOLUME", "meaning": "inside your head" },
+      "energy": "building",
+      "keyword": "spotlight"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "The room moved on",
+      "narration": "So stop replaying it. Nobody has time to obsess over your small mistakes. The room moved on hours ago, and so can you.",
+      "primary": { "kind": "phrase", "value": "MOVE ON", "meaning": "freedom" },
+      "energy": "impact",
+      "keyword": "forward"
+    }
+  ]
+}

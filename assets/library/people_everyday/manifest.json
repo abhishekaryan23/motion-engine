@@ -1,0 +1,2337 @@
+{
+  "version": "0.2",
+  "assets": [
+    {
+      "id": "library.person_walking",
+      "path": "person_walking.png",
+      "width": 626,
+      "height": 1149,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "face_anchor": {
+        "x": 0.51996803,
+        "y": 0.12010444
+      },
+      "serves": [
+        "library.person_walking"
+      ],
+      "fingerprint": "fp1-49dd58eab278be26",
+      "continuity_key": "person_walking",
+      "content_hash": "fnv1a64:5f3c963f97e353d9",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.09904154,
+          "y": 0.053959966,
+          "width": 0.80191696,
+          "height": 0.89208007
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.25319418,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000020000000",
+            "0000003efd000000",
+            "0000001ffb000000",
+            "000004dfe1000000",
+            "00000efff7000000",
+            "00003ffffb000000",
+            "00009ffffeb10000",
+            "00008ffff6497100",
+            "0000bdfff6004100",
+            "00006afff9000000",
+            "00002ffbfe100000",
+            "0001de60cf500000",
+            "000ce3003fd10000",
+            "007f600006fb0000",
+            "02ce930000bfd820",
+            "0000100000110000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "right_upper",
+            "rect": {
+              "x": 0.625,
+              "y": 0.0,
+              "width": 0.375,
+              "height": 0.375
+            },
+            "occupancy": 0.0,
+            "score": 0.140625
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.25,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.125
+          },
+          {
+            "name": "left_middle",
+            "rect": {
+              "x": 0.0,
+              "y": 0.25,
+              "width": 0.25,
+              "height": 0.5
+            },
+            "occupancy": 0.0020833334,
+            "score": 0.12473958
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.625,
+              "y": 0.0,
+              "width": 0.375,
+              "height": 0.3125
+            },
+            "occupancy": 0.0,
+            "score": 0.1171875
+          },
+          {
+            "name": "right_middle",
+            "rect": {
+              "x": 0.8125,
+              "y": 0.25,
+              "width": 0.1875,
+              "height": 0.5
+            },
+            "occupancy": 0.0055555557,
+            "score": 0.09322917
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.6875,
+              "y": 0.5625,
+              "width": 0.3125,
+              "height": 0.25
+            },
+            "occupancy": 0.0033333334,
+            "score": 0.07786459
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.5,
+              "width": 0.25,
+              "height": 0.25
+            },
+            "occupancy": 0.004166667,
+            "score": 0.062239584
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.9375,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.0125,
+            "score": 0.06171875
+          }
+        ],
+        "head_estimate": {
+          "x": 0.41214058,
+          "y": 0.053959966,
+          "width": 0.21565495,
+          "height": 0.13228895
+        },
+        "mean_color": [
+          155,
+          145,
+          131
+        ]
+      },
+      "generator": {
+        "history_id": "NUTUXGohL2ih1XRCzJ9s",
+        "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)",
+        "model": "gpt-image-2-5-flare (low, 1k)",
+        "project": "MotionEngine Asset Library",
+        "vendor": "openart"
+      }
+    },
+    {
+      "id": "library.laptop_worker",
+      "path": "laptop_worker.png",
+      "width": 512,
+      "height": 977,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.499,
+        "y": 0.5
+      },
+      "face_anchor": {
+        "x": 0.3876953,
+        "y": 0.129478
+      },
+      "serves": [
+        "library.laptop_worker"
+      ],
+      "fingerprint": "fp1-7ad4653be5d22b1c",
+      "continuity_key": "laptop_worker",
+      "content_hash": "fnv1a64:30e0563987a668ef",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.12890625,
+          "y": 0.053224154,
+          "width": 0.7402344,
+          "height": 0.8935517
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.3825446,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000002000000000",
+            "00005efe30000000",
+            "0000bfff40000000",
+            "00048ef710000000",
+            "008fffffe3433200",
+            "009ffffffffff900",
+            "007ffffffffff200",
+            "000cffffffff5000",
+            "000dffffffffb000",
+            "000cbbeffffff100",
+            "000c01bdbfffd200",
+            "002a04ad9fff7000",
+            "006db8cebfff3000",
+            "00a2039d7ffc7200",
+            "0050000d10500000",
+            "0000000200000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "right_upper",
+            "rect": {
+              "x": 0.5625,
+              "y": 0.0,
+              "width": 0.4375,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.109375
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.5625,
+              "y": 0.0,
+              "width": 0.4375,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.109375
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.8125,
+              "y": 0.5,
+              "width": 0.1875,
+              "height": 0.5
+            },
+            "occupancy": 0.013888889,
+            "score": 0.092447914
+          },
+          {
+            "name": "right_middle",
+            "rect": {
+              "x": 0.8125,
+              "y": 0.375,
+              "width": 0.1875,
+              "height": 0.375
+            },
+            "occupancy": 0.018518519,
+            "score": 0.069010414
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.125,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          },
+          {
+            "name": "left_middle",
+            "rect": {
+              "x": 0.0,
+              "y": 0.25,
+              "width": 0.125,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.5,
+              "width": 0.125,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.9375,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.008333334,
+            "score": 0.061979167
+          }
+        ],
+        "head_estimate": {
+          "x": 0.24609375,
+          "y": 0.053224154,
+          "width": 0.28320312,
+          "height": 0.15250768
+        },
+        "mean_color": [
+          159,
+          140,
+          117
+        ]
+      },
+      "generator": {
+        "history_id": "qkK92os8Zw0MFg95Tazd",
+        "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)",
+        "model": "gpt-image-2-5-flare (low, 1k)",
+        "project": "MotionEngine Asset Library",
+        "vendor": "openart"
+      }
+    },
+    {
+      "id": "library.grocery_shopper",
+      "path": "grocery_shopper.png",
+      "width": 653,
+      "height": 1201,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "face_anchor": {
+        "x": 0.48621744,
+        "y": 0.11656952
+      },
+      "serves": [
+        "library.grocery_shopper"
+      ],
+      "fingerprint": "fp1-89ffda95b36dcc79",
+      "continuity_key": "grocery_shopper",
+      "content_hash": "fnv1a64:1d430ffe70b4a025",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.09800919,
+          "y": 0.053288925,
+          "width": 0.8039816,
+          "height": 0.8934221
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.39571795,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000210000000",
+            "0000008fe3000000",
+            "0000006fd2000000",
+            "00002ceffea10000",
+            "0000affffff80000",
+            "0001fffffffe0000",
+            "0005ffffffff4000",
+            "00079ffffff78000",
+            "000c7ffffff5d000",
+            "03cfbffffff8f810",
+            "02ffffffffffff30",
+            "06fffeffff9fff50",
+            "03bd96fffe0afe40",
+            "000000bff5000000",
+            "0000006e81000000",
+            "0000001200000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "right_upper",
+            "rect": {
+              "x": 0.75,
+              "y": 0.0,
+              "width": 0.25,
+              "height": 0.375
+            },
+            "occupancy": 0.0,
+            "score": 0.09375
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.25,
+              "height": 0.375
+            },
+            "occupancy": 0.0027777778,
+            "score": 0.09348959
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.3125,
+              "height": 0.25
+            },
+            "occupancy": 0.006666667,
+            "score": 0.07760417
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.8125,
+              "width": 0.375,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.0703125
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.625,
+              "y": 0.8125,
+              "width": 0.375,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.0703125
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.8125,
+              "width": 0.375,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.0703125
+          },
+          {
+            "name": "left_middle",
+            "rect": {
+              "x": 0.0,
+              "y": 0.25,
+              "width": 0.1875,
+              "height": 0.3125
+            },
+            "occupancy": 0.0,
+            "score": 0.05859375
+          },
+          {
+            "name": "right_middle",
+            "rect": {
+              "x": 0.8125,
+              "y": 0.25,
+              "width": 0.1875,
+              "height": 0.3125
+            },
+            "occupancy": 0.0,
+            "score": 0.05859375
+          }
+        ],
+        "head_estimate": {
+          "x": 0.37366003,
+          "y": 0.053288925,
+          "width": 0.22511485,
+          "height": 0.1265612
+        },
+        "mean_color": [
+          148,
+          140,
+          120
+        ]
+      },
+      "generator": {
+        "history_id": "htHRbd7DfAAlwGDqhLpi",
+        "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)",
+        "model": "gpt-image-2-5-flare (low, 1k)",
+        "project": "MotionEngine Asset Library",
+        "vendor": "openart"
+      }
+    },
+    {
+      "id": "library.person_on_phone",
+      "path": "person_on_phone.png",
+      "width": 512,
+      "height": 1211,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.499,
+        "y": 0.5
+      },
+      "face_anchor": {
+        "x": 0.4892578,
+        "y": 0.15194054
+      },
+      "serves": [
+        "library.person_on_phone"
+      ],
+      "fingerprint": "fp1-4f4d41882b4b7e4a",
+      "continuity_key": "person_on_phone",
+      "content_hash": "fnv1a64:62bc103572567f29",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.25,
+          "y": 0.05367465,
+          "width": 0.49804688,
+          "height": 0.8926507
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.27869207,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000210000000",
+            "000003effa000000",
+            "000003efed300000",
+            "00005effdcd30000",
+            "0000effffffd0000",
+            "0000bfffff920000",
+            "00008fffffd00000",
+            "00001fffff930000",
+            "000007ffff300000",
+            "000005fffe000000",
+            "000009fff8000000",
+            "00001fffd1000000",
+            "00003fffb0000000",
+            "00002fffa0000000",
+            "00002cfffb620000",
+            "0000001112100000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.6875,
+              "y": 0.5,
+              "width": 0.3125,
+              "height": 0.5
+            },
+            "occupancy": 0.0033333334,
+            "score": 0.15572917
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.25,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.125
+          },
+          {
+            "name": "right_upper",
+            "rect": {
+              "x": 0.75,
+              "y": 0.0,
+              "width": 0.25,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.125
+          },
+          {
+            "name": "left_middle",
+            "rect": {
+              "x": 0.0,
+              "y": 0.25,
+              "width": 0.25,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.125
+          },
+          {
+            "name": "right_middle",
+            "rect": {
+              "x": 0.75,
+              "y": 0.25,
+              "width": 0.25,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.125
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.5,
+              "width": 0.25,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.125
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.6875,
+              "y": 0.6875,
+              "width": 0.3125,
+              "height": 0.3125
+            },
+            "occupancy": 0.0053333333,
+            "score": 0.09713542
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.25,
+              "height": 0.3125
+            },
+            "occupancy": 0.0,
+            "score": 0.078125
+          }
+        ],
+        "head_estimate": {
+          "x": 0.25585938,
+          "y": 0.05367465,
+          "width": 0.46679688,
+          "height": 0.19653179
+        },
+        "mean_color": [
+          67,
+          76,
+          83
+        ]
+      },
+      "generator": {
+        "history_id": "lhjxilydyorsn2QnRtJ8",
+        "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)",
+        "model": "gpt-image-2-5-flare (low, 1k)",
+        "project": "MotionEngine Asset Library",
+        "vendor": "openart"
+      }
+    },
+    {
+      "id": "library.person_thinking",
+      "path": "person_thinking.png",
+      "width": 512,
+      "height": 1173,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "face_anchor": {
+        "x": 0.4501953,
+        "y": 0.112531975
+      },
+      "serves": [
+        "library.person_thinking"
+      ],
+      "fingerprint": "fp1-a6293bdb256d420e",
+      "continuity_key": "person_thinking",
+      "content_hash": "fnv1a64:149c798ce9373556",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.26757812,
+          "y": 0.05370844,
+          "width": 0.46484375,
+          "height": 0.89258313
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.28417385,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000001200000000",
+            "00000cffe3000000",
+            "000005efe4000000",
+            "00006dffdf500000",
+            "00007fffffe30000",
+            "00001fffffe70000",
+            "00000affffa00000",
+            "00000dffffc00000",
+            "00001fffffd00000",
+            "00000dfeffa00000",
+            "00001ff8ff600000",
+            "00006fe5ff100000",
+            "0000af97fc000000",
+            "0000af9bf9000000",
+            "00009fabfc500000",
+            "0000000120000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.6875,
+              "y": 0.5,
+              "width": 0.3125,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.15625
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.25,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.125
+          },
+          {
+            "name": "right_upper",
+            "rect": {
+              "x": 0.75,
+              "y": 0.0,
+              "width": 0.25,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.125
+          },
+          {
+            "name": "left_middle",
+            "rect": {
+              "x": 0.0,
+              "y": 0.25,
+              "width": 0.25,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.125
+          },
+          {
+            "name": "right_middle",
+            "rect": {
+              "x": 0.75,
+              "y": 0.25,
+              "width": 0.25,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.125
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.5,
+              "width": 0.25,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.125
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.6875,
+              "y": 0.6875,
+              "width": 0.3125,
+              "height": 0.3125
+            },
+            "occupancy": 0.0,
+            "score": 0.09765625
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.25,
+              "height": 0.3125
+            },
+            "occupancy": 0.0,
+            "score": 0.078125
+          }
+        ],
+        "head_estimate": {
+          "x": 0.3125,
+          "y": 0.05370844,
+          "width": 0.27539062,
+          "height": 0.11764706
+        },
+        "mean_color": [
+          87,
+          103,
+          112
+        ]
+      },
+      "generator": {
+        "history_id": "HswSrFNOfUvjUZaC2IEk",
+        "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)",
+        "model": "gpt-image-2-5-flare (low, 1k)",
+        "project": "MotionEngine Asset Library",
+        "vendor": "openart"
+      }
+    },
+    {
+      "id": "library.handshake",
+      "path": "handshake.png",
+      "width": 615,
+      "height": 876,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "face_anchor": {
+        "x": 0.5097561,
+        "y": 0.15239726
+      },
+      "serves": [
+        "library.handshake"
+      ],
+      "fingerprint": "fp1-08bb698acb517e6f",
+      "continuity_key": "handshake",
+      "content_hash": "fnv1a64:66665835551a9da0",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.076422766,
+          "y": 0.05365297,
+          "width": 0.8471545,
+          "height": 0.89269406
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.35620892,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000100000000000",
+            "0008f8000005e900",
+            "0007f5000006f900",
+            "02cffd600000ef60",
+            "08fffff20007ffb0",
+            "0aefffcc67afff90",
+            "08efff245327ff60",
+            "01efff300006ff80",
+            "00afff300006ff50",
+            "009fff100004ff40",
+            "00abeb000002ff60",
+            "00d7e8000000dfa0",
+            "00e5f7000000cfb0",
+            "00d5d6000001dfb0",
+            "00a8dd600028dfa0",
+            "0000100000002100"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.5,
+              "y": 0.5,
+              "width": 0.1875,
+              "height": 0.5
+            },
+            "occupancy": 0.0055555557,
+            "score": 0.09322917
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.4375,
+              "y": 0.0,
+              "width": 0.25,
+              "height": 0.3125
+            },
+            "occupancy": 0.006666667,
+            "score": 0.07760417
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.4375,
+              "y": 0.6875,
+              "width": 0.25,
+              "height": 0.3125
+            },
+            "occupancy": 0.006666667,
+            "score": 0.07760417
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.5,
+              "width": 0.125,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          },
+          {
+            "name": "right_upper",
+            "rect": {
+              "x": 0.5,
+              "y": 0.0,
+              "width": 0.1875,
+              "height": 0.3125
+            },
+            "occupancy": 0.0,
+            "score": 0.05859375
+          },
+          {
+            "name": "right_middle",
+            "rect": {
+              "x": 0.5,
+              "y": 0.4375,
+              "width": 0.1875,
+              "height": 0.3125
+            },
+            "occupancy": 0.0,
+            "score": 0.05859375
+          }
+        ],
+        "head_estimate": {
+          "x": 0.09756097,
+          "y": 0.05365297,
+          "width": 0.82439023,
+          "height": 0.19748859
+        },
+        "mean_color": [
+          112,
+          117,
+          128
+        ]
+      },
+      "generator": {
+        "history_id": "le9sIcDdYcjTbRqNQjth",
+        "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)",
+        "model": "gpt-image-2-5-flare (low, 1k)",
+        "project": "MotionEngine Asset Library",
+        "vendor": "openart"
+      }
+    },
+    {
+      "id": "library.family_walk",
+      "path": "family_walk.png",
+      "width": 714,
+      "height": 1176,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "face_anchor": {
+        "x": 0.34733894,
+        "y": 0.11649659
+      },
+      "serves": [
+        "library.family_walk"
+      ],
+      "fingerprint": "fp1-22a1f7062d9dd676",
+      "continuity_key": "family_walk",
+      "content_hash": "fnv1a64:256ec1fbcd1d0464",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.0882353,
+          "y": 0.05357143,
+          "width": 0.8235294,
+          "height": 0.89285713
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.3803819,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000020000000000",
+            "00008fb000000000",
+            "00009f8000000000",
+            "006cffd900000000",
+            "01efffff40000000",
+            "05fffffd60000000",
+            "08fffffec0057100",
+            "08fffffe922ef500",
+            "08fffffd598de500",
+            "08fffffb09bfff20",
+            "08fffffa008ffe60",
+            "06cdfffc008ffa50",
+            "0006fffe006ff900",
+            "0001efff201bc100",
+            "00007f96100e8000",
+            "0000021000010000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "right_upper",
+            "rect": {
+              "x": 0.5625,
+              "y": 0.0,
+              "width": 0.4375,
+              "height": 0.375
+            },
+            "occupancy": 0.0,
+            "score": 0.1640625
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.5625,
+              "y": 0.0,
+              "width": 0.4375,
+              "height": 0.3125
+            },
+            "occupancy": 0.0,
+            "score": 0.13671875
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.9375,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.016666668,
+            "score": 0.061458334
+          },
+          {
+            "name": "right_middle",
+            "rect": {
+              "x": 0.5625,
+              "y": 0.25,
+              "width": 0.4375,
+              "height": 0.125
+            },
+            "occupancy": 0.0,
+            "score": 0.0546875
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.25,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.046875
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.1875,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.046875
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.5,
+              "y": 0.625,
+              "width": 0.125,
+              "height": 0.375
+            },
+            "occupancy": 0.016666668,
+            "score": 0.04609375
+          }
+        ],
+        "head_estimate": {
+          "x": 0.2577031,
+          "y": 0.05357143,
+          "width": 0.17927171,
+          "height": 0.12585033
+        },
+        "mean_color": [
+          153,
+          125,
+          98
+        ]
+      },
+      "generator": {
+        "history_id": "NheRZBAY7A88KmidY86k",
+        "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)",
+        "model": "gpt-image-2-5-flare (low, 1k)",
+        "project": "MotionEngine Asset Library",
+        "vendor": "openart"
+      }
+    },
+    {
+      "id": "library.shopkeeper",
+      "path": "shopkeeper.png",
+      "width": 521,
+      "height": 894,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "face_anchor": {
+        "x": 0.4347409,
+        "y": 0.15324384
+      },
+      "serves": [
+        "library.shopkeeper"
+      ],
+      "fingerprint": "fp1-fe6c57bda4334b58",
+      "continuity_key": "shopkeeper",
+      "content_hash": "fnv1a64:01fffa226d7241a3",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.09213052,
+          "y": 0.054809842,
+          "width": 0.815739,
+          "height": 0.89149886
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.49291933,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000110000000",
+            "0000002ff6000000",
+            "000016cfe2000000",
+            "0001effffb000000",
+            "0003ffffff710000",
+            "0001efffffff7000",
+            "008ffffffffffe10",
+            "02efffffffffff30",
+            "00ffffffffffff10",
+            "00ffffffffffff00",
+            "00ffffffffffff00",
+            "00efffffffffff00",
+            "00efffffffffff00",
+            "00dacfdffddeff00",
+            "00104d6ff8204200",
+            "0000000210000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "right_upper",
+            "rect": {
+              "x": 0.6875,
+              "y": 0.0,
+              "width": 0.3125,
+              "height": 0.3125
+            },
+            "occupancy": 0.0026666666,
+            "score": 0.09739584
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.6875,
+              "y": 0.0,
+              "width": 0.3125,
+              "height": 0.3125
+            },
+            "occupancy": 0.0026666666,
+            "score": 0.09739584
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.1875,
+              "height": 0.375
+            },
+            "occupancy": 0.0,
+            "score": 0.0703125
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.5,
+              "width": 0.125,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.875,
+              "y": 0.5,
+              "width": 0.125,
+              "height": 0.5
+            },
+            "occupancy": 0.004166667,
+            "score": 0.062239584
+          },
+          {
+            "name": "left_middle",
+            "rect": {
+              "x": 0.0,
+              "y": 0.25,
+              "width": 0.125,
+              "height": 0.5
+            },
+            "occupancy": 0.008333334,
+            "score": 0.061979167
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.9375,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.0125,
+            "score": 0.06171875
+          }
+        ],
+        "head_estimate": {
+          "x": 0.23800384,
+          "y": 0.054809842,
+          "width": 0.3934741,
+          "height": 0.196868
+        },
+        "mean_color": [
+          166,
+          141,
+          122
+        ]
+      },
+      "generator": {
+        "history_id": "g6fewHKuddwwwYriA70m",
+        "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)",
+        "model": "gpt-image-2-5-flare (low, 1k)",
+        "project": "MotionEngine Asset Library",
+        "vendor": "openart"
+      }
+    },
+    {
+      "id": "library.delivery_rider",
+      "path": "delivery_rider.png",
+      "width": 970,
+      "height": 859,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "face_anchor": {
+        "x": 0.44329897,
+        "y": 0.15599534
+      },
+      "serves": [
+        "library.delivery_rider"
+      ],
+      "fingerprint": "fp1-8d7bd037c2e3b46b",
+      "continuity_key": "delivery_rider",
+      "content_hash": "fnv1a64:5aa824a2da5a4788",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.053608246,
+          "y": 0.060535505,
+          "width": 0.8927835,
+          "height": 0.87892896
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.40452096,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000006e40000000",
+            "000000af50000000",
+            "000003fc20000000",
+            "07eec5fb00600000",
+            "08fff9ff83810000",
+            "08fffafe9bf80000",
+            "08fffafe94eb1000",
+            "01efffffeb9fb000",
+            "00ccffffc76fe300",
+            "0578efffb39ffd30",
+            "05effffff5cfdaa0",
+            "05affffffffdddb2",
+            "04cadb999a8a9ac1",
+            "008d80000003cd70",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "right_upper",
+            "rect": {
+              "x": 0.75,
+              "y": 0.0,
+              "width": 0.25,
+              "height": 0.5
+            },
+            "occupancy": 0.0020833334,
+            "score": 0.12473958
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.5625,
+              "y": 0.0,
+              "width": 0.4375,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.109375
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.3125,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.078125
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.9375,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          },
+          {
+            "name": "right_middle",
+            "rect": {
+              "x": 0.75,
+              "y": 0.25,
+              "width": 0.25,
+              "height": 0.25
+            },
+            "occupancy": 0.004166667,
+            "score": 0.062239584
+          }
+        ],
+        "head_estimate": {
+          "x": 0.35670102,
+          "y": 0.060535505,
+          "width": 0.17319588,
+          "height": 0.19091967
+        },
+        "mean_color": [
+          56,
+          56,
+          56
+        ]
+      },
+      "generator": {
+        "history_id": "LPcR4HcnPx8VciirnhVL",
+        "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)",
+        "model": "gpt-image-2-5-flare (low, 1k)",
+        "project": "MotionEngine Asset Library",
+        "vendor": "openart"
+      }
+    },
+    {
+      "id": "library.student",
+      "path": "student.png",
+      "width": 512,
+      "height": 1203,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.499,
+        "y": 0.5
+      },
+      "face_anchor": {
+        "x": 0.45703125,
+        "y": 0.15253532
+      },
+      "serves": [
+        "library.student"
+      ],
+      "fingerprint": "fp1-81f3fd478e836e01",
+      "continuity_key": "student",
+      "content_hash": "fnv1a64:470f3fe00d869204",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.17773438,
+          "y": 0.054031588,
+          "width": 0.6425781,
+          "height": 0.8927681
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.31744045,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000002210000000",
+            "00000bfff3000000",
+            "00004fffd2000000",
+            "0005dffffea10000",
+            "001efffffffcb000",
+            "002fffffffffc000",
+            "000dffffffd62000",
+            "0005dfffffb00000",
+            "00009fffff700000",
+            "00006fffff200000",
+            "00001ffefc000000",
+            "00000dfef8000000",
+            "00000cfff4000000",
+            "00000bffd0000000",
+            "000006fb50000000",
+            "0000012100000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.625,
+              "y": 0.5625,
+              "width": 0.375,
+              "height": 0.4375
+            },
+            "occupancy": 0.0031746032,
+            "score": 0.16354166
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.5,
+              "width": 0.25,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.125
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.625,
+              "y": 0.6875,
+              "width": 0.375,
+              "height": 0.3125
+            },
+            "occupancy": 0.0,
+            "score": 0.1171875
+          },
+          {
+            "name": "right_middle",
+            "rect": {
+              "x": 0.6875,
+              "y": 0.4375,
+              "width": 0.3125,
+              "height": 0.3125
+            },
+            "occupancy": 0.0,
+            "score": 0.09765625
+          },
+          {
+            "name": "right_upper",
+            "rect": {
+              "x": 0.8125,
+              "y": 0.0,
+              "width": 0.1875,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.09375
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.1875,
+              "height": 0.5
+            },
+            "occupancy": 0.008333334,
+            "score": 0.09296875
+          },
+          {
+            "name": "left_middle",
+            "rect": {
+              "x": 0.0,
+              "y": 0.25,
+              "width": 0.1875,
+              "height": 0.5
+            },
+            "occupancy": 0.008333334,
+            "score": 0.09296875
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.6875,
+              "y": 0.0,
+              "width": 0.3125,
+              "height": 0.25
+            },
+            "occupancy": 0.0033333334,
+            "score": 0.07786459
+          }
+        ],
+        "head_estimate": {
+          "x": 0.20117188,
+          "y": 0.054031588,
+          "width": 0.51171875,
+          "height": 0.19700748
+        },
+        "mean_color": [
+          91,
+          97,
+          100
+        ]
+      },
+      "generator": {
+        "history_id": "Bdz0UG88JG084VYWe71A",
+        "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)",
+        "model": "gpt-image-2-5-flare (low, 1k)",
+        "project": "MotionEngine Asset Library",
+        "vendor": "openart"
+      }
+    },
+    {
+      "id": "library.elderly_walker",
+      "path": "elderly_walker.png",
+      "width": 571,
+      "height": 1136,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "face_anchor": {
+        "x": 0.39492118,
+        "y": 0.15228873
+      },
+      "serves": [
+        "library.elderly_walker"
+      ],
+      "fingerprint": "fp1-53b14a1c0e1cce46",
+      "continuity_key": "elderly_walker",
+      "content_hash": "fnv1a64:dc037f338b5059af",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.10683012,
+          "y": 0.053697184,
+          "width": 0.78633976,
+          "height": 0.89260566
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.34103283,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000110000000",
+            "0000009ff5000000",
+            "000037cff4000000",
+            "0007fffff7000000",
+            "003ffffffb000000",
+            "008fffffff500000",
+            "00bffffffadd8000",
+            "002efffff3028000",
+            "001ffffff6006000",
+            "005ffffffb005200",
+            "004acfffec101500",
+            "0001cfffd0000600",
+            "000afffff1000600",
+            "005ffb3ff4000510",
+            "01cfa30686300220",
+            "0000210000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "right_upper",
+            "rect": {
+              "x": 0.625,
+              "y": 0.0,
+              "width": 0.375,
+              "height": 0.3125
+            },
+            "occupancy": 0.0,
+            "score": 0.1171875
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.625,
+              "y": 0.0,
+              "width": 0.375,
+              "height": 0.3125
+            },
+            "occupancy": 0.0,
+            "score": 0.1171875
+          },
+          {
+            "name": "right_middle",
+            "rect": {
+              "x": 0.8125,
+              "y": 0.25,
+              "width": 0.1875,
+              "height": 0.375
+            },
+            "occupancy": 0.0074074073,
+            "score": 0.06979167
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.125,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          },
+          {
+            "name": "left_middle",
+            "rect": {
+              "x": 0.0,
+              "y": 0.25,
+              "width": 0.125,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.5,
+              "width": 0.125,
+              "height": 0.5
+            },
+            "occupancy": 0.004166667,
+            "score": 0.062239584
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.875,
+              "y": 0.5,
+              "width": 0.125,
+              "height": 0.5
+            },
+            "occupancy": 0.0125,
+            "score": 0.06171875
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.9375,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.0125,
+            "score": 0.06171875
+          }
+        ],
+        "head_estimate": {
+          "x": 0.18914185,
+          "y": 0.053697184,
+          "width": 0.41155866,
+          "height": 0.1971831
+        },
+        "mean_color": [
+          206,
+          204,
+          205
+        ]
+      },
+      "generator": {
+        "history_id": "M1XIx7PvMcFOFfl9tuqi",
+        "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)",
+        "model": "gpt-image-2-5-flare (low, 1k)",
+        "project": "MotionEngine Asset Library",
+        "vendor": "openart"
+      }
+    },
+    {
+      "id": "library.colleagues_screen",
+      "path": "colleagues_screen.png",
+      "width": 631,
+      "height": 860,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "face_anchor": {
+        "x": 0.48335975,
+        "y": 0.15174419
+      },
+      "serves": [
+        "library.colleagues_screen"
+      ],
+      "fingerprint": "fp1-e938ce7cd4c32caa",
+      "continuity_key": "colleagues_screen",
+      "content_hash": "fnv1a64:f01b57157d15287e",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.07290016,
+          "y": 0.053488374,
+          "width": 0.8541997,
+          "height": 0.89302325
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.4162201,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000100000000000",
+            "0005fb0000001000",
+            "0007f799999af700",
+            "03dffdfffffffd00",
+            "09ffffffffffff80",
+            "0cffff98eadfff90",
+            "05ffff77a7bfff50",
+            "009fff10603fff10",
+            "008fff10704fff40",
+            "007fee00802fef30",
+            "009bca00700dbf30",
+            "00b7d7007009ac70",
+            "00c6e5249438c9a0",
+            "00a7e6100025d7b0",
+            "0030ba50001be250",
+            "0000000000002000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.375,
+              "y": 0.0,
+              "width": 0.625,
+              "height": 0.125
+            },
+            "occupancy": 0.0033333334,
+            "score": 0.07786459
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.5,
+              "width": 0.125,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          },
+          {
+            "name": "right_upper",
+            "rect": {
+              "x": 0.5,
+              "y": 0.0,
+              "width": 0.5,
+              "height": 0.125
+            },
+            "occupancy": 0.004166667,
+            "score": 0.062239584
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.9375,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.008333334,
+            "score": 0.061979167
+          }
+        ],
+        "head_estimate": {
+          "x": 0.09350238,
+          "y": 0.053488374,
+          "width": 0.77971476,
+          "height": 0.19651163
+        },
+        "mean_color": [
+          107,
+          108,
+          108
+        ]
+      },
+      "generator": {
+        "history_id": "LSPoEKTSgZS6o9PSvN2F",
+        "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)",
+        "model": "gpt-image-2-5-flare (low, 1k)",
+        "project": "MotionEngine Asset Library",
+        "vendor": "openart"
+      }
+    },
+    {
+      "id": "library.woman_saree",
+      "path": "woman_saree.png",
+      "width": 556,
+      "height": 1210,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "face_anchor": {
+        "x": 0.46942446,
+        "y": 0.123553716
+      },
+      "serves": [
+        "library.woman_saree"
+      ],
+      "fingerprint": "fp1-9a6d11cab8a8ff11",
+      "continuity_key": "woman_saree",
+      "content_hash": "fnv1a64:8499b148180a1f2b",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.11690647,
+          "y": 0.053719006,
+          "width": 0.7661871,
+          "height": 0.892562
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.35721356,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000001200000000",
+            "000004efd1000000",
+            "000004dfd5000000",
+            "000018cffb300000",
+            "00005fffff800000",
+            "00006fffff700000",
+            "0001efffff800000",
+            "0009cfffffa00000",
+            "003b5ffffff30000",
+            "00006ffffffc0000",
+            "00009fffffff8000",
+            "0000dffffffff600",
+            "0008fffffff87400",
+            "003efffffff60000",
+            "002588657afd2000",
+            "0000000012100000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "right_upper",
+            "rect": {
+              "x": 0.6875,
+              "y": 0.0,
+              "width": 0.3125,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.15625
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.25,
+              "height": 0.4375
+            },
+            "occupancy": 0.0023809525,
+            "score": 0.10911458
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.6875,
+              "y": 0.0,
+              "width": 0.3125,
+              "height": 0.3125
+            },
+            "occupancy": 0.0,
+            "score": 0.09765625
+          },
+          {
+            "name": "right_middle",
+            "rect": {
+              "x": 0.75,
+              "y": 0.25,
+              "width": 0.25,
+              "height": 0.375
+            },
+            "occupancy": 0.0,
+            "score": 0.09375
+          },
+          {
+            "name": "left_middle",
+            "rect": {
+              "x": 0.0,
+              "y": 0.25,
+              "width": 0.125,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.5,
+              "width": 0.125,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.875,
+              "y": 0.5,
+              "width": 0.125,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.9375,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.016666668,
+            "score": 0.061458334
+          }
+        ],
+        "head_estimate": {
+          "x": 0.3381295,
+          "y": 0.053719006,
+          "width": 0.26258993,
+          "height": 0.13966942
+        },
+        "mean_color": [
+          199,
+          148,
+          41
+        ]
+      },
+      "generator": {
+        "history_id": "lO6RlM8OxEaaVxHVc5cM",
+        "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)",
+        "model": "gpt-image-2-5-flare (low, 1k)",
+        "project": "MotionEngine Asset Library",
+        "vendor": "openart"
+      }
+    },
+    {
+      "id": "library.newspaper_reader",
+      "path": "newspaper_reader.png",
+      "width": 591,
+      "height": 1201,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "face_anchor": {
+        "x": 0.48984772,
+        "y": 0.1519567
+      },
+      "serves": [
+        "library.newspaper_reader"
+      ],
+      "fingerprint": "fp1-1abc52394b59658d",
+      "continuity_key": "newspaper_reader",
+      "content_hash": "fnv1a64:55f996b9f3ada490",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.10829103,
+          "y": 0.053288925,
+          "width": 0.78341794,
+          "height": 0.8934221
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.3776041,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000210000000",
+            "000001dff7000000",
+            "00aaaadffedee000",
+            "00cffffffffff800",
+            "02ffffffffffff30",
+            "009bcffffffb7610",
+            "00005ffffffa0000",
+            "00006ffffffc0000",
+            "00003ffffff90000",
+            "00000dffcff40000",
+            "00000afb7ff00000",
+            "00000af74fe00000",
+            "00000bf74fe00000",
+            "00000bf87fd00000",
+            "00000cf55fe30000",
+            "0000002012000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.5625,
+              "width": 0.3125,
+              "height": 0.4375
+            },
+            "occupancy": 0.0,
+            "score": 0.13671875
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.75,
+              "y": 0.5,
+              "width": 0.25,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.125
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.6875,
+              "width": 0.3125,
+              "height": 0.3125
+            },
+            "occupancy": 0.0,
+            "score": 0.09765625
+          },
+          {
+            "name": "left_middle",
+            "rect": {
+              "x": 0.0,
+              "y": 0.375,
+              "width": 0.25,
+              "height": 0.375
+            },
+            "occupancy": 0.0,
+            "score": 0.09375
+          },
+          {
+            "name": "right_middle",
+            "rect": {
+              "x": 0.75,
+              "y": 0.375,
+              "width": 0.25,
+              "height": 0.375
+            },
+            "occupancy": 0.0,
+            "score": 0.09375
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.125,
+              "height": 0.5
+            },
+            "occupancy": 0.008333334,
+            "score": 0.061979167
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.0125,
+            "score": 0.06171875
+          },
+          {
+            "name": "right_upper",
+            "rect": {
+              "x": 0.625,
+              "y": 0.0,
+              "width": 0.375,
+              "height": 0.125
+            },
+            "occupancy": 0.0,
+            "score": 0.046875
+          }
+        ],
+        "head_estimate": {
+          "x": 0.11505922,
+          "y": 0.053288925,
+          "width": 0.749577,
+          "height": 0.19733556
+        },
+        "mean_color": [
+          113,
+          108,
+          99
+        ]
+      },
+      "generator": {
+        "history_id": "Rp7VkB4GpdyfC9Ful3Eh",
+        "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)",
+        "model": "gpt-image-2-5-flare (low, 1k)",
+        "project": "MotionEngine Asset Library",
+        "vendor": "openart"
+      }
+    },
+    {
+      "id": "library.cyclist",
+      "path": "cyclist.png",
+      "width": 990,
+      "height": 912,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "face_anchor": {
+        "x": 0.48030302,
+        "y": 0.09429824
+      },
+      "serves": [
+        "library.cyclist"
+      ],
+      "fingerprint": "fp1-1ac037631e6ab260",
+      "continuity_key": "cyclist",
+      "content_hash": "fnv1a64:2424674019f71227",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.053535353,
+          "y": 0.058114037,
+          "width": 0.8929293,
+          "height": 0.88377196
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.22732036,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000002f40000000",
+            "0000007f40000000",
+            "000005ff30000000",
+            "00002fff20000000",
+            "00009ffee7300000",
+            "00005ef725820000",
+            "00000dff90520000",
+            "014534bff3942000",
+            "03b78a5dd8aa6820",
+            "0b1327bfc8540080",
+            "161897ffca134051",
+            "060946fd08012051",
+            "0713174202500070",
+            "0187740000576820",
+            "0000000000001000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "right_upper",
+            "rect": {
+              "x": 0.6875,
+              "y": 0.0,
+              "width": 0.3125,
+              "height": 0.5
+            },
+            "occupancy": 0.006666667,
+            "score": 0.15520833
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.5625,
+              "y": 0.0,
+              "width": 0.4375,
+              "height": 0.3125
+            },
+            "occupancy": 0.0,
+            "score": 0.13671875
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.25,
+              "height": 0.5
+            },
+            "occupancy": 0.0,
+            "score": 0.125
+          },
+          {
+            "name": "right_middle",
+            "rect": {
+              "x": 0.6875,
+              "y": 0.25,
+              "width": 0.3125,
+              "height": 0.25
+            },
+            "occupancy": 0.013333334,
+            "score": 0.077083334
+          },
+          {
+            "name": "left_middle",
+            "rect": {
+              "x": 0.0,
+              "y": 0.25,
+              "width": 0.25,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.9375,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.004166667,
+            "score": 0.062239584
+          }
+        ],
+        "head_estimate": {
+          "x": 0.42525253,
+          "y": 0.058114037,
+          "width": 0.11010101,
+          "height": 0.07236842
+        },
+        "mean_color": [
+          104,
+          109,
+          104
+        ]
+      },
+      "generator": {
+        "history_id": "kRMR21D1qycenVi13DHp",
+        "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)",
+        "model": "gpt-image-2-5-flare (low, 1k)",
+        "project": "MotionEngine Asset Library",
+        "vendor": "openart"
+      }
+    }
+  ]
+}

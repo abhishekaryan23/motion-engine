@@ -1,0 +1,13 @@
+{
+  "version": "0.2",
+  "title": "why_we_nap",
+  "format": "vertical",
+  "beats": [
+    { "purpose": "emphasize", "statement": "That afternoon slump is real.", "primary": { "kind": "phrase", "value": "the slump" }, "energy": "building", "keyword": "slump" },
+    { "purpose": "explain", "statement": "Your body clock dips after lunch.", "primary": { "kind": "object", "asset": "clock", "meaning": "body clock" }, "energy": "calm", "keyword": "clock" },
+    { "purpose": "reveal", "statement": "A twenty minute nap resets focus.", "primary": { "kind": "number", "value": "20 min", "meaning": "nap" }, "energy": "impact", "continuity": "carry_primary", "keyword": "nap" },
+    { "purpose": "compare", "statement": "Longer naps leave you groggy.", "primary": { "kind": "number", "value": "20 min", "meaning": "fresh" }, "secondary": { "kind": "number", "value": "90 min", "meaning": "groggy" }, "relationship": "grow", "energy": "building", "keyword": "groggy" },
+    { "purpose": "emphasize", "statement": "Coffee first, then nap. Wake up sharp.", "primary": { "kind": "object", "asset": "coffee_cup", "meaning": "coffee" }, "energy": "building", "keyword": "coffee" },
+    { "purpose": "reveal", "statement": "Short, early, and on purpose.", "primary": { "kind": "phrase", "value": "short, early, on purpose" }, "energy": "impact", "keyword": "nap" }
+  ]
+}

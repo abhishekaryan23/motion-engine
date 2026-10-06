@@ -1,0 +1,34 @@
+{
+  "version": "0.2",
+  "title": "sequential_stack",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "explain",
+      "statement": "What a morning takes.",
+      "primary": {
+        "kind": "collection",
+        "meaning": "steps",
+        "items": [
+          {
+            "kind": "phrase",
+            "value": "wake at six"
+          },
+          {
+            "kind": "phrase",
+            "value": "pack lunch"
+          },
+          {
+            "kind": "phrase",
+            "value": "catch the bus"
+          },
+          {
+            "kind": "phrase",
+            "value": "clock in"
+          }
+        ]
+      },
+      "energy": "calm"
+    }
+  ]
+}

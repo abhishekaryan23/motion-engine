@@ -1,0 +1,41 @@
+{
+  "version": "0.2",
+  "title": "ai_toolkit",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "Your AI toolkit",
+      "narration": "Everyone talks about AI, but what actually belongs in your toolkit?",
+      "primary": { "kind": "object", "asset": "laptop", "meaning": "your workspace" },
+      "energy": "impact",
+      "keyword": "toolkit"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "Five tools, one workflow",
+      "narration": "Five things matter: the assistant, the chips behind it, the brain that keeps learning, the chat that talks back, and the spark that creates.",
+      "primary": {
+        "kind": "collection",
+        "meaning": "AI tools",
+        "items": [
+          { "kind": "object", "asset": "robot", "meaning": "assistant" },
+          { "kind": "object", "asset": "microchip", "meaning": "compute" },
+          { "kind": "object", "asset": "brain_circuit", "meaning": "learning" },
+          { "kind": "object", "asset": "chat_bubbles", "meaning": "conversation" },
+          { "kind": "object", "asset": "ai_sparkles", "meaning": "creativity" }
+        ]
+      },
+      "energy": "building",
+      "keyword": "tools"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "Ten times faster",
+      "narration": "Put them together and a day of work takes minutes, ten times faster.",
+      "primary": { "kind": "number", "value": "10x", "meaning": "faster" },
+      "energy": "impact",
+      "keyword": "faster"
+    }
+  ]
+}

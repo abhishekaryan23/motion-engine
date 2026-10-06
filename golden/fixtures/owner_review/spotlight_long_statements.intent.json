@@ -1,0 +1,74 @@
+{
+  "version": "0.2",
+  "title": "spotlight_trap",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "It is midnight you are staring at the ceiling and your brain is replaying that three second awkward mistake",
+      "primary": {
+        "kind": "phrase",
+        "value": "12:00 AM",
+        "meaning": "midnight replay"
+      },
+      "energy": "impact",
+      "keyword": "replay"
+    },
+    {
+      "purpose": "contrast",
+      "statement": "You are convinced everyone in the meeting noticed and judged you but cognitive science says you are dead wrong",
+      "primary": {
+        "kind": "phrase",
+        "value": "DID THEY NOTICE?",
+        "meaning": "paranoia"
+      },
+      "secondary": {
+        "kind": "phrase",
+        "value": "DEAD WRONG",
+        "meaning": "science"
+      },
+      "relationship": "compress",
+      "energy": "building",
+      "keyword": "wrong"
+    },
+    {
+      "purpose": "compare",
+      "statement": "Cornell University sent students into a room wearing an embarrassing graphic T-shirt the wearer predicted 50% would notice in reality only 23% did",
+      "primary": {
+        "kind": "number",
+        "value": "50%",
+        "meaning": "guess"
+      },
+      "secondary": {
+        "kind": "number",
+        "value": "23%",
+        "meaning": "reality"
+      },
+      "relationship": "separate",
+      "energy": "building",
+      "keyword": "reality"
+    },
+    {
+      "purpose": "explain",
+      "statement": "This is the Spotlight Effect your brain is your control room where your flaws blast at 100% volume but the truth is everyone has their own spotlight aimed at themselves",
+      "primary": {
+        "kind": "phrase",
+        "value": "SPOTLIGHT EFFECT",
+        "meaning": "control room"
+      },
+      "energy": "building",
+      "keyword": "spotlight"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "Nobody has the time to obsess over your minor mistakes so stop overthinking the room moved on hours ago",
+      "primary": {
+        "kind": "phrase",
+        "value": "MOVE ON",
+        "meaning": "freedom"
+      },
+      "energy": "impact",
+      "keyword": "forward"
+    }
+  ]
+}

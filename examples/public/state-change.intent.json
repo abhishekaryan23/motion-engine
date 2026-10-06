@@ -1,0 +1,22 @@
+{
+  "version": "0.2",
+  "title": "faster_trains",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "The new line cut the trip.",
+      "primary": { "kind": "state_change", "entity": "trip time", "from": "4 hours", "to": "90 minutes", "meaning": "faster" },
+      "energy": "building",
+      "keyword": "trip"
+    },
+    {
+      "purpose": "contrast",
+      "statement": "Faster and cheaper at once.",
+      "primary": { "kind": "state_change", "entity": "speed", "from": "slow", "to": "fast" },
+      "secondary": { "kind": "state_change", "entity": "ticket price", "from": "high", "to": "low" },
+      "energy": "impact",
+      "keyword": "both"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "model": "sonnet (inherited cal_1 round1 run; exact model id not recorded in repo)",
+  "bundle_fingerprint": "rf1-3c6ca95495a8e595",
+  "first_attempt_valid": true,
+  "repair_required": false,
+  "repair_valid": null,
+  "issues": [],
+  "completeness": {
+    "style": {
+      "applied": 15,
+      "total": 16,
+      "fraction": 0.938
+    },
+    "visual_language": {
+      "applied": 0,
+      "total": 7,
+      "fraction": 0.0
+    }
+  },
+  "unknown_dimensions": [
+    "image_treatment",
+    "visual.medium",
+    "visual.asset_usage",
+    "visual.type_image_balance",
+    "visual.asset_character",
+    "visual.explanation_mode",
+    "visual.asset_roles",
+    "visual.composition_language"
+  ],
+  "low_confidence_dimensions": [],
+  "aliases": [],
+  "coverage": {
+    "matched": 14,
+    "partial": 2,
+    "overridden": 0,
+    "unsupported": 0,
+    "unknown": 8
+  },
+  "visual_language": {
+    "present": false,
+    "medium": "neutral",
+    "medium_non_neutral": false,
+    "weight": "neutral",
+    "composition_lists_disjoint": null,
+    "prefers_procedural": false,
+    "wants_images": false
+  },
+  "agreement": {
+    "tone": true,
+    "polarity": true,
+    "temperature": true,
+    "visual_density": true
+  },
+  "notes": "EXAMPLE ONLY: scorer run on the committed references/calibration/cal_1/reference-style.round1.json (v0.1 profile, so no visual_language section). Not a benchmark result."
+}

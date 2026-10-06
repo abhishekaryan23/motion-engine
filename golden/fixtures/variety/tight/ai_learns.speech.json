@@ -1,0 +1,495 @@
+{
+  "version": "0.1",
+  "audio": "ai_learns.voice.wav",
+  "sample_rate": 48000,
+  "duration": 30.796042,
+  "provider": "macos_say",
+  "model": "macos/say",
+  "voice": "Daniel",
+  "words": [
+    {
+      "text": "Every",
+      "start": 0.35,
+      "end": 1.09,
+      "confidence": 0.9
+    },
+    {
+      "text": "chatbot",
+      "start": 1.09,
+      "end": 1.57,
+      "confidence": 0.9
+    },
+    {
+      "text": "you",
+      "start": 1.57,
+      "end": 1.92,
+      "confidence": 0.9
+    },
+    {
+      "text": "have",
+      "start": 1.92,
+      "end": 2.23,
+      "confidence": 0.9
+    },
+    {
+      "text": "ever",
+      "start": 2.24,
+      "end": 2.767083,
+      "confidence": 0.9
+    },
+    {
+      "text": "talked",
+      "start": 2.767083,
+      "end": 3.290785,
+      "confidence": 0.5
+    },
+    {
+      "text": "to",
+      "start": 3.290785,
+      "end": 3.73,
+      "confidence": 0.5
+    },
+    {
+      "text": "started",
+      "start": 3.73,
+      "end": 4.05,
+      "confidence": 0.7
+    },
+    {
+      "text": "out",
+      "start": 4.05,
+      "end": 4.59,
+      "confidence": 0.7
+    },
+    {
+      "text": "knowing",
+      "start": 4.59,
+      "end": 4.79,
+      "confidence": 0.7
+    },
+    {
+      "text": "absolutely",
+      "start": 5.01,
+      "end": 6.19,
+      "confidence": 0.9
+    },
+    {
+      "text": "nothing",
+      "start": 6.19,
+      "end": 6.634417,
+      "confidence": 0.7
+    },
+    {
+      "text": "So",
+      "start": 6.934417,
+      "end": 7.165287,
+      "confidence": 0.9
+    },
+    {
+      "text": "we",
+      "start": 7.165287,
+      "end": 7.396157,
+      "confidence": 0.5
+    },
+    {
+      "text": "feed",
+      "start": 7.396157,
+      "end": 7.644417,
+      "confidence": 0.5
+    },
+    {
+      "text": "it",
+      "start": 7.644417,
+      "end": 7.857898,
+      "confidence": 0.9
+    },
+    {
+      "text": "text",
+      "start": 7.857898,
+      "end": 8.074417,
+      "confidence": 0.5
+    },
+    {
+      "text": "billions",
+      "start": 8.074417,
+      "end": 8.494417,
+      "confidence": 0.9
+    },
+    {
+      "text": "of",
+      "start": 8.494417,
+      "end": 8.714417,
+      "confidence": 0.9
+    },
+    {
+      "text": "sentences",
+      "start": 8.744417,
+      "end": 9.214417,
+      "confidence": 0.7
+    },
+    {
+      "text": "from",
+      "start": 9.214417,
+      "end": 9.445131,
+      "confidence": 0.9
+    },
+    {
+      "text": "books",
+      "start": 9.445131,
+      "end": 9.764417,
+      "confidence": 0.5
+    },
+    {
+      "text": "websites",
+      "start": 9.764417,
+      "end": 10.134417,
+      "confidence": 0.7
+    },
+    {
+      "text": "and",
+      "start": 10.134417,
+      "end": 10.494417,
+      "confidence": 0.7
+    },
+    {
+      "text": "everyday",
+      "start": 10.494417,
+      "end": 10.984417,
+      "confidence": 0.7
+    },
+    {
+      "text": "conversations",
+      "start": 10.984417,
+      "end": 11.753833,
+      "confidence": 0.7
+    },
+    {
+      "text": "Its",
+      "start": 12.053833,
+      "end": 12.283833,
+      "confidence": 0.9
+    },
+    {
+      "text": "only",
+      "start": 12.283833,
+      "end": 12.693833,
+      "confidence": 0.7
+    },
+    {
+      "text": "job",
+      "start": 12.693833,
+      "end": 13.073833,
+      "confidence": 0.7
+    },
+    {
+      "text": "is",
+      "start": 13.083833,
+      "end": 13.283833,
+      "confidence": 0.7
+    },
+    {
+      "text": "to",
+      "start": 13.283833,
+      "end": 13.553833,
+      "confidence": 0.9
+    },
+    {
+      "text": "guess",
+      "start": 13.553833,
+      "end": 13.873833,
+      "confidence": 0.9
+    },
+    {
+      "text": "the",
+      "start": 13.873833,
+      "end": 14.023833,
+      "confidence": 0.9
+    },
+    {
+      "text": "next",
+      "start": 14.023833,
+      "end": 14.413833,
+      "confidence": 0.7
+    },
+    {
+      "text": "word",
+      "start": 14.413833,
+      "end": 14.503833,
+      "confidence": 0.9
+    },
+    {
+      "text": "again",
+      "start": 14.693833,
+      "end": 15.173833,
+      "confidence": 0.9
+    },
+    {
+      "text": "and",
+      "start": 15.173833,
+      "end": 15.323833,
+      "confidence": 0.7
+    },
+    {
+      "text": "again",
+      "start": 15.323833,
+      "end": 15.713833,
+      "confidence": 0.7
+    },
+    {
+      "text": "getting",
+      "start": 15.913833,
+      "end": 16.242543,
+      "confidence": 0.7
+    },
+    {
+      "text": "a",
+      "start": 16.242543,
+      "end": 16.513833,
+      "confidence": 0.5
+    },
+    {
+      "text": "tiny",
+      "start": 16.513833,
+      "end": 16.883833,
+      "confidence": 0.9
+    },
+    {
+      "text": "bit",
+      "start": 16.883833,
+      "end": 17.22216,
+      "confidence": 0.7
+    },
+    {
+      "text": "less",
+      "start": 17.22216,
+      "end": 17.4924,
+      "confidence": 0.5
+    },
+    {
+      "text": "wrong",
+      "start": 17.4924,
+      "end": 17.762639,
+      "confidence": 0.5
+    },
+    {
+      "text": "every",
+      "start": 17.762639,
+      "end": 18.383833,
+      "confidence": 0.5
+    },
+    {
+      "text": "time",
+      "start": 18.383833,
+      "end": 18.640917,
+      "confidence": 0.9
+    },
+    {
+      "text": "After",
+      "start": 18.940917,
+      "end": 19.280917,
+      "confidence": 0.9
+    },
+    {
+      "text": "enough",
+      "start": 19.280917,
+      "end": 20.010917,
+      "confidence": 0.7
+    },
+    {
+      "text": "guesses",
+      "start": 20.010917,
+      "end": 20.406794,
+      "confidence": 0.7
+    },
+    {
+      "text": "it",
+      "start": 20.406794,
+      "end": 20.780917,
+      "confidence": 0.5
+    },
+    {
+      "text": "does",
+      "start": 20.780917,
+      "end": 21.008179,
+      "confidence": 0.7
+    },
+    {
+      "text": "not",
+      "start": 21.008179,
+      "end": 21.308872,
+      "confidence": 0.5
+    },
+    {
+      "text": "memorise",
+      "start": 21.308872,
+      "end": 21.970917,
+      "confidence": 0.5
+    },
+    {
+      "text": "facts",
+      "start": 21.970917,
+      "end": 22.180917,
+      "confidence": 0.9
+    },
+    {
+      "text": "It",
+      "start": 22.286123,
+      "end": 22.580917,
+      "confidence": 0.5
+    },
+    {
+      "text": "learns",
+      "start": 22.580917,
+      "end": 22.980917,
+      "confidence": 0.9
+    },
+    {
+      "text": "the",
+      "start": 22.980917,
+      "end": 23.170917,
+      "confidence": 0.7
+    },
+    {
+      "text": "patterns",
+      "start": 23.170917,
+      "end": 23.670917,
+      "confidence": 0.9
+    },
+    {
+      "text": "behind",
+      "start": 23.670917,
+      "end": 24.260917,
+      "confidence": 0.9
+    },
+    {
+      "text": "them",
+      "start": 24.260917,
+      "end": 24.466146,
+      "confidence": 0.7
+    },
+    {
+      "text": "That",
+      "start": 24.766146,
+      "end": 25.006146,
+      "confidence": 0.9
+    },
+    {
+      "text": "is",
+      "start": 25.006146,
+      "end": 25.302606,
+      "confidence": 0.9
+    },
+    {
+      "text": "why",
+      "start": 25.302606,
+      "end": 25.556146,
+      "confidence": 0.5
+    },
+    {
+      "text": "it",
+      "start": 25.596146,
+      "end": 25.839065,
+      "confidence": 0.9
+    },
+    {
+      "text": "can",
+      "start": 25.839065,
+      "end": 26.107295,
+      "confidence": 0.5
+    },
+    {
+      "text": "sound",
+      "start": 26.107295,
+      "end": 26.356146,
+      "confidence": 0.5
+    },
+    {
+      "text": "so",
+      "start": 26.356146,
+      "end": 26.643755,
+      "confidence": 0.9
+    },
+    {
+      "text": "human",
+      "start": 26.643755,
+      "end": 27.006146,
+      "confidence": 0.5
+    },
+    {
+      "text": "and",
+      "start": 27.079628,
+      "end": 27.376146,
+      "confidence": 0.5
+    },
+    {
+      "text": "also",
+      "start": 27.376146,
+      "end": 27.783732,
+      "confidence": 0.9
+    },
+    {
+      "text": "why",
+      "start": 27.783732,
+      "end": 28.051961,
+      "confidence": 0.5
+    },
+    {
+      "text": "it",
+      "start": 28.051961,
+      "end": 28.266146,
+      "confidence": 0.5
+    },
+    {
+      "text": "can",
+      "start": 28.266146,
+      "end": 28.616146,
+      "confidence": 0.7
+    },
+    {
+      "text": "be",
+      "start": 28.616146,
+      "end": 28.926146,
+      "confidence": 0.9
+    },
+    {
+      "text": "confidently",
+      "start": 28.926146,
+      "end": 29.636146,
+      "confidence": 0.7
+    },
+    {
+      "text": "wrong",
+      "start": 29.636146,
+      "end": 29.896042,
+      "confidence": 0.9
+    }
+  ],
+  "sentences": [
+    {
+      "beat": 0,
+      "start": 0.35,
+      "end": 6.634417
+    },
+    {
+      "beat": 1,
+      "start": 6.934417,
+      "end": 11.753833
+    },
+    {
+      "beat": 2,
+      "start": 12.053833,
+      "end": 18.640917
+    },
+    {
+      "beat": 3,
+      "start": 18.940917,
+      "end": 24.466146
+    },
+    {
+      "beat": 4,
+      "start": 24.766146,
+      "end": 29.896042
+    }
+  ],
+  "alignment": "onset"
+}

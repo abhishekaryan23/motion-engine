@@ -1,0 +1,14 @@
+{
+  "version": "0.2",
+  "title": "multiplane",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "Every commute now competes for attention",
+      "primary": { "kind": "phrase", "value": "attention", "meaning": "the scarce thing" },
+      "secondary": { "kind": "phrase", "value": "and attention runs out." },
+      "energy": "building"
+    }
+  ]
+}

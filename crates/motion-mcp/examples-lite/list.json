@@ -1,0 +1,23 @@
+{
+  "story": {
+    "title": "the new toolkit",
+    "beats": [
+      {
+        "say": "Five tools now run the modern workflow, and most of them did not exist three years ago.",
+        "show": "The new toolkit",
+        "list": ["robot", "microchip", "brain_circuit", "chat_bubbles", "ai_sparkles"]
+      },
+      {
+        "say": "Together they swallow the boring middle of any project: the drafting, the sorting and the first review.",
+        "change": { "what": "first draft", "from": "two days", "to": "ten minutes" }
+      },
+      {
+        "say": "What is left for people is the part machines still cannot do, which is deciding what is worth making.",
+        "show": "Taste is the job",
+        "picture": "lightbulb",
+        "energy": "calm"
+      }
+    ]
+  },
+  "style": "technical"
+}

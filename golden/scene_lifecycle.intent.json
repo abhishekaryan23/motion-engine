@@ -1,0 +1,35 @@
+{
+  "version": "0.2",
+  "title": "scene_lifecycle",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "Rent rose again this year.",
+      "primary": {
+        "kind": "phrase",
+        "value": "again",
+        "meaning": "rent"
+      },
+      "secondary": {
+        "kind": "phrase",
+        "value": "third year running"
+      },
+      "energy": "calm"
+    },
+    {
+      "purpose": "compare",
+      "statement": "Two cities, one pattern.",
+      "primary": {
+        "kind": "phrase",
+        "value": "Pune"
+      },
+      "secondary": {
+        "kind": "phrase",
+        "value": "Indore"
+      },
+      "relationship": "separate",
+      "energy": "building"
+    }
+  ]
+}

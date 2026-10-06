@@ -1,0 +1,12 @@
+{
+  "frame_count": 47,
+  "fps": 12.0,
+  "mode": "loop",
+  "pattern": "frame_%04d.png",
+  "width": 453,
+  "height": 384,
+  "ssim_first_last": 0.9769,
+  "ssim_first_last_stored": 0.9409,
+  "keyed": true,
+  "source": "chat_bubbles.mp4"
+}

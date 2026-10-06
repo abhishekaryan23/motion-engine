@@ -1,0 +1,27 @@
+{
+  "version": "0.2",
+  "title": "volcano_eruption",
+  "format": "vertical",
+  "beats": [
+    { "purpose": "emphasize", "statement": "Pressure under the mountain",
+      "narration": "Deep under the mountain, molten rock is pushing upward, and nothing can stop it.",
+      "primary": { "kind": "phrase", "value": "MAGMA RISING", "meaning": "molten rock" },
+      "energy": "calm", "keyword": "magma" },
+    { "purpose": "emphasize", "statement": "The ground begins to shake",
+      "narration": "Then the ground starts to shake, and the whole peak trembles.",
+      "primary": { "kind": "phrase", "value": "THE PEAK TREMBLES", "meaning": "tremors" },
+      "energy": "building" },
+    { "purpose": "reveal", "statement": "The eruption",
+      "narration": "And then the volcano erupts, throwing lava and ash miles into the sky.",
+      "primary": { "kind": "number", "value": "30 km", "meaning": "ash column" },
+      "energy": "impact", "keyword": "erupts" },
+    { "purpose": "emphasize", "statement": "Thunder in the ash cloud",
+      "narration": "The ash cloud crackles with lightning, and the roar carries for a hundred miles.",
+      "primary": { "kind": "phrase", "value": "LIGHTNING IN THE ASH", "meaning": "thunder" },
+      "energy": "impact" },
+    { "purpose": "reveal", "statement": "A new mountain",
+      "narration": "When the fire finally dies down, the mountain has a brand new shape.",
+      "primary": { "kind": "phrase", "value": "A NEW SHAPE", "meaning": "the mountain after" },
+      "energy": "building" }
+  ]
+}

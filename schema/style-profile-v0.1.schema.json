@@ -1,0 +1,416 @@
+{
+  "$defs": {
+    "AccentRole": {
+      "oneOf": [
+        {
+          "const": "signal_red",
+          "description": "Signal red. The default.",
+          "type": "string"
+        },
+        {
+          "const": "cobalt",
+          "description": "Cobalt blue.",
+          "type": "string"
+        },
+        {
+          "const": "acid",
+          "description": "Acid yellow-green (dark text on accent).",
+          "type": "string"
+        }
+      ]
+    },
+    "BrandColors": {
+      "additionalProperties": false,
+      "description": "Brand colours, each written as hex `#RRGGBB` (or `#RGB`). Every field is optional.",
+      "properties": {
+        "background": {
+          "description": "The background colour. Omit it to keep the look's background.",
+          "pattern": "^#([0-9A-Fa-f]{6}|[0-9A-Fa-f]{3})$",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "primary": {
+          "description": "The main brand colour: highlights, rules, transitions and key figures.",
+          "pattern": "^#([0-9A-Fa-f]{6}|[0-9A-Fa-f]{3})$",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "secondary": {
+          "description": "A second brand colour for large colour fields and supporting accents.",
+          "pattern": "^#([0-9A-Fa-f]{6}|[0-9A-Fa-f]{3})$",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "text": {
+          "description": "The text colour. Used only where it is readable on the background.",
+          "pattern": "^#([0-9A-Fa-f]{6}|[0-9A-Fa-f]{3})$",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "CameraStyle": {
+      "oneOf": [
+        {
+          "const": "static",
+          "description": "No camera movement.",
+          "type": "string"
+        },
+        {
+          "const": "slow_push",
+          "description": "Gentle continuous push-in during each beat. The default.",
+          "type": "string"
+        },
+        {
+          "const": "drift",
+          "description": "A barely perceptible push-in.",
+          "type": "string"
+        }
+      ]
+    },
+    "Density": {
+      "oneOf": [
+        {
+          "const": "auto",
+          "description": "Chosen by the tone (the default).",
+          "type": "string"
+        },
+        {
+          "const": "sparse",
+          "description": "Few elements, lots of negative space, quiet background.",
+          "type": "string"
+        },
+        {
+          "const": "balanced",
+          "description": "A primary focus with some supporting detail.",
+          "type": "string"
+        },
+        {
+          "const": "dense",
+          "description": "Many supporting layers and annotations around one clear primary focus.",
+          "type": "string"
+        }
+      ]
+    },
+    "Depth": {
+      "oneOf": [
+        {
+          "const": "flat",
+          "description": "No halftone print patches, no background parallax.",
+          "type": "string"
+        },
+        {
+          "const": "layered",
+          "description": "Collage depth: halftone print patches behind cards and a slowly drifting background word. The default.",
+          "type": "string"
+        }
+      ]
+    },
+    "MaterialStyle": {
+      "oneOf": [
+        {
+          "const": "paper",
+          "description": "Warm uncoated paper (textured unless texture_style is \"none\"). The default.",
+          "type": "string"
+        },
+        {
+          "const": "flat",
+          "description": "Plain light background without paper texture.",
+          "type": "string"
+        }
+      ]
+    },
+    "MotionLanguage": {
+      "oneOf": [
+        {
+          "const": "auto",
+          "description": "The engine picks a motion language per beat from its meaning (numbers, emphasis, explanation). The default.",
+          "type": "string"
+        },
+        {
+          "const": "minimal",
+          "description": "Clean, restrained motion: small moves, fades and reveals, gentle settles, no bounce.",
+          "type": "string"
+        },
+        {
+          "const": "kinetic",
+          "description": "Kinetic typography: words cascade in, key words are punched or enlarged, text replaces text.",
+          "type": "string"
+        },
+        {
+          "const": "parallax",
+          "description": "Multi-plane depth: background, subject and foreground move at different rates as the camera pushes and drifts.",
+          "type": "string"
+        },
+        {
+          "const": "sequential",
+          "description": "Sequential: lines, words and items arrive one after another in irregular, readable rhythms.",
+          "type": "string"
+        },
+        {
+          "const": "data",
+          "description": "Data motion: numbers count up and quantities grow as bars, progress and lines.",
+          "type": "string"
+        }
+      ]
+    },
+    "Polarity": {
+      "oneOf": [
+        {
+          "const": "auto",
+          "description": "Chosen by the tone (the default).",
+          "type": "string"
+        },
+        {
+          "const": "light",
+          "description": "Dark text on a light ground.",
+          "type": "string"
+        },
+        {
+          "const": "dark",
+          "description": "Light text on a dark ground.",
+          "type": "string"
+        }
+      ]
+    },
+    "StyleFamily": {
+      "oneOf": [
+        {
+          "const": "editorial_collage",
+          "description": "Editorial collage (the default). Currently no visible effect.",
+          "type": "string"
+        },
+        {
+          "const": "minimal",
+          "description": "Minimal. Currently no visible effect.",
+          "type": "string"
+        }
+      ]
+    },
+    "Temperament": {
+      "oneOf": [
+        {
+          "const": "auto",
+          "description": "Chosen by the tone (the default).",
+          "type": "string"
+        },
+        {
+          "const": "restrained",
+          "description": "Quiet, controlled motion: small moves, soft settles, no bounce.",
+          "type": "string"
+        },
+        {
+          "const": "balanced",
+          "description": "Balanced editorial motion.",
+          "type": "string"
+        },
+        {
+          "const": "energetic",
+          "description": "Energetic motion: bigger moves, visible anticipation, lively settles.",
+          "type": "string"
+        }
+      ]
+    },
+    "Temperature": {
+      "oneOf": [
+        {
+          "const": "auto",
+          "description": "Chosen by the tone (the default).",
+          "type": "string"
+        },
+        {
+          "const": "warm",
+          "description": "Warm neutrals and warm accents.",
+          "type": "string"
+        },
+        {
+          "const": "cool",
+          "description": "Cool neutrals and cool accents.",
+          "type": "string"
+        }
+      ]
+    },
+    "TextureStyle": {
+      "oneOf": [
+        {
+          "const": "none",
+          "description": "Clean: no grain and untextured paper.",
+          "type": "string"
+        },
+        {
+          "const": "subtle_print",
+          "description": "Light film grain and soft paper texture. The default.",
+          "type": "string"
+        },
+        {
+          "const": "heavy_print",
+          "description": "Strong grain and paper texture.",
+          "type": "string"
+        }
+      ]
+    },
+    "Tone": {
+      "oneOf": [
+        {
+          "const": "auto",
+          "description": "The classic warm editorial collage (the default).",
+          "type": "string"
+        },
+        {
+          "const": "editorial",
+          "description": "Editorial magazine design: serif/sans contrast, generous space, measured pacing.",
+          "type": "string"
+        },
+        {
+          "const": "technical",
+          "description": "Technical/data design: structured grid, condensed and monospaced type, precise motion.",
+          "type": "string"
+        },
+        {
+          "const": "playful",
+          "description": "Playful print design: bold type, large graphic color fields, energetic motion.",
+          "type": "string"
+        },
+        {
+          "const": "street",
+          "description": "Music, sports and street culture: the picture owns the frame (big cutouts, tape, stencil punchwords), hard cuts, camera shake on the hits. Best with object or figure pictures.",
+          "type": "string"
+        },
+        {
+          "const": "documentary",
+          "description": "Investigative explainer (Vox style): evidence documents slide, get stamped and highlighted; measured camera drift, film grain. Best for facts, money, history and science stories.",
+          "type": "string"
+        },
+        {
+          "const": "hype",
+          "description": "Hype reel or opener: words and pictures slam into frame in fast cuts timed to the voice. Best for short, punchy scripts.",
+          "type": "string"
+        },
+        {
+          "const": "studio",
+          "description": "Creator / brand storytelling: one big cutout (best a person) in front of a bold colour disc on a clean studio ground; the spoken words appear large behind the subject as they are said.",
+          "type": "string"
+        },
+        {
+          "const": "cinematic",
+          "description": "Cinematic 3D: the story is staged in depth and a moving camera flies through it (parallax, dolly, orbit, rack focus, fly-through transitions). Best for big ideas: technology, science, space, the future.",
+          "type": "string"
+        }
+      ]
+    },
+    "TypographyStyle": {
+      "oneOf": [
+        {
+          "const": "grotesk_serif",
+          "description": "Heavy grotesk headlines, condensed figures, an italic serif voice, monospaced labels. The default.",
+          "type": "string"
+        },
+        {
+          "const": "condensed_mono",
+          "description": "Condensed display headlines and figures, monospaced body text and labels.",
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "Visual language for a piece. Every field is optional; `{}` is a valid profile\n(warm paper, grotesk + serif typography, layered depth, slow push, subtle print, signal red).\n\nThe five taste fields (`tone`, `polarity`, `temperature`, `temperament`, `density`) are the\nrecommended way to steer a piece: the engine's TasteDirector turns them into a complete,\ncoherent design system (palette, background, typography, material, image treatment, motion\ncharacter, transition character, composition rhythm, scale contrast). The remaining fields are\nexplicit overrides; a field left at its default never overrides a taste decision.",
+  "properties": {
+    "accent_role": {
+      "$ref": "#/$defs/AccentRole",
+      "default": "signal_red",
+      "description": "The single accent color used for highlights, rules and transitions."
+    },
+    "brand": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/BrandColors"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Brand colours for this piece. They replace the look's colours: `primary` for highlights,\nrules, transitions and key figures, `secondary` for large colour fields, `background`\nfor the ground. Text stays readable whatever the colours: text that would not be\nreadable on the background is replaced by near-black or near-white. Omit it to let the\nengine choose the colours."
+    },
+    "camera_style": {
+      "$ref": "#/$defs/CameraStyle",
+      "default": "slow_push",
+      "description": "Camera behavior during each beat."
+    },
+    "density": {
+      "$ref": "#/$defs/Density",
+      "default": "auto",
+      "description": "How much visual information a frame tends to hold. `auto` lets the tone decide.\nEvery density keeps one clear primary focus and readable text."
+    },
+    "depth": {
+      "$ref": "#/$defs/Depth",
+      "default": "layered",
+      "description": "Flat or layered collage depth."
+    },
+    "family": {
+      "$ref": "#/$defs/StyleFamily",
+      "default": "editorial_collage",
+      "description": "Overall style family. Accepted but currently has no visible effect."
+    },
+    "material": {
+      "$ref": "#/$defs/MaterialStyle",
+      "default": "paper",
+      "description": "Background material."
+    },
+    "motion_language": {
+      "$ref": "#/$defs/MotionLanguage",
+      "default": "auto",
+      "description": "How things move: the engine's motion behavior family. `auto` (the default)\nlets the engine choose per beat from what the beat communicates."
+    },
+    "polarity": {
+      "$ref": "#/$defs/Polarity",
+      "default": "auto",
+      "description": "Light or dark design. `auto` lets the tone decide."
+    },
+    "seed": {
+      "default": 0,
+      "description": "Non-negative integer that varies the procedural texture patterns only. Same seed, same result.",
+      "format": "uint64",
+      "maximum": 18446744073709551615,
+      "minimum": 0,
+      "type": "integer"
+    },
+    "temperament": {
+      "$ref": "#/$defs/Temperament",
+      "default": "auto",
+      "description": "How motion broadly feels. `auto` lets the tone decide."
+    },
+    "temperature": {
+      "$ref": "#/$defs/Temperature",
+      "default": "auto",
+      "description": "Color temperature. `auto` lets the tone decide."
+    },
+    "texture_style": {
+      "$ref": "#/$defs/TextureStyle",
+      "default": "subtle_print",
+      "description": "Amount of print texture (grain, paper fibre)."
+    },
+    "tone": {
+      "$ref": "#/$defs/Tone",
+      "default": "auto",
+      "description": "Overall design character. `auto` keeps the classic warm editorial collage when no other\ntaste field is set; with any other taste field set, `auto` means `editorial`."
+    },
+    "typography_style": {
+      "$ref": "#/$defs/TypographyStyle",
+      "default": "grotesk_serif",
+      "description": "Typeface pairing."
+    }
+  },
+  "title": "StyleProfile",
+  "type": "object"
+}

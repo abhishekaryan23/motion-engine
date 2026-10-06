@@ -1,0 +1,9 @@
+{
+  "title": "cost and output",
+  "beats": [
+    {"say": "Costs fell sharply while the output almost tripled this year.", "compare": {"a": "cost", "b": "output"}},
+    {"say": "The robots grew faster than the human team ever could.", "compare": {"a": "team", "b": "robot", "how": "grow"}, "show": "Robots pull ahead"},
+    {"say": "Rent keeps squeezing what is left of every paycheck.", "compare": {"a": "paycheck", "b": "rent", "how": "compress"}},
+    {"say": "Chatbots are replacing the old support desk completely.", "compare": {"a": "support desk", "b": "chat_bubbles", "how": "replace"}}
+  ]
+}

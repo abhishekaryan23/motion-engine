@@ -1,0 +1,6 @@
+{
+  "version": "0.1",
+  "reference_fingerprint": "rf1-0123456789abcdef",
+  "tone": { "value": "neon_bloom", "confidence": 0.8 },
+  "polarity": { "value": "dark", "confidence": 1.4 }
+}

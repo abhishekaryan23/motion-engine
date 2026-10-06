@@ -1,0 +1,3777 @@
+{
+ "version": "0.1",
+ "specs": [
+  {
+   "id": "library.document_pen",
+   "fingerprint": "fp1-191d14565797506d",
+   "continuity_key": "document_pen",
+   "serves": [
+    "library.document_pen"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "document being signed",
+   "context": "library glyph: document being signed",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "document_pen",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "document being signed (SketchIcons.ttf U+0021)"
+  },
+  {
+   "id": "library.calendar",
+   "fingerprint": "fp1-a0db958cd5e12258",
+   "continuity_key": "calendar",
+   "serves": [
+    "library.calendar"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "calendar",
+   "context": "library glyph: calendar",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "calendar",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "calendar (SketchIcons.ttf U+0022)"
+  },
+  {
+   "id": "library.calculator",
+   "fingerprint": "fp1-89ecd00aa347576d",
+   "continuity_key": "calculator",
+   "serves": [
+    "library.calculator"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "calculator",
+   "context": "library glyph: calculator",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "calculator",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "calculator (SketchIcons.ttf U+0023)"
+  },
+  {
+   "id": "library.clapperboard",
+   "fingerprint": "fp1-f80b2ef3ebbe2488",
+   "continuity_key": "clapperboard",
+   "serves": [
+    "library.clapperboard"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "film clapperboard",
+   "context": "library glyph: film clapperboard",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "clapperboard",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "film clapperboard (SketchIcons.ttf U+0027)"
+  },
+  {
+   "id": "library.credit_card",
+   "fingerprint": "fp1-ed10341eea667a2e",
+   "continuity_key": "credit_card",
+   "serves": [
+    "library.credit_card"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "credit card",
+   "context": "library glyph: credit card",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "credit_card",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "credit card (SketchIcons.ttf U+0028)"
+  },
+  {
+   "id": "library.newspaper",
+   "fingerprint": "fp1-fedd303d3314c0b7",
+   "continuity_key": "newspaper",
+   "serves": [
+    "library.newspaper"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "newspaper",
+   "context": "library glyph: newspaper",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "newspaper",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "newspaper (SketchIcons.ttf U+002B)"
+  },
+  {
+   "id": "library.speech_bubbles",
+   "fingerprint": "fp1-f2d446eff1b4dbeb",
+   "continuity_key": "speech_bubbles",
+   "serves": [
+    "library.speech_bubbles"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "conversation bubbles",
+   "context": "library glyph: conversation bubbles",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "speech_bubbles",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "conversation bubbles (SketchIcons.ttf U+002C)"
+  },
+  {
+   "id": "library.person",
+   "fingerprint": "fp1-4a988a0740b9f836",
+   "continuity_key": "person",
+   "serves": [
+    "library.person"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "person",
+   "context": "library glyph: person",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "person",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "person (SketchIcons.ttf U+002D)"
+  },
+  {
+   "id": "library.floppy_disk",
+   "fingerprint": "fp1-82c66567046fb699",
+   "continuity_key": "floppy_disk",
+   "serves": [
+    "library.floppy_disk"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "save disk",
+   "context": "library glyph: save disk",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "floppy_disk",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "save disk (SketchIcons.ttf U+002E)"
+  },
+  {
+   "id": "library.warning",
+   "fingerprint": "fp1-6e0d78d91f5156aa",
+   "continuity_key": "warning",
+   "serves": [
+    "library.warning"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "warning sign",
+   "context": "library glyph: warning sign",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "warning",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "warning sign (SketchIcons.ttf U+002F)"
+  },
+  {
+   "id": "library.battery",
+   "fingerprint": "fp1-f3a3375399a2ed7f",
+   "continuity_key": "battery",
+   "serves": [
+    "library.battery"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "battery",
+   "context": "library glyph: battery",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "battery",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "battery (SketchIcons.ttf U+0030)"
+  },
+  {
+   "id": "library.new_document",
+   "fingerprint": "fp1-7a4960c014eb3a1c",
+   "continuity_key": "new_document",
+   "serves": [
+    "library.new_document"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "new document",
+   "context": "library glyph: new document",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "new_document",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "new document (SketchIcons.ttf U+0031)"
+  },
+  {
+   "id": "library.plus",
+   "fingerprint": "fp1-44a8c476eeb93d29",
+   "continuity_key": "plus",
+   "serves": [
+    "library.plus"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "plus sign",
+   "context": "library glyph: plus sign",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "plus",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "plus sign (SketchIcons.ttf U+0032)"
+  },
+  {
+   "id": "library.minus",
+   "fingerprint": "fp1-0619499df51ed295",
+   "continuity_key": "minus",
+   "serves": [
+    "library.minus"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "minus sign",
+   "context": "library glyph: minus sign",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "minus",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "minus sign (SketchIcons.ttf U+0033)"
+  },
+  {
+   "id": "library.close",
+   "fingerprint": "fp1-0989739b29c150bd",
+   "continuity_key": "close",
+   "serves": [
+    "library.close"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "cross mark",
+   "context": "library glyph: cross mark",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "close",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "cross mark (SketchIcons.ttf U+0034)"
+  },
+  {
+   "id": "library.handshake",
+   "fingerprint": "fp1-7bf2013d22ebcec0",
+   "continuity_key": "handshake",
+   "serves": [
+    "library.handshake"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "handshake",
+   "context": "library glyph: handshake",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "handshake",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "handshake (SketchIcons.ttf U+0035)"
+  },
+  {
+   "id": "library.map_pin",
+   "fingerprint": "fp1-d2d9bcc578e7e228",
+   "continuity_key": "map_pin",
+   "serves": [
+    "library.map_pin"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "map pin",
+   "context": "library glyph: map pin",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "map_pin",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "map pin (SketchIcons.ttf U+0036)"
+  },
+  {
+   "id": "library.flag",
+   "fingerprint": "fp1-e2aeb8d003005196",
+   "continuity_key": "flag",
+   "serves": [
+    "library.flag"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "flag",
+   "context": "library glyph: flag",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "flag",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "flag (SketchIcons.ttf U+0037)"
+  },
+  {
+   "id": "library.question",
+   "fingerprint": "fp1-a052b22460411b11",
+   "continuity_key": "question",
+   "serves": [
+    "library.question"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "question mark",
+   "context": "library glyph: question mark",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "question",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "question mark (SketchIcons.ttf U+0038)"
+  },
+  {
+   "id": "library.thumbs_up",
+   "fingerprint": "fp1-4ce39fc140cf43f4",
+   "continuity_key": "thumbs_up",
+   "serves": [
+    "library.thumbs_up"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "thumbs up",
+   "context": "library glyph: thumbs up",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "thumbs_up",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "thumbs up (SketchIcons.ttf U+0039)"
+  },
+  {
+   "id": "library.price_tag",
+   "fingerprint": "fp1-6a73685d4dad75a7",
+   "continuity_key": "price_tag",
+   "serves": [
+    "library.price_tag"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "price tag",
+   "context": "library glyph: price tag",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "price_tag",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "price tag (SketchIcons.ttf U+003A)"
+  },
+  {
+   "id": "library.music_note",
+   "fingerprint": "fp1-297ec1c92a24fecf",
+   "continuity_key": "music_note",
+   "serves": [
+    "library.music_note"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "music note",
+   "context": "library glyph: music note",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "music_note",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "music note (SketchIcons.ttf U+003B)"
+  },
+  {
+   "id": "library.usb_stick",
+   "fingerprint": "fp1-5b9b0269759d2a18",
+   "continuity_key": "usb_stick",
+   "serves": [
+    "library.usb_stick"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "usb stick",
+   "context": "library glyph: usb stick",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "usb_stick",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "usb stick (SketchIcons.ttf U+003C)"
+  },
+  {
+   "id": "library.checkmark",
+   "fingerprint": "fp1-c762176d8865dc35",
+   "continuity_key": "checkmark",
+   "serves": [
+    "library.checkmark"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "check mark",
+   "context": "library glyph: check mark",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "checkmark",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "check mark (SketchIcons.ttf U+003D)"
+  },
+  {
+   "id": "library.sticker",
+   "fingerprint": "fp1-fb74664b4dd88cc5",
+   "continuity_key": "sticker",
+   "serves": [
+    "library.sticker"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "sticker",
+   "context": "library glyph: sticker",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "sticker",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "sticker (SketchIcons.ttf U+003E)"
+  },
+  {
+   "id": "library.gift",
+   "fingerprint": "fp1-f960d3d1dafd1dfd",
+   "continuity_key": "gift",
+   "serves": [
+    "library.gift"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "gift box",
+   "context": "library glyph: gift box",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "gift",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "gift box (SketchIcons.ttf U+003F)"
+  },
+  {
+   "id": "library.cash",
+   "fingerprint": "fp1-8c186be7a6a221bb",
+   "continuity_key": "cash",
+   "serves": [
+    "library.cash"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "cash and coins",
+   "context": "library glyph: cash and coins",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "cash",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "cash and coins (SketchIcons.ttf U+0040)"
+  },
+  {
+   "id": "library.magnifier",
+   "fingerprint": "fp1-582928af41d89e6b",
+   "continuity_key": "magnifier",
+   "serves": [
+    "library.magnifier"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "magnifying glass",
+   "context": "library glyph: magnifying glass",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "magnifier",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "magnifying glass (SketchIcons.ttf U+0041)"
+  },
+  {
+   "id": "library.folder",
+   "fingerprint": "fp1-94331a33051b2700",
+   "continuity_key": "folder",
+   "serves": [
+    "library.folder"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "folder",
+   "context": "library glyph: folder",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "folder",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "folder (SketchIcons.ttf U+0042)"
+  },
+  {
+   "id": "library.chat_box",
+   "fingerprint": "fp1-baaa58b9f983e0d2",
+   "continuity_key": "chat_box",
+   "serves": [
+    "library.chat_box"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "chat box",
+   "context": "library glyph: chat box",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "chat_box",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "chat box (SketchIcons.ttf U+0043)"
+  },
+  {
+   "id": "library.speech_bubble",
+   "fingerprint": "fp1-c36afcd32a0be73a",
+   "continuity_key": "speech_bubble",
+   "serves": [
+    "library.speech_bubble"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "speech bubble",
+   "context": "library glyph: speech bubble",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "speech_bubble",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "speech bubble (SketchIcons.ttf U+0044)"
+  },
+  {
+   "id": "library.businessman",
+   "fingerprint": "fp1-1b626800107aa58d",
+   "continuity_key": "businessman",
+   "serves": [
+    "library.businessman"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "businessman",
+   "context": "library glyph: businessman",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "businessman",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "businessman (SketchIcons.ttf U+0045)"
+  },
+  {
+   "id": "library.businesswoman",
+   "fingerprint": "fp1-5b6b61fd09cb0338",
+   "continuity_key": "businesswoman",
+   "serves": [
+    "library.businesswoman"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "businesswoman",
+   "context": "library glyph: businesswoman",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "businesswoman",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "businesswoman (SketchIcons.ttf U+0046)"
+  },
+  {
+   "id": "library.support_agent",
+   "fingerprint": "fp1-6b4945b88c786af5",
+   "continuity_key": "support_agent",
+   "serves": [
+    "library.support_agent"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "support agent with headset",
+   "context": "library glyph: support agent with headset",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "support_agent",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "support agent with headset (SketchIcons.ttf U+0047)"
+  },
+  {
+   "id": "library.gears",
+   "fingerprint": "fp1-335d934d49c99a32",
+   "continuity_key": "gears",
+   "serves": [
+    "library.gears"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "gears",
+   "context": "library glyph: gears",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "gears",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "gears (SketchIcons.ttf U+0048)"
+  },
+  {
+   "id": "library.marker",
+   "fingerprint": "fp1-d8c86e5fcf50a245",
+   "continuity_key": "marker",
+   "serves": [
+    "library.marker"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "marker pen",
+   "context": "library glyph: marker pen",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "marker",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "marker pen (SketchIcons.ttf U+0049)"
+  },
+  {
+   "id": "library.eraser",
+   "fingerprint": "fp1-94a8b95fd6188fe0",
+   "continuity_key": "eraser",
+   "serves": [
+    "library.eraser"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "eraser",
+   "context": "library glyph: eraser",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "eraser",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "eraser (SketchIcons.ttf U+004A)"
+  },
+  {
+   "id": "library.open_book",
+   "fingerprint": "fp1-380a5858b877a13c",
+   "continuity_key": "open_book",
+   "serves": [
+    "library.open_book"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "open book",
+   "context": "library glyph: open book",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "open_book",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "open book (SketchIcons.ttf U+004B)"
+  },
+  {
+   "id": "library.document",
+   "fingerprint": "fp1-2f009d275a59852b",
+   "continuity_key": "document",
+   "serves": [
+    "library.document"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "document",
+   "context": "library glyph: document",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "document",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "document (SketchIcons.ttf U+004C)"
+  },
+  {
+   "id": "library.cursor",
+   "fingerprint": "fp1-a0eb0062fdd11eea",
+   "continuity_key": "cursor",
+   "serves": [
+    "library.cursor"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "mouse cursor",
+   "context": "library glyph: mouse cursor",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "cursor",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "mouse cursor (SketchIcons.ttf U+004D)"
+  },
+  {
+   "id": "library.tools",
+   "fingerprint": "fp1-9502694f4140e1ca",
+   "continuity_key": "tools",
+   "serves": [
+    "library.tools"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "tools",
+   "context": "library glyph: tools",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "tools",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "tools (SketchIcons.ttf U+004E)"
+  },
+  {
+   "id": "library.envelope",
+   "fingerprint": "fp1-83ba6a4a60c7c704",
+   "continuity_key": "envelope",
+   "serves": [
+    "library.envelope"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "envelope",
+   "context": "library glyph: envelope",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "envelope",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "envelope (SketchIcons.ttf U+004F)"
+  },
+  {
+   "id": "library.open_envelope",
+   "fingerprint": "fp1-c4dc5ff35cc33c88",
+   "continuity_key": "open_envelope",
+   "serves": [
+    "library.open_envelope"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "open envelope",
+   "context": "library glyph: open envelope",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "open_envelope",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "open envelope (SketchIcons.ttf U+0050)"
+  },
+  {
+   "id": "library.phone_handset",
+   "fingerprint": "fp1-ecae8e4eaf4dc47d",
+   "continuity_key": "phone_handset",
+   "serves": [
+    "library.phone_handset"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "phone handset",
+   "context": "library glyph: phone handset",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "phone_handset",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "phone handset (SketchIcons.ttf U+0051)"
+  },
+  {
+   "id": "library.smartphone",
+   "fingerprint": "fp1-d32a9f8116151226",
+   "continuity_key": "smartphone",
+   "serves": [
+    "library.smartphone"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "smartphone",
+   "context": "library glyph: smartphone",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "smartphone",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "smartphone (SketchIcons.ttf U+0052)"
+  },
+  {
+   "id": "library.mobile_phone",
+   "fingerprint": "fp1-d8e682926e61f637",
+   "continuity_key": "mobile_phone",
+   "serves": [
+    "library.mobile_phone"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "mobile phone",
+   "context": "library glyph: mobile phone",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "mobile_phone",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "mobile phone (SketchIcons.ttf U+0053)"
+  },
+  {
+   "id": "library.speaker",
+   "fingerprint": "fp1-b27ffb561e4e09c2",
+   "continuity_key": "speaker",
+   "serves": [
+    "library.speaker"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "speaker",
+   "context": "library glyph: speaker",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "speaker",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "speaker (SketchIcons.ttf U+0054)"
+  },
+  {
+   "id": "library.compact_camera",
+   "fingerprint": "fp1-b5b42a48ef13509e",
+   "continuity_key": "compact_camera",
+   "serves": [
+    "library.compact_camera"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "compact camera",
+   "context": "library glyph: compact camera",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "compact_camera",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "compact camera (SketchIcons.ttf U+0055)"
+  },
+  {
+   "id": "library.camera",
+   "fingerprint": "fp1-a6416a96c8e07f1b",
+   "continuity_key": "camera",
+   "serves": [
+    "library.camera"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "camera",
+   "context": "library glyph: camera",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "camera",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "camera (SketchIcons.ttf U+0056)"
+  },
+  {
+   "id": "library.shopping_cart",
+   "fingerprint": "fp1-4c3a70e0f2772b25",
+   "continuity_key": "shopping_cart",
+   "serves": [
+    "library.shopping_cart"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "shopping cart",
+   "context": "library glyph: shopping cart",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "shopping_cart",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "shopping cart (SketchIcons.ttf U+0057)"
+  },
+  {
+   "id": "library.shopping_basket",
+   "fingerprint": "fp1-ca6a0d5d90b56e36",
+   "continuity_key": "shopping_basket",
+   "serves": [
+    "library.shopping_basket"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "shopping basket",
+   "context": "library glyph: shopping basket",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "shopping_basket",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "shopping basket (SketchIcons.ttf U+0058)"
+  },
+  {
+   "id": "library.growth_arrow",
+   "fingerprint": "fp1-1d22b8d6f12074cd",
+   "continuity_key": "growth_arrow",
+   "serves": [
+    "library.growth_arrow"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "rising arrow",
+   "context": "library glyph: rising arrow",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "growth_arrow",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "rising arrow (SketchIcons.ttf U+0059)"
+  },
+  {
+   "id": "library.pointing_hand",
+   "fingerprint": "fp1-9250cc4994403b92",
+   "continuity_key": "pointing_hand",
+   "serves": [
+    "library.pointing_hand"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "pointing hand",
+   "context": "library glyph: pointing hand",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "pointing_hand",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "pointing hand (SketchIcons.ttf U+005A)"
+  },
+  {
+   "id": "library.info",
+   "fingerprint": "fp1-dfe34eebad4fe7a9",
+   "continuity_key": "info",
+   "serves": [
+    "library.info"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "information sign",
+   "context": "library glyph: information sign",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "info",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "information sign (SketchIcons.ttf U+005B)"
+  },
+  {
+   "id": "library.arrow_up",
+   "fingerprint": "fp1-a3df8ebc12a0f917",
+   "continuity_key": "arrow_up",
+   "serves": [
+    "library.arrow_up"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "curved arrow up",
+   "context": "library glyph: curved arrow up",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "arrow_up",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "curved arrow up (SketchIcons.ttf U+005C)"
+  },
+  {
+   "id": "library.arrow_down",
+   "fingerprint": "fp1-bd19d537e69fd6a5",
+   "continuity_key": "arrow_down",
+   "serves": [
+    "library.arrow_down"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "curved arrow down",
+   "context": "library glyph: curved arrow down",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "arrow_down",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "curved arrow down (SketchIcons.ttf U+005D)"
+  },
+  {
+   "id": "library.paperclip",
+   "fingerprint": "fp1-89933e62b1c99393",
+   "continuity_key": "paperclip",
+   "serves": [
+    "library.paperclip"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "paperclip",
+   "context": "library glyph: paperclip",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "paperclip",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "paperclip (SketchIcons.ttf U+005E)"
+  },
+  {
+   "id": "library.dropper",
+   "fingerprint": "fp1-980a35dee13b5911",
+   "continuity_key": "dropper",
+   "serves": [
+    "library.dropper"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "dropper",
+   "context": "library glyph: dropper",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "dropper",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "dropper (SketchIcons.ttf U+005F)"
+  },
+  {
+   "id": "library.paint_bucket",
+   "fingerprint": "fp1-f141b148134ae26b",
+   "continuity_key": "paint_bucket",
+   "serves": [
+    "library.paint_bucket"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "paint bucket",
+   "context": "library glyph: paint bucket",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "paint_bucket",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "paint bucket (SketchIcons.ttf U+0060)"
+  },
+  {
+   "id": "library.bar_chart",
+   "fingerprint": "fp1-f22386b9b5b329e0",
+   "continuity_key": "bar_chart",
+   "serves": [
+    "library.bar_chart"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "bar chart",
+   "context": "library glyph: bar chart",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "bar_chart",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "bar chart (SketchIcons.ttf U+0061)"
+  },
+  {
+   "id": "library.growth_chart",
+   "fingerprint": "fp1-88407e58cd0a325a",
+   "continuity_key": "growth_chart",
+   "serves": [
+    "library.growth_chart"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "rising bar chart",
+   "context": "library glyph: rising bar chart",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "growth_chart",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "rising bar chart (SketchIcons.ttf U+0062)"
+  },
+  {
+   "id": "library.pie_chart",
+   "fingerprint": "fp1-34c78a017f2af1aa",
+   "continuity_key": "pie_chart",
+   "serves": [
+    "library.pie_chart"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "pie chart",
+   "context": "library glyph: pie chart",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "pie_chart",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "pie chart (SketchIcons.ttf U+0063)"
+  },
+  {
+   "id": "library.database",
+   "fingerprint": "fp1-cef76069d8116c56",
+   "continuity_key": "database",
+   "serves": [
+    "library.database"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "database",
+   "context": "library glyph: database",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "database",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "database (SketchIcons.ttf U+0064)"
+  },
+  {
+   "id": "library.cloud",
+   "fingerprint": "fp1-111975ba5a8ed755",
+   "continuity_key": "cloud",
+   "serves": [
+    "library.cloud"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "cloud",
+   "context": "library glyph: cloud",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "cloud",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "cloud (SketchIcons.ttf U+0065)"
+  },
+  {
+   "id": "library.sun_cloud",
+   "fingerprint": "fp1-299e1507722082c0",
+   "continuity_key": "sun_cloud",
+   "serves": [
+    "library.sun_cloud"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "sun behind cloud",
+   "context": "library glyph: sun behind cloud",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "sun_cloud",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "sun behind cloud (SketchIcons.ttf U+0066)"
+  },
+  {
+   "id": "library.rain_cloud",
+   "fingerprint": "fp1-30cd4baf416d4d9e",
+   "continuity_key": "rain_cloud",
+   "serves": [
+    "library.rain_cloud"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "rain cloud",
+   "context": "library glyph: rain cloud",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "rain_cloud",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "rain cloud (SketchIcons.ttf U+0067)"
+  },
+  {
+   "id": "library.padlock",
+   "fingerprint": "fp1-6fb1d2feb0cbacff",
+   "continuity_key": "padlock",
+   "serves": [
+    "library.padlock"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "padlock",
+   "context": "library glyph: padlock",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "padlock",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "padlock (SketchIcons.ttf U+0068)"
+  },
+  {
+   "id": "library.key",
+   "fingerprint": "fp1-740edb7048fb96ac",
+   "continuity_key": "key",
+   "serves": [
+    "library.key"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "key",
+   "context": "library glyph: key",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "key",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "key (SketchIcons.ttf U+0069)"
+  },
+  {
+   "id": "library.printer",
+   "fingerprint": "fp1-3564a09bbfc91993",
+   "continuity_key": "printer",
+   "serves": [
+    "library.printer"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "printer",
+   "context": "library glyph: printer",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "printer",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "printer (SketchIcons.ttf U+006A)"
+  },
+  {
+   "id": "library.fax",
+   "fingerprint": "fp1-446dee44a6cb42c5",
+   "continuity_key": "fax",
+   "serves": [
+    "library.fax"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "fax machine",
+   "context": "library glyph: fax machine",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "fax",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "fax machine (SketchIcons.ttf U+006B)"
+  },
+  {
+   "id": "library.computer",
+   "fingerprint": "fp1-81696f209b87140b",
+   "continuity_key": "computer",
+   "serves": [
+    "library.computer"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "desktop computer",
+   "context": "library glyph: desktop computer",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "computer",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "desktop computer (SketchIcons.ttf U+006C)"
+  },
+  {
+   "id": "library.picture_frame",
+   "fingerprint": "fp1-b16489187c04b78a",
+   "continuity_key": "picture_frame",
+   "serves": [
+    "library.picture_frame"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "framed picture",
+   "context": "library glyph: framed picture",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "picture_frame",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "framed picture (SketchIcons.ttf U+006D)"
+  },
+  {
+   "id": "library.download",
+   "fingerprint": "fp1-951d035b4eead3b8",
+   "continuity_key": "download",
+   "serves": [
+    "library.download"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "download tray",
+   "context": "library glyph: download tray",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "download",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "download tray (SketchIcons.ttf U+006E)"
+  },
+  {
+   "id": "library.signal",
+   "fingerprint": "fp1-3492e95b88752a23",
+   "continuity_key": "signal",
+   "serves": [
+    "library.signal"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "wireless signal",
+   "context": "library glyph: wireless signal",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "signal",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "wireless signal (SketchIcons.ttf U+006F)"
+  },
+  {
+   "id": "library.shield",
+   "fingerprint": "fp1-7f90b59c80057d20",
+   "continuity_key": "shield",
+   "serves": [
+    "library.shield"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "shield",
+   "context": "library glyph: shield",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "shield",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "shield (SketchIcons.ttf U+0070)"
+  },
+  {
+   "id": "library.video_camera",
+   "fingerprint": "fp1-aa00beb3ccc39595",
+   "continuity_key": "video_camera",
+   "serves": [
+    "library.video_camera"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "video camera",
+   "context": "library glyph: video camera",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "video_camera",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "video camera (SketchIcons.ttf U+0071)"
+  },
+  {
+   "id": "library.globe",
+   "fingerprint": "fp1-9d41178db5b598fd",
+   "continuity_key": "globe",
+   "serves": [
+    "library.globe"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "globe",
+   "context": "library glyph: globe",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "globe",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "globe (SketchIcons.ttf U+0072)"
+  },
+  {
+   "id": "library.briefcase",
+   "fingerprint": "fp1-fb70cddac17bfdfe",
+   "continuity_key": "briefcase",
+   "serves": [
+    "library.briefcase"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "briefcase",
+   "context": "library glyph: briefcase",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "briefcase",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "briefcase (SketchIcons.ttf U+0073)"
+  },
+  {
+   "id": "library.wastebasket",
+   "fingerprint": "fp1-e248d2f92c94100c",
+   "continuity_key": "wastebasket",
+   "serves": [
+    "library.wastebasket"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "wastebasket",
+   "context": "library glyph: wastebasket",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "wastebasket",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "wastebasket (SketchIcons.ttf U+0074)"
+  },
+  {
+   "id": "library.house",
+   "fingerprint": "fp1-3f675aa673e51791",
+   "continuity_key": "house",
+   "serves": [
+    "library.house"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "house",
+   "context": "library glyph: house",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "house",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "house (SketchIcons.ttf U+0075)"
+  },
+  {
+   "id": "library.clock",
+   "fingerprint": "fp1-654eb556d162d537",
+   "continuity_key": "clock",
+   "serves": [
+    "library.clock"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "clock",
+   "context": "library glyph: clock",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "clock",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "clock (SketchIcons.ttf U+0076)"
+  },
+  {
+   "id": "library.paperclip_tall",
+   "fingerprint": "fp1-07467f425dcfcac6",
+   "continuity_key": "paperclip_tall",
+   "serves": [
+    "library.paperclip_tall"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "paperclip",
+   "context": "library glyph: paperclip",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "paperclip_tall",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "paperclip (SketchIcons.ttf U+0077)"
+  },
+  {
+   "id": "library.scissors",
+   "fingerprint": "fp1-43efa71ed498f073",
+   "continuity_key": "scissors",
+   "serves": [
+    "library.scissors"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "scissors",
+   "context": "library glyph: scissors",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "scissors",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "scissors (SketchIcons.ttf U+0078)"
+  },
+  {
+   "id": "library.progress_bar",
+   "fingerprint": "fp1-40dba66d943599c1",
+   "continuity_key": "progress_bar",
+   "serves": [
+    "library.progress_bar"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "loading bar",
+   "context": "library glyph: loading bar",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "progress_bar",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "loading bar (SketchIcons.ttf U+0079)"
+  },
+  {
+   "id": "library.eye",
+   "fingerprint": "fp1-5d5154a52f0fa596",
+   "continuity_key": "eye",
+   "serves": [
+    "library.eye"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "eye",
+   "context": "library glyph: eye",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "eye",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "eye (SketchIcons.ttf U+007A)"
+  },
+  {
+   "id": "library.paintbrush",
+   "fingerprint": "fp1-7461cc7c52de1aa4",
+   "continuity_key": "paintbrush",
+   "serves": [
+    "library.paintbrush"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "paintbrush",
+   "context": "library glyph: paintbrush",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "paintbrush",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "paintbrush (SketchIcons.ttf U+007B)"
+  },
+  {
+   "id": "library.burger",
+   "fingerprint": "fp1-77c16821fec150b7",
+   "continuity_key": "burger",
+   "serves": [
+    "library.burger"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "burger",
+   "context": "library glyph: burger",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "burger",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "burger (SketchIcons.ttf U+007C)"
+  },
+  {
+   "id": "library.fruit",
+   "fingerprint": "fp1-35b96cc825e51a7f",
+   "continuity_key": "fruit",
+   "serves": [
+    "library.fruit"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "fruit",
+   "context": "library glyph: fruit",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "fruit",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "fruit (SketchIcons.ttf U+007D)"
+  },
+  {
+   "id": "library.bottle",
+   "fingerprint": "fp1-0a429ad8498d7e06",
+   "continuity_key": "bottle",
+   "serves": [
+    "library.bottle"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "bottle",
+   "context": "library glyph: bottle",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "bottle",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "bottle (SketchIcons.ttf U+007E)"
+  },
+  {
+   "id": "library.magic_wand",
+   "fingerprint": "fp1-ebb1b06996e26dfe",
+   "continuity_key": "magic_wand",
+   "serves": [
+    "library.magic_wand"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "magic wand",
+   "context": "library glyph: magic wand",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "magic_wand",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "magic wand (SketchIcons.ttf U+2019)"
+  },
+  {
+   "id": "library.puzzle",
+   "fingerprint": "fp1-27d4c9a6f8d0d071",
+   "continuity_key": "puzzle",
+   "serves": [
+    "library.puzzle"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "puzzle piece",
+   "context": "library glyph: puzzle piece",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "puzzle",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "puzzle piece (SketchIcons.ttf U+201C)"
+  },
+  {
+   "id": "library.refresh",
+   "fingerprint": "fp1-d7638354c8cf8ff5",
+   "continuity_key": "refresh",
+   "serves": [
+    "library.refresh"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "circular arrows",
+   "context": "library glyph: circular arrows",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "hand-drawn glyph from the SketchIcons.ttf picture font",
+    "realism": "illustration",
+    "lighting": "none (flat ink)",
+    "contrast": "high contrast",
+    "palette_tendency": "single ink colour",
+    "edge_treatment": "drawn line edge",
+    "shadow_treatment": "none",
+    "camera_feel": "flat",
+    "background_behavior": "isolated ink on transparency"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text"
+   ],
+   "output": {
+    "file_stem": "refresh",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "circular arrows (SketchIcons.ttf U+201D)"
+  }
+ ]
+}

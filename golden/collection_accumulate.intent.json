@@ -1,0 +1,23 @@
+{
+  "version": "0.2",
+  "title": "collection_accumulate",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "Every drink adds up.",
+      "energy": "building",
+      "primary": {
+        "kind": "collection",
+        "meaning": "drinks",
+        "items": [
+          { "kind": "phrase", "value": "Coffee" },
+          { "kind": "phrase", "value": "Tea" },
+          { "kind": "phrase", "value": "Juice" },
+          { "kind": "phrase", "value": "Water" }
+        ]
+      },
+      "relationship": "accumulate"
+    }
+  ]
+}

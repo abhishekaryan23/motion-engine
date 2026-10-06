@@ -1,0 +1,45 @@
+{
+  "beats": [
+    {
+      "continuity": "none",
+      "energy": "building",
+      "narration": "A simple piggy bank taught a whole generation how to save.",
+      "primary": {
+        "asset": "piggy_bank",
+        "kind": "object",
+        "meaning": "saving"
+      },
+      "purpose": "emphasize",
+      "statement": "A simple piggy bank taught a…"
+    },
+    {
+      "continuity": "none",
+      "energy": "building",
+      "narration": "Time and money turn out to be the same thing in the end.",
+      "primary": {
+        "asset": "clock",
+        "kind": "object"
+      },
+      "purpose": "emphasize",
+      "secondary": {
+        "asset": "money_stack",
+        "kind": "object"
+      },
+      "statement": "Time and money turn out to…"
+    },
+    {
+      "continuity": "none",
+      "energy": "building",
+      "narration": "Even a zorb can be a reminder to put a little aside.",
+      "primary": {
+        "asset": "zorb",
+        "kind": "object"
+      },
+      "purpose": "emphasize",
+      "statement": "Even a zorb can be a…"
+    }
+  ],
+  "format": "vertical",
+  "title": "saving_habit",
+  "version": "0.2"
+}

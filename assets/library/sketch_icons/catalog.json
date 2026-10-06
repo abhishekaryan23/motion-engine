@@ -1,0 +1,4268 @@
+{
+ "version": "0.1",
+ "family": "sketch_icons",
+ "assets": [
+  {
+   "id": "document_pen",
+   "file": "document_pen.png",
+   "role": "object",
+   "subject": "document being signed",
+   "tags": [
+    "agreement",
+    "contract",
+    "document",
+    "form",
+    "sign",
+    "signature"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0579,
+    0.9468,
+    0.9421
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0021"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.057929724,
+     "width": 0.89354277,
+     "height": 0.88414055
+    },
+    "coverage": 0.09308649,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1053
+  },
+  {
+   "id": "calendar",
+   "file": "calendar.png",
+   "role": "object",
+   "subject": "calendar",
+   "tags": [
+    "calendar",
+    "date",
+    "deadline",
+    "month",
+    "plan",
+    "schedule"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0608,
+    0.0532,
+    0.9392,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0022"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.060756974,
+     "y": 0.05322862,
+     "width": 0.87848604,
+     "height": 0.89354277
+    },
+    "coverage": 0.15074779,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1004,
+   "height": 1146
+  },
+  {
+   "id": "calculator",
+   "file": "calculator.png",
+   "role": "object",
+   "subject": "calculator",
+   "tags": [
+    "budget",
+    "calculate",
+    "calculator",
+    "cost",
+    "math",
+    "tax"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0703,
+    0.0532,
+    0.9297,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0023"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.0702765,
+     "y": 0.05410122,
+     "width": 0.859447,
+     "height": 0.89267015
+    },
+    "coverage": 0.16461486,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 868,
+   "height": 1146
+  },
+  {
+   "id": "clapperboard",
+   "file": "clapperboard.png",
+   "role": "object",
+   "subject": "film clapperboard",
+   "tags": [
+    "clapperboard",
+    "film",
+    "movie",
+    "production",
+    "video"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0636,
+    0.0532,
+    0.9364,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0027"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.06360792,
+     "y": 0.05322862,
+     "width": 0.87278414,
+     "height": 0.89354277
+    },
+    "coverage": 0.14327843,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 959,
+   "height": 1146
+  },
+  {
+   "id": "credit_card",
+   "file": "credit_card.png",
+   "role": "object",
+   "subject": "credit card",
+   "tags": [
+    "bank",
+    "card",
+    "credit",
+    "debit",
+    "pay",
+    "payment"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0774,
+    0.9468,
+    0.9226
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0028"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.07741117,
+     "width": 0.89354277,
+     "height": 0.84517765
+    },
+    "coverage": 0.15791851,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 788
+  },
+  {
+   "id": "newspaper",
+   "file": "newspaper.png",
+   "role": "object",
+   "subject": "newspaper",
+   "tags": [
+    "headline",
+    "media",
+    "news",
+    "newspaper",
+    "press"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0614,
+    0.9468,
+    0.9386
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+002B"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05410122,
+     "y": 0.06143001,
+     "width": 0.89267015,
+     "height": 0.87714
+    },
+    "coverage": 0.115417875,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 993
+  },
+  {
+   "id": "speech_bubbles",
+   "file": "speech_bubbles.png",
+   "role": "object",
+   "subject": "conversation bubbles",
+   "tags": [
+    "chat",
+    "comments",
+    "conversation",
+    "discussion",
+    "messages",
+    "talk"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.067,
+    0.9468,
+    0.933
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+002C"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.06703297,
+     "width": 0.89354277,
+     "height": 0.8659341
+    },
+    "coverage": 0.0520789,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 910
+  },
+  {
+   "id": "person",
+   "file": "person.png",
+   "role": "object",
+   "subject": "person",
+   "tags": [
+    "human",
+    "individual",
+    "people",
+    "person",
+    "user"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0857,
+    0.0532,
+    0.9143,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+002D"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.08567416,
+     "y": 0.05322862,
+     "width": 0.82865167,
+     "height": 0.89354277
+    },
+    "coverage": 0.24619463,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 712,
+   "height": 1146
+  },
+  {
+   "id": "floppy_disk",
+   "file": "floppy_disk.png",
+   "role": "object",
+   "subject": "save disk",
+   "tags": [
+    "backup",
+    "disk",
+    "save",
+    "storage"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.057,
+    0.0532,
+    0.943,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+002E"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.056956116,
+     "y": 0.05322862,
+     "width": 0.8860878,
+     "height": 0.89354277
+    },
+    "coverage": 0.12572615,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1071,
+   "height": 1146
+  },
+  {
+   "id": "warning",
+   "file": "warning.png",
+   "role": "object",
+   "subject": "warning sign",
+   "tags": [
+    "alert",
+    "caution",
+    "danger",
+    "problem",
+    "risk",
+    "warning"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0573,
+    0.9468,
+    0.9427
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+002F"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05410122,
+     "y": 0.05733083,
+     "width": 0.89267015,
+     "height": 0.88533837
+    },
+    "coverage": 0.17798422,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1064
+  },
+  {
+   "id": "battery",
+   "file": "battery.png",
+   "role": "object",
+   "subject": "battery",
+   "tags": [
+    "battery",
+    "charge",
+    "energy",
+    "low",
+    "power"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0857,
+    0.9468,
+    0.9143
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0030"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.08567416,
+     "width": 0.89267015,
+     "height": 0.82865167
+    },
+    "coverage": 0.20995475,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 712
+  },
+  {
+   "id": "new_document",
+   "file": "new_document.png",
+   "role": "object",
+   "subject": "new document",
+   "tags": [
+    "add",
+    "create",
+    "document",
+    "file",
+    "new"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.07,
+    0.0532,
+    0.93,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0031"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.06995413,
+     "y": 0.05322862,
+     "width": 0.86009175,
+     "height": 0.89354277
+    },
+    "coverage": 0.082781956,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 872,
+   "height": 1146
+  },
+  {
+   "id": "plus",
+   "file": "plus.png",
+   "role": "object",
+   "subject": "plus sign",
+   "tags": [
+    "add",
+    "gain",
+    "increase",
+    "more",
+    "plus"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0549,
+    0.9468,
+    0.9451
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0032"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.054856114,
+     "width": 0.89354277,
+     "height": 0.89028776
+    },
+    "coverage": 0.1447575,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1112
+  },
+  {
+   "id": "minus",
+   "file": "minus.png",
+   "role": "object",
+   "subject": "minus sign",
+   "tags": [
+    "decrease",
+    "less",
+    "loss",
+    "minus",
+    "subtract"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0549,
+    0.9468,
+    0.9451
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0033"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.054856114,
+     "width": 0.89354277,
+     "height": 0.89028776
+    },
+    "coverage": 0.11766451,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1112
+  },
+  {
+   "id": "close",
+   "file": "close.png",
+   "role": "object",
+   "subject": "cross mark",
+   "tags": [
+    "cancel",
+    "close",
+    "fail",
+    "no",
+    "reject",
+    "wrong"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0549,
+    0.9468,
+    0.9451
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0034"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.054856114,
+     "width": 0.89354277,
+     "height": 0.89028776
+    },
+    "coverage": 0.14567874,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1112
+  },
+  {
+   "id": "handshake",
+   "file": "handshake.png",
+   "role": "object",
+   "subject": "handshake",
+   "tags": [
+    "agreement",
+    "deal",
+    "handshake",
+    "partner",
+    "partnership",
+    "trust"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0846,
+    0.9468,
+    0.9154
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0035"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.08460472,
+     "width": 0.89354277,
+     "height": 0.8307906
+    },
+    "coverage": 0.072608575,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 721
+  },
+  {
+   "id": "map_pin",
+   "file": "map_pin.png",
+   "role": "object",
+   "subject": "map pin",
+   "tags": [
+    "address",
+    "local",
+    "location",
+    "map",
+    "pin",
+    "place"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0729,
+    0.0532,
+    0.9271,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0036"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.07287933,
+     "y": 0.05410122,
+     "width": 0.8542413,
+     "height": 0.89267015
+    },
+    "coverage": 0.064987354,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 837,
+   "height": 1146
+  },
+  {
+   "id": "flag",
+   "file": "flag.png",
+   "role": "object",
+   "subject": "flag",
+   "tags": [
+    "finish",
+    "flag",
+    "goal",
+    "milestone",
+    "target"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0567,
+    0.0532,
+    0.9433,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0037"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.056744184,
+     "y": 0.05322862,
+     "width": 0.8865116,
+     "height": 0.89354277
+    },
+    "coverage": 0.08256829,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1075,
+   "height": 1146
+  },
+  {
+   "id": "question",
+   "file": "question.png",
+   "role": "object",
+   "subject": "question mark",
+   "tags": [
+    "ask",
+    "doubt",
+    "faq",
+    "question",
+    "unknown",
+    "why"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0548,
+    0.9468,
+    0.9452
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0038"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.05475763,
+     "width": 0.89354277,
+     "height": 0.89048475
+    },
+    "coverage": 0.14892797,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1114
+  },
+  {
+   "id": "thumbs_up",
+   "file": "thumbs_up.png",
+   "role": "object",
+   "subject": "thumbs up",
+   "tags": [
+    "approve",
+    "good",
+    "like",
+    "success",
+    "thumbs",
+    "yes"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0623,
+    0.0532,
+    0.9377,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0039"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.06230848,
+     "y": 0.05322862,
+     "width": 0.875383,
+     "height": 0.89354277
+    },
+    "coverage": 0.05481071,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 979,
+   "height": 1146
+  },
+  {
+   "id": "price_tag",
+   "file": "price_tag.png",
+   "role": "object",
+   "subject": "price tag",
+   "tags": [
+    "discount",
+    "label",
+    "offer",
+    "price",
+    "sale",
+    "tag"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0558,
+    0.0532,
+    0.9442,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+003A"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.055758685,
+     "y": 0.05322862,
+     "width": 0.88848263,
+     "height": 0.89267015
+    },
+    "coverage": 0.04584103,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1094,
+   "height": 1146
+  },
+  {
+   "id": "music_note",
+   "file": "music_note.png",
+   "role": "object",
+   "subject": "music note",
+   "tags": [
+    "audio",
+    "music",
+    "note",
+    "song",
+    "sound"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0651,
+    0.0532,
+    0.9349,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+003B"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.065101385,
+     "y": 0.05322862,
+     "width": 0.86873,
+     "height": 0.89354277
+    },
+    "coverage": 0.17413452,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 937,
+   "height": 1146
+  },
+  {
+   "id": "usb_stick",
+   "file": "usb_stick.png",
+   "role": "object",
+   "subject": "usb stick",
+   "tags": [
+    "data",
+    "drive",
+    "storage",
+    "usb"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.065,
+    0.9468,
+    0.935
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+003C"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.06496273,
+     "width": 0.89354277,
+     "height": 0.87007457
+    },
+    "coverage": 0.09236461,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 939
+  },
+  {
+   "id": "checkmark",
+   "file": "checkmark.png",
+   "role": "object",
+   "subject": "check mark",
+   "tags": [
+    "approved",
+    "check",
+    "complete",
+    "correct",
+    "done",
+    "yes"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0612,
+    0.9468,
+    0.9388
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+003D"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.06124498,
+     "width": 0.89354277,
+     "height": 0.87751
+    },
+    "coverage": 0.12599525,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 996
+  },
+  {
+   "id": "sticker",
+   "file": "sticker.png",
+   "role": "object",
+   "subject": "sticker",
+   "tags": [
+    "badge",
+    "note",
+    "sticker"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0535,
+    0.9468,
+    0.9465
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+003E"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.053461876,
+     "width": 0.89354277,
+     "height": 0.89307624
+    },
+    "coverage": 0.08060043,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1141
+  },
+  {
+   "id": "gift",
+   "file": "gift.png",
+   "role": "object",
+   "subject": "gift box",
+   "tags": [
+    "bonus",
+    "free",
+    "gift",
+    "present",
+    "reward"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0565,
+    0.0532,
+    0.9435,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+003F"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05653383,
+     "y": 0.05322862,
+     "width": 0.8860056,
+     "height": 0.89354277
+    },
+    "coverage": 0.12862486,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1079,
+   "height": 1146
+  },
+  {
+   "id": "cash",
+   "file": "cash.png",
+   "role": "object",
+   "subject": "cash and coins",
+   "tags": [
+    "cash",
+    "coins",
+    "income",
+    "money",
+    "payment",
+    "salary",
+    "savings",
+    "wealth"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0745,
+    0.9468,
+    0.9255
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0040"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.07448108,
+     "width": 0.89354277,
+     "height": 0.85103786
+    },
+    "coverage": 0.1324083,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 819
+  },
+  {
+   "id": "magnifier",
+   "file": "magnifier.png",
+   "role": "object",
+   "subject": "magnifying glass",
+   "tags": [
+    "analysis",
+    "find",
+    "inspect",
+    "look",
+    "magnifier",
+    "research",
+    "search"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0707,
+    0.0532,
+    0.9293,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0041"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.07068366,
+     "y": 0.05410122,
+     "width": 0.8586327,
+     "height": 0.89267015
+    },
+    "coverage": 0.08646731,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 863,
+   "height": 1146
+  },
+  {
+   "id": "folder",
+   "file": "folder.png",
+   "role": "object",
+   "subject": "folder",
+   "tags": [
+    "archive",
+    "documents",
+    "files",
+    "folder",
+    "organize"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0539,
+    0.0532,
+    0.9461,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0042"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.054770317,
+     "y": 0.05322862,
+     "width": 0.89134276,
+     "height": 0.89354277
+    },
+    "coverage": 0.08160201,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1132,
+   "height": 1146
+  },
+  {
+   "id": "chat_box",
+   "file": "chat_box.png",
+   "role": "object",
+   "subject": "chat box",
+   "tags": [
+    "chat",
+    "comment",
+    "message",
+    "reply",
+    "text"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0584,
+    0.9468,
+    0.9416
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0043"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05410122,
+     "y": 0.059330143,
+     "width": 0.89179754,
+     "height": 0.8822966
+    },
+    "coverage": 0.035818364,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1045
+  },
+  {
+   "id": "speech_bubble",
+   "file": "speech_bubble.png",
+   "role": "object",
+   "subject": "speech bubble",
+   "tags": [
+    "comment",
+    "quote",
+    "say",
+    "speech",
+    "voice"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0621,
+    0.9468,
+    0.9379
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0044"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.062054932,
+     "width": 0.89354277,
+     "height": 0.87589014
+    },
+    "coverage": 0.025930345,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 983
+  },
+  {
+   "id": "businessman",
+   "file": "businessman.png",
+   "role": "object",
+   "subject": "businessman",
+   "tags": [
+    "boss",
+    "businessman",
+    "employee",
+    "man",
+    "manager",
+    "professional"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0679,
+    0.0532,
+    0.9321,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0045"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.06896552,
+     "y": 0.05322862,
+     "width": 0.86206895,
+     "height": 0.89354277
+    },
+    "coverage": 0.09837768,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 899,
+   "height": 1146
+  },
+  {
+   "id": "businesswoman",
+   "file": "businesswoman.png",
+   "role": "object",
+   "subject": "businesswoman",
+   "tags": [
+    "businesswoman",
+    "employee",
+    "manager",
+    "professional",
+    "woman"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0731,
+    0.0532,
+    0.9269,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0046"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.073141485,
+     "y": 0.05322862,
+     "width": 0.853717,
+     "height": 0.89354277
+    },
+    "coverage": 0.08807195,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 834,
+   "height": 1146
+  },
+  {
+   "id": "support_agent",
+   "file": "support_agent.png",
+   "role": "object",
+   "subject": "support agent with headset",
+   "tags": [
+    "agent",
+    "call",
+    "customer",
+    "helpdesk",
+    "service",
+    "support"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0652,
+    0.0532,
+    0.9348,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0047"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.065240644,
+     "y": 0.05322862,
+     "width": 0.8695187,
+     "height": 0.89354277
+    },
+    "coverage": 0.0951573,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 935,
+   "height": 1146
+  },
+  {
+   "id": "gears",
+   "file": "gears.png",
+   "role": "object",
+   "subject": "gears",
+   "tags": [
+    "automation",
+    "engine",
+    "gears",
+    "mechanism",
+    "process",
+    "settings",
+    "system"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0583,
+    0.9468,
+    0.9417
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0048"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.0582617,
+     "width": 0.89354277,
+     "height": 0.8834766
+    },
+    "coverage": 0.07962749,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1047
+  },
+  {
+   "id": "marker",
+   "file": "marker.png",
+   "role": "object",
+   "subject": "marker pen",
+   "tags": [
+    "highlight",
+    "marker",
+    "note",
+    "pen",
+    "write"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0587,
+    0.9468,
+    0.9413
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0049"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.058653846,
+     "width": 0.89354277,
+     "height": 0.88269234
+    },
+    "coverage": 0.0888282,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1040
+  },
+  {
+   "id": "eraser",
+   "file": "eraser.png",
+   "role": "object",
+   "subject": "eraser",
+   "tags": [
+    "delete",
+    "erase",
+    "eraser",
+    "mistake",
+    "undo"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0534,
+    0.0532,
+    0.9466,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+004A"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05341506,
+     "y": 0.05322862,
+     "width": 0.8931699,
+     "height": 0.89354277
+    },
+    "coverage": 0.16716792,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1142,
+   "height": 1146
+  },
+  {
+   "id": "open_book",
+   "file": "open_book.png",
+   "role": "object",
+   "subject": "open book",
+   "tags": [
+    "book",
+    "education",
+    "guide",
+    "learn",
+    "read",
+    "study"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0577,
+    0.9468,
+    0.9423
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+004B"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.057710502,
+     "width": 0.89354277,
+     "height": 0.884579
+    },
+    "coverage": 0.10093352,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1057
+  },
+  {
+   "id": "document",
+   "file": "document.png",
+   "role": "object",
+   "subject": "document",
+   "tags": [
+    "article",
+    "document",
+    "file",
+    "page",
+    "paper",
+    "report"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0758,
+    0.0532,
+    0.9242,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+004C"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.0757764,
+     "y": 0.05322862,
+     "width": 0.8484472,
+     "height": 0.89354277
+    },
+    "coverage": 0.07691674,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 805,
+   "height": 1146
+  },
+  {
+   "id": "cursor",
+   "file": "cursor.png",
+   "role": "object",
+   "subject": "mouse cursor",
+   "tags": [
+    "click",
+    "cursor",
+    "pointer",
+    "select"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0606,
+    0.0532,
+    0.9394,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+004D"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.06063618,
+     "y": 0.05322862,
+     "width": 0.8787276,
+     "height": 0.89354277
+    },
+    "coverage": 0.092211135,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1006,
+   "height": 1146
+  },
+  {
+   "id": "tools",
+   "file": "tools.png",
+   "role": "object",
+   "subject": "tools",
+   "tags": [
+    "build",
+    "fix",
+    "maintenance",
+    "repair",
+    "tool",
+    "tools"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0549,
+    0.9468,
+    0.9451
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+004E"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.05490549,
+     "width": 0.89354277,
+     "height": 0.890189
+    },
+    "coverage": 0.086188726,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1111
+  },
+  {
+   "id": "envelope",
+   "file": "envelope.png",
+   "role": "object",
+   "subject": "envelope",
+   "tags": [
+    "email",
+    "envelope",
+    "letter",
+    "mail",
+    "newsletter"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0745,
+    0.9468,
+    0.9255
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+004F"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.07448108,
+     "width": 0.89354277,
+     "height": 0.85103786
+    },
+    "coverage": 0.0990737,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 819
+  },
+  {
+   "id": "open_envelope",
+   "file": "open_envelope.png",
+   "role": "object",
+   "subject": "open envelope",
+   "tags": [
+    "email",
+    "inbox",
+    "letter",
+    "mail",
+    "message",
+    "open"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0583,
+    0.0532,
+    0.9417,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0050"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.0583174,
+     "y": 0.05322862,
+     "width": 0.8833652,
+     "height": 0.89354277
+    },
+    "coverage": 0.077874996,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1046,
+   "height": 1146
+  },
+  {
+   "id": "phone_handset",
+   "file": "phone_handset.png",
+   "role": "object",
+   "subject": "phone handset",
+   "tags": [
+    "call",
+    "contact",
+    "phone",
+    "telephone"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0608,
+    0.0532,
+    0.9392,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0051"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.060756974,
+     "y": 0.05322862,
+     "width": 0.87848604,
+     "height": 0.89354277
+    },
+    "coverage": 0.043927256,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1004,
+   "height": 1146
+  },
+  {
+   "id": "smartphone",
+   "file": "smartphone.png",
+   "role": "object",
+   "subject": "smartphone",
+   "tags": [
+    "app",
+    "device",
+    "mobile",
+    "phone",
+    "smartphone"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.084,
+    0.0532,
+    0.916,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0052"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.08402204,
+     "y": 0.05322862,
+     "width": 0.8319559,
+     "height": 0.89354277
+    },
+    "coverage": 0.107606284,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 726,
+   "height": 1146
+  },
+  {
+   "id": "mobile_phone",
+   "file": "mobile_phone.png",
+   "role": "object",
+   "subject": "mobile phone",
+   "tags": [
+    "cellphone",
+    "device",
+    "mobile",
+    "phone"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.1013,
+    0.0532,
+    0.8987,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0053"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.1013289,
+     "y": 0.05322862,
+     "width": 0.7973422,
+     "height": 0.89354277
+    },
+    "coverage": 0.120873995,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 602,
+   "height": 1146
+  },
+  {
+   "id": "speaker",
+   "file": "speaker.png",
+   "role": "object",
+   "subject": "speaker",
+   "tags": [
+    "announce",
+    "audio",
+    "loud",
+    "sound",
+    "speaker"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0701,
+    0.0532,
+    0.9299,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0054"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.07011494,
+     "y": 0.05322862,
+     "width": 0.8597701,
+     "height": 0.89267015
+    },
+    "coverage": 0.14954865,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 870,
+   "height": 1146
+  },
+  {
+   "id": "compact_camera",
+   "file": "compact_camera.png",
+   "role": "object",
+   "subject": "compact camera",
+   "tags": [
+    "camera",
+    "photo",
+    "picture",
+    "snapshot"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0692,
+    0.9468,
+    0.9308
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0055"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.069161,
+     "width": 0.89267015,
+     "height": 0.861678
+    },
+    "coverage": 0.11595196,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 882
+  },
+  {
+   "id": "camera",
+   "file": "camera.png",
+   "role": "object",
+   "subject": "camera",
+   "tags": [
+    "camera",
+    "photo",
+    "photography",
+    "picture"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0679,
+    0.9468,
+    0.9321
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0056"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.06785317,
+     "width": 0.89354277,
+     "height": 0.86429363
+    },
+    "coverage": 0.104284965,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 899
+  },
+  {
+   "id": "shopping_cart",
+   "file": "shopping_cart.png",
+   "role": "object",
+   "subject": "shopping cart",
+   "tags": [
+    "buy",
+    "cart",
+    "checkout",
+    "ecommerce",
+    "order",
+    "purchase",
+    "shopping"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0609,
+    0.9468,
+    0.9391
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0057"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.060878243,
+     "width": 0.89354277,
+     "height": 0.8782435
+    },
+    "coverage": 0.13597587,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1002
+  },
+  {
+   "id": "shopping_basket",
+   "file": "shopping_basket.png",
+   "role": "object",
+   "subject": "shopping basket",
+   "tags": [
+    "basket",
+    "buy",
+    "groceries",
+    "shop",
+    "shopping"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0762,
+    0.9468,
+    0.9237
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0058"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.07625,
+     "width": 0.89354277,
+     "height": 0.8475
+    },
+    "coverage": 0.109617144,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 800
+  },
+  {
+   "id": "growth_arrow",
+   "file": "growth_arrow.png",
+   "role": "object",
+   "subject": "rising arrow",
+   "tags": [
+    "arrow",
+    "grow",
+    "growth",
+    "increase",
+    "rise",
+    "trend",
+    "up"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0601,
+    0.9468,
+    0.9399
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0059"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.06009852,
+     "width": 0.89354277,
+     "height": 0.87980294
+    },
+    "coverage": 0.21846044,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1015
+  },
+  {
+   "id": "pointing_hand",
+   "file": "pointing_hand.png",
+   "role": "object",
+   "subject": "pointing hand",
+   "tags": [
+    "choose",
+    "click",
+    "hand",
+    "point",
+    "tap",
+    "touch"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0787,
+    0.0532,
+    0.9213,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+005A"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.07870968,
+     "y": 0.05322862,
+     "width": 0.8425806,
+     "height": 0.89354277
+    },
+    "coverage": 0.058223274,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 775,
+   "height": 1146
+  },
+  {
+   "id": "info",
+   "file": "info.png",
+   "role": "object",
+   "subject": "information sign",
+   "tags": [
+    "about",
+    "detail",
+    "help",
+    "info",
+    "information"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0539,
+    0.0532,
+    0.9461,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+005B"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05393457,
+     "y": 0.05322862,
+     "width": 0.89213085,
+     "height": 0.89354277
+    },
+    "coverage": 0.1868684,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1131,
+   "height": 1146
+  },
+  {
+   "id": "arrow_up",
+   "file": "arrow_up.png",
+   "role": "object",
+   "subject": "curved arrow up",
+   "tags": [
+    "arrow",
+    "direction",
+    "forward",
+    "next",
+    "up"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0584,
+    0.9468,
+    0.9416
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+005C"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.059330143,
+     "width": 0.89354277,
+     "height": 0.8813397
+    },
+    "coverage": 0.02097247,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1045
+  },
+  {
+   "id": "arrow_down",
+   "file": "arrow_down.png",
+   "role": "object",
+   "subject": "curved arrow down",
+   "tags": [
+    "arrow",
+    "below",
+    "direction",
+    "down"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0553,
+    0.9468,
+    0.9447
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+005D"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.05530372,
+     "width": 0.89354277,
+     "height": 0.88848597
+    },
+    "coverage": 0.022013579,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1103
+  },
+  {
+   "id": "paperclip",
+   "file": "paperclip.png",
+   "role": "object",
+   "subject": "paperclip",
+   "tags": [
+    "attach",
+    "attachment",
+    "clip",
+    "paperclip"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0626,
+    0.9468,
+    0.9374
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+005E"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.062564105,
+     "width": 0.89354277,
+     "height": 0.8748718
+    },
+    "coverage": 0.08569025,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 975
+  },
+  {
+   "id": "dropper",
+   "file": "dropper.png",
+   "role": "object",
+   "subject": "dropper",
+   "tags": [
+    "drop",
+    "dropper",
+    "pipette",
+    "sample"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0608,
+    0.9468,
+    0.9392
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+005F"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.060756974,
+     "width": 0.89354277,
+     "height": 0.87848604
+    },
+    "coverage": 0.09002906,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1004
+  },
+  {
+   "id": "paint_bucket",
+   "file": "paint_bucket.png",
+   "role": "object",
+   "subject": "paint bucket",
+   "tags": [
+    "bucket",
+    "color",
+    "colour",
+    "design",
+    "paint"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0555,
+    0.9468,
+    0.9445
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0060"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.055505004,
+     "width": 0.89354277,
+     "height": 0.88899
+    },
+    "coverage": 0.13376431,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1099
+  },
+  {
+   "id": "bar_chart",
+   "file": "bar_chart.png",
+   "role": "object",
+   "subject": "bar chart",
+   "tags": [
+    "bar",
+    "chart",
+    "data",
+    "graph",
+    "numbers",
+    "results",
+    "statistics"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0574,
+    0.9468,
+    0.9426
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0061"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.05738476,
+     "width": 0.89354277,
+     "height": 0.8852305
+    },
+    "coverage": 0.116945684,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1063
+  },
+  {
+   "id": "growth_chart",
+   "file": "growth_chart.png",
+   "role": "object",
+   "subject": "rising bar chart",
+   "tags": [
+    "chart",
+    "growth",
+    "increase",
+    "profit",
+    "progress",
+    "revenue",
+    "rise"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0816,
+    0.0532,
+    0.9184,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0062"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.0815508,
+     "y": 0.05322862,
+     "width": 0.8368984,
+     "height": 0.89354277
+    },
+    "coverage": 0.1039491,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 748,
+   "height": 1146
+  },
+  {
+   "id": "pie_chart",
+   "file": "pie_chart.png",
+   "role": "object",
+   "subject": "pie chart",
+   "tags": [
+    "chart",
+    "percent",
+    "percentage",
+    "pie",
+    "proportion",
+    "share",
+    "split"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0554,
+    0.0532,
+    0.9446,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0063"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05540418,
+     "y": 0.05322862,
+     "width": 0.8891916,
+     "height": 0.89354277
+    },
+    "coverage": 0.09400704,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1101,
+   "height": 1146
+  },
+  {
+   "id": "database",
+   "file": "database.png",
+   "role": "object",
+   "subject": "database",
+   "tags": [
+    "data",
+    "database",
+    "records",
+    "server",
+    "storage"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0585,
+    0.9468,
+    0.9415
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0064"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.05848514,
+     "width": 0.89354277,
+     "height": 0.8830297
+    },
+    "coverage": 0.13062316,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1043
+  },
+  {
+   "id": "cloud",
+   "file": "cloud.png",
+   "role": "object",
+   "subject": "cloud",
+   "tags": [
+    "cloud",
+    "internet",
+    "online",
+    "saas",
+    "sync"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0887,
+    0.9468,
+    0.9113
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0065"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.08866279,
+     "width": 0.89354277,
+     "height": 0.8226744
+    },
+    "coverage": 0.03392868,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 688
+  },
+  {
+   "id": "sun_cloud",
+   "file": "sun_cloud.png",
+   "role": "object",
+   "subject": "sun behind cloud",
+   "tags": [
+    "forecast",
+    "sun",
+    "sunny",
+    "weather"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0622,
+    0.9468,
+    0.9378
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0066"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.0622449,
+     "width": 0.89354277,
+     "height": 0.8755102
+    },
+    "coverage": 0.042011254,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 980
+  },
+  {
+   "id": "rain_cloud",
+   "file": "rain_cloud.png",
+   "role": "object",
+   "subject": "rain cloud",
+   "tags": [
+    "bad",
+    "crisis",
+    "rain",
+    "storm",
+    "weather"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0578,
+    0.0532,
+    0.9422,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0067"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.058767773,
+     "y": 0.05322862,
+     "width": 0.8834123,
+     "height": 0.89267015
+    },
+    "coverage": 0.04482519,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1055,
+   "height": 1146
+  },
+  {
+   "id": "padlock",
+   "file": "padlock.png",
+   "role": "object",
+   "subject": "padlock",
+   "tags": [
+    "lock",
+    "privacy",
+    "protected",
+    "safe",
+    "secure",
+    "security"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0736,
+    0.0532,
+    0.9264,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0068"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.07358263,
+     "y": 0.05322862,
+     "width": 0.85283476,
+     "height": 0.89354277
+    },
+    "coverage": 0.12632917,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 829,
+   "height": 1146
+  },
+  {
+   "id": "key",
+   "file": "key.png",
+   "role": "object",
+   "subject": "key",
+   "tags": [
+    "access",
+    "key",
+    "password",
+    "secret",
+    "solution",
+    "unlock"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0682,
+    0.9468,
+    0.9318
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0069"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.06935123,
+     "width": 0.89354277,
+     "height": 0.8624161
+    },
+    "coverage": 0.064187855,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 894
+  },
+  {
+   "id": "printer",
+   "file": "printer.png",
+   "role": "object",
+   "subject": "printer",
+   "tags": [
+    "office",
+    "print",
+    "printer"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0614,
+    0.9468,
+    0.9386
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+006A"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.06136821,
+     "width": 0.89354277,
+     "height": 0.8772636
+    },
+    "coverage": 0.09134387,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 994
+  },
+  {
+   "id": "fax",
+   "file": "fax.png",
+   "role": "object",
+   "subject": "fax machine",
+   "tags": [
+    "fax",
+    "office",
+    "old"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0631,
+    0.9468,
+    0.9369
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+006B"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.063147,
+     "width": 0.89354277,
+     "height": 0.873706
+    },
+    "coverage": 0.125528,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 966
+  },
+  {
+   "id": "computer",
+   "file": "computer.png",
+   "role": "object",
+   "subject": "desktop computer",
+   "tags": [
+    "computer",
+    "desktop",
+    "office",
+    "pc",
+    "screen",
+    "work"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0537,
+    0.0532,
+    0.9463,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+006C"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.054577466,
+     "y": 0.05322862,
+     "width": 0.89172536,
+     "height": 0.89354277
+    },
+    "coverage": 0.10178238,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1136,
+   "height": 1146
+  },
+  {
+   "id": "picture_frame",
+   "file": "picture_frame.png",
+   "role": "object",
+   "subject": "framed picture",
+   "tags": [
+    "art",
+    "frame",
+    "gallery",
+    "image",
+    "picture"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0609,
+    0.0532,
+    0.9391,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+006D"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.06187625,
+     "y": 0.05322862,
+     "width": 0.8772455,
+     "height": 0.89354277
+    },
+    "coverage": 0.18611903,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1002,
+   "height": 1146
+  },
+  {
+   "id": "download",
+   "file": "download.png",
+   "role": "object",
+   "subject": "download tray",
+   "tags": [
+    "download",
+    "install",
+    "receive",
+    "save"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0707,
+    0.9468,
+    0.9293
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+006E"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.07068366,
+     "width": 0.89354277,
+     "height": 0.8586327
+    },
+    "coverage": 0.092352055,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 863
+  },
+  {
+   "id": "signal",
+   "file": "signal.png",
+   "role": "object",
+   "subject": "wireless signal",
+   "tags": [
+    "broadcast",
+    "connection",
+    "network",
+    "signal",
+    "wifi",
+    "wireless"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0589,
+    0.0532,
+    0.9411,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+006F"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05888031,
+     "y": 0.05322862,
+     "width": 0.8822394,
+     "height": 0.89354277
+    },
+    "coverage": 0.25203747,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1036,
+   "height": 1146
+  },
+  {
+   "id": "shield",
+   "file": "shield.png",
+   "role": "object",
+   "subject": "shield",
+   "tags": [
+    "defense",
+    "insurance",
+    "protection",
+    "safe",
+    "security",
+    "shield"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0843,
+    0.0532,
+    0.9157,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0070"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.084254146,
+     "y": 0.05322862,
+     "width": 0.8314917,
+     "height": 0.89354277
+    },
+    "coverage": 0.05523777,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 724,
+   "height": 1146
+  },
+  {
+   "id": "video_camera",
+   "file": "video_camera.png",
+   "role": "object",
+   "subject": "video camera",
+   "tags": [
+    "camera",
+    "record",
+    "recording",
+    "video",
+    "vlog"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0773,
+    0.9468,
+    0.9227
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0071"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.07731306,
+     "width": 0.89354277,
+     "height": 0.84537387
+    },
+    "coverage": 0.15283446,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 789
+  },
+  {
+   "id": "globe",
+   "file": "globe.png",
+   "role": "object",
+   "subject": "globe",
+   "tags": [
+    "earth",
+    "global",
+    "globe",
+    "international",
+    "world",
+    "worldwide"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0536,
+    0.9468,
+    0.9464
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0072"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05410122,
+     "y": 0.053649954,
+     "width": 0.89267015,
+     "height": 0.8918206
+    },
+    "coverage": 0.14170277,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1137
+  },
+  {
+   "id": "briefcase",
+   "file": "briefcase.png",
+   "role": "object",
+   "subject": "briefcase",
+   "tags": [
+    "briefcase",
+    "business",
+    "career",
+    "job",
+    "office",
+    "work"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0663,
+    0.9468,
+    0.9337
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0073"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.06630435,
+     "width": 0.89354277,
+     "height": 0.8673913
+    },
+    "coverage": 0.08010851,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 920
+  },
+  {
+   "id": "wastebasket",
+   "file": "wastebasket.png",
+   "role": "object",
+   "subject": "wastebasket",
+   "tags": [
+    "bin",
+    "delete",
+    "garbage",
+    "rubbish",
+    "trash",
+    "waste"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0612,
+    0.0532,
+    0.9388,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0074"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.062248997,
+     "y": 0.05322862,
+     "width": 0.875502,
+     "height": 0.89354277
+    },
+    "coverage": 0.17853789,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 996,
+   "height": 1146
+  },
+  {
+   "id": "house",
+   "file": "house.png",
+   "role": "object",
+   "subject": "house",
+   "tags": [
+    "estate",
+    "home",
+    "house",
+    "mortgage",
+    "property",
+    "real",
+    "rent"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0649,
+    0.9468,
+    0.9351
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0075"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.06489362,
+     "width": 0.89354277,
+     "height": 0.8702128
+    },
+    "coverage": 0.10590862,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 940
+  },
+  {
+   "id": "clock",
+   "file": "clock.png",
+   "role": "object",
+   "subject": "clock",
+   "tags": [
+    "clock",
+    "deadline",
+    "hours",
+    "late",
+    "schedule",
+    "time",
+    "wait"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0553,
+    0.0532,
+    0.9447,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0076"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.055253625,
+     "y": 0.05322862,
+     "width": 0.88949275,
+     "height": 0.89354277
+    },
+    "coverage": 0.10235824,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1104,
+   "height": 1146
+  },
+  {
+   "id": "paperclip_tall",
+   "file": "paperclip_tall.png",
+   "role": "object",
+   "subject": "paperclip",
+   "tags": [
+    "clip",
+    "paperclip"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.1426,
+    0.0532,
+    0.8574,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0077"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.14257812,
+     "y": 0.05322862,
+     "width": 0.71484375,
+     "height": 0.89267015
+    },
+    "coverage": 0.08878879,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 512,
+   "height": 1146
+  },
+  {
+   "id": "scissors",
+   "file": "scissors.png",
+   "role": "object",
+   "subject": "scissors",
+   "tags": [
+    "cut",
+    "reduce",
+    "scissors",
+    "trim"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0733,
+    0.9468,
+    0.9267
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0078"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.073317304,
+     "width": 0.89354277,
+     "height": 0.85336536
+    },
+    "coverage": 0.08243346,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 832
+  },
+  {
+   "id": "progress_bar",
+   "file": "progress_bar.png",
+   "role": "object",
+   "subject": "loading bar",
+   "tags": [
+    "bar",
+    "loading",
+    "progress",
+    "status",
+    "wait"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0534,
+    0.9468,
+    0.9466
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+0079"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.05341506,
+     "width": 0.89354277,
+     "height": 0.8931699
+    },
+    "coverage": 0.16718167,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1142
+  },
+  {
+   "id": "eye",
+   "file": "eye.png",
+   "role": "object",
+   "subject": "eye",
+   "tags": [
+    "attention",
+    "eye",
+    "see",
+    "view",
+    "visibility",
+    "vision",
+    "watch"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0654,
+    0.9468,
+    0.9346
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+007A"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.06538049,
+     "width": 0.89354277,
+     "height": 0.8681672
+    },
+    "coverage": 0.16842964,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 933
+  },
+  {
+   "id": "paintbrush",
+   "file": "paintbrush.png",
+   "role": "object",
+   "subject": "paintbrush",
+   "tags": [
+    "art",
+    "brush",
+    "creative",
+    "design",
+    "paint"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0628,
+    0.9468,
+    0.9372
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+007B"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.062821835,
+     "width": 0.89354277,
+     "height": 0.8743563
+    },
+    "coverage": 0.062187377,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 971
+  },
+  {
+   "id": "burger",
+   "file": "burger.png",
+   "role": "object",
+   "subject": "burger",
+   "tags": [
+    "burger",
+    "fast",
+    "food",
+    "lunch",
+    "meal"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.058,
+    0.9468,
+    0.942
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+007C"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.05798479,
+     "width": 0.89267015,
+     "height": 0.8840304
+    },
+    "coverage": 0.1242203,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1052
+  },
+  {
+   "id": "fruit",
+   "file": "fruit.png",
+   "role": "object",
+   "subject": "fruit",
+   "tags": [
+    "apple",
+    "banana",
+    "food",
+    "fruit",
+    "healthy"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0609,
+    0.9468,
+    0.9391
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+007D"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05410122,
+     "y": 0.060939062,
+     "width": 0.89267015,
+     "height": 0.87812185
+    },
+    "coverage": 0.095694885,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1001
+  },
+  {
+   "id": "bottle",
+   "file": "bottle.png",
+   "role": "object",
+   "subject": "bottle",
+   "tags": [
+    "bottle",
+    "drink",
+    "medicine",
+    "milk"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0973,
+    0.0532,
+    0.9027,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+007E"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.097288676,
+     "y": 0.05322862,
+     "width": 0.80542266,
+     "height": 0.89354277
+    },
+    "coverage": 0.096421644,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 627,
+   "height": 1146
+  },
+  {
+   "id": "magic_wand",
+   "file": "magic_wand.png",
+   "role": "object",
+   "subject": "magic wand",
+   "tags": [
+    "easy",
+    "instant",
+    "magic",
+    "transform",
+    "wand"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0609,
+    0.9468,
+    0.9391
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+2019"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.060939062,
+     "width": 0.89354277,
+     "height": 0.87812185
+    },
+    "coverage": 0.056210805,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1001
+  },
+  {
+   "id": "puzzle",
+   "file": "puzzle.png",
+   "role": "object",
+   "subject": "puzzle piece",
+   "tags": [
+    "fit",
+    "missing",
+    "piece",
+    "puzzle",
+    "solution"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0571,
+    0.0532,
+    0.9429,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+201C"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.057116106,
+     "y": 0.05322862,
+     "width": 0.8857678,
+     "height": 0.89267015
+    },
+    "coverage": 0.07550935,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1068,
+   "height": 1146
+  },
+  {
+   "id": "refresh",
+   "file": "refresh.png",
+   "role": "object",
+   "subject": "circular arrows",
+   "tags": [
+    "again",
+    "cycle",
+    "loop",
+    "recycle",
+    "refresh",
+    "renew",
+    "repeat"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0553,
+    0.0532,
+    0.9447,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "SketchIcons.ttf",
+    "licence": "free for commercial and private use (peax-webdesign.com readme)",
+    "credit": "Peax Webdesign, www.peax-webdesign.com",
+    "codepoint": "U+201D"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05530372,
+     "y": 0.05322862,
+     "width": 0.88939255,
+     "height": 0.89354277
+    },
+    "coverage": 0.18476343,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1103,
+   "height": 1146
+  }
+ ]
+}

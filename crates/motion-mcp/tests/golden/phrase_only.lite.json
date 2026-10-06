@@ -1,0 +1,7 @@
+{
+  "beats": [
+    {"say": "Nobody expected the small town bakery to outlast the mall.", "show": "The bakery won"},
+    {"say": "It simply kept doing one thing well for forty years.", "keyword": "craft"},
+    {"say": "And honestly that is the whole lesson here, nothing more and nothing less than that."}
+  ]
+}

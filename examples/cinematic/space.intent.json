@@ -1,0 +1,42 @@
+{
+  "version": "0.2",
+  "title": "our_place_in_space",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "A pale blue dot",
+      "narration": "Everything you have ever known happened on one small blue planet.",
+      "primary": { "kind": "object", "asset": "earth_globe", "meaning": "home" },
+      "secondary": { "kind": "object", "asset": "satellite", "meaning": "orbit" },
+      "energy": "calm",
+      "keyword": "home"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "Light takes 8 minutes",
+      "narration": "Sunlight takes eight minutes to reach us, so you always see the sun as it was.",
+      "primary": { "kind": "number", "value": "8 min", "meaning": "sunlight" },
+      "energy": "building",
+      "keyword": "minutes"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "Saturn could float",
+      "narration": "Saturn is so light that, in a big enough ocean, it would actually float.",
+      "primary": { "kind": "object", "asset": "ringed_planet", "meaning": "saturn" },
+      "secondary": { "kind": "object", "asset": "atom", "meaning": "density" },
+      "energy": "impact",
+      "keyword": "float"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "We just started looking",
+      "narration": "And we have only just started looking. The universe is waiting.",
+      "primary": { "kind": "object", "asset": "telescope", "meaning": "discovery" },
+      "secondary": { "kind": "object", "asset": "ai_sparkles", "meaning": "stars" },
+      "energy": "impact",
+      "keyword": "looking"
+    }
+  ]
+}

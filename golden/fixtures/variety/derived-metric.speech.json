@@ -1,0 +1,49 @@
+{
+  "version": "0.1",
+  "audio": "pass_rate.voice.wav",
+  "sample_rate": 48000,
+  "duration": 2.967041666666667,
+  "provider": "macos_say",
+  "model": "macos/say",
+  "voice": "Daniel",
+  "words": [
+    {
+      "text": "The",
+      "start": 0.35,
+      "end": 0.61,
+      "confidence": 0.9
+    },
+    {
+      "text": "small",
+      "start": 0.61,
+      "end": 0.97,
+      "confidence": 0.7
+    },
+    {
+      "text": "class",
+      "start": 0.97,
+      "end": 1.2657555555555557,
+      "confidence": 0.9
+    },
+    {
+      "text": "did",
+      "start": 1.2657555555555557,
+      "end": 1.62,
+      "confidence": 0.5
+    },
+    {
+      "text": "better",
+      "start": 1.62,
+      "end": 2.0670416666666664,
+      "confidence": 0.7
+    }
+  ],
+  "sentences": [
+    {
+      "beat": 0,
+      "start": 0.35,
+      "end": 2.067041666666667
+    }
+  ],
+  "alignment": "onset"
+}

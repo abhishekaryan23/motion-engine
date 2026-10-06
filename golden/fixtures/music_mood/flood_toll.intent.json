@@ -1,0 +1,28 @@
+{
+  "version": "0.2",
+  "title": "flood_toll",
+  "format": "vertical",
+  "beats": [
+    { "purpose": "emphasize", "statement": "The river rose overnight",
+      "narration": "In a single night, the river rose over its banks and swallowed the town.",
+      "primary": { "kind": "phrase", "value": "ONE NIGHT", "meaning": "the flood" },
+      "energy": "calm" },
+    { "purpose": "reveal", "statement": "Lives lost",
+      "narration": "More than two hundred people died, and hundreds more are still missing.",
+      "primary": { "kind": "number", "value": "212", "meaning": "people died" },
+      "energy": "building" },
+    { "purpose": "emphasize", "statement": "Families with nothing left",
+      "narration": "Thousands of families lost their homes, and many are still waiting in shelters for news.",
+      "primary": { "kind": "phrase", "value": "NO HOMES TO RETURN TO", "meaning": "displaced families" },
+      "energy": "calm" },
+    { "purpose": "compare", "statement": "The toll, day by day",
+      "narration": "The count of the dead rose every day, while the list of the missing slowly shrank.",
+      "primary": { "kind": "number", "value": "212", "meaning": "confirmed dead" },
+      "secondary": { "kind": "number", "value": "1,400", "meaning": "still missing" },
+      "relationship": "separate", "energy": "building" },
+    { "purpose": "emphasize", "statement": "We remember them",
+      "narration": "The town is quiet now. Each evening, people gather to remember the ones they lost.",
+      "primary": { "kind": "phrase", "value": "REMEMBERING", "meaning": "the town's grief" },
+      "energy": "calm" }
+  ]
+}

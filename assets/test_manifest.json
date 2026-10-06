@@ -1,0 +1,23 @@
+{
+  "version": "0.1",
+  "assets": [
+    {
+      "id": "beat_1.hero_subject",
+      "path": "test_images/figure.png",
+      "width": 600,
+      "height": 900,
+      "alpha": true,
+      "subject_anchor": { "x": 0.5, "y": 0.5 },
+      "face_anchor": { "x": 0.5, "y": 0.21 },
+      "generator": { "tool": "test fixture (PIL silhouette)" }
+    },
+    {
+      "id": "beat_2.evidence_image",
+      "path": "test_images/document.png",
+      "width": 700,
+      "height": 500,
+      "alpha": true,
+      "generator": { "tool": "test fixture (PIL document)" }
+    }
+  ]
+}

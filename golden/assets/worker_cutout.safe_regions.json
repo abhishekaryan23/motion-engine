@@ -1,0 +1,82 @@
+{
+  "head_estimate": {
+    "height": 0.2611111104488373,
+    "width": 0.3314814865589142,
+    "x": 0.3296296298503876,
+    "y": 0.06111111119389534
+  },
+  "safe_regions": [
+    {
+      "name": "left_upper",
+      "rect": {
+        "height": 0.375,
+        "width": 0.3125,
+        "x": 0.0,
+        "y": 0.0
+      }
+    },
+    {
+      "name": "right_upper",
+      "rect": {
+        "height": 0.375,
+        "width": 0.3125,
+        "x": 0.6875,
+        "y": 0.0
+      }
+    },
+    {
+      "name": "top",
+      "rect": {
+        "height": 0.3125,
+        "width": 0.3125,
+        "x": 0.0,
+        "y": 0.0
+      }
+    },
+    {
+      "name": "left_middle",
+      "rect": {
+        "height": 0.5,
+        "width": 0.1875,
+        "x": 0.0,
+        "y": 0.25
+      }
+    },
+    {
+      "name": "lower_left",
+      "rect": {
+        "height": 0.5,
+        "width": 0.1875,
+        "x": 0.0,
+        "y": 0.5
+      }
+    },
+    {
+      "name": "right_middle",
+      "rect": {
+        "height": 0.5,
+        "width": 0.1875,
+        "x": 0.8125,
+        "y": 0.25
+      }
+    },
+    {
+      "name": "lower_right",
+      "rect": {
+        "height": 0.5,
+        "width": 0.1875,
+        "x": 0.8125,
+        "y": 0.5
+      }
+    },
+    {
+      "name": "bottom",
+      "rect": {
+        "height": 0.3125,
+        "width": 0.1875,
+        "x": 0.0,
+        "y": 0.6875
+      }
+    }
+  ]
+}

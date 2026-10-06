@@ -1,0 +1,91 @@
+{
+  "beats": [
+    {
+      "continuity": "none",
+      "energy": "building",
+      "narration": "Plain strings are read as what the narrator says out loud.",
+      "primary": {
+        "kind": "phrase",
+        "value": "Plain strings are read as what…"
+      },
+      "purpose": "emphasize",
+      "statement": "Plain strings are read as what…"
+    },
+    {
+      "continuity": "none",
+      "energy": "building",
+      "narration": "A number written as a number still becomes text on screen.",
+      "primary": {
+        "kind": "number",
+        "value": "381"
+      },
+      "purpose": "emphasize",
+      "statement": "A number written as a number…"
+    },
+    {
+      "continuity": "none",
+      "energy": "building",
+      "narration": "Lists can arrive as one comma separated string of words.",
+      "primary": {
+        "items": [
+          {
+            "asset": "robot",
+            "kind": "object"
+          },
+          {
+            "asset": "microchip",
+            "kind": "object"
+          },
+          {
+            "asset": "clock",
+            "kind": "object"
+          }
+        ],
+        "kind": "collection"
+      },
+      "purpose": "emphasize",
+      "statement": "Lists can arrive as one comma…"
+    },
+    {
+      "continuity": "none",
+      "energy": "impact",
+      "narration": "Two sides written as a plain array still make a comparison.",
+      "primary": {
+        "kind": "phrase",
+        "value": "cost"
+      },
+      "purpose": "compare",
+      "relationship": "separate",
+      "secondary": {
+        "kind": "phrase",
+        "value": "output"
+      },
+      "statement": "Two sides written as a plain…"
+    },
+    {
+      "continuity": "none",
+      "energy": "building",
+      "narration": "Pictures with spaces and capitals become snake case nouns.",
+      "primary": {
+        "asset": "money_stack",
+        "kind": "object"
+      },
+      "purpose": "emphasize",
+      "statement": "Pictures with spaces and capitals become…"
+    },
+    {
+      "continuity": "none",
+      "energy": "building",
+      "narration": "Say taken from show",
+      "primary": {
+        "kind": "phrase",
+        "value": "Say taken from show"
+      },
+      "purpose": "emphasize",
+      "statement": "Say taken from show"
+    }
+  ],
+  "format": "vertical",
+  "title": "lenient_input",
+  "version": "0.2"
+}

@@ -1,0 +1,24 @@
+{
+  "version": "0.1",
+  "loops": [
+    {
+      "id": "hourglass",
+      "host": "hourglass",
+      "role": "hero_loop",
+      "path": "loops/hourglass",
+      "frame_count": 47,
+      "fps": 12.0,
+      "mode": "loop",
+      "pattern": "frame_%04d.png",
+      "width": 384,
+      "height": 686,
+      "ssim_first_last": 0.9483,
+      "source": {
+        "vendor": "openart",
+        "project": "MotionEngine Asset Library",
+        "model": "pixverseV6 image2video 540p 4s (start = end frame)",
+        "history_id": "fmdNRXAXUmA9GfqoEjNv"
+      }
+    }
+  ]
+}

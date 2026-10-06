@@ -1,0 +1,227 @@
+{
+  "version": "0.2",
+  "project": {
+    "name": "golden_overlap",
+    "duration_seconds": 2.0
+  },
+  "canvas": {
+    "width": 540,
+    "height": 960,
+    "fps": 30,
+    "background": "#ECE3D2"
+  },
+  "theme": {
+    "fonts": {
+      "display": "font.archivo_black",
+      "display_condensed": "font.anton",
+      "serif_emotional": "font.dm_serif_italic",
+      "body": "font.fira_sans",
+      "mono": "font.space_mono",
+      "number": "font.anton"
+    },
+    "palette": {
+      "paper": "#ECE3D2",
+      "ink": "#16130F",
+      "accent": "#D63A2B",
+      "cobalt": "#1F3FBF"
+    }
+  },
+  "assets": [
+    {
+      "id": "font.archivo_black",
+      "type": "font",
+      "path": "fonts/ArchivoBlack-Regular.ttf"
+    },
+    {
+      "id": "font.anton",
+      "type": "font",
+      "path": "fonts/Anton-Regular.ttf"
+    },
+    {
+      "id": "font.dm_serif_italic",
+      "type": "font",
+      "path": "fonts/DMSerifDisplay-Italic.ttf"
+    },
+    {
+      "id": "font.fira_sans",
+      "type": "font",
+      "path": "fonts/FiraSans-Regular.ttf"
+    },
+    {
+      "id": "font.space_mono",
+      "type": "font",
+      "path": "fonts/SpaceMono-Regular.ttf"
+    }
+  ],
+  "asset_root": "../assets",
+  "scenes": [
+    {
+      "id": "scene_a",
+      "start_seconds": 0,
+      "duration_seconds": 1.4,
+      "layers": [
+        {
+          "id": "a.bg",
+          "type": "rectangle",
+          "x": 0,
+          "y": 0,
+          "width": 540,
+          "height": 480,
+          "fill": "#D9CDB6",
+          "z_index": 1
+        },
+        {
+          "id": "a.title",
+          "type": "text",
+          "x": 40,
+          "y": 120,
+          "width": 460,
+          "height": 120,
+          "text": "SCENE A",
+          "font_role": "display",
+          "font_size": 90,
+          "color": "#16130F",
+          "z_index": 2
+        }
+      ],
+      "motions": [
+        {
+          "target": "a.title",
+          "start": 0.1,
+          "duration": 0.6,
+          "easing": "out_cubic",
+          "op": "fade",
+          "from": 0,
+          "to": 1
+        },
+        {
+          "target": "a.title",
+          "start": 0.9,
+          "duration": 0.4,
+          "easing": "linear",
+          "op": "fade",
+          "from": 1,
+          "to": 0
+        }
+      ]
+    },
+    {
+      "id": "scene_b",
+      "start_seconds": 1.0,
+      "duration_seconds": 1.0,
+      "layers": [
+        {
+          "id": "b.bg",
+          "type": "rectangle",
+          "x": 0,
+          "y": 480,
+          "width": 540,
+          "height": 480,
+          "fill": "#C7D0E8",
+          "z_index": 1
+        },
+        {
+          "id": "b.title",
+          "type": "text",
+          "x": 40,
+          "y": 620,
+          "width": 460,
+          "height": 120,
+          "text": "SCENE B",
+          "font_role": "display",
+          "font_size": 90,
+          "color": "#1F3FBF",
+          "z_index": 2
+        },
+        {
+          "id": "b.slab",
+          "type": "rectangle",
+          "x": 0,
+          "y": 900,
+          "width": 540,
+          "height": 20,
+          "fill": "#D63A2B",
+          "z_index": 3
+        }
+      ],
+      "motions": [
+        {
+          "target": "b.title",
+          "start": 0.0,
+          "duration": 0.5,
+          "easing": "out_cubic",
+          "op": "fade",
+          "from": 0,
+          "to": 1
+        },
+        {
+          "target": "b.slab",
+          "start": 0.1,
+          "duration": 0.8,
+          "easing": "in_out_cubic",
+          "op": "accent_expand",
+          "to": {
+            "x": 0,
+            "y": 700,
+            "width": 540,
+            "height": 260
+          }
+        }
+      ]
+    }
+  ],
+  "shared": [
+    {
+      "id": "marker",
+      "layer": {
+        "id": "marker.layer",
+        "type": "rectangle",
+        "x": 0,
+        "y": 0,
+        "width": 90,
+        "height": 90,
+        "fill": "#D63A2B",
+        "z_index": 20
+      },
+      "track": [
+        {
+          "scene": "scene_a",
+          "at": 0.2,
+          "state": {
+            "x": 60,
+            "y": 100,
+            "opacity": 0.0
+          }
+        },
+        {
+          "scene": "scene_a",
+          "at": 0.6,
+          "easing": "out_cubic",
+          "state": {
+            "opacity": 1.0
+          }
+        },
+        {
+          "scene": "scene_b",
+          "at": 0.2,
+          "easing": "in_out_cubic",
+          "state": {
+            "x": 380,
+            "y": 760,
+            "scale": 1.5,
+            "rotation_degrees": 20
+          }
+        },
+        {
+          "scene": "scene_b",
+          "at": 0.9,
+          "easing": "out_cubic",
+          "state": {
+            "scale": 1.0,
+            "rotation_degrees": 0
+          }
+        }
+      ]
+    }
+  ]
+}

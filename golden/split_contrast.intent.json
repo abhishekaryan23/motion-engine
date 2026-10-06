@@ -1,0 +1,23 @@
+{
+  "version": "0.2",
+  "title": "split_contrast",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "compare",
+      "statement": "Two ways to spend an hour",
+      "primary": { "kind": "phrase", "value": "scrolling", "meaning": "the habit" },
+      "secondary": { "kind": "phrase", "value": "building", "meaning": "the craft" },
+      "relationship": "separate",
+      "energy": "building"
+    },
+    {
+      "purpose": "contrast",
+      "statement": "Yesterday's answer expired",
+      "primary": { "kind": "phrase", "value": "the old plan" },
+      "secondary": { "kind": "phrase", "value": "the new plan" },
+      "relationship": "replace",
+      "energy": "building"
+    }
+  ]
+}

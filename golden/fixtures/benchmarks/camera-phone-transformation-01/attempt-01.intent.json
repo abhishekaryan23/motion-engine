@@ -1,0 +1,27 @@
+{
+  "version": "0.2",
+  "title": "camera_phone_transformation",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "contrast",
+      "statement": "Twenty years transformed both devices completely.",
+      "primary": {
+        "kind": "state_change",
+        "entity": "phone",
+        "from": "making calls",
+        "to": "powerful camera",
+        "meaning": "phone"
+      },
+      "secondary": {
+        "kind": "state_change",
+        "entity": "camera",
+        "from": "special moments",
+        "to": "rarely carried",
+        "meaning": "camera"
+      },
+      "energy": "building",
+      "keyword": "devices"
+    }
+  ]
+}

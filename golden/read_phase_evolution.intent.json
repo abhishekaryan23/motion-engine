@@ -1,0 +1,20 @@
+{
+  "version": "0.2",
+  "title": "read_phase_evolution",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "explain",
+      "statement": "Why the queue got longer.",
+      "primary": {
+        "kind": "phrase",
+        "value": "fewer counters open"
+      },
+      "secondary": {
+        "kind": "phrase",
+        "value": "more people at lunch"
+      },
+      "energy": "calm"
+    }
+  ]
+}

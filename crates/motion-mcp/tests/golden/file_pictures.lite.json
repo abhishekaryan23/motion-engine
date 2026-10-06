@@ -1,0 +1,9 @@
+{
+  "title": "our garage",
+  "beats": [
+    {"say": "Meet Sam, who started the whole thing in a tiny garage.", "picture": {"file": "demo/beat1.jpg", "role": "person"}, "meaning": "founder"},
+    {"say": "This tiny rocket was the very first thing we ever built.", "picture": "file:demo/beat2_object.png", "show": "The first rocket"},
+    {"say": "We launched it on a windy morning down at the beach.", "picture": {"file": "demo/Beach Day.jpg", "role": "place"}},
+    {"say": "Sam raised five million dollars in the very first year.", "number": "$5M", "picture": {"file": "demo/beat1.jpg", "role": "person"}}
+  ]
+}

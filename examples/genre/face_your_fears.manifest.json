@@ -1,0 +1,26 @@
+{
+  "version": "0.1",
+  "assets": [
+    {
+      "id": "beat_1.hero_subject",
+      "path": "../../assets/library/people_work/stressed_person.png",
+      "width": 512,
+      "height": 1005,
+      "alpha": true
+    },
+    {
+      "id": "beat_2.hero_subject",
+      "path": "../../assets/library/people_work/meditating.png",
+      "width": 772,
+      "height": 888,
+      "alpha": true
+    },
+    {
+      "id": "beat_3.hero_subject",
+      "path": "../../assets/library/people_work/climbing_steps.png",
+      "width": 594,
+      "height": 1176,
+      "alpha": true
+    }
+  ]
+}

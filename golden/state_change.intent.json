@@ -1,0 +1,19 @@
+{
+  "version": "0.2",
+  "title": "state_change",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "Delivery got faster.",
+      "energy": "building",
+      "primary": {
+        "kind": "state_change",
+        "entity": "delivery",
+        "from": "three days",
+        "to": "same day",
+        "meaning": "faster"
+      }
+    }
+  ]
+}

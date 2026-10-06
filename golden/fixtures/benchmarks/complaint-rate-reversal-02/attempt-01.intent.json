@@ -1,0 +1,56 @@
+{
+  "version": "0.2",
+  "title": "complaint_rate_reversal",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "contrast",
+      "statement": "Customer complaints dropped from 1,000 to 800.",
+      "primary": {
+        "kind": "number",
+        "value": "1,000",
+        "meaning": "complaints"
+      },
+      "secondary": {
+        "kind": "number",
+        "value": "800",
+        "meaning": "complaints"
+      },
+      "relationship": "replace",
+      "energy": "calm",
+      "keyword": "complaints"
+    },
+    {
+      "purpose": "contrast",
+      "statement": "The complaint rate per customer actually went up.",
+      "primary": {
+        "kind": "derived_metric",
+        "meaning": "complaint rate",
+        "format": "percent",
+        "numerator": {
+          "value": 1000,
+          "meaning": "complaints"
+        },
+        "denominator": {
+          "value": 100000,
+          "meaning": "customers"
+        }
+      },
+      "secondary": {
+        "kind": "derived_metric",
+        "meaning": "complaint rate",
+        "format": "percent",
+        "numerator": {
+          "value": 800,
+          "meaning": "complaints"
+        },
+        "denominator": {
+          "value": 60000,
+          "meaning": "customers"
+        }
+      },
+      "energy": "impact",
+      "keyword": "rate"
+    }
+  ]
+}

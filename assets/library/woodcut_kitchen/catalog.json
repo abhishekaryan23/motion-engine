@@ -1,0 +1,2872 @@
+{
+ "version": "0.1",
+ "family": "woodcut_kitchen",
+ "assets": [
+  {
+   "id": "spatula",
+   "file": "spatula.png",
+   "role": "object",
+   "subject": "spatula",
+   "tags": [
+    "cooking",
+    "kitchen",
+    "spatula"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0567,
+    0.0532,
+    0.9433,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0021"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.056744184,
+     "y": 0.05322862,
+     "width": 0.8865116,
+     "height": 0.89354277
+    },
+    "coverage": 0.0962531,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1075,
+   "height": 1146
+  },
+  {
+   "id": "spoon",
+   "file": "spoon.png",
+   "role": "object",
+   "subject": "spoon",
+   "tags": [
+    "eat",
+    "kitchen",
+    "spoon"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0611,
+    0.9468,
+    0.9389
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0022"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05410122,
+     "y": 0.061122246,
+     "width": 0.89267015,
+     "height": 0.8777555
+    },
+    "coverage": 0.10636806,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 998
+  },
+  {
+   "id": "measuring_spoons",
+   "file": "measuring_spoons.png",
+   "role": "object",
+   "subject": "measuring spoons",
+   "tags": [
+    "baking",
+    "measure",
+    "recipe",
+    "spoons"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.06,
+    0.9468,
+    0.94
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0023"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.06003937,
+     "width": 0.89354277,
+     "height": 0.87992126
+    },
+    "coverage": 0.2117035,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1016
+  },
+  {
+   "id": "knife",
+   "file": "knife.png",
+   "role": "object",
+   "subject": "knife",
+   "tags": [
+    "cut",
+    "kitchen",
+    "knife"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.062,
+    0.9468,
+    0.938
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0024"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.06199187,
+     "width": 0.89354277,
+     "height": 0.87601626
+    },
+    "coverage": 0.093021505,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 984
+  },
+  {
+   "id": "fork",
+   "file": "fork.png",
+   "role": "object",
+   "subject": "fork",
+   "tags": [
+    "eat",
+    "fork",
+    "meal"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0555,
+    0.9468,
+    0.9445
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0025"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.055505004,
+     "width": 0.89354277,
+     "height": 0.88899
+    },
+    "coverage": 0.08265248,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1099
+  },
+  {
+   "id": "mixing_bowl",
+   "file": "mixing_bowl.png",
+   "role": "object",
+   "subject": "mixing bowl",
+   "tags": [
+    "baking",
+    "bowl",
+    "mixing"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0608,
+    0.9468,
+    0.9392
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0026"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.060756974,
+     "width": 0.89354277,
+     "height": 0.87848604
+    },
+    "coverage": 0.17383432,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1004
+  },
+  {
+   "id": "hand_mixer",
+   "file": "hand_mixer.png",
+   "role": "object",
+   "subject": "hand mixer",
+   "tags": [
+    "baking",
+    "mixer",
+    "whip"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0566,
+    0.0532,
+    0.9434,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0027"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05663881,
+     "y": 0.05322862,
+     "width": 0.8867224,
+     "height": 0.89354277
+    },
+    "coverage": 0.20387413,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1077,
+   "height": 1146
+  },
+  {
+   "id": "frying_pan",
+   "file": "frying_pan.png",
+   "role": "object",
+   "subject": "frying pan",
+   "tags": [
+    "cook",
+    "cooking",
+    "frying",
+    "pan"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0643,
+    0.9468,
+    0.9357
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0028"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.064278185,
+     "width": 0.89354277,
+     "height": 0.8714436
+    },
+    "coverage": 0.23135863,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 949
+  },
+  {
+   "id": "cooking_pot",
+   "file": "cooking_pot.png",
+   "role": "object",
+   "subject": "steaming pot",
+   "tags": [
+    "boil",
+    "cooking",
+    "pot",
+    "soup",
+    "stew"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0597,
+    0.9468,
+    0.9403
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0029"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.05974535,
+     "width": 0.89354277,
+     "height": 0.8805093
+    },
+    "coverage": 0.1948873,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1021
+  },
+  {
+   "id": "banana_bunch",
+   "file": "banana_bunch.png",
+   "role": "object",
+   "subject": "banana bunch",
+   "tags": [
+    "banana",
+    "bananas",
+    "fruit"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0613,
+    0.9468,
+    0.9387
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+002A"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.061306532,
+     "width": 0.89354277,
+     "height": 0.8773869
+    },
+    "coverage": 0.17505854,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 995
+  },
+  {
+   "id": "salt_and_pepper",
+   "file": "salt_and_pepper.png",
+   "role": "object",
+   "subject": "salt and pepper",
+   "tags": [
+    "pepper",
+    "salt",
+    "seasoning",
+    "spice"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0555,
+    0.0532,
+    0.9445,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0030"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.055454545,
+     "y": 0.05322862,
+     "width": 0.8890909,
+     "height": 0.89354277
+    },
+    "coverage": 0.29075202,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1100,
+   "height": 1146
+  },
+  {
+   "id": "steak",
+   "file": "steak.png",
+   "role": "object",
+   "subject": "steak",
+   "tags": [
+    "beef",
+    "dinner",
+    "meat",
+    "steak"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0679,
+    0.9468,
+    0.9321
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0034"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.06792873,
+     "width": 0.89354277,
+     "height": 0.86414254
+    },
+    "coverage": 0.2832171,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 898
+  },
+  {
+   "id": "stove",
+   "file": "stove.png",
+   "role": "object",
+   "subject": "stove",
+   "tags": [
+    "cook",
+    "kitchen",
+    "oven",
+    "stove"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0539,
+    0.0532,
+    0.9461,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0035"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05393457,
+     "y": 0.05322862,
+     "width": 0.89213085,
+     "height": 0.89354277
+    },
+    "coverage": 0.27191722,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1131,
+   "height": 1146
+  },
+  {
+   "id": "potato",
+   "file": "potato.png",
+   "role": "object",
+   "subject": "potato",
+   "tags": [
+    "potato",
+    "potatoes",
+    "vegetable"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0631,
+    0.9468,
+    0.9369
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0036"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.063147,
+     "width": 0.89354277,
+     "height": 0.873706
+    },
+    "coverage": 0.14809997,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 966
+  },
+  {
+   "id": "toaster",
+   "file": "toaster.png",
+   "role": "object",
+   "subject": "toaster",
+   "tags": [
+    "breakfast",
+    "toast",
+    "toaster"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0583,
+    0.9468,
+    0.9417
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0037"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.0582617,
+     "width": 0.89354277,
+     "height": 0.8834766
+    },
+    "coverage": 0.22342153,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1047
+  },
+  {
+   "id": "tomato",
+   "file": "tomato.png",
+   "role": "object",
+   "subject": "tomato",
+   "tags": [
+    "tomato",
+    "tomatoes",
+    "vegetable"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0591,
+    0.9468,
+    0.9409
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0038"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.059051305,
+     "width": 0.89354277,
+     "height": 0.8818974
+    },
+    "coverage": 0.31421807,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1033
+  },
+  {
+   "id": "wine",
+   "file": "wine.png",
+   "role": "object",
+   "subject": "wine bottle and glass",
+   "tags": [
+    "alcohol",
+    "dinner",
+    "drink",
+    "wine"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0545,
+    0.0532,
+    0.9455,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0039"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05540661,
+     "y": 0.05322862,
+     "width": 0.89008045,
+     "height": 0.89354277
+    },
+    "coverage": 0.18535389,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1119,
+   "height": 1146
+  },
+  {
+   "id": "banana",
+   "file": "banana.png",
+   "role": "object",
+   "subject": "banana",
+   "tags": [
+    "banana",
+    "fruit"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0612,
+    0.9468,
+    0.9388
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0041"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.06118355,
+     "width": 0.89354277,
+     "height": 0.8776329
+    },
+    "coverage": 0.17585391,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 997
+  },
+  {
+   "id": "beetroot",
+   "file": "beetroot.png",
+   "role": "object",
+   "subject": "beetroot",
+   "tags": [
+    "beet",
+    "beetroot",
+    "vegetable"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0588,
+    0.9468,
+    0.9412
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0042"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.05876686,
+     "width": 0.89354277,
+     "height": 0.88246626
+    },
+    "coverage": 0.2241322,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1038
+  },
+  {
+   "id": "strawberry",
+   "file": "strawberry.png",
+   "role": "object",
+   "subject": "strawberry",
+   "tags": [
+    "berry",
+    "fruit",
+    "strawberry"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0544,
+    0.9468,
+    0.9456
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0043"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.0544157,
+     "width": 0.89354277,
+     "height": 0.8911686
+    },
+    "coverage": 0.25231072,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1121
+  },
+  {
+   "id": "blender",
+   "file": "blender.png",
+   "role": "object",
+   "subject": "blender",
+   "tags": [
+    "blender",
+    "kitchen",
+    "smoothie"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0541,
+    0.0532,
+    0.9459,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0044"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.054126,
+     "y": 0.05322862,
+     "width": 0.891748,
+     "height": 0.89354277
+    },
+    "coverage": 0.26685542,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1127,
+   "height": 1146
+  },
+  {
+   "id": "milk_jug",
+   "file": "milk_jug.png",
+   "role": "object",
+   "subject": "milk jug",
+   "tags": [
+    "dairy",
+    "jug",
+    "milk"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0548,
+    0.0532,
+    0.9452,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0045"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05475763,
+     "y": 0.05322862,
+     "width": 0.89048475,
+     "height": 0.89354277
+    },
+    "coverage": 0.14386469,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1114,
+   "height": 1146
+  },
+  {
+   "id": "bread",
+   "file": "bread.png",
+   "role": "object",
+   "subject": "loaf of bread",
+   "tags": [
+    "bakery",
+    "bread",
+    "food",
+    "groceries",
+    "loaf"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0583,
+    0.9468,
+    0.9417
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0046"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.0582617,
+     "width": 0.89354277,
+     "height": 0.8834766
+    },
+    "coverage": 0.22571929,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1047
+  },
+  {
+   "id": "broccoli",
+   "file": "broccoli.png",
+   "role": "object",
+   "subject": "broccoli",
+   "tags": [
+    "broccoli",
+    "healthy",
+    "vegetable"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0603,
+    0.9468,
+    0.9397
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0047"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.06027668,
+     "width": 0.89354277,
+     "height": 0.8794466
+    },
+    "coverage": 0.19177032,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1012
+  },
+  {
+   "id": "cake",
+   "file": "cake.png",
+   "role": "object",
+   "subject": "slice of cake",
+   "tags": [
+    "birthday",
+    "cake",
+    "dessert",
+    "sweet"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0539,
+    0.0532,
+    0.9461,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0048"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05393457,
+     "y": 0.05322862,
+     "width": 0.8912467,
+     "height": 0.89354277
+    },
+    "coverage": 0.28951353,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1131,
+   "height": 1146
+  },
+  {
+   "id": "whisk",
+   "file": "whisk.png",
+   "role": "object",
+   "subject": "whisk",
+   "tags": [
+    "baking",
+    "whisk"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0539,
+    0.0532,
+    0.9461,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0049"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.054818746,
+     "y": 0.05322862,
+     "width": 0.8912467,
+     "height": 0.89354277
+    },
+    "coverage": 0.13556476,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1131,
+   "height": 1146
+  },
+  {
+   "id": "carrot",
+   "file": "carrot.png",
+   "role": "object",
+   "subject": "carrot",
+   "tags": [
+    "carrot",
+    "vegetable"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0627,
+    0.9468,
+    0.9373
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+004A"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.0626927,
+     "width": 0.89354277,
+     "height": 0.8746146
+    },
+    "coverage": 0.15111591,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 973
+  },
+  {
+   "id": "celery",
+   "file": "celery.png",
+   "role": "object",
+   "subject": "celery",
+   "tags": [
+    "celery",
+    "vegetable"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0588,
+    0.9468,
+    0.9412
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+004B"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.05876686,
+     "width": 0.89354277,
+     "height": 0.88246626
+    },
+    "coverage": 0.12084001,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1038
+  },
+  {
+   "id": "cheese",
+   "file": "cheese.png",
+   "role": "object",
+   "subject": "cheese",
+   "tags": [
+    "cheese",
+    "dairy"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0639,
+    0.9468,
+    0.9361
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+004C"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.0639413,
+     "width": 0.89354277,
+     "height": 0.8721174
+    },
+    "coverage": 0.17720099,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 954
+  },
+  {
+   "id": "cleaver",
+   "file": "cleaver.png",
+   "role": "object",
+   "subject": "cleaver",
+   "tags": [
+    "butcher",
+    "cleaver",
+    "cut"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0537,
+    0.0532,
+    0.9463,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+004D"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.053744495,
+     "y": 0.05322862,
+     "width": 0.892511,
+     "height": 0.89354277
+    },
+    "coverage": 0.12048496,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1135,
+   "height": 1146
+  },
+  {
+   "id": "orange",
+   "file": "orange.png",
+   "role": "object",
+   "subject": "orange slice",
+   "tags": [
+    "citrus",
+    "fruit",
+    "orange"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0573,
+    0.9468,
+    0.9427
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+004E"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.057276994,
+     "width": 0.89354277,
+     "height": 0.885446
+    },
+    "coverage": 0.28464714,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1065
+  },
+  {
+   "id": "ice_cream",
+   "file": "ice_cream.png",
+   "role": "object",
+   "subject": "ice cream cone",
+   "tags": [
+    "cream",
+    "dessert",
+    "ice",
+    "summer"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.056,
+    0.0532,
+    0.944,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+004F"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.055963304,
+     "y": 0.05322862,
+     "width": 0.88715595,
+     "height": 0.89354277
+    },
+    "coverage": 0.15968426,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1090,
+   "height": 1146
+  },
+  {
+   "id": "cucumber",
+   "file": "cucumber.png",
+   "role": "object",
+   "subject": "cucumber",
+   "tags": [
+    "cucumber",
+    "salad",
+    "vegetable"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0674,
+    0.9468,
+    0.9326
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0050"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.06740332,
+     "width": 0.89354277,
+     "height": 0.86519337
+    },
+    "coverage": 0.21864761,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 905
+  },
+  {
+   "id": "coffee_mug",
+   "file": "coffee_mug.png",
+   "role": "object",
+   "subject": "coffee mug",
+   "tags": [
+    "break",
+    "coffee",
+    "morning",
+    "mug",
+    "tea"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0589,
+    0.0532,
+    0.9411,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0051"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05888031,
+     "y": 0.05322862,
+     "width": 0.8822394,
+     "height": 0.89354277
+    },
+    "coverage": 0.2259538,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1036,
+   "height": 1146
+  },
+  {
+   "id": "sundae",
+   "file": "sundae.png",
+   "role": "object",
+   "subject": "sundae",
+   "tags": [
+    "dessert",
+    "sundae",
+    "treat"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0579,
+    0.0532,
+    0.9421,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0052"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.057929724,
+     "y": 0.05322862,
+     "width": 0.88414055,
+     "height": 0.89354277
+    },
+    "coverage": 0.2331434,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1053,
+   "height": 1146
+  },
+  {
+   "id": "chicken_leg",
+   "file": "chicken_leg.png",
+   "role": "object",
+   "subject": "chicken leg",
+   "tags": [
+    "chicken",
+    "leg",
+    "meat"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0556,
+    0.9468,
+    0.9444
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0053"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.055555556,
+     "width": 0.89354277,
+     "height": 0.8888889
+    },
+    "coverage": 0.13159178,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1098
+  },
+  {
+   "id": "drumstick",
+   "file": "drumstick.png",
+   "role": "object",
+   "subject": "drumstick",
+   "tags": [
+    "chicken",
+    "drumstick",
+    "meat"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0609,
+    0.9468,
+    0.9391
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0054"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.060878243,
+     "width": 0.89354277,
+     "height": 0.8782435
+    },
+    "coverage": 0.25997916,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1002
+  },
+  {
+   "id": "egg",
+   "file": "egg.png",
+   "role": "object",
+   "subject": "egg in a cup",
+   "tags": [
+    "breakfast",
+    "egg",
+    "eggs"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0556,
+    0.0532,
+    0.9444,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0055"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.055555556,
+     "y": 0.05322862,
+     "width": 0.8888889,
+     "height": 0.89354277
+    },
+    "coverage": 0.1304768,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1098,
+   "height": 1146
+  },
+  {
+   "id": "fish",
+   "file": "fish.png",
+   "role": "object",
+   "subject": "fish",
+   "tags": [
+    "fish",
+    "seafood"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0662,
+    0.9468,
+    0.9338
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0056"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.06623235,
+     "width": 0.89354277,
+     "height": 0.8675353
+    },
+    "coverage": 0.13730049,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 921
+  },
+  {
+   "id": "flour_sack",
+   "file": "flour_sack.png",
+   "role": "object",
+   "subject": "flour sack",
+   "tags": [
+    "baking",
+    "flour",
+    "groceries",
+    "sack"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0577,
+    0.9468,
+    0.9423
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0057"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.057655953,
+     "width": 0.89267015,
+     "height": 0.8846881
+    },
+    "coverage": 0.15905327,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1058
+  },
+  {
+   "id": "food_processor",
+   "file": "food_processor.png",
+   "role": "object",
+   "subject": "food processor",
+   "tags": [
+    "appliance",
+    "kitchen",
+    "processor"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0545,
+    0.9468,
+    0.9455
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0058"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.05451296,
+     "width": 0.89354277,
+     "height": 0.8909741
+    },
+    "coverage": 0.21415515,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1119
+  },
+  {
+   "id": "fried_egg",
+   "file": "fried_egg.png",
+   "role": "object",
+   "subject": "fried egg",
+   "tags": [
+    "breakfast",
+    "egg",
+    "fried"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0694,
+    0.9468,
+    0.9306
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+005A"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.06939704,
+     "width": 0.89354277,
+     "height": 0.86006826
+    },
+    "coverage": 0.16432782,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 879
+  },
+  {
+   "id": "garlic",
+   "file": "garlic.png",
+   "role": "object",
+   "subject": "garlic",
+   "tags": [
+    "garlic",
+    "spice"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0609,
+    0.9468,
+    0.9391
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0062"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.060939062,
+     "width": 0.89354277,
+     "height": 0.87812185
+    },
+    "coverage": 0.19278105,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1001
+  },
+  {
+   "id": "grapes",
+   "file": "grapes.png",
+   "role": "object",
+   "subject": "grapes",
+   "tags": [
+    "fruit",
+    "grapes",
+    "wine"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0616,
+    0.9468,
+    0.9384
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0063"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.061553985,
+     "width": 0.89354277,
+     "height": 0.87689203
+    },
+    "coverage": 0.2321522,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 991
+  },
+  {
+   "id": "chili",
+   "file": "chili.png",
+   "role": "object",
+   "subject": "chili pepper",
+   "tags": [
+    "chili",
+    "hot",
+    "pepper",
+    "spicy"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0552,
+    0.0532,
+    0.9448,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0064"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05515371,
+     "y": 0.05322862,
+     "width": 0.8887884,
+     "height": 0.89354277
+    },
+    "coverage": 0.16089378,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1106,
+   "height": 1146
+  },
+  {
+   "id": "kettle",
+   "file": "kettle.png",
+   "role": "object",
+   "subject": "kettle",
+   "tags": [
+    "boil",
+    "kettle",
+    "tea"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0609,
+    0.9468,
+    0.9391
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0065"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.060939062,
+     "width": 0.89354277,
+     "height": 0.87812185
+    },
+    "coverage": 0.16615322,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1001
+  },
+  {
+   "id": "lemon",
+   "file": "lemon.png",
+   "role": "object",
+   "subject": "lemon",
+   "tags": [
+    "citrus",
+    "lemon",
+    "sour"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0611,
+    0.9468,
+    0.9389
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0067"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.061122246,
+     "width": 0.89354277,
+     "height": 0.8777555
+    },
+    "coverage": 0.12073886,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 998
+  },
+  {
+   "id": "eggplant",
+   "file": "eggplant.png",
+   "role": "object",
+   "subject": "eggplant",
+   "tags": [
+    "aubergine",
+    "eggplant",
+    "vegetable"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0606,
+    0.9468,
+    0.9394
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0068"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.06063618,
+     "width": 0.89267015,
+     "height": 0.8787276
+    },
+    "coverage": 0.21877201,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1006
+  },
+  {
+   "id": "bowl",
+   "file": "bowl.png",
+   "role": "object",
+   "subject": "bowl",
+   "tags": [
+    "bowl",
+    "meal"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0608,
+    0.9468,
+    0.9392
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0069"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.060756974,
+     "width": 0.89354277,
+     "height": 0.87848604
+    },
+    "coverage": 0.17425759,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1004
+  },
+  {
+   "id": "milk_carton",
+   "file": "milk_carton.png",
+   "role": "object",
+   "subject": "milk carton and glass",
+   "tags": [
+    "carton",
+    "dairy",
+    "groceries",
+    "milk"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0546,
+    0.0532,
+    0.9454,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+006A"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.054610565,
+     "y": 0.05322862,
+     "width": 0.8907789,
+     "height": 0.89354277
+    },
+    "coverage": 0.18067983,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1117,
+   "height": 1146
+  },
+  {
+   "id": "muffin",
+   "file": "muffin.png",
+   "role": "object",
+   "subject": "muffin",
+   "tags": [
+    "bakery",
+    "muffin",
+    "snack"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0566,
+    0.9468,
+    0.9434
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+006C"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.05663881,
+     "width": 0.89354277,
+     "height": 0.8867224
+    },
+    "coverage": 0.16548294,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1077
+  },
+  {
+   "id": "mushrooms",
+   "file": "mushrooms.png",
+   "role": "object",
+   "subject": "mushrooms",
+   "tags": [
+    "mushroom",
+    "mushrooms",
+    "vegetable"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0614,
+    0.9468,
+    0.9386
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+006D"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.06136821,
+     "width": 0.89354277,
+     "height": 0.8772636
+    },
+    "coverage": 0.21193567,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 994
+  },
+  {
+   "id": "microwave",
+   "file": "microwave.png",
+   "role": "object",
+   "subject": "microwave oven",
+   "tags": [
+    "appliance",
+    "kitchen",
+    "microwave"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0602,
+    0.9468,
+    0.9398
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+006E"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.06015779,
+     "width": 0.89354277,
+     "height": 0.8796844
+    },
+    "coverage": 0.21127771,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1014
+  },
+  {
+   "id": "onion",
+   "file": "onion.png",
+   "role": "object",
+   "subject": "onion",
+   "tags": [
+    "onion",
+    "vegetable"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0561,
+    0.9468,
+    0.9439
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+006F"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.056117754,
+     "width": 0.89354277,
+     "height": 0.8877645
+    },
+    "coverage": 0.17961118,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1087
+  },
+  {
+   "id": "peach",
+   "file": "peach.png",
+   "role": "object",
+   "subject": "peach",
+   "tags": [
+    "fruit",
+    "peach"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0564,
+    0.9468,
+    0.9436
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0070"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.05637708,
+     "width": 0.89354277,
+     "height": 0.88724583
+    },
+    "coverage": 0.22440104,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1082
+  },
+  {
+   "id": "pear",
+   "file": "pear.png",
+   "role": "object",
+   "subject": "pear",
+   "tags": [
+    "fruit",
+    "pear"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0556,
+    0.9468,
+    0.9444
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0071"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.055555556,
+     "width": 0.89354277,
+     "height": 0.8888889
+    },
+    "coverage": 0.20312832,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1098
+  },
+  {
+   "id": "peas",
+   "file": "peas.png",
+   "role": "object",
+   "subject": "pea pod",
+   "tags": [
+    "peas",
+    "vegetable"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0602,
+    0.9468,
+    0.9398
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0072"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.060217176,
+     "width": 0.89267015,
+     "height": 0.87956566
+    },
+    "coverage": 0.15810777,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1013
+  },
+  {
+   "id": "bell_pepper",
+   "file": "bell_pepper.png",
+   "role": "object",
+   "subject": "bell pepper",
+   "tags": [
+    "capsicum",
+    "pepper",
+    "vegetable"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0563,
+    0.9468,
+    0.9437
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0073"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.05627306,
+     "width": 0.89354277,
+     "height": 0.88745385
+    },
+    "coverage": 0.17295277,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1084
+  },
+  {
+   "id": "coffee_maker",
+   "file": "coffee_maker.png",
+   "role": "object",
+   "subject": "coffee maker",
+   "tags": [
+    "coffee",
+    "machine",
+    "maker",
+    "morning"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0589,
+    0.9468,
+    0.9411
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0074"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.05888031,
+     "width": 0.89354277,
+     "height": 0.8822394
+    },
+    "coverage": 0.2721755,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1036
+  },
+  {
+   "id": "pie",
+   "file": "pie.png",
+   "role": "object",
+   "subject": "pie",
+   "tags": [
+    "bakery",
+    "dessert",
+    "pie"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0612,
+    0.9468,
+    0.9388
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0075"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.06124498,
+     "width": 0.89354277,
+     "height": 0.87751
+    },
+    "coverage": 0.124935165,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 996
+  },
+  {
+   "id": "pineapple",
+   "file": "pineapple.png",
+   "role": "object",
+   "subject": "pineapple",
+   "tags": [
+    "fruit",
+    "pineapple",
+    "tropical"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0562,
+    0.9468,
+    0.9438
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0076"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.0562212,
+     "width": 0.89354277,
+     "height": 0.8875576
+    },
+    "coverage": 0.2571308,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1085
+  },
+  {
+   "id": "soup_pot",
+   "file": "soup_pot.png",
+   "role": "object",
+   "subject": "pot of soup",
+   "tags": [
+    "cooking",
+    "pot",
+    "soup"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0598,
+    0.9468,
+    0.9402
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0077"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.05980392,
+     "width": 0.89354277,
+     "height": 0.88039213
+    },
+    "coverage": 0.19458817,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1020
+  },
+  {
+   "id": "roast",
+   "file": "roast.png",
+   "role": "object",
+   "subject": "roast leg",
+   "tags": [
+    "dinner",
+    "meat",
+    "roast"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0578,
+    0.9468,
+    0.9422
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0078"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.057819907,
+     "width": 0.89354277,
+     "height": 0.8843602
+    },
+    "coverage": 0.13497019,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1055
+  },
+  {
+   "id": "salad_bowl",
+   "file": "salad_bowl.png",
+   "role": "object",
+   "subject": "salad bowl",
+   "tags": [
+    "bowl",
+    "healthy",
+    "salad"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0608,
+    0.9468,
+    0.9392
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+0079"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.060756974,
+     "width": 0.89354277,
+     "height": 0.87848604
+    },
+    "coverage": 0.18992616,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1004
+  },
+  {
+   "id": "sandwich",
+   "file": "sandwich.png",
+   "role": "object",
+   "subject": "sandwich",
+   "tags": [
+    "lunch",
+    "sandwich",
+    "snack"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0708,
+    0.9468,
+    0.9292
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "Counterscraps.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Counterscraps by Raymond Larabie (CC0)",
+    "codepoint": "U+007A"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.070847854,
+     "width": 0.89354277,
+     "height": 0.8583043
+    },
+    "coverage": 0.2666245,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 861
+  }
+ ]
+}

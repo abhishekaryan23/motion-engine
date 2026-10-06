@@ -1,0 +1,16 @@
+{
+  "asset_jpeg.f0@macos-aarch64": "d97c5870d6ce4764",
+  "asset_optional_fallback.evolve@macos-aarch64": "fbd8b79f1457074e",
+  "asset_optional_fallback.read@macos-aarch64": "d093b7029e19c079",
+  "editorial_cutout.read@macos-aarch64": "03d3c47a99e179bc",
+  "hero_object_asset.evolve@macos-aarch64": "db075f3804900f03",
+  "hero_object_asset.read@macos-aarch64": "6ab788ef54659da8",
+  "multiplane_asset.evolve@macos-aarch64": "c2e73f5c324b2941",
+  "multiplane_asset.read@macos-aarch64": "07102ccaa02b9460",
+  "shared_asset_carry.bridge@macos-aarch64": "bc9db68ef2b05f5b",
+  "type_image_interlock_head_safe.read@macos-aarch64": "298f6626f3a71ea6",
+  "type_image_interlock_left.read@macos-aarch64": "298f6626f3a71ea6",
+  "type_image_interlock_left.settle@macos-aarch64": "b1da894d7322a594",
+  "type_image_interlock_right.read@macos-aarch64": "67d734de3b38d188",
+  "type_image_interlock_right.settle@macos-aarch64": "b03c1560fc32d8bb"
+}

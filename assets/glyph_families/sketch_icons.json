@@ -1,0 +1,1143 @@
+{
+ "family": "sketch_icons",
+ "font": "SketchIcons.ttf",
+ "licence": "free for commercial and private use (peax-webdesign.com readme)",
+ "credit": "Peax Webdesign, www.peax-webdesign.com",
+ "ink": "#1d1b19",
+ "glyphs": [
+  {
+   "char": "!",
+   "id": "document_pen",
+   "subject": "document being signed",
+   "tags": [
+    "document",
+    "contract",
+    "sign",
+    "signature",
+    "agreement",
+    "form"
+   ]
+  },
+  {
+   "char": "\"",
+   "id": "calendar",
+   "subject": "calendar",
+   "tags": [
+    "calendar",
+    "date",
+    "schedule",
+    "month",
+    "deadline",
+    "plan"
+   ]
+  },
+  {
+   "char": "#",
+   "id": "calculator",
+   "subject": "calculator",
+   "tags": [
+    "calculator",
+    "calculate",
+    "math",
+    "budget",
+    "cost",
+    "tax"
+   ]
+  },
+  {
+   "char": "'",
+   "id": "clapperboard",
+   "subject": "film clapperboard",
+   "tags": [
+    "film",
+    "video",
+    "movie",
+    "clapperboard",
+    "production"
+   ]
+  },
+  {
+   "char": "(",
+   "id": "credit_card",
+   "subject": "credit card",
+   "tags": [
+    "card",
+    "credit",
+    "payment",
+    "pay",
+    "bank",
+    "debit"
+   ]
+  },
+  {
+   "char": "+",
+   "id": "newspaper",
+   "subject": "newspaper",
+   "tags": [
+    "newspaper",
+    "news",
+    "press",
+    "headline",
+    "media"
+   ]
+  },
+  {
+   "char": ",",
+   "id": "speech_bubbles",
+   "subject": "conversation bubbles",
+   "tags": [
+    "conversation",
+    "chat",
+    "talk",
+    "discussion",
+    "comments",
+    "messages"
+   ]
+  },
+  {
+   "char": "-",
+   "id": "person",
+   "subject": "person",
+   "tags": [
+    "person",
+    "user",
+    "human",
+    "individual",
+    "people"
+   ]
+  },
+  {
+   "char": ".",
+   "id": "floppy_disk",
+   "subject": "save disk",
+   "tags": [
+    "save",
+    "disk",
+    "storage",
+    "backup"
+   ]
+  },
+  {
+   "char": "/",
+   "id": "warning",
+   "subject": "warning sign",
+   "tags": [
+    "warning",
+    "danger",
+    "risk",
+    "alert",
+    "caution",
+    "problem"
+   ]
+  },
+  {
+   "char": "0",
+   "id": "battery",
+   "subject": "battery",
+   "tags": [
+    "battery",
+    "energy",
+    "power",
+    "charge",
+    "low"
+   ]
+  },
+  {
+   "char": "1",
+   "id": "new_document",
+   "subject": "new document",
+   "tags": [
+    "new",
+    "document",
+    "file",
+    "add",
+    "create"
+   ]
+  },
+  {
+   "char": "2",
+   "id": "plus",
+   "subject": "plus sign",
+   "tags": [
+    "plus",
+    "add",
+    "more",
+    "increase",
+    "gain"
+   ]
+  },
+  {
+   "char": "3",
+   "id": "minus",
+   "subject": "minus sign",
+   "tags": [
+    "minus",
+    "less",
+    "decrease",
+    "loss",
+    "subtract"
+   ]
+  },
+  {
+   "char": "4",
+   "id": "close",
+   "subject": "cross mark",
+   "tags": [
+    "no",
+    "wrong",
+    "cancel",
+    "close",
+    "fail",
+    "reject"
+   ]
+  },
+  {
+   "char": "5",
+   "id": "handshake",
+   "subject": "handshake",
+   "tags": [
+    "handshake",
+    "deal",
+    "agreement",
+    "partnership",
+    "trust",
+    "partner"
+   ]
+  },
+  {
+   "char": "6",
+   "id": "map_pin",
+   "subject": "map pin",
+   "tags": [
+    "location",
+    "pin",
+    "map",
+    "place",
+    "address",
+    "local"
+   ]
+  },
+  {
+   "char": "7",
+   "id": "flag",
+   "subject": "flag",
+   "tags": [
+    "flag",
+    "goal",
+    "milestone",
+    "finish",
+    "target"
+   ]
+  },
+  {
+   "char": "8",
+   "id": "question",
+   "subject": "question mark",
+   "tags": [
+    "question",
+    "why",
+    "ask",
+    "unknown",
+    "doubt",
+    "faq"
+   ]
+  },
+  {
+   "char": "9",
+   "id": "thumbs_up",
+   "subject": "thumbs up",
+   "tags": [
+    "like",
+    "approve",
+    "good",
+    "thumbs",
+    "yes",
+    "success"
+   ]
+  },
+  {
+   "char": ":",
+   "id": "price_tag",
+   "subject": "price tag",
+   "tags": [
+    "price",
+    "tag",
+    "sale",
+    "discount",
+    "offer",
+    "label"
+   ]
+  },
+  {
+   "char": ";",
+   "id": "music_note",
+   "subject": "music note",
+   "tags": [
+    "music",
+    "song",
+    "sound",
+    "audio",
+    "note"
+   ]
+  },
+  {
+   "char": "<",
+   "id": "usb_stick",
+   "subject": "usb stick",
+   "tags": [
+    "usb",
+    "data",
+    "storage",
+    "drive"
+   ]
+  },
+  {
+   "char": "=",
+   "id": "checkmark",
+   "subject": "check mark",
+   "tags": [
+    "check",
+    "done",
+    "correct",
+    "yes",
+    "complete",
+    "approved"
+   ]
+  },
+  {
+   "char": ">",
+   "id": "sticker",
+   "subject": "sticker",
+   "tags": [
+    "sticker",
+    "badge",
+    "note"
+   ]
+  },
+  {
+   "char": "?",
+   "id": "gift",
+   "subject": "gift box",
+   "tags": [
+    "gift",
+    "present",
+    "bonus",
+    "reward",
+    "free"
+   ]
+  },
+  {
+   "char": "@",
+   "id": "cash",
+   "subject": "cash and coins",
+   "tags": [
+    "money",
+    "cash",
+    "coins",
+    "salary",
+    "income",
+    "payment",
+    "savings",
+    "wealth"
+   ]
+  },
+  {
+   "char": "A",
+   "id": "magnifier",
+   "subject": "magnifying glass",
+   "tags": [
+    "search",
+    "find",
+    "magnifier",
+    "look",
+    "inspect",
+    "research",
+    "analysis"
+   ]
+  },
+  {
+   "char": "B",
+   "id": "folder",
+   "subject": "folder",
+   "tags": [
+    "folder",
+    "files",
+    "archive",
+    "organize",
+    "documents"
+   ]
+  },
+  {
+   "char": "C",
+   "id": "chat_box",
+   "subject": "chat box",
+   "tags": [
+    "chat",
+    "message",
+    "comment",
+    "text",
+    "reply"
+   ]
+  },
+  {
+   "char": "D",
+   "id": "speech_bubble",
+   "subject": "speech bubble",
+   "tags": [
+    "speech",
+    "say",
+    "quote",
+    "comment",
+    "voice"
+   ]
+  },
+  {
+   "char": "E",
+   "id": "businessman",
+   "subject": "businessman",
+   "tags": [
+    "businessman",
+    "manager",
+    "boss",
+    "employee",
+    "man",
+    "professional"
+   ]
+  },
+  {
+   "char": "F",
+   "id": "businesswoman",
+   "subject": "businesswoman",
+   "tags": [
+    "businesswoman",
+    "manager",
+    "employee",
+    "woman",
+    "professional"
+   ]
+  },
+  {
+   "char": "G",
+   "id": "support_agent",
+   "subject": "support agent with headset",
+   "tags": [
+    "support",
+    "agent",
+    "service",
+    "helpdesk",
+    "customer",
+    "call"
+   ]
+  },
+  {
+   "char": "H",
+   "id": "gears",
+   "subject": "gears",
+   "tags": [
+    "settings",
+    "gears",
+    "process",
+    "system",
+    "mechanism",
+    "automation",
+    "engine"
+   ]
+  },
+  {
+   "char": "I",
+   "id": "marker",
+   "subject": "marker pen",
+   "tags": [
+    "marker",
+    "highlight",
+    "pen",
+    "write",
+    "note"
+   ]
+  },
+  {
+   "char": "J",
+   "id": "eraser",
+   "subject": "eraser",
+   "tags": [
+    "eraser",
+    "erase",
+    "delete",
+    "mistake",
+    "undo"
+   ]
+  },
+  {
+   "char": "K",
+   "id": "open_book",
+   "subject": "open book",
+   "tags": [
+    "book",
+    "read",
+    "learn",
+    "study",
+    "education",
+    "guide"
+   ]
+  },
+  {
+   "char": "L",
+   "id": "document",
+   "subject": "document",
+   "tags": [
+    "document",
+    "page",
+    "report",
+    "paper",
+    "file",
+    "article"
+   ]
+  },
+  {
+   "char": "M",
+   "id": "cursor",
+   "subject": "mouse cursor",
+   "tags": [
+    "cursor",
+    "click",
+    "select",
+    "pointer"
+   ]
+  },
+  {
+   "char": "N",
+   "id": "tools",
+   "subject": "tools",
+   "tags": [
+    "tools",
+    "repair",
+    "fix",
+    "maintenance",
+    "build",
+    "tool"
+   ]
+  },
+  {
+   "char": "O",
+   "id": "envelope",
+   "subject": "envelope",
+   "tags": [
+    "email",
+    "mail",
+    "envelope",
+    "letter",
+    "newsletter"
+   ]
+  },
+  {
+   "char": "P",
+   "id": "open_envelope",
+   "subject": "open envelope",
+   "tags": [
+    "email",
+    "mail",
+    "inbox",
+    "letter",
+    "message",
+    "open"
+   ]
+  },
+  {
+   "char": "Q",
+   "id": "phone_handset",
+   "subject": "phone handset",
+   "tags": [
+    "call",
+    "phone",
+    "telephone",
+    "contact"
+   ]
+  },
+  {
+   "char": "R",
+   "id": "smartphone",
+   "subject": "smartphone",
+   "tags": [
+    "smartphone",
+    "phone",
+    "mobile",
+    "app",
+    "device"
+   ]
+  },
+  {
+   "char": "S",
+   "id": "mobile_phone",
+   "subject": "mobile phone",
+   "tags": [
+    "mobile",
+    "phone",
+    "cellphone",
+    "device"
+   ]
+  },
+  {
+   "char": "T",
+   "id": "speaker",
+   "subject": "speaker",
+   "tags": [
+    "speaker",
+    "sound",
+    "audio",
+    "loud",
+    "announce"
+   ]
+  },
+  {
+   "char": "U",
+   "id": "compact_camera",
+   "subject": "compact camera",
+   "tags": [
+    "camera",
+    "photo",
+    "picture",
+    "snapshot"
+   ]
+  },
+  {
+   "char": "V",
+   "id": "camera",
+   "subject": "camera",
+   "tags": [
+    "camera",
+    "photo",
+    "photography",
+    "picture"
+   ]
+  },
+  {
+   "char": "W",
+   "id": "shopping_cart",
+   "subject": "shopping cart",
+   "tags": [
+    "cart",
+    "shopping",
+    "buy",
+    "purchase",
+    "checkout",
+    "ecommerce",
+    "order"
+   ]
+  },
+  {
+   "char": "X",
+   "id": "shopping_basket",
+   "subject": "shopping basket",
+   "tags": [
+    "basket",
+    "shopping",
+    "groceries",
+    "buy",
+    "shop"
+   ]
+  },
+  {
+   "char": "Y",
+   "id": "growth_arrow",
+   "subject": "rising arrow",
+   "tags": [
+    "growth",
+    "rise",
+    "up",
+    "increase",
+    "arrow",
+    "trend",
+    "grow"
+   ]
+  },
+  {
+   "char": "Z",
+   "id": "pointing_hand",
+   "subject": "pointing hand",
+   "tags": [
+    "hand",
+    "point",
+    "tap",
+    "click",
+    "touch",
+    "choose"
+   ]
+  },
+  {
+   "char": "[",
+   "id": "info",
+   "subject": "information sign",
+   "tags": [
+    "info",
+    "information",
+    "about",
+    "help",
+    "detail"
+   ]
+  },
+  {
+   "char": "\\",
+   "id": "arrow_up",
+   "subject": "curved arrow up",
+   "tags": [
+    "arrow",
+    "up",
+    "next",
+    "forward",
+    "direction"
+   ]
+  },
+  {
+   "char": "]",
+   "id": "arrow_down",
+   "subject": "curved arrow down",
+   "tags": [
+    "arrow",
+    "down",
+    "below",
+    "direction"
+   ]
+  },
+  {
+   "char": "^",
+   "id": "paperclip",
+   "subject": "paperclip",
+   "tags": [
+    "attachment",
+    "paperclip",
+    "attach",
+    "clip"
+   ]
+  },
+  {
+   "char": "_",
+   "id": "dropper",
+   "subject": "dropper",
+   "tags": [
+    "dropper",
+    "pipette",
+    "sample",
+    "drop"
+   ]
+  },
+  {
+   "char": "`",
+   "id": "paint_bucket",
+   "subject": "paint bucket",
+   "tags": [
+    "paint",
+    "bucket",
+    "color",
+    "colour",
+    "design"
+   ]
+  },
+  {
+   "char": "a",
+   "id": "bar_chart",
+   "subject": "bar chart",
+   "tags": [
+    "chart",
+    "bar",
+    "data",
+    "statistics",
+    "results",
+    "graph",
+    "numbers"
+   ]
+  },
+  {
+   "char": "b",
+   "id": "growth_chart",
+   "subject": "rising bar chart",
+   "tags": [
+    "growth",
+    "chart",
+    "increase",
+    "rise",
+    "progress",
+    "profit",
+    "revenue"
+   ]
+  },
+  {
+   "char": "c",
+   "id": "pie_chart",
+   "subject": "pie chart",
+   "tags": [
+    "pie",
+    "chart",
+    "share",
+    "percent",
+    "percentage",
+    "split",
+    "proportion"
+   ]
+  },
+  {
+   "char": "d",
+   "id": "database",
+   "subject": "database",
+   "tags": [
+    "database",
+    "data",
+    "server",
+    "storage",
+    "records"
+   ]
+  },
+  {
+   "char": "e",
+   "id": "cloud",
+   "subject": "cloud",
+   "tags": [
+    "cloud",
+    "online",
+    "internet",
+    "saas",
+    "sync"
+   ]
+  },
+  {
+   "char": "f",
+   "id": "sun_cloud",
+   "subject": "sun behind cloud",
+   "tags": [
+    "weather",
+    "sun",
+    "sunny",
+    "forecast"
+   ]
+  },
+  {
+   "char": "g",
+   "id": "rain_cloud",
+   "subject": "rain cloud",
+   "tags": [
+    "rain",
+    "storm",
+    "weather",
+    "bad",
+    "crisis"
+   ]
+  },
+  {
+   "char": "h",
+   "id": "padlock",
+   "subject": "padlock",
+   "tags": [
+    "lock",
+    "security",
+    "secure",
+    "privacy",
+    "protected",
+    "safe"
+   ]
+  },
+  {
+   "char": "i",
+   "id": "key",
+   "subject": "key",
+   "tags": [
+    "key",
+    "access",
+    "unlock",
+    "password",
+    "secret",
+    "solution"
+   ]
+  },
+  {
+   "char": "j",
+   "id": "printer",
+   "subject": "printer",
+   "tags": [
+    "printer",
+    "print",
+    "office"
+   ]
+  },
+  {
+   "char": "k",
+   "id": "fax",
+   "subject": "fax machine",
+   "tags": [
+    "fax",
+    "office",
+    "old"
+   ]
+  },
+  {
+   "char": "l",
+   "id": "computer",
+   "subject": "desktop computer",
+   "tags": [
+    "computer",
+    "desktop",
+    "pc",
+    "work",
+    "screen",
+    "office"
+   ]
+  },
+  {
+   "char": "m",
+   "id": "picture_frame",
+   "subject": "framed picture",
+   "tags": [
+    "picture",
+    "frame",
+    "image",
+    "gallery",
+    "art"
+   ]
+  },
+  {
+   "char": "n",
+   "id": "download",
+   "subject": "download tray",
+   "tags": [
+    "download",
+    "install",
+    "receive",
+    "save"
+   ]
+  },
+  {
+   "char": "o",
+   "id": "signal",
+   "subject": "wireless signal",
+   "tags": [
+    "wifi",
+    "signal",
+    "wireless",
+    "connection",
+    "network",
+    "broadcast"
+   ]
+  },
+  {
+   "char": "p",
+   "id": "shield",
+   "subject": "shield",
+   "tags": [
+    "shield",
+    "protection",
+    "security",
+    "defense",
+    "insurance",
+    "safe"
+   ]
+  },
+  {
+   "char": "q",
+   "id": "video_camera",
+   "subject": "video camera",
+   "tags": [
+    "video",
+    "camera",
+    "record",
+    "recording",
+    "vlog"
+   ]
+  },
+  {
+   "char": "r",
+   "id": "globe",
+   "subject": "globe",
+   "tags": [
+    "globe",
+    "world",
+    "global",
+    "earth",
+    "international",
+    "worldwide"
+   ]
+  },
+  {
+   "char": "s",
+   "id": "briefcase",
+   "subject": "briefcase",
+   "tags": [
+    "briefcase",
+    "business",
+    "work",
+    "job",
+    "career",
+    "office"
+   ]
+  },
+  {
+   "char": "t",
+   "id": "wastebasket",
+   "subject": "wastebasket",
+   "tags": [
+    "trash",
+    "waste",
+    "bin",
+    "delete",
+    "garbage",
+    "rubbish"
+   ]
+  },
+  {
+   "char": "u",
+   "id": "house",
+   "subject": "house",
+   "tags": [
+    "house",
+    "home",
+    "property",
+    "rent",
+    "mortgage",
+    "real",
+    "estate"
+   ]
+  },
+  {
+   "char": "v",
+   "id": "clock",
+   "subject": "clock",
+   "tags": [
+    "clock",
+    "time",
+    "hours",
+    "deadline",
+    "late",
+    "schedule",
+    "wait"
+   ]
+  },
+  {
+   "char": "w",
+   "id": "paperclip_tall",
+   "subject": "paperclip",
+   "tags": [
+    "clip",
+    "paperclip"
+   ]
+  },
+  {
+   "char": "x",
+   "id": "scissors",
+   "subject": "scissors",
+   "tags": [
+    "scissors",
+    "cut",
+    "trim",
+    "reduce"
+   ]
+  },
+  {
+   "char": "y",
+   "id": "progress_bar",
+   "subject": "loading bar",
+   "tags": [
+    "loading",
+    "progress",
+    "wait",
+    "status",
+    "bar"
+   ]
+  },
+  {
+   "char": "z",
+   "id": "eye",
+   "subject": "eye",
+   "tags": [
+    "eye",
+    "see",
+    "view",
+    "watch",
+    "vision",
+    "attention",
+    "visibility"
+   ]
+  },
+  {
+   "char": "{",
+   "id": "paintbrush",
+   "subject": "paintbrush",
+   "tags": [
+    "brush",
+    "paint",
+    "art",
+    "creative",
+    "design"
+   ]
+  },
+  {
+   "char": "|",
+   "id": "burger",
+   "subject": "burger",
+   "tags": [
+    "burger",
+    "food",
+    "fast",
+    "lunch",
+    "meal"
+   ]
+  },
+  {
+   "char": "}",
+   "id": "fruit",
+   "subject": "fruit",
+   "tags": [
+    "fruit",
+    "healthy",
+    "food",
+    "apple",
+    "banana"
+   ]
+  },
+  {
+   "char": "~",
+   "id": "bottle",
+   "subject": "bottle",
+   "tags": [
+    "bottle",
+    "drink",
+    "milk",
+    "medicine"
+   ]
+  },
+  {
+   "char": "\u2019",
+   "id": "magic_wand",
+   "subject": "magic wand",
+   "tags": [
+    "magic",
+    "wand",
+    "transform",
+    "easy",
+    "instant"
+   ]
+  },
+  {
+   "char": "\u201c",
+   "id": "puzzle",
+   "subject": "puzzle piece",
+   "tags": [
+    "puzzle",
+    "solution",
+    "fit",
+    "piece",
+    "missing"
+   ]
+  },
+  {
+   "char": "\u201d",
+   "id": "refresh",
+   "subject": "circular arrows",
+   "tags": [
+    "refresh",
+    "repeat",
+    "cycle",
+    "renew",
+    "recycle",
+    "again",
+    "loop"
+   ]
+  }
+ ]
+}

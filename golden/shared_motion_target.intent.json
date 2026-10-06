@@ -1,0 +1,32 @@
+{
+  "version": "0.2",
+  "title": "shared_motion_target",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "reveal",
+      "statement": "The monthly bill arrived.",
+      "primary": {
+        "kind": "number",
+        "value": "₹4,200",
+        "meaning": "electricity"
+      },
+      "continuity": "carry_primary",
+      "energy": "building"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "Most of it was the cooler.",
+      "primary": {
+        "kind": "number",
+        "value": "₹4,200",
+        "meaning": "electricity"
+      },
+      "secondary": {
+        "kind": "phrase",
+        "value": "running all night"
+      },
+      "energy": "building"
+    }
+  ]
+}

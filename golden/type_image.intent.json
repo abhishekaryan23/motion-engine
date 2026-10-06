@@ -1,0 +1,14 @@
+{
+  "version": "0.2",
+  "title": "type_image",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "Nobody warned the new hires about the queue",
+      "primary": { "kind": "phrase", "value": "new hires", "meaning": "a worker" },
+      "secondary": { "kind": "phrase", "value": "on their first morning." },
+      "energy": "building"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+ "generator": {
+  "vendor": "font",
+  "font": "SketchIcons.ttf",
+  "licence": "free for commercial and private use (peax-webdesign.com readme)",
+  "credit": "Peax Webdesign, www.peax-webdesign.com",
+  "codepoint": "U+0043"
+ },
+ "subject_anchor": {
+  "x": 0.5,
+  "y": 0.5
+ }
+}

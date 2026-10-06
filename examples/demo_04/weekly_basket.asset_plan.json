@@ -1,0 +1,68 @@
+{
+  "version": "0.1",
+  "style": {
+    "medium": "editorial photo collage, printed on paper",
+    "realism": "photographic, unretouched, documentary",
+    "lighting": "soft directional window light",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted neutrals with a cobalt blue accent",
+    "edge_treatment": "hand-cut paper edge",
+    "shadow_treatment": "soft contact shadow, slight lift off the page",
+    "camera_feel": "35-50mm, eye level, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency unless a plate is requested"
+  },
+  "beats": [
+    {
+      "beat": 1,
+      "composition": "kinetic_poster",
+      "source": "none",
+      "reason": "Typography carries this beat: no image needed.",
+      "requests": []
+    },
+    {
+      "beat": 2,
+      "composition": "data_story",
+      "source": "none",
+      "reason": "Data is typographic/procedural: no image needed.",
+      "requests": []
+    },
+    {
+      "beat": 3,
+      "composition": "sequential_stack",
+      "source": "procedural",
+      "reason": "Structure carries itself: the engine draws the cards and panels.",
+      "requests": []
+    },
+    {
+      "beat": 4,
+      "composition": "data_story",
+      "source": "none",
+      "reason": "Data is typographic/procedural: no image needed.",
+      "requests": []
+    },
+    {
+      "beat": 5,
+      "composition": "editorial_collage",
+      "source": "generated_image",
+      "reason": "Human subject in an emphasized beat: a cutout lets type and image interlock.",
+      "requests": [
+        "beat_5.hero_subject"
+      ]
+    }
+  ],
+  "requests": [
+    {
+      "id": "beat_5.hero_subject",
+      "beat": 5,
+      "source": "generated_image",
+      "role": "hero_subject",
+      "subject": "a shopper with a list, planning",
+      "presentation": "isolated_cutout",
+      "negative_space": "right",
+      "background": "transparent",
+      "priority": "optional",
+      "composition": "type_image_interlock",
+      "reason": "Human subject in an emphasized beat: a cutout lets type and image interlock."
+    }
+  ]
+}

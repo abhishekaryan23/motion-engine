@@ -1,0 +1,95 @@
+{
+  "version": "0.1",
+  "audio": "atmosphere_layers.voice.wav",
+  "sample_rate": 48000,
+  "duration": 6.877354166666667,
+  "provider": "macos_say",
+  "model": "macos/say",
+  "voice": "Daniel",
+  "words": [
+    {
+      "text": "Weather",
+      "start": 0.35,
+      "end": 0.7886544117647059,
+      "confidence": 0.9
+    },
+    {
+      "text": "lives",
+      "start": 0.7886544117647059,
+      "end": 1.2273088235294116,
+      "confidence": 0.5
+    },
+    {
+      "text": "low",
+      "start": 1.2273088235294116,
+      "end": 1.49725,
+      "confidence": 0.5
+    },
+    {
+      "text": "A",
+      "start": 2.73725,
+      "end": 2.9177092592592593,
+      "confidence": 0.9
+    },
+    {
+      "text": "lid",
+      "start": 2.9177092592592593,
+      "end": 3.0981685185185186,
+      "confidence": 0.5
+    },
+    {
+      "text": "on",
+      "start": 3.0981685185185186,
+      "end": 3.278627777777778,
+      "confidence": 0.5
+    },
+    {
+      "text": "the",
+      "start": 3.278627777777778,
+      "end": 3.52725,
+      "confidence": 0.5
+    },
+    {
+      "text": "weather",
+      "start": 3.52725,
+      "end": 3.7523333333333335,
+      "confidence": 0.7
+    },
+    {
+      "text": "Calm",
+      "start": 5.072333333333333,
+      "end": 5.321994252873563,
+      "confidence": 0.9
+    },
+    {
+      "text": "air",
+      "start": 5.321994252873563,
+      "end": 5.702333333333333,
+      "confidence": 0.5
+    },
+    {
+      "text": "above",
+      "start": 5.702333333333333,
+      "end": 5.977354166666666,
+      "confidence": 0.7
+    }
+  ],
+  "sentences": [
+    {
+      "beat": 0,
+      "start": 0.35,
+      "end": 1.49725
+    },
+    {
+      "beat": 1,
+      "start": 2.73725,
+      "end": 3.7523333333333335
+    },
+    {
+      "beat": 2,
+      "start": 5.072333333333333,
+      "end": 5.977354166666666
+    }
+  ],
+  "alignment": "onset"
+}

@@ -1,0 +1,30 @@
+{
+  "story": {
+    "title": "ocean zones",
+    "beats": [
+      {
+        "say": "The ocean is not one place but three, stacked on top of each other like the floors of a building.",
+        "show": "Three oceans in one",
+        "layers": { "names": ["sunlit zone", "twilight zone", "midnight zone"] }
+      },
+      {
+        "say": "In the sunlit zone there is enough light for plants to grow, so this is where most sea life lives.",
+        "show": "Where the light is",
+        "layers": { "names": ["sunlit zone", "twilight zone", "midnight zone"], "focus": "sunlit zone" },
+        "picture": "fish"
+      },
+      {
+        "say": "Below that, in the twilight zone, the light fades fast and the water gets cold, down to about a thousand meters.",
+        "show": "Where the light fades",
+        "layers": { "names": ["sunlit zone", "twilight zone", "midnight zone"], "focus": "twilight zone" }
+      },
+      {
+        "say": "And in the midnight zone it is pitch black, so animals make their own light to find food and each other.",
+        "show": "Where it is dark",
+        "layers": { "names": ["sunlit zone", "twilight zone", "midnight zone"], "focus": "midnight zone" },
+        "energy": "calm"
+      }
+    ]
+  },
+  "style": "cinematic"
+}

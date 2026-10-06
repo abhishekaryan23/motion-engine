@@ -1,0 +1,674 @@
+{
+  "version": "0.1",
+  "audio": "world_trade.voice.wav",
+  "sample_rate": 48000,
+  "duration": 21.19729166666667,
+  "provider": "openrouter",
+  "model": "fish-audio/s2.1-pro-free:free",
+  "voice": "536d3a5e000945adb7038665781a4aca",
+  "words": [
+    {
+      "text": "Every",
+      "start": 0.3675,
+      "end": 0.5675,
+      "confidence": 0.95
+    },
+    {
+      "text": "single",
+      "start": 0.6275,
+      "end": 0.9075,
+      "confidence": 0.95
+    },
+    {
+      "text": "day",
+      "start": 0.9675,
+      "end": 1.1675,
+      "confidence": 0.95
+    },
+    {
+      "text": "about",
+      "start": 1.5475,
+      "end": 1.7275,
+      "confidence": 0.95
+    },
+    {
+      "text": "eighty",
+      "start": 1.8475,
+      "end": 2.0475,
+      "confidence": 0.95
+    },
+    {
+      "text": "percent",
+      "start": 2.1075,
+      "end": 2.4475,
+      "confidence": 0.95
+    },
+    {
+      "text": "of",
+      "start": 2.5475,
+      "end": 2.6075,
+      "confidence": 0.95
+    },
+    {
+      "text": "everything",
+      "start": 2.7475,
+      "end": 3.0675,
+      "confidence": 0.95
+    },
+    {
+      "text": "the",
+      "start": 3.1075,
+      "end": 3.1675,
+      "confidence": 0.95
+    },
+    {
+      "text": "world",
+      "start": 3.2275,
+      "end": 3.4475,
+      "confidence": 0.95
+    },
+    {
+      "text": "trades",
+      "start": 3.5475,
+      "end": 3.8675,
+      "confidence": 0.95
+    },
+    {
+      "text": "travels",
+      "start": 3.9475,
+      "end": 4.2875,
+      "confidence": 0.95
+    },
+    {
+      "text": "by",
+      "start": 4.3475,
+      "end": 4.4675,
+      "confidence": 0.95
+    },
+    {
+      "text": "sea",
+      "start": 4.5875,
+      "end": 4.7675,
+      "confidence": 0.95
+    },
+    {
+      "text": "Most",
+      "start": 5.236125,
+      "end": 5.3875,
+      "confidence": 0.95
+    },
+    {
+      "text": "of",
+      "start": 5.4475,
+      "end": 5.507499999999999,
+      "confidence": 0.95
+    },
+    {
+      "text": "it",
+      "start": 5.5475,
+      "end": 5.6075,
+      "confidence": 0.95
+    },
+    {
+      "text": "moves",
+      "start": 5.6675,
+      "end": 5.9075,
+      "confidence": 0.95
+    },
+    {
+      "text": "inside",
+      "start": 5.9875,
+      "end": 6.3675,
+      "confidence": 0.95
+    },
+    {
+      "text": "steel",
+      "start": 6.4475,
+      "end": 6.7075,
+      "confidence": 0.95
+    },
+    {
+      "text": "boxes",
+      "start": 6.7875,
+      "end": 7.2075,
+      "confidence": 0.95
+    },
+    {
+      "text": "stacked",
+      "start": 7.5675,
+      "end": 7.8875,
+      "confidence": 0.95
+    },
+    {
+      "text": "onto",
+      "start": 7.9475,
+      "end": 8.1075,
+      "confidence": 0.95
+    },
+    {
+      "text": "ships",
+      "start": 8.1875,
+      "end": 8.4275,
+      "confidence": 0.95
+    },
+    {
+      "text": "longer",
+      "start": 8.5075,
+      "end": 8.7675,
+      "confidence": 0.95
+    },
+    {
+      "text": "than",
+      "start": 8.8075,
+      "end": 8.9075,
+      "confidence": 0.95
+    },
+    {
+      "text": "four",
+      "start": 9.0275,
+      "end": 9.2275,
+      "confidence": 0.95
+    },
+    {
+      "text": "football",
+      "start": 9.3075,
+      "end": 9.6675,
+      "confidence": 0.95
+    },
+    {
+      "text": "fields",
+      "start": 9.7475,
+      "end": 10.0475,
+      "confidence": 0.95
+    },
+    {
+      "text": "Before",
+      "start": 10.492,
+      "end": 10.7075,
+      "confidence": 0.95
+    },
+    {
+      "text": "the",
+      "start": 10.7475,
+      "end": 10.8275,
+      "confidence": 0.95
+    },
+    {
+      "text": "container",
+      "start": 10.8675,
+      "end": 11.2875,
+      "confidence": 0.95
+    },
+    {
+      "text": "loading",
+      "start": 11.7275,
+      "end": 12.0075,
+      "confidence": 0.95
+    },
+    {
+      "text": "a",
+      "start": 12.0475,
+      "end": 12.1075,
+      "confidence": 0.95
+    },
+    {
+      "text": "ship",
+      "start": 12.1475,
+      "end": 12.3275,
+      "confidence": 0.95
+    },
+    {
+      "text": "took",
+      "start": 12.4075,
+      "end": 12.5475,
+      "confidence": 0.95
+    },
+    {
+      "text": "days",
+      "start": 12.6475,
+      "end": 12.9475,
+      "confidence": 0.95
+    },
+    {
+      "text": "now",
+      "start": 13.4825,
+      "end": 13.6025,
+      "confidence": 0.95
+    },
+    {
+      "text": "cranes",
+      "start": 13.7425,
+      "end": 14.0825,
+      "confidence": 0.95
+    },
+    {
+      "text": "finish",
+      "start": 14.1625,
+      "end": 14.4025,
+      "confidence": 0.95
+    },
+    {
+      "text": "it",
+      "start": 14.4825,
+      "end": 14.5425,
+      "confidence": 0.95
+    },
+    {
+      "text": "in",
+      "start": 14.6025,
+      "end": 14.6625,
+      "confidence": 0.95
+    },
+    {
+      "text": "hours",
+      "start": 14.7225,
+      "end": 15.0625,
+      "confidence": 0.95
+    },
+    {
+      "text": "That",
+      "start": 15.461041666666667,
+      "end": 15.5425,
+      "confidence": 0.95
+    },
+    {
+      "text": "simple",
+      "start": 15.6625,
+      "end": 15.9625,
+      "confidence": 0.95
+    },
+    {
+      "text": "box",
+      "start": 16.0625,
+      "end": 16.2625,
+      "confidence": 0.95
+    },
+    {
+      "text": "quietly",
+      "start": 16.4425,
+      "end": 16.8425,
+      "confidence": 0.95
+    },
+    {
+      "text": "cut",
+      "start": 16.9225,
+      "end": 17.0825,
+      "confidence": 0.95
+    },
+    {
+      "text": "shipping",
+      "start": 17.1625,
+      "end": 17.4425,
+      "confidence": 0.95
+    },
+    {
+      "text": "costs",
+      "start": 17.5025,
+      "end": 17.8625,
+      "confidence": 0.95
+    },
+    {
+      "text": "so",
+      "start": 18.1225,
+      "end": 18.2625,
+      "confidence": 0.95
+    },
+    {
+      "text": "much",
+      "start": 18.3625,
+      "end": 18.5625,
+      "confidence": 0.95
+    },
+    {
+      "text": "that",
+      "start": 18.6425,
+      "end": 18.7425,
+      "confidence": 0.95
+    },
+    {
+      "text": "it",
+      "start": 18.7825,
+      "end": 18.8425,
+      "confidence": 0.95
+    },
+    {
+      "text": "reshaped",
+      "start": 18.9225,
+      "end": 19.3825,
+      "confidence": 0.95
+    },
+    {
+      "text": "the",
+      "start": 19.4425,
+      "end": 19.5225,
+      "confidence": 0.95
+    },
+    {
+      "text": "global",
+      "start": 19.5425,
+      "end": 19.8825,
+      "confidence": 0.95
+    },
+    {
+      "text": "map",
+      "start": 19.9425,
+      "end": 20.1425,
+      "confidence": 0.95
+    }
+  ],
+  "sentences": [
+    {
+      "beat": 0,
+      "start": 0.35,
+      "end": 5.016125
+    },
+    {
+      "beat": 1,
+      "start": 5.236125,
+      "end": 10.272
+    },
+    {
+      "beat": 2,
+      "start": 10.492,
+      "end": 15.241041666666666
+    },
+    {
+      "beat": 3,
+      "start": 15.461041666666667,
+      "end": 20.297291666666666
+    }
+  ],
+  "recognised": [
+    {
+      "word": "Every",
+      "start": 0.3675,
+      "end": 0.5675
+    },
+    {
+      "word": "single",
+      "start": 0.6275,
+      "end": 0.9075
+    },
+    {
+      "word": "day,",
+      "start": 0.9675,
+      "end": 1.1675
+    },
+    {
+      "word": "about",
+      "start": 1.5475,
+      "end": 1.7275
+    },
+    {
+      "word": "80",
+      "start": 1.8475,
+      "end": 2.0475
+    },
+    {
+      "word": "percent",
+      "start": 2.1075,
+      "end": 2.4475
+    },
+    {
+      "word": "of",
+      "start": 2.5475,
+      "end": 2.5875
+    },
+    {
+      "word": "everything",
+      "start": 2.7475,
+      "end": 3.0675
+    },
+    {
+      "word": "the",
+      "start": 3.1075,
+      "end": 3.1675
+    },
+    {
+      "word": "world",
+      "start": 3.2275,
+      "end": 3.4475
+    },
+    {
+      "word": "trades",
+      "start": 3.5475,
+      "end": 3.8675
+    },
+    {
+      "word": "travels",
+      "start": 3.9475,
+      "end": 4.2875
+    },
+    {
+      "word": "by",
+      "start": 4.3475,
+      "end": 4.4675
+    },
+    {
+      "word": "sea.",
+      "start": 4.5875,
+      "end": 4.7675
+    },
+    {
+      "word": "Most",
+      "start": 5.2075,
+      "end": 5.3875
+    },
+    {
+      "word": "of",
+      "start": 5.4475,
+      "end": 5.4875
+    },
+    {
+      "word": "it",
+      "start": 5.5475,
+      "end": 5.5875
+    },
+    {
+      "word": "moves",
+      "start": 5.6675,
+      "end": 5.9075
+    },
+    {
+      "word": "inside",
+      "start": 5.9875,
+      "end": 6.3675
+    },
+    {
+      "word": "steel",
+      "start": 6.4475,
+      "end": 6.7075
+    },
+    {
+      "word": "boxes,",
+      "start": 6.7875,
+      "end": 7.2075
+    },
+    {
+      "word": "stacked",
+      "start": 7.5675,
+      "end": 7.8875
+    },
+    {
+      "word": "onto",
+      "start": 7.9475,
+      "end": 8.1075
+    },
+    {
+      "word": "ships",
+      "start": 8.1875,
+      "end": 8.4275
+    },
+    {
+      "word": "longer",
+      "start": 8.5075,
+      "end": 8.7675
+    },
+    {
+      "word": "than",
+      "start": 8.8075,
+      "end": 8.9075
+    },
+    {
+      "word": "four",
+      "start": 9.0275,
+      "end": 9.2275
+    },
+    {
+      "word": "football",
+      "start": 9.3075,
+      "end": 9.6675
+    },
+    {
+      "word": "fields.",
+      "start": 9.7475,
+      "end": 10.0475
+    },
+    {
+      "word": "Before",
+      "start": 10.4475,
+      "end": 10.7075
+    },
+    {
+      "word": "the",
+      "start": 10.7475,
+      "end": 10.8275
+    },
+    {
+      "word": "container,",
+      "start": 10.8675,
+      "end": 11.2875
+    },
+    {
+      "word": "loading",
+      "start": 11.7275,
+      "end": 12.0075
+    },
+    {
+      "word": "a",
+      "start": 12.0475,
+      "end": 12.0675
+    },
+    {
+      "word": "ship",
+      "start": 12.1475,
+      "end": 12.3275
+    },
+    {
+      "word": "took",
+      "start": 12.4075,
+      "end": 12.5475
+    },
+    {
+      "word": "days.",
+      "start": 12.6475,
+      "end": 12.9475
+    },
+    {
+      "word": "Now",
+      "start": 13.4825,
+      "end": 13.6025
+    },
+    {
+      "word": "cranes",
+      "start": 13.7425,
+      "end": 14.0825
+    },
+    {
+      "word": "finish",
+      "start": 14.1625,
+      "end": 14.4025
+    },
+    {
+      "word": "it",
+      "start": 14.4825,
+      "end": 14.5425
+    },
+    {
+      "word": "in",
+      "start": 14.6025,
+      "end": 14.6425
+    },
+    {
+      "word": "hours.",
+      "start": 14.7225,
+      "end": 15.0625
+    },
+    {
+      "word": "That",
+      "start": 15.4025,
+      "end": 15.5425
+    },
+    {
+      "word": "simple",
+      "start": 15.6625,
+      "end": 15.9625
+    },
+    {
+      "word": "box",
+      "start": 16.0625,
+      "end": 16.2625
+    },
+    {
+      "word": "quietly",
+      "start": 16.4425,
+      "end": 16.8425
+    },
+    {
+      "word": "cut",
+      "start": 16.9225,
+      "end": 17.0825
+    },
+    {
+      "word": "shipping",
+      "start": 17.1625,
+      "end": 17.4425
+    },
+    {
+      "word": "costs",
+      "start": 17.5025,
+      "end": 17.8625
+    },
+    {
+      "word": "so",
+      "start": 18.1225,
+      "end": 18.2625
+    },
+    {
+      "word": "much",
+      "start": 18.3625,
+      "end": 18.5625
+    },
+    {
+      "word": "that",
+      "start": 18.6425,
+      "end": 18.7425
+    },
+    {
+      "word": "it",
+      "start": 18.7825,
+      "end": 18.8425
+    },
+    {
+      "word": "reshaped",
+      "start": 18.9225,
+      "end": 19.3825
+    },
+    {
+      "word": "the",
+      "start": 19.4425,
+      "end": 19.5225
+    },
+    {
+      "word": "global",
+      "start": 19.5425,
+      "end": 19.8825
+    },
+    {
+      "word": "map.",
+      "start": 19.9425,
+      "end": 20.1425
+    }
+  ],
+  "alignment": "local:whisper-base.en:beam1+ctc"
+}

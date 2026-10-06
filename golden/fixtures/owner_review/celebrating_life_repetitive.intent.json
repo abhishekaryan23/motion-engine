@@ -1,0 +1,62 @@
+{
+  "version": "0.2",
+  "title": "celebrating_life",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "We begin with tiny steps and endless wonder",
+      "primary": {
+        "kind": "phrase",
+        "value": "first steps",
+        "meaning": "family walking together with child"
+      },
+      "energy": "calm",
+      "keyword": "wonder"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "Youth rushes forward chasing every distant horizon",
+      "primary": {
+        "kind": "phrase",
+        "value": "student",
+        "meaning": "young student studying with books"
+      },
+      "energy": "building",
+      "keyword": "horizon"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "We spend our best years carving our own path",
+      "primary": {
+        "kind": "phrase",
+        "value": "journey",
+        "meaning": "person walking on a journey"
+      },
+      "energy": "building",
+      "keyword": "stride"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "Time turns our speed into quiet golden grace",
+      "primary": {
+        "kind": "phrase",
+        "value": "elderly person",
+        "meaning": "elderly person walking with stick"
+      },
+      "energy": "building",
+      "keyword": "grace"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "Growing old is thirty thousand days well lived",
+      "primary": {
+        "kind": "number",
+        "value": "30,000",
+        "meaning": "days celebrated"
+      },
+      "energy": "impact",
+      "keyword": "celebrate"
+    }
+  ]
+}

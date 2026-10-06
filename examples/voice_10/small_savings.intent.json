@@ -1,0 +1,14 @@
+{
+  "version": "0.2",
+  "title": "small_savings",
+  "format": "vertical",
+  "beats": [
+    { "purpose": "emphasize", "statement": "Saving feels impossible at first.", "primary": { "kind": "phrase", "value": "impossible" }, "energy": "calm", "keyword": "save" },
+    { "purpose": "emphasize", "statement": "So start with just one hundred rupees.", "primary": { "kind": "number", "value": "₹100", "meaning": "a week" }, "energy": "calm", "continuity": "carry_primary", "keyword": "start" },
+    { "purpose": "compare", "statement": "Every week, without missing one.", "primary": { "kind": "number", "value": "₹100", "meaning": "a week" }, "secondary": { "kind": "number", "value": "52", "meaning": "weeks" }, "relationship": "accumulate", "energy": "building", "keyword": "weekly" },
+    { "purpose": "explain", "statement": "Small amounts become a quiet habit.", "primary": { "kind": "object", "asset": "piggy_bank", "meaning": "a savings jar" }, "energy": "building", "keyword": "habit" },
+    { "purpose": "reveal", "statement": "After one year you hold ₹5,200.", "primary": { "kind": "number", "value": "₹5,200", "meaning": "saved in a year" }, "energy": "impact", "keyword": "year" },
+    { "purpose": "contrast", "statement": "The habit matters more than the amount.", "primary": { "kind": "phrase", "value": "the habit" }, "secondary": { "kind": "phrase", "value": "the amount" }, "relationship": "separate", "energy": "building", "keyword": "habit" },
+    { "purpose": "emphasize", "statement": "Start small. Start this week.", "primary": { "kind": "phrase", "value": "start this week" }, "energy": "impact", "keyword": "now" }
+  ]
+}

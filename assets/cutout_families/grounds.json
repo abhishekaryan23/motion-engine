@@ -1,0 +1,204 @@
+{
+ "family": "grounds",
+ "project": "MotionEngine Asset Library",
+ "project_id": "jR0xTD3dUZ28WeDiZEj4",
+ "emotions": [
+  "trust",
+  "warmth",
+  "calm",
+  "precision",
+  "joy",
+  "energy",
+  "drama",
+  "luxury",
+  "urgency",
+  "handmade",
+  "playful_retro"
+ ],
+ "medium": "full-frame background plates",
+ "assets": [
+  {
+   "id": "neon_purple_gradient",
+   "role": "texture",
+   "subject": "dark neon purple gradient",
+   "tags": [
+    "dark",
+    "neon",
+    "purple",
+    "gradient",
+    "night"
+   ],
+   "model": "flare",
+   "aspect": "9:16",
+   "prompt": "A deep near-black to electric violet smooth gradient background with a soft neon glow from the lower corner. Full-frame vertical background plate, no objects, no people, no text, no logos, even and calm so typography can sit on it."
+  },
+  {
+   "id": "black_grain",
+   "role": "texture",
+   "subject": "near-black grain",
+   "tags": [
+    "dark",
+    "black",
+    "grain",
+    "film",
+    "night"
+   ],
+   "model": "flare",
+   "aspect": "9:16",
+   "prompt": "A near-black background with fine analogue film grain. Full-frame vertical background plate, no objects, no people, no text, no logos, even and calm so typography can sit on it."
+  },
+  {
+   "id": "grey_studio",
+   "role": "texture",
+   "subject": "light grey studio",
+   "tags": [
+    "grey",
+    "gray",
+    "studio",
+    "light",
+    "neutral",
+    "clean"
+   ],
+   "model": "flare",
+   "aspect": "9:16",
+   "prompt": "A light grey seamless photo studio backdrop with a soft vignette. Full-frame vertical background plate, no objects, no people, no text, no logos, even and calm so typography can sit on it."
+  },
+  {
+   "id": "warm_paper",
+   "role": "texture",
+   "subject": "warm paper",
+   "tags": [
+    "paper",
+    "warm",
+    "cream",
+    "page",
+    "print"
+   ],
+   "model": "flare",
+   "aspect": "9:16",
+   "prompt": "A warm cream uncoated paper texture, subtle fibres. Full-frame vertical background plate, no objects, no people, no text, no logos, even and calm so typography can sit on it."
+  },
+  {
+   "id": "kraft",
+   "role": "texture",
+   "subject": "kraft paper",
+   "tags": [
+    "kraft",
+    "cardboard",
+    "brown",
+    "paper",
+    "handmade"
+   ],
+   "model": "flare",
+   "aspect": "9:16",
+   "prompt": "A brown kraft paper texture with subtle fibres and creases. Full-frame vertical background plate, no objects, no people, no text, no logos, even and calm so typography can sit on it."
+  },
+  {
+   "id": "sky_gradient",
+   "role": "texture",
+   "subject": "sky gradient",
+   "tags": [
+    "sky",
+    "blue",
+    "gradient",
+    "calm",
+    "air",
+    "morning"
+   ],
+   "model": "flare",
+   "aspect": "9:16",
+   "prompt": "A soft clear sky gradient from pale blue at the top to warm haze near the bottom. Full-frame vertical background plate, no objects, no people, no text, no logos, even and calm so typography can sit on it."
+  },
+  {
+   "id": "deep_teal",
+   "role": "texture",
+   "subject": "deep teal",
+   "tags": [
+    "teal",
+    "deep",
+    "dark",
+    "green",
+    "ocean"
+   ],
+   "model": "flare",
+   "aspect": "9:16",
+   "prompt": "A deep teal background with a very subtle painted texture. Full-frame vertical background plate, no objects, no people, no text, no logos, even and calm so typography can sit on it."
+  },
+  {
+   "id": "blush",
+   "role": "texture",
+   "subject": "blush",
+   "tags": [
+    "blush",
+    "soft",
+    "warm",
+    "rose",
+    "gentle"
+   ],
+   "model": "flare",
+   "aspect": "9:16",
+   "prompt": "A soft blush peach background with a faint paper texture. Full-frame vertical background plate, no objects, no people, no text, no logos, even and calm so typography can sit on it."
+  },
+  {
+   "id": "halftone_dark",
+   "role": "texture",
+   "subject": "halftone dark field",
+   "tags": [
+    "halftone",
+    "dots",
+    "dark",
+    "print",
+    "retro"
+   ],
+   "model": "flare",
+   "aspect": "9:16",
+   "prompt": "A dark charcoal background with a subtle large halftone dot pattern fading across the frame. Full-frame vertical background plate, no objects, no people, no text, no logos, even and calm so typography can sit on it."
+  },
+  {
+   "id": "concrete",
+   "role": "texture",
+   "subject": "concrete",
+   "tags": [
+    "concrete",
+    "grey",
+    "wall",
+    "urban",
+    "stone"
+   ],
+   "model": "flare",
+   "aspect": "9:16",
+   "prompt": "A smooth grey concrete wall texture. Full-frame vertical background plate, no objects, no people, no text, no logos, even and calm so typography can sit on it."
+  },
+  {
+   "id": "linen",
+   "role": "texture",
+   "subject": "linen",
+   "tags": [
+    "linen",
+    "fabric",
+    "cloth",
+    "natural",
+    "calm"
+   ],
+   "model": "flare",
+   "aspect": "9:16",
+   "prompt": "A natural off-white linen fabric texture, flat and evenly lit. Full-frame vertical background plate, no objects, no people, no text, no logos, even and calm so typography can sit on it."
+  },
+  {
+   "id": "ink_wash_dark",
+   "role": "texture",
+   "subject": "dark ink wash",
+   "tags": [
+    "ink",
+    "wash",
+    "dark",
+    "watercolour",
+    "watercolor",
+    "dramatic"
+   ],
+   "model": "flare",
+   "aspect": "9:16",
+   "prompt": "A dark indigo-black ink wash watercolour background with soft blooms. Full-frame vertical background plate, no objects, no people, no text, no logos, even and calm so typography can sit on it."
+  }
+ ]
+}

@@ -1,0 +1,171 @@
+{
+  "version": "0.2",
+  "beds": [
+    {
+      "id": "warm_piano",
+      "file": "warm_piano.mp3",
+      "plan": "warm_piano.music.json",
+      "emotions": [
+        "trust",
+        "warmth",
+        "handmade"
+      ],
+      "moods": [
+        "calm",
+        "inspiring"
+      ],
+      "energy": 2,
+      "tempo_band": "slow",
+      "bpm": 172.0,
+      "duration": 118.0,
+      "lra": 9.3,
+      "speech_band_db": -5.1,
+      "source": {
+        "vendor": "openrouter",
+        "model": "google/lyria-3-pro-preview",
+        "instrumental": true
+      }
+    },
+    {
+      "id": "calm_ambient",
+      "file": "calm_ambient.mp3",
+      "plan": "calm_ambient.music.json",
+      "emotions": [
+        "calm"
+      ],
+      "moods": [
+        "calm",
+        "wonder",
+        "somber"
+      ],
+      "energy": 1,
+      "tempo_band": "slow",
+      "bpm": 150.0,
+      "duration": 115.4,
+      "lra": 8.2,
+      "speech_band_db": -6.8,
+      "source": {
+        "vendor": "openrouter",
+        "model": "google/lyria-3-pro-preview",
+        "instrumental": true
+      }
+    },
+    {
+      "id": "bright_upbeat",
+      "file": "bright_upbeat.mp3",
+      "plan": "bright_upbeat.music.json",
+      "emotions": [
+        "joy",
+        "energy"
+      ],
+      "moods": [
+        "upbeat",
+        "playful"
+      ],
+      "energy": 4,
+      "tempo_band": "medium",
+      "bpm": 112.5,
+      "duration": 118.2,
+      "lra": 8.4,
+      "speech_band_db": -6.7,
+      "source": {
+        "vendor": "openrouter",
+        "model": "google/lyria-3-pro-preview",
+        "instrumental": true
+      }
+    },
+    {
+      "id": "tech_pulse",
+      "file": "tech_pulse.mp3",
+      "plan": "tech_pulse.music.json",
+      "emotions": [
+        "precision"
+      ],
+      "moods": [
+        "neutral_explainer",
+        "serious"
+      ],
+      "energy": 3,
+      "tempo_band": "medium",
+      "bpm": 68.0,
+      "duration": 117.4,
+      "lra": 12.5,
+      "speech_band_db": -9.7,
+      "source": {
+        "vendor": "openrouter",
+        "model": "google/lyria-3-pro-preview",
+        "instrumental": true
+      }
+    },
+    {
+      "id": "cinematic_strings",
+      "file": "cinematic_strings.mp3",
+      "plan": "cinematic_strings.music.json",
+      "emotions": [
+        "drama",
+        "luxury"
+      ],
+      "moods": [
+        "dramatic",
+        "wonder"
+      ],
+      "energy": 4,
+      "tempo_band": "medium",
+      "bpm": 150.8,
+      "duration": 120.7,
+      "lra": 16.0,
+      "speech_band_db": -4.9,
+      "source": {
+        "vendor": "openrouter",
+        "model": "google/lyria-3-pro-preview",
+        "instrumental": true
+      }
+    },
+    {
+      "id": "driving_pulse",
+      "file": "driving_pulse.mp3",
+      "plan": "driving_pulse.music.json",
+      "emotions": [
+        "urgency"
+      ],
+      "moods": [
+        "tense",
+        "upbeat"
+      ],
+      "energy": 5,
+      "tempo_band": "fast",
+      "bpm": 126.0,
+      "duration": 112.5,
+      "lra": 3.0,
+      "speech_band_db": -13.2,
+      "source": {
+        "vendor": "openrouter",
+        "model": "google/lyria-3-pro-preview",
+        "instrumental": true
+      }
+    },
+    {
+      "id": "retro_groove",
+      "file": "retro_groove.mp3",
+      "plan": "retro_groove.music.json",
+      "emotions": [
+        "playful_retro"
+      ],
+      "moods": [
+        "playful",
+        "upbeat"
+      ],
+      "energy": 3,
+      "tempo_band": "medium",
+      "bpm": 152.0,
+      "duration": 119.8,
+      "lra": 8.7,
+      "speech_band_db": -9.8,
+      "source": {
+        "vendor": "openrouter",
+        "model": "google/lyria-3-pro-preview",
+        "instrumental": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "version": "0.1",
+  "audio": "faster_trains.voice.wav",
+  "sample_rate": 48000,
+  "duration": 6.099854166666667,
+  "provider": "macos_say",
+  "model": "macos/say",
+  "voice": "Daniel",
+  "words": [
+    {
+      "text": "The",
+      "start": 0.35,
+      "end": 0.5963854166666667,
+      "confidence": 0.9
+    },
+    {
+      "text": "new",
+      "start": 0.5963854166666667,
+      "end": 0.8427708333333332,
+      "confidence": 0.5
+    },
+    {
+      "text": "line",
+      "start": 0.8427708333333332,
+      "end": 1.1099999999999999,
+      "confidence": 0.5
+    },
+    {
+      "text": "cut",
+      "start": 1.1099999999999999,
+      "end": 1.35,
+      "confidence": 0.9
+    },
+    {
+      "text": "the",
+      "start": 1.35,
+      "end": 1.58,
+      "confidence": 0.9
+    },
+    {
+      "text": "trip",
+      "start": 1.58,
+      "end": 1.8283125,
+      "confidence": 0.9
+    },
+    {
+      "text": "Faster",
+      "start": 3.1483125,
+      "end": 3.5983125,
+      "confidence": 0.9
+    },
+    {
+      "text": "and",
+      "start": 3.5983125,
+      "end": 4.0083125,
+      "confidence": 0.7
+    },
+    {
+      "text": "cheaper",
+      "start": 4.0083125,
+      "end": 4.5283125,
+      "confidence": 0.9
+    },
+    {
+      "text": "at",
+      "start": 4.5283125,
+      "end": 4.8783125,
+      "confidence": 0.9
+    },
+    {
+      "text": "once",
+      "start": 4.8783125,
+      "end": 5.199854166666666,
+      "confidence": 0.9
+    }
+  ],
+  "sentences": [
+    {
+      "beat": 0,
+      "start": 0.35,
+      "end": 1.8283125
+    },
+    {
+      "beat": 1,
+      "start": 3.1483125,
+      "end": 5.199854166666666
+    }
+  ],
+  "alignment": "onset"
+}

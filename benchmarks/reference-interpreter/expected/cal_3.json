@@ -1,0 +1,13 @@
+{
+  "case": "cal_3",
+  "known_style": "warm_editorial",
+  "source": "examples/taste/warm_editorial.style.json",
+  "comment": "Ground truth for the 0.6 calibration reference. Values are ReferenceStyleProfile vocabulary; a list is the set of accepted values. Only dimensions the source style states unambiguously.",
+  "expected": {
+    "tone": ["editorial"],
+    "polarity": ["light"],
+    "temperature": ["warm"],
+    "visual_density": ["balanced"],
+    "motion_temperament": ["restrained", "fluid"]
+  }
+}

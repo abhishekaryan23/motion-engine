@@ -1,0 +1,27 @@
+[package]
+name = "motion-mcp"
+description = "MotionEngine as MCP tools: weak, creator and operator profiles over stdio"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "motion-mcp"
+path = "src/main.rs"
+
+[dependencies]
+motion-core.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+schemars.workspace = true
+sha2.workspace = true
+anyhow.workspace = true
+clap.workspace = true
+# The official Rust MCP SDK (stdio server). No HTTP transport: the server makes
+# no network calls (voice goes through the `motion-engine` subprocess).
+rmcp = { version = "3.5", default-features = false, features = ["server", "macros", "transport-io"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "io-std", "process", "sync", "time", "fs", "signal"] }
+
+[dev-dependencies]
+# Tests drive the real binary over stdio, as a client would.
+rmcp = { version = "3.5", default-features = false, features = ["client", "transport-child-process"] }

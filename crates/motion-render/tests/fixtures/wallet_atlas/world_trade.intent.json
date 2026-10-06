@@ -1,0 +1,54 @@
+{
+  "version": "0.2",
+  "title": "world_trade",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "The ocean economy",
+      "primary": {
+        "kind": "number",
+        "value": "80%",
+        "meaning": "of world trade"
+      },
+      "energy": "building",
+      "continuity": "none",
+      "narration": "Every single day, about eighty percent of everything the world trades travels by sea."
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "Life in a box",
+      "primary": {
+        "kind": "object",
+        "asset": "shipping_container"
+      },
+      "energy": "building",
+      "continuity": "none",
+      "narration": "Most of it moves inside steel boxes, stacked onto ships longer than four football fields."
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "Before the container",
+      "primary": {
+        "kind": "state_change",
+        "entity": "loading time",
+        "from": "days",
+        "to": "hours"
+      },
+      "energy": "building",
+      "continuity": "none",
+      "narration": "Before the container, loading a ship took days; now cranes finish it in hours."
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "A box that changed the map",
+      "primary": {
+        "kind": "object",
+        "asset": "globe"
+      },
+      "energy": "building",
+      "continuity": "none",
+      "narration": "That simple box quietly cut shipping costs so much that it reshaped the global map."
+    }
+  ]
+}

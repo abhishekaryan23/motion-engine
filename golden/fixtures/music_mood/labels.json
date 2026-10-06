@@ -1,0 +1,388 @@
+{
+  "about": "Labelled stories for the music-mood tests (sprint 0.23 C4a). expected = the family a listener would call the story's mood; accepted = every family that still counts as a fit; style = the story's own StyleProfile (absent: tone auto). The optional stories are read from the repository root, else from $MOTION_MOOD_EXTRA_ROOT, else skipped.",
+  "stories": [
+    {
+      "path": "docs/plans/sprint_0_23/stories/sleep_review.intent.json",
+      "expected": "neutral_explainer",
+      "accepted": [
+        "neutral_explainer",
+        "calm",
+        "wonder",
+        "inspiring"
+      ]
+    },
+    {
+      "path": "docs/plans/sprint_0_23/stories/money_review.intent.json",
+      "expected": "neutral_explainer",
+      "accepted": [
+        "neutral_explainer",
+        "serious"
+      ]
+    },
+    {
+      "path": "examples/cinematic/ai_age.intent.json",
+      "expected": "inspiring",
+      "accepted": [
+        "inspiring",
+        "wonder",
+        "neutral_explainer",
+        "upbeat"
+      ],
+      "style": "examples/cinematic/ai_age.style.json"
+    },
+    {
+      "path": "examples/cinematic/ai_toolkit.intent.json",
+      "expected": "upbeat",
+      "accepted": [
+        "upbeat",
+        "neutral_explainer",
+        "inspiring"
+      ],
+      "style": "examples/cinematic/ai_toolkit.style.json"
+    },
+    {
+      "path": "examples/cinematic/space.intent.json",
+      "expected": "wonder",
+      "accepted": [
+        "wonder",
+        "calm",
+        "dramatic"
+      ],
+      "style": "examples/cinematic/space.style.json"
+    },
+    {
+      "path": "examples/demo_04/weekly_basket.intent.json",
+      "expected": "serious",
+      "accepted": [
+        "serious",
+        "neutral_explainer"
+      ],
+      "style": "examples/demo_04/weekly_basket.style.json"
+    },
+    {
+      "path": "examples/demo_05/late_night_worker.intent.json",
+      "expected": "somber",
+      "accepted": [
+        "somber",
+        "serious",
+        "calm",
+        "tense"
+      ],
+      "style": "examples/demo_05/late_night_worker.style.json"
+    },
+    {
+      "path": "examples/editorial_demo.intent.json",
+      "expected": "serious",
+      "accepted": [
+        "serious",
+        "neutral_explainer",
+        "tense"
+      ],
+      "style": "examples/editorial_demo.style.json"
+    },
+    {
+      "path": "examples/facts/five_wait_what.intent.json",
+      "expected": "playful",
+      "accepted": [
+        "playful",
+        "upbeat"
+      ],
+      "style": "examples/facts/five_wait_what.style.json"
+    },
+    {
+      "path": "examples/genre/face_your_fears.intent.json",
+      "expected": "inspiring",
+      "accepted": [
+        "inspiring",
+        "dramatic",
+        "upbeat"
+      ],
+      "style": "examples/genre/face_your_fears.style.json"
+    },
+    {
+      "path": "examples/genre/storytelling.intent.json",
+      "expected": "inspiring",
+      "accepted": [
+        "inspiring",
+        "neutral_explainer",
+        "upbeat"
+      ],
+      "style": "examples/genre/storytelling.style.json"
+    },
+    {
+      "path": "examples/icon_demo/icon_demo.intent.json",
+      "expected": "neutral_explainer",
+      "accepted": [
+        "neutral_explainer",
+        "upbeat",
+        "inspiring"
+      ]
+    },
+    {
+      "path": "examples/library_09/classical.intent.json",
+      "expected": "calm",
+      "accepted": [
+        "calm",
+        "inspiring",
+        "neutral_explainer",
+        "serious"
+      ]
+    },
+    {
+      "path": "examples/library_09/clay.intent.json",
+      "expected": "inspiring",
+      "accepted": [
+        "inspiring",
+        "calm",
+        "upbeat"
+      ]
+    },
+    {
+      "path": "examples/library_09/people.intent.json",
+      "expected": "calm",
+      "accepted": [
+        "calm",
+        "neutral_explainer",
+        "inspiring"
+      ]
+    },
+    {
+      "path": "examples/library_09/retro.intent.json",
+      "expected": "playful",
+      "accepted": [
+        "playful",
+        "upbeat"
+      ]
+    },
+    {
+      "path": "examples/library_demo/library_demo.intent.json",
+      "expected": "calm",
+      "accepted": [
+        "calm",
+        "neutral_explainer",
+        "somber"
+      ]
+    },
+    {
+      "path": "examples/motion_language_demo.intent.json",
+      "expected": "calm",
+      "accepted": [
+        "calm",
+        "neutral_explainer",
+        "inspiring"
+      ],
+      "style": "examples/motion_language_demo.style.json"
+    },
+    {
+      "path": "examples/ocean/ocean_layers.intent.json",
+      "expected": "wonder",
+      "accepted": [
+        "wonder",
+        "calm",
+        "somber"
+      ],
+      "style": "examples/ocean/ocean_layers.style.json"
+    },
+    {
+      "path": "examples/ocean/ocean_zones.intent.json",
+      "expected": "wonder",
+      "accepted": [
+        "wonder",
+        "calm",
+        "somber"
+      ],
+      "style": "examples/ocean/ocean_zones.style.json"
+    },
+    {
+      "path": "examples/public/collection-accumulate.intent.json",
+      "expected": "neutral_explainer",
+      "accepted": [
+        "neutral_explainer",
+        "playful"
+      ]
+    },
+    {
+      "path": "examples/public/derived-metric.intent.json",
+      "expected": "neutral_explainer",
+      "accepted": [
+        "neutral_explainer",
+        "upbeat"
+      ]
+    },
+    {
+      "path": "examples/public/layers.intent.json",
+      "expected": "wonder",
+      "accepted": [
+        "wonder",
+        "neutral_explainer",
+        "calm"
+      ]
+    },
+    {
+      "path": "examples/public/minimal-contrast.intent.json",
+      "expected": "neutral_explainer",
+      "accepted": [
+        "neutral_explainer",
+        "serious",
+        "tense"
+      ]
+    },
+    {
+      "path": "examples/public/minimal-emphasize.intent.json",
+      "expected": "neutral_explainer",
+      "accepted": [
+        "neutral_explainer",
+        "upbeat"
+      ]
+    },
+    {
+      "path": "examples/public/state-change.intent.json",
+      "expected": "upbeat",
+      "accepted": [
+        "upbeat",
+        "neutral_explainer",
+        "inspiring"
+      ]
+    },
+    {
+      "path": "examples/public/three-beat-story.intent.json",
+      "expected": "neutral_explainer",
+      "accepted": [
+        "neutral_explainer",
+        "inspiring",
+        "upbeat"
+      ]
+    },
+    {
+      "path": "examples/topics/ai_learns.intent.json",
+      "expected": "neutral_explainer",
+      "accepted": [
+        "neutral_explainer",
+        "wonder",
+        "playful"
+      ],
+      "style": "examples/topics/ai_learns.style.json"
+    },
+    {
+      "path": "examples/topics/ai_opener.intent.json",
+      "expected": "upbeat",
+      "accepted": [
+        "upbeat",
+        "playful",
+        "neutral_explainer"
+      ],
+      "style": "examples/topics/ai_opener.style.json"
+    },
+    {
+      "path": "examples/topics/vaccines.intent.json",
+      "expected": "neutral_explainer",
+      "accepted": [
+        "neutral_explainer",
+        "wonder",
+        "serious",
+        "inspiring"
+      ],
+      "style": "examples/topics/vaccines.style.json"
+    },
+    {
+      "path": "examples/voice_10/city_water.intent.json",
+      "expected": "serious",
+      "accepted": [
+        "serious",
+        "neutral_explainer"
+      ]
+    },
+    {
+      "path": "examples/voice_10/small_savings.intent.json",
+      "expected": "inspiring",
+      "accepted": [
+        "inspiring",
+        "calm",
+        "neutral_explainer",
+        "upbeat"
+      ]
+    },
+    {
+      "path": "examples/voice_10/spotlight_effect.intent.json",
+      "expected": "calm",
+      "accepted": [
+        "calm",
+        "playful",
+        "neutral_explainer",
+        "inspiring"
+      ]
+    },
+    {
+      "path": "examples/voice_10/why_we_nap.intent.json",
+      "expected": "calm",
+      "accepted": [
+        "calm",
+        "neutral_explainer",
+        "inspiring"
+      ]
+    },
+    {
+      "path": "golden/fixtures/music_mood/compound_interest.intent.json",
+      "expected": "neutral_explainer",
+      "accepted": [
+        "neutral_explainer",
+        "serious"
+      ]
+    },
+    {
+      "path": "golden/fixtures/music_mood/volcano_eruption.intent.json",
+      "expected": "dramatic",
+      "accepted": [
+        "dramatic",
+        "wonder",
+        "tense"
+      ]
+    },
+    {
+      "path": "golden/fixtures/music_mood/flood_toll.intent.json",
+      "expected": "somber",
+      "accepted": [
+        "somber",
+        "serious"
+      ]
+    },
+    {
+      "path": "golden/fixtures/music_mood/launch_countdown.intent.json",
+      "expected": "tense",
+      "accepted": [
+        "tense",
+        "dramatic",
+        "upbeat"
+      ]
+    },
+    {
+      "path": "golden/fixtures/music_mood/empire_fall.intent.json",
+      "expected": "serious",
+      "accepted": [
+        "serious",
+        "somber",
+        "dramatic"
+      ]
+    }
+  ],
+  "optional": [
+    {
+      "path": "brand/wallet_atlas/content/intents_v3/inflation_ranking.intent.json",
+      "expected": "serious",
+      "accepted": [
+        "serious",
+        "neutral_explainer"
+      ],
+      "style": "brand/wallet_atlas/content/intents_v3/wallet_atlas.style.json"
+    },
+    {
+      "path": "brand/wallet_atlas/content/intents_v3/fuel_tank_cost.intent.json",
+      "expected": "neutral_explainer",
+      "accepted": [
+        "neutral_explainer",
+        "serious"
+      ],
+      "style": "brand/wallet_atlas/content/intents_v3/wallet_atlas.style.json"
+    }
+  ]
+}

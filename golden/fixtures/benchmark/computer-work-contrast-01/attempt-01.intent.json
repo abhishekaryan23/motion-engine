@@ -1,0 +1,47 @@
+{
+  "version": "0.1",
+  "title": "computer_work_contrast",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "In 2006 getting a computer felt futuristic.",
+      "primary": {
+        "kind": "phrase",
+        "value": "Futuristic promise",
+        "meaning": "the year 2006"
+      },
+      "energy": "calm",
+      "continuity": "carry_primary",
+      "keyword": "futuristic"
+    },
+    {
+      "purpose": "contrast",
+      "statement": "Today work means meetings tabs and notifications.",
+      "primary": {
+        "kind": "phrase",
+        "value": "Futuristic promise",
+        "meaning": "the year 2006"
+      },
+      "secondary": {
+        "kind": "phrase",
+        "value": "Daily clutter",
+        "meaning": "the year 2026"
+      },
+      "relationship": "replace",
+      "energy": "building",
+      "keyword": "notifications"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "Technology became extraordinary while the experience became ordinary.",
+      "primary": {
+        "kind": "phrase",
+        "value": "Ordinary experience",
+        "meaning": "the transformation"
+      },
+      "energy": "impact",
+      "keyword": "ordinary"
+    }
+  ]
+}

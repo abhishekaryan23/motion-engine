@@ -1,0 +1,120 @@
+{
+  "version": "0.2",
+  "title": "zepto_story",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "The crazy story behind Zepto",
+      "narration": "You use Zepto, but you probably don't know how crazy its story actually is. Here are five Zepto facts that most people have never heard.",
+      "primary": {
+        "kind": "object",
+        "asset": "zepto_bag",
+        "meaning": "quick commerce"
+      },
+      "secondary": {
+        "kind": "phrase",
+        "value": "5 Untold Facts",
+        "meaning": "untold story"
+      },
+      "energy": "impact",
+      "continuity": "carry_primary",
+      "keyword": "SECRET"
+    },
+    {
+      "purpose": "explain",
+      "statement": "Zepto means 10 to the power minus 21",
+      "narration": "First, Zepto does not mean fast delivery. The word comes from zepto, a scientific prefix representing ten to the power of minus twenty-one: an insanely tiny fraction of a second. Speed was the entire idea.",
+      "primary": {
+        "kind": "number",
+        "value": "10⁻²¹",
+        "meaning": "fraction of second"
+      },
+      "secondary": {
+        "kind": "object",
+        "asset": "scientific_prefix",
+        "meaning": "metric scale"
+      },
+      "relationship": "separate",
+      "energy": "building",
+      "continuity": "none",
+      "keyword": "SPEED"
+    },
+    {
+      "purpose": "contrast",
+      "statement": "From KiranaKart to the dark store model",
+      "narration": "Zepto didn't even start as Zepto. The founders first built KiranaKart during the pandemic. But when traditional delivery could not move fast enough, the dark-store model was born.",
+      "primary": {
+        "kind": "object",
+        "asset": "kiranakart_pivot",
+        "meaning": "KiranaKart to Dark Stores"
+      },
+      "secondary": {
+        "kind": "phrase",
+        "value": "KiranaKart to Dark Stores",
+        "meaning": "pivot"
+      },
+      "relationship": "replace",
+      "energy": "building",
+      "continuity": "none",
+      "keyword": "PIVOT"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "10-minute delivery was born from customer behavior",
+      "narration": "Ten-minute delivery wasn't even the original plan. They tested longer delivery windows, but discovered customer retention skyrocketed at ten minutes. It wasn't just marketing, it came from real human behavior.",
+      "primary": {
+        "kind": "phrase",
+        "value": "Customer Retention",
+        "meaning": "customer behavior"
+      },
+      "secondary": {
+        "kind": "object",
+        "asset": "retention_timer",
+        "meaning": "10 min delivery"
+      },
+      "relationship": "grow",
+      "energy": "impact",
+      "continuity": "none",
+      "keyword": "RETENTION"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "1,139 dark stores across India",
+      "narration": "By March 2026, Zepto operated over eleven hundred dark stores, each handling more than two thousand orders every single day. That is not just a delivery company, it is a massive distributed warehouse grid.",
+      "primary": {
+        "kind": "number",
+        "value": "1,139",
+        "meaning": "dark stores"
+      },
+      "secondary": {
+        "kind": "object",
+        "asset": "dark_stores_network",
+        "meaning": "warehouse grid"
+      },
+      "relationship": "accumulate",
+      "energy": "building",
+      "continuity": "none",
+      "keyword": "NETWORK"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "27 orders processed every single second",
+      "narration": "In just three months, Zepto fulfilled over two hundred and ten million orders: roughly twenty-seven orders every single second. Behind every fifty-rupee snack is a relentless logistics machine running at insane speed.",
+      "primary": {
+        "kind": "number",
+        "value": "27 / sec",
+        "meaning": "order velocity"
+      },
+      "secondary": {
+        "kind": "object",
+        "asset": "orders_speedometer",
+        "meaning": "logistics machine"
+      },
+      "relationship": "accumulate",
+      "energy": "impact",
+      "continuity": "none",
+      "keyword": "MACHINE"
+    }
+  ]
+}

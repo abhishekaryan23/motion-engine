@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "motionengine": {
+      "type": "stdio",
+      "command": "/ABSOLUTE/PATH/TO/MotionEngine/target/release/motion-mcp",
+      "args": ["--profile", "weak", "--repo", "/ABSOLUTE/PATH/TO/MotionEngine"]
+    },
+    "motionengine-creator": {
+      "type": "stdio",
+      "command": "/ABSOLUTE/PATH/TO/MotionEngine/target/release/motion-mcp",
+      "args": ["--profile", "creator", "--repo", "/ABSOLUTE/PATH/TO/MotionEngine"]
+    }
+  }
+}

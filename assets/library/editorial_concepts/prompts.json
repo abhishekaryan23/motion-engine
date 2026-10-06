@@ -1,0 +1,1715 @@
+{
+ "version": "0.1",
+ "specs": [
+  {
+   "id": "library.tin_robot",
+   "fingerprint": "fp1-2561c50b2e78b962",
+   "continuity_key": "tin_robot",
+   "serves": [
+    "library.tin_robot"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "vintage toy robot",
+   "context": "library asset: vintage toy robot",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "tin_robot",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of a vintage tin toy robot standing upright. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.circuit_board",
+   "fingerprint": "fp1-49d2f6dd3b3af415",
+   "continuity_key": "circuit_board",
+   "serves": [
+    "library.circuit_board"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "circuit board",
+   "context": "library asset: circuit board",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "circuit_board",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of a green-grey printed circuit board with chips and components, seen from above at a slight angle. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.microchip",
+   "fingerprint": "fp1-78697061b46a311e",
+   "continuity_key": "microchip",
+   "serves": [
+    "library.microchip"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "microchip",
+   "context": "library asset: microchip",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "microchip",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of a computer processor chip with metal pins, close-up product shot. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.server_rack",
+   "fingerprint": "fp1-d77fa95a3fa2bcf9",
+   "continuity_key": "server_rack",
+   "serves": [
+    "library.server_rack"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "server rack",
+   "context": "library asset: server rack",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "server_rack",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of a tall black server rack with blinking status lights. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.vr_headset",
+   "fingerprint": "fp1-041f4bc56bcd7eee",
+   "continuity_key": "vr_headset",
+   "serves": [
+    "library.vr_headset"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "vr headset",
+   "context": "library asset: vr headset",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "vr_headset",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of a white virtual reality headset with a strap, three-quarter view. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.drone",
+   "fingerprint": "fp1-ebc4d947b16d0287",
+   "continuity_key": "drone",
+   "serves": [
+    "library.drone"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "drone",
+   "context": "library asset: drone",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "drone",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of a small white quadcopter drone with four propellers. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.headphones",
+   "fingerprint": "fp1-c0c9220cb7a09685",
+   "continuity_key": "headphones",
+   "serves": [
+    "library.headphones"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "headphones",
+   "context": "library asset: headphones",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "headphones",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of a pair of over-ear headphones. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.game_controller",
+   "fingerprint": "fp1-a40fcf321d12935e",
+   "continuity_key": "game_controller",
+   "serves": [
+    "library.game_controller"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "game controller",
+   "context": "library asset: game controller",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "game_controller",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of a dark grey video game controller. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.smart_watch",
+   "fingerprint": "fp1-cd93416825f858c0",
+   "continuity_key": "smart_watch",
+   "serves": [
+    "library.smart_watch"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "smart watch",
+   "context": "library asset: smart watch",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "smart_watch",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of a smart watch with a blank dark screen and a rubber strap. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.satellite_dish",
+   "fingerprint": "fp1-f3cd8c28e8a2f0e6",
+   "continuity_key": "satellite_dish",
+   "serves": [
+    "library.satellite_dish"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "satellite dish",
+   "context": "library asset: satellite dish",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "satellite_dish",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of a white satellite dish antenna on a short mount. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.microscope",
+   "fingerprint": "fp1-3fe30f9a0ed01b3b",
+   "continuity_key": "microscope",
+   "serves": [
+    "library.microscope"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "microscope",
+   "context": "library asset: microscope",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "microscope",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of a modern laboratory microscope. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.dna_model",
+   "fingerprint": "fp1-f6fc42229fb148e8",
+   "continuity_key": "dna_model",
+   "serves": [
+    "library.dna_model"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "dna model",
+   "context": "library asset: dna model",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "dna_model",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of a plastic double helix DNA teaching model on a small stand. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.atom_model",
+   "fingerprint": "fp1-e79a461ceb396d66",
+   "continuity_key": "atom_model",
+   "serves": [
+    "library.atom_model"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "atom model",
+   "context": "library asset: atom model",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "atom_model",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of a ball-and-wire atom model with orbit rings on a small stand. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.telescope",
+   "fingerprint": "fp1-65198f7a69b0bb7b",
+   "continuity_key": "telescope",
+   "serves": [
+    "library.telescope"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "telescope",
+   "context": "library asset: telescope",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "telescope",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of a white refractor telescope on a tripod. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.petri_dish",
+   "fingerprint": "fp1-ce45b235cf89b11d",
+   "continuity_key": "petri_dish",
+   "serves": [
+    "library.petri_dish"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "petri dish",
+   "context": "library asset: petri dish",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "petri_dish",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of a glass petri dish with bacterial colonies, seen from above at a slight angle. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.stethoscope",
+   "fingerprint": "fp1-7f1c7c8af7ac5672",
+   "continuity_key": "stethoscope",
+   "serves": [
+    "library.stethoscope"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "stethoscope",
+   "context": "library asset: stethoscope",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "stethoscope",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of a doctor's stethoscope coiled loosely. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.pill_capsules",
+   "fingerprint": "fp1-d585da8a9bc93c85",
+   "continuity_key": "pill_capsules",
+   "serves": [
+    "library.pill_capsules"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "pill capsules",
+   "context": "library asset: pill capsules",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "pill_capsules",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of a small pile of two-tone medicine capsules and white tablets. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.magnet",
+   "fingerprint": "fp1-2a0df200318c636e",
+   "continuity_key": "magnet",
+   "serves": [
+    "library.magnet"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "magnet",
+   "context": "library asset: magnet",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "magnet",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of a red and silver horseshoe magnet. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.brain_model",
+   "fingerprint": "fp1-7ef6c7718ad6d9bb",
+   "continuity_key": "brain_model",
+   "serves": [
+    "library.brain_model"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "anatomical brain model",
+   "context": "library asset: anatomical brain model",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "brain_model",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of an anatomical plastic brain model in two halves on a small stand. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.stress_ball",
+   "fingerprint": "fp1-35609675eb327a75",
+   "continuity_key": "stress_ball",
+   "serves": [
+    "library.stress_ball"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "stress ball",
+   "context": "library asset: stress ball",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "stress_ball",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of a squeezable foam stress ball, slightly squashed. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.open_journal",
+   "fingerprint": "fp1-4832bc54b5825e30",
+   "continuity_key": "open_journal",
+   "serves": [
+    "library.open_journal"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "open journal",
+   "context": "library asset: open journal",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "open_journal",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of an open notebook journal with blank cream pages and a pen lying across it. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.meditation_cushion",
+   "fingerprint": "fp1-9e84e53bc1a6fe5c",
+   "continuity_key": "meditation_cushion",
+   "serves": [
+    "library.meditation_cushion"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "meditation cushion",
+   "context": "library asset: meditation cushion",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "meditation_cushion",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of a round meditation cushion with a small singing bowl beside it. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.jigsaw_pieces",
+   "fingerprint": "fp1-0735bbb83a2291f8",
+   "continuity_key": "jigsaw_pieces",
+   "serves": [
+    "library.jigsaw_pieces"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "jigsaw pieces",
+   "context": "library asset: jigsaw pieces",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "jigsaw_pieces",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of three cardboard jigsaw puzzle pieces, two joined and one apart. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.theatre_masks",
+   "fingerprint": "fp1-4f2d60ea873cd19f",
+   "continuity_key": "theatre_masks",
+   "serves": [
+    "library.theatre_masks"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "theatre masks",
+   "context": "library asset: theatre masks",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "theatre_masks",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of a pair of white comedy and tragedy theatre masks. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.hand_mirror",
+   "fingerprint": "fp1-b82880bf8a9807e0",
+   "continuity_key": "hand_mirror",
+   "serves": [
+    "library.hand_mirror"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "hand mirror",
+   "context": "library asset: hand mirror",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "hand_mirror",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of an antique round hand mirror with a carved handle, the glass reflecting a soft blank grey. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.crumpled_paper",
+   "fingerprint": "fp1-b34a343ebb9a299b",
+   "continuity_key": "crumpled_paper",
+   "serves": [
+    "library.crumpled_paper"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "crumpled paper",
+   "context": "library asset: crumpled paper",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "crumpled_paper",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of a few crumpled balls of white paper. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.sticky_notes",
+   "fingerprint": "fp1-56e11f0bbf1964e7",
+   "continuity_key": "sticky_notes",
+   "serves": [
+    "library.sticky_notes"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "sticky notes",
+   "context": "library asset: sticky notes",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "sticky_notes",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of a small stack of yellow sticky notes with one note curling at the corner, all blank. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.pillow",
+   "fingerprint": "fp1-8e032fb7f22406b0",
+   "continuity_key": "pillow",
+   "serves": [
+    "library.pillow"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "pillow",
+   "context": "library asset: pillow",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "pillow",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of a soft white bed pillow with a slight dent. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.briefcase",
+   "fingerprint": "fp1-b361dcb2f8256f49",
+   "continuity_key": "briefcase",
+   "serves": [
+    "library.briefcase"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "briefcase",
+   "context": "library asset: briefcase",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "briefcase",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of a brown leather briefcase. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.calculator",
+   "fingerprint": "fp1-5413323952c6eb88",
+   "continuity_key": "calculator",
+   "serves": [
+    "library.calculator"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "calculator",
+   "context": "library asset: calculator",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "calculator",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of a desk calculator with blank unlabelled keys and a blank display. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.trophy",
+   "fingerprint": "fp1-a30300e4ed2b8907",
+   "continuity_key": "trophy",
+   "serves": [
+    "library.trophy"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "trophy",
+   "context": "library asset: trophy",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "trophy",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of a gold trophy cup on a dark base. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.contract_pen",
+   "fingerprint": "fp1-6180f8c6a5d1eff9",
+   "continuity_key": "contract_pen",
+   "serves": [
+    "library.contract_pen"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "contract and pen",
+   "context": "library asset: contract and pen",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "contract_pen",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of a document with blank lines and a fountain pen lying across it. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.rubber_stamp",
+   "fingerprint": "fp1-2c776928804cf571",
+   "continuity_key": "rubber_stamp",
+   "serves": [
+    "library.rubber_stamp"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "rubber stamp",
+   "context": "library asset: rubber stamp",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "rubber_stamp",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of a wooden office rubber stamp standing upright. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.dartboard",
+   "fingerprint": "fp1-2406c88d23cee88f",
+   "continuity_key": "dartboard",
+   "serves": [
+    "library.dartboard"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "dartboard",
+   "context": "library asset: dartboard",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "dartboard",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of a dartboard with one dart in the bullseye. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.chess_king",
+   "fingerprint": "fp1-c72c7cae52175931",
+   "continuity_key": "chess_king",
+   "serves": [
+    "library.chess_king"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "chess king",
+   "context": "library asset: chess king",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "chess_king",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of a black wooden chess king piece. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.piggy_bank",
+   "fingerprint": "fp1-9c264ad38a9a0fe9",
+   "continuity_key": "piggy_bank",
+   "serves": [
+    "library.piggy_bank"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "piggy bank",
+   "context": "library asset: piggy bank",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "piggy_bank",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of a ceramic piggy bank in soft teal. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.wallet",
+   "fingerprint": "fp1-fc799d58c43c68a8",
+   "continuity_key": "wallet",
+   "serves": [
+    "library.wallet"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "wallet",
+   "context": "library asset: wallet",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "wallet",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of a brown leather wallet, slightly open. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.gavel",
+   "fingerprint": "fp1-49b0ddf741ec4dd0",
+   "continuity_key": "gavel",
+   "serves": [
+    "library.gavel"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "gavel",
+   "context": "library asset: gavel",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "gavel",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "Editorial product photograph of a wooden judge's gavel on its round sound block. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  }
+ ]
+}

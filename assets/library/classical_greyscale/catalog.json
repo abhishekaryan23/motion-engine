@@ -1,0 +1,967 @@
+{
+ "version": "0.1",
+ "family": "classical_greyscale",
+ "emotions": [
+  "drama",
+  "luxury"
+ ],
+ "medium": "greyscale classical sculpture photograph",
+ "assets": [
+  {
+   "id": "marble_bust",
+   "file": "marble_bust.png",
+   "role": "object",
+   "subject": "marble bust",
+   "tags": [
+    "ancient",
+    "bust",
+    "classical",
+    "head",
+    "marble",
+    "sculpture",
+    "statue"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.091,
+    0.0534,
+    0.909,
+    0.9466
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "XvbvYNtLbnWe4kab019I",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.09103079,
+     "y": 0.053375196,
+     "width": 0.81793845,
+     "height": 0.89324963
+    },
+    "coverage": 0.423824,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 747,
+   "height": 1274
+  },
+  {
+   "id": "bust_profile",
+   "file": "bust_profile.png",
+   "role": "object",
+   "subject": "marble bust in profile",
+   "tags": [
+    "bust",
+    "classical",
+    "marble",
+    "profile",
+    "sculpture",
+    "statue",
+    "thinker"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0996,
+    0.0538,
+    0.9004,
+    0.9462
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "y4YLT760yuaTkCmzlUiW",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.09955423,
+     "y": 0.05381526,
+     "width": 0.8008915,
+     "height": 0.89236945
+    },
+    "coverage": 0.45140323,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 673,
+   "height": 1245
+  },
+  {
+   "id": "hand_pointing",
+   "file": "hand_pointing.png",
+   "role": "object",
+   "subject": "marble hand pointing",
+   "tags": [
+    "direction",
+    "gesture",
+    "hand",
+    "marble",
+    "point",
+    "pointing",
+    "statue"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.054,
+    0.123,
+    0.946,
+    0.875
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "YoM1RofJxmmndtXLsfOg",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.053960964,
+     "y": 0.123046875,
+     "width": 0.89207804,
+     "height": 0.7519531
+    },
+    "coverage": 0.40088394,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 871,
+   "height": 512
+  },
+  {
+   "id": "hand_reaching",
+   "file": "hand_reaching.png",
+   "role": "object",
+   "subject": "marble hand reaching",
+   "tags": [
+    "desire",
+    "hand",
+    "marble",
+    "reach",
+    "reaches",
+    "reaching",
+    "statue"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.2012,
+    0.0508,
+    0.7969,
+    0.9492
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "BCsDM4o6g0okSkx16TCQ",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.20117188,
+     "y": 0.05078125,
+     "width": 0.5957031,
+     "height": 0.8984375
+    },
+    "coverage": 0.31691933,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 512,
+   "height": 1024
+  },
+  {
+   "id": "hand_holding",
+   "file": "hand_holding.png",
+   "role": "object",
+   "subject": "marble hand holding a sphere",
+   "tags": [
+    "care",
+    "hand",
+    "hold",
+    "holding",
+    "marble",
+    "sphere",
+    "statue"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0806,
+    0.0536,
+    0.9194,
+    0.9464
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "zQAh6j21GQcdNdeS09pl",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.08058608,
+     "y": 0.053593177,
+     "width": 0.83882785,
+     "height": 0.8928136
+    },
+    "coverage": 0.5102595,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 546,
+   "height": 821
+  },
+  {
+   "id": "open_palm",
+   "file": "open_palm.png",
+   "role": "object",
+   "subject": "marble open palm",
+   "tags": [
+    "giving",
+    "hand",
+    "marble",
+    "offer",
+    "open",
+    "palm",
+    "statue"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.057,
+    0.0532,
+    0.943,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "x0eFvznUjaR85tGSmeOS",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.056953643,
+     "y": 0.05315204,
+     "width": 0.8860927,
+     "height": 0.89369595
+    },
+    "coverage": 0.4381814,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 755,
+   "height": 809
+  },
+  {
+   "id": "hands_touching",
+   "file": "hands_touching.png",
+   "role": "object",
+   "subject": "two marble hands nearly touching",
+   "tags": [
+    "connection",
+    "hand",
+    "hands",
+    "marble",
+    "reach",
+    "reaches",
+    "touch",
+    "touching",
+    "trust"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0,
+    0.1479,
+    1.0,
+    0.8521
+   ],
+   "open_edge": true,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "RrZZUH0KDnZNEUrGlHgl",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "WARN",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.0,
+     "y": 0.14794521,
+     "width": 1.0,
+     "height": 0.7041096
+    },
+    "coverage": 0.2934366,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": true,
+     "right": true
+    }
+   },
+   "width": 1792,
+   "height": 730
+  },
+  {
+   "id": "statue_eye",
+   "file": "statue_eye.png",
+   "role": "object",
+   "subject": "sculpted marble eye",
+   "tags": [
+    "attention",
+    "eye",
+    "marble",
+    "statue",
+    "vision",
+    "watching"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0713,
+    0.0538,
+    0.9287,
+    0.9462
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "EhIxnC87r1Ovslzum21u",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.07131783,
+     "y": 0.053801168,
+     "width": 0.85736436,
+     "height": 0.89239764
+    },
+    "coverage": 0.55655104,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 645,
+   "height": 855
+  },
+  {
+   "id": "statue_torso",
+   "file": "statue_torso.png",
+   "role": "object",
+   "subject": "draped marble statue fragment",
+   "tags": [
+    "body",
+    "classical",
+    "marble",
+    "sculpture",
+    "statue",
+    "strength",
+    "torso"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.1048,
+    0.0535,
+    0.8952,
+    0.9465
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "0QSctZrcvwuIoCwwlQwC",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.10483871,
+     "y": 0.053497944,
+     "width": 0.7903226,
+     "height": 0.8930041
+    },
+    "coverage": 0.5249861,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 620,
+   "height": 1215
+  },
+  {
+   "id": "column",
+   "file": "column.png",
+   "role": "object",
+   "subject": "marble column",
+   "tags": [
+    "architecture",
+    "classical",
+    "column",
+    "foundation",
+    "marble",
+    "pillar",
+    "support"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.1769,
+    0.0536,
+    0.8231,
+    0.9464
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "BVDocTz5UP2Nurt7r1XL",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "WARN",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.17690875,
+     "y": 0.053551298,
+     "width": 0.6461825,
+     "height": 0.8928974
+    },
+    "coverage": 0.38046035,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 537,
+   "height": 1774
+  },
+  {
+   "id": "broken_column",
+   "file": "broken_column.png",
+   "role": "object",
+   "subject": "broken marble column",
+   "tags": [
+    "broken",
+    "collapse",
+    "column",
+    "fall",
+    "marble",
+    "ruin"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0535,
+    0.0681,
+    0.9465,
+    0.9319
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "sZokCQlKz2vT0wFJNU33",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05350773,
+     "y": 0.06807867,
+     "width": 0.89298457,
+     "height": 0.86384267
+    },
+    "coverage": 0.5725624,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 841,
+   "height": 661
+  },
+  {
+   "id": "laurel",
+   "file": "laurel.png",
+   "role": "object",
+   "subject": "laurel wreath",
+   "tags": [
+    "award",
+    "honor",
+    "honour",
+    "laurel",
+    "victory",
+    "winner",
+    "wreath"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0539,
+    0.056,
+    0.9461,
+    0.944
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "LfOO7AAuhLrbvZUpipMI",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.053899083,
+     "y": 0.05595238,
+     "width": 0.89220184,
+     "height": 0.88809526
+    },
+    "coverage": 0.38822222,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 872,
+   "height": 840
+  },
+  {
+   "id": "hourglass",
+   "file": "hourglass.png",
+   "role": "object",
+   "subject": "hourglass",
+   "tags": [
+    "deadline",
+    "hourglass",
+    "patience",
+    "sand",
+    "time",
+    "waiting"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.123,
+    0.054,
+    0.877,
+    0.946
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "zazbs7ghNcjlzzKEikVF",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.123046875,
+     "y": 0.05399061,
+     "width": 0.75390625,
+     "height": 0.8920188
+    },
+    "coverage": 0.46300754,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 512,
+   "height": 852
+  },
+  {
+   "id": "scales",
+   "file": "scales.png",
+   "role": "object",
+   "subject": "scales of justice",
+   "tags": [
+    "balance",
+    "fairness",
+    "judgement",
+    "judgment",
+    "justice",
+    "law",
+    "scales"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0566,
+    0.0532,
+    0.9434,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "pqR8jNitgiKnfgVlU8aT",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.056583244,
+     "y": 0.054247696,
+     "width": 0.8868335,
+     "height": 0.8925282
+    },
+    "coverage": 0.1572612,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 919,
+   "height": 977
+  },
+  {
+   "id": "ancient_coin",
+   "file": "ancient_coin.png",
+   "role": "object",
+   "subject": "ancient coin",
+   "tags": [
+    "ancient",
+    "coin",
+    "currency",
+    "money",
+    "silver",
+    "value",
+    "wealth"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0567,
+    0.0535,
+    0.9433,
+    0.9465
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "v7pEuqU3QPSjrm9hIQzh",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.056657225,
+     "y": 0.053475935,
+     "width": 0.88668555,
+     "height": 0.8930481
+    },
+    "coverage": 0.6158689,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 706,
+   "height": 748
+  },
+  {
+   "id": "horse_head",
+   "file": "horse_head.png",
+   "role": "object",
+   "subject": "marble horse head",
+   "tags": [
+    "classical",
+    "head",
+    "horse",
+    "marble",
+    "power",
+    "statue"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0777,
+    0.0528,
+    0.9223,
+    0.9462
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "oq82mIlhPipb92LIBsqC",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.07768361,
+     "y": 0.052837573,
+     "width": 0.84463274,
+     "height": 0.89334637
+    },
+    "coverage": 0.48024672,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 708,
+   "height": 1022
+  },
+  {
+   "id": "amphora",
+   "file": "amphora.png",
+   "role": "object",
+   "subject": "amphora vase",
+   "tags": [
+    "amphora",
+    "ancient",
+    "classical",
+    "jar",
+    "vase",
+    "vessel"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.09,
+    0.0535,
+    0.91,
+    0.9465
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "AvXVkxevOQhuvu3OB1Nq",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.0900277,
+     "y": 0.05345395,
+     "width": 0.8199446,
+     "height": 0.8930921
+    },
+    "coverage": 0.5080802,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 722,
+   "height": 1216
+  },
+  {
+   "id": "clenched_fist",
+   "file": "clenched_fist.png",
+   "role": "object",
+   "subject": "marble clenched fist",
+   "tags": [
+    "clenched",
+    "fight",
+    "fist",
+    "hand",
+    "marble",
+    "resolve",
+    "strength"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0902,
+    0.0537,
+    0.9098,
+    0.9463
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "UFu3yEDpq07HEyIuSHqF",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.09022556,
+     "y": 0.053691275,
+     "width": 0.81954885,
+     "height": 0.89261746
+    },
+    "coverage": 0.5310676,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 532,
+   "height": 894
+  },
+  {
+   "id": "greek_helmet",
+   "file": "greek_helmet.png",
+   "role": "object",
+   "subject": "ancient helmet",
+   "tags": [
+    "ancient",
+    "armor",
+    "armour",
+    "defence",
+    "defense",
+    "helmet",
+    "warrior"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.087,
+    0.054,
+    0.913,
+    0.946
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "ugk6kX1Sw7UNNG4RKqAM",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.08695652,
+     "y": 0.05399325,
+     "width": 0.82608694,
+     "height": 0.8920135
+    },
+    "coverage": 0.5442363,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 552,
+   "height": 889
+  },
+  {
+   "id": "statue_foot",
+   "file": "statue_foot.png",
+   "role": "object",
+   "subject": "marble foot on plinth",
+   "tags": [
+    "foot",
+    "marble",
+    "plinth",
+    "stand",
+    "statue",
+    "step"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.1543,
+    0.0532,
+    0.8457,
+    0.9468
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "9sdEDthhPJmsV4Ieey9e",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.15429688,
+     "y": 0.05320304,
+     "width": 0.69140625,
+     "height": 0.8935939
+    },
+    "coverage": 0.4073782,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 512,
+   "height": 921
+  }
+ ]
+}

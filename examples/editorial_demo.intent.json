@@ -1,0 +1,33 @@
+{
+  "version": "0.1",
+  "title": "editorial_demo",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "Your salary stayed flat",
+      "primary": { "kind": "number", "value": "₹50,000", "meaning": "salary" },
+      "secondary": { "kind": "phrase", "value": "for five straight years." },
+      "energy": "calm",
+      "continuity": "carry_primary",
+      "keyword": "flat"
+    },
+    {
+      "purpose": "contrast",
+      "statement": "Prices kept climbing",
+      "primary": { "kind": "number", "value": "₹50,000", "meaning": "salary" },
+      "secondary": { "kind": "object", "asset": "shopping_basket", "value": "+38%", "meaning": "groceries" },
+      "relationship": "compress",
+      "energy": "building",
+      "continuity": "carry_primary",
+      "keyword": "prices"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "You are earning less than you think.",
+      "primary": { "kind": "number", "value": "−27%", "meaning": "real buying power" },
+      "energy": "impact",
+      "keyword": "less"
+    }
+  ]
+}

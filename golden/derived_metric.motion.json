@@ -1,0 +1,849 @@
+{
+  "version": "0.2",
+  "project": {
+    "name": "derived_metric",
+    "duration_seconds": 6.3
+  },
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "background": "#ECE3D2"
+  },
+  "theme": {
+    "fonts": {
+      "display": "font.archivo_black",
+      "display_condensed": "font.anton",
+      "serif_emotional": "font.dm_serif_italic",
+      "body": "font.fira_sans",
+      "mono": "font.space_mono",
+      "number": "font.anton"
+    },
+    "palette": {
+      "accent": "#233FD1",
+      "card": "#F6F1E6",
+      "ink": "#171513",
+      "muted": "#6F665A",
+      "on_accent": "#F6F1E6",
+      "paper": "#ECE3D2"
+    }
+  },
+  "assets": [
+    {
+      "id": "font.anton",
+      "type": "font",
+      "path": "fonts/Anton-Regular.ttf"
+    },
+    {
+      "id": "font.archivo_black",
+      "type": "font",
+      "path": "fonts/ArchivoBlack-Regular.ttf"
+    },
+    {
+      "id": "font.dm_serif",
+      "type": "font",
+      "path": "fonts/DMSerifDisplay-Regular.ttf"
+    },
+    {
+      "id": "font.dm_serif_italic",
+      "type": "font",
+      "path": "fonts/DMSerifDisplay-Italic.ttf"
+    },
+    {
+      "id": "font.fira_sans",
+      "type": "font",
+      "path": "fonts/FiraSans-Regular.ttf"
+    },
+    {
+      "id": "font.fira_sans_semibold",
+      "type": "font",
+      "path": "fonts/FiraSans-SemiBold.ttf"
+    },
+    {
+      "id": "font.space_mono",
+      "type": "font",
+      "path": "fonts/SpaceMono-Regular.ttf"
+    },
+    {
+      "id": "font.space_mono_bold",
+      "type": "font",
+      "path": "fonts/SpaceMono-Bold.ttf"
+    }
+  ],
+  "asset_root": "../assets",
+  "scenes": [
+    {
+      "id": "backdrop",
+      "start_seconds": 0.0,
+      "duration_seconds": 6.3,
+      "layers": [
+        {
+          "id": "backdrop.paper",
+          "x": 0.0,
+          "y": 0.0,
+          "width": 1080.0,
+          "height": 1920.0,
+          "scale_x": 1.0,
+          "scale_y": 1.0,
+          "rotation_degrees": 0.0,
+          "anchor_x": 0.0,
+          "anchor_y": 0.0,
+          "opacity": 1.0,
+          "z_index": 0,
+          "visible": true,
+          "type": "texture",
+          "material": "paper",
+          "seed": 8865707873606744473,
+          "color": "#ECE3D2",
+          "intensity": 0.55,
+          "scale": 8.0
+        },
+        {
+          "id": "backdrop.grain",
+          "x": 0.0,
+          "y": 0.0,
+          "width": 1080.0,
+          "height": 1920.0,
+          "scale_x": 1.0,
+          "scale_y": 1.0,
+          "rotation_degrees": 0.0,
+          "anchor_x": 0.0,
+          "anchor_y": 0.0,
+          "opacity": 1.0,
+          "z_index": 90,
+          "visible": true,
+          "type": "texture",
+          "material": "grain",
+          "seed": 923307860488072175,
+          "color": "#171513",
+          "intensity": 0.32,
+          "scale": 2.0,
+          "animated": true
+        }
+      ],
+      "motions": []
+    },
+    {
+      "id": "beat_1",
+      "start_seconds": 0.0,
+      "duration_seconds": 6.3,
+      "layers": [
+        {
+          "id": "b1.stage",
+          "x": 540.0,
+          "y": 960.0,
+          "width": 1080.0,
+          "height": 1920.0,
+          "scale_x": 1.0,
+          "scale_y": 1.0,
+          "rotation_degrees": 0.0,
+          "anchor_x": 0.5,
+          "anchor_y": 0.5,
+          "opacity": 1.0,
+          "z_index": 10,
+          "visible": true,
+          "type": "group",
+          "children": [
+            {
+              "id": "b1.ghost",
+              "x": -54.0,
+              "y": 1050.0223,
+              "width": 1379.0,
+              "height": 280.75534,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 0,
+              "visible": true,
+              "type": "text",
+              "text": "SIGN-UP RATE",
+              "font_role": "display_condensed",
+              "font_size": 280.76,
+              "font_weight": 400,
+              "italic": false,
+              "color": "#1715130E",
+              "align": "left",
+              "line_height": 1.0,
+              "letter_spacing": -0.01,
+              "uppercase": false
+            },
+            {
+              "id": "b1.head.0",
+              "x": 84.0,
+              "y": 326.4,
+              "width": 921.2469,
+              "height": 102.54245,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 20,
+              "visible": true,
+              "type": "text",
+              "text": "MOST VISITORS",
+              "font_role": "display",
+              "font_size": 104.64,
+              "font_weight": 900,
+              "italic": false,
+              "color": "#171513",
+              "align": "left",
+              "line_height": 0.98,
+              "letter_spacing": -0.02,
+              "uppercase": false
+            },
+            {
+              "id": "b1.head.1",
+              "x": 84.0,
+              "y": 428.94244,
+              "width": 932.24,
+              "height": 102.54245,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 20,
+              "visible": true,
+              "type": "text",
+              "text": "NEVER SIGN UP.",
+              "font_role": "display",
+              "font_size": 104.64,
+              "font_weight": 900,
+              "italic": false,
+              "color": "#171513",
+              "align": "left",
+              "line_height": 0.98,
+              "letter_spacing": -0.02,
+              "uppercase": false
+            },
+            {
+              "id": "b1.frac.rule",
+              "x": 84.0,
+              "y": 821.6074,
+              "width": 620.13904,
+              "height": 6.7999997,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 22,
+              "visible": true,
+              "type": "rectangle",
+              "fill": "#171513"
+            },
+            {
+              "id": "b1.frac.num.label",
+              "x": 287.70782,
+              "y": 685.0245,
+              "width": 247.97829,
+              "height": 53.039997,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 22,
+              "visible": true,
+              "type": "text",
+              "text": "SIGN-UPS",
+              "font_role": "mono",
+              "font_size": 44.2,
+              "font_weight": 700,
+              "italic": false,
+              "color": "#6F665A",
+              "align": "left",
+              "line_height": 1.2,
+              "letter_spacing": 0.08,
+              "uppercase": false
+            },
+            {
+              "id": "b1.frac.den.label",
+              "x": 462.9838,
+              "y": 918.0354,
+              "width": 247.9783,
+              "height": 53.039997,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 22,
+              "visible": true,
+              "type": "text",
+              "text": "VISITORS",
+              "font_role": "mono",
+              "font_size": 44.2,
+              "font_weight": 700,
+              "italic": false,
+              "color": "#6F665A",
+              "align": "left",
+              "line_height": 1.2,
+              "letter_spacing": 0.08,
+              "uppercase": false
+            },
+            {
+              "id": "b1.eq",
+              "x": 84.0,
+              "y": 1175.2732,
+              "width": 86.39006,
+              "height": 266.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 22,
+              "visible": true,
+              "type": "text",
+              "text": "=",
+              "font_role": "number",
+              "font_size": 266.0,
+              "font_weight": 400,
+              "italic": false,
+              "color": "#6F665A",
+              "align": "left",
+              "line_height": 1.0,
+              "letter_spacing": -0.01,
+              "uppercase": false
+            },
+            {
+              "id": "b1.result.label",
+              "x": 198.65535,
+              "y": 1531.625,
+              "width": 371.0931,
+              "height": 52.800003,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 22,
+              "visible": true,
+              "type": "text",
+              "text": "SIGN-UP RATE",
+              "font_role": "mono",
+              "font_size": 44.0,
+              "font_weight": 700,
+              "italic": false,
+              "color": "#171513",
+              "align": "left",
+              "line_height": 1.2,
+              "letter_spacing": 0.08,
+              "uppercase": false
+            },
+            {
+              "id": "b1.frac.num",
+              "x": 84.0,
+              "y": 629.02,
+              "width": 176.96013,
+              "height": 170.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 22,
+              "visible": true,
+              "type": "text",
+              "text": "0",
+              "font_role": "number",
+              "font_size": 170.0,
+              "font_weight": 400,
+              "italic": false,
+              "color": "#171513",
+              "align": "left",
+              "line_height": 1.0,
+              "letter_spacing": -0.01,
+              "uppercase": false
+            },
+            {
+              "id": "b1.frac.den",
+              "x": 84.0,
+              "y": 852.82,
+              "width": 359.24713,
+              "height": 170.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 22,
+              "visible": true,
+              "type": "text",
+              "text": "0",
+              "font_role": "number",
+              "font_size": 170.0,
+              "font_weight": 400,
+              "italic": false,
+              "color": "#171513",
+              "align": "left",
+              "line_height": 1.0,
+              "letter_spacing": -0.01,
+              "uppercase": false
+            },
+            {
+              "id": "b1.result",
+              "x": 198.65535,
+              "y": 1128.008,
+              "width": 612.91675,
+              "height": 380.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 22,
+              "visible": true,
+              "type": "text",
+              "text": "0%",
+              "font_role": "number",
+              "font_size": 380.0,
+              "font_weight": 400,
+              "italic": false,
+              "color": "#171513",
+              "align": "left",
+              "line_height": 1.0,
+              "letter_spacing": -0.01,
+              "uppercase": false
+            },
+            {
+              "id": "b1.progress.track",
+              "x": 84.0,
+              "y": 1643.7324,
+              "width": 912.0,
+              "height": 14.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 22,
+              "visible": true,
+              "type": "rectangle",
+              "fill": "#6F665A44"
+            },
+            {
+              "id": "b1.progress.fill",
+              "x": 84.0,
+              "y": 1643.7324,
+              "width": 0.0,
+              "height": 14.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 22,
+              "visible": true,
+              "type": "rectangle",
+              "fill": "#233FD1"
+            },
+            {
+              "id": "b1.kicker",
+              "x": 84.0,
+              "y": 201.59999,
+              "width": 342.884,
+              "height": 36.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 30,
+              "visible": true,
+              "type": "text",
+              "text": "01 — THE RESULT",
+              "font_role": "mono",
+              "font_size": 30.0,
+              "font_weight": 400,
+              "italic": false,
+              "color": "#171513",
+              "align": "left",
+              "line_height": 1.2,
+              "letter_spacing": 0.14,
+              "uppercase": false
+            },
+            {
+              "id": "b1.kicker_rule",
+              "x": 84.0,
+              "y": 251.59999,
+              "width": 96.0,
+              "height": 7.0,
+              "scale_x": 1.0,
+              "scale_y": 1.0,
+              "rotation_degrees": 0.0,
+              "anchor_x": 0.0,
+              "anchor_y": 0.0,
+              "opacity": 1.0,
+              "z_index": 31,
+              "visible": true,
+              "type": "rectangle",
+              "fill": "#233FD1"
+            }
+          ]
+        }
+      ],
+      "motions": [
+        {
+          "target": "b1.ghost",
+          "start": 0.25,
+          "duration": 1.2,
+          "easing": "in_out_cubic",
+          "op": "fade",
+          "from": 0.0,
+          "to": 1.0
+        },
+        {
+          "target": "b1.ghost",
+          "start": 0.0,
+          "duration": 6.3,
+          "easing": "linear",
+          "op": "move",
+          "from": [
+            46.0,
+            0.0
+          ],
+          "to": [
+            -46.0,
+            0.0
+          ]
+        },
+        {
+          "target": "b1.head.0",
+          "start": 0.3,
+          "duration": 0.88,
+          "easing": "out_quint",
+          "op": "mask_reveal",
+          "direction": "right",
+          "mode": "reveal"
+        },
+        {
+          "target": "b1.head.0",
+          "start": 0.3,
+          "duration": 1.04,
+          "easing": "out_quint",
+          "op": "move",
+          "from": [
+            0.0,
+            13.500001
+          ],
+          "to": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "target": "b1.head.1",
+          "start": 0.433,
+          "duration": 0.88,
+          "easing": "out_quint",
+          "op": "mask_reveal",
+          "direction": "right",
+          "mode": "reveal"
+        },
+        {
+          "target": "b1.head.1",
+          "start": 0.433,
+          "duration": 1.04,
+          "easing": "out_quint",
+          "op": "move",
+          "from": [
+            0.0,
+            13.500001
+          ],
+          "to": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "target": "b1.frac.rule",
+          "start": 2.748,
+          "duration": 0.72,
+          "easing": "out_quint",
+          "op": "mask_reveal",
+          "direction": "right",
+          "mode": "reveal"
+        },
+        {
+          "target": "b1.frac.num.label",
+          "start": 1.073,
+          "duration": 0.56,
+          "easing": "out_cubic",
+          "op": "fade",
+          "from": 0.0,
+          "to": 1.0
+        },
+        {
+          "target": "b1.frac.num.label",
+          "start": 1.073,
+          "duration": 0.8,
+          "easing": "out_quint",
+          "op": "move",
+          "from": [
+            0.0,
+            16.200003
+          ],
+          "to": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "target": "b1.frac.den.label",
+          "start": 2.908,
+          "duration": 0.56,
+          "easing": "out_cubic",
+          "op": "fade",
+          "from": 0.0,
+          "to": 1.0
+        },
+        {
+          "target": "b1.frac.den.label",
+          "start": 2.908,
+          "duration": 0.8,
+          "easing": "out_quint",
+          "op": "move",
+          "from": [
+            0.0,
+            16.200003
+          ],
+          "to": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "target": "b1.eq",
+          "start": 3.799,
+          "duration": 0.56,
+          "easing": "out_cubic",
+          "op": "fade",
+          "from": 0.0,
+          "to": 1.0
+        },
+        {
+          "target": "b1.eq",
+          "start": 3.799,
+          "duration": 0.8,
+          "easing": "out_quint",
+          "op": "move",
+          "from": [
+            0.0,
+            16.200003
+          ],
+          "to": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "target": "b1.result.label",
+          "start": 4.849,
+          "duration": 0.56,
+          "easing": "out_cubic",
+          "op": "fade",
+          "from": 0.0,
+          "to": 1.0
+        },
+        {
+          "target": "b1.result.label",
+          "start": 4.849,
+          "duration": 0.8,
+          "easing": "out_quint",
+          "op": "move",
+          "from": [
+            0.0,
+            16.200003
+          ],
+          "to": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "target": "b1.progress.track",
+          "start": 4.849,
+          "duration": 0.4,
+          "easing": "out_cubic",
+          "op": "fade",
+          "from": 0.0,
+          "to": 1.0
+        },
+        {
+          "target": "b1.frac.num",
+          "start": 0.913,
+          "duration": 0.88,
+          "easing": "out_quint",
+          "op": "count",
+          "from": 0.0,
+          "to": 80.0,
+          "decimals": 0
+        },
+        {
+          "target": "b1.frac.num",
+          "start": 0.913,
+          "duration": 0.264,
+          "easing": "out_cubic",
+          "op": "fade",
+          "from": 0.0,
+          "to": 1.0
+        },
+        {
+          "target": "b1.frac.num",
+          "start": 0.913,
+          "duration": 0.422,
+          "easing": "out_quint",
+          "op": "move",
+          "from": [
+            0.0,
+            22.950003
+          ],
+          "to": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "target": "b1.frac.den",
+          "start": 2.748,
+          "duration": 0.88,
+          "easing": "out_quint",
+          "op": "count",
+          "from": 0.0,
+          "to": 1000.0,
+          "decimals": 0,
+          "grouping": true
+        },
+        {
+          "target": "b1.frac.den",
+          "start": 2.748,
+          "duration": 0.264,
+          "easing": "out_cubic",
+          "op": "fade",
+          "from": 0.0,
+          "to": 1.0
+        },
+        {
+          "target": "b1.frac.den",
+          "start": 2.748,
+          "duration": 0.422,
+          "easing": "out_quint",
+          "op": "move",
+          "from": [
+            0.0,
+            22.950003
+          ],
+          "to": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "target": "b1.result",
+          "start": 3.799,
+          "duration": 1.28,
+          "easing": "out_quint",
+          "op": "count",
+          "from": 0.0,
+          "to": 8.0,
+          "decimals": 0,
+          "suffix": "%"
+        },
+        {
+          "target": "b1.result",
+          "start": 3.799,
+          "duration": 0.384,
+          "easing": "out_cubic",
+          "op": "fade",
+          "from": 0.0,
+          "to": 1.0
+        },
+        {
+          "target": "b1.result",
+          "start": 3.799,
+          "duration": 0.614,
+          "easing": "out_quint",
+          "op": "move",
+          "from": [
+            0.0,
+            32.400005
+          ],
+          "to": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "target": "b1.progress.fill",
+          "start": 4.849,
+          "duration": 1.28,
+          "easing": "out_quint",
+          "op": "accent_expand",
+          "to": {
+            "x": 84.0,
+            "y": 1643.7324,
+            "width": 72.96,
+            "height": 14.0
+          }
+        },
+        {
+          "target": "b1.kicker",
+          "start": 0.25,
+          "duration": 0.72,
+          "easing": "out_quint",
+          "op": "clip_reveal",
+          "direction": "up",
+          "mode": "reveal"
+        },
+        {
+          "target": "b1.kicker_rule",
+          "start": 0.37,
+          "duration": 0.6,
+          "easing": "out_cubic",
+          "op": "mask_reveal",
+          "direction": "right",
+          "mode": "reveal"
+        }
+      ],
+      "camera": {
+        "motions": [
+          {
+            "start": 0.0,
+            "duration": 6.3,
+            "easing": "linear",
+            "op": "push",
+            "from": 1.0,
+            "to": 1.027
+          }
+        ]
+      },
+      "lifecycle": {
+        "enter": 0.25,
+        "settle": 1.29,
+        "read": 1.64,
+        "evolve": 2.748,
+        "anticipate": 5.9,
+        "bridge": 6.3
+      }
+    }
+  ]
+}

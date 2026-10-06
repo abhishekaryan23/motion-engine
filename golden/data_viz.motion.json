@@ -1,0 +1,549 @@
+{
+  "version": "0.2",
+  "project": {
+    "name": "golden_data_viz",
+    "duration_seconds": 3.5
+  },
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "background": "#ECE3D2"
+  },
+  "theme": {
+    "fonts": {
+      "display": "font.archivo_black",
+      "display_condensed": "font.anton",
+      "serif_emotional": "font.dm_serif_italic",
+      "body": "font.fira_sans",
+      "mono": "font.space_mono",
+      "number": "font.anton"
+    },
+    "palette": {
+      "paper": "#ECE3D2",
+      "ink": "#16130F",
+      "accent": "#D63A2B",
+      "cobalt": "#1F3FBF"
+    }
+  },
+  "assets": [
+    {
+      "id": "font.archivo_black",
+      "type": "font",
+      "path": "fonts/ArchivoBlack-Regular.ttf"
+    },
+    {
+      "id": "font.anton",
+      "type": "font",
+      "path": "fonts/Anton-Regular.ttf"
+    },
+    {
+      "id": "font.dm_serif_italic",
+      "type": "font",
+      "path": "fonts/DMSerifDisplay-Italic.ttf"
+    },
+    {
+      "id": "font.fira_sans",
+      "type": "font",
+      "path": "fonts/FiraSans-Regular.ttf"
+    },
+    {
+      "id": "font.space_mono",
+      "type": "font",
+      "path": "fonts/SpaceMono-Regular.ttf"
+    }
+  ],
+  "asset_root": "../assets",
+  "scenes": [
+    {
+      "id": "data_viz",
+      "start_seconds": 0,
+      "duration_seconds": 3.5,
+      "layers": [
+        {
+          "id": "dv.paper",
+          "type": "texture",
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1920,
+          "z_index": -10,
+          "material": "paper",
+          "seed": 11,
+          "color": "#ECE3D2",
+          "intensity": 0.6,
+          "scale": 20
+        },
+        {
+          "id": "dv.l.hero",
+          "type": "text",
+          "x": 90,
+          "y": 110,
+          "width": 900,
+          "height": 50,
+          "z_index": 1,
+          "text": "Revenue, five years",
+          "font_role": "mono",
+          "font_size": 34,
+          "color": "#8C8478",
+          "align": "left",
+          "letter_spacing": 0.12,
+          "uppercase": true
+        },
+        {
+          "id": "dv.l.bars",
+          "type": "text",
+          "x": 90,
+          "y": 600,
+          "width": 900,
+          "height": 50,
+          "z_index": 1,
+          "text": "Growth by quarter",
+          "font_role": "mono",
+          "font_size": 34,
+          "color": "#8C8478",
+          "align": "left",
+          "letter_spacing": 0.12,
+          "uppercase": true
+        },
+        {
+          "id": "dv.l.cmp",
+          "type": "text",
+          "x": 90,
+          "y": 1170,
+          "width": 900,
+          "height": 50,
+          "z_index": 1,
+          "text": "Before vs after",
+          "font_role": "mono",
+          "font_size": 34,
+          "color": "#8C8478",
+          "align": "left",
+          "letter_spacing": 0.12,
+          "uppercase": true
+        },
+        {
+          "id": "dv.l.path",
+          "type": "text",
+          "x": 90,
+          "y": 1450,
+          "width": 900,
+          "height": 50,
+          "z_index": 1,
+          "text": "Adoption curve",
+          "font_role": "mono",
+          "font_size": 34,
+          "color": "#8C8478",
+          "align": "left",
+          "letter_spacing": 0.12,
+          "uppercase": true
+        },
+        {
+          "id": "dv.hero",
+          "type": "text",
+          "x": 90,
+          "y": 170,
+          "width": 900,
+          "height": 300,
+          "z_index": 1,
+          "text": "$0M",
+          "font_role": "number",
+          "font_size": 240,
+          "color": "#16130F",
+          "align": "left"
+        },
+        {
+          "id": "bars.base",
+          "type": "rectangle",
+          "x": 90,
+          "y": 1080,
+          "width": 900,
+          "height": 3,
+          "z_index": 0,
+          "fill": "#8C8478"
+        },
+        {
+          "id": "bars.bar.0",
+          "type": "rectangle",
+          "x": 118.5,
+          "y": 1080,
+          "width": 93.0,
+          "height": 0,
+          "z_index": 0,
+          "fill": "#16130F"
+        },
+        {
+          "id": "bars.bar.1",
+          "type": "rectangle",
+          "x": 268.5,
+          "y": 1080,
+          "width": 93.0,
+          "height": 0,
+          "z_index": 0,
+          "fill": "#16130F"
+        },
+        {
+          "id": "bars.bar.2",
+          "type": "rectangle",
+          "x": 418.5,
+          "y": 1080,
+          "width": 93.0,
+          "height": 0,
+          "z_index": 0,
+          "fill": "#16130F"
+        },
+        {
+          "id": "bars.bar.3",
+          "type": "rectangle",
+          "x": 568.5,
+          "y": 1080,
+          "width": 93.0,
+          "height": 0,
+          "z_index": 0,
+          "fill": "#16130F"
+        },
+        {
+          "id": "bars.bar.4",
+          "type": "rectangle",
+          "x": 718.5,
+          "y": 1080,
+          "width": 93.0,
+          "height": 0,
+          "z_index": 0,
+          "fill": "#16130F"
+        },
+        {
+          "id": "bars.bar.5",
+          "type": "rectangle",
+          "x": 868.5,
+          "y": 1080,
+          "width": 93.0,
+          "height": 0,
+          "z_index": 0,
+          "fill": "#D63A2B"
+        },
+        {
+          "id": "cmp.a.track",
+          "type": "rectangle",
+          "x": 90,
+          "y": 1230,
+          "width": 900,
+          "height": 52.0,
+          "z_index": 0,
+          "fill": "#DCD2BE"
+        },
+        {
+          "id": "cmp.a.fill",
+          "type": "rectangle",
+          "x": 90,
+          "y": 1230,
+          "width": 0,
+          "height": 52.0,
+          "z_index": 0,
+          "fill": "#16130F"
+        },
+        {
+          "id": "cmp.b.track",
+          "type": "rectangle",
+          "x": 90,
+          "y": 1308.0,
+          "width": 900,
+          "height": 52.0,
+          "z_index": 0,
+          "fill": "#DCD2BE"
+        },
+        {
+          "id": "cmp.b.fill",
+          "type": "rectangle",
+          "x": 90,
+          "y": 1308.0,
+          "width": 0,
+          "height": 52.0,
+          "z_index": 0,
+          "fill": "#D63A2B"
+        },
+        {
+          "id": "path.line",
+          "type": "polyline",
+          "x": 90,
+          "y": 1520,
+          "width": 900,
+          "height": 260,
+          "z_index": 0,
+          "points": [
+            [
+              0.0,
+              260.0
+            ],
+            [
+              180.0,
+              182.0
+            ],
+            [
+              360.0,
+              208.0
+            ],
+            [
+              540.0,
+              104.0
+            ],
+            [
+              720.0,
+              135.2
+            ],
+            [
+              900.0,
+              0.0
+            ]
+          ],
+          "stroke": {
+            "color": "#D63A2B",
+            "width": 8
+          }
+        },
+        {
+          "id": "path.dot",
+          "type": "rounded_rectangle",
+          "x": 990.0,
+          "y": 1520.0,
+          "width": 24,
+          "height": 24,
+          "anchor_x": 0.5,
+          "anchor_y": 0.5,
+          "z_index": 0,
+          "fill": "#D63A2B",
+          "radius": 12.0
+        },
+        {
+          "id": "dv.grain",
+          "type": "texture",
+          "x": 0,
+          "y": 0,
+          "width": 1080,
+          "height": 1920,
+          "z_index": 50,
+          "material": "grain",
+          "seed": 3,
+          "color": "#000000",
+          "intensity": 0.25,
+          "scale": 3,
+          "animated": true
+        }
+      ],
+      "motions": [
+        {
+          "target": "dv.l.hero",
+          "start": 0.0,
+          "duration": 0.5,
+          "easing": "out_cubic",
+          "op": "fade",
+          "from": 0,
+          "to": 1
+        },
+        {
+          "target": "dv.l.bars",
+          "start": 0.3,
+          "duration": 0.5,
+          "easing": "out_cubic",
+          "op": "fade",
+          "from": 0,
+          "to": 1
+        },
+        {
+          "target": "dv.l.cmp",
+          "start": 0.8,
+          "duration": 0.5,
+          "easing": "out_cubic",
+          "op": "fade",
+          "from": 0,
+          "to": 1
+        },
+        {
+          "target": "dv.l.path",
+          "start": 1.2,
+          "duration": 0.5,
+          "easing": "out_cubic",
+          "op": "fade",
+          "from": 0,
+          "to": 1
+        },
+        {
+          "target": "dv.hero",
+          "start": 0.2,
+          "duration": 1.6,
+          "easing": "out_quint",
+          "op": "count",
+          "from": 0,
+          "to": 2847,
+          "decimals": 0,
+          "grouping": true,
+          "prefix": "$",
+          "suffix": "M"
+        },
+        {
+          "target": "dv.hero",
+          "start": 0.2,
+          "duration": 0.45,
+          "easing": "out_cubic",
+          "op": "fade",
+          "from": 0,
+          "to": 1
+        },
+        {
+          "target": "dv.hero",
+          "start": 0.2,
+          "duration": 0.72,
+          "easing": "out_quint",
+          "op": "move",
+          "from": [
+            0,
+            54.0
+          ],
+          "to": [
+            0,
+            0
+          ]
+        },
+        {
+          "target": "bars.base",
+          "start": 0.5,
+          "duration": 0.56,
+          "easing": "out_cubic",
+          "op": "mask_reveal",
+          "direction": "right"
+        },
+        {
+          "target": "bars.bar.0",
+          "start": 0.7,
+          "duration": 0.9651,
+          "easing": "out_quint",
+          "op": "accent_expand",
+          "to": {
+            "x": 118.5,
+            "y": 945.6,
+            "width": 93.0,
+            "height": 134.4
+          }
+        },
+        {
+          "target": "bars.bar.1",
+          "start": 0.8333,
+          "duration": 1.0026,
+          "easing": "out_quint",
+          "op": "accent_expand",
+          "to": {
+            "x": 268.5,
+            "y": 907.8,
+            "width": 93.0,
+            "height": 172.2
+          }
+        },
+        {
+          "target": "bars.bar.2",
+          "start": 0.9333,
+          "duration": 0.9901,
+          "easing": "out_quint",
+          "op": "accent_expand",
+          "to": {
+            "x": 418.5,
+            "y": 920.4,
+            "width": 93.0,
+            "height": 159.6
+          }
+        },
+        {
+          "target": "bars.bar.3",
+          "start": 1.1333,
+          "duration": 1.0608,
+          "easing": "out_quint",
+          "op": "accent_expand",
+          "to": {
+            "x": 568.5,
+            "y": 849.0,
+            "width": 93.0,
+            "height": 231.0
+          }
+        },
+        {
+          "target": "bars.bar.4",
+          "start": 1.3,
+          "duration": 1.1315,
+          "easing": "out_quint",
+          "op": "accent_expand",
+          "to": {
+            "x": 718.5,
+            "y": 777.6,
+            "width": 93.0,
+            "height": 302.4
+          }
+        },
+        {
+          "target": "bars.bar.5",
+          "start": 1.4333,
+          "duration": 1.248,
+          "easing": "out_quint",
+          "op": "accent_expand",
+          "to": {
+            "x": 868.5,
+            "y": 660.0,
+            "width": 93.0,
+            "height": 420.0
+          }
+        },
+        {
+          "target": "cmp.a.fill",
+          "start": 1.0,
+          "duration": 1.2,
+          "easing": "out_quint",
+          "op": "accent_expand",
+          "to": {
+            "x": 90,
+            "y": 1230,
+            "width": 576.0,
+            "height": 52.0
+          }
+        },
+        {
+          "target": "cmp.b.fill",
+          "start": 1.42,
+          "duration": 1.38,
+          "easing": "out_quint",
+          "op": "accent_expand",
+          "to": {
+            "x": 90,
+            "y": 1308.0,
+            "width": 900.0,
+            "height": 52.0
+          }
+        },
+        {
+          "target": "path.line",
+          "start": 1.4,
+          "duration": 1.6,
+          "easing": "out_quint",
+          "op": "trim",
+          "from": 0,
+          "to": 1
+        },
+        {
+          "target": "path.dot",
+          "start": 2.872,
+          "duration": 0.22,
+          "easing": "out_cubic",
+          "op": "fade",
+          "from": 0,
+          "to": 1
+        },
+        {
+          "target": "path.dot",
+          "start": 2.872,
+          "duration": 0.32,
+          "easing": "editorial_spring",
+          "op": "scale",
+          "from": 0.3,
+          "to": 1
+        }
+      ]
+    }
+  ]
+}

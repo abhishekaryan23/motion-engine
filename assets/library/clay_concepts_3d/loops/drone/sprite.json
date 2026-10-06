@@ -1,0 +1,12 @@
+{
+  "frame_count": 47,
+  "fps": 12.0,
+  "mode": "loop",
+  "pattern": "frame_%04d.png",
+  "width": 589,
+  "height": 384,
+  "ssim_first_last": 0.875,
+  "ssim_first_last_stored": 0.8508,
+  "keyed": true,
+  "source": "drone.mp4"
+}

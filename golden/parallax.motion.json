@@ -1,0 +1,339 @@
+{
+  "version": "0.2",
+  "project": {
+    "name": "golden_parallax",
+    "duration_seconds": 4.0
+  },
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "background": "#ECE3D2"
+  },
+  "theme": {
+    "fonts": {
+      "display": "font.archivo_black",
+      "display_condensed": "font.anton",
+      "serif_emotional": "font.dm_serif_italic",
+      "body": "font.fira_sans",
+      "mono": "font.space_mono",
+      "number": "font.anton"
+    },
+    "palette": {
+      "accent": "#D63A2B",
+      "cobalt": "#1F3FBF",
+      "ink": "#16130F",
+      "paper": "#ECE3D2"
+    }
+  },
+  "assets": [
+    {
+      "id": "font.archivo_black",
+      "type": "font",
+      "path": "fonts/ArchivoBlack-Regular.ttf"
+    },
+    {
+      "id": "font.anton",
+      "type": "font",
+      "path": "fonts/Anton-Regular.ttf"
+    },
+    {
+      "id": "font.dm_serif_italic",
+      "type": "font",
+      "path": "fonts/DMSerifDisplay-Italic.ttf"
+    },
+    {
+      "id": "font.fira_sans",
+      "type": "font",
+      "path": "fonts/FiraSans-Regular.ttf"
+    },
+    {
+      "id": "font.space_mono",
+      "type": "font",
+      "path": "fonts/SpaceMono-Regular.ttf"
+    }
+  ],
+  "asset_root": "../assets",
+  "scenes": [
+    {
+      "id": "parallax",
+      "start_seconds": 0.0,
+      "duration_seconds": 4.0,
+      "layers": [
+        {
+          "id": "bg.paper",
+          "type": "texture",
+          "x": -100,
+          "y": -100,
+          "width": 1280,
+          "height": 2120,
+          "material": "paper",
+          "seed": 45,
+          "color": "#ECE3D2",
+          "intensity": 0.6,
+          "scale": 10,
+          "depth": 0.0
+        },
+        {
+          "id": "bg.halftone",
+          "type": "texture",
+          "x": -120,
+          "y": 200,
+          "width": 1320,
+          "height": 1100,
+          "material": "halftone",
+          "seed": 9,
+          "color": "#1F3FBF",
+          "intensity": 0.55,
+          "scale": 26,
+          "opacity": 0.5,
+          "depth": 0.35
+        },
+        {
+          "id": "bg.word",
+          "type": "text",
+          "x": 90,
+          "y": 860,
+          "width": 912.59,
+          "height": 392.0,
+          "text": "DEPTH",
+          "font_role": "display_condensed",
+          "font_size": 400,
+          "color": "#16130F",
+          "align": "left",
+          "line_height": 0.98,
+          "opacity": 0.09,
+          "depth": 0.35
+        },
+        {
+          "id": "mid",
+          "type": "group",
+          "depth": 0.7,
+          "children": [
+            {
+              "id": "mid.a",
+              "type": "rounded_rectangle",
+              "x": 60,
+              "y": 1330,
+              "width": 420,
+              "height": 300,
+              "fill": "#1F3FBF",
+              "radius": 22,
+              "rotation_degrees": -9
+            },
+            {
+              "id": "mid.b",
+              "type": "rounded_rectangle",
+              "x": 560,
+              "y": 1390,
+              "width": 400,
+              "height": 340,
+              "fill": "#D63A2B",
+              "radius": 22,
+              "rotation_degrees": 6
+            },
+            {
+              "id": "mid.c",
+              "type": "rounded_rectangle",
+              "x": 300,
+              "y": 1570,
+              "width": 380,
+              "height": 220,
+              "fill": "#F5EFE2",
+              "radius": 22,
+              "rotation_degrees": -3,
+              "stroke": {
+                "color": "#16130F",
+                "width": 6
+              }
+            }
+          ]
+        },
+        {
+          "id": "sub.kick",
+          "type": "text",
+          "x": 150,
+          "y": 300,
+          "width": 355.36,
+          "height": 29.4,
+          "text": "PLANES OF MOTION",
+          "font_role": "mono",
+          "font_size": 30,
+          "color": "#16130F",
+          "align": "left",
+          "line_height": 0.98,
+          "letter_spacing": 0.12
+        },
+        {
+          "id": "sub.h0",
+          "type": "text",
+          "x": 150,
+          "y": 360,
+          "width": 458.65,
+          "height": 147.0,
+          "text": "EACH",
+          "font_role": "display",
+          "font_size": 150,
+          "color": "#16130F",
+          "align": "left",
+          "line_height": 0.98,
+          "letter_spacing": -0.02,
+          "font_weight": 900
+        },
+        {
+          "id": "sub.h1",
+          "type": "text",
+          "x": 150,
+          "y": 510,
+          "width": 547.45,
+          "height": 147.0,
+          "text": "LAYER",
+          "font_role": "display",
+          "font_size": 150,
+          "color": "#16130F",
+          "align": "left",
+          "line_height": 0.98,
+          "letter_spacing": -0.02,
+          "font_weight": 900
+        },
+        {
+          "id": "sub.h2",
+          "type": "text",
+          "x": 150,
+          "y": 660,
+          "width": 758.05,
+          "height": 147.0,
+          "text": "TRAVELS",
+          "font_role": "display",
+          "font_size": 150,
+          "color": "#16130F",
+          "align": "left",
+          "line_height": 0.98,
+          "letter_spacing": -0.02,
+          "font_weight": 900
+        },
+        {
+          "id": "fg.rule",
+          "type": "rectangle",
+          "x": 700,
+          "y": 1080,
+          "width": 260,
+          "height": 16,
+          "fill": "#D63A2B",
+          "depth": 1.45
+        },
+        {
+          "id": "fg.dot",
+          "type": "rounded_rectangle",
+          "x": 820,
+          "y": 1110,
+          "width": 90,
+          "height": 90,
+          "fill": "#16130F",
+          "radius": 45,
+          "depth": 1.45
+        }
+      ],
+      "motions": [
+        {
+          "target": "sub.h0",
+          "start": 0.2,
+          "duration": 0.7,
+          "easing": "out_cubic",
+          "op": "fade",
+          "from": 0.0,
+          "to": 1.0
+        },
+        {
+          "target": "sub.h0",
+          "start": 0.2,
+          "duration": 0.9,
+          "easing": "out_quint",
+          "op": "move",
+          "from": [
+            0,
+            40
+          ],
+          "to": [
+            0,
+            0
+          ]
+        },
+        {
+          "target": "sub.h1",
+          "start": 0.38,
+          "duration": 0.7,
+          "easing": "out_cubic",
+          "op": "fade",
+          "from": 0.0,
+          "to": 1.0
+        },
+        {
+          "target": "sub.h1",
+          "start": 0.38,
+          "duration": 0.9,
+          "easing": "out_quint",
+          "op": "move",
+          "from": [
+            0,
+            40
+          ],
+          "to": [
+            0,
+            0
+          ]
+        },
+        {
+          "target": "sub.h2",
+          "start": 0.56,
+          "duration": 0.7,
+          "easing": "out_cubic",
+          "op": "fade",
+          "from": 0.0,
+          "to": 1.0
+        },
+        {
+          "target": "sub.h2",
+          "start": 0.56,
+          "duration": 0.9,
+          "easing": "out_quint",
+          "op": "move",
+          "from": [
+            0,
+            40
+          ],
+          "to": [
+            0,
+            0
+          ]
+        }
+      ],
+      "camera": {
+        "motions": [
+          {
+            "start": 0.0,
+            "duration": 4.0,
+            "easing": "in_out_cubic",
+            "op": "push",
+            "from": 1.0,
+            "to": 1.09
+          },
+          {
+            "start": 0.0,
+            "duration": 4.0,
+            "easing": "in_out_cubic",
+            "op": "track",
+            "from": [
+              0,
+              0
+            ],
+            "to": [
+              40,
+              -70
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

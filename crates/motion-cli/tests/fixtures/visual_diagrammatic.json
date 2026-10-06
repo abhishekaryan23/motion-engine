@@ -1,0 +1,7 @@
+{
+  "version": "0.2",
+  "tone": { "value": "technical", "confidence": 0.9 },
+  "visual_language": {
+    "medium": { "value": "diagrammatic", "confidence": 0.9 }
+  }
+}

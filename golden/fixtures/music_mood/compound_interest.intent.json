@@ -1,0 +1,21 @@
+{
+  "version": "0.2",
+  "title": "compound_interest",
+  "format": "vertical",
+  "beats": [
+    { "purpose": "emphasize", "statement": "Leave it alone",
+      "narration": "Put one thousand dollars away today, and then leave it alone for thirty years.",
+      "primary": { "kind": "object", "asset": "piggy_bank" } },
+    { "purpose": "emphasize", "statement": "At seven percent a year",
+      "narration": "At seven percent a year, the interest starts earning interest of its own.",
+      "primary": { "kind": "number", "value": "7%", "meaning": "every year" } },
+    { "purpose": "compare", "statement": "Time does the heavy lifting",
+      "narration": "Time does the heavy lifting: the last ten years add more than the first twenty.",
+      "primary": { "kind": "phrase", "value": "first 20 years" },
+      "secondary": { "kind": "phrase", "value": "last 10 years" },
+      "relationship": "grow" },
+    { "purpose": "reveal", "statement": "Patience pays",
+      "narration": "So that one thousand dollars quietly grows into about seven thousand six hundred.",
+      "primary": { "kind": "number", "value": "$7,600", "meaning": "after 30 years" } }
+  ]
+}

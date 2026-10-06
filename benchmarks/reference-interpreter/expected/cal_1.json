@@ -1,0 +1,12 @@
+{
+  "case": "cal_1",
+  "known_style": "dark_technical",
+  "source": "examples/taste/dark_technical.style.json",
+  "comment": "Ground truth for the 0.6 calibration reference. Values are ReferenceStyleProfile vocabulary; a list is the set of accepted values. Only dimensions the source style states unambiguously.",
+  "expected": {
+    "tone": ["technical"],
+    "polarity": ["dark"],
+    "temperature": ["cool"],
+    "visual_density": ["balanced"]
+  }
+}

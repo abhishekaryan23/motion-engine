@@ -1,0 +1,91 @@
+{
+  "version": "0.2",
+  "title": "weekly_basket",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "The basket costs more.",
+      "primary": {
+        "kind": "phrase",
+        "value": "every month",
+        "meaning": "the basket"
+      },
+      "energy": "building",
+      "keyword": "more"
+    },
+    {
+      "purpose": "compare",
+      "statement": "Same basket, three years apart.",
+      "primary": {
+        "kind": "number",
+        "value": "₹1,800",
+        "meaning": "2022 basket"
+      },
+      "secondary": {
+        "kind": "number",
+        "value": "₹2,640",
+        "meaning": "2025 basket"
+      },
+      "energy": "building",
+      "continuity": "carry_secondary",
+      "keyword": "basket"
+    },
+    {
+      "purpose": "explain",
+      "statement": "Where the extra money goes.",
+      "primary": {
+        "kind": "collection",
+        "meaning": "extra per week",
+        "items": [
+          {
+            "kind": "number",
+            "value": "₹420",
+            "meaning": "milk"
+          },
+          {
+            "kind": "number",
+            "value": "₹260",
+            "meaning": "vegetables"
+          },
+          {
+            "kind": "number",
+            "value": "₹160",
+            "meaning": "cooking oil"
+          }
+        ]
+      },
+      "relationship": "accumulate",
+      "energy": "calm"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "Food now takes a quarter of pay.",
+      "primary": {
+        "kind": "derived_metric",
+        "meaning": "share of weekly pay",
+        "numerator": {
+          "value": 2640,
+          "meaning": "food"
+        },
+        "denominator": {
+          "value": 11000,
+          "meaning": "weekly pay"
+        },
+        "format": "percent"
+      },
+      "energy": "building",
+      "keyword": "quarter"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "Every shopper is now a planner.",
+      "primary": {
+        "kind": "phrase",
+        "value": "a shopper with a list",
+        "meaning": "planning"
+      },
+      "energy": "calm"
+    }
+  ]
+}

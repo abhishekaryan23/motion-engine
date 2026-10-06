@@ -1,0 +1,27 @@
+{
+  "story": {
+    "title": "ferry or bridge",
+    "beats": [
+      {
+        "say": "For years, crossing the bay meant forty minutes on a ferry, every single day.",
+        "show": "The ferry crossing",
+        "number": "40 min",
+        "meaning": "by ferry",
+        "picture": "clock"
+      },
+      {
+        "say": "Then the bridge opened, and the same crossing shrank to six minutes, with no timetable at all.",
+        "show": "Then the bridge",
+        "compare": { "a": "ferry", "b": "bridge", "how": "replace" }
+      },
+      {
+        "say": "Two trips a day add up fast, and commuters got more than six full workweeks of their lives back each year.",
+        "show": "Time given back",
+        "number": "260 hours",
+        "meaning": "saved per year",
+        "energy": "impact"
+      }
+    ]
+  },
+  "style": "editorial"
+}

@@ -1,0 +1,7 @@
+{
+  "title": "ai workflow",
+  "beats": [
+    {"say": "Five tools now run the modern AI workflow from end to end.", "list": ["robot", "microchip", "brain_circuit", "chat_bubbles", "ai sparkles"], "meaning": "AI tools"},
+    {"say": "Three habits make the whole morning feel much calmer.", "list": ["coffee_cup", "a short walk", "clock"], "show": "Calm mornings"}
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "coverage": 0.4641615152359009,
+  "edges": {
+    "bottom": true,
+    "left": false,
+    "right": false,
+    "top": false
+  },
+  "occupancy": {
+    "cols": 16,
+    "rows": [
+      "0000000000000000",
+      "000004dffd300000",
+      "00000affff900000",
+      "000007ffff700000",
+      "000001affc000000",
+      "0000038ff9300000",
+      "0003cffffffc3000",
+      "000dffffffffd000",
+      "001ffffffffff200",
+      "002ffffffffff200",
+      "002ffffffffff200",
+      "001ffffffffff100",
+      "000ffffffffff000",
+      "000dffffffffe000",
+      "000cffffffffd000",
+      "000cffffffffc000"
+    ]
+  },
+  "subject_bounds": {
+    "height": 0.9388889074325562,
+    "width": 0.6407407522201538,
+    "x": 0.1796296238899231,
+    "y": 0.06111111119389534
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "version": "0.2",
+  "title": "face_your_fears",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "Face your fears",
+      "narration": "The thing you are avoiding is usually smaller than the story you tell about it.",
+      "primary": {
+        "kind": "phrase",
+        "value": "FACE YOUR FEARS",
+        "meaning": "courage"
+      },
+      "secondary": {
+        "kind": "object",
+        "asset": "theatre_masks",
+        "meaning": "the story"
+      },
+      "energy": "impact",
+      "keyword": "fears"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "Fear is a forecast",
+      "narration": "Fear is just your brain forecasting the worst, and it is wrong most of the time.",
+      "primary": {
+        "kind": "phrase",
+        "value": "FEAR IS A FORECAST",
+        "meaning": "prediction"
+      },
+      "secondary": {
+        "kind": "object",
+        "asset": "brain_model",
+        "meaning": "the brain"
+      },
+      "energy": "building",
+      "keyword": "forecast"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "Do it scared",
+      "narration": "So take the first step anyway. Do it scared, and watch the fear shrink.",
+      "primary": {
+        "kind": "phrase",
+        "value": "DO IT SCARED",
+        "meaning": "action"
+      },
+      "secondary": {
+        "kind": "object",
+        "asset": "trophy",
+        "meaning": "the win"
+      },
+      "energy": "impact",
+      "keyword": "scared"
+    }
+  ]
+}

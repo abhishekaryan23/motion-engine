@@ -1,0 +1,1665 @@
+{
+ "version": "0.1",
+ "family": "editorial_cutout",
+ "assets": [
+  {
+   "id": "phone",
+   "file": "phone.png",
+   "role": "object",
+   "subject": "smartphone",
+   "tags": [
+    "app",
+    "device",
+    "mobile",
+    "phone",
+    "screen",
+    "smartphone"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0535,
+    0.0609,
+    0.9465,
+    0.9391
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "7KzRCyEgWrGusP9OAFQE",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.053547524,
+     "y": 0.0608828,
+     "width": 0.89290494,
+     "height": 0.8782344
+    },
+    "coverage": 0.41876894,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 747,
+   "height": 657
+  },
+  {
+   "id": "plant",
+   "file": "plant.png",
+   "role": "object",
+   "subject": "potted plant",
+   "tags": [
+    "green",
+    "growth",
+    "office",
+    "plant"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.062,
+    0.0539,
+    0.938,
+    0.9461
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-sunburst (low, 1k)",
+    "history_id": "Em0uimD2ZicYdqztSNMM",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.061978545,
+     "y": 0.05388601,
+     "width": 0.8760429,
+     "height": 0.892228
+    },
+    "coverage": 0.34915116,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 839,
+   "height": 965
+  },
+  {
+   "id": "hand_pointing",
+   "file": "hand_pointing.png",
+   "role": "object",
+   "subject": "hand pointing right",
+   "tags": [
+    "direction",
+    "gesture",
+    "hand",
+    "pointing"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0535,
+    0.1367,
+    0.9465,
+    0.8613
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "tgbu6yrk5CynAmbxmk6U",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05352798,
+     "y": 0.13671875,
+     "width": 0.89294404,
+     "height": 0.7246094
+    },
+    "coverage": 0.3637232,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 822,
+   "height": 512
+  },
+  {
+   "id": "laptop",
+   "file": "laptop.png",
+   "role": "object",
+   "subject": "laptop computer",
+   "tags": [
+    "computer",
+    "device",
+    "laptop",
+    "screen",
+    "work"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0538,
+    0.0633,
+    0.9462,
+    0.9367
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "q2zOeayo9qx5cuDZHXhF",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.053846154,
+     "y": 0.06334842,
+     "width": 0.8923077,
+     "height": 0.8733032
+    },
+    "coverage": 0.46157134,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 780,
+   "height": 663
+  },
+  {
+   "id": "document",
+   "file": "document.png",
+   "role": "object",
+   "subject": "printed document page",
+   "tags": [
+    "contract",
+    "document",
+    "page",
+    "paper",
+    "paperwork",
+    "report"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0694,
+    0.0533,
+    0.9306,
+    0.9467
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "TFRMuBfhkY5RofAzJYzY",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.06944445,
+     "y": 0.053333335,
+     "width": 0.8611111,
+     "height": 0.8933333
+    },
+    "coverage": 0.6363657,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 576,
+   "height": 750
+  },
+  {
+   "id": "envelope",
+   "file": "envelope.png",
+   "role": "object",
+   "subject": "kraft envelope",
+   "tags": [
+    "envelope",
+    "letter",
+    "mail",
+    "message",
+    "post"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.053,
+    0.0673,
+    0.947,
+    0.9327
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "00t0FXPP0ZfU9OrjBA9R",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.053008597,
+     "y": 0.06727273,
+     "width": 0.8939828,
+     "height": 0.86545455
+    },
+    "coverage": 0.603553,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 698,
+   "height": 550
+  },
+  {
+   "id": "coin_stack",
+   "file": "coin_stack.png",
+   "role": "object",
+   "subject": "stack of coins",
+   "tags": [
+    "cash",
+    "coin",
+    "coins",
+    "cost",
+    "money",
+    "price",
+    "savings"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0541,
+    0.0545,
+    0.9459,
+    0.9455
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "XXU0sDxOZ05nOppjGRfO",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.054054055,
+     "y": 0.054545455,
+     "width": 0.8918919,
+     "height": 0.8909091
+    },
+    "coverage": 0.6454742,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 555,
+   "height": 550
+  },
+  {
+   "id": "receipt",
+   "file": "receipt.png",
+   "role": "object",
+   "subject": "till receipt",
+   "tags": [
+    "bill",
+    "invoice",
+    "payment",
+    "price",
+    "purchase",
+    "receipt"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.3008,
+    0.0533,
+    0.6973,
+    0.9467
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "NZHxFqQVwErNxv2Frfkm",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.30078125,
+     "y": 0.05326087,
+     "width": 0.39648438,
+     "height": 0.8934783
+    },
+    "coverage": 0.31115404,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 512,
+   "height": 920
+  },
+  {
+   "id": "clock",
+   "file": "clock.png",
+   "role": "object",
+   "subject": "wall clock",
+   "tags": [
+    "clock",
+    "deadline",
+    "hour",
+    "late",
+    "time"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0551,
+    0.0542,
+    0.9449,
+    0.9458
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "q8UYDEZDiZKOOmsuUTQd",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05513017,
+     "y": 0.05421687,
+     "width": 0.8897397,
+     "height": 0.8915663
+    },
+    "coverage": 0.6233095,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 653,
+   "height": 664
+  },
+  {
+   "id": "calendar_page",
+   "file": "calendar_page.png",
+   "role": "object",
+   "subject": "calendar page",
+   "tags": [
+    "calendar",
+    "date",
+    "deadline",
+    "month",
+    "schedule"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.07,
+    0.054,
+    0.93,
+    0.946
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "ft7OD7KKZTsAjU58Ekax",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "WARN",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.070017956,
+     "y": 0.05401662,
+     "width": 0.8599641,
+     "height": 0.89196676
+    },
+    "coverage": 0.7505607,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 557,
+   "height": 722
+  },
+  {
+   "id": "chart_printout",
+   "file": "chart_printout.png",
+   "role": "object",
+   "subject": "bar chart printout",
+   "tags": [
+    "chart",
+    "data",
+    "graph",
+    "growth",
+    "report",
+    "results"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0531,
+    0.0641,
+    0.9469,
+    0.9359
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "k2gPGv0dDKJpdbKhCOjy",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.053146854,
+     "y": 0.064080946,
+     "width": 0.8937063,
+     "height": 0.8718381
+    },
+    "coverage": 0.6088657,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 715,
+   "height": 593
+  },
+  {
+   "id": "magnifier",
+   "file": "magnifier.png",
+   "role": "object",
+   "subject": "magnifying glass",
+   "tags": [
+    "detail",
+    "inspect",
+    "magnifier",
+    "magnifying",
+    "research",
+    "search"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.058,
+    0.0535,
+    0.942,
+    0.9465
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "2QwHLNQYKTFvyjUFXtro",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.058007564,
+     "y": 0.053488374,
+     "width": 0.88398486,
+     "height": 0.89302325
+    },
+    "coverage": 0.24040881,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 793,
+   "height": 860
+  },
+  {
+   "id": "key",
+   "file": "key.png",
+   "role": "object",
+   "subject": "brass key",
+   "tags": [
+    "access",
+    "key",
+    "secret",
+    "security",
+    "unlock"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0533,
+    0.0536,
+    0.9467,
+    0.9464
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "ESBszYXLNTHMnHIqA10m",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.053262316,
+     "y": 0.053619303,
+     "width": 0.89347535,
+     "height": 0.8927614
+    },
+    "coverage": 0.16166827,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 751,
+   "height": 746
+  },
+  {
+   "id": "lightbulb",
+   "file": "lightbulb.png",
+   "role": "object",
+   "subject": "light bulb",
+   "tags": [
+    "bulb",
+    "energy",
+    "idea",
+    "insight",
+    "lightbulb"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.1562,
+    0.0541,
+    0.8438,
+    0.9459
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "ssrt67g4uZu50sn0rXN5",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.15625,
+     "y": 0.05409154,
+     "width": 0.6875,
+     "height": 0.8918169
+    },
+    "coverage": 0.39650333,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 512,
+   "height": 721
+  },
+  {
+   "id": "hand_holding_phone",
+   "file": "hand_holding_phone.png",
+   "role": "object",
+   "subject": "hand holding a phone",
+   "tags": [
+    "app",
+    "hand",
+    "mobile",
+    "phone",
+    "smartphone",
+    "user"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0773,
+    0.0564,
+    0.9227,
+    1.0
+   ],
+   "open_edge": true,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "0XctCAe1aMXYUtNveSF5",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "WARN",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.07725947,
+     "y": 0.05638298,
+     "width": 0.84548104,
+     "height": 0.94361705
+    },
+    "coverage": 0.41437876,
+    "edges": {
+     "top": false,
+     "bottom": true,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 686,
+   "height": 940
+  },
+  {
+   "id": "shopping_bag",
+   "file": "shopping_bag.png",
+   "role": "object",
+   "subject": "paper shopping bag",
+   "tags": [
+    "bag",
+    "purchase",
+    "retail",
+    "shop",
+    "shopping",
+    "store"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0854,
+    0.0531,
+    0.9146,
+    0.9469
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "V4aSOS75NHqyC24lnhqP",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.085388996,
+     "y": 0.053066038,
+     "width": 0.829222,
+     "height": 0.8938679
+    },
+    "coverage": 0.5282616,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 527,
+   "height": 848
+  },
+  {
+   "id": "parcel",
+   "file": "parcel.png",
+   "role": "object",
+   "subject": "cardboard parcel",
+   "tags": [
+    "box",
+    "delivery",
+    "order",
+    "package",
+    "parcel",
+    "shipping"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0534,
+    0.0611,
+    0.9466,
+    0.9389
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "jSfqqegAI7aaesQz9lyq",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.053435113,
+     "y": 0.06113537,
+     "width": 0.89312977,
+     "height": 0.87772924
+    },
+    "coverage": 0.5906252,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 786,
+   "height": 687
+  },
+  {
+   "id": "coffee_cup",
+   "file": "coffee_cup.png",
+   "role": "object",
+   "subject": "coffee cup",
+   "tags": [
+    "break",
+    "cafe",
+    "coffee",
+    "cup",
+    "morning"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0536,
+    0.0647,
+    0.9464,
+    0.9353
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "ivhLSfEuJWqIVDiLSjcZ",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05357143,
+     "y": 0.06467662,
+     "width": 0.89285713,
+     "height": 0.8706468
+    },
+    "coverage": 0.5793651,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 728,
+   "height": 603
+  },
+  {
+   "id": "notebook",
+   "file": "notebook.png",
+   "role": "object",
+   "subject": "closed notebook",
+   "tags": [
+    "journal",
+    "notebook",
+    "notes",
+    "plan"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0593,
+    0.0542,
+    0.9407,
+    0.9458
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "1XD3Adxz2qQYNvcJgVgQ",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.059270516,
+     "y": 0.054166667,
+     "width": 0.88145894,
+     "height": 0.89166665
+    },
+    "coverage": 0.52192885,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 658,
+   "height": 720
+  },
+  {
+   "id": "pen",
+   "file": "pen.png",
+   "role": "object",
+   "subject": "fountain pen",
+   "tags": [
+    "pen",
+    "sign",
+    "signature",
+    "writing"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0666,
+    0.0536,
+    0.9334,
+    0.9464
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "LjMnPDQzRMv5KroM0k72",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.06655844,
+     "y": 0.05359477,
+     "width": 0.8668831,
+     "height": 0.89281046
+    },
+    "coverage": 0.13503735,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 616,
+   "height": 765
+  },
+  {
+   "id": "globe",
+   "file": "globe.png",
+   "role": "object",
+   "subject": "desk globe",
+   "tags": [
+    "earth",
+    "global",
+    "globe",
+    "international",
+    "world"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0812,
+    0.0531,
+    0.9188,
+    0.9469
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "ea8cGiwJQi5UKYKdrgMI",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.08122744,
+     "y": 0.05312869,
+     "width": 0.8375451,
+     "height": 0.8937426
+    },
+    "coverage": 0.44616377,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 554,
+   "height": 847
+  },
+  {
+   "id": "building",
+   "file": "building.png",
+   "role": "object",
+   "subject": "building facade",
+   "tags": [
+    "bank",
+    "building",
+    "city",
+    "company",
+    "headquarters",
+    "office"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0851,
+    0.0537,
+    0.9149,
+    0.9463
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "ykXnIILIoaW1EBagyWEC",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.08514493,
+     "y": 0.05365297,
+     "width": 0.8297101,
+     "height": 0.89269406
+    },
+    "coverage": 0.69264734,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 552,
+   "height": 876
+  },
+  {
+   "id": "door",
+   "file": "door.png",
+   "role": "object",
+   "subject": "closed door",
+   "tags": [
+    "access",
+    "door",
+    "entrance",
+    "exit",
+    "opportunity"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.1641,
+    0.0539,
+    0.834,
+    0.9461
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "S7x7OZ7MHLbe6Eisb2YX",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.1640625,
+     "y": 0.053899083,
+     "width": 0.6699219,
+     "height": 0.89220184
+    },
+    "coverage": 0.5943346,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 512,
+   "height": 872
+  },
+  {
+   "id": "chair",
+   "file": "chair.png",
+   "role": "object",
+   "subject": "office chair",
+   "tags": [
+    "chair",
+    "desk",
+    "office",
+    "seat"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0813,
+    0.0538,
+    0.9187,
+    0.9462
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "at8U73gnRMsnhSXGvfMQ",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.08131488,
+     "y": 0.053837344,
+     "width": 0.8373702,
+     "height": 0.89232534
+    },
+    "coverage": 0.26740706,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 578,
+   "height": 873
+  },
+  {
+   "id": "figure_worker_half",
+   "file": "figure_worker_half.png",
+   "role": "figure",
+   "subject": "office worker, half figure",
+   "tags": [
+    "employee",
+    "office",
+    "person",
+    "worker"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.1089,
+    0.0566,
+    0.8911,
+    1.0
+   ],
+   "open_edge": true,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-sunburst (low, 1k)",
+    "history_id": "0jC30pQSk2e5ppkhi1n9",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.10885341,
+     "y": 0.056646526,
+     "width": 0.7822932,
+     "height": 0.9433535
+    },
+    "coverage": 0.484914,
+    "edges": {
+     "top": false,
+     "bottom": true,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 689,
+   "height": 1324
+  },
+  {
+   "id": "figure_walking",
+   "file": "figure_walking.png",
+   "role": "figure",
+   "subject": "person walking",
+   "tags": [
+    "commuter",
+    "pedestrian",
+    "person",
+    "walking"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0951,
+    0.0539,
+    0.9049,
+    0.9461
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-sunburst (low, 1k)",
+    "history_id": "tryL4fhhwuWtg5b2Sm4r",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.09506618,
+     "y": 0.053851396,
+     "width": 0.8098676,
+     "height": 0.8922972
+    },
+    "coverage": 0.2721239,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 831,
+   "height": 1467
+  },
+  {
+   "id": "figure_seated_laptop",
+   "file": "figure_seated_laptop.png",
+   "role": "figure",
+   "subject": "person working on a laptop",
+   "tags": [
+    "freelancer",
+    "laptop",
+    "person",
+    "remote",
+    "worker"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0921,
+    0.0534,
+    0.9079,
+    0.9466
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-sunburst (low, 1k)",
+    "history_id": "gccZwi5cSzgwgaqzGPo4",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.09205021,
+     "y": 0.05335489,
+     "width": 0.8158996,
+     "height": 0.8932902
+    },
+    "coverage": 0.32031313,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 717,
+   "height": 1237
+  },
+  {
+   "id": "figure_shopper",
+   "file": "figure_shopper.png",
+   "role": "figure",
+   "subject": "shopper with a bag",
+   "tags": [
+    "customer",
+    "person",
+    "shopper",
+    "shopping"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.1128,
+    0.0533,
+    0.8872,
+    0.9467
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-sunburst (low, 1k)",
+    "history_id": "BjDwQTr9t41YFILDd6TZ",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.11275964,
+     "y": 0.053258583,
+     "width": 0.7744807,
+     "height": 0.8934828
+    },
+    "coverage": 0.36851814,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 674,
+   "height": 1427
+  },
+  {
+   "id": "figure_two_talking",
+   "file": "figure_two_talking.png",
+   "role": "figure",
+   "subject": "two people talking",
+   "tags": [
+    "conversation",
+    "meeting",
+    "people",
+    "talking",
+    "team"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0795,
+    0.0323,
+    0.9205,
+    0.9456
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-sunburst (low, 1k)",
+    "history_id": "YmKY2KF2BVQlXAN9kIjq",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.07952872,
+     "y": 0.032258064,
+     "width": 0.84094256,
+     "height": 0.9133065
+    },
+    "coverage": 0.34822765,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 679,
+   "height": 992
+  },
+  {
+   "id": "tex_paper_grain",
+   "file": "tex_paper_grain.png",
+   "role": "texture",
+   "subject": "warm paper grain",
+   "tags": [
+    "grain",
+    "ground",
+    "paper"
+   ],
+   "alpha": false,
+   "cutout_bbox": null,
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "03wYwoJxb7lREhcpjmA3",
+    "keyed": null
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.0,
+     "y": 0.0,
+     "width": 1.0,
+     "height": 1.0
+    },
+    "coverage": 1.0,
+    "edges": {
+     "top": true,
+     "bottom": true,
+     "left": true,
+     "right": true
+    }
+   },
+   "width": 1008,
+   "height": 1792
+  },
+  {
+   "id": "tex_halftone_field",
+   "file": "tex_halftone_field.png",
+   "role": "texture",
+   "subject": "halftone dot field",
+   "tags": [
+    "dots",
+    "ground",
+    "halftone",
+    "print"
+   ],
+   "alpha": false,
+   "cutout_bbox": null,
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "NMn4DqEQ4xZT0MMasvt1",
+    "keyed": null
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.0,
+     "y": 0.0,
+     "width": 1.0,
+     "height": 1.0
+    },
+    "coverage": 1.0,
+    "edges": {
+     "top": true,
+     "bottom": true,
+     "left": true,
+     "right": true
+    }
+   },
+   "width": 1008,
+   "height": 1792
+  },
+  {
+   "id": "tex_soft_gradient",
+   "file": "tex_soft_gradient.png",
+   "role": "texture",
+   "subject": "soft teal-grey gradient",
+   "tags": [
+    "gradient",
+    "ground",
+    "sky"
+   ],
+   "alpha": false,
+   "cutout_bbox": null,
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "x6CkPAmlp8xpJngnta89",
+    "keyed": null
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.0,
+     "y": 0.0,
+     "width": 1.0,
+     "height": 1.0
+    },
+    "coverage": 1.0,
+    "edges": {
+     "top": true,
+     "bottom": true,
+     "left": true,
+     "right": true
+    }
+   },
+   "width": 1008,
+   "height": 1792
+  },
+  {
+   "id": "tex_vignette_ground",
+   "file": "tex_vignette_ground.png",
+   "role": "texture",
+   "subject": "vignette studio ground",
+   "tags": [
+    "ground",
+    "studio",
+    "vignette"
+   ],
+   "alpha": false,
+   "cutout_bbox": null,
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "VidpInx5VzccABf5I1pA",
+    "keyed": null
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.0,
+     "y": 0.0,
+     "width": 1.0,
+     "height": 1.0
+    },
+    "coverage": 1.0,
+    "edges": {
+     "top": true,
+     "bottom": true,
+     "left": true,
+     "right": true
+    }
+   },
+   "width": 1008,
+   "height": 1792
+  },
+  {
+   "id": "tex_ink_wash",
+   "file": "tex_ink_wash.png",
+   "role": "texture",
+   "subject": "ink wash",
+   "tags": [
+    "ground",
+    "ink",
+    "wash",
+    "watercolour"
+   ],
+   "alpha": false,
+   "cutout_bbox": null,
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "inX5ZwO4ojL93ZBiGCIj",
+    "keyed": null
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.0,
+     "y": 0.0,
+     "width": 1.0,
+     "height": 1.0
+    },
+    "coverage": 1.0,
+    "edges": {
+     "top": true,
+     "bottom": true,
+     "left": true,
+     "right": true
+    }
+   },
+   "width": 1008,
+   "height": 1792
+  },
+  {
+   "id": "tex_kraft_paper",
+   "file": "tex_kraft_paper.png",
+   "role": "texture",
+   "subject": "kraft paper",
+   "tags": [
+    "ground",
+    "kraft",
+    "paper"
+   ],
+   "alpha": false,
+   "cutout_bbox": null,
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "sq6NsfSclUvUYr6ptyzD",
+    "keyed": null
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.0,
+     "y": 0.0,
+     "width": 1.0,
+     "height": 1.0
+    },
+    "coverage": 1.0,
+    "edges": {
+     "top": true,
+     "bottom": true,
+     "left": true,
+     "right": true
+    }
+   },
+   "width": 1008,
+   "height": 1792
+  },
+  {
+   "id": "tex_charcoal_paper",
+   "file": "tex_charcoal_paper.png",
+   "role": "texture",
+   "subject": "charcoal paper",
+   "tags": [
+    "charcoal",
+    "dark",
+    "ground",
+    "paper"
+   ],
+   "alpha": false,
+   "cutout_bbox": null,
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "O2gwex0Okdu5WvlIh2DU",
+    "keyed": null
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.0,
+     "y": 0.0,
+     "width": 1.0,
+     "height": 1.0
+    },
+    "coverage": 1.0,
+    "edges": {
+     "top": true,
+     "bottom": true,
+     "left": true,
+     "right": true
+    }
+   },
+   "width": 1008,
+   "height": 1792
+  },
+  {
+   "id": "torn_paper_strip",
+   "file": "torn_paper_strip.png",
+   "role": "object",
+   "subject": "torn paper strip",
+   "tags": [
+    "banner",
+    "label",
+    "paper",
+    "strip",
+    "torn"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0534,
+    0.1855,
+    0.9466,
+    0.8145
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library (OpenArt)",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "2O5ZUy45NQqOVKyLx9VY",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.053394858,
+     "y": 0.18554688,
+     "width": 0.8932103,
+     "height": 0.62890625
+    },
+    "coverage": 0.48178327,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1517,
+   "height": 512
+  }
+ ]
+}

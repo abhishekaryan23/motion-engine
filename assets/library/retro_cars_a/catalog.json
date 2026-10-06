@@ -1,0 +1,2606 @@
+{
+ "version": "0.1",
+ "family": "retro_cars_a",
+ "assets": [
+  {
+   "id": "car_a_01",
+   "file": "car_a_01.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0748,
+    0.9468,
+    0.9252
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0041"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.074846625,
+     "width": 0.89354277,
+     "height": 0.85030675
+    },
+    "coverage": 0.24459791,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 815
+  },
+  {
+   "id": "car_a_02",
+   "file": "car_a_02.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0734,
+    0.9468,
+    0.9266
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0042"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.073405534,
+     "width": 0.89354277,
+     "height": 0.85318893
+    },
+    "coverage": 0.18644561,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 831
+  },
+  {
+   "id": "car_a_03",
+   "file": "car_a_03.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.073,
+    0.9468,
+    0.927
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0043"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.07296651,
+     "width": 0.89354277,
+     "height": 0.85406697
+    },
+    "coverage": 0.22254962,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 836
+  },
+  {
+   "id": "car_a_04",
+   "file": "car_a_04.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.083,
+    0.9468,
+    0.917
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0044"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.082993194,
+     "width": 0.89354277,
+     "height": 0.8340136
+    },
+    "coverage": 0.23748739,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 735
+  },
+  {
+   "id": "car_a_05",
+   "file": "car_a_05.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0798,
+    0.9468,
+    0.9202
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0045"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.07984293,
+     "width": 0.89354277,
+     "height": 0.84031415
+    },
+    "coverage": 0.29227313,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 764
+  },
+  {
+   "id": "car_a_06",
+   "file": "car_a_06.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0825,
+    0.9468,
+    0.9175
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0046"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.08254398,
+     "width": 0.89354277,
+     "height": 0.83491206
+    },
+    "coverage": 0.21792692,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 739
+  },
+  {
+   "id": "car_a_07",
+   "file": "car_a_07.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0767,
+    0.9468,
+    0.9233
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0047"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.07672956,
+     "width": 0.89354277,
+     "height": 0.84654087
+    },
+    "coverage": 0.17159714,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 795
+  },
+  {
+   "id": "car_a_08",
+   "file": "car_a_08.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0721,
+    0.9468,
+    0.9279
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0048"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.07210402,
+     "width": 0.89354277,
+     "height": 0.855792
+    },
+    "coverage": 0.17981035,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 846
+  },
+  {
+   "id": "car_a_09",
+   "file": "car_a_09.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0717,
+    0.9468,
+    0.9283
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0049"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.071680374,
+     "width": 0.89354277,
+     "height": 0.85663927
+    },
+    "coverage": 0.24008404,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 851
+  },
+  {
+   "id": "car_a_10",
+   "file": "car_a_10.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0712,
+    0.9468,
+    0.9288
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+004A"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.07117853,
+     "width": 0.89354277,
+     "height": 0.85764295
+    },
+    "coverage": 0.23611934,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 857
+  },
+  {
+   "id": "car_a_11",
+   "file": "car_a_11.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0716,
+    0.9468,
+    0.9284
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+004B"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.07159624,
+     "width": 0.89354277,
+     "height": 0.85680753
+    },
+    "coverage": 0.22598915,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 852
+  },
+  {
+   "id": "car_a_12",
+   "file": "car_a_12.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0723,
+    0.9468,
+    0.9277
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+004C"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.07227488,
+     "width": 0.89354277,
+     "height": 0.8554502
+    },
+    "coverage": 0.2559645,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 844
+  },
+  {
+   "id": "car_a_13",
+   "file": "car_a_13.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0705,
+    0.9468,
+    0.9295
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+004D"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.07052023,
+     "width": 0.89354277,
+     "height": 0.85895956
+    },
+    "coverage": 0.24875061,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 865
+  },
+  {
+   "id": "car_a_14",
+   "file": "car_a_14.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0809,
+    0.9468,
+    0.9191
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+004E"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.080901854,
+     "width": 0.89354277,
+     "height": 0.8381963
+    },
+    "coverage": 0.21223632,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 754
+  },
+  {
+   "id": "car_a_15",
+   "file": "car_a_15.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0707,
+    0.9468,
+    0.9293
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+004F"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.07068366,
+     "width": 0.89354277,
+     "height": 0.8586327
+    },
+    "coverage": 0.22805303,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 863
+  },
+  {
+   "id": "car_a_16",
+   "file": "car_a_16.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0729,
+    0.9468,
+    0.9271
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0050"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.07287933,
+     "width": 0.89354277,
+     "height": 0.8542413
+    },
+    "coverage": 0.20767888,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 837
+  },
+  {
+   "id": "car_a_17",
+   "file": "car_a_17.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0755,
+    0.9468,
+    0.9245
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0051"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.07549505,
+     "width": 0.89354277,
+     "height": 0.8490099
+    },
+    "coverage": 0.23637858,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 808
+  },
+  {
+   "id": "car_a_18",
+   "file": "car_a_18.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0736,
+    0.9468,
+    0.9264
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0052"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.07358263,
+     "width": 0.89354277,
+     "height": 0.85283476
+    },
+    "coverage": 0.23093489,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 829
+  },
+  {
+   "id": "car_a_19",
+   "file": "car_a_19.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.073,
+    0.9468,
+    0.927
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0053"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.07296651,
+     "width": 0.89354277,
+     "height": 0.85406697
+    },
+    "coverage": 0.1821167,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 836
+  },
+  {
+   "id": "car_a_20",
+   "file": "car_a_20.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0631,
+    0.9468,
+    0.9369
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0054"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.063147,
+     "width": 0.89354277,
+     "height": 0.873706
+    },
+    "coverage": 0.15835439,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 966
+  },
+  {
+   "id": "car_a_21",
+   "file": "car_a_21.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0655,
+    0.9468,
+    0.9345
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0055"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.065450646,
+     "width": 0.89354277,
+     "height": 0.8690987
+    },
+    "coverage": 0.2165266,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 932
+  },
+  {
+   "id": "car_a_22",
+   "file": "car_a_22.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0735,
+    0.9468,
+    0.9265
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0056"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.07349397,
+     "width": 0.89354277,
+     "height": 0.853012
+    },
+    "coverage": 0.20846842,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 830
+  },
+  {
+   "id": "car_a_23",
+   "file": "car_a_23.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0737,
+    0.9468,
+    0.9263
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0057"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.0736715,
+     "width": 0.89354277,
+     "height": 0.852657
+    },
+    "coverage": 0.21946953,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 828
+  },
+  {
+   "id": "car_a_24",
+   "file": "car_a_24.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0785,
+    0.9468,
+    0.9215
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0058"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.07850708,
+     "width": 0.89354277,
+     "height": 0.84298587
+    },
+    "coverage": 0.20391221,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 777
+  },
+  {
+   "id": "car_a_25",
+   "file": "car_a_25.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0809,
+    0.9468,
+    0.9191
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0059"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.080901854,
+     "width": 0.89354277,
+     "height": 0.8381963
+    },
+    "coverage": 0.20816725,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 754
+  },
+  {
+   "id": "car_a_26",
+   "file": "car_a_26.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0741,
+    0.9468,
+    0.9259
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+005A"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.074119076,
+     "width": 0.89354277,
+     "height": 0.8517618
+    },
+    "coverage": 0.25301805,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 823
+  },
+  {
+   "id": "car_a_27",
+   "file": "car_a_27.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0571,
+    0.9468,
+    0.9429
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0061"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.057116106,
+     "width": 0.89354277,
+     "height": 0.8857678
+    },
+    "coverage": 0.29090518,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1068
+  },
+  {
+   "id": "car_a_28",
+   "file": "car_a_28.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.07,
+    0.9468,
+    0.93
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0062"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.070034444,
+     "width": 0.89354277,
+     "height": 0.8599311
+    },
+    "coverage": 0.22015777,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 871
+  },
+  {
+   "id": "car_a_29",
+   "file": "car_a_29.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.076,
+    0.9468,
+    0.924
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0063"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.07596513,
+     "width": 0.89354277,
+     "height": 0.8480697
+    },
+    "coverage": 0.25360286,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 803
+  },
+  {
+   "id": "car_a_30",
+   "file": "car_a_30.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0708,
+    0.9468,
+    0.9292
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0064"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.07076566,
+     "width": 0.89354277,
+     "height": 0.85846865
+    },
+    "coverage": 0.20630115,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 862
+  },
+  {
+   "id": "car_a_31",
+   "file": "car_a_31.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0725,
+    0.9468,
+    0.9275
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0065"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.0725327,
+     "width": 0.89354277,
+     "height": 0.8549346
+    },
+    "coverage": 0.23235449,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 841
+  },
+  {
+   "id": "car_a_32",
+   "file": "car_a_32.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0736,
+    0.9468,
+    0.9264
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0066"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.07358263,
+     "width": 0.89354277,
+     "height": 0.85283476
+    },
+    "coverage": 0.22053842,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 829
+  },
+  {
+   "id": "car_a_33",
+   "file": "car_a_33.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0734,
+    0.9468,
+    0.9266
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0067"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.073405534,
+     "width": 0.89354277,
+     "height": 0.85318893
+    },
+    "coverage": 0.22801225,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 831
+  },
+  {
+   "id": "car_a_34",
+   "file": "car_a_34.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0775,
+    0.9468,
+    0.9225
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0068"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.07750953,
+     "width": 0.89354277,
+     "height": 0.84498096
+    },
+    "coverage": 0.19668545,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 787
+  },
+  {
+   "id": "car_a_35",
+   "file": "car_a_35.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0748,
+    0.9468,
+    0.9252
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0069"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.074846625,
+     "width": 0.89354277,
+     "height": 0.85030675
+    },
+    "coverage": 0.18338205,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 815
+  },
+  {
+   "id": "car_a_36",
+   "file": "car_a_36.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.074,
+    0.9468,
+    0.926
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+006A"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.074029125,
+     "width": 0.89354277,
+     "height": 0.85194176
+    },
+    "coverage": 0.1854424,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 824
+  },
+  {
+   "id": "car_a_37",
+   "file": "car_a_37.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0745,
+    0.9468,
+    0.9255
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+006B"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.07448108,
+     "width": 0.89354277,
+     "height": 0.85103786
+    },
+    "coverage": 0.19901468,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 819
+  },
+  {
+   "id": "car_a_38",
+   "file": "car_a_38.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0725,
+    0.9468,
+    0.9275
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+006C"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.0725327,
+     "width": 0.89354277,
+     "height": 0.8549346
+    },
+    "coverage": 0.14708659,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 841
+  },
+  {
+   "id": "car_a_39",
+   "file": "car_a_39.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0843,
+    0.9468,
+    0.9157
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+006D"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.084254146,
+     "width": 0.89354277,
+     "height": 0.8314917
+    },
+    "coverage": 0.30013233,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 724
+  },
+  {
+   "id": "car_a_40",
+   "file": "car_a_40.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0731,
+    0.9468,
+    0.9269
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+006E"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.073141485,
+     "width": 0.89354277,
+     "height": 0.853717
+    },
+    "coverage": 0.33505133,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 834
+  },
+  {
+   "id": "car_a_41",
+   "file": "car_a_41.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0959,
+    0.9468,
+    0.9041
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+006F"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.09591195,
+     "width": 0.89354277,
+     "height": 0.8081761
+    },
+    "coverage": 0.22987257,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 636
+  },
+  {
+   "id": "car_a_42",
+   "file": "car_a_42.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0723,
+    0.9468,
+    0.9277
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0070"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.07227488,
+     "width": 0.89354277,
+     "height": 0.8554502
+    },
+    "coverage": 0.35333386,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 844
+  },
+  {
+   "id": "car_a_43",
+   "file": "car_a_43.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0788,
+    0.9468,
+    0.9212
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0071"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.07881137,
+     "width": 0.89354277,
+     "height": 0.84237725
+    },
+    "coverage": 0.2578985,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 774
+  },
+  {
+   "id": "car_a_44",
+   "file": "car_a_44.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.077,
+    0.9468,
+    0.923
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0072"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.077020206,
+     "width": 0.89354277,
+     "height": 0.8459596
+    },
+    "coverage": 0.22585475,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 792
+  },
+  {
+   "id": "car_a_45",
+   "file": "car_a_45.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0745,
+    0.9468,
+    0.9255
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0073"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.07448108,
+     "width": 0.89354277,
+     "height": 0.85103786
+    },
+    "coverage": 0.23028126,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 819
+  },
+  {
+   "id": "car_a_46",
+   "file": "car_a_46.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0752,
+    0.9468,
+    0.9248
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0074"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.07521579,
+     "width": 0.89354277,
+     "height": 0.8495684
+    },
+    "coverage": 0.2540483,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 811
+  },
+  {
+   "id": "car_a_47",
+   "file": "car_a_47.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0626,
+    0.9468,
+    0.9374
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0075"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.062564105,
+     "width": 0.89354277,
+     "height": 0.8748718
+    },
+    "coverage": 0.19762564,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 975
+  },
+  {
+   "id": "car_a_48",
+   "file": "car_a_48.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0736,
+    0.9468,
+    0.9264
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0076"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.07358263,
+     "width": 0.89354277,
+     "height": 0.85283476
+    },
+    "coverage": 0.18290503,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 829
+  },
+  {
+   "id": "car_a_49",
+   "file": "car_a_49.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.072,
+    0.9468,
+    0.928
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0077"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.07201889,
+     "width": 0.89354277,
+     "height": 0.8559622
+    },
+    "coverage": 0.18214168,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 847
+  },
+  {
+   "id": "car_a_50",
+   "file": "car_a_50.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0591,
+    0.9468,
+    0.9409
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0078"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.059108526,
+     "width": 0.89354277,
+     "height": 0.88178295
+    },
+    "coverage": 0.15962414,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 1032
+  },
+  {
+   "id": "car_a_51",
+   "file": "car_a_51.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0793,
+    0.9468,
+    0.9207
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+0079"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.0793238,
+     "width": 0.89354277,
+     "height": 0.8413524
+    },
+    "coverage": 0.24284615,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 769
+  },
+  {
+   "id": "car_a_52",
+   "file": "car_a_52.png",
+   "role": "object",
+   "subject": "1970s car",
+   "tags": [
+    "auto",
+    "automobile",
+    "car",
+    "commute",
+    "drive",
+    "driving",
+    "road",
+    "traffic",
+    "vehicle"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0532,
+    0.0667,
+    0.9468,
+    0.9333
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "font",
+    "font": "OilCrisis-A.otf",
+    "licence": "CC0 1.0 (Raymond Larabie)",
+    "credit": "Oil Crisis by Raymond Larabie (CC0)",
+    "codepoint": "U+007A"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05322862,
+     "y": 0.066739604,
+     "width": 0.89354277,
+     "height": 0.86652076
+    },
+    "coverage": 0.19978634,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1146,
+   "height": 914
+  }
+ ]
+}

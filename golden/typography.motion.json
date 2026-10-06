@@ -1,0 +1,183 @@
+{
+  "version": "0.2",
+  "project": {
+    "name": "golden_typography",
+    "duration_seconds": 1.5
+  },
+  "canvas": {
+    "width": 540,
+    "height": 960,
+    "fps": 30,
+    "background": "#ECE3D2"
+  },
+  "theme": {
+    "fonts": {
+      "display": "font.archivo_black",
+      "display_condensed": "font.anton",
+      "serif_emotional": "font.dm_serif_italic",
+      "body": "font.fira_sans",
+      "mono": "font.space_mono",
+      "number": "font.anton"
+    },
+    "palette": {
+      "paper": "#ECE3D2",
+      "ink": "#16130F",
+      "accent": "#D63A2B",
+      "cobalt": "#1F3FBF"
+    }
+  },
+  "assets": [
+    {
+      "id": "font.archivo_black",
+      "type": "font",
+      "path": "fonts/ArchivoBlack-Regular.ttf"
+    },
+    {
+      "id": "font.anton",
+      "type": "font",
+      "path": "fonts/Anton-Regular.ttf"
+    },
+    {
+      "id": "font.dm_serif_italic",
+      "type": "font",
+      "path": "fonts/DMSerifDisplay-Italic.ttf"
+    },
+    {
+      "id": "font.fira_sans",
+      "type": "font",
+      "path": "fonts/FiraSans-Regular.ttf"
+    },
+    {
+      "id": "font.space_mono",
+      "type": "font",
+      "path": "fonts/SpaceMono-Regular.ttf"
+    }
+  ],
+  "asset_root": "../assets",
+  "scenes": [
+    {
+      "id": "typography",
+      "start_seconds": 0,
+      "duration_seconds": 1.5,
+      "layers": [
+        {
+          "id": "rule",
+          "type": "rectangle",
+          "x": 30,
+          "y": 20,
+          "width": 480,
+          "height": 4,
+          "fill": "#16130F"
+        },
+        {
+          "id": "t.display",
+          "type": "text",
+          "x": 30,
+          "y": 40,
+          "width": 480,
+          "height": 110,
+          "text": "Display",
+          "font_role": "display",
+          "font_size": 84,
+          "color": "#16130F"
+        },
+        {
+          "id": "t.condensed",
+          "type": "text",
+          "x": 30,
+          "y": 160,
+          "width": 480,
+          "height": 110,
+          "text": "CONDENSED",
+          "font_role": "display_condensed",
+          "font_size": 96,
+          "color": "#16130F",
+          "align": "center"
+        },
+        {
+          "id": "t.serif",
+          "type": "text",
+          "x": 30,
+          "y": 270,
+          "width": 480,
+          "height": 90,
+          "text": "Serif voice",
+          "font_role": "serif_emotional",
+          "font_size": 64,
+          "color": "#D63A2B",
+          "align": "right",
+          "italic": true
+        },
+        {
+          "id": "t.number",
+          "type": "text",
+          "x": 30,
+          "y": 370,
+          "width": 480,
+          "height": 110,
+          "text": "1,234.56",
+          "font_role": "number",
+          "font_size": 96,
+          "color": "#1F3FBF",
+          "align": "center"
+        },
+        {
+          "id": "t.mono",
+          "type": "text",
+          "x": 30,
+          "y": 490,
+          "width": 480,
+          "height": 120,
+          "text": "LINE ONE\nLINE TWO\nLINE THREE",
+          "font_role": "mono",
+          "font_size": 30,
+          "color": "#16130F",
+          "letter_spacing": 0.12,
+          "line_height": 1.3
+        },
+        {
+          "id": "t.body",
+          "type": "text",
+          "x": 30,
+          "y": 640,
+          "width": 300,
+          "height": 150,
+          "text": "Body copy wraps inside its max width across several lines of text.",
+          "font_role": "body",
+          "font_size": 26,
+          "color": "#16130F",
+          "max_width": 300,
+          "line_height": 1.3
+        },
+        {
+          "id": "t.tight",
+          "type": "text",
+          "x": 30,
+          "y": 810,
+          "width": 480,
+          "height": 80,
+          "text": "Tight tracking",
+          "font_role": "display",
+          "font_size": 48,
+          "color": "#16130F",
+          "letter_spacing": -0.04,
+          "uppercase": true
+        },
+        {
+          "id": "t.mixed",
+          "type": "text",
+          "x": 30,
+          "y": 880,
+          "width": 480,
+          "height": 50,
+          "text": "Italic serif, right aligned",
+          "font_role": "serif_emotional",
+          "font_size": 34,
+          "color": "#16130F",
+          "align": "right",
+          "italic": true
+        }
+      ]
+    }
+  ]
+}

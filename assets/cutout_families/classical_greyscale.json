@@ -1,0 +1,349 @@
+{
+ "family": "classical_greyscale",
+ "project": "MotionEngine Asset Library",
+ "project_id": "jR0xTD3dUZ28WeDiZEj4",
+ "emotions": [
+  "drama",
+  "luxury"
+ ],
+ "medium": "greyscale classical sculpture photograph",
+ "greyscale": true,
+ "assets": [
+  {
+   "id": "marble_bust",
+   "role": "object",
+   "subject": "marble bust",
+   "tags": [
+    "bust",
+    "statue",
+    "sculpture",
+    "marble",
+    "classical",
+    "ancient",
+    "head"
+   ],
+   "model": "flare",
+   "aspect": "3:4",
+   "prompt": "Black-and-white studio photograph, pure greyscale, of an anonymous classical marble bust seen from behind in three-quarter rear view so the face is not visible. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "bust_profile",
+   "role": "object",
+   "subject": "marble bust in profile",
+   "tags": [
+    "bust",
+    "profile",
+    "statue",
+    "sculpture",
+    "marble",
+    "classical",
+    "thinker"
+   ],
+   "model": "flare",
+   "aspect": "3:4",
+   "prompt": "Black-and-white studio photograph, pure greyscale, of a generic, anonymous classical marble bust in strict side profile with blank sculpted eyes, not a portrait of any real person. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "hand_pointing",
+   "role": "object",
+   "subject": "marble hand pointing",
+   "tags": [
+    "hand",
+    "pointing",
+    "point",
+    "gesture",
+    "direction",
+    "marble",
+    "statue"
+   ],
+   "model": "flare",
+   "aspect": "1:1",
+   "prompt": "Black-and-white studio photograph, pure greyscale, of a single classical marble statue hand with the index finger pointing to the right, cut at the wrist. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "hand_reaching",
+   "role": "object",
+   "subject": "marble hand reaching",
+   "tags": [
+    "hand",
+    "reaching",
+    "reach",
+    "reaches",
+    "desire",
+    "marble",
+    "statue"
+   ],
+   "model": "flare",
+   "aspect": "1:1",
+   "prompt": "Black-and-white studio photograph, pure greyscale, of a single classical marble statue hand and forearm reaching upward with open relaxed fingers. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "hand_holding",
+   "role": "object",
+   "subject": "marble hand holding a sphere",
+   "tags": [
+    "hand",
+    "holding",
+    "hold",
+    "sphere",
+    "care",
+    "marble",
+    "statue"
+   ],
+   "model": "flare",
+   "aspect": "1:1",
+   "prompt": "Black-and-white studio photograph, pure greyscale, of a single classical marble statue hand gently holding a small smooth stone sphere in its palm. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "open_palm",
+   "role": "object",
+   "subject": "marble open palm",
+   "tags": [
+    "hand",
+    "palm",
+    "open",
+    "offer",
+    "giving",
+    "marble",
+    "statue"
+   ],
+   "model": "flare",
+   "aspect": "1:1",
+   "prompt": "Black-and-white studio photograph, pure greyscale, of a single classical marble statue hand, palm open and facing up in an offering gesture. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "hands_touching",
+   "role": "object",
+   "subject": "two marble hands nearly touching",
+   "tags": [
+    "hands",
+    "hand",
+    "touch",
+    "touching",
+    "connection",
+    "trust",
+    "reaches",
+    "reach",
+    "marble"
+   ],
+   "model": "flare",
+   "aspect": "16:9",
+   "prompt": "Black-and-white studio photograph, pure greyscale, of two classical marble statue hands reaching toward each other from left and right, index fingertips almost touching with a small gap between them. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "statue_eye",
+   "role": "object",
+   "subject": "sculpted marble eye",
+   "tags": [
+    "eye",
+    "watching",
+    "vision",
+    "attention",
+    "marble",
+    "statue"
+   ],
+   "model": "flare",
+   "aspect": "1:1",
+   "prompt": "Black-and-white studio photograph, pure greyscale, of a close fragment of a classical marble statue face showing only a single sculpted eye and brow, cropped as a broken stone fragment. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "statue_torso",
+   "role": "object",
+   "subject": "draped marble statue fragment",
+   "tags": [
+    "torso",
+    "body",
+    "statue",
+    "sculpture",
+    "marble",
+    "strength",
+    "classical"
+   ],
+   "model": "flare",
+   "aspect": "3:4",
+   "prompt": "Black-and-white studio photograph, pure greyscale, of a classical marble statue fragment of a fully clothed figure's upper body in a heavily draped toga, armless and headless, only folds of carved fabric visible. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "column",
+   "role": "object",
+   "subject": "marble column",
+   "tags": [
+    "column",
+    "pillar",
+    "foundation",
+    "support",
+    "marble",
+    "classical",
+    "architecture"
+   ],
+   "model": "flare",
+   "aspect": "9:16",
+   "prompt": "Black-and-white studio photograph, pure greyscale, of a single tall Doric marble column with capital and base. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "broken_column",
+   "role": "object",
+   "subject": "broken marble column",
+   "tags": [
+    "column",
+    "broken",
+    "ruin",
+    "collapse",
+    "fall",
+    "marble"
+   ],
+   "model": "flare",
+   "aspect": "1:1",
+   "prompt": "Black-and-white studio photograph, pure greyscale, of a broken classical marble column drum fragment lying on its side with a rough fractured top. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "laurel",
+   "role": "object",
+   "subject": "laurel wreath",
+   "tags": [
+    "laurel",
+    "wreath",
+    "victory",
+    "winner",
+    "award",
+    "honour",
+    "honor"
+   ],
+   "model": "flare",
+   "aspect": "1:1",
+   "prompt": "Black-and-white studio photograph, pure greyscale, of a classical laurel wreath sculpted in pale stone. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "hourglass",
+   "role": "object",
+   "subject": "hourglass",
+   "tags": [
+    "hourglass",
+    "time",
+    "deadline",
+    "waiting",
+    "sand",
+    "patience"
+   ],
+   "model": "flare",
+   "aspect": "1:1",
+   "prompt": "Black-and-white studio photograph, pure greyscale, of an antique hourglass with turned wooden frame and flowing sand, photographed in greyscale. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "scales",
+   "role": "object",
+   "subject": "scales of justice",
+   "tags": [
+    "scales",
+    "justice",
+    "balance",
+    "law",
+    "fairness",
+    "judgement",
+    "judgment"
+   ],
+   "model": "flare",
+   "aspect": "1:1",
+   "prompt": "Black-and-white studio photograph, pure greyscale, of an antique brass balance scale of justice with two hanging pans, photographed in greyscale. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "ancient_coin",
+   "role": "object",
+   "subject": "ancient coin",
+   "tags": [
+    "coin",
+    "ancient",
+    "money",
+    "value",
+    "wealth",
+    "silver",
+    "currency"
+   ],
+   "model": "flare",
+   "aspect": "1:1",
+   "prompt": "Black-and-white studio photograph, pure greyscale, of a worn ancient silver drachma coin with an owl relief, seen face on, photographed in greyscale. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "horse_head",
+   "role": "object",
+   "subject": "marble horse head",
+   "tags": [
+    "horse",
+    "head",
+    "power",
+    "statue",
+    "marble",
+    "classical"
+   ],
+   "model": "flare",
+   "aspect": "1:1",
+   "prompt": "Black-and-white studio photograph, pure greyscale, of a classical marble horse head sculpture. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "amphora",
+   "role": "object",
+   "subject": "amphora vase",
+   "tags": [
+    "amphora",
+    "vase",
+    "vessel",
+    "jar",
+    "ancient",
+    "classical"
+   ],
+   "model": "flare",
+   "aspect": "3:4",
+   "prompt": "Black-and-white studio photograph, pure greyscale, of an ancient Greek amphora vase in pale stone without painted figures. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "clenched_fist",
+   "role": "object",
+   "subject": "marble clenched fist",
+   "tags": [
+    "fist",
+    "clenched",
+    "strength",
+    "resolve",
+    "fight",
+    "marble",
+    "hand"
+   ],
+   "model": "flare",
+   "aspect": "1:1",
+   "prompt": "Black-and-white studio photograph, pure greyscale, of a single classical marble statue hand clenched into a fist, cut at the wrist. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "greek_helmet",
+   "role": "object",
+   "subject": "ancient helmet",
+   "tags": [
+    "helmet",
+    "warrior",
+    "armour",
+    "armor",
+    "defence",
+    "defense",
+    "ancient"
+   ],
+   "model": "flare",
+   "aspect": "1:1",
+   "prompt": "Black-and-white studio photograph, pure greyscale, of an ancient Corinthian bronze helmet, empty, photographed in greyscale. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "statue_foot",
+   "role": "object",
+   "subject": "marble foot on plinth",
+   "tags": [
+    "foot",
+    "step",
+    "plinth",
+    "statue",
+    "marble",
+    "stand"
+   ],
+   "model": "flare",
+   "aspect": "1:1",
+   "prompt": "Black-and-white studio photograph, pure greyscale, of a classical marble statue foot fragment standing on a small square plinth. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  }
+ ]
+}

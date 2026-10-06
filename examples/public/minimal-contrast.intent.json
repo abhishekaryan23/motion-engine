@@ -1,0 +1,15 @@
+{
+  "version": "0.1",
+  "title": "queue_example",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "contrast",
+      "statement": "The queue grew fourfold",
+      "primary": { "kind": "number", "value": "5", "meaning": "people at opening" },
+      "secondary": { "kind": "number", "value": "20", "meaning": "people at noon" },
+      "relationship": "grow",
+      "energy": "building"
+    }
+  ]
+}

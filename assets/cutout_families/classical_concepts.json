@@ -1,0 +1,174 @@
+{
+  "family": "classical_concepts",
+  "project": "MotionEngine Asset Library",
+  "project_id": "jR0xTD3dUZ28WeDiZEj4",
+  "emotions": [
+    "drama",
+    "luxury"
+  ],
+  "medium": "greyscale classical sculpture concepts",
+  "assets": [
+    {
+      "id": "thinker_statue",
+      "role": "object",
+      "subject": "thinker statue",
+      "tags": [
+        "think",
+        "thinker",
+        "thinking",
+        "philosophy",
+        "reflection",
+        "ponder",
+        "wisdom"
+      ],
+      "model": "flare",
+      "aspect": "3:4",
+      "prompt": "Black-and-white studio photograph, pure greyscale, of an anonymous classical marble statue of a seated man resting his chin on his hand in thought, seen in three-quarter rear view so the face is not visible. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "chess_king",
+      "role": "object",
+      "subject": "marble chess king",
+      "tags": [
+        "strategy",
+        "chess",
+        "king",
+        "leader",
+        "power",
+        "decision"
+      ],
+      "model": "flare",
+      "aspect": "3:4",
+      "prompt": "Black-and-white studio photograph, pure greyscale, of a white marble chess king piece. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "chess_knight",
+      "role": "object",
+      "subject": "marble chess knight",
+      "tags": [
+        "strategy",
+        "chess",
+        "knight",
+        "tactics",
+        "smart move",
+        "plan"
+      ],
+      "model": "flare",
+      "aspect": "3:4",
+      "prompt": "Black-and-white studio photograph, pure greyscale, of a white marble chess knight piece. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "marble_masks",
+      "role": "object",
+      "subject": "marble masks",
+      "tags": [
+        "masks",
+        "emotions",
+        "personality",
+        "drama",
+        "identity",
+        "theatre"
+      ],
+      "model": "flare",
+      "aspect": "3:4",
+      "prompt": "Black-and-white studio photograph, pure greyscale, of a pair of comedy and tragedy theatre masks carved in marble. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "owl_statue",
+      "role": "object",
+      "subject": "owl statue",
+      "tags": [
+        "wisdom",
+        "knowledge",
+        "owl",
+        "learning",
+        "insight",
+        "smart"
+      ],
+      "model": "flare",
+      "aspect": "3:4",
+      "prompt": "Black-and-white studio photograph, pure greyscale, of a classical marble owl statue perched on a small plinth. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "armillary_sphere",
+      "role": "object",
+      "subject": "armillary sphere",
+      "tags": [
+        "astronomy",
+        "science",
+        "universe",
+        "cosmos",
+        "discovery",
+        "history of science"
+      ],
+      "model": "flare",
+      "aspect": "3:4",
+      "prompt": "Black-and-white studio photograph, pure greyscale, of an antique armillary sphere of interlocking rings on a stand. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "marble_brain",
+      "role": "object",
+      "subject": "marble brain",
+      "tags": [
+        "brain",
+        "mind",
+        "psychology",
+        "intellect",
+        "memory",
+        "think"
+      ],
+      "model": "flare",
+      "aspect": "3:4",
+      "prompt": "Black-and-white studio photograph, pure greyscale, of a human brain carved from white marble on a small square plinth. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "winged_victory",
+      "role": "object",
+      "subject": "winged victory",
+      "tags": [
+        "victory",
+        "success",
+        "win",
+        "triumph",
+        "achievement",
+        "glory"
+      ],
+      "model": "flare",
+      "aspect": "3:4",
+      "prompt": "Black-and-white studio photograph, pure greyscale, of a headless classical marble statue of a winged goddess of victory striding forward. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "atlas_globe",
+      "role": "object",
+      "subject": "atlas statue",
+      "tags": [
+        "pressure",
+        "burden",
+        "responsibility",
+        "weight",
+        "stress",
+        "atlas"
+      ],
+      "model": "flare",
+      "aspect": "3:4",
+      "prompt": "Black-and-white studio photograph, pure greyscale, of a classical marble statue of a kneeling figure carrying a large globe on his shoulders, seen from behind. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "lion_statue",
+      "role": "object",
+      "subject": "lion statue",
+      "tags": [
+        "power",
+        "strength",
+        "courage",
+        "leadership",
+        "pride",
+        "lion"
+      ],
+      "model": "flare",
+      "aspect": "3:4",
+      "prompt": "Black-and-white studio photograph, pure greyscale, of a classical marble lion statue lying on a plinth, head raised. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    }
+  ],
+  "greyscale": true
+}

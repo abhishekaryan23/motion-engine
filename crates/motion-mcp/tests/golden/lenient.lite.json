@@ -1,0 +1,11 @@
+{
+  "title": "  Lenient Input  ",
+  "beats": [
+    "Plain strings are read as what the narrator says out loud.",
+    {"say": "A number written as a number still becomes text on screen.", "number": 381, "colour": "red"},
+    {"text": "Lists can arrive as one comma separated string of words.", "list": "robot, microchip and clock"},
+    {"say": "Two sides written as a plain array still make a comparison.", "compare": ["cost", "output"], "energy": "high"},
+    {"say": "Pictures with spaces and capitals become snake case nouns.", "picture": "Money Stack", "energy": "wobbly"},
+    {"show": "Say taken from show"}
+  ]
+}

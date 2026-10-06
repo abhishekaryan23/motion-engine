@@ -1,0 +1,455 @@
+{
+ "version": "0.1",
+ "specs": [
+  {
+   "id": "library.thinker_statue",
+   "fingerprint": "fp1-4b001108acf9798d",
+   "continuity_key": "thinker_statue",
+   "serves": [
+    "library.thinker_statue"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "thinker statue",
+   "context": "library asset: thinker statue",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "greyscale classical sculpture concepts",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "thinker_statue",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "3:4"
+   },
+   "prompt": "Black-and-white studio photograph, pure greyscale, of an anonymous classical marble statue of a seated man resting his chin on his hand in thought, seen in three-quarter rear view so the face is not visible. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.chess_king",
+   "fingerprint": "fp1-a180255f4e783fd9",
+   "continuity_key": "chess_king",
+   "serves": [
+    "library.chess_king"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "marble chess king",
+   "context": "library asset: marble chess king",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "greyscale classical sculpture concepts",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "chess_king",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "3:4"
+   },
+   "prompt": "Black-and-white studio photograph, pure greyscale, of a white marble chess king piece. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.chess_knight",
+   "fingerprint": "fp1-86b2a233e10cfc89",
+   "continuity_key": "chess_knight",
+   "serves": [
+    "library.chess_knight"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "marble chess knight",
+   "context": "library asset: marble chess knight",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "greyscale classical sculpture concepts",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "chess_knight",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "3:4"
+   },
+   "prompt": "Black-and-white studio photograph, pure greyscale, of a white marble chess knight piece. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.marble_masks",
+   "fingerprint": "fp1-d25fb19ea21cc1af",
+   "continuity_key": "marble_masks",
+   "serves": [
+    "library.marble_masks"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "marble masks",
+   "context": "library asset: marble masks",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "greyscale classical sculpture concepts",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "marble_masks",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "3:4"
+   },
+   "prompt": "Black-and-white studio photograph, pure greyscale, of a pair of comedy and tragedy theatre masks carved in marble. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.owl_statue",
+   "fingerprint": "fp1-4fab6774ab1affe1",
+   "continuity_key": "owl_statue",
+   "serves": [
+    "library.owl_statue"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "owl statue",
+   "context": "library asset: owl statue",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "greyscale classical sculpture concepts",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "owl_statue",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "3:4"
+   },
+   "prompt": "Black-and-white studio photograph, pure greyscale, of a classical marble owl statue perched on a small plinth. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.armillary_sphere",
+   "fingerprint": "fp1-f6be18a554f2ccc5",
+   "continuity_key": "armillary_sphere",
+   "serves": [
+    "library.armillary_sphere"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "armillary sphere",
+   "context": "library asset: armillary sphere",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "greyscale classical sculpture concepts",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "armillary_sphere",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "3:4"
+   },
+   "prompt": "Black-and-white studio photograph, pure greyscale, of an antique armillary sphere of interlocking rings on a stand. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.marble_brain",
+   "fingerprint": "fp1-fa1b873869cef2ae",
+   "continuity_key": "marble_brain",
+   "serves": [
+    "library.marble_brain"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "marble brain",
+   "context": "library asset: marble brain",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "greyscale classical sculpture concepts",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "marble_brain",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "3:4"
+   },
+   "prompt": "Black-and-white studio photograph, pure greyscale, of a human brain carved from white marble on a small square plinth. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.winged_victory",
+   "fingerprint": "fp1-66f6cc3a41958a92",
+   "continuity_key": "winged_victory",
+   "serves": [
+    "library.winged_victory"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "winged victory",
+   "context": "library asset: winged victory",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "greyscale classical sculpture concepts",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "winged_victory",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "3:4"
+   },
+   "prompt": "Black-and-white studio photograph, pure greyscale, of a headless classical marble statue of a winged goddess of victory striding forward. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.atlas_globe",
+   "fingerprint": "fp1-a9386f984ae68ba5",
+   "continuity_key": "atlas_globe",
+   "serves": [
+    "library.atlas_globe"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "atlas statue",
+   "context": "library asset: atlas statue",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "greyscale classical sculpture concepts",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "atlas_globe",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "3:4"
+   },
+   "prompt": "Black-and-white studio photograph, pure greyscale, of a classical marble statue of a kneeling figure carrying a large globe on his shoulders, seen from behind. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  },
+  {
+   "id": "library.lion_statue",
+   "fingerprint": "fp1-ae21b52d83ebbaa5",
+   "continuity_key": "lion_statue",
+   "serves": [
+    "library.lion_statue"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "lion statue",
+   "context": "library asset: lion statue",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "greyscale classical sculpture concepts",
+    "realism": "as generated",
+    "lighting": "as generated",
+    "contrast": "as generated",
+    "palette_tendency": "as generated",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "lion_statue",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "3:4"
+   },
+   "prompt": "Black-and-white studio photograph, pure greyscale, of a classical marble lion statue lying on a plinth, head raised. Classical white marble, weathered stone texture, dramatic soft side light from the upper left; the entire subject is rendered in greyscale only. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+  }
+ ]
+}

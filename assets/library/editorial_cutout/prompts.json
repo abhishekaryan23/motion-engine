@@ -1,0 +1,1670 @@
+{
+ "version": "0.1",
+ "specs": [
+  {
+   "id": "library.phone",
+   "fingerprint": "fp1-cebff742fe1324ed",
+   "continuity_key": "phone",
+   "serves": [
+    "library.phone"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "smartphone",
+   "context": "library asset: smartphone",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "phone",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "smartphone (OpenArt history 7KzRCyEgWrGusP9OAFQE)"
+  },
+  {
+   "id": "library.plant",
+   "fingerprint": "fp1-53d147bfc43d0b60",
+   "continuity_key": "plant",
+   "serves": [
+    "library.plant"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "potted plant",
+   "context": "library asset: potted plant",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "plant",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "potted plant (OpenArt history Em0uimD2ZicYdqztSNMM)"
+  },
+  {
+   "id": "library.hand_pointing",
+   "fingerprint": "fp1-b60492501a0aaa81",
+   "continuity_key": "hand_pointing",
+   "serves": [
+    "library.hand_pointing"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "hand pointing right",
+   "context": "library asset: hand pointing right",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "hand_pointing",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "hand pointing right (OpenArt history tgbu6yrk5CynAmbxmk6U)"
+  },
+  {
+   "id": "library.laptop",
+   "fingerprint": "fp1-64f84b7345b557b0",
+   "continuity_key": "laptop",
+   "serves": [
+    "library.laptop"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "laptop computer",
+   "context": "library asset: laptop computer",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "laptop",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "laptop computer (OpenArt history q2zOeayo9qx5cuDZHXhF)"
+  },
+  {
+   "id": "library.document",
+   "fingerprint": "fp1-f166d793ae6cf330",
+   "continuity_key": "document",
+   "serves": [
+    "library.document"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "printed document page",
+   "context": "library asset: printed document page",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "artifact",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "document",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "printed document page (OpenArt history TFRMuBfhkY5RofAzJYzY)"
+  },
+  {
+   "id": "library.envelope",
+   "fingerprint": "fp1-e2fab11224cd4d0d",
+   "continuity_key": "envelope",
+   "serves": [
+    "library.envelope"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "kraft envelope",
+   "context": "library asset: kraft envelope",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "artifact",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "envelope",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "kraft envelope (OpenArt history 00t0FXPP0ZfU9OrjBA9R)"
+  },
+  {
+   "id": "library.coin_stack",
+   "fingerprint": "fp1-75a70c3c29bfc633",
+   "continuity_key": "coin_stack",
+   "serves": [
+    "library.coin_stack"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "stack of coins",
+   "context": "library asset: stack of coins",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "coin_stack",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "stack of coins (OpenArt history XXU0sDxOZ05nOppjGRfO)"
+  },
+  {
+   "id": "library.receipt",
+   "fingerprint": "fp1-7b553d4a005be7ef",
+   "continuity_key": "receipt",
+   "serves": [
+    "library.receipt"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "till receipt",
+   "context": "library asset: till receipt",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "artifact",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "receipt",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "till receipt (OpenArt history NZHxFqQVwErNxv2Frfkm)"
+  },
+  {
+   "id": "library.clock",
+   "fingerprint": "fp1-204950a4dad6f380",
+   "continuity_key": "clock",
+   "serves": [
+    "library.clock"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "wall clock",
+   "context": "library asset: wall clock",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "clock",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "wall clock (OpenArt history q8UYDEZDiZKOOmsuUTQd)"
+  },
+  {
+   "id": "library.calendar_page",
+   "fingerprint": "fp1-fc2499cc72f8dabe",
+   "continuity_key": "calendar_page",
+   "serves": [
+    "library.calendar_page"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "calendar page",
+   "context": "library asset: calendar page",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "artifact",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "calendar_page",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "calendar page (OpenArt history ft7OD7KKZTsAjU58Ekax)"
+  },
+  {
+   "id": "library.chart_printout",
+   "fingerprint": "fp1-1fd8f220a26f31ff",
+   "continuity_key": "chart_printout",
+   "serves": [
+    "library.chart_printout"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "bar chart printout",
+   "context": "library asset: bar chart printout",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "artifact",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "chart_printout",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "bar chart printout (OpenArt history k2gPGv0dDKJpdbKhCOjy)"
+  },
+  {
+   "id": "library.magnifier",
+   "fingerprint": "fp1-6b7adff47fe1c89c",
+   "continuity_key": "magnifier",
+   "serves": [
+    "library.magnifier"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "magnifying glass",
+   "context": "library asset: magnifying glass",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "magnifier",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "magnifying glass (OpenArt history 2QwHLNQYKTFvyjUFXtro)"
+  },
+  {
+   "id": "library.key",
+   "fingerprint": "fp1-4aa25381ca526247",
+   "continuity_key": "key",
+   "serves": [
+    "library.key"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "brass key",
+   "context": "library asset: brass key",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "key",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "brass key (OpenArt history ESBszYXLNTHMnHIqA10m)"
+  },
+  {
+   "id": "library.lightbulb",
+   "fingerprint": "fp1-c899ccb5dd190bc6",
+   "continuity_key": "lightbulb",
+   "serves": [
+    "library.lightbulb"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "light bulb",
+   "context": "library asset: light bulb",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "lightbulb",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "light bulb (OpenArt history ssrt67g4uZu50sn0rXN5)"
+  },
+  {
+   "id": "library.hand_holding_phone",
+   "fingerprint": "fp1-870e9fcfbb7e7c50",
+   "continuity_key": "hand_holding_phone",
+   "serves": [
+    "library.hand_holding_phone"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "hand holding a phone",
+   "context": "library asset: hand holding a phone",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "hand_holding_phone",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "hand holding a phone (OpenArt history 0XctCAe1aMXYUtNveSF5)"
+  },
+  {
+   "id": "library.shopping_bag",
+   "fingerprint": "fp1-434b993c23523829",
+   "continuity_key": "shopping_bag",
+   "serves": [
+    "library.shopping_bag"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "paper shopping bag",
+   "context": "library asset: paper shopping bag",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "shopping_bag",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "paper shopping bag (OpenArt history V4aSOS75NHqyC24lnhqP)"
+  },
+  {
+   "id": "library.parcel",
+   "fingerprint": "fp1-0e5470a82c9af362",
+   "continuity_key": "parcel",
+   "serves": [
+    "library.parcel"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "cardboard parcel",
+   "context": "library asset: cardboard parcel",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "parcel",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "cardboard parcel (OpenArt history jSfqqegAI7aaesQz9lyq)"
+  },
+  {
+   "id": "library.coffee_cup",
+   "fingerprint": "fp1-7a41f8e526aae263",
+   "continuity_key": "coffee_cup",
+   "serves": [
+    "library.coffee_cup"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "coffee cup",
+   "context": "library asset: coffee cup",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "coffee_cup",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "coffee cup (OpenArt history ivhLSfEuJWqIVDiLSjcZ)"
+  },
+  {
+   "id": "library.notebook",
+   "fingerprint": "fp1-3c5de576e99aabc8",
+   "continuity_key": "notebook",
+   "serves": [
+    "library.notebook"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "closed notebook",
+   "context": "library asset: closed notebook",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "notebook",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "closed notebook (OpenArt history 1XD3Adxz2qQYNvcJgVgQ)"
+  },
+  {
+   "id": "library.pen",
+   "fingerprint": "fp1-e32d207a0f514a81",
+   "continuity_key": "pen",
+   "serves": [
+    "library.pen"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "fountain pen",
+   "context": "library asset: fountain pen",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "pen",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "fountain pen (OpenArt history LjMnPDQzRMv5KroM0k72)"
+  },
+  {
+   "id": "library.globe",
+   "fingerprint": "fp1-6c989ee39c480cfb",
+   "continuity_key": "globe",
+   "serves": [
+    "library.globe"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "desk globe",
+   "context": "library asset: desk globe",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "globe",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "desk globe (OpenArt history ea8cGiwJQi5UKYKdrgMI)"
+  },
+  {
+   "id": "library.building",
+   "fingerprint": "fp1-2a674378c7ab12b1",
+   "continuity_key": "building",
+   "serves": [
+    "library.building"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "building facade",
+   "context": "library asset: building facade",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "building",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "building facade (OpenArt history ykXnIILIoaW1EBagyWEC)"
+  },
+  {
+   "id": "library.door",
+   "fingerprint": "fp1-c0de9abc6b2561ee",
+   "continuity_key": "door",
+   "serves": [
+    "library.door"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "closed door",
+   "context": "library asset: closed door",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "door",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "closed door (OpenArt history S7x7OZ7MHLbe6Eisb2YX)"
+  },
+  {
+   "id": "library.chair",
+   "fingerprint": "fp1-6228547b3bb31fc7",
+   "continuity_key": "chair",
+   "serves": [
+    "library.chair"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "office chair",
+   "context": "library asset: office chair",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "object",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "chair",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "office chair (OpenArt history at8U73gnRMsnhSXGvfMQ)"
+  },
+  {
+   "id": "library.figure_worker_half",
+   "fingerprint": "fp1-dcaeae5cfe6d46fb",
+   "continuity_key": "figure_worker_half",
+   "serves": [
+    "library.figure_worker_half"
+   ],
+   "role": "hero_subject",
+   "priority": "optional",
+   "subject": "office worker, half figure",
+   "context": "library asset: office worker, half figure",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "half_figure",
+    "negative_space": "none",
+    "subject_whole": false,
+    "head_inside_frame": true
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "figure_worker_half",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "3:4"
+   },
+   "prompt": "office worker, half figure (OpenArt history 0jC30pQSk2e5ppkhi1n9)"
+  },
+  {
+   "id": "library.figure_walking",
+   "fingerprint": "fp1-db665be1ee3f61c5",
+   "continuity_key": "figure_walking",
+   "serves": [
+    "library.figure_walking"
+   ],
+   "role": "hero_subject",
+   "priority": "optional",
+   "subject": "person walking",
+   "context": "library asset: person walking",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "full_figure",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": true
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "figure_walking",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "2:3"
+   },
+   "prompt": "person walking (OpenArt history tryL4fhhwuWtg5b2Sm4r)"
+  },
+  {
+   "id": "library.figure_seated_laptop",
+   "fingerprint": "fp1-bf5dddaf2085cf96",
+   "continuity_key": "figure_seated_laptop",
+   "serves": [
+    "library.figure_seated_laptop"
+   ],
+   "role": "hero_subject",
+   "priority": "optional",
+   "subject": "person working on a laptop",
+   "context": "library asset: person working on a laptop",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "full_figure",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": true
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "figure_seated_laptop",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "2:3"
+   },
+   "prompt": "person working on a laptop (OpenArt history gccZwi5cSzgwgaqzGPo4)"
+  },
+  {
+   "id": "library.figure_shopper",
+   "fingerprint": "fp1-89b49974dc1339d1",
+   "continuity_key": "figure_shopper",
+   "serves": [
+    "library.figure_shopper"
+   ],
+   "role": "hero_subject",
+   "priority": "optional",
+   "subject": "shopper with a bag",
+   "context": "library asset: shopper with a bag",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "full_figure",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": true
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "figure_shopper",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "2:3"
+   },
+   "prompt": "shopper with a bag (OpenArt history BjDwQTr9t41YFILDd6TZ)"
+  },
+  {
+   "id": "library.figure_two_talking",
+   "fingerprint": "fp1-96748eb77fba0df3",
+   "continuity_key": "figure_two_talking",
+   "serves": [
+    "library.figure_two_talking"
+   ],
+   "role": "hero_subject",
+   "priority": "optional",
+   "subject": "two people talking",
+   "context": "library asset: two people talking",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "full_figure",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": true
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "figure_two_talking",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "2:3"
+   },
+   "prompt": "two people talking (OpenArt history YmKY2KF2BVQlXAN9kIjq)"
+  },
+  {
+   "id": "library.tex_paper_grain",
+   "fingerprint": "fp1-f9fe354feb9d18db",
+   "continuity_key": "tex_paper_grain",
+   "serves": [
+    "library.tex_paper_grain"
+   ],
+   "role": "environment",
+   "priority": "optional",
+   "subject": "warm paper grain",
+   "context": "library asset: warm paper grain",
+   "presentation": "background_plate",
+   "background": "opaque",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "scene",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "tex_paper_grain",
+    "alpha_required": false,
+    "min_short_side": 512,
+    "aspect": "9:16"
+   },
+   "prompt": "warm paper grain (OpenArt history 03wYwoJxb7lREhcpjmA3)"
+  },
+  {
+   "id": "library.tex_halftone_field",
+   "fingerprint": "fp1-d12eb84bd4315e0f",
+   "continuity_key": "tex_halftone_field",
+   "serves": [
+    "library.tex_halftone_field"
+   ],
+   "role": "environment",
+   "priority": "optional",
+   "subject": "halftone dot field",
+   "context": "library asset: halftone dot field",
+   "presentation": "background_plate",
+   "background": "opaque",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "scene",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "tex_halftone_field",
+    "alpha_required": false,
+    "min_short_side": 512,
+    "aspect": "9:16"
+   },
+   "prompt": "halftone dot field (OpenArt history NMn4DqEQ4xZT0MMasvt1)"
+  },
+  {
+   "id": "library.tex_soft_gradient",
+   "fingerprint": "fp1-2e7737aaceb33ee3",
+   "continuity_key": "tex_soft_gradient",
+   "serves": [
+    "library.tex_soft_gradient"
+   ],
+   "role": "environment",
+   "priority": "optional",
+   "subject": "soft teal-grey gradient",
+   "context": "library asset: soft teal-grey gradient",
+   "presentation": "background_plate",
+   "background": "opaque",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "scene",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "tex_soft_gradient",
+    "alpha_required": false,
+    "min_short_side": 512,
+    "aspect": "9:16"
+   },
+   "prompt": "soft teal-grey gradient (OpenArt history x6CkPAmlp8xpJngnta89)"
+  },
+  {
+   "id": "library.tex_vignette_ground",
+   "fingerprint": "fp1-71b04130dbadede3",
+   "continuity_key": "tex_vignette_ground",
+   "serves": [
+    "library.tex_vignette_ground"
+   ],
+   "role": "environment",
+   "priority": "optional",
+   "subject": "vignette studio ground",
+   "context": "library asset: vignette studio ground",
+   "presentation": "background_plate",
+   "background": "opaque",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "scene",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "tex_vignette_ground",
+    "alpha_required": false,
+    "min_short_side": 512,
+    "aspect": "9:16"
+   },
+   "prompt": "vignette studio ground (OpenArt history VidpInx5VzccABf5I1pA)"
+  },
+  {
+   "id": "library.tex_ink_wash",
+   "fingerprint": "fp1-c11f4074da1cf94d",
+   "continuity_key": "tex_ink_wash",
+   "serves": [
+    "library.tex_ink_wash"
+   ],
+   "role": "environment",
+   "priority": "optional",
+   "subject": "ink wash",
+   "context": "library asset: ink wash",
+   "presentation": "background_plate",
+   "background": "opaque",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "scene",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "tex_ink_wash",
+    "alpha_required": false,
+    "min_short_side": 512,
+    "aspect": "9:16"
+   },
+   "prompt": "ink wash (OpenArt history inX5ZwO4ojL93ZBiGCIj)"
+  },
+  {
+   "id": "library.tex_kraft_paper",
+   "fingerprint": "fp1-c932bc3b549ac938",
+   "continuity_key": "tex_kraft_paper",
+   "serves": [
+    "library.tex_kraft_paper"
+   ],
+   "role": "environment",
+   "priority": "optional",
+   "subject": "kraft paper",
+   "context": "library asset: kraft paper",
+   "presentation": "background_plate",
+   "background": "opaque",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "scene",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "tex_kraft_paper",
+    "alpha_required": false,
+    "min_short_side": 512,
+    "aspect": "9:16"
+   },
+   "prompt": "kraft paper (OpenArt history sq6NsfSclUvUYr6ptyzD)"
+  },
+  {
+   "id": "library.tex_charcoal_paper",
+   "fingerprint": "fp1-e14446da3b4a1812",
+   "continuity_key": "tex_charcoal_paper",
+   "serves": [
+    "library.tex_charcoal_paper"
+   ],
+   "role": "environment",
+   "priority": "optional",
+   "subject": "charcoal paper",
+   "context": "library asset: charcoal paper",
+   "presentation": "background_plate",
+   "background": "opaque",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "scene",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "tex_charcoal_paper",
+    "alpha_required": false,
+    "min_short_side": 512,
+    "aspect": "9:16"
+   },
+   "prompt": "charcoal paper (OpenArt history O2gwex0Okdu5WvlIh2DU)"
+  },
+  {
+   "id": "library.torn_paper_strip",
+   "fingerprint": "fp1-289ffd2e656ac69d",
+   "continuity_key": "torn_paper_strip",
+   "serves": [
+    "library.torn_paper_strip"
+   ],
+   "role": "hero_object",
+   "priority": "optional",
+   "subject": "torn paper strip",
+   "context": "library asset: torn paper strip",
+   "presentation": "isolated_cutout",
+   "background": "transparent",
+   "style": {
+    "medium": "editorial photo cut-out, printed on paper",
+    "realism": "photographic, documentary",
+    "lighting": "soft natural light from the upper left",
+    "contrast": "medium contrast",
+    "palette_tendency": "muted warm greys, faded ochre, soft teal",
+    "edge_treatment": "crisp clean cut edge",
+    "shadow_treatment": "no baked shadow (engine adds its own)",
+    "camera_feel": "35-50mm, subject centered in its own frame",
+    "background_behavior": "isolated subject on transparency (keyed from magenta)"
+   },
+   "composition": {
+    "framing": "artifact",
+    "negative_space": "none",
+    "subject_whole": true,
+    "head_inside_frame": false
+   },
+   "avoid": [
+    "embedded text",
+    "letters or numbers",
+    "logos",
+    "watermark",
+    "brand marks"
+   ],
+   "output": {
+    "file_stem": "torn_paper_strip",
+    "alpha_required": true,
+    "min_short_side": 512,
+    "aspect": "1:1"
+   },
+   "prompt": "torn paper strip (OpenArt history 2O5ZUy45NQqOVKyLx9VY)"
+  }
+ ]
+}

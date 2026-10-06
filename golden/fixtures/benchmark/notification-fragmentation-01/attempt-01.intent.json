@@ -1,0 +1,58 @@
+{
+  "version": "0.1",
+  "title": "notification_fragmentation",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "You're trying to finish one important task.",
+      "primary": {
+        "kind": "phrase",
+        "value": "One task",
+        "meaning": "deep focus"
+      },
+      "energy": "calm",
+      "continuity": "carry_primary",
+      "keyword": "focus"
+    },
+    {
+      "purpose": "contrast",
+      "statement": "None of these interruptions takes very long.",
+      "primary": {
+        "kind": "phrase",
+        "value": "One task",
+        "meaning": "deep focus"
+      },
+      "secondary": {
+        "kind": "phrase",
+        "value": "Constant alerts",
+        "meaning": "interruptions"
+      },
+      "relationship": "compress",
+      "energy": "building",
+      "keyword": "alerts"
+    },
+    {
+      "purpose": "explain",
+      "statement": "Every interruption forces your brain to reload.",
+      "primary": {
+        "kind": "phrase",
+        "value": "Context switching",
+        "meaning": "mental reload"
+      },
+      "energy": "building",
+      "keyword": "reload"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "Your attention was repeatedly broken apart.",
+      "primary": {
+        "kind": "phrase",
+        "value": "Broken attention",
+        "meaning": "the true cost"
+      },
+      "energy": "impact",
+      "keyword": "broken"
+    }
+  ]
+}

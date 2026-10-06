@@ -1,0 +1,39 @@
+{
+  "version": "0.2",
+  "title": "ai_opener",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "AI writes your emails",
+      "narration": "AI writes your emails.",
+      "primary": { "kind": "object", "asset": "robot", "meaning": "assistant" },
+      "energy": "impact",
+      "keyword": "emails"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "Paints your posters",
+      "narration": "It paints your posters.",
+      "primary": { "kind": "object", "asset": "magic_wand", "meaning": "creation" },
+      "energy": "impact",
+      "keyword": "paints"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "Codes your apps",
+      "narration": "It codes your apps.",
+      "primary": { "kind": "object", "asset": "laptop", "meaning": "software" },
+      "energy": "impact",
+      "keyword": "codes"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "So what is left for you?",
+      "narration": "So what is left for you? Taste. Judgement. The questions only you can ask.",
+      "primary": { "kind": "phrase", "value": "TASTE", "meaning": "your edge" },
+      "energy": "impact",
+      "keyword": "taste"
+    }
+  ]
+}

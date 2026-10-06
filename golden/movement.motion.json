@@ -1,0 +1,251 @@
+{
+  "version": "0.2",
+  "project": {
+    "name": "golden_movement",
+    "duration_seconds": 1.8
+  },
+  "canvas": {
+    "width": 540,
+    "height": 960,
+    "fps": 30,
+    "background": "#ECE3D2"
+  },
+  "theme": {
+    "fonts": {
+      "display": "font.archivo_black",
+      "display_condensed": "font.anton",
+      "serif_emotional": "font.dm_serif_italic",
+      "body": "font.fira_sans",
+      "mono": "font.space_mono",
+      "number": "font.anton"
+    },
+    "palette": {
+      "paper": "#ECE3D2",
+      "ink": "#16130F",
+      "accent": "#D63A2B",
+      "cobalt": "#1F3FBF"
+    }
+  },
+  "assets": [
+    {
+      "id": "font.archivo_black",
+      "type": "font",
+      "path": "fonts/ArchivoBlack-Regular.ttf"
+    },
+    {
+      "id": "font.anton",
+      "type": "font",
+      "path": "fonts/Anton-Regular.ttf"
+    },
+    {
+      "id": "font.dm_serif_italic",
+      "type": "font",
+      "path": "fonts/DMSerifDisplay-Italic.ttf"
+    },
+    {
+      "id": "font.fira_sans",
+      "type": "font",
+      "path": "fonts/FiraSans-Regular.ttf"
+    },
+    {
+      "id": "font.space_mono",
+      "type": "font",
+      "path": "fonts/SpaceMono-Regular.ttf"
+    }
+  ],
+  "asset_root": "../assets",
+  "scenes": [
+    {
+      "id": "movement",
+      "start_seconds": 0,
+      "duration_seconds": 1.8,
+      "layers": [
+        {
+          "id": "m.move",
+          "type": "rectangle",
+          "x": 40,
+          "y": 60,
+          "width": 80,
+          "height": 80,
+          "fill": "#D63A2B"
+        },
+        {
+          "id": "m.scale",
+          "type": "rectangle",
+          "x": 270,
+          "y": 150,
+          "width": 100,
+          "height": 100,
+          "fill": "#1F3FBF",
+          "anchor_x": 0.5,
+          "anchor_y": 0.5
+        },
+        {
+          "id": "m.scale_x",
+          "type": "rectangle",
+          "x": 40,
+          "y": 320,
+          "width": 200,
+          "height": 60,
+          "fill": "#16130F"
+        },
+        {
+          "id": "m.rotate",
+          "type": "rectangle",
+          "x": 270,
+          "y": 480,
+          "width": 120,
+          "height": 120,
+          "fill": "#D63A2B",
+          "anchor_x": 0.5,
+          "anchor_y": 0.5
+        },
+        {
+          "id": "m.fade",
+          "type": "rectangle",
+          "x": 40,
+          "y": 640,
+          "width": 200,
+          "height": 80,
+          "fill": "#1F3FBF"
+        },
+        {
+          "id": "m.spring",
+          "type": "rectangle",
+          "x": 300,
+          "y": 760,
+          "width": 100,
+          "height": 100,
+          "fill": "#16130F"
+        },
+        {
+          "id": "m.group",
+          "type": "group",
+          "x": 40,
+          "y": 780,
+          "width": 200,
+          "height": 140,
+          "children": [
+            {
+              "id": "m.group.bg",
+              "type": "rectangle",
+              "x": 0,
+              "y": 0,
+              "width": 200,
+              "height": 140,
+              "fill": "#C9BEA8"
+            },
+            {
+              "id": "m.group.child",
+              "type": "rectangle",
+              "x": 20,
+              "y": 20,
+              "width": 60,
+              "height": 60,
+              "fill": "#D63A2B"
+            }
+          ]
+        }
+      ],
+      "motions": [
+        {
+          "target": "m.move",
+          "start": 0.1,
+          "duration": 1.2,
+          "easing": "out_cubic",
+          "op": "move",
+          "from": [
+            0,
+            0
+          ],
+          "to": [
+            380,
+            0
+          ]
+        },
+        {
+          "target": "m.scale",
+          "start": 0.1,
+          "duration": 1.2,
+          "easing": "in_out_cubic",
+          "op": "scale",
+          "from": 0.3,
+          "to": 1.6
+        },
+        {
+          "target": "m.scale_x",
+          "start": 0.1,
+          "duration": 1.2,
+          "easing": "out_quint",
+          "op": "scale",
+          "from": 0.2,
+          "to": 1.0,
+          "axis": "x"
+        },
+        {
+          "target": "m.rotate",
+          "start": 0.1,
+          "duration": 1.4,
+          "easing": "in_cubic",
+          "op": "rotate",
+          "from": 0,
+          "to": 135
+        },
+        {
+          "target": "m.fade",
+          "start": 0.2,
+          "duration": 1.0,
+          "easing": "linear",
+          "op": "fade",
+          "from": 0,
+          "to": 1
+        },
+        {
+          "target": "m.spring",
+          "start": 0.1,
+          "duration": 1.2,
+          "easing": "impact_spring",
+          "op": "move",
+          "from": [
+            0,
+            80
+          ],
+          "to": [
+            0,
+            -80
+          ]
+        },
+        {
+          "target": "m.group.child",
+          "start": 0.2,
+          "duration": 1.2,
+          "easing": "editorial_spring",
+          "op": "move",
+          "from": [
+            0,
+            0
+          ],
+          "to": [
+            100,
+            30
+          ]
+        },
+        {
+          "target": "m.group",
+          "start": 0.2,
+          "duration": 1.2,
+          "easing": "out_cubic",
+          "op": "move",
+          "from": [
+            0,
+            60
+          ],
+          "to": [
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}

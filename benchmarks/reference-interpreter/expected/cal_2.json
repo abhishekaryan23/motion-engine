@@ -1,0 +1,13 @@
+{
+  "case": "cal_2",
+  "known_style": "playful_print",
+  "source": "examples/taste/playful_print.style.json",
+  "comment": "Ground truth for the 0.6 calibration reference. Values are ReferenceStyleProfile vocabulary; a list is the set of accepted values. Only dimensions the source style states unambiguously.",
+  "expected": {
+    "tone": ["playful"],
+    "polarity": ["light"],
+    "temperature": ["warm"],
+    "visual_density": ["dense"],
+    "motion_temperament": ["energetic", "playful"]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "version": "0.2",
+  "title": "empire_fall",
+  "format": "vertical",
+  "beats": [
+    { "purpose": "emphasize", "statement": "The empire at its height",
+      "narration": "For four hundred years, the empire ruled most of the known world.",
+      "primary": { "kind": "number", "value": "400", "meaning": "years of rule" },
+      "energy": "calm" },
+    { "purpose": "explain", "statement": "Cracks in the walls",
+      "narration": "But by the third century, emperors were replaced every few years and the borders grew thin.",
+      "primary": { "kind": "phrase", "value": "A NEW EMPEROR EVERY FEW YEARS", "meaning": "a weak centre" },
+      "energy": "building" },
+    { "purpose": "compare", "statement": "Fifty years of turmoil",
+      "narration": "In half a century, the throne changed hands more than twenty times, and the wars at the frontier never stopped.",
+      "primary": { "kind": "number", "value": "26", "meaning": "emperors in 50 years" },
+      "secondary": { "kind": "number", "value": "400", "meaning": "years before that" },
+      "relationship": "separate", "energy": "building" },
+    { "purpose": "reveal", "statement": "The fall",
+      "narration": "In the end, the capital was taken, and the empire's long rule was over.",
+      "primary": { "kind": "phrase", "value": "THE CAPITAL FALLS", "meaning": "the end of the empire" },
+      "energy": "impact" },
+    { "purpose": "emphasize", "statement": "What history keeps",
+      "narration": "Historians still argue about why it fell, and what it left behind.",
+      "primary": { "kind": "phrase", "value": "HISTORY ARGUES", "meaning": "the legacy" },
+      "energy": "calm" }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+ "generator": {
+  "vendor": "font",
+  "font": "Aikakirja1-MAC.ttf",
+  "licence": "Free commercial/non-commercial use, modification and embedding; glyphs remain Lassi Peltomaa's artwork (see READ_ME_FIRST)",
+  "credit": "Aikakirja Ornaments 1 by Lassi Peltomaa (lassipeltomaa.com)",
+  "codepoint": "U+010E"
+ },
+ "subject_anchor": {
+  "x": 0.5,
+  "y": 0.5
+ }
+}

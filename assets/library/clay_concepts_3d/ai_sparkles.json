@@ -1,0 +1,13 @@
+{
+ "generator": {
+  "vendor": "openart",
+  "project": "MotionEngine Asset Library",
+  "model": "gpt-image-2-5-flare (low, 1k)",
+  "history_id": "N6e4siHz5bhvAAR5rRWH",
+  "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+ },
+ "subject_anchor": {
+  "x": 0.5,
+  "y": 0.5
+ }
+}

@@ -1,0 +1,64 @@
+{
+  "beats": [
+    {
+      "continuity": "none",
+      "energy": "building",
+      "narration": "Five tools now run the modern AI workflow from end to end.",
+      "primary": {
+        "items": [
+          {
+            "asset": "robot",
+            "kind": "object"
+          },
+          {
+            "asset": "microchip",
+            "kind": "object"
+          },
+          {
+            "asset": "brain_circuit",
+            "kind": "object"
+          },
+          {
+            "asset": "chat_bubbles",
+            "kind": "object"
+          },
+          {
+            "kind": "phrase",
+            "value": "ai sparkles"
+          }
+        ],
+        "kind": "collection",
+        "meaning": "AI tools"
+      },
+      "purpose": "emphasize",
+      "statement": "Five tools now run the modern…"
+    },
+    {
+      "continuity": "none",
+      "energy": "building",
+      "narration": "Three habits make the whole morning feel much calmer.",
+      "primary": {
+        "items": [
+          {
+            "asset": "coffee_cup",
+            "kind": "object"
+          },
+          {
+            "kind": "phrase",
+            "value": "a short walk"
+          },
+          {
+            "asset": "clock",
+            "kind": "object"
+          }
+        ],
+        "kind": "collection"
+      },
+      "purpose": "emphasize",
+      "statement": "Calm mornings"
+    }
+  ],
+  "format": "vertical",
+  "title": "ai_workflow",
+  "version": "0.2"
+}

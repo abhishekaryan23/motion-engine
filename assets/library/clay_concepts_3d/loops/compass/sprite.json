@@ -1,0 +1,12 @@
+{
+  "frame_count": 47,
+  "fps": 12.0,
+  "mode": "loop",
+  "pattern": "frame_%04d.png",
+  "width": 384,
+  "height": 469,
+  "ssim_first_last": 0.9597,
+  "ssim_first_last_stored": 0.9404,
+  "keyed": true,
+  "source": "compass.mp4"
+}

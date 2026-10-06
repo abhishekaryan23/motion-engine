@@ -1,0 +1,71 @@
+{
+  "beats": [
+    {
+      "continuity": "none",
+      "energy": "building",
+      "narration": "Costs fell sharply while the output almost tripled this year.",
+      "primary": {
+        "kind": "phrase",
+        "value": "cost"
+      },
+      "purpose": "compare",
+      "relationship": "separate",
+      "secondary": {
+        "kind": "phrase",
+        "value": "output"
+      },
+      "statement": "Costs fell sharply while the output…"
+    },
+    {
+      "continuity": "none",
+      "energy": "building",
+      "narration": "The robots grew faster than the human team ever could.",
+      "primary": {
+        "kind": "phrase",
+        "value": "team"
+      },
+      "purpose": "compare",
+      "relationship": "grow",
+      "secondary": {
+        "asset": "robot",
+        "kind": "object"
+      },
+      "statement": "Robots pull ahead"
+    },
+    {
+      "continuity": "none",
+      "energy": "building",
+      "narration": "Rent keeps squeezing what is left of every paycheck.",
+      "primary": {
+        "kind": "phrase",
+        "value": "paycheck"
+      },
+      "purpose": "compare",
+      "relationship": "compress",
+      "secondary": {
+        "kind": "phrase",
+        "value": "rent"
+      },
+      "statement": "Rent keeps squeezing what is left…"
+    },
+    {
+      "continuity": "none",
+      "energy": "building",
+      "narration": "Chatbots are replacing the old support desk completely.",
+      "primary": {
+        "kind": "phrase",
+        "value": "support desk"
+      },
+      "purpose": "compare",
+      "relationship": "replace",
+      "secondary": {
+        "asset": "chat_bubbles",
+        "kind": "object"
+      },
+      "statement": "Chatbots are replacing the old support…"
+    }
+  ],
+  "format": "vertical",
+  "title": "cost_and_output",
+  "version": "0.2"
+}

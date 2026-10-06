@@ -1,0 +1,42 @@
+{
+  "version": "0.2",
+  "title": "ai_age",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "The age of AI",
+      "narration": "We are living through the fastest technology shift in history.",
+      "primary": { "kind": "object", "asset": "robot", "meaning": "artificial intelligence" },
+      "secondary": { "kind": "object", "asset": "microchip", "meaning": "compute" },
+      "energy": "impact",
+      "keyword": "ai"
+    },
+    {
+      "purpose": "explain",
+      "statement": "Built on patterns",
+      "narration": "Every model learns patterns from billions of examples, one tiny guess at a time.",
+      "primary": { "kind": "object", "asset": "brain_circuit", "meaning": "learning" },
+      "secondary": { "kind": "object", "asset": "neural_network", "meaning": "patterns" },
+      "energy": "building",
+      "keyword": "patterns"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "100 million users in 60 days",
+      "narration": "One chatbot reached a hundred million people in just two months.",
+      "primary": { "kind": "number", "value": "100M", "meaning": "users" },
+      "energy": "impact",
+      "keyword": "users"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "Your new co-worker",
+      "narration": "And soon it will sit beside you at work, ready for your next question.",
+      "primary": { "kind": "object", "asset": "chat_bubbles", "meaning": "conversation" },
+      "secondary": { "kind": "object", "asset": "ai_sparkles", "meaning": "magic" },
+      "energy": "calm",
+      "keyword": "co-worker"
+    }
+  ]
+}

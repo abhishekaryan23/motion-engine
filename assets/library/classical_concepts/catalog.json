@@ -1,0 +1,482 @@
+{
+ "version": "0.1",
+ "family": "classical_concepts",
+ "emotions": [
+  "drama",
+  "luxury"
+ ],
+ "medium": "greyscale classical sculpture concepts",
+ "assets": [
+  {
+   "id": "thinker_statue",
+   "file": "thinker_statue.png",
+   "role": "object",
+   "subject": "thinker statue",
+   "tags": [
+    "philosophy",
+    "ponder",
+    "reflection",
+    "think",
+    "thinker",
+    "thinking",
+    "wisdom"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0863,
+    0.0538,
+    0.9137,
+    0.9462
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "JyWcGx38zZvQ3c0IgxM6",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.08625337,
+     "y": 0.053826746,
+     "width": 0.82749325,
+     "height": 0.8923465
+    },
+    "coverage": 0.52892756,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 742,
+   "height": 1189
+  },
+  {
+   "id": "chess_king",
+   "file": "chess_king.png",
+   "role": "object",
+   "subject": "marble chess king",
+   "tags": [
+    "chess",
+    "decision",
+    "king",
+    "leader",
+    "power",
+    "strategy"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.1265,
+    0.0533,
+    0.8735,
+    0.9467
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "Y81jCM0oEZJwISoSFXw6",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.12645914,
+     "y": 0.05327869,
+     "width": 0.7470817,
+     "height": 0.89344263
+    },
+    "coverage": 0.3605186,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 514,
+   "height": 1220
+  },
+  {
+   "id": "chess_knight",
+   "file": "chess_knight.png",
+   "role": "object",
+   "subject": "marble chess knight",
+   "tags": [
+    "chess",
+    "knight",
+    "plan",
+    "smart move",
+    "strategy",
+    "tactics"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.1,
+    0.0537,
+    0.9,
+    0.9463
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "yHUsZmyf6kNxnSuF0Ibs",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.1,
+     "y": 0.053719006,
+     "width": 0.8,
+     "height": 0.892562
+    },
+    "coverage": 0.49587157,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 650,
+   "height": 1210
+  },
+  {
+   "id": "marble_masks",
+   "file": "marble_masks.png",
+   "role": "object",
+   "subject": "marble masks",
+   "tags": [
+    "drama",
+    "emotions",
+    "identity",
+    "masks",
+    "personality",
+    "theatre"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0596,
+    0.0535,
+    0.9404,
+    0.9465
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "ReeFUXWJW2b7XDqkiOoL",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05955056,
+     "y": 0.053481333,
+     "width": 0.8808989,
+     "height": 0.8930373
+    },
+    "coverage": 0.51275295,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 890,
+   "height": 991
+  },
+  {
+   "id": "owl_statue",
+   "file": "owl_statue.png",
+   "role": "object",
+   "subject": "owl statue",
+   "tags": [
+    "insight",
+    "knowledge",
+    "learning",
+    "owl",
+    "smart",
+    "wisdom"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.1181,
+    0.0534,
+    0.8819,
+    0.9466
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "s8bjRqUp61KhJd8xRsm3",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.11808118,
+     "y": 0.053377815,
+     "width": 0.76383764,
+     "height": 0.8932444
+    },
+    "coverage": 0.5404904,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 542,
+   "height": 1199
+  },
+  {
+   "id": "armillary_sphere",
+   "file": "armillary_sphere.png",
+   "role": "object",
+   "subject": "armillary sphere",
+   "tags": [
+    "astronomy",
+    "cosmos",
+    "discovery",
+    "history of science",
+    "science",
+    "universe"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0885,
+    0.0538,
+    0.9115,
+    0.9462
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "xj7BZIEPRm1tZ5jXtvJr",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.088495575,
+     "y": 0.05376344,
+     "width": 0.82300884,
+     "height": 0.8924731
+    },
+    "coverage": 0.30711383,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 791,
+   "height": 1302
+  },
+  {
+   "id": "marble_brain",
+   "file": "marble_brain.png",
+   "role": "object",
+   "subject": "marble brain",
+   "tags": [
+    "brain",
+    "intellect",
+    "memory",
+    "mind",
+    "psychology",
+    "think"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0742,
+    0.0534,
+    0.9258,
+    0.9466
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "70ZQNVwsFyiqZLFammXe",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.07544757,
+     "y": 0.053357866,
+     "width": 0.85038364,
+     "height": 0.89328426
+    },
+    "coverage": 0.49671423,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 782,
+   "height": 1087
+  },
+  {
+   "id": "winged_victory",
+   "file": "winged_victory.png",
+   "role": "object",
+   "subject": "winged victory",
+   "tags": [
+    "achievement",
+    "glory",
+    "success",
+    "triumph",
+    "victory",
+    "win"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0878,
+    0.0537,
+    0.9122,
+    0.9524
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "EUTbxy4wRpFTw4Vyi5Wu",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.08776267,
+     "y": 0.05366591,
+     "width": 0.82447463,
+     "height": 0.898715
+    },
+    "coverage": 0.35518312,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 809,
+   "height": 1323
+  },
+  {
+   "id": "atlas_globe",
+   "file": "atlas_globe.png",
+   "role": "object",
+   "subject": "atlas statue",
+   "tags": [
+    "atlas",
+    "burden",
+    "pressure",
+    "responsibility",
+    "stress",
+    "weight"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.101,
+    0.0533,
+    0.899,
+    0.9467
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "gpG4JTkAwJAq4ehrDL5S",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.10104012,
+     "y": 0.053291537,
+     "width": 0.79791975,
+     "height": 0.89341694
+    },
+    "coverage": 0.49321222,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 673,
+   "height": 1276
+  },
+  {
+   "id": "lion_statue",
+   "file": "lion_statue.png",
+   "role": "object",
+   "subject": "lion statue",
+   "tags": [
+    "courage",
+    "leadership",
+    "lion",
+    "power",
+    "pride",
+    "strength"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0558,
+    0.0538,
+    0.9442,
+    0.9462
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "hz6NaHljJjay82ZlQQ0D",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05584826,
+     "y": 0.053807106,
+     "width": 0.88830346,
+     "height": 0.8923858
+    },
+    "coverage": 0.50026906,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 949,
+   "height": 985
+  }
+ ]
+}

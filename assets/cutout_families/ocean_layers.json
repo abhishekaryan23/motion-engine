@@ -1,0 +1,100 @@
+{
+  "family": "ocean_layers",
+  "project": "MotionEngine Asset Library",
+  "project_id": "jR0xTD3dUZ28WeDiZEj4",
+  "emotions": ["wonder", "curiosity", "awe"],
+  "neutralize_violet": true,
+  "medium": "cinematic photoreal glossy 3D renders for ocean-science stories (light zones, stratification, oxygen)",
+  "assets": [
+    {
+      "id": "photic_zone",
+      "role": "object",
+      "subject": "sunlit surface ocean layer",
+      "tags": ["photic", "sunlit", "surface", "epipelagic", "sunlight", "ocean", "sea", "water"],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Cinematic photorealistic 3D render of a thick cutaway slab of bright sunlit turquoise ocean water floating in the air, the top surface rippling with gentle waves and sparkling white sun glints, golden sunbeams streaming down through the clear water, tiny green plankton and bubbles drifting inside, the slab glowing from within in luminous aquamarine and cyan, glossy glass-like edges, premium science-documentary look, dramatic rim light. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. Only turquoise, cyan, gold and white in the object (no pink, no purple, no magenta). No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "phytoplankton",
+      "role": "object",
+      "subject": "phytoplankton",
+      "tags": ["phytoplankton", "plankton", "algae", "photosynthesis", "microalgae", "diatom"],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Cinematic photorealistic macro 3D render of a cluster of glowing green phytoplankton: translucent glass-like diatoms and round algae cells with intricate lace-like shells and bright chlorophyll-green cores, backlit by golden sunlight so they glow, a few tiny bubbles around them, glossy jewel-like detail, premium science-documentary look. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. Only emerald green, lime, gold and clear glass in the object (no pink, no purple, no magenta). No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "fish_skeleton",
+      "role": "object",
+      "subject": "sinking fish skeleton",
+      "tags": ["fish", "skeleton", "bones", "carcass", "decomposition", "decay", "dead", "decomposing", "detritus"],
+      "model": "flare",
+      "aspect": "3:2",
+      "prompt": "Cinematic photorealistic 3D render of the pale bleached skeleton of a fish in side view, sinking head-first, delicate ribs and spine, a few strands of tattered flesh and tiny white marine snow flakes drifting around it, cold blue rim light from above and a faint teal glow along the bones, eerie and moody deep-sea documentary look, glossy detail. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. Only bone white, ice blue, teal and dark slate in the object (no pink, no purple, no magenta, no red). No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "bacteria",
+      "role": "object",
+      "subject": "decomposing bacteria",
+      "tags": ["bacteria", "microbes", "bacterial", "decomposers", "microbe", "decomposer", "germs"],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Cinematic photorealistic macro 3D render of a cluster of glowing rod-shaped and round bacteria, translucent capsules with fine flagella tails, bioluminescent cyan and lime-green light glowing from inside each cell, wet glossy membranes, a few drifting marine-snow particles, moody dark-ocean science look. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. Only cyan, teal, lime green, and pale amber in the object (no pink, no purple, no magenta, no red). No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "ocean_layers",
+      "role": "object",
+      "subject": "ocean water column with thermocline",
+      "tags": ["ocean", "layers", "layer", "thermocline", "pycnocline", "boundary", "cutaway", "water", "column", "sea", "depth", "slab"],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Cinematic photorealistic 3D render of a tall rectangular cutaway block of ocean water floating in the air, showing three clearly stacked horizontal layers: a bright glowing turquoise sunlit layer on top with a rippling surface, a thin shimmering silvery-white glassy band in the middle like a sheet of heat haze marking the boundary, and a deep dark midnight-blue layer below that fades to near black. The layers do not mix, sharp layered boundary, glossy glass-like faces, subtle light rays in the top layer, premium science-documentary look, dramatic rim light. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. Only turquoise, cyan, white, navy and black in the object (no pink, no purple, no magenta). No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "thermometer",
+      "role": "object",
+      "subject": "thermometer",
+      "tags": ["thermometer", "temperature", "thermal", "heat", "cold", "warm", "gauge"],
+      "model": "flare",
+      "aspect": "2:3",
+      "prompt": "Cinematic photorealistic 3D render of a tall vertical glass laboratory thermometer with a bulb at the bottom, the liquid inside glowing cyan-blue and sitting low, with clean tick marks (no numbers) down one side, polished glass with bright reflections and a thin cool blue rim light, sleek premium science look. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. Only clear glass, cyan, blue, and silver in the object (no pink, no purple, no magenta, no red). No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "density_column",
+      "role": "object",
+      "subject": "stratified density column",
+      "tags": ["density", "column", "stratification", "stratified", "layered", "layers", "mixing", "cylinder", "beaker", "liquid"],
+      "model": "flare",
+      "aspect": "2:3",
+      "prompt": "Cinematic photorealistic 3D render of a tall clear glass cylinder filled with four perfectly separated horizontal layers of liquid that do not mix: bright turquoise on top, then clear aqua, then deep teal blue, then dark midnight navy at the bottom, razor-sharp boundaries between layers, glossy glass walls with soft highlights and a few rising tiny bubbles in the top layer, a thin cool rim light, sleek premium science look. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. Only turquoise, aqua, teal, navy and clear glass in the object (no pink, no purple, no magenta). No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "padlock",
+      "role": "object",
+      "subject": "padlock",
+      "tags": ["padlock", "lock", "locked", "barrier", "sealed", "block", "blocked", "seal"],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Cinematic photorealistic 3D render of a chunky polished steel padlock, closed, with a thick shackle, brushed metal body with crisp reflections, a soft glowing cyan light spilling from the keyhole, cool blue rim light, premium product-hero look. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. Only steel silver, grey, cyan and white in the object (no pink, no purple, no magenta, no red). No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "oxygen_molecule",
+      "role": "object",
+      "subject": "oxygen molecule",
+      "tags": ["oxygen", "molecule", "o2", "atoms", "atom", "gas", "dissolved"],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Cinematic photorealistic 3D render of an oxygen molecule O2: two large glossy glass-like spheres fused together, bright coral-orange and amber glowing from inside with soft white highlights, subtle double bond bars between them, tiny sparkles around, premium science-documentary look, crisp specular reflections, dramatic rim light. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. Only amber, orange, gold and white in the object (no pink, no purple, no magenta, no red). No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "bubbles",
+      "role": "object",
+      "subject": "rising oxygen bubbles",
+      "tags": ["bubbles", "bubble", "oxygen", "rising", "air", "breath", "fizz"],
+      "model": "flare",
+      "aspect": "2:3",
+      "prompt": "Cinematic photorealistic 3D render of a stream of glossy transparent air bubbles of many sizes rising upward in a loose vertical column, each bubble a thin iridescent-free clear glass sphere with bright window reflections and a soft cyan edge glow, the biggest at the top and the smallest at the bottom, premium underwater documentary look. Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. Only clear glass, cyan, aqua and white in the object (no pink, no purple, no magenta, no rainbow tint). No text, no letters, no numbers, no logos, no watermark."
+    }
+  ]
+}

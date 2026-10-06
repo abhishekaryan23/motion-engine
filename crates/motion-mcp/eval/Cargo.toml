@@ -1,0 +1,24 @@
+[package]
+name = "motion-mcp-eval"
+description = "Dev-only eval harness: a local OpenAI-compatible model drives motion-mcp over stdio"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish = false
+
+[[bin]]
+name = "motion-mcp-eval"
+path = "src/main.rs"
+
+# A separate package on purpose: `motion-mcp` makes no network calls, and none
+# of this code (HTTP to the local model) may enter that crate.
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+anyhow.workspace = true
+clap.workspace = true
+# The model side: plain HTTP to a local OpenAI-compatible server (LM Studio).
+ureq = { version = "2", default-features = false, features = ["json", "tls"] }
+# The server side: the same rmcp client the stdio tests use.
+rmcp = { version = "3.5", default-features = false, features = ["client", "transport-child-process"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "process", "time", "sync"] }

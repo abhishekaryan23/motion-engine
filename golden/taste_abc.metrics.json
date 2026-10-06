@@ -1,0 +1,251 @@
+{
+  "about": "Resolved fingerprint + measured temporal metrics for the three taste styles (examples/taste/*.style.json) over the same intents. Regenerate: MOTION_UPDATE_GOLDEN=1 cargo test -p motion-core --test temporal_style",
+  "intents": {
+    "editorial_demo": {
+      "A_warm_editorial": {
+        "fingerprint": {
+          "background": "paper_field",
+          "composition_rhythm": "measured_editorial",
+          "image_treatment": "paper_cutout",
+          "material": "uncoated_paper",
+          "motion_temperament": "restrained",
+          "palette_family": "warm_paper",
+          "polarity": "light",
+          "scale_contrast": "large",
+          "transition_character": "editorial",
+          "typography": "humanist_serif",
+          "visual_density": {
+            "annotation": "editorial",
+            "collage_patches": false,
+            "ghost_word": "low",
+            "level": "balanced"
+          }
+        },
+        "metrics": {
+          "backdrop_field_layers": 0,
+          "backdrop_grid_groups": 0,
+          "backdrop_motion_times": 0,
+          "backdrop_motions": 0,
+          "beat_scenes": 3,
+          "camera_max_push": 0.013,
+          "camera_max_track": 0.0,
+          "duration_seconds": 12.77,
+          "evolve_stage_scales": 0,
+          "frame_count": 384,
+          "furniture_kinds": [
+            "folio_rule"
+          ],
+          "furniture_layers": 3,
+          "mean_read_span": 0.654,
+          "spring_entrances": 0,
+          "spring_total": 0,
+          "wipe_layers": 0
+        }
+      },
+      "B_dark_technical": {
+        "fingerprint": {
+          "background": "technical_grid",
+          "composition_rhythm": "progressive",
+          "image_treatment": "monochrome",
+          "material": "screen",
+          "motion_temperament": "precise",
+          "palette_family": "dark_cool",
+          "polarity": "dark",
+          "scale_contrast": "moderate",
+          "transition_character": "geometric",
+          "typography": "precision_grotesk",
+          "visual_density": {
+            "annotation": "structured",
+            "collage_patches": false,
+            "ghost_word": "medium",
+            "level": "balanced"
+          }
+        },
+        "metrics": {
+          "backdrop_field_layers": 0,
+          "backdrop_grid_groups": 1,
+          "backdrop_motion_times": 5,
+          "backdrop_motions": 7,
+          "beat_scenes": 3,
+          "camera_max_push": 0.004,
+          "camera_max_track": 13.0,
+          "duration_seconds": 12.079,
+          "evolve_stage_scales": 3,
+          "frame_count": 363,
+          "furniture_kinds": [
+            "data",
+            "ticks"
+          ],
+          "furniture_layers": 6,
+          "mean_read_span": 0.555,
+          "spring_entrances": 0,
+          "spring_total": 0,
+          "wipe_layers": 4
+        }
+      },
+      "C_playful_print": {
+        "fingerprint": {
+          "background": "print_fields",
+          "composition_rhythm": "active",
+          "image_treatment": "print_cutout",
+          "material": "coated_print",
+          "motion_temperament": "energetic",
+          "palette_family": "print_bright",
+          "polarity": "light",
+          "scale_contrast": "dramatic",
+          "transition_character": "kinetic",
+          "typography": "friendly_geometric",
+          "visual_density": {
+            "annotation": "graphic",
+            "collage_patches": true,
+            "ghost_word": "high",
+            "level": "dense"
+          }
+        },
+        "metrics": {
+          "backdrop_field_layers": 9,
+          "backdrop_grid_groups": 0,
+          "backdrop_motion_times": 3,
+          "backdrop_motions": 36,
+          "beat_scenes": 3,
+          "camera_max_push": 0.049,
+          "camera_max_track": 33.287,
+          "duration_seconds": 11.406,
+          "evolve_stage_scales": 3,
+          "frame_count": 343,
+          "furniture_kinds": [
+            "sticker"
+          ],
+          "furniture_layers": 3,
+          "mean_read_span": 0.5,
+          "spring_entrances": 9,
+          "spring_total": 16,
+          "wipe_layers": 2
+        }
+      }
+    },
+    "kinetic_poster": {
+      "A_warm_editorial": {
+        "fingerprint": {
+          "background": "paper_field",
+          "composition_rhythm": "measured_editorial",
+          "image_treatment": "paper_cutout",
+          "material": "uncoated_paper",
+          "motion_temperament": "restrained",
+          "palette_family": "warm_paper",
+          "polarity": "light",
+          "scale_contrast": "large",
+          "transition_character": "editorial",
+          "typography": "humanist_serif",
+          "visual_density": {
+            "annotation": "editorial",
+            "collage_patches": false,
+            "ghost_word": "low",
+            "level": "balanced"
+          }
+        },
+        "metrics": {
+          "backdrop_field_layers": 0,
+          "backdrop_grid_groups": 0,
+          "backdrop_motion_times": 0,
+          "backdrop_motions": 0,
+          "beat_scenes": 2,
+          "camera_max_push": 0.011,
+          "camera_max_track": 0.0,
+          "duration_seconds": 9.37,
+          "evolve_stage_scales": 0,
+          "frame_count": 282,
+          "furniture_kinds": [
+            "folio_rule"
+          ],
+          "furniture_layers": 2,
+          "mean_read_span": 1.263,
+          "spring_entrances": 0,
+          "spring_total": 0,
+          "wipe_layers": 0
+        }
+      },
+      "B_dark_technical": {
+        "fingerprint": {
+          "background": "technical_grid",
+          "composition_rhythm": "progressive",
+          "image_treatment": "monochrome",
+          "material": "screen",
+          "motion_temperament": "precise",
+          "palette_family": "dark_cool",
+          "polarity": "dark",
+          "scale_contrast": "moderate",
+          "transition_character": "geometric",
+          "typography": "precision_grotesk",
+          "visual_density": {
+            "annotation": "structured",
+            "collage_patches": false,
+            "ghost_word": "medium",
+            "level": "balanced"
+          }
+        },
+        "metrics": {
+          "backdrop_field_layers": 0,
+          "backdrop_grid_groups": 1,
+          "backdrop_motion_times": 3,
+          "backdrop_motions": 3,
+          "beat_scenes": 2,
+          "camera_max_push": 0.007,
+          "camera_max_track": 13.0,
+          "duration_seconds": 8.874,
+          "evolve_stage_scales": 2,
+          "frame_count": 267,
+          "furniture_kinds": [
+            "data",
+            "ticks"
+          ],
+          "furniture_layers": 4,
+          "mean_read_span": 0.858,
+          "spring_entrances": 0,
+          "spring_total": 0,
+          "wipe_layers": 4
+        }
+      },
+      "C_playful_print": {
+        "fingerprint": {
+          "background": "print_fields",
+          "composition_rhythm": "active",
+          "image_treatment": "print_cutout",
+          "material": "coated_print",
+          "motion_temperament": "energetic",
+          "palette_family": "print_bright",
+          "polarity": "light",
+          "scale_contrast": "dramatic",
+          "transition_character": "kinetic",
+          "typography": "friendly_geometric",
+          "visual_density": {
+            "annotation": "graphic",
+            "collage_patches": true,
+            "ghost_word": "high",
+            "level": "dense"
+          }
+        },
+        "metrics": {
+          "backdrop_field_layers": 9,
+          "backdrop_grid_groups": 0,
+          "backdrop_motion_times": 2,
+          "backdrop_motions": 21,
+          "beat_scenes": 2,
+          "camera_max_push": 0.081,
+          "camera_max_track": 33.287,
+          "duration_seconds": 8.334,
+          "evolve_stage_scales": 2,
+          "frame_count": 251,
+          "furniture_kinds": [
+            "sticker"
+          ],
+          "furniture_layers": 2,
+          "mean_read_span": 0.594,
+          "spring_entrances": 27,
+          "spring_total": 35,
+          "wipe_layers": 2
+        }
+      }
+    }
+  }
+}

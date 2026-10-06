@@ -1,0 +1,723 @@
+{
+ "version": "0.1",
+ "family": "halftone_retro_objects",
+ "emotions": [
+  "energy",
+  "playful_retro"
+ ],
+ "medium": "black-and-white retro object photograph (engine applies halftone)",
+ "assets": [
+  {
+   "id": "retro_tv",
+   "file": "retro_tv.png",
+   "role": "object",
+   "subject": "retro television",
+   "tags": [
+    "ad",
+    "advert",
+    "broadcast",
+    "old",
+    "retro",
+    "screen",
+    "television",
+    "tv"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0536,
+    0.0699,
+    0.9464,
+    0.9301
+   ],
+   "open_edge": false,
+   "screen_box": {
+    "x": 0.1398,
+    "y": 0.1735,
+    "width": 0.5642,
+    "height": 0.5818
+   },
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "cWA55gG9CweTSVXk3ZBY",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.053639848,
+     "y": 0.06991261,
+     "width": 0.8927203,
+     "height": 0.8601748
+    },
+    "coverage": 0.40388572,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1044,
+   "height": 801
+  },
+  {
+   "id": "keyboard",
+   "file": "keyboard.png",
+   "role": "object",
+   "subject": "computer keyboard",
+   "tags": [
+    "computer",
+    "input",
+    "keyboard",
+    "keys",
+    "typing"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0537,
+    0.1104,
+    0.9463,
+    0.8896
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "7uJT2pGjsr0k2kfKhoez",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05375,
+     "y": 0.11039794,
+     "width": 0.8925,
+     "height": 0.77920413
+    },
+    "coverage": 0.48064023,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1600,
+   "height": 779
+  },
+  {
+   "id": "megaphone",
+   "file": "megaphone.png",
+   "role": "object",
+   "subject": "megaphone",
+   "tags": [
+    "announce",
+    "announcement",
+    "attention",
+    "loud",
+    "megaphone",
+    "shout"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0533,
+    0.0617,
+    0.9467,
+    0.9383
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "lBgwpE7rSquxrDTXxiC3",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.053318825,
+     "y": 0.061712846,
+     "width": 0.89336234,
+     "height": 0.8765743
+    },
+    "coverage": 0.37213266,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 919,
+   "height": 794
+  },
+  {
+   "id": "rotary_phone",
+   "file": "rotary_phone.png",
+   "role": "object",
+   "subject": "rotary telephone",
+   "tags": [
+    "call",
+    "calling",
+    "phone",
+    "retro",
+    "rotary",
+    "telephone"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0533,
+    0.0669,
+    0.9467,
+    0.9331
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "3lSBfkpOUHb7Jo02CAnA",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05327414,
+     "y": 0.066945605,
+     "width": 0.8934517,
+     "height": 0.8661088
+    },
+    "coverage": 0.55345446,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 901,
+   "height": 717
+  },
+  {
+   "id": "cassette",
+   "file": "cassette.png",
+   "role": "object",
+   "subject": "cassette tape",
+   "tags": [
+    "audio",
+    "cassette",
+    "mixtape",
+    "music",
+    "retro",
+    "tape"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0533,
+    0.0775,
+    0.9467,
+    0.9225
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "U7S38H3RzSWsxeAikw18",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05326087,
+     "y": 0.07753164,
+     "width": 0.8934783,
+     "height": 0.8449367
+    },
+    "coverage": 0.7378629,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 920,
+   "height": 632
+  },
+  {
+   "id": "film_camera",
+   "file": "film_camera.png",
+   "role": "object",
+   "subject": "film camera",
+   "tags": [
+    "camera",
+    "film",
+    "photo",
+    "photograph",
+    "retro",
+    "snapshot"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0537,
+    0.0894,
+    0.9463,
+    0.9106
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "ObgSwZwSluwkLnVtczQB",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05366922,
+     "y": 0.08941606,
+     "width": 0.8926616,
+     "height": 0.8211679
+    },
+    "coverage": 0.6629484,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 913,
+   "height": 548
+  },
+  {
+   "id": "typewriter",
+   "file": "typewriter.png",
+   "role": "object",
+   "subject": "typewriter",
+   "tags": [
+    "letter",
+    "retro",
+    "typewriter",
+    "typing",
+    "writer",
+    "writing"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.054,
+    0.0574,
+    0.946,
+    0.9426
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "WAIebSNbNQ4WDCMZCU2q",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05402299,
+     "y": 0.057387058,
+     "width": 0.891954,
+     "height": 0.8852259
+    },
+    "coverage": 0.612777,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 870,
+   "height": 819
+  },
+  {
+   "id": "hand_with_phone",
+   "file": "hand_with_phone.png",
+   "role": "object",
+   "subject": "hand holding a phone",
+   "tags": [
+    "hand",
+    "holding",
+    "mobile",
+    "phone",
+    "scrolling",
+    "smartphone"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0108,
+    0.0564,
+    0.9183,
+    1.0
+   ],
+   "open_edge": true,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "uTDEyjseG4t7qu64U7CC",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "WARN",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.010817308,
+     "y": 0.056431536,
+     "width": 0.9074519,
+     "height": 0.94356847
+    },
+    "coverage": 0.48271725,
+    "edges": {
+     "top": false,
+     "bottom": true,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 832,
+   "height": 1205
+  },
+  {
+   "id": "flip_phone",
+   "file": "flip_phone.png",
+   "role": "object",
+   "subject": "flip phone",
+   "tags": [
+    "call",
+    "cellphone",
+    "flip",
+    "mobile",
+    "phone",
+    "retro"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.207,
+    0.0537,
+    0.791,
+    0.9463
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "g6FNcPcoQbXnHImzGlBr",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.20703125,
+     "y": 0.05366269,
+     "width": 0.5839844,
+     "height": 0.8926746
+    },
+    "coverage": 0.4842935,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 512,
+   "height": 1174
+  },
+  {
+   "id": "radio",
+   "file": "radio.png",
+   "role": "object",
+   "subject": "transistor radio",
+   "tags": [
+    "broadcast",
+    "listen",
+    "news",
+    "radio",
+    "retro",
+    "transistor"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0787,
+    0.0534,
+    0.9213,
+    0.9466
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "VelPBmXv2Np6RMJtlob3",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.07865169,
+     "y": 0.053435113,
+     "width": 0.8426966,
+     "height": 0.89312977
+    },
+    "coverage": 0.48396352,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 623,
+   "height": 917
+  },
+  {
+   "id": "vinyl",
+   "file": "vinyl.png",
+   "role": "object",
+   "subject": "vinyl record",
+   "tags": [
+    "album",
+    "disc",
+    "music",
+    "record",
+    "retro",
+    "vinyl"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0741,
+    0.0534,
+    0.9259,
+    0.9466
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "vaMeo0De1gEuQ8YtuuJw",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.074132495,
+     "y": 0.053409092,
+     "width": 0.851735,
+     "height": 0.8931818
+    },
+    "coverage": 0.6979531,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 634,
+   "height": 880
+  },
+  {
+   "id": "joystick",
+   "file": "joystick.png",
+   "role": "object",
+   "subject": "joystick",
+   "tags": [
+    "arcade",
+    "controller",
+    "game",
+    "gaming",
+    "joystick",
+    "play"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0634,
+    0.054,
+    0.9366,
+    0.946
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "PlDc2mDyy3ldGjRv1SNm",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.0634278,
+     "y": 0.053960964,
+     "width": 0.8731444,
+     "height": 0.89207804
+    },
+    "coverage": 0.41655472,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 741,
+   "height": 871
+  },
+  {
+   "id": "boombox",
+   "file": "boombox.png",
+   "role": "object",
+   "subject": "boombox",
+   "tags": [
+    "boombox",
+    "music",
+    "party",
+    "retro",
+    "speaker",
+    "stereo"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0537,
+    0.081,
+    0.9463,
+    0.919
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "jKvGWG8JlBjmWPOS0kF3",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.053702198,
+     "y": 0.0809816,
+     "width": 0.8925956,
+     "height": 0.83803684
+    },
+    "coverage": 0.6514978,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 1229,
+   "height": 815
+  },
+  {
+   "id": "instant_camera",
+   "file": "instant_camera.png",
+   "role": "object",
+   "subject": "instant camera",
+   "tags": [
+    "camera",
+    "instant",
+    "memory",
+    "photo",
+    "polaroid",
+    "snapshot"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0665,
+    0.0536,
+    0.9335,
+    0.9464
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "Uw71fNrGiDmRgnheENo0",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.0664557,
+     "y": 0.05357143,
+     "width": 0.8670886,
+     "height": 0.89285713
+    },
+    "coverage": 0.65318435,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 632,
+   "height": 784
+  },
+  {
+   "id": "walkman",
+   "file": "walkman.png",
+   "role": "object",
+   "subject": "portable cassette player",
+   "tags": [
+    "cassette",
+    "headphones",
+    "listening",
+    "music",
+    "player",
+    "walkman"
+   ],
+   "alpha": true,
+   "cutout_bbox": [
+    0.0541,
+    0.0564,
+    0.9459,
+    0.9436
+   ],
+   "open_edge": false,
+   "source": {
+    "vendor": "openart",
+    "project": "MotionEngine Asset Library",
+    "model": "gpt-image-2-5-flare (low, 1k)",
+    "history_id": "q3Nk1lwBLm3v8EW0PK0V",
+    "keyed": "scripts/key_cutout.py (magenta, border+pocket key, tight crop)"
+   },
+   "qa": "PASS",
+   "analysis": {
+    "subject_bounds": {
+     "x": 0.05408805,
+     "y": 0.056356486,
+     "width": 0.8918239,
+     "height": 0.887287
+    },
+    "coverage": 0.40963262,
+    "edges": {
+     "top": false,
+     "bottom": false,
+     "left": false,
+     "right": false
+    }
+   },
+   "width": 795,
+   "height": 763
+  }
+ ]
+}

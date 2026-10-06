@@ -1,0 +1,5591 @@
+{
+  "version": "0.2",
+  "assets": [
+    {
+      "id": "library.car_b_01",
+      "path": "car_b_01.png",
+      "width": 1146,
+      "height": 878,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_01"
+      ],
+      "fingerprint": "fp1-49beba92f9c096e7",
+      "continuity_key": "car_b_01",
+      "content_hash": "fnv1a64:e7918a9df78cec2f",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.06947608,
+          "width": 0.89354277,
+          "height": 0.86104786
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.19612835,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000000000031000",
+            "0000000000004000",
+            "0000015688877750",
+            "000027886b756881",
+            "0001686006800051",
+            "0005197558c33371",
+            "004203567a755561",
+            "0092021002410010",
+            "03c4bc9202000000",
+            "1baac9ac55222220",
+            "0788aeab34000120",
+            "004b9dd967976661",
+            "00007eb312222220",
+            "0000365100000000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.6875,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.12890625
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.3125,
+              "height": 0.3125
+            },
+            "occupancy": 0.0053333333,
+            "score": 0.09713542
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.5,
+              "y": 0.8125,
+              "width": 0.5,
+              "height": 0.1875
+            },
+            "occupancy": 0.036111113,
+            "score": 0.09036458
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.5,
+              "y": 0.8125,
+              "width": 0.5,
+              "height": 0.1875
+            },
+            "occupancy": 0.036111113,
+            "score": 0.09036458
+          },
+          {
+            "name": "right_middle",
+            "rect": {
+              "x": 0.6875,
+              "y": 0.5,
+              "width": 0.3125,
+              "height": 0.25
+            },
+            "occupancy": 0.043333333,
+            "score": 0.07473958
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.8125,
+              "width": 0.25,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.046875
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+0041",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_02",
+      "path": "car_b_02.png",
+      "width": 1146,
+      "height": 850,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_02"
+      ],
+      "fingerprint": "fp1-aa97f5d02e4ef6d6",
+      "continuity_key": "car_b_02",
+      "content_hash": "fnv1a64:bfa75aec14e6efe9",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.07176471,
+          "width": 0.89354277,
+          "height": 0.8564706
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.25089723,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "000000000013ccc2",
+            "0000000015a597b2",
+            "00000004575b4080",
+            "000015a54a893082",
+            "00488435568999c2",
+            "00b0000000000152",
+            "0190000585100030",
+            "07bbbbdfffc9a9b1",
+            "276a00ca9ae20020",
+            "06b856eacfb70020",
+            "007ab9ad59ba5561",
+            "0000005d8cbb5661",
+            "00000059fd710000",
+            "0000000677200000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.4375,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.109375
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.4375,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.109375
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.375,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.09375
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.375,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.09375
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.6875,
+              "y": 0.8125,
+              "width": 0.3125,
+              "height": 0.1875
+            },
+            "occupancy": 0.0044444446,
+            "score": 0.058333334
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+0042",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_03",
+      "path": "car_b_03.png",
+      "width": 1146,
+      "height": 882,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_03"
+      ],
+      "fingerprint": "fp1-c25998cff5bddd65",
+      "continuity_key": "car_b_03",
+      "content_hash": "fnv1a64:72119d43a7a43710",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.069161,
+          "width": 0.89354277,
+          "height": 0.861678
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.21855474,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000000011100041",
+            "0000037777887551",
+            "0000388a86b44351",
+            "0003772000d54000",
+            "0066685655c97330",
+            "01508accaab77651",
+            "0614200000360000",
+            "0826554222522220",
+            "08606ac952423331",
+            "1b70b9b8c0300000",
+            "0583bdddb4633331",
+            "00016ede75444441",
+            "00004eec20000000",
+            "0000079400000000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.875,
+              "height": 0.125
+            },
+            "occupancy": 0.007142857,
+            "score": 0.108593754
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.5,
+              "y": 0.8125,
+              "width": 0.5,
+              "height": 0.1875
+            },
+            "occupancy": 0.0055555557,
+            "score": 0.09322917
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.5,
+              "y": 0.8125,
+              "width": 0.5,
+              "height": 0.1875
+            },
+            "occupancy": 0.0055555557,
+            "score": 0.09322917
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.5,
+              "height": 0.125
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.25,
+              "height": 0.25
+            },
+            "occupancy": 0.004166667,
+            "score": 0.062239584
+          },
+          {
+            "name": "right_upper",
+            "rect": {
+              "x": 0.5,
+              "y": 0.0,
+              "width": 0.375,
+              "height": 0.125
+            },
+            "occupancy": 0.016666668,
+            "score": 0.04609375
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+0043",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_04",
+      "path": "car_b_04.png",
+      "width": 1146,
+      "height": 879,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_04"
+      ],
+      "fingerprint": "fp1-2ac59a8f7c0e97df",
+      "continuity_key": "car_b_04",
+      "content_hash": "fnv1a64:e744e8969956ca68",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.06939704,
+          "width": 0.89354277,
+          "height": 0.86120594
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.26107824,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000000001335541",
+            "000000059579aaa1",
+            "0000169abd513a40",
+            "0017bad7beb45850",
+            "0124abb9988bca91",
+            "0422222222111371",
+            "0635898888877871",
+            "0591451553000300",
+            "188310bccd678400",
+            "1c9324cddac33530",
+            "01237bcbaad00441",
+            "000001bb9b767871",
+            "0000007edb100000",
+            "0000001895000000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.375,
+              "height": 0.25
+            },
+            "occupancy": 0.0027777778,
+            "score": 0.09348959
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.375,
+              "height": 0.25
+            },
+            "occupancy": 0.0027777778,
+            "score": 0.09348959
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.4375,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.08203125
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.4375,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.08203125
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.625,
+              "y": 0.8125,
+              "width": 0.375,
+              "height": 0.1875
+            },
+            "occupancy": 0.0037037036,
+            "score": 0.07005208
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+0044",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_05",
+      "path": "car_b_05.png",
+      "width": 1146,
+      "height": 853,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_05"
+      ],
+      "fingerprint": "fp1-491d08a1c72034e3",
+      "continuity_key": "car_b_05",
+      "content_hash": "fnv1a64:06f9bbe1c06d8684",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.07151231,
+          "width": 0.89354277,
+          "height": 0.8569754
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.2553701,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000000001457892",
+            "000000059c9c5a71",
+            "000016bb74220850",
+            "0004663614243870",
+            "0030557767aabba1",
+            "0143363333334950",
+            "0320522573001520",
+            "0632048fdf701200",
+            "2edcaae674e99871",
+            "0691049efaa44530",
+            "0016898fae8cbba2",
+            "0000006ffd877771",
+            "00000047c5400000",
+            "0000000676000000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.375,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.09375
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.375,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.09375
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.4375,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.08203125
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.4375,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.08203125
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.6875,
+              "y": 0.8125,
+              "width": 0.3125,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.05859375
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+0045",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_06",
+      "path": "car_b_06.png",
+      "width": 1146,
+      "height": 844,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_06"
+      ],
+      "fingerprint": "fp1-71e4293e9234bd20",
+      "continuity_key": "car_b_06",
+      "content_hash": "fnv1a64:c807f4421193634c",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.07227488,
+          "width": 0.89354277,
+          "height": 0.8554502
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.2175525,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000017899aa9771",
+            "0000068a98d888b2",
+            "0000544000b10040",
+            "0004263322a40040",
+            "0022455565997751",
+            "0020001122476551",
+            "0343333332331000",
+            "0566599866623341",
+            "0c43affb30200000",
+            "2c55e66b80200000",
+            "026aabd8b5565551",
+            "00155cc954444451",
+            "000069e700000000",
+            "0000175400000000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.5,
+              "y": 0.8125,
+              "width": 0.5,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.09375
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.5,
+              "y": 0.8125,
+              "width": 0.5,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.09375
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.1875,
+              "height": 0.4375
+            },
+            "occupancy": 0.012698413,
+            "score": 0.080989584
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          },
+          {
+            "name": "right_middle",
+            "rect": {
+              "x": 0.5625,
+              "y": 0.5625,
+              "width": 0.4375,
+              "height": 0.125
+            },
+            "occupancy": 0.01904762,
+            "score": 0.053645834
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.1875,
+              "height": 0.25
+            },
+            "occupancy": 0.0055555557,
+            "score": 0.046614584
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+0046",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_07",
+      "path": "car_b_07.png",
+      "width": 1146,
+      "height": 855,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_07"
+      ],
+      "fingerprint": "fp1-168cba2bb252c6c8",
+      "continuity_key": "car_b_07",
+      "content_hash": "fnv1a64:bd5c08e7ed354ca5",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.07134503,
+          "width": 0.89354277,
+          "height": 0.85730994
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.18931243,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000000000246761",
+            "00000000024aa771",
+            "00000000238a3000",
+            "00000002396b2000",
+            "00013465389a5561",
+            "0035010000311110",
+            "0132110011422000",
+            "069122459a796530",
+            "0970000acaac7000",
+            "1750003da89cb551",
+            "055488accb9cb320",
+            "00001318b6abaaa1",
+            "00000006aa950000",
+            "0000000179700000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.5,
+              "height": 0.3125
+            },
+            "occupancy": 0.0033333334,
+            "score": 0.15572917
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.5,
+              "height": 0.3125
+            },
+            "occupancy": 0.0033333334,
+            "score": 0.15572917
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.8125,
+              "width": 0.4375,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.08203125
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.8125,
+              "width": 0.4375,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.08203125
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.75,
+              "y": 0.8125,
+              "width": 0.25,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.046875
+          },
+          {
+            "name": "left_middle",
+            "rect": {
+              "x": 0.1875,
+              "y": 0.4375,
+              "width": 0.1875,
+              "height": 0.25
+            },
+            "occupancy": 0.05,
+            "score": 0.04453125
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+0047",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_08",
+      "path": "car_b_08.png",
+      "width": 1146,
+      "height": 765,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_08"
+      ],
+      "fingerprint": "fp1-1045daa3f9270782",
+      "continuity_key": "car_b_08",
+      "content_hash": "fnv1a64:a76b4da3620f2547",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.079738565,
+          "width": 0.89354277,
+          "height": 0.8405229
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.19666244,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000044445436300",
+            "000068aa88889a10",
+            "0002561016201b60",
+            "00065400173004c1",
+            "0064687778755792",
+            "0670122258332221",
+            "0520000030000000",
+            "0363000010000000",
+            "1cca663356666651",
+            "179ab94014444441",
+            "0289c9ba77777771",
+            "0059da6344544330",
+            "0028b72000000000",
+            "0003440000000000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.375,
+              "y": 0.8125,
+              "width": 0.625,
+              "height": 0.1875
+            },
+            "occupancy": 0.0044444446,
+            "score": 0.11666667
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.5,
+              "y": 0.8125,
+              "width": 0.5,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.09375
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.25,
+              "height": 0.25
+            },
+            "occupancy": 0.008333334,
+            "score": 0.061979167
+          },
+          {
+            "name": "right_middle",
+            "rect": {
+              "x": 0.5625,
+              "y": 0.4375,
+              "width": 0.4375,
+              "height": 0.125
+            },
+            "occupancy": 0.0,
+            "score": 0.0546875
+          },
+          {
+            "name": "left_middle",
+            "rect": {
+              "x": 0.25,
+              "y": 0.375,
+              "width": 0.25,
+              "height": 0.1875
+            },
+            "occupancy": 0.038888887,
+            "score": 0.045052085
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+0048",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_09",
+      "path": "car_b_09.png",
+      "width": 1146,
+      "height": 834,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_09"
+      ],
+      "fingerprint": "fp1-526e343e06b66a2b",
+      "continuity_key": "car_b_09",
+      "content_hash": "fnv1a64:ee8895c09ec48dc8",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.073141485,
+          "width": 0.89354277,
+          "height": 0.853717
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.18813431,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000000000015661",
+            "0000000000465651",
+            "0000000016565580",
+            "00001679c9798591",
+            "0002764310000011",
+            "0044444445300010",
+            "00b3222222222220",
+            "06c43333a7687330",
+            "1a62000430103300",
+            "1aadca8a9bcc9841",
+            "0122579aaac8ab92",
+            "0000000088977581",
+            "000000005ab93000",
+            "0000000015551000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.5625,
+              "height": 0.25
+            },
+            "occupancy": 0.0018518518,
+            "score": 0.14036459
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.5,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.125
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.5,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.125
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.5,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.125
+          },
+          {
+            "name": "right_upper",
+            "rect": {
+              "x": 0.6875,
+              "y": 0.3125,
+              "width": 0.3125,
+              "height": 0.1875
+            },
+            "occupancy": 0.04888889,
+            "score": 0.05572917
+          },
+          {
+            "name": "right_middle",
+            "rect": {
+              "x": 0.6875,
+              "y": 0.3125,
+              "width": 0.3125,
+              "height": 0.1875
+            },
+            "occupancy": 0.04888889,
+            "score": 0.05572917
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+0049",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_10",
+      "path": "car_b_10.png",
+      "width": 1146,
+      "height": 876,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_10"
+      ],
+      "fingerprint": "fp1-7fa5778e57a98479",
+      "continuity_key": "car_b_10",
+      "content_hash": "fnv1a64:988d920610880335",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.069634706,
+          "width": 0.89354277,
+          "height": 0.8607306
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.21380602,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000000000046771",
+            "000000000086db61",
+            "00000000085ba600",
+            "0000002495887700",
+            "0047775343798740",
+            "0330000001378441",
+            "0445875555441220",
+            "0300330269984000",
+            "1c864336c88ba451",
+            "0874100b9cc9c320",
+            "01248bbe9cbbb551",
+            "000000039dea5441",
+            "000000008cf92000",
+            "0000000037750000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.5625,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.140625
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.4375,
+              "height": 0.3125
+            },
+            "occupancy": 0.0038095238,
+            "score": 0.13619792
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.4375,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.109375
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.4375,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.109375
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.75,
+              "y": 0.8125,
+              "width": 0.25,
+              "height": 0.1875
+            },
+            "occupancy": 0.011111111,
+            "score": 0.046354167
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+004A",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_11",
+      "path": "car_b_11.png",
+      "width": 1146,
+      "height": 946,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_11"
+      ],
+      "fingerprint": "fp1-3bff1c16a7d37750",
+      "continuity_key": "car_b_11",
+      "content_hash": "fnv1a64:25ba9719e2c744dc",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.065539114,
+          "width": 0.89354277,
+          "height": 0.86997885
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.17407085,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000000000022000",
+            "0000000000001400",
+            "0000000000000151",
+            "000000015778acd2",
+            "0000036674186000",
+            "00245bb4b748a200",
+            "0120044215677551",
+            "0220000100025400",
+            "0485677864562220",
+            "1b8009bab8020000",
+            "06731cab9c020000",
+            "013467dbcaa99881",
+            "000004bbb5111110",
+            "0000017a71000000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.8125,
+              "height": 0.25
+            },
+            "occupancy": 0.0064102565,
+            "score": 0.20182292
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.5,
+              "height": 0.3125
+            },
+            "occupancy": 0.0016666667,
+            "score": 0.15598959
+          },
+          {
+            "name": "right_upper",
+            "rect": {
+              "x": 0.5,
+              "y": 0.0,
+              "width": 0.3125,
+              "height": 0.25
+            },
+            "occupancy": 0.016666668,
+            "score": 0.07682292
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.625,
+              "y": 0.8125,
+              "width": 0.375,
+              "height": 0.1875
+            },
+            "occupancy": 0.018518519,
+            "score": 0.069010414
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.625,
+              "y": 0.8125,
+              "width": 0.375,
+              "height": 0.1875
+            },
+            "occupancy": 0.018518519,
+            "score": 0.069010414
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.8125,
+              "width": 0.3125,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.05859375
+          },
+          {
+            "name": "left_middle",
+            "rect": {
+              "x": 0.0,
+              "y": 0.25,
+              "width": 0.1875,
+              "height": 0.3125
+            },
+            "occupancy": 0.040000003,
+            "score": 0.05625
+          },
+          {
+            "name": "right_middle",
+            "rect": {
+              "x": 0.75,
+              "y": 0.5625,
+              "width": 0.25,
+              "height": 0.1875
+            },
+            "occupancy": 0.033333335,
+            "score": 0.045312498
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+004B",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_12",
+      "path": "car_b_12.png",
+      "width": 1146,
+      "height": 842,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_12"
+      ],
+      "fingerprint": "fp1-21fc397d51b4daa9",
+      "continuity_key": "car_b_12",
+      "content_hash": "fnv1a64:218e40e8726fcbf1",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.072446555,
+          "width": 0.89354277,
+          "height": 0.8551069
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.14386609,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000000000003571",
+            "00000000000411c2",
+            "00000000234004a0",
+            "0003888696558581",
+            "0047320000000011",
+            "0210000000000000",
+            "0531223345532031",
+            "16670005977a6000",
+            "191000299798f200",
+            "0155100e7528c500",
+            "0000345b5577b600",
+            "0000000174376651",
+            "0000000058882000",
+            "0000000015540000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.5625,
+              "height": 0.25
+            },
+            "occupancy": 0.0037037036,
+            "score": 0.14010416
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.5,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.125
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.5,
+              "height": 0.25
+            },
+            "occupancy": 0.0020833334,
+            "score": 0.12473958
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.5,
+              "height": 0.25
+            },
+            "occupancy": 0.0020833334,
+            "score": 0.12473958
+          },
+          {
+            "name": "right_upper",
+            "rect": {
+              "x": 0.5,
+              "y": 0.3125,
+              "width": 0.5,
+              "height": 0.125
+            },
+            "occupancy": 0.008333334,
+            "score": 0.061979167
+          },
+          {
+            "name": "right_middle",
+            "rect": {
+              "x": 0.5,
+              "y": 0.3125,
+              "width": 0.5,
+              "height": 0.125
+            },
+            "occupancy": 0.008333334,
+            "score": 0.061979167
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.75,
+              "y": 0.8125,
+              "width": 0.25,
+              "height": 0.1875
+            },
+            "occupancy": 0.011111111,
+            "score": 0.046354167
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+004C",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_13",
+      "path": "car_b_13.png",
+      "width": 1146,
+      "height": 798,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_13"
+      ],
+      "fingerprint": "fp1-035f3e9dca4197db",
+      "continuity_key": "car_b_13",
+      "content_hash": "fnv1a64:f262d35243558d16",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.0764411,
+          "width": 0.89354277,
+          "height": 0.8471178
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.21577066,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000000024888771",
+            "0000000148644a31",
+            "0000000533000a10",
+            "0000005153000a10",
+            "0027675587555981",
+            "0253222211111650",
+            "0496543432222420",
+            "0421317aa1000200",
+            "0aedcbc58c999a91",
+            "18e65c5e89000200",
+            "0013499ed9cccee2",
+            "0000059ed5777771",
+            "0000038b53000000",
+            "0000006540000000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.375,
+              "height": 0.3125
+            },
+            "occupancy": 0.0,
+            "score": 0.1171875
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.375,
+              "height": 0.3125
+            },
+            "occupancy": 0.0,
+            "score": 0.1171875
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.3125,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.078125
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.3125,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.078125
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.625,
+              "y": 0.8125,
+              "width": 0.375,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.0703125
+          },
+          {
+            "name": "right_middle",
+            "rect": {
+              "x": 0.5625,
+              "y": 0.375,
+              "width": 0.25,
+              "height": 0.1875
+            },
+            "occupancy": 0.072222225,
+            "score": 0.043489583
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+004D",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_14",
+      "path": "car_b_14.png",
+      "width": 1146,
+      "height": 1062,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_14"
+      ],
+      "fingerprint": "fp1-190b2e019d7ecb37",
+      "continuity_key": "car_b_14",
+      "content_hash": "fnv1a64:887ed170bc7f9af3",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.057438795,
+          "width": 0.89354277,
+          "height": 0.8851224
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.23732512,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000111110",
+            "0065beb999aaabd2",
+            "0051ee20000001c2",
+            "02362400000421a2",
+            "0635579887767782",
+            "0500011112223360",
+            "0744444443333350",
+            "0600000000000040",
+            "0501222454222260",
+            "0400008dedc30040",
+            "196788f999ec8891",
+            "044569bdddaa1030",
+            "0000269e7da44540",
+            "0000005bed700000",
+            "00000028a9200000",
+            "0000000010000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.3125,
+              "height": 0.25
+            },
+            "occupancy": 0.006666667,
+            "score": 0.07760417
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.3125,
+              "height": 0.25
+            },
+            "occupancy": 0.006666667,
+            "score": 0.07760417
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.020833334,
+            "score": 0.061197918
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.6875,
+              "y": 0.8125,
+              "width": 0.3125,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.05859375
+          },
+          {
+            "name": "left_middle",
+            "rect": {
+              "x": 0.125,
+              "y": 0.4375,
+              "width": 0.25,
+              "height": 0.1875
+            },
+            "occupancy": 0.027777778,
+            "score": 0.045572914
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+004E",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_15",
+      "path": "car_b_15.png",
+      "width": 1146,
+      "height": 902,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_15"
+      ],
+      "fingerprint": "fp1-76fe15c030ff47bb",
+      "continuity_key": "car_b_15",
+      "content_hash": "fnv1a64:47c3fc5e71c33000",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.0676275,
+          "width": 0.89354277,
+          "height": 0.864745
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.27041808,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000479ccbbbbba1",
+            "000288acccccb6b2",
+            "00058c4122225682",
+            "0037a81000023772",
+            "003baa9aa98946a1",
+            "0047899999988991",
+            "0330000000003440",
+            "0331112369ba7981",
+            "05400000cc88e800",
+            "0b500004ecbdbd30",
+            "0353333abc69be61",
+            "000000026db8c761",
+            "000000003bcb8000",
+            "0000000003752000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.5,
+              "height": 0.25
+            },
+            "occupancy": 0.004166667,
+            "score": 0.12447917
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.5,
+              "height": 0.25
+            },
+            "occupancy": 0.004166667,
+            "score": 0.12447917
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          },
+          {
+            "name": "left_middle",
+            "rect": {
+              "x": 0.1875,
+              "y": 0.4375,
+              "width": 0.25,
+              "height": 0.25
+            },
+            "occupancy": 0.020833334,
+            "score": 0.061197918
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.125,
+              "height": 0.4375
+            },
+            "occupancy": 0.0,
+            "score": 0.0546875
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+004F",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_16",
+      "path": "car_b_16.png",
+      "width": 1146,
+      "height": 941,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_16"
+      ],
+      "fingerprint": "fp1-a14fe470ac9194ab",
+      "continuity_key": "car_b_16",
+      "content_hash": "fnv1a64:4dac8e5db017680b",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.064824656,
+          "width": 0.89354277,
+          "height": 0.8703507
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.18307267,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000000000000011",
+            "0000000000000000",
+            "0000000013345541",
+            "0000000347aa65d1",
+            "000000553a4802c2",
+            "0003555768895692",
+            "0044000125401251",
+            "0378333353333581",
+            "04210049b4000030",
+            "189777dbbd511140",
+            "038315bcacb55561",
+            "000244a99bc87791",
+            "000000aabc100000",
+            "00000049a5000000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 1.0,
+              "height": 0.1875
+            },
+            "occupancy": 0.0027777778,
+            "score": 0.18697917
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.375,
+              "height": 0.375
+            },
+            "occupancy": 0.0,
+            "score": 0.140625
+          },
+          {
+            "name": "right_upper",
+            "rect": {
+              "x": 0.5,
+              "y": 0.0,
+              "width": 0.5,
+              "height": 0.1875
+            },
+            "occupancy": 0.0055555557,
+            "score": 0.09322917
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.8125,
+              "width": 0.375,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.0703125
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.8125,
+              "width": 0.375,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.0703125
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.625,
+              "y": 0.8125,
+              "width": 0.375,
+              "height": 0.1875
+            },
+            "occupancy": 0.0037037036,
+            "score": 0.07005208
+          },
+          {
+            "name": "left_middle",
+            "rect": {
+              "x": 0.0,
+              "y": 0.25,
+              "width": 0.375,
+              "height": 0.125
+            },
+            "occupancy": 0.0,
+            "score": 0.046875
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+0050",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_17",
+      "path": "car_b_17.png",
+      "width": 1146,
+      "height": 746,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_17"
+      ],
+      "fingerprint": "fp1-a5a798f1ad89f4cb",
+      "continuity_key": "car_b_17",
+      "content_hash": "fnv1a64:9be86561b65b28a7",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.08176944,
+          "width": 0.89354277,
+          "height": 0.8364611
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.240633,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000168888889720",
+            "00007baaa789bb91",
+            "0002d826b6801892",
+            "0018c00794500051",
+            "0046544974361081",
+            "0186669843487982",
+            "0664300022620000",
+            "0a3327c998988771",
+            "2d545d9d40000000",
+            "07509cea61000000",
+            "0265ab3ba7655341",
+            "00008c6b54443330",
+            "000049e800000000",
+            "0000056300000000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.5,
+              "y": 0.8125,
+              "width": 0.5,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.09375
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.5,
+              "y": 0.8125,
+              "width": 0.5,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.09375
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.25,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.25,
+              "height": 0.25
+            },
+            "occupancy": 0.008333334,
+            "score": 0.061979167
+          },
+          {
+            "name": "right_middle",
+            "rect": {
+              "x": 0.5625,
+              "y": 0.5625,
+              "width": 0.4375,
+              "height": 0.125
+            },
+            "occupancy": 0.004761905,
+            "score": 0.05442708
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+0051",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_18",
+      "path": "car_b_18.png",
+      "width": 1146,
+      "height": 785,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_18"
+      ],
+      "fingerprint": "fp1-e244e05d4090afdf",
+      "continuity_key": "car_b_18",
+      "content_hash": "fnv1a64:5dbad97b1d6cf524",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.07770701,
+          "width": 0.89354277,
+          "height": 0.844586
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.187708,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000000023468981",
+            "000000158cbcb981",
+            "00000243b22ab200",
+            "00002217567a9731",
+            "0003100355799851",
+            "0030000000266220",
+            "0422201101411110",
+            "0a593cff74766551",
+            "19614e76b3300000",
+            "0761698978300000",
+            "001598768c332120",
+            "000008ab84332110",
+            "0000058960000000",
+            "0000015520000000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.375,
+              "height": 0.3125
+            },
+            "occupancy": 0.013333334,
+            "score": 0.115625
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.375,
+              "height": 0.3125
+            },
+            "occupancy": 0.013333334,
+            "score": 0.115625
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.75,
+              "y": 0.5625,
+              "width": 0.25,
+              "height": 0.4375
+            },
+            "occupancy": 0.021428572,
+            "score": 0.10703125
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.5625,
+              "y": 0.8125,
+              "width": 0.4375,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.08203125
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.3125,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.078125
+          },
+          {
+            "name": "right_middle",
+            "rect": {
+              "x": 0.75,
+              "y": 0.5625,
+              "width": 0.25,
+              "height": 0.1875
+            },
+            "occupancy": 0.027777778,
+            "score": 0.045572914
+          },
+          {
+            "name": "left_middle",
+            "rect": {
+              "x": 0.25,
+              "y": 0.25,
+              "width": 0.1875,
+              "height": 0.25
+            },
+            "occupancy": 0.05,
+            "score": 0.04453125
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+0052",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_19",
+      "path": "car_b_19.png",
+      "width": 1146,
+      "height": 823,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_19"
+      ],
+      "fingerprint": "fp1-90ab680a0029809e",
+      "continuity_key": "car_b_19",
+      "content_hash": "fnv1a64:32e32597436f3185",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.074119076,
+          "width": 0.89354277,
+          "height": 0.8517618
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.15941656,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000002344444441",
+            "0000021796787671",
+            "0000123474470000",
+            "00003045567a2110",
+            "0004001336a98881",
+            "0022000003543331",
+            "0032000000272000",
+            "024508ca20300000",
+            "18506b7ac0300000",
+            "1550a656c5300000",
+            "0234853596476581",
+            "0000452473555541",
+            "0000286550000000",
+            "0000056610000000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.375,
+              "height": 0.25
+            },
+            "occupancy": 0.013888889,
+            "score": 0.092447914
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.375,
+              "height": 0.25
+            },
+            "occupancy": 0.013888889,
+            "score": 0.092447914
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.5625,
+              "y": 0.8125,
+              "width": 0.4375,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.08203125
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.5625,
+              "y": 0.8125,
+              "width": 0.4375,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.08203125
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.25,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          },
+          {
+            "name": "right_middle",
+            "rect": {
+              "x": 0.75,
+              "y": 0.4375,
+              "width": 0.25,
+              "height": 0.25
+            },
+            "occupancy": 0.008333334,
+            "score": 0.061979167
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+0053",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_20",
+      "path": "car_b_20.png",
+      "width": 1146,
+      "height": 870,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_20"
+      ],
+      "fingerprint": "fp1-19f2551baebc226f",
+      "continuity_key": "car_b_20",
+      "content_hash": "fnv1a64:cb481e819e7168f4",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.07011494,
+          "width": 0.89354277,
+          "height": 0.8597701
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.18850073,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000000001764551",
+            "000000002823bac2",
+            "0000000370073092",
+            "00003685003642a2",
+            "01575210005456b2",
+            "0310000000000030",
+            "0640000320000031",
+            "079554beea544340",
+            "298227987b734561",
+            "0791098bc8b00020",
+            "001367a679d44341",
+            "0000049878888881",
+            "0000037ba7100000",
+            "0000004773000000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.4375,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.109375
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.4375,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.109375
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.3125,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.078125
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.3125,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.078125
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.625,
+              "y": 0.8125,
+              "width": 0.375,
+              "height": 0.1875
+            },
+            "occupancy": 0.0037037036,
+            "score": 0.07005208
+          },
+          {
+            "name": "right_upper",
+            "rect": {
+              "x": 0.5,
+              "y": 0.375,
+              "width": 0.375,
+              "height": 0.125
+            },
+            "occupancy": 0.011111111,
+            "score": 0.046354167
+          },
+          {
+            "name": "right_middle",
+            "rect": {
+              "x": 0.5,
+              "y": 0.375,
+              "width": 0.375,
+              "height": 0.125
+            },
+            "occupancy": 0.011111111,
+            "score": 0.046354167
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+0054",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_21",
+      "path": "car_b_21.png",
+      "width": 1146,
+      "height": 887,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_21"
+      ],
+      "fingerprint": "fp1-a5ab06aaac07d669",
+      "continuity_key": "car_b_21",
+      "content_hash": "fnv1a64:31ccfe9b4bbc43a2",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.06877114,
+          "width": 0.89354277,
+          "height": 0.86245775
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.20156182,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000000035444671",
+            "0000000565ba8b71",
+            "0000017405a00a40",
+            "00035a3026ab6a90",
+            "0296403400458c71",
+            "0300004300000362",
+            "0456433343444630",
+            "0866100563000300",
+            "269431ac9b500300",
+            "057535c9c8b43561",
+            "00018cabaca20030",
+            "0000007bbc965551",
+            "00000039a9500000",
+            "0000000475100000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.375,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.09375
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.375,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.09375
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.375,
+              "height": 0.25
+            },
+            "occupancy": 0.0027777778,
+            "score": 0.09348959
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.375,
+              "height": 0.25
+            },
+            "occupancy": 0.0027777778,
+            "score": 0.09348959
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.6875,
+              "y": 0.8125,
+              "width": 0.3125,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.05859375
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+0055",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_22",
+      "path": "car_b_22.png",
+      "width": 1146,
+      "height": 911,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_22"
+      ],
+      "fingerprint": "fp1-69617509ca1fe26a",
+      "continuity_key": "car_b_22",
+      "content_hash": "fnv1a64:5ca4c862a8201fce",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.06695939,
+          "width": 0.89354277,
+          "height": 0.86608124
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.20597678,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000000014466791",
+            "0000000464a68a61",
+            "0000006516102a00",
+            "0002488886434840",
+            "00aa768669856761",
+            "0242226421000281",
+            "0345334334556620",
+            "0260048730000200",
+            "18a23c88a1000200",
+            "067599cc75234541",
+            "00059b899c999981",
+            "00004a89a4333330",
+            "000028cb60000000",
+            "0000057510000000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.375,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.09375
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.375,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.09375
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.5625,
+              "y": 0.8125,
+              "width": 0.4375,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.08203125
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.5625,
+              "y": 0.8125,
+              "width": 0.4375,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.08203125
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.25,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          },
+          {
+            "name": "right_middle",
+            "rect": {
+              "x": 0.5625,
+              "y": 0.5,
+              "width": 0.4375,
+              "height": 0.125
+            },
+            "occupancy": 0.023809524,
+            "score": 0.053385414
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+0056",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_23",
+      "path": "car_b_23.png",
+      "width": 1146,
+      "height": 811,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_23"
+      ],
+      "fingerprint": "fp1-62960de770b15b1b",
+      "continuity_key": "car_b_23",
+      "content_hash": "fnv1a64:d7106f6b87665ffc",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.07521579,
+          "width": 0.89354277,
+          "height": 0.8495684
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.19893566,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000000000025441",
+            "00000000015379a2",
+            "0000000034038032",
+            "0000025410075332",
+            "0026876777797882",
+            "0052200000000012",
+            "0358888888888882",
+            "0736300278840012",
+            "1772000a99ad4012",
+            "0696534c99bc9342",
+            "000357c8b58bdb92",
+            "00000014aba98771",
+            "000000038a940000",
+            "0000000035510000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.5,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.125
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.5,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.125
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.4375,
+              "height": 0.25
+            },
+            "occupancy": 0.0023809525,
+            "score": 0.10911458
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.4375,
+              "height": 0.25
+            },
+            "occupancy": 0.0023809525,
+            "score": 0.10911458
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.75,
+              "y": 0.8125,
+              "width": 0.25,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.046875
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+0057",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_24",
+      "path": "car_b_24.png",
+      "width": 1146,
+      "height": 795,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_24"
+      ],
+      "fingerprint": "fp1-633eed59675ecdc9",
+      "continuity_key": "car_b_24",
+      "content_hash": "fnv1a64:0e51530f15e6cbbc",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.07672956,
+          "width": 0.89354277,
+          "height": 0.84654087
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.22358216,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000000256668861",
+            "0000039ddabbaaa2",
+            "0000569200380000",
+            "00065930014a2000",
+            "0053388977698881",
+            "0440034455553331",
+            "05555676776a7661",
+            "0400254210030000",
+            "1b518dad20030000",
+            "1952dbb9a1186661",
+            "0668c638d3342220",
+            "0001766a9aa99991",
+            "000038a800000000",
+            "0000057400000000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.5,
+              "y": 0.8125,
+              "width": 0.5,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.09375
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.5,
+              "y": 0.8125,
+              "width": 0.5,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.09375
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.25,
+              "height": 0.25
+            },
+            "occupancy": 0.004166667,
+            "score": 0.062239584
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.5,
+              "height": 0.125
+            },
+            "occupancy": 0.008333334,
+            "score": 0.061979167
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+0058",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_25",
+      "path": "car_b_25.png",
+      "width": 1146,
+      "height": 829,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_25"
+      ],
+      "fingerprint": "fp1-c07c13096b5afd64",
+      "continuity_key": "car_b_25",
+      "content_hash": "fnv1a64:702d912d3b78455e",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.07358263,
+          "width": 0.89354277,
+          "height": 0.85283476
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.19470882,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "000000002468aa81",
+            "0000000727889771",
+            "000001838404a300",
+            "0000189870009400",
+            "0006986b98889820",
+            "0063000001236751",
+            "0352111122335860",
+            "0460005960015220",
+            "0ac614d8b9004000",
+            "18a63b999b447451",
+            "0118ac6279425551",
+            "0000055358544551",
+            "0000026775000000",
+            "0000003551000000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.3125,
+              "height": 0.3125
+            },
+            "occupancy": 0.0026666666,
+            "score": 0.09739584
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.3125,
+              "height": 0.3125
+            },
+            "occupancy": 0.0026666666,
+            "score": 0.09739584
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.3125,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.078125
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.3125,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.078125
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.625,
+              "y": 0.8125,
+              "width": 0.375,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.0703125
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+0059",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_26",
+      "path": "car_b_26.png",
+      "width": 1146,
+      "height": 839,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_26"
+      ],
+      "fingerprint": "fp1-f1e00129ce6cacae",
+      "continuity_key": "car_b_26",
+      "content_hash": "fnv1a64:7b150077041d8039",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.073897496,
+          "width": 0.89354277,
+          "height": 0.8533969
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.1895758,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000000000000010",
+            "0000000166698892",
+            "00000018467c6661",
+            "00000292500a6000",
+            "00012b8764389551",
+            "0044343256676451",
+            "0340001200023100",
+            "0498988994465541",
+            "066757dec4486661",
+            "1653089a92020000",
+            "03864caa97020000",
+            "000017a888444430",
+            "000004dba1000000",
+            "0000005840000000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 1.0,
+              "height": 0.125
+            },
+            "occupancy": 0.0020833334,
+            "score": 0.12473958
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.375,
+              "height": 0.3125
+            },
+            "occupancy": 0.0044444446,
+            "score": 0.11666667
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.5625,
+              "y": 0.8125,
+              "width": 0.4375,
+              "height": 0.1875
+            },
+            "occupancy": 0.0031746032,
+            "score": 0.08177083
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.5625,
+              "y": 0.8125,
+              "width": 0.4375,
+              "height": 0.1875
+            },
+            "occupancy": 0.0031746032,
+            "score": 0.08177083
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.3125,
+              "height": 0.25
+            },
+            "occupancy": 0.0033333334,
+            "score": 0.07786459
+          },
+          {
+            "name": "right_upper",
+            "rect": {
+              "x": 0.5,
+              "y": 0.0,
+              "width": 0.5,
+              "height": 0.125
+            },
+            "occupancy": 0.004166667,
+            "score": 0.062239584
+          },
+          {
+            "name": "right_middle",
+            "rect": {
+              "x": 0.625,
+              "y": 0.625,
+              "width": 0.375,
+              "height": 0.125
+            },
+            "occupancy": 0.022222223,
+            "score": 0.045833334
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+005A",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_27",
+      "path": "car_b_27.png",
+      "width": 1146,
+      "height": 860,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_27"
+      ],
+      "fingerprint": "fp1-4bc5d02bcfc4a640",
+      "continuity_key": "car_b_27",
+      "content_hash": "fnv1a64:5fba44eef93bd15f",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.070930235,
+          "width": 0.89354277,
+          "height": 0.8581395
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.20543955,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000000000234551",
+            "0000000017469a92",
+            "00000015bd846c20",
+            "0000259ac8443bb1",
+            "0036640a98877ab2",
+            "0331000000000530",
+            "0465434344323730",
+            "0445005489511200",
+            "1970004988a60200",
+            "088134b8787d1200",
+            "002587d9787d3420",
+            "000000386d8a9991",
+            "000000189f810000",
+            "0000000367300000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.4375,
+              "height": 0.25
+            },
+            "occupancy": 0.0023809525,
+            "score": 0.10911458
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.4375,
+              "height": 0.25
+            },
+            "occupancy": 0.0023809525,
+            "score": 0.10911458
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.375,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.09375
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.375,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.09375
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.6875,
+              "y": 0.8125,
+              "width": 0.3125,
+              "height": 0.1875
+            },
+            "occupancy": 0.0044444446,
+            "score": 0.058333334
+          },
+          {
+            "name": "right_middle",
+            "rect": {
+              "x": 0.75,
+              "y": 0.5,
+              "width": 0.25,
+              "height": 0.1875
+            },
+            "occupancy": 0.044444446,
+            "score": 0.04479167
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+0061",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_28",
+      "path": "car_b_28.png",
+      "width": 1146,
+      "height": 843,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_28"
+      ],
+      "fingerprint": "fp1-1180b94ee74ca86d",
+      "continuity_key": "car_b_28",
+      "content_hash": "fnv1a64:c67875e44cb1103b",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.07236062,
+          "width": 0.89354277,
+          "height": 0.8552788
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.21805486,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000000000005891",
+            "000000000018a7a1",
+            "00000000019b5550",
+            "000000135ab98710",
+            "00179a9866665541",
+            "0076433221110000",
+            "00a0200014420000",
+            "04924313abaa4000",
+            "1d7fcbbcc6a9dab2",
+            "055543268cdab110",
+            "000148bd9aee9871",
+            "00000002aefe4110",
+            "00000000abca3000",
+            "0000000037850000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.625,
+              "height": 0.25
+            },
+            "occupancy": 0.0016666667,
+            "score": 0.15598959
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.4375,
+              "height": 0.3125
+            },
+            "occupancy": 0.0019047619,
+            "score": 0.13645834
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.5,
+              "height": 0.25
+            },
+            "occupancy": 0.004166667,
+            "score": 0.12447917
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.5,
+              "height": 0.25
+            },
+            "occupancy": 0.004166667,
+            "score": 0.12447917
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.8125,
+              "y": 0.75,
+              "width": 0.1875,
+              "height": 0.25
+            },
+            "occupancy": 0.011111111,
+            "score": 0.046354167
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+0062",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_29",
+      "path": "car_b_29.png",
+      "width": 1146,
+      "height": 878,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_29"
+      ],
+      "fingerprint": "fp1-053632af8c4ff730",
+      "continuity_key": "car_b_29",
+      "content_hash": "fnv1a64:87e0651ede0bdba9",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.06947608,
+          "width": 0.89354277,
+          "height": 0.86104786
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.16247758,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000000000024792",
+            "0000000000326651",
+            "0000000003127540",
+            "0000000258491630",
+            "0002344220053751",
+            "0050000000025300",
+            "0244456655563331",
+            "042530008a986000",
+            "14300007a9a8d200",
+            "0472123b959bd940",
+            "0001236ab20cb971",
+            "00000004a64a6640",
+            "000000017ed92000",
+            "0000000035540000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.5,
+              "height": 0.3125
+            },
+            "occupancy": 0.0033333334,
+            "score": 0.15572917
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.5,
+              "height": 0.3125
+            },
+            "occupancy": 0.0033333334,
+            "score": 0.15572917
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.4375,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.109375
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.4375,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.109375
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.75,
+              "y": 0.8125,
+              "width": 0.25,
+              "height": 0.1875
+            },
+            "occupancy": 0.011111111,
+            "score": 0.046354167
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+0063",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_30",
+      "path": "car_b_30.png",
+      "width": 1146,
+      "height": 819,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_30"
+      ],
+      "fingerprint": "fp1-88349b029aa52f3f",
+      "continuity_key": "car_b_30",
+      "content_hash": "fnv1a64:d2b107b8037f4d35",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.07448108,
+          "width": 0.89354277,
+          "height": 0.85103786
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.16744764,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000000000004441",
+            "0000000000034aa2",
+            "0000000000408600",
+            "000001356811b961",
+            "0014564333104561",
+            "0072000000013500",
+            "0231000000024600",
+            "0438766789ac9761",
+            "1947200177965000",
+            "158133279a88d331",
+            "0335679c999ca441",
+            "000000127b6b4441",
+            "000000003bc62000",
+            "0000000016650000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.625,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.15625
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.5,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.125
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.5,
+              "height": 0.25
+            },
+            "occupancy": 0.00625,
+            "score": 0.12421875
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.5,
+              "height": 0.25
+            },
+            "occupancy": 0.00625,
+            "score": 0.12421875
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.75,
+              "y": 0.8125,
+              "width": 0.25,
+              "height": 0.1875
+            },
+            "occupancy": 0.011111111,
+            "score": 0.046354167
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+0064",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_31",
+      "path": "car_b_31.png",
+      "width": 1146,
+      "height": 825,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_31"
+      ],
+      "fingerprint": "fp1-daa7272d8e323e35",
+      "continuity_key": "car_b_31",
+      "content_hash": "fnv1a64:30e9b86670ff0ffe",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.07393939,
+          "width": 0.89354277,
+          "height": 0.85212123
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.19027025,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000000000005551",
+            "0000000000392790",
+            "0000000029818362",
+            "000000487200bc72",
+            "0004775678762241",
+            "0044100000000051",
+            "0151223346551351",
+            "04471002cece9000",
+            "1ac61009d997d120",
+            "09c7310eaa78d540",
+            "0002579c879bc760",
+            "00000000875a8551",
+            "0000000067a63000",
+            "0000000016640000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.5625,
+              "height": 0.25
+            },
+            "occupancy": 0.0037037036,
+            "score": 0.14010416
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.5,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.125
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.5,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.125
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.5,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.125
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+0065",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_32",
+      "path": "car_b_32.png",
+      "width": 1146,
+      "height": 860,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_32"
+      ],
+      "fingerprint": "fp1-9952be1234cff39e",
+      "continuity_key": "car_b_32",
+      "content_hash": "fnv1a64:3d627373f8aea94c",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.070930235,
+          "width": 0.89354277,
+          "height": 0.8581395
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.17297679,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000000000143451",
+            "0000000002709951",
+            "0000000026156500",
+            "0000013681283620",
+            "0026655555a87671",
+            "0040000122583330",
+            "0393344567711110",
+            "0560000698864441",
+            "1960002c679d0000",
+            "05820059a98c3000",
+            "00146aa873c97441",
+            "00000007a6c63330",
+            "00000004ab840000",
+            "0000000157600000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.5625,
+              "height": 0.25
+            },
+            "occupancy": 0.0037037036,
+            "score": 0.14010416
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.5,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.125
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.4375,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.109375
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.4375,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.109375
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.75,
+              "y": 0.8125,
+              "width": 0.25,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.046875
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+0066",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_33",
+      "path": "car_b_33.png",
+      "width": 1146,
+      "height": 841,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_33"
+      ],
+      "fingerprint": "fp1-77c19ada1e3654a5",
+      "continuity_key": "car_b_33",
+      "content_hash": "fnv1a64:0805c5e23acf7cf7",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.0725327,
+          "width": 0.89354277,
+          "height": 0.8549346
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.1777158,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000000000027651",
+            "0000000000578771",
+            "0000000007678300",
+            "0000016871878431",
+            "0003896201756571",
+            "0044210000034000",
+            "0110000000034220",
+            "04360002bbc72230",
+            "19a6000b8b9c4000",
+            "1a96534aa8caa000",
+            "00002679a898ea91",
+            "00000005cc980241",
+            "000000058ba70000",
+            "0000000067810000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.5625,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.140625
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.5,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.125
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.4375,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.109375
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.4375,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.109375
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.75,
+              "y": 0.8125,
+              "width": 0.25,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.046875
+          },
+          {
+            "name": "left_middle",
+            "rect": {
+              "x": 0.25,
+              "y": 0.375,
+              "width": 0.25,
+              "height": 0.1875
+            },
+            "occupancy": 0.027777778,
+            "score": 0.045572914
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+0067",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_34",
+      "path": "car_b_34.png",
+      "width": 1146,
+      "height": 818,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_34"
+      ],
+      "fingerprint": "fp1-4838887d9b9555d1",
+      "continuity_key": "car_b_34",
+      "content_hash": "fnv1a64:c0c37b2d72c1aaad",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.07457212,
+          "width": 0.89354277,
+          "height": 0.85085577
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.17173693,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000000000015761",
+            "0000000002577990",
+            "000000146bb72040",
+            "00002673046b9870",
+            "0016500000157640",
+            "0164444444442000",
+            "0679000000014551",
+            "06400008b9910000",
+            "1c80005c8a690000",
+            "17a300998a8a0000",
+            "000489d7b8a93100",
+            "0000001887945551",
+            "0000000779510000",
+            "0000000276300000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.625,
+              "height": 0.1875
+            },
+            "occupancy": 0.0044444446,
+            "score": 0.11666667
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.4375,
+              "height": 0.25
+            },
+            "occupancy": 0.0023809525,
+            "score": 0.10911458
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.4375,
+              "height": 0.25
+            },
+            "occupancy": 0.0023809525,
+            "score": 0.10911458
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.4375,
+              "height": 0.25
+            },
+            "occupancy": 0.0023809525,
+            "score": 0.10911458
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.6875,
+              "y": 0.8125,
+              "width": 0.3125,
+              "height": 0.1875
+            },
+            "occupancy": 0.0044444446,
+            "score": 0.058333334
+          },
+          {
+            "name": "right_middle",
+            "rect": {
+              "x": 0.75,
+              "y": 0.5,
+              "width": 0.25,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.046875
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+0068",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_35",
+      "path": "car_b_35.png",
+      "width": 1146,
+      "height": 835,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_35"
+      ],
+      "fingerprint": "fp1-796127df4b0b21ee",
+      "continuity_key": "car_b_35",
+      "content_hash": "fnv1a64:51ab08e32f9650d1",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.07305389,
+          "width": 0.89354277,
+          "height": 0.8538922
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.21678424,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000000000046781",
+            "00000000004847a2",
+            "0000000005330862",
+            "00000244794057b2",
+            "0027777664689aa1",
+            "0094100000000041",
+            "03a2000000000030",
+            "0a8a9764ab9b5471",
+            "1c52000bc8b8e040",
+            "0799654dab9db551",
+            "0143456aadcdb651",
+            "00000004bdce8561",
+            "000000008ac95000",
+            "0000000016770000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.5625,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.140625
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.5,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.125
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.4375,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.109375
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.4375,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.109375
+          },
+          {
+            "name": "right_upper",
+            "rect": {
+              "x": 0.5,
+              "y": 0.375,
+              "width": 0.375,
+              "height": 0.125
+            },
+            "occupancy": 0.0,
+            "score": 0.046875
+          },
+          {
+            "name": "right_middle",
+            "rect": {
+              "x": 0.5,
+              "y": 0.375,
+              "width": 0.375,
+              "height": 0.125
+            },
+            "occupancy": 0.0,
+            "score": 0.046875
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+0069",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_36",
+      "path": "car_b_36.png",
+      "width": 1146,
+      "height": 824,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_36"
+      ],
+      "fingerprint": "fp1-b2a7b81a6953f876",
+      "continuity_key": "car_b_36",
+      "content_hash": "fnv1a64:d9c746a74a060745",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.074029125,
+          "width": 0.89354277,
+          "height": 0.85194176
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.18531002,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000000245434561",
+            "00000017a6789771",
+            "0000007930037000",
+            "0000029900039100",
+            "00033889aaaa9771",
+            "015443344445c741",
+            "0333444444446330",
+            "0550145300003000",
+            "08704cba20003000",
+            "1361a68573335330",
+            "04a79ca7b7669981",
+            "00003b8820000000",
+            "000048c600000000",
+            "0000165300000000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.5,
+              "y": 0.75,
+              "width": 0.5,
+              "height": 0.25
+            },
+            "occupancy": 0.004166667,
+            "score": 0.12447917
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.5,
+              "y": 0.75,
+              "width": 0.5,
+              "height": 0.25
+            },
+            "occupancy": 0.004166667,
+            "score": 0.12447917
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.375,
+              "height": 0.3125
+            },
+            "occupancy": 0.0044444446,
+            "score": 0.11666667
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.375,
+              "height": 0.3125
+            },
+            "occupancy": 0.0044444446,
+            "score": 0.11666667
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.25,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+006A",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_37",
+      "path": "car_b_37.png",
+      "width": 1146,
+      "height": 833,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_37"
+      ],
+      "fingerprint": "fp1-2c79165879f0f2e9",
+      "continuity_key": "car_b_37",
+      "content_hash": "fnv1a64:93fd215fb6061bc9",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.07322929,
+          "width": 0.89354277,
+          "height": 0.85354143
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.22740929,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000000000079981",
+            "00000000004733a2",
+            "0000000003310581",
+            "0000146685102882",
+            "001997567799aba1",
+            "0056665445433371",
+            "0093000001320271",
+            "05700001aeef9450",
+            "1724000abbbaf991",
+            "076c987f99aae450",
+            "0122457e8a9ddeb1",
+            "0000000497ab8551",
+            "000000009aca2000",
+            "0000000037830000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.5625,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.140625
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.5,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.125
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.4375,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.109375
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.4375,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.109375
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.75,
+              "y": 0.8125,
+              "width": 0.25,
+              "height": 0.1875
+            },
+            "occupancy": 0.011111111,
+            "score": 0.046354167
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+006B",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_38",
+      "path": "car_b_38.png",
+      "width": 1146,
+      "height": 806,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_38"
+      ],
+      "fingerprint": "fp1-cbfef651eebe8824",
+      "continuity_key": "car_b_38",
+      "content_hash": "fnv1a64:cc499a0c05877124",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.07568238,
+          "width": 0.89354277,
+          "height": 0.84863526
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.1630615,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000000000002341",
+            "0000000000441381",
+            "0000000017406822",
+            "000000357001a862",
+            "00148852000258a2",
+            "0240000000000022",
+            "0511122222233342",
+            "05765566cee97782",
+            "19851106777c0000",
+            "1842123a8ab91000",
+            "02345557a9c93000",
+            "000000049dc67661",
+            "0000000269730000",
+            "0000000035500000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.5625,
+              "height": 0.25
+            },
+            "occupancy": 0.0018518518,
+            "score": 0.14036459
+          },
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.5,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.125
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.4375,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.109375
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.4375,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.109375
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.75,
+              "y": 0.8125,
+              "width": 0.25,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.046875
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+006C",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_39",
+      "path": "car_b_39.png",
+      "width": 1146,
+      "height": 802,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_39"
+      ],
+      "fingerprint": "fp1-e7fda089e46e8e32",
+      "continuity_key": "car_b_39",
+      "content_hash": "fnv1a64:49de7b2378118ae4",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.07605985,
+          "width": 0.89354277,
+          "height": 0.8478803
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.1938152,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000000023455551",
+            "000000056697ac71",
+            "000000496b702b20",
+            "00000578a6723c30",
+            "0028730268768c61",
+            "0341000265123482",
+            "0400012421345630",
+            "0620004972000200",
+            "194004c9a8100200",
+            "05523a7abb200220",
+            "02889c87aababb81",
+            "0000188977333330",
+            "0000019993000000",
+            "0000003641000000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.3125,
+              "height": 0.3125
+            },
+            "occupancy": 0.0,
+            "score": 0.09765625
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.3125,
+              "height": 0.3125
+            },
+            "occupancy": 0.0,
+            "score": 0.09765625
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.3125,
+              "height": 0.25
+            },
+            "occupancy": 0.0033333334,
+            "score": 0.07786459
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.3125,
+              "height": 0.25
+            },
+            "occupancy": 0.0033333334,
+            "score": 0.07786459
+          },
+          {
+            "name": "right_middle",
+            "rect": {
+              "x": 0.625,
+              "y": 0.5,
+              "width": 0.375,
+              "height": 0.1875
+            },
+            "occupancy": 0.04074074,
+            "score": 0.067447916
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.625,
+              "y": 0.5,
+              "width": 0.375,
+              "height": 0.1875
+            },
+            "occupancy": 0.04074074,
+            "score": 0.067447916
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+006D",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_40",
+      "path": "car_b_40.png",
+      "width": 1146,
+      "height": 805,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_40"
+      ],
+      "fingerprint": "fp1-28f7add8a1645557",
+      "continuity_key": "car_b_40",
+      "content_hash": "fnv1a64:3a8f56e92bff8b68",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.0757764,
+          "width": 0.89354277,
+          "height": 0.8484472
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.24340022,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000000004667881",
+            "00000000641bdba2",
+            "0000000730550071",
+            "0000059302820291",
+            "0058961002644691",
+            "067788999ba87782",
+            "0500015346300001",
+            "053807cee8766781",
+            "19500b9a9b500001",
+            "14601ad8bc700002",
+            "05555acb9bdaaab2",
+            "000136d7bacdcbe2",
+            "000002aec7000000",
+            "0000004970000000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.4375,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.109375
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.4375,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.109375
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.625,
+              "y": 0.8125,
+              "width": 0.375,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.0703125
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.8125,
+              "width": 0.375,
+              "height": 0.1875
+            },
+            "occupancy": 0.0074074073,
+            "score": 0.06979167
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.8125,
+              "width": 0.375,
+              "height": 0.1875
+            },
+            "occupancy": 0.0074074073,
+            "score": 0.06979167
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+006E",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_41",
+      "path": "car_b_41.png",
+      "width": 1146,
+      "height": 635,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_41"
+      ],
+      "fingerprint": "fp1-a6ec6a6abf48c028",
+      "continuity_key": "car_b_41",
+      "content_hash": "fnv1a64:4319e76ed07032d6",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.096062995,
+          "width": 0.89354277,
+          "height": 0.807874
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.21766913,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0110345555555551",
+            "0399766775433372",
+            "0458433333333330",
+            "0420000242100000",
+            "05200019fc400000",
+            "0662238feec30000",
+            "0541009d88b93000",
+            "08c733cbbda90000",
+            "15217ffb45aecbb2",
+            "000004ca549fc771",
+            "00000039459a1000",
+            "00000017cda20000",
+            "0000000858600000",
+            "0000000165000000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.625,
+              "width": 0.3125,
+              "height": 0.375
+            },
+            "occupancy": 0.0,
+            "score": 0.1171875
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.6875,
+              "width": 0.375,
+              "height": 0.3125
+            },
+            "occupancy": 0.0,
+            "score": 0.1171875
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.75,
+              "y": 0.6875,
+              "width": 0.25,
+              "height": 0.3125
+            },
+            "occupancy": 0.0033333334,
+            "score": 0.07786459
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          },
+          {
+            "name": "right_middle",
+            "rect": {
+              "x": 0.8125,
+              "y": 0.25,
+              "width": 0.1875,
+              "height": 0.3125
+            },
+            "occupancy": 0.0,
+            "score": 0.05859375
+          },
+          {
+            "name": "right_upper",
+            "rect": {
+              "x": 0.75,
+              "y": 0.25,
+              "width": 0.25,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.046875
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+006F",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_42",
+      "path": "car_b_42.png",
+      "width": 1146,
+      "height": 742,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_42"
+      ],
+      "fingerprint": "fp1-02be8af3f67ece8c",
+      "continuity_key": "car_b_42",
+      "content_hash": "fnv1a64:8b6d6f22ddc1d446",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.08221024,
+          "width": 0.89354277,
+          "height": 0.8355795
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.28797692,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0244445555566781",
+            "0200000000000000",
+            "02cedca997888881",
+            "03457888abb88881",
+            "03200007cb760000",
+            "0440008efff97000",
+            "159868cfdbfd7761",
+            "034345eb366f8991",
+            "08aafff6baabc551",
+            "0044cdb697c8fff2",
+            "0000043698e86210",
+            "00000004dba80000",
+            "0000000436440000",
+            "0000000067400000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.4375,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.109375
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.75,
+              "width": 0.4375,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.109375
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.75,
+              "y": 0.75,
+              "width": 0.25,
+              "height": 0.25
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 1.0,
+              "height": 0.0625
+            },
+            "occupancy": 0.0,
+            "score": 0.0625
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+0070",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    },
+    {
+      "id": "library.car_b_43",
+      "path": "car_b_43.png",
+      "width": 1146,
+      "height": 838,
+      "alpha": true,
+      "subject_anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "serves": [
+        "library.car_b_43"
+      ],
+      "fingerprint": "fp1-f0de8eaf5ff98f50",
+      "continuity_key": "car_b_43",
+      "content_hash": "fnv1a64:dfcf61ab5848462e",
+      "analysis": {
+        "subject_bounds": {
+          "x": 0.05322862,
+          "y": 0.072792366,
+          "width": 0.89354277,
+          "height": 0.8544153
+        },
+        "edges": {
+          "top": false,
+          "bottom": false,
+          "left": false,
+          "right": false
+        },
+        "coverage": 0.2360863,
+        "occupancy": {
+          "cols": 16,
+          "rows": [
+            "0000000000000000",
+            "0000000000558ba1",
+            "000000000681b771",
+            "000000005716b300",
+            "000000047328b200",
+            "0026899a506bc881",
+            "0174222331382000",
+            "0533332256754441",
+            "05360009ed930000",
+            "18789acb9bdcccc2",
+            "043000b9ddcb3000",
+            "0389cbfabbcc3331",
+            "0000037ccb8b8881",
+            "00000009dc620000",
+            "0000000377500000",
+            "0000000000000000"
+          ]
+        },
+        "safe_regions": [
+          {
+            "name": "left_upper",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.4375,
+              "height": 0.3125
+            },
+            "occupancy": 0.0,
+            "score": 0.13671875
+          },
+          {
+            "name": "top",
+            "rect": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.4375,
+              "height": 0.3125
+            },
+            "occupancy": 0.0,
+            "score": 0.13671875
+          },
+          {
+            "name": "lower_left",
+            "rect": {
+              "x": 0.0,
+              "y": 0.8125,
+              "width": 0.4375,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.08203125
+          },
+          {
+            "name": "bottom",
+            "rect": {
+              "x": 0.0,
+              "y": 0.8125,
+              "width": 0.4375,
+              "height": 0.1875
+            },
+            "occupancy": 0.0,
+            "score": 0.08203125
+          },
+          {
+            "name": "lower_right",
+            "rect": {
+              "x": 0.6875,
+              "y": 0.8125,
+              "width": 0.3125,
+              "height": 0.1875
+            },
+            "occupancy": 0.008888889,
+            "score": 0.058072917
+          }
+        ],
+        "monochrome": true,
+        "mean_color": [
+          29,
+          27,
+          25
+        ]
+      },
+      "generator": {
+        "codepoint": "U+0071",
+        "credit": "Oil Crisis by Raymond Larabie (CC0)",
+        "font": "OilCrisis-B.otf",
+        "licence": "CC0 1.0 (Raymond Larabie)",
+        "vendor": "font"
+      }
+    }
+  ]
+}

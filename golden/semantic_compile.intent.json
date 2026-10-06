@@ -1,0 +1,52 @@
+{
+  "version": "0.1",
+  "title": "semantic_compile",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "explain",
+      "statement": "Every month the basket costs more",
+      "primary": {
+        "kind": "phrase",
+        "value": "Groceries",
+        "meaning": "weekly shop"
+      },
+      "secondary": {
+        "kind": "object",
+        "asset": "shopping_basket",
+        "value": "+12%",
+        "meaning": "basket"
+      },
+      "energy": "calm",
+      "continuity": "carry_secondary",
+      "keyword": "basket"
+    },
+    {
+      "purpose": "compare",
+      "statement": "Wages and rent moved apart",
+      "primary": {
+        "kind": "number",
+        "value": "₹32,000",
+        "meaning": "wages"
+      },
+      "secondary": {
+        "kind": "number",
+        "value": "₹21,000",
+        "meaning": "rent"
+      },
+      "relationship": "separate",
+      "energy": "building"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "Small savings vanish quietly",
+      "primary": {
+        "kind": "phrase",
+        "value": "vanish quietly",
+        "meaning": "savings"
+      },
+      "energy": "impact",
+      "keyword": "vanish"
+    }
+  ]
+}

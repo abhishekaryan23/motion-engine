@@ -1,0 +1,43 @@
+{
+  "version": "0.2",
+  "title": "late_night_worker",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "An office worker sits alone at 11:47 PM.",
+      "primary": { "kind": "phrase", "value": "Office worker", "meaning": "worker" },
+      "secondary": { "kind": "phrase", "value": "Unsure who to call", "meaning": "parked car" },
+      "energy": "calm",
+      "keyword": "night"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "The office worker has not left since 8 AM.",
+      "primary": { "kind": "phrase", "value": "Office worker", "meaning": "worker" },
+      "secondary": { "kind": "phrase", "value": "Fifteen hours at the desk" },
+      "energy": "building",
+      "keyword": "hours"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "Most of that time went to one kind of work.",
+      "primary": {
+        "kind": "derived_metric",
+        "operation": "ratio",
+        "numerator": { "value": 9, "meaning": "hours in meetings and messages" },
+        "denominator": { "value": 15, "meaning": "hours at the desk" },
+        "format": "percent",
+        "meaning": "of the day was coordination"
+      },
+      "energy": "building"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "The real work starts after everyone leaves.",
+      "primary": { "kind": "phrase", "value": "after hours", "meaning": "real work" },
+      "energy": "impact",
+      "keyword": "after"
+    }
+  ]
+}

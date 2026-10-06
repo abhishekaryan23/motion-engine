@@ -1,0 +1,640 @@
+{
+  "family": "editorial_concepts",
+  "project": "MotionEngine Asset Library",
+  "project_id": "jR0xTD3dUZ28WeDiZEj4",
+  "emotions": [
+    "trust",
+    "warmth",
+    "calm",
+    "precision",
+    "drama"
+  ],
+  "medium": "editorial photo cut-out concept objects (AI, tech, science, psychology, business)",
+  "assets": [
+    {
+      "id": "tin_robot",
+      "role": "object",
+      "subject": "vintage toy robot",
+      "tags": [
+        "robot",
+        "robots",
+        "ai",
+        "artificial intelligence",
+        "automation",
+        "machine",
+        "bot"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of a vintage tin toy robot standing upright. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "circuit_board",
+      "role": "object",
+      "subject": "circuit board",
+      "tags": [
+        "circuit board",
+        "electronics",
+        "hardware",
+        "technology",
+        "tech",
+        "circuit"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of a green-grey printed circuit board with chips and components, seen from above at a slight angle. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "microchip",
+      "role": "object",
+      "subject": "microchip",
+      "tags": [
+        "chip",
+        "microchip",
+        "processor",
+        "cpu",
+        "gpu",
+        "semiconductor",
+        "hardware"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of a computer processor chip with metal pins, close-up product shot. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "server_rack",
+      "role": "object",
+      "subject": "server rack",
+      "tags": [
+        "server",
+        "servers",
+        "data center",
+        "cloud computing",
+        "compute",
+        "infrastructure"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of a tall black server rack with blinking status lights. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "vr_headset",
+      "role": "object",
+      "subject": "vr headset",
+      "tags": [
+        "vr",
+        "virtual reality",
+        "headset",
+        "metaverse",
+        "ar",
+        "immersive"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of a white virtual reality headset with a strap, three-quarter view. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "drone",
+      "role": "object",
+      "subject": "drone",
+      "tags": [
+        "drone",
+        "drones",
+        "delivery",
+        "flying",
+        "aerial",
+        "quadcopter"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of a small white quadcopter drone with four propellers. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "headphones",
+      "role": "object",
+      "subject": "headphones",
+      "tags": [
+        "headphones",
+        "music",
+        "audio",
+        "listen",
+        "podcast",
+        "sound"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of a pair of over-ear headphones. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "game_controller",
+      "role": "object",
+      "subject": "game controller",
+      "tags": [
+        "game",
+        "gaming",
+        "controller",
+        "play",
+        "video game",
+        "esports"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of a dark grey video game controller. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "smart_watch",
+      "role": "object",
+      "subject": "smart watch",
+      "tags": [
+        "smart watch",
+        "wearable",
+        "fitness",
+        "health tracker",
+        "watch",
+        "gadget"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of a smart watch with a blank dark screen and a rubber strap. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "satellite_dish",
+      "role": "object",
+      "subject": "satellite dish",
+      "tags": [
+        "satellite",
+        "antenna",
+        "signal",
+        "broadcast",
+        "communication",
+        "network"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of a white satellite dish antenna on a short mount. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "microscope",
+      "role": "object",
+      "subject": "microscope",
+      "tags": [
+        "microscope",
+        "research",
+        "biology",
+        "lab",
+        "laboratory",
+        "science",
+        "cells"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of a modern laboratory microscope. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "dna_model",
+      "role": "object",
+      "subject": "dna model",
+      "tags": [
+        "dna",
+        "genetics",
+        "biology",
+        "gene",
+        "genes",
+        "genome",
+        "heredity"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of a plastic double helix DNA teaching model on a small stand. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "atom_model",
+      "role": "object",
+      "subject": "atom model",
+      "tags": [
+        "atom",
+        "physics",
+        "science",
+        "nuclear",
+        "electron",
+        "quantum"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of a ball-and-wire atom model with orbit rings on a small stand. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "telescope",
+      "role": "object",
+      "subject": "telescope",
+      "tags": [
+        "telescope",
+        "astronomy",
+        "stars",
+        "discovery",
+        "space",
+        "observe"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of a white refractor telescope on a tripod. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "petri_dish",
+      "role": "object",
+      "subject": "petri dish",
+      "tags": [
+        "bacteria",
+        "petri dish",
+        "cells",
+        "microbes",
+        "culture",
+        "lab"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of a glass petri dish with bacterial colonies, seen from above at a slight angle. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "stethoscope",
+      "role": "object",
+      "subject": "stethoscope",
+      "tags": [
+        "doctor",
+        "health",
+        "medicine",
+        "medical",
+        "healthcare",
+        "hospital",
+        "checkup"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of a doctor's stethoscope coiled loosely. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "pill_capsules",
+      "role": "object",
+      "subject": "pill capsules",
+      "tags": [
+        "medicine",
+        "pills",
+        "drugs",
+        "pharmacy",
+        "treatment",
+        "supplements",
+        "health"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of a small pile of two-tone medicine capsules and white tablets. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "magnet",
+      "role": "object",
+      "subject": "magnet",
+      "tags": [
+        "magnet",
+        "attract",
+        "attraction",
+        "physics",
+        "pull",
+        "magnetic"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of a red and silver horseshoe magnet. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "brain_model",
+      "role": "object",
+      "subject": "anatomical brain model",
+      "tags": [
+        "brain",
+        "mind",
+        "psychology",
+        "neuroscience",
+        "memory",
+        "mental",
+        "think"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of an anatomical plastic brain model in two halves on a small stand. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "stress_ball",
+      "role": "object",
+      "subject": "stress ball",
+      "tags": [
+        "stress",
+        "anxiety",
+        "stress relief",
+        "pressure",
+        "tension",
+        "coping"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of a squeezable foam stress ball, slightly squashed. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "open_journal",
+      "role": "object",
+      "subject": "open journal",
+      "tags": [
+        "journal",
+        "journaling",
+        "diary",
+        "write",
+        "reflection",
+        "notes",
+        "habit"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of an open notebook journal with blank cream pages and a pen lying across it. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "meditation_cushion",
+      "role": "object",
+      "subject": "meditation cushion",
+      "tags": [
+        "meditation",
+        "mindfulness",
+        "calm",
+        "peace",
+        "relax",
+        "breathing"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of a round meditation cushion with a small singing bowl beside it. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "jigsaw_pieces",
+      "role": "object",
+      "subject": "jigsaw pieces",
+      "tags": [
+        "puzzle",
+        "solve",
+        "problem",
+        "fit",
+        "together",
+        "solution"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of three cardboard jigsaw puzzle pieces, two joined and one apart. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "theatre_masks",
+      "role": "object",
+      "subject": "theatre masks",
+      "tags": [
+        "masks",
+        "emotions",
+        "personality",
+        "mood",
+        "identity",
+        "theatre"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of a pair of white comedy and tragedy theatre masks. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "hand_mirror",
+      "role": "object",
+      "subject": "hand mirror",
+      "tags": [
+        "mirror",
+        "self image",
+        "reflection",
+        "identity",
+        "self",
+        "confidence"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of an antique round hand mirror with a carved handle, the glass reflecting a soft blank grey. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "crumpled_paper",
+      "role": "object",
+      "subject": "crumpled paper",
+      "tags": [
+        "mistake",
+        "failure",
+        "frustration",
+        "anxiety",
+        "rejected ideas",
+        "waste"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of a few crumpled balls of white paper. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "sticky_notes",
+      "role": "object",
+      "subject": "sticky notes",
+      "tags": [
+        "notes",
+        "reminder",
+        "ideas",
+        "to do",
+        "memory",
+        "planning"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of a small stack of yellow sticky notes with one note curling at the corner, all blank. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "pillow",
+      "role": "object",
+      "subject": "pillow",
+      "tags": [
+        "sleep",
+        "rest",
+        "bed",
+        "tired",
+        "nap",
+        "insomnia",
+        "bedtime"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of a soft white bed pillow with a slight dent. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "briefcase",
+      "role": "object",
+      "subject": "briefcase",
+      "tags": [
+        "briefcase",
+        "business",
+        "work",
+        "job",
+        "office",
+        "career",
+        "corporate"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of a brown leather briefcase. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "calculator",
+      "role": "object",
+      "subject": "calculator",
+      "tags": [
+        "calculator",
+        "accounting",
+        "math",
+        "budget",
+        "finance",
+        "tax",
+        "calculate"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of a desk calculator with blank unlabelled keys and a blank display. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "trophy",
+      "role": "object",
+      "subject": "trophy",
+      "tags": [
+        "trophy",
+        "winner",
+        "award",
+        "success",
+        "achievement",
+        "champion",
+        "win"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of a gold trophy cup on a dark base. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "contract_pen",
+      "role": "object",
+      "subject": "contract and pen",
+      "tags": [
+        "contract",
+        "deal",
+        "agreement",
+        "signature",
+        "document",
+        "legal",
+        "sign"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of a document with blank lines and a fountain pen lying across it. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "rubber_stamp",
+      "role": "object",
+      "subject": "rubber stamp",
+      "tags": [
+        "approval",
+        "stamp",
+        "approved",
+        "official",
+        "certified",
+        "bureaucracy"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of a wooden office rubber stamp standing upright. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "dartboard",
+      "role": "object",
+      "subject": "dartboard",
+      "tags": [
+        "target",
+        "goal",
+        "goals",
+        "aim",
+        "focus",
+        "accuracy",
+        "bullseye"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of a dartboard with one dart in the bullseye. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "chess_king",
+      "role": "object",
+      "subject": "chess king",
+      "tags": [
+        "strategy",
+        "chess",
+        "king",
+        "leader",
+        "plan",
+        "power",
+        "decision"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of a black wooden chess king piece. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "piggy_bank",
+      "role": "object",
+      "subject": "piggy bank",
+      "tags": [
+        "savings",
+        "save",
+        "piggy bank",
+        "money",
+        "budget",
+        "finance"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of a ceramic piggy bank in soft teal. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "wallet",
+      "role": "object",
+      "subject": "wallet",
+      "tags": [
+        "wallet",
+        "money",
+        "spending",
+        "payment",
+        "cash",
+        "finance",
+        "budget"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of a brown leather wallet, slightly open. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    },
+    {
+      "id": "gavel",
+      "role": "object",
+      "subject": "gavel",
+      "tags": [
+        "law",
+        "legal",
+        "justice",
+        "court",
+        "judge",
+        "rules",
+        "regulation"
+      ],
+      "model": "flare",
+      "aspect": "1:1",
+      "prompt": "Editorial product photograph of a wooden judge's gavel on its round sound block. Soft natural light from the upper left, medium contrast, muted warm greys, faded ochre and soft teal tones, realistic materials, crisp clean edges, the object photographed on its own like a magazine cut-out (no pink, no purple, no magenta in the object). Isolated and centered with generous margin, the whole subject fully inside the frame, on a perfectly flat, uniform, solid pure magenta background (#FF00FF) with no gradient, no floor and no cast shadow on the background. No text, no letters, no numbers, no logos, no watermark."
+    }
+  ]
+}

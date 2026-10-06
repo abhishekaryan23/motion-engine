@@ -10,34 +10,75 @@
 
 *Transform declarative semantic intent into broadcast-grade editorial motion graphics with synchronized narration, procedural typography, and reactive sound design.*
 
+<br/>
+
+<p align="center">
+  <img src="showcase/documentary_money_preview.gif" width="23%" alt="Documentary Money Preview" />
+  <img src="showcase/countdown_tense_preview.gif" width="23%" alt="Countdown Tense Preview" />
+  <img src="showcase/layers_documentary_preview.gif" width="23%" alt="Layers Breakdown Preview" />
+  <img src="showcase/short_state_change_preview.gif" width="23%" alt="State Change Preview" />
+</p>
+<p align="center">
+  <i>Live MotionEngine renders: Documentary Dossier · Kinetic Countdown · Layers Hierarchy · State Change</i>
+</p>
+
 </div>
 
 ---
 
-## 🎥 Showcase Samples
+## 🎥 Showcase Video Previews
 
-MotionEngine compiles declarative intent directly into broadcast-grade 1080×1920 (or 720×1280) H.264 + AAC MP4 videos. Below are rendered showcase cuts included in the repository:
+MotionEngine compiles declarative intent directly into broadcast-grade 1080×1920 (or 720×1280) H.264 + AAC MP4 videos. Below are rendered showcase cuts included directly in the repository:
 
-| Sample Preview | Genre / Style | Watch / Download | Highlights |
-| :--- | :--- | :--- | :--- |
-| **Documentary Money** | Documentary / Dossier | [▶️ `documentary_money_720p.mp4`](showcase/documentary_money_720p.mp4) | Vox-style data journalism, evidence clippings, stamps, figure cards, and synced voice. |
-| **Countdown Tense** | Kinetic / Tense | [▶️ `countdown_tense_720p.mp4`](showcase/countdown_tense_720p.mp4) | High-velocity countdown beats, audio-reactive hits, and kinetic typography. |
-| **Layers Breakdown** | Layers Grammar | [▶️ `layers_documentary_720p.mp4`](showcase/layers_documentary_720p.mp4) | Multi-tier conceptual breakdown with persistent depth focus. |
-| **State Change** | State Change Grammar | [▶️ `short_state_change_720p.mp4`](showcase/short_state_change_720p.mp4) | Directional velocity transitions and before/after comparative states. |
+### 1. Vox-Style Financial Documentary (`documentary_money_720p.mp4`)
+* **Genre / Style**: Documentary / Dossier Look
+* **Key Features**: Evidence desk styling, paper clippings, stamps, figure cards, and word-synchronized voiceover.
+* **Full Master MP4**: [▶️ Download / Watch `documentary_money_720p.mp4`](showcase/documentary_money_720p.mp4)
 
-### Video Previews
+<p align="center">
+  <a href="showcase/documentary_money_720p.mp4">
+    <img src="showcase/documentary_money_preview.gif" width="300px" alt="Financial Documentary Preview" />
+  </a>
+</p>
 
-#### 1. Vox-Style Financial Documentary (`showcase/documentary_money_720p.mp4`)
-https://github.com/abhishekaryan23/motion-engine/raw/main/showcase/documentary_money_720p.mp4
+---
 
-#### 2. Kinetic Rocket Countdown (`showcase/countdown_tense_720p.mp4`)
-https://github.com/abhishekaryan23/motion-engine/raw/main/showcase/countdown_tense_720p.mp4
+### 2. Kinetic Rocket Countdown (`countdown_tense_720p.mp4`)
+* **Genre / Style**: Kinetic Slam / Tense Mood
+* **Key Features**: High-velocity countdown beats, audio-reactive hits, and kinetic display typography.
+* **Full Master MP4**: [▶️ Download / Watch `countdown_tense_720p.mp4`](showcase/countdown_tense_720p.mp4)
 
-#### 3. Layers Hierarchy Breakdown (`showcase/layers_documentary_720p.mp4`)
-https://github.com/abhishekaryan23/motion-engine/raw/main/showcase/layers_documentary_720p.mp4
+<p align="center">
+  <a href="showcase/countdown_tense_720p.mp4">
+    <img src="showcase/countdown_tense_preview.gif" width="300px" alt="Rocket Countdown Preview" />
+  </a>
+</p>
 
-#### 4. High-Speed State Change (`showcase/short_state_change_720p.mp4`)
-https://github.com/abhishekaryan23/motion-engine/raw/main/showcase/short_state_change_720p.mp4
+---
+
+### 3. Layers Hierarchy Breakdown (`layers_documentary_720p.mp4`)
+* **Genre / Style**: Layers Grammar / Documentary
+* **Key Features**: Multi-tier vertical conceptual breakdown with persistent depth focus and level boundaries.
+* **Full Master MP4**: [▶️ Download / Watch `layers_documentary_720p.mp4`](showcase/layers_documentary_720p.mp4)
+
+<p align="center">
+  <a href="showcase/layers_documentary_720p.mp4">
+    <img src="showcase/layers_documentary_preview.gif" width="300px" alt="Layers Breakdown Preview" />
+  </a>
+</p>
+
+---
+
+### 4. High-Speed State Change (`short_state_change_720p.mp4`)
+* **Genre / Style**: State Change Grammar
+* **Key Features**: Directional velocity transitions and before/after comparative entity states.
+* **Full Master MP4**: [▶️ Download / Watch `short_state_change_720p.mp4`](showcase/short_state_change_720p.mp4)
+
+<p align="center">
+  <a href="showcase/short_state_change_720p.mp4">
+    <img src="showcase/short_state_change_preview.gif" width="300px" alt="State Change Preview" />
+  </a>
+</p>
 
 ---
 
@@ -90,7 +131,7 @@ The repository includes standalone, interactive HTML architecture diagrams gener
 * **`motion-render`**: High-performance CPU rasterizer built on Tiny-Skia, audio bus mixer, and FFmpeg video pipeline.
 * **`motion-voice`**: Voice synthesis pipeline, OpenRouter / local TTS integration, and local Whisper ASR word-timing alignment.
 * **`motion-cli`**: Command-line interface (`compile`, `render`, `voice`, `reel`, `validate`).
-* **`motion-mcp`**: Model Context Protocol (MCP) server enabling AI coding assistants (Claude, Gemini, etc.) to author and render videos autonomously.
+* **`motion-mcp`**: Model Context Protocol (MCP) server enabling AI coding assistants (Claude Desktop, Antigravity, Cursor) to author and render videos autonomously.
 
 ---
 

@@ -1,0 +1,387 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "MotionEngine — the reel pipeline",
+    "output": "docs/architecture/reel-workflow.html",
+    "quality_profile": "showcase",
+    "locale": "en",
+    "repository": {
+      "url": "https://github.com/abhishekaryan23/motion-engine.git",
+      "provider": "github",
+      "link_mode": "local-only",
+      "revision": "9cb354b97ae2a606a956594e88cb6094eb8d3e40"
+    },
+    "legend": {
+      "mode": "auto",
+      "entries": {
+        "frontend": {
+          "label": "CLI command"
+        },
+        "backend": {
+          "label": "Processing step"
+        },
+        "security": {
+          "label": "Gate or fallback"
+        },
+        "database": {
+          "label": "Data or output"
+        },
+        "external": {
+          "label": "Input"
+        }
+      }
+    }
+  },
+  "lanes": [
+    {
+      "id": "operator",
+      "label": "Operator · motion-engine reel"
+    },
+    {
+      "id": "voice",
+      "label": "Voice · network edge"
+    },
+    {
+      "id": "fallback",
+      "label": "Fallbacks",
+      "variant": "exception"
+    },
+    {
+      "id": "core",
+      "label": "Deterministic core"
+    },
+    {
+      "id": "media",
+      "label": "Sound, render and QA"
+    }
+  ],
+  "phases": [
+    {
+      "id": "intake",
+      "label": "Intake",
+      "fromCol": 0,
+      "toCol": 1
+    },
+    {
+      "id": "speak",
+      "label": "Voice-over",
+      "fromCol": 2,
+      "toCol": 3,
+      "variant": "emphasis"
+    },
+    {
+      "id": "build",
+      "label": "Render and verify",
+      "fromCol": 4,
+      "toCol": 5
+    }
+  ],
+  "mainPath": [
+    "intent",
+    "reel",
+    "take",
+    "timing",
+    "compile",
+    "render",
+    "qa",
+    "deliver"
+  ],
+  "nodes": [
+    {
+      "id": "intent",
+      "lane": "operator",
+      "col": 0,
+      "type": "external",
+      "label": "Intent + taste",
+      "sublabel": "weak-model JSON",
+      "width": 184,
+      "sources": [
+        {
+          "path": "crates/motion-core/src/intent/mod.rs",
+          "line": 63,
+          "end_line": 90,
+          "label": "Beat contract"
+        }
+      ]
+    },
+    {
+      "id": "reel",
+      "lane": "operator",
+      "col": 1,
+      "type": "frontend",
+      "label": "reel",
+      "sublabel": "one command",
+      "width": 184,
+      "sources": [
+        {
+          "path": "crates/motion-cli/src/reel_cmd.rs",
+          "line": 133,
+          "end_line": 170,
+          "label": "run_reel"
+        }
+      ]
+    },
+    {
+      "id": "take",
+      "lane": "voice",
+      "col": 2,
+      "type": "backend",
+      "label": "Single take",
+      "sublabel": "Gemini or MAI · Devanagari for Hindi",
+      "width": 184,
+      "sources": [
+        {
+          "path": "crates/motion-voice/src/script.rs",
+          "line": 224,
+          "end_line": 262,
+          "label": "tts_script"
+        },
+        {
+          "path": "crates/motion-voice/src/speech_build.rs",
+          "line": 462,
+          "end_line": 520,
+          "label": "single take"
+        },
+        {
+          "path": "crates/motion-voice/src/lib.rs",
+          "line": 117,
+          "end_line": 156,
+          "label": "locale + model"
+        }
+      ]
+    },
+    {
+      "id": "free",
+      "lane": "fallback",
+      "col": 2,
+      "type": "security",
+      "label": "Free fallback",
+      "sublabel": "Fish, then macOS say",
+      "width": 184,
+      "sources": [
+        {
+          "path": "crates/motion-cli/src/voice_cmd.rs",
+          "line": 186,
+          "end_line": 213,
+          "label": "retry chain"
+        }
+      ]
+    },
+    {
+      "id": "timing",
+      "lane": "voice",
+      "col": 3,
+      "type": "backend",
+      "label": "Word timing",
+      "sublabel": "ASR, onset fallback",
+      "width": 184,
+      "sources": [
+        {
+          "path": "crates/motion-voice/src/asr.rs",
+          "line": 368,
+          "end_line": 400,
+          "label": "align words"
+        },
+        {
+          "path": "crates/motion-cli/src/voice_cmd.rs",
+          "line": 375,
+          "end_line": 403,
+          "label": "repair"
+        }
+      ]
+    },
+    {
+      "id": "compile",
+      "lane": "core",
+      "col": 3,
+      "type": "backend",
+      "label": "Compile",
+      "sublabel": "--art --variety --speech",
+      "width": 184,
+      "sources": [
+        {
+          "path": "crates/motion-cli/src/reel_cmd.rs",
+          "line": 170,
+          "end_line": 205,
+          "label": "compile step"
+        },
+        {
+          "path": "crates/motion-core/src/compiler/mod.rs",
+          "line": 263,
+          "end_line": 330,
+          "label": "compile_with_options"
+        }
+      ]
+    },
+    {
+      "id": "music",
+      "lane": "media",
+      "col": 3,
+      "type": "database",
+      "label": "Music bed",
+      "sublabel": "chosen by emotion",
+      "width": 184,
+      "sources": [
+        {
+          "path": "crates/motion-cli/src/reel_cmd.rs",
+          "line": 83,
+          "end_line": 100,
+          "label": "bed_for"
+        }
+      ]
+    },
+    {
+      "id": "render",
+      "lane": "media",
+      "col": 4,
+      "type": "backend",
+      "label": "Plan audio + render",
+      "sublabel": "ducking, -16 LUFS",
+      "width": 184,
+      "sources": [
+        {
+          "path": "crates/motion-cli/src/reel_cmd.rs",
+          "line": 225,
+          "end_line": 270,
+          "label": "render step"
+        },
+        {
+          "path": "crates/motion-core/src/audio.rs",
+          "line": 604,
+          "end_line": 640,
+          "label": "plan_audio_with_speech"
+        }
+      ]
+    },
+    {
+      "id": "qa",
+      "lane": "media",
+      "col": 5,
+      "type": "security",
+      "label": "Speech QA",
+      "sublabel": "sync, safe area, LUFS",
+      "width": 184,
+      "sources": [
+        {
+          "path": "crates/motion-render/src/speech_qa.rs",
+          "line": 146,
+          "end_line": 200,
+          "label": "speech_report"
+        }
+      ]
+    },
+    {
+      "id": "deliver",
+      "lane": "operator",
+      "col": 5,
+      "type": "database",
+      "label": "MP4 + report",
+      "sublabel": "video path printed",
+      "width": 184,
+      "sources": [
+        {
+          "path": "crates/motion-cli/src/reel_cmd.rs",
+          "line": 271,
+          "end_line": 289,
+          "label": "QA + output"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "intent-reel",
+      "from": "intent",
+      "to": "reel",
+      "variant": "emphasis"
+    },
+    {
+      "id": "reel-take",
+      "from": "reel",
+      "to": "take",
+      "label": "1 voice",
+      "variant": "emphasis"
+    },
+    {
+      "id": "take-free",
+      "from": "take",
+      "to": "free",
+      "label": "paid call refused",
+      "variant": "security",
+      "role": "error"
+    },
+    {
+      "id": "free-timing",
+      "from": "free",
+      "to": "timing",
+      "variant": "dashed",
+      "role": "branch"
+    },
+    {
+      "id": "take-timing",
+      "from": "take",
+      "to": "timing"
+    },
+    {
+      "id": "timing-compile",
+      "from": "timing",
+      "to": "compile",
+      "label": "SpeechMap",
+      "variant": "emphasis"
+    },
+    {
+      "id": "compile-render",
+      "from": "compile",
+      "to": "render",
+      "label": "MotionScene",
+      "variant": "emphasis"
+    },
+    {
+      "id": "music-render",
+      "from": "music",
+      "to": "render",
+      "label": "bed",
+      "variant": "dashed",
+      "role": "branch"
+    },
+    {
+      "id": "render-qa",
+      "from": "render",
+      "to": "qa"
+    },
+    {
+      "id": "qa-deliver",
+      "from": "qa",
+      "to": "deliver",
+      "label": "report",
+      "variant": "emphasis"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "One command",
+      "items": [
+        "Each step is an ordinary subcommand",
+        "Every step stays reproducible on its own"
+      ]
+    },
+    {
+      "dot": "violet",
+      "title": "Caches",
+      "items": [
+        "TTS, recognition and script passes are content-addressed",
+        "Reruns make zero network calls"
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "Graceful degradation",
+      "items": [
+        "Payment, auth or rate-limit errors fall back to free voices",
+        "Missing recognition falls back to onset timing"
+      ]
+    }
+  ]
+}

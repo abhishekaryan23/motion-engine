@@ -4,7 +4,7 @@
 
 **Autonomous Editorial Motion Graphics & Video Generation Engine in Rust**
 
-[![License](https://img.shields.io/badge/license-MIT%20%2F%20Apache--2.0-blue.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-Limited%20(Evaluation%20Only)-red.svg)](LICENSE)
 [![Rust](https://img.shields.io/badge/rust-1.80%2B-orange.svg)](https://www.rust-lang.org)
 [![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux-lightgrey.svg)]()
 
@@ -14,49 +14,77 @@
 
 ---
 
-## 📖 Overview
-
-**MotionEngine** is a deterministic, compiler-driven motion graphics engine built in Rust. Unlike generative video models that hallucinate text and produce blurry physics, MotionEngine operates as a **semantic compiler**:
-
-1. **Authors define intent**: A declarative JSON (`CreativeIntent`) describing *what* each beat communicates (statements, data comparisons, numbers, and narration).
-2. **Deterministic compilation**: MotionEngine resolves layouts, typography, safe areas, kinetic easing, and sound effects across multiple design genres (Documentary, Cinematic 3D, Editorial, Studio, Street).
-3. **Word-level ASR alignment**: Speech audio is synthesized via TTS and aligned word-for-word using Whisper CTC, anchoring visual cuts, stamps, and stat cards exactly to spoken moments.
-4. **Broadcast rendering**: Frames are rasterized via Tiny-Skia at 1080×1920 (or 1:1 / 16:9) at 30fps and encoded into master MP4 files via FFmpeg.
-
----
-
 ## 🎥 Showcase Samples
 
-MotionEngine includes rendered sample cuts in the [`showcase/`](showcase/) directory demonstrating various styles and grammars:
+MotionEngine compiles declarative intent directly into broadcast-grade 1080×1920 (or 720×1280) H.264 + AAC MP4 videos. Below are rendered showcase cuts included in the repository:
 
-| Sample Preview | Genre / Style | Key Features |
-| :--- | :--- | :--- |
-| **`documentary_money_720p.mp4`** | Documentary / Dossier | Vox-style data journalism, evidence clippings, stamps, and stat cards. |
-| **`countdown_tense_720p.mp4`** | Kinetic / Tense | High-velocity countdown beats, audio-reactive hits, and kinetic typography. |
-| **`layers_documentary_720p.mp4`** | Layers Grammar | Multi-tier conceptual breakdown with persistent depth focus. |
-| **`short_state_change_720p.mp4`** | State Change Grammar | Directional velocity transitions and comparative before/after states. |
+| Sample Preview | Genre / Style | Watch / Download | Highlights |
+| :--- | :--- | :--- | :--- |
+| **Documentary Money** | Documentary / Dossier | [▶️ `documentary_money_720p.mp4`](showcase/documentary_money_720p.mp4) | Vox-style data journalism, evidence clippings, stamps, figure cards, and synced voice. |
+| **Countdown Tense** | Kinetic / Tense | [▶️ `countdown_tense_720p.mp4`](showcase/countdown_tense_720p.mp4) | High-velocity countdown beats, audio-reactive hits, and kinetic typography. |
+| **Layers Breakdown** | Layers Grammar | [▶️ `layers_documentary_720p.mp4`](showcase/layers_documentary_720p.mp4) | Multi-tier conceptual breakdown with persistent depth focus. |
+| **State Change** | State Change Grammar | [▶️ `short_state_change_720p.mp4`](showcase/short_state_change_720p.mp4) | Directional velocity transitions and before/after comparative states. |
+
+### Video Previews
+
+#### 1. Vox-Style Financial Documentary (`showcase/documentary_money_720p.mp4`)
+https://github.com/abhishekaryan23/motion-engine/raw/main/showcase/documentary_money_720p.mp4
+
+#### 2. Kinetic Rocket Countdown (`showcase/countdown_tense_720p.mp4`)
+https://github.com/abhishekaryan23/motion-engine/raw/main/showcase/countdown_tense_720p.mp4
+
+#### 3. Layers Hierarchy Breakdown (`showcase/layers_documentary_720p.mp4`)
+https://github.com/abhishekaryan23/motion-engine/raw/main/showcase/layers_documentary_720p.mp4
+
+#### 4. High-Speed State Change (`showcase/short_state_change_720p.mp4`)
+https://github.com/abhishekaryan23/motion-engine/raw/main/showcase/short_state_change_720p.mp4
 
 ---
 
-## 🏛️ System Architecture
+## 🏛️ System Architecture (from Archify)
+
+MotionEngine translates high-level semantic intent into fully composed, broadcast-grade editorial motion graphics videos with synchronized narration and sound design.
+
+### Archify System Architecture Diagram
 
 ```mermaid
 graph TD
-    User[User / AI Agent] -->|CreativeIntent v0.2 + StyleProfile| CLI[MotionEngine CLI / MCP Server]
-    CLI --> Voice[Voice Synthesis & Whisper CTC ASR]
-    Voice -->|WAV + SpeechMap| Compiler[Semantic Compiler]
-    CLI --> Compiler
-    Compiler -->|Asset Library & Font Catalog| ArtDir[Art Direction & Grammar Engine]
-    ArtDir --> Compiler
-    Compiler -->|Validated Motion Graph| Scene[MotionScene Graph]
-    Scene --> AudioPlan[Sound Design Planner]
-    AudioPlan -->|Audio Cues & Music Bed| Renderer[Rendering & Audio Mixer]
-    Scene --> Renderer
-    Renderer -->|Tiny-Skia CPU Frames| Encoder[FFmpeg H.264 / AAC Encoder]
-    Encoder --> MP4[Master MP4 Video]
+    Author["Author / LLM Agent<br/><i>(CreativeIntent v0.2 + StyleProfile)</i>"] -->|intent JSON| Reel["motion-engine reel<br/><i>(motion-cli orchestrator)</i>"]
+    
+    subgraph Voice Pipeline
+        Reel -->|1. voice pass| Voice["motion-voice<br/><i>(TTS · ASR · script)</i>"]
+        Voice -->|HTTPS| Provider["OpenRouter / Neural TTS<br/><i>(Fish Audio S2.1 Pro / macOS say)</i>"]
+        Voice -->|read/write| Cache[("Voice Cache<br/><i>sha256-addressed WAV</i>")]
+    end
+    
+    subgraph Semantic Compilation
+        Reel -->|2. compile pass| Compiler["Compiler<br/><i>(motion-core)</i>"]
+        Voice -->|SpeechMap & word timings| Compiler
+        Assets[("Asset Library<br/><i>fonts · cutouts · loops · music</i>")] -->|catalog resolution| Compiler
+        Compiler -->|MotionScene graph| Timeline["Timeline<br/><i>(evaluate_frame)</i>"]
+    end
+    
+    subgraph Rasterization & Audio Mixing
+        Timeline -->|ResolvedFrame| Renderer["CPU Renderer<br/><i>(tiny-skia · cosmic-text)</i>"]
+        Assets -->|music bed · SFX cues| Mixer["Audio Mixer<br/><i>(FFmpeg · ducking · -16 LUFS)</i>"]
+        Renderer -->|encode frames| Video["MP4 Reel<br/><i>(H.264 + AAC 30fps)</i>"]
+        Mixer -->|audio stream| Video
+    end
+    
+    Video --> QA["Speech + Layout QA<br/><i>(qa --speech)</i>"]
 ```
 
-### Workspace Crates
+### Interactive Archify Offline Diagrams
+
+The repository includes standalone, interactive HTML architecture diagrams generated with [Archify](https://github.com/tt-a1i/archify) in [`docs/architecture/`](docs/architecture/):
+
+* 📊 **[System Architecture Diagram](docs/architecture/system-architecture.html)** — Full crate layout, network boundary, and inter-stage data contracts.
+* 🔄 **[Reel Workflow Pipeline](docs/architecture/reel-workflow.html)** — Step-by-step pipeline execution, take rotations, and fallback chains.
+* 🎙️ **[Voice-Over Sequence](docs/architecture/voice-sequence.html)** — Script pass, single take synthesis, and Whisper CTC word-level timing alignment.
+
+---
+
+## ⚡ Workspace Crates
 
 * **`motion-core`**: Core domain logic, schema definitions (`CreativeIntent`, `StyleProfile`, `MotionScene`), semantic layout grammars, typography, and animation easing.
 * **`motion-render`**: High-performance CPU rasterizer built on Tiny-Skia, audio bus mixer, and FFmpeg video pipeline.
@@ -66,7 +94,7 @@ graph TD
 
 ---
 
-## ⚡ Prerequisites
+## 🛠️ Prerequisites
 
 * **Rust**: `1.80` or later ([rustup.rs](https://rustup.rs/))
 * **FFmpeg**: `6.0` or later with `libx264` and `aac` enabled:
@@ -140,7 +168,6 @@ motion-engine voice examples/topics/fuel.intent.json \
   --align local \
   --asr-ctc on
 ```
-*Outputs: `fuel.voice.wav` and `fuel.speech.json` (precise word-level timestamps).*
 
 #### Step 2: Compile Semantic Motion Scene
 ```bash
@@ -150,7 +177,6 @@ motion-engine compile examples/topics/fuel.intent.json \
   --art dossier \
   -o output/fuel.motion.json
 ```
-*Outputs: fully validated, frame-by-frame animation graph (`MotionScene`).*
 
 #### Step 3: Render Master Video
 ```bash
@@ -158,7 +184,6 @@ motion-engine render output/fuel.motion.json \
   --speech output/voice/fuel.speech.json \
   --out-dir output/render/
 ```
-*Outputs: broadcast MP4 encoded at 1080×1920 30fps.*
 
 ---
 
@@ -263,13 +288,6 @@ Add to your `claude_desktop_config.json`:
 }
 ```
 
-**Available MCP Tools:**
-* `make_video`: End-to-end video creation with pre-flight check mode.
-* `revise_video`: Targeted script and beat revisions.
-* `view_frames`: Contact sheet inspection of rendered scenes.
-* `find_assets`: Search library icons, props, and cutouts.
-* `list_options`: Query available genres, tones, and music moods.
-
 ---
 
 ## 🧪 Verification & Smoke Tests
@@ -284,11 +302,12 @@ bash scripts/public_smoke.sh
 
 ## 📄 License
 
-Dual-licensed under either of:
-* Apache License, Version 2.0 ([LICENSE](LICENSE) or http://www.apache.org/licenses/LICENSE-2.0)
-* MIT License ([LICENSE-MIT](LICENSE) or http://opensource.org/licenses/MIT)
+MotionEngine is licensed under the **MotionEngine Limited License**.
 
-at your option.
+* **Permitted**: Personal inspection, non-commercial evaluation, local testing, and academic study.
+* **Prohibited**: Commercial production, SaaS deployment, hosted video generation services, or commercial redistribution without an explicit written license.
+
+For full license terms and commercial licensing inquiries, please see [LICENSE](LICENSE).
 
 ---
 

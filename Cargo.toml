@@ -5,7 +5,7 @@ members = ["crates/motion-core", "crates/motion-render", "crates/motion-voice", 
 [workspace.package]
 version = "0.2.0"
 edition = "2021"
-license = "MIT OR Apache-2.0"
+license = "LicenseRef-Limited"
 
 [workspace.dependencies]
 motion-core = { path = "crates/motion-core" }

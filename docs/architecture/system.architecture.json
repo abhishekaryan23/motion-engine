@@ -1,0 +1,462 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "MotionEngine — system architecture",
+    "output": "docs/architecture/system-architecture.html",
+    "quality_profile": "showcase",
+    "locale": "en",
+    "repository": {
+      "url": "https://github.com/abhishekaryan23/motion-engine.git",
+      "provider": "github",
+      "link_mode": "local-only",
+      "revision": "9cb354b97ae2a606a956594e88cb6094eb8d3e40"
+    }
+  },
+  "components": [
+    {
+      "id": "author",
+      "type": "external",
+      "label": "Weak model / author",
+      "sublabel": "intent + 5 taste fields",
+      "pos": [
+        40,
+        340
+      ],
+      "size": [
+        150,
+        60
+      ],
+      "sources": [
+        {
+          "path": "crates/motion-core/src/intent/mod.rs",
+          "line": 63,
+          "end_line": 90,
+          "label": "Beat contract"
+        }
+      ]
+    },
+    {
+      "id": "reel",
+      "type": "frontend",
+      "label": "motion-engine reel",
+      "sublabel": "motion-cli orchestrator",
+      "pos": [
+        290,
+        340
+      ],
+      "size": [
+        160,
+        60
+      ],
+      "sources": [
+        {
+          "path": "crates/motion-cli/src/reel_cmd.rs",
+          "line": 133,
+          "end_line": 289,
+          "label": "run_reel"
+        }
+      ]
+    },
+    {
+      "id": "voice",
+      "type": "backend",
+      "label": "motion-voice",
+      "sublabel": "TTS · ASR · script",
+      "pos": [
+        290,
+        190
+      ],
+      "size": [
+        160,
+        60
+      ],
+      "tag": "only network code",
+      "sources": [
+        {
+          "path": "crates/motion-cli/src/voice_cmd.rs",
+          "line": 194,
+          "end_line": 420,
+          "label": "run_voice"
+        },
+        {
+          "path": "crates/motion-voice/src/lib.rs",
+          "line": 117,
+          "end_line": 156,
+          "label": "locale + fallbacks"
+        }
+      ]
+    },
+    {
+      "id": "provider",
+      "type": "external",
+      "label": "OpenRouter",
+      "sublabel": "speech · transcribe · chat",
+      "pos": [
+        40,
+        190
+      ],
+      "size": [
+        150,
+        60
+      ],
+      "sources": [
+        {
+          "path": "crates/motion-voice/src/openrouter.rs",
+          "line": 10,
+          "label": "TTS endpoint"
+        },
+        {
+          "path": "crates/motion-voice/src/asr.rs",
+          "line": 18,
+          "label": "ASR endpoint"
+        },
+        {
+          "path": "crates/motion-voice/src/script.rs",
+          "line": 20,
+          "label": "script endpoint"
+        }
+      ]
+    },
+    {
+      "id": "cache",
+      "type": "database",
+      "label": "Voice cache",
+      "sublabel": "sha256-addressed WAV",
+      "pos": [
+        290,
+        60
+      ],
+      "size": [
+        160,
+        56
+      ],
+      "sources": [
+        {
+          "path": "crates/motion-voice/src/cache.rs",
+          "line": 11,
+          "end_line": 130,
+          "label": "VoiceCache"
+        }
+      ]
+    },
+    {
+      "id": "compiler",
+      "type": "backend",
+      "label": "Compiler",
+      "sublabel": "motion-core",
+      "pos": [
+        560,
+        340
+      ],
+      "size": [
+        150,
+        60
+      ],
+      "sources": [
+        {
+          "path": "crates/motion-core/src/compiler/mod.rs",
+          "line": 263,
+          "end_line": 330,
+          "label": "compile_with_options"
+        }
+      ]
+    },
+    {
+      "id": "assets",
+      "type": "database",
+      "label": "Asset library",
+      "sublabel": "fonts · cutouts · loops · music",
+      "pos": [
+        550,
+        510
+      ],
+      "size": [
+        170,
+        60
+      ],
+      "sources": [
+        {
+          "path": "crates/motion-core/src/compiler/loops.rs",
+          "line": 124,
+          "end_line": 160,
+          "label": "library loops"
+        },
+        {
+          "path": "crates/motion-cli/src/reel_cmd.rs",
+          "line": 83,
+          "end_line": 100,
+          "label": "music bed pick"
+        }
+      ]
+    },
+    {
+      "id": "timeline",
+      "type": "backend",
+      "label": "Timeline",
+      "sublabel": "evaluate_frame",
+      "pos": [
+        810,
+        340
+      ],
+      "size": [
+        140,
+        60
+      ],
+      "sources": [
+        {
+          "path": "crates/motion-core/src/timeline.rs",
+          "line": 166,
+          "end_line": 230,
+          "label": "evaluate_frame"
+        }
+      ]
+    },
+    {
+      "id": "renderer",
+      "type": "backend",
+      "label": "CPU renderer",
+      "sublabel": "tiny-skia · cosmic-text",
+      "pos": [
+        1070,
+        340
+      ],
+      "size": [
+        160,
+        60
+      ],
+      "sources": [
+        {
+          "path": "crates/motion-render/src/cpu.rs",
+          "line": 31,
+          "end_line": 60,
+          "label": "CpuRenderer"
+        },
+        {
+          "path": "crates/motion-render/src/export.rs",
+          "line": 26,
+          "end_line": 60,
+          "label": "render_frames"
+        }
+      ]
+    },
+    {
+      "id": "video",
+      "type": "database",
+      "label": "MP4 reel",
+      "sublabel": "H.264 + AAC",
+      "pos": [
+        1310,
+        340
+      ],
+      "size": [
+        130,
+        60
+      ],
+      "sources": [
+        {
+          "path": "crates/motion-render/src/export.rs",
+          "line": 61,
+          "end_line": 91,
+          "label": "encode_mp4"
+        }
+      ]
+    },
+    {
+      "id": "mixer",
+      "type": "backend",
+      "label": "Audio mix",
+      "sublabel": "ffmpeg · ducking · -16 LUFS",
+      "pos": [
+        1300,
+        510
+      ],
+      "size": [
+        150,
+        60
+      ],
+      "sources": [
+        {
+          "path": "crates/motion-render/src/audio_mix.rs",
+          "line": 79,
+          "end_line": 130,
+          "label": "mix_audio_with"
+        }
+      ]
+    },
+    {
+      "id": "qa",
+      "type": "security",
+      "label": "Speech + layout QA",
+      "sublabel": "qa --speech",
+      "pos": [
+        1300,
+        190
+      ],
+      "size": [
+        150,
+        60
+      ],
+      "sources": [
+        {
+          "path": "crates/motion-render/src/speech_qa.rs",
+          "line": 146,
+          "end_line": 200,
+          "label": "speech_report"
+        }
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Deterministic core · no network",
+      "wraps": [
+        "compiler",
+        "timeline",
+        "renderer"
+      ]
+    },
+    {
+      "kind": "region",
+      "label": "Network edge",
+      "wraps": [
+        "voice",
+        "cache"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "author-to-reel",
+      "from": "author",
+      "to": "reel",
+      "label": "intent JSON",
+      "variant": "emphasis"
+    },
+    {
+      "id": "reel-to-voice",
+      "from": "reel",
+      "to": "voice",
+      "label": "1 voice",
+      "fromSide": "top",
+      "toSide": "bottom"
+    },
+    {
+      "id": "voice-to-provider",
+      "from": "voice",
+      "to": "provider",
+      "label": "HTTPS",
+      "variant": "security"
+    },
+    {
+      "id": "voice-to-cache",
+      "from": "voice",
+      "to": "cache",
+      "label": "read/write",
+      "variant": "dashed",
+      "fromSide": "top",
+      "toSide": "bottom"
+    },
+    {
+      "id": "reel-to-compiler",
+      "from": "reel",
+      "to": "compiler",
+      "label": "2 compile",
+      "variant": "emphasis"
+    },
+    {
+      "id": "voice-to-compiler",
+      "from": "voice",
+      "to": "compiler",
+      "label": "SpeechMap",
+      "variant": "dashed"
+    },
+    {
+      "id": "assets-to-compiler",
+      "from": "assets",
+      "to": "compiler",
+      "label": "reads",
+      "fromSide": "top",
+      "toSide": "bottom"
+    },
+    {
+      "id": "compiler-to-timeline",
+      "from": "compiler",
+      "to": "timeline",
+      "label": "MotionScene",
+      "variant": "emphasis"
+    },
+    {
+      "id": "timeline-to-renderer",
+      "from": "timeline",
+      "to": "renderer",
+      "label": "ResolvedFrame",
+      "variant": "emphasis"
+    },
+    {
+      "id": "renderer-to-video",
+      "from": "renderer",
+      "to": "video",
+      "label": "encode",
+      "variant": "emphasis"
+    },
+    {
+      "id": "assets-to-mixer",
+      "from": "assets",
+      "to": "mixer",
+      "label": "music bed · SFX",
+      "variant": "dashed"
+    },
+    {
+      "id": "mixer-to-video",
+      "from": "mixer",
+      "to": "video",
+      "label": "audio",
+      "fromSide": "top",
+      "toSide": "bottom"
+    },
+    {
+      "id": "video-to-qa",
+      "from": "video",
+      "to": "qa",
+      "label": "verify",
+      "fromSide": "top",
+      "toSide": "bottom"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Weak-model contract",
+      "items": [
+        "CreativeIntent + five taste fields only",
+        "Optional narration per beat; never pixels or timing"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Determinism",
+      "items": [
+        "Same inputs and seeds give byte-identical scenes",
+        "Providers stay outside the core; reruns hit caches"
+      ]
+    },
+    {
+      "dot": "violet",
+      "title": "Voice",
+      "items": [
+        "Gemini or MAI by locale, free fallbacks",
+        "Single take; word timing from recognition"
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "Security",
+      "items": [
+        "Key from env or a 0600 config file",
+        "Keys and provider URLs never logged"
+      ]
+    }
+  ]
+}

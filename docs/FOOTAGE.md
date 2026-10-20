@@ -58,10 +58,31 @@ crops all frames to one union box so the subject never jumps; drops a final
 frame that repeats the first; stores 256-colour PNGs; records the seam SSIM
 (last → first, before palette encoding; ≥ 0.9 required).
 
-## Footage plan (operator file, frozen; compiler use not implemented)
-`<name>.footage.json` = `{version, clips:[{beat, role: interstitial |
-screen_insert, path, frame_count, fps, in_frame, out_frame, mode}]}`
-(`motion_core::footage`, `CompileOptions.footage`). Planned: interstitial
-footage beats (≤ 6 s, muted) that return to a persistent anchor scene (a
-numbered list carried as one SharedElement), and explicit per-beat screen
-inserts. Not started in 0.11.
+## Footage plan (operator file)
+`<name>.footage.json` (`beat` is 1-based, as in warnings) = `{version, clips:[{beat, role, path, ...}]}`
+(`motion_core::footage`, `CompileOptions.footage`, `compile --footage <file>`).
+`interstitial` and `screen_insert` stay frozen/unused; `plate` is implemented (0.24).
+
+### Video plates (`role: plate`)
+```json
+{"version":"0.1","clips":[{"beat":2,"role":"plate","path":"clips/a.mp4","in_s":0.5,"out_s":4.0}]}
+```
+- `path` = MP4/MOV/WEBM, relative to the plan file. `in_s`/`out_s` optional;
+  `frame_count`/`fps` are probed with ffprobe by the CLI when absent.
+- The beat scene gets, below its stage group (z 1-2, above the paper): a
+  full-bleed `video` asset image layer (cover, desaturate 0.6 + paper tint 0.35,
+  slow 1.0 -> 1.06 push, fades in/out with the beat; muted) and a paper-colour
+  scrim (opacity 0.55, fixed: frames are not probed at plan time) for text contrast.
+  A clip shorter than the beat holds its last frame. Unplaceable clips give a
+  `plate_skipped` compile warning. 9:16 and 16:9 (cover crop).
+- Asset `type: "video"` carries a `sprite` spec (frame_count, fps = 30, mode) and
+  is drawn by image layers like a sprite sequence (`playback`, `sprite_frame`).
+  Validation: allowed extensions, spec present, file exists (with a base dir).
+- Renderer (`motion-render/src/video.rs`): an `ffmpeg` child writes raw RGBA to a
+  pipe (no temp files, no PNGs). A miss decodes the aligned 32-frame window at the
+  layer's size; frames live in a byte-bounded LRU, `MOTION_VIDEO_CACHE_MB`
+  (default 256). Treatments apply per frame like sprites. Needs `ffmpeg`/`ffprobe` on PATH.
+
+```
+motion-engine compile story.intent.json --style s.json --footage story.footage.json --output out.motion.json
+```

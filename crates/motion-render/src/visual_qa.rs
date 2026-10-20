@@ -374,6 +374,7 @@ mod tests {
             z_index: 0,
             visible: true,
             clip: None,
+            mask: None,
             depth: None,
             layout: None,
             kind,
@@ -400,6 +401,8 @@ mod tests {
                 max_width: None,
                 uppercase: false,
                 ink: None,
+                fill: None,
+                outline: None,
             }),
         )
     }
@@ -447,6 +450,7 @@ mod tests {
                 stroke: Stroke {
                     color: Color::rgb(0, 0, 0),
                     width: 6.0,
+                    brush: None,
                 },
                 closed: false,
                 fill: None,

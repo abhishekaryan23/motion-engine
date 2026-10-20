@@ -1,0 +1,353 @@
+{
+  "version": "2.0",
+  "meta": {
+    "name": "tech_news_reel",
+    "aspect": "16:9",
+    "duration": 16.0,
+    "fps": "30",
+    "end_beat": 32
+  },
+  "palette": {
+    "background": "#F0F4F8",
+    "ink": "#0F172A",
+    "accent": "#1D4ED8",
+    "muted": "#DCE3ED",
+    "grounds": [
+      "#E2E8F0",
+      "#0F172A"
+    ]
+  },
+  "fonts": {
+    "display": "panchang_extrabold",
+    "serif": "instrument_serif_regular",
+    "mono": "space_mono_bold"
+  },
+  "tempo": "fast",
+  "music": {
+    "track": "driving_pulse",
+    "start": 0.107
+  },
+  "allow": ["gradient"],
+  "film": {
+    "grain": 0.018,
+    "fringe": 0.45
+  },
+  "camera": [
+    { "beat": 1, "do": "push", "to": 1.03 },
+    { "beat": 3, "do": "reset" },
+    { "beat": 5, "do": "orbit", "yaw": 2.6, "pitch": -1.5 },
+    { "beat": 7, "do": "reset" },
+    { "beat": 9, "do": "orbit", "yaw": -2.8, "pitch": 1.6 },
+    { "beat": 11, "do": "dolly", "to": -40.0 },
+    { "beat": 12, "do": "reset" },
+    { "beat": 14, "do": "orbit", "yaw": 3.0, "pitch": -1.8 },
+    { "beat": 16, "do": "dolly", "to": -38.0 },
+    { "beat": 17, "do": "reset" },
+    { "beat": 19, "do": "orbit", "yaw": -3.0, "pitch": 1.8 },
+    { "beat": 21, "do": "dolly", "to": -38.0 },
+    { "beat": 22, "do": "reset" },
+    { "beat": 24, "do": "orbit", "yaw": 3.2, "pitch": -1.8 },
+    { "beat": 26, "do": "dolly", "to": -42.0 },
+    { "beat": 28, "do": "reset" },
+    { "beat": 30, "do": "orbit", "yaw": -2.5, "pitch": 1.5 },
+    { "beat": 31, "do": "dolly", "to": -36.0 },
+    { "beat": 32, "do": "push", "to": 1.04 }
+  ],
+  "transitions": [
+    { "beat": 4, "kind": "whip" },
+    { "beat": 8, "kind": "whip" },
+    { "beat": 13, "kind": "whip" },
+    { "beat": 18, "kind": "whip" },
+    { "beat": 23, "kind": "impact" },
+    { "beat": 29, "kind": "colour_flip" }
+  ],
+  "components": [
+    {
+      "id": "countdown_hook",
+      "kind": "kinetic_text",
+      "preset": "poster_cuts",
+      "words": [
+        "OCT 15 AI",
+        "TOP 5",
+        "WAIT FOR",
+        "NO. 01"
+      ],
+      "stress": [1, 3],
+      "dot": true,
+      "beat_cuts": 1,
+      "start_beat": 0,
+      "end_beat": 4
+    },
+    {
+      "id": "guardrail_cutout",
+      "kind": "photo_stack",
+      "preset": "editorial_cut",
+      "slot": "left",
+      "beat_cuts": 2,
+      "start_beat": 4,
+      "end_beat": 8,
+      "steps": [
+        {
+          "layout": "hero",
+          "asset": "guardrail_lock",
+          "stroke": "eye_oval"
+        },
+        {
+          "layout": "hero",
+          "asset": "guardrail_lock",
+          "stroke": "rib_circle"
+        }
+      ]
+    },
+    {
+      "id": "guardrail_code",
+      "kind": "code_block",
+      "preset": "terminal_dark",
+      "slot": "right",
+      "language": "rust",
+      "lines": [
+        "// NO. 05: AGENT GUARDRAILS",
+        "fn audit_agent(m: &Model) {",
+        "  deny!(botnet);",
+        "  guardrail(india);",
+        "}"
+      ],
+      "steps": [
+        { "beat": 4, "do": "type", "line": 2 },
+        { "beat": 6, "do": "highlight", "line": 3 }
+      ],
+      "start_beat": 4,
+      "end_beat": 8,
+      "timeline": [
+        { "beat": 4, "do": "enter", "style": "fade" }
+      ]
+    },
+    {
+      "id": "india_bento",
+      "kind": "bento",
+      "preset": "pillars",
+      "slot": "left",
+      "title": "NO. 04: INDIA 2.8GW AI GRID",
+      "beat_cuts": 2,
+      "tilt_in": [8.0, -6.0],
+      "start_beat": 8,
+      "end_beat": 13,
+      "tiles": [
+        {
+          "stat": "2.8 GW",
+          "title": "SUNDARA GRID",
+          "detail": "CLEAN AI PIPELINE",
+          "accent": true
+        },
+        {
+          "stat": "18 OPS",
+          "title": "GRID SCALE",
+          "detail": "MUMBAI + VIZAG",
+          "accent": false
+        },
+        {
+          "stat": "POLICY",
+          "title": "RESOURCE CAP",
+          "detail": "WATER + POWER LAW",
+          "accent": true
+        }
+      ],
+      "timeline": [
+        { "beat": 8, "do": "enter", "style": "fade" }
+      ]
+    },
+    {
+      "id": "india_cutout",
+      "kind": "photo_stack",
+      "preset": "editorial_cut",
+      "slot": "right",
+      "beat_cuts": 2,
+      "start_beat": 8,
+      "end_beat": 13,
+      "steps": [
+        {
+          "layout": "hero",
+          "asset": "india_grid",
+          "stroke": "starburst_stamp"
+        },
+        {
+          "layout": "hero",
+          "asset": "india_grid",
+          "stroke": "rib_circle"
+        },
+        {
+          "layout": "hero",
+          "asset": "india_grid",
+          "stroke": "bracket_dot"
+        }
+      ]
+    },
+    {
+      "id": "halden_cutout",
+      "kind": "photo_stack",
+      "preset": "editorial_cut",
+      "slot": "left",
+      "beat_cuts": 2,
+      "start_beat": 13,
+      "end_beat": 18,
+      "steps": [
+        {
+          "layout": "hero",
+          "asset": "halden_6g",
+          "stroke": "neck_arc"
+        },
+        {
+          "layout": "hero",
+          "asset": "halden_6g",
+          "stroke": "rib_circle"
+        },
+        {
+          "layout": "hero",
+          "asset": "halden_6g",
+          "stroke": "bracket_dot"
+        }
+      ]
+    },
+    {
+      "id": "halden_chart",
+      "kind": "chart",
+      "preset": "thin_axis",
+      "chart": "line",
+      "slot": "right",
+      "title": "NO. 03: HALDEN 6G AI-RAN",
+      "values": [18, 42, 76, 140],
+      "labels": ["5G", "vRAN", "AI-RAN", "6G"],
+      "hero": 3,
+      "callout": "140 Gbps",
+      "size": "m",
+      "start_beat": 13,
+      "end_beat": 18,
+      "timeline": [
+        { "beat": 13, "do": "enter", "style": "draw" },
+        { "beat": 16, "do": "pop_label" }
+      ]
+    },
+    {
+      "id": "krona_chart",
+      "kind": "chart",
+      "preset": "thin_axis",
+      "chart": "bar",
+      "slot": "left",
+      "title": "NO. 02: KRONA EUV SALES (EUR B)",
+      "values": [21.2, 27.6, 32.4, 38.1, 45.0],
+      "labels": ["24", "25", "Q3", "26F", "28E"],
+      "hero": 4,
+      "callout": "45B EUR",
+      "size": "m",
+      "start_beat": 18,
+      "end_beat": 23,
+      "timeline": [
+        { "beat": 18, "do": "enter", "style": "draw" },
+        { "beat": 21, "do": "pop_label" }
+      ]
+    },
+    {
+      "id": "krona_cutout",
+      "kind": "photo_stack",
+      "preset": "editorial_cut",
+      "slot": "right",
+      "beat_cuts": 2,
+      "start_beat": 18,
+      "end_beat": 23,
+      "steps": [
+        {
+          "layout": "hero",
+          "asset": "krona_euv",
+          "stroke": "bracket_dot"
+        },
+        {
+          "layout": "hero",
+          "asset": "krona_euv",
+          "stroke": "rib_circle"
+        },
+        {
+          "layout": "hero",
+          "asset": "krona_euv",
+          "stroke": "starburst_stamp"
+        }
+      ]
+    },
+    {
+      "id": "argon_cutout",
+      "kind": "photo_stack",
+      "preset": "editorial_cut",
+      "slot": "left",
+      "beat_cuts": 2,
+      "start_beat": 23,
+      "end_beat": 29,
+      "steps": [
+        {
+          "layout": "hero",
+          "asset": "argon_core",
+          "stroke": "rib_circle"
+        },
+        {
+          "layout": "hero",
+          "asset": "argon_core",
+          "stroke": "bracket_dot"
+        },
+        {
+          "layout": "hero",
+          "asset": "argon_core",
+          "stroke": "neck_arc"
+        }
+      ]
+    },
+    {
+      "id": "argon_bento",
+      "kind": "bento",
+      "preset": "hero_left",
+      "slot": "right",
+      "title": "NO. 01: LUMEN 4 ARGON",
+      "beat_cuts": 2,
+      "tilt_in": [8.0, -6.0],
+      "start_beat": 23,
+      "end_beat": 29,
+      "tiles": [
+        {
+          "stat": "#1 APEX",
+          "title": "GLOBAL ROLLOUT",
+          "detail": "CLOUD + AI STUDIO",
+          "accent": true
+        },
+        {
+          "stat": "0-SHOT",
+          "title": "3D ROBOTICS",
+          "detail": "SPATIAL CONTROL",
+          "accent": false
+        },
+        {
+          "stat": "4 DOMAINS",
+          "title": "CODE + FINANCE",
+          "detail": "LEGAL + AUTONOMOUS",
+          "accent": true
+        }
+      ],
+      "timeline": [
+        { "beat": 23, "do": "enter", "style": "fade" }
+      ]
+    },
+    {
+      "id": "news_lockup",
+      "kind": "lockup",
+      "preset": "editorial_badge",
+      "badge": "NO. 01 FRONTIER",
+      "headline": "LUMEN 4 ARGON",
+      "headline_font": "display",
+      "headline_case": "upper",
+      "subline": "Ranked #1 on the Apex Index — Global Rollout",
+      "subline_font": "serif",
+      "subline_case": "preserve",
+      "start_beat": 29,
+      "timeline": [
+        { "beat": 29, "do": "enter", "style": "pop" },
+        { "beat": 30, "do": "sheen" }
+      ]
+    }
+  ]
+}

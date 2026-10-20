@@ -1,0 +1,157 @@
+{
+  "version": "0.2",
+  "title": "habit_math",
+  "format": "vertical",
+  "beats": [
+    {
+      "purpose": "emphasize",
+      "statement": "A five dollar treat",
+      "narration": "A five dollar treat every day feels like nothing.",
+      "primary": {
+        "kind": "object",
+        "asset": "shopping_bag",
+        "meaning": "treat",
+        "value": "$5"
+      },
+      "energy": "building",
+      "continuity": "carry_primary",
+      "keyword": "treat"
+    },
+    {
+      "purpose": "compare",
+      "statement": "A day versus a year",
+      "narration": "But five dollars a day grows to one thousand eight hundred and twenty five dollars a year.",
+      "primary": {
+        "kind": "object",
+        "asset": "shopping_bag",
+        "meaning": "a day",
+        "value": "$5"
+      },
+      "secondary": {
+        "kind": "object",
+        "asset": "calendar",
+        "meaning": "a year",
+        "value": "$1,825"
+      },
+      "relationship": "grow",
+      "energy": "building",
+      "keyword": "year"
+    },
+    {
+      "purpose": "contrast",
+      "statement": "Spend it or save it",
+      "narration": "Swap the card for the piggy bank, and the same money starts working for you.",
+      "primary": {
+        "kind": "object",
+        "asset": "credit_card",
+        "meaning": "spent",
+        "value": "$1,825"
+      },
+      "secondary": {
+        "kind": "object",
+        "asset": "piggy_bank",
+        "meaning": "saved",
+        "value": "$1,825"
+      },
+      "relationship": "replace",
+      "energy": "building",
+      "continuity": "carry_secondary",
+      "keyword": "save"
+    },
+    {
+      "purpose": "compare",
+      "statement": "Ten years of saving",
+      "narration": "Saved and invested for ten years, the piggy bank adds up to about twenty five thousand dollars.",
+      "primary": {
+        "kind": "object",
+        "asset": "piggy_bank",
+        "meaning": "saved each year",
+        "value": "$1,825"
+      },
+      "secondary": {
+        "kind": "object",
+        "asset": "coin_stack",
+        "meaning": "ten years",
+        "value": "$25,000"
+      },
+      "relationship": "accumulate",
+      "energy": "building",
+      "keyword": "ten years"
+    },
+    {
+      "purpose": "reveal",
+      "statement": "Time multiplies it",
+      "narration": "The coins are twenty five thousand after ten years, the house is seventy five thousand after twenty, and the rocket is one hundred and eighty five thousand after thirty.",
+      "primary": {
+        "kind": "collection",
+        "meaning": "what the habit becomes",
+        "items": [
+          {
+            "kind": "object",
+            "asset": "coin_stack",
+            "meaning": "coins",
+            "value": "$25,000"
+          },
+          {
+            "kind": "object",
+            "asset": "house",
+            "meaning": "house",
+            "value": "$75,000"
+          },
+          {
+            "kind": "object",
+            "asset": "rocket",
+            "meaning": "rocket",
+            "value": "$185,000"
+          }
+        ]
+      },
+      "energy": "impact",
+      "keyword": "time"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "One small switch",
+      "narration": "It all comes from one small switch, from spending daily to saving daily.",
+      "primary": {
+        "kind": "state_change",
+        "entity": "your habit",
+        "from": "spend daily",
+        "to": "save daily",
+        "meaning": "the switch"
+      },
+      "energy": "building",
+      "keyword": "switch"
+    },
+    {
+      "purpose": "contrast",
+      "statement": "Target and trophy",
+      "narration": "A clear target on one side, the trophy on the other.",
+      "primary": {
+        "kind": "object",
+        "asset": "target",
+        "meaning": "the goal"
+      },
+      "secondary": {
+        "kind": "object",
+        "asset": "trophy",
+        "meaning": "the reward"
+      },
+      "relationship": "separate",
+      "energy": "building",
+      "keyword": "target"
+    },
+    {
+      "purpose": "emphasize",
+      "statement": "Start today",
+      "narration": "The best day to start is today.",
+      "primary": {
+        "kind": "phrase",
+        "value": "Start today",
+        "meaning": "action"
+      },
+      "energy": "impact",
+      "keyword": "today"
+    }
+  ]
+}

@@ -88,6 +88,7 @@ fn kind_name(kind: AssetKind) -> &'static str {
         AssetKind::Svg => "svg",
         AssetKind::Font => "font",
         AssetKind::SpriteSequence => "sprite_sequence",
+        AssetKind::Video => "video",
     }
 }
 
@@ -96,6 +97,17 @@ fn collect_layer_kinds<'a>(layers: &'a [Layer], out: &mut HashMap<&'a str, &'a L
         out.insert(l.id.as_str(), &l.kind);
         if let LayerKind::Group { children } = &l.kind {
             collect_layer_kinds(children, out);
+        }
+    }
+}
+
+fn collect_masked<'a>(layers: &'a [Layer], out: &mut HashSet<&'a str>) {
+    for l in layers {
+        if l.mask.is_some() {
+            out.insert(l.id.as_str());
+        }
+        if let LayerKind::Group { children } = &l.kind {
+            collect_masked(children, out);
         }
     }
 }
@@ -230,6 +242,22 @@ impl<'a> Validator<'a> {
                     }
                     PostKind::Grain { amount, .. } => unit(*amount),
                     PostKind::Vignette { amount } => unit(*amount),
+                    PostKind::Shockwave {
+                        center,
+                        radius,
+                        width,
+                        amplitude,
+                    } => {
+                        center.iter().all(|c| c.is_finite())
+                            && radius.is_finite()
+                            && *radius > 0.0
+                            && *radius <= 8192.0
+                            && width.is_finite()
+                            && *width > 0.0
+                            && *width <= 2048.0
+                            && amplitude.is_finite()
+                            && amplitude.abs() <= 256.0
+                    }
                 };
                 if !ok {
                     self.err(
@@ -330,37 +358,31 @@ impl<'a> Validator<'a> {
                 continue;
             }
             match (a.kind, &a.sprite) {
+                (AssetKind::Video, None) => self.err(
+                    format!("{path}.sprite"),
+                    "video asset needs a 'sprite' spec (frame_count, fps, mode)",
+                ),
+                (AssetKind::SpriteSequence | AssetKind::Video, Some(sp)) => {
+                    if a.kind == AssetKind::Video && !scene::is_video_path(&a.path) {
+                        self.err(
+                            format!("{path}.path"),
+                            format!(
+                                "video extension not allowed '{}' (use {})",
+                                a.path,
+                                scene::VIDEO_EXTENSIONS.join(", ")
+                            ),
+                        );
+                    }
+                    self.sprite_spec(&path, a.kind, sp);
+                }
                 (AssetKind::SpriteSequence, None) => self.err(
                     format!("{path}.sprite"),
                     "sprite_sequence asset needs a 'sprite' spec (frame_count, fps, mode)",
                 ),
-                (AssetKind::SpriteSequence, Some(sp)) => {
-                    if sp.frame_count < 1 {
-                        self.err(
-                            format!("{path}.sprite.frame_count"),
-                            "frame_count must be >= 1",
-                        );
-                    }
-                    if !(sp.fps.is_finite() && sp.fps > 0.0) {
-                        self.err(
-                            format!("{path}.sprite.fps"),
-                            format!("fps must be finite and > 0, got {}", sp.fps),
-                        );
-                    }
-                    if scene::sprite_file_name(&sp.pattern, 1).is_none() {
-                        self.err(
-                            format!("{path}.sprite.pattern"),
-                            format!(
-                                "pattern '{}' must contain one integer conversion like %04d",
-                                sp.pattern
-                            ),
-                        );
-                    }
-                }
                 (_, Some(_)) => self.err(
                     format!("{path}.sprite"),
                     format!(
-                        "only sprite_sequence assets carry 'sprite', but '{}' is {}",
+                        "only sprite_sequence and video assets carry 'sprite', but '{}' is {}",
                         a.id,
                         kind_name(a.kind)
                     ),
@@ -391,6 +413,14 @@ impl<'a> Validator<'a> {
                             }
                         }
                     }
+                } else if a.kind == AssetKind::Font {
+                    // A restricted face may be read from its open fallback.
+                    if !crate::compiler::typography::resolve_font_path(&full).is_file() {
+                        self.err(
+                            format!("{path}.path"),
+                            format!("missing asset file '{}'", full.display()),
+                        );
+                    }
                 } else if !full.is_file() {
                     self.err(
                         format!("{path}.path"),
@@ -398,6 +428,30 @@ impl<'a> Validator<'a> {
                     );
                 }
             }
+        }
+    }
+
+    fn sprite_spec(&mut self, path: &str, kind: AssetKind, sp: &scene::SpriteSpec) {
+        if sp.frame_count < 1 {
+            self.err(
+                format!("{path}.sprite.frame_count"),
+                "frame_count must be >= 1",
+            );
+        }
+        if !(sp.fps.is_finite() && sp.fps > 0.0) {
+            self.err(
+                format!("{path}.sprite.fps"),
+                format!("fps must be finite and > 0, got {}", sp.fps),
+            );
+        }
+        if kind == AssetKind::SpriteSequence && scene::sprite_file_name(&sp.pattern, 1).is_none() {
+            self.err(
+                format!("{path}.sprite.pattern"),
+                format!(
+                    "pattern '{}' must contain one integer conversion like %04d",
+                    sp.pattern
+                ),
+            );
         }
     }
 
@@ -653,7 +707,7 @@ impl<'a> Validator<'a> {
     fn is_sprite(&self, asset_id: &str) -> bool {
         self.project
             .asset(asset_id)
-            .is_some_and(|a| a.kind == AssetKind::SpriteSequence)
+            .is_some_and(|a| matches!(a.kind, AssetKind::SpriteSequence | AssetKind::Video))
     }
 
     /// Image layers and screen inserts accept still images or sprite sequences.
@@ -663,7 +717,10 @@ impl<'a> Validator<'a> {
                 format!("{path}.asset"),
                 format!("missing asset '{asset_id}'"),
             ),
-            Some(a) if !matches!(a.kind, AssetKind::Image | AssetKind::SpriteSequence) => self
+            Some(a) if !matches!(
+                a.kind,
+                AssetKind::Image | AssetKind::SpriteSequence | AssetKind::Video
+            ) => self
                 .err(
                     format!("{path}.asset"),
                     format!(
@@ -704,7 +761,55 @@ impl<'a> Validator<'a> {
     }
 
     fn layer_kind(&mut self, l: &Layer, path: &str) {
+        if let Some(m) = &l.mask {
+            self.path_data(&m.d, &format!("{path}.mask.d"));
+        }
         match &l.kind {
+            LayerKind::Instances { d, fill, at } => {
+                self.path_data(d, &format!("{path}.d"));
+                if let crate::scene::Fill::Gradient(g) = fill {
+                    self.gradient(g, &format!("{path}.fill"));
+                }
+                if at.is_empty() || at.len() > 20_000 {
+                    self.err(
+                        format!("{path}.at"),
+                        format!("instances need 1..=20000 entries, got {}", at.len()),
+                    );
+                }
+                if at.iter().flatten().any(|v| !v.is_finite()) || at.iter().any(|a| a[2] < 0.0) {
+                    self.err(
+                        format!("{path}.at"),
+                        "instance entries must be finite with scale >= 0".to_string(),
+                    );
+                }
+            }
+            LayerKind::Path {
+                d,
+                fill,
+                stroke,
+                shadows,
+                ..
+            } => {
+                self.path_data(d, &format!("{path}.d"));
+                // A shadows-only path is an elevation plate under its fills.
+                if fill.is_none() && stroke.is_none() && shadows.is_empty() {
+                    self.err(
+                        format!("{path}.fill"),
+                        "path needs a fill, a stroke or shadows".to_string(),
+                    );
+                }
+                if let Some(crate::scene::Fill::Gradient(g)) = fill {
+                    self.gradient(g, &format!("{path}.fill"));
+                }
+                if let Some(s) = stroke {
+                    if !(s.width.is_finite() && s.width > 0.0) {
+                        self.err(
+                            format!("{path}.stroke.width"),
+                            format!("path stroke width must be finite and > 0, got {}", s.width),
+                        );
+                    }
+                }
+            }
             LayerKind::Rectangle { stroke, .. } => self.stroke(stroke, path),
             LayerKind::RoundedRectangle { radius, stroke, .. } => {
                 if !(radius.is_finite() && *radius >= 0.0) {
@@ -865,6 +970,8 @@ impl<'a> Validator<'a> {
         collect_layer_ids(&scene.layers, &mut ids);
         let mut kinds: HashMap<&str, &LayerKind> = HashMap::new();
         collect_layer_kinds(&scene.layers, &mut kinds);
+        let mut masked: HashSet<&str> = HashSet::new();
+        collect_masked(&scene.layers, &mut masked);
 
         // (target, channel) -> [(start, end, motion path)] of well-formed motions.
         let mut by_channel: HashMap<(&str, Channel), Vec<Span>> = HashMap::new();
@@ -963,6 +1070,18 @@ impl<'a> Validator<'a> {
                 .copied()
                 .or(shared.map(|e| &e.layer.kind));
             self.motion_op(m, &mp, kind);
+            if matches!(m.op, MotionOp::MaskMorph { .. })
+                && kind.is_some()
+                && !masked.contains(m.target.as_str())
+            {
+                self.err(
+                    format!("{mp}.target"),
+                    format!(
+                        "mask_morph requires a layer with a mask, '{}' has none",
+                        m.target
+                    ),
+                );
+            }
         }
 
         // Conflicts, reported in first-appearance order for determinism.
@@ -986,10 +1105,53 @@ impl<'a> Validator<'a> {
         }
     }
 
+    /// (v2) SVG path data must parse to at least one segment.
+    fn path_data(&mut self, d: &str, at: &str) {
+        match crate::path::parse(d) {
+            Ok(p) if !p.is_empty() => {}
+            Ok(_) => self.err(at.to_string(), "path data has no segments".to_string()),
+            Err(e) => self.err(at.to_string(), e.to_string()),
+        }
+    }
+
+    /// (v2) 2..=8 stops ascending in [0, 1]; finite geometry.
+    fn gradient(&mut self, g: &crate::scene::Gradient, at: &str) {
+        use crate::scene::Gradient;
+        let unit = |v: f32| v.is_finite() && (0.0..=1.0).contains(&v);
+        let stops = g.stops();
+        if !(2..=8).contains(&stops.len()) {
+            self.err(
+                format!("{at}.stops"),
+                format!("gradient needs 2..=8 stops, got {}", stops.len()),
+            );
+        }
+        if stops.iter().any(|s| !unit(s.at)) || stops.windows(2).any(|w| w[1].at < w[0].at) {
+            self.err(
+                format!("{at}.stops"),
+                "stop positions must be in [0, 1] and ascending".to_string(),
+            );
+        }
+        let geometry_ok = match g {
+            Gradient::Linear { from, to, .. } => {
+                from.iter().chain(to).all(|v| v.is_finite()) && from != to
+            }
+            Gradient::Radial { center, radius, .. } => {
+                center.iter().all(|v| v.is_finite()) && radius.is_finite() && *radius > 0.0
+            }
+        };
+        if !geometry_ok {
+            self.err(
+                at.to_string(),
+                "gradient geometry must be finite (linear: from != to; radial: radius > 0)"
+                    .to_string(),
+            );
+        }
+    }
+
     fn motion_op(&mut self, m: &Motion, mp: &str, target: Option<&LayerKind>) {
         let unit = |v: f32| v.is_finite() && (0.0..=1.0).contains(&v);
         match &m.op {
-            MotionOp::Move { from, to } => {
+            MotionOp::Move { from, to, .. } => {
                 for v in from.iter().chain(to.iter()) {
                     if !v.is_finite() {
                         self.err(
@@ -1073,6 +1235,22 @@ impl<'a> Validator<'a> {
                     );
                 }
             }
+            MotionOp::Morph { to } => {
+                if let Some(kind) = target {
+                    if !matches!(kind, LayerKind::Path { .. }) {
+                        self.err(
+                            format!("{mp}.target"),
+                            format!(
+                                "morph requires a path layer, but '{}' is {}",
+                                m.target,
+                                kind.type_name()
+                            ),
+                        );
+                    }
+                }
+                self.path_data(to, &format!("{mp}.to"));
+            }
+            MotionOp::MaskMorph { to } => self.path_data(to, &format!("{mp}.to")),
             MotionOp::PathMorph { to } => {
                 if let Some(kind) = target {
                     if !matches!(kind, LayerKind::Polyline { .. }) {
@@ -1204,11 +1382,16 @@ impl<'a> Validator<'a> {
             }
             MotionOp::Trim { from, to } => {
                 if let Some(kind) = target {
-                    if !matches!(kind, LayerKind::Polyline { .. }) {
+                    if !matches!(
+                        kind,
+                        LayerKind::Polyline { .. }
+                            | LayerKind::Path { .. }
+                            | LayerKind::Instances { .. }
+                    ) {
                         self.err(
                             format!("{mp}.target"),
                             format!(
-                                "trim requires a polyline layer, but '{}' is {}",
+                                "trim requires a polyline, path or instances layer, but '{}' is {}",
                                 m.target,
                                 kind.type_name()
                             ),

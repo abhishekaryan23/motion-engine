@@ -179,13 +179,18 @@ pub struct LookFx {
     pub vignette: f32,
     /// Chromatic-aberration flash on impact words and cuts.
     pub chroma_hits: bool,
-    /// Short glitch burst across beat transitions.
+    /// Short glitch burst across beat transitions. (0.24 M10) Off in every
+    /// look: nothing flickers (`slop_flicker`); kept for explicit callers only.
     pub glitch_cuts: bool,
-    /// Camera-shake trauma on impact beats / punch words (0 = off).
+    /// Camera-shake trauma on impact beats / punch words (0 = off). (0.24 M10)
+    /// 0 in every look; at most one shake per video is allowed (`slop_flicker`).
     pub shake_trauma: f32,
-    /// Echo trails on hero entrances.
+    /// Echo trails on hero entrances. (0.24 M10) Off in every look.
     pub echo_entrances: bool,
     /// Audio pulse gain on hero/punch layers (needs a music envelope; 0 = off).
+    /// (0.24 M10) 0 in every look: a layer kicked to the music reads as
+    /// flicker (design rule: nothing pulsates). The path in `fx.rs` is
+    /// unreachable from any look.
     pub pulse_gain: f32,
     /// Soft bloom on bright accents.
     pub bloom: bool,
@@ -448,10 +453,6 @@ pub fn look_defaults(look: Look) -> ArtDirection {
                 grain: 0.35,
                 vignette: 0.25,
                 chroma_hits: true,
-                glitch_cuts: true,
-                shake_trauma: 0.55,
-                echo_entrances: true,
-                pulse_gain: 0.06,
                 ..LookFx::default()
             },
             ..off
@@ -466,7 +467,6 @@ pub fn look_defaults(look: Look) -> ArtDirection {
                 grammar: Some(LookGrammar::DocumentaryDossier),
                 grain: 0.3,
                 vignette: 0.4,
-                shake_trauma: 0.2,
                 perspective: true,
                 camera_moves: true,
                 title_reveal: TitleReveal::Hold,
@@ -486,7 +486,6 @@ pub fn look_defaults(look: Look) -> ArtDirection {
                 kinetic_words: true,
                 grain: 0.08,
                 vignette: 0.18,
-                pulse_gain: 0.03,
                 title_reveal: TitleReveal::Hold,
                 ..LookFx::default()
             },
@@ -506,10 +505,6 @@ pub fn look_defaults(look: Look) -> ArtDirection {
                 vignette: 0.4,
                 bloom: true,
                 chroma_hits: true,
-                shake_trauma: 0.3,
-                // (0.19) No audio pulse: a flat picture kicked 4-5 times a
-                // second reads as throbbing, not as a camera move.
-                pulse_gain: 0.0,
                 title_reveal: TitleReveal::Hold,
                 ..LookFx::default()
             },
@@ -525,13 +520,12 @@ pub fn look_defaults(look: Look) -> ArtDirection {
                 grammar: Some(LookGrammar::KineticSlam),
                 grain: 0.15,
                 chroma_hits: true,
-                glitch_cuts: true,
-                shake_trauma: 0.7,
-                echo_entrances: true,
-                pulse_gain: 0.08,
-                bloom: true,
-                // Fast slams: the title lands with the beat, never waits.
-                title_reveal: TitleReveal::Free,
+                // (0.24 M10) No glitch, shake, echo, pulse or bloom on any look but
+                // Cinematic3d's bloom: design rule, nothing flickers or pulsates.
+                // (0.24) A title that states a word the narrator has not said
+                // yet waits for it (IT DOUBLED, TAXED); a title that only
+                // names the topic has no key word and still lands with the beat.
+                title_reveal: TitleReveal::Hold,
                 ..LookFx::default()
             },
             ..off

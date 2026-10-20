@@ -233,7 +233,7 @@ fn unrelated_beats(intent: &CreativeIntent, ctx: &Ctx) -> Option<CompileWarning>
     if beats.windows(2).any(|p| shares_subject(&p[0], &p[1])) {
         return None;
     }
-    // The owner's complaint was one picture per beat: a story told in
+    // The reported defect was one picture per beat: a story told in
     // phrases and numbers (hook, fact, payoff) is narrative, not a slideshow,
     // so the warning needs at least three beats that are pictures.
     let pictures = beats

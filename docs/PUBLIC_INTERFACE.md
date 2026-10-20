@@ -4,7 +4,6 @@ These files are the **complete, supported interface** for authoring and renderin
 A model or human needs nothing else. (0.4 and 0.5 changed no schema. Images are planned by the engine itself (`motion-engine plan-assets`); generating them is an optional, vendor-neutral step for tool integrators described in `docs/GENERATED_ASSET_PROTOCOL.md` — intent authors never write image fields.)
 
 ```
-PROJECT_NORTH_STAR.md
 docs/AI_AUTHORING_GUIDE.md
 docs/CLI_CONSUMER_GUIDE.md
 schema/creative-intent-v0.2.schema.json   (current, recommended)
@@ -26,6 +25,22 @@ examples/public/layers.intent.json                 (v0.2: a layers stack, one be
 examples/public/minimal.style.json
 examples/taste/*.style.json                        (0.6: three complete taste styles)
 ```
+
+## v2.0: briefs and MotionProgram
+
+What a model may rely on for MotionEngine 2:
+- **Brief** (`motion-engine make --brief`, MCP `--profile v2` `make_video`): plain text. Direction
+  words (length, aspect, "dynamic", "go all out") steer and are never shown; quoted text, numbers and
+  plain statements are content. A CreativeIntent (this contract, unchanged) is accepted instead of a
+  brief. The result JSON keys `video`, `program`, `sheet`, `recipe`, `seconds`, `qa`, `critique`,
+  `top` are stable; `qa` is `"pass"` or the list of failing mistake-ledger ids.
+- **`schema/motion_program.json`** (MotionProgram v2.0, generated from `motion-program`; drift test
+  `schema_matches_rust_types`): for strong models, recipes and tools, not for weak models. Closed
+  vocabulary; additive changes only within v2.x.
+- **`assets/qa/mistakes.json`**: the ledger ids reported in `qa` (ids are stable; detectors may
+  improve).
+Internal: everything in `crates/motion-program` and `crates/motion-bridge` besides the schema, the
+make-recipes and the lowered scenes.
 
 ## 0.22: stat cards, rankings, warnings
 

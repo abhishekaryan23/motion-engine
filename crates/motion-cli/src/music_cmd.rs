@@ -55,7 +55,7 @@ pub fn cmd_music_index(
     if json {
         println!("{}", text.trim_end());
     } else {
-        println!(
+        info!(
             "bpm {:.1}, {} beats, {} downbeats, gain {:.1} dB -> {}",
             plan.bpm,
             plan.beat_times.len(),

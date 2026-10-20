@@ -476,12 +476,15 @@ fn categorical(items: &[Bar]) -> bool {
 }
 
 fn number_series(ctx: &mut Ctx, b: &mut B) -> Result<(), CompileError> {
-    let region = recipes::structured_head(ctx, b);
     let beat = b.beat;
     let items = series_items(&beat.primary)
         .or_else(|| beat.secondary.as_ref().and_then(series_items))
         .filter(|i| !i.is_empty())
         .ok_or_else(|| beat_error(b, "number series needs a collection of numbers"))?;
+    // (0.24) A ranking on a wide canvas gives the stage to its rows: the
+    // headline is a title line.
+    let wide_ranking = categorical(&items) && super::placement::side_by_side(&ctx.frame);
+    let region = recipes::structured_head_with(ctx, b, wide_ranking);
     if categorical(&items) {
         return ranked_bars(ctx, b, region, &items);
     }
@@ -690,6 +693,8 @@ fn number_series(ctx: &mut Ctx, b: &mut B) -> Result<(), CompileError> {
 
 /// A row's height as a share of its pitch (the rest is the gap under it).
 const ROW_FILL: f32 = 0.76;
+/// (0.24) The same on a wide canvas, where the rows fill the stage.
+const WIDE_ROW_FILL: f32 = 0.94;
 /// The tallest a row gets (canvas units): three rows on a tall canvas stay
 /// a list, not three posters.
 const ROW_MAX_U: f32 = 190.0;
@@ -756,8 +761,18 @@ fn ranked_bars(
     let safe = ctx.frame.safe;
     let top = region.top;
     let band = (region.bottom.min(safe.y + safe.h) - top).max(0.0);
-    let pitch = (band / count as f32).min(ROW_MAX_U * u / ROW_FILL);
-    let row_h = ROW_FILL * pitch;
+    // (0.24) Wide canvas: the rows fill the band (rows over more than half the
+    // canvas height, tracks the full width), names and figures at least the
+    // caption's size.
+    let wide = super::placement::side_by_side(&ctx.frame);
+    let caption = super::super::captions::caption_size(&ctx.frame);
+    let (fill, row_cap) = if wide {
+        (WIDE_ROW_FILL, f32::MAX)
+    } else {
+        (ROW_FILL, ROW_MAX_U * u / ROW_FILL)
+    };
+    let pitch = (band / count as f32).min(row_cap);
+    let row_h = fill * pitch;
     let y0 = top + 0.3 * (band - pitch * count as f32);
     let row_top = |i: usize| y0 + pitch * i as f32;
     let depth = recipes::plane(plan.lang.depth.midground);
@@ -797,15 +812,25 @@ fn ranked_bars(
     let inline = avail >= INLINE_RATIO * row_h;
 
     // Names: one size for every row.
-    let floor = NAME_FLOOR_U * u;
+    let floor = if wide { caption } else { NAME_FLOOR_U * u };
     let names: Vec<&str> = items
         .iter()
         .map(|i| i.name.as_deref().unwrap_or_default())
         .collect();
     let (name_w, name_cap, lines) = if inline {
-        (0.3 * avail, (0.26 * row_h).clamp(floor, NAME_MAX_U * u), 2)
+        let cap = if wide {
+            (0.4 * row_h).max(floor)
+        } else {
+            (0.26 * row_h).clamp(floor, (NAME_MAX_U * u).max(floor))
+        };
+        // Wide: a name wraps to a second line rather than push the bars right.
+        (if wide { 0.16 * w } else { 0.3 * avail }, cap, 2)
     } else {
-        (avail, (0.2 * row_h).clamp(floor, NAME_MAX_U * u), 1)
+        (
+            avail,
+            (0.2 * row_h).clamp(floor, (NAME_MAX_U * u).max(floor)),
+            1,
+        )
     };
     let size = label_size(ctx, &names, name_w, name_cap, floor, lines);
     let name_blocks: Vec<Option<Block>> = names
@@ -836,7 +861,13 @@ fn ranked_bars(
         ((row_h - name_h - gap_y).max(0.3 * row_h), x0)
     };
     let area_w = (w - m - area_x).max(1.0);
-    let value_cap = if inline { 0.72 * row_h } else { 0.9 * bar_h };
+    let value_cap = if wide {
+        1.1 * caption
+    } else if inline {
+        0.72 * row_h
+    } else {
+        0.9 * bar_h
+    };
     let value_size = items
         .iter()
         .map(|i| {
@@ -894,6 +925,26 @@ fn ranked_bars(
         &grow_at,
         &plan.lang.preset,
     );
+    // (0.24) Wide canvas: each bar runs on a faint full-length track, so the
+    // short bars of a steep ranking still own their row.
+    if wide {
+        for (i, row) in bar_rows.iter().enumerate() {
+            let id = b.id(&format!("rank.{i}.track"));
+            let mut track = crate::compiler::base_layer(
+                id.clone(),
+                (row.x, row.y, row.width, row.height),
+                crate::scene::LayerKind::Rectangle {
+                    fill: data_style(ctx).track,
+                    stroke: None,
+                },
+                11,
+            );
+            track.depth = depth;
+            b.motions
+                .push(mo::fade(&id, starts[i], 0.35, 0.0, 1.0, Easing::OutCubic));
+            b.push(track);
+        }
+    }
     let mut grows: Vec<(f64, f64, Easing)> = vec![(0.0, 0.0, Easing::OutCubic); items.len()];
     for motion in chart.motions.iter_mut() {
         let Some(i) = (0..items.len()).find(|i| motion.target == format!("{rank_id}.{i}.bar"))
@@ -998,6 +1049,9 @@ fn ranked_bars(
 /// ENTER; its meaning line arrives at the first EVOLVE event and, for a
 /// percentage, a progress bar fills at the second.
 fn number_reveal(ctx: &mut Ctx, b: &mut B, carries: &mut Vec<Carry>) -> Result<(), CompileError> {
+    if super::placement::side_by_side(&ctx.frame) {
+        return number_reveal_wide(ctx, b, carries);
+    }
     let (w, h, u, m) = (ctx.w, ctx.h, ctx.u, ctx.margin());
     let plan = b.plan;
     let life = plan.life;
@@ -1018,7 +1072,9 @@ fn number_reveal(ctx: &mut Ctx, b: &mut B, carries: &mut Vec<Carry>) -> Result<(
         band
     };
     let slab_id = b.id("accent_slab");
-    if plan.accent_in {
+    // (0.24 M9) The flood is a full-frame colour field: payoff beat only.
+    let flood = plan.accent_in && ctx.budget.field_ok(plan.index);
+    if flood {
         // Accent-driven transition: a bar rises to flood the frame, then
         // contracts into the slab that holds this beat's number.
         b.push(crate::compiler::rect_layer(
@@ -1051,7 +1107,7 @@ fn number_reveal(ctx: &mut Ctx, b: &mut B, carries: &mut Vec<Carry>) -> Result<(
             Easing::OutQuint,
         ));
     }
-    let hero_at = if plan.accent_in { 0.62 } else { t + 0.35 };
+    let hero_at = if flood { 0.62 } else { t + 0.35 };
 
     let percent = beat
         .primary
@@ -1213,6 +1269,234 @@ fn number_reveal(ctx: &mut Ctx, b: &mut B, carries: &mut Vec<Carry>) -> Result<(
         cy: 0.215 * h,
         w: 0.5 * w,
         h: 84.0 * u,
+    });
+    Ok(())
+}
+
+/// Share of the number's line box above its cap line, and the cap height's
+/// share of it: where the label top-aligns and how tall the slab runs.
+const NUMBER_CAP_TOP: f32 = 0.07;
+const NUMBER_CAP_H: f32 = 0.85;
+
+/// [`number_reveal`] on a side-by-side canvas (0.24 M4): the number sits in the
+/// left column (0.6), vertically centred, ink on paper with a vertical accent
+/// slab at the column's left edge. The label, the progress bar, the closing
+/// line and a secondary subject stack in the right column from the number's
+/// cap line. The ghost sits at the right, low.
+fn number_reveal_wide(
+    ctx: &mut Ctx,
+    b: &mut B,
+    carries: &mut Vec<Carry>,
+) -> Result<(), CompileError> {
+    let (w, h, u) = (ctx.w, ctx.h, ctx.u);
+    let (l, r) = super::placement::columns(ctx, 0.6, 72.0);
+    let rcol = Some((r.x, r.w));
+    let plan = b.plan;
+    let life = plan.life;
+    let beat = b.beat;
+    let t = plan.enter_at();
+    let limit = end_limit(b);
+    let ev = life.evolve_events(2);
+    recipes::ghost_in(ctx, b, 0.76 * h, rcol);
+
+    // The number: centred in the column right of the slab.
+    let bar_w = 16.0 * u;
+    let x0 = l.x + bar_w + 40.0 * u;
+    let slot = Slot {
+        cx: (x0 + l.right()) / 2.0,
+        cy: l.y + l.h / 2.0,
+        w: l.right() - x0,
+        h: 0.62 * h,
+    };
+    let text = beat.primary.display_text().unwrap_or("");
+    let line = ctx.ts.fit_line(
+        Voice::HERO_NUMBER,
+        text,
+        slot.w,
+        slot.h / Voice::HERO_NUMBER.line_height,
+    );
+    let num_top = slot.cy - line.height() / 2.0;
+    let cap_top = num_top + NUMBER_CAP_TOP * line.height();
+    let cap_h = NUMBER_CAP_H * line.height();
+    let slab = (l.x, cap_top, bar_w, cap_h);
+
+    let slab_id = b.id("accent_slab");
+    // (0.24 M9) The flood is a full-frame colour field: payoff beat only.
+    let flood = plan.accent_in && ctx.budget.field_ok(plan.index);
+    if flood {
+        // Accent-driven transition: a bar rises to flood the frame, then
+        // contracts into the slab.
+        b.push(crate::compiler::rect_layer(
+            slab_id.clone(),
+            (0.0, h, w, 0.0),
+            ctx.palette.accent,
+            5,
+        ));
+        b.motions.push(mo::expand(
+            &slab_id,
+            0.0,
+            0.36,
+            (0.0, 0.0, w, h),
+            Easing::InOutCubic,
+        ));
+        b.motions
+            .push(mo::expand(&slab_id, 0.5, 0.75, slab, Easing::OutQuint));
+    } else {
+        b.push(crate::compiler::rect_layer(
+            slab_id.clone(),
+            slab,
+            ctx.palette.accent,
+            5,
+        ));
+        b.motions.push(mo::mask(
+            &slab_id,
+            t,
+            0.8,
+            Direction::Down,
+            Easing::OutQuint,
+        ));
+    }
+    let hero_at = if flood { 0.62 } else { t + 0.35 };
+
+    let percent = beat
+        .primary
+        .value()
+        .and_then(parse_count)
+        .filter(|c| c.4 == "%" && c.0 >= 0.0 && c.0 <= 100.0);
+
+    let mark = b.motions.len();
+    let placed = recipes::place_subject(
+        ctx,
+        b,
+        carries,
+        Which::Primary,
+        &beat.primary,
+        slot,
+        (0.0, 0.0),
+        ctx.palette.ink,
+        hero_at,
+        Entrance::Pop,
+        None,
+        None,
+        "hero",
+    )?;
+    if let Some(mut layer) = placed {
+        layer.z_index = 22;
+        let text = beat.primary.value().unwrap_or("");
+        count_up(b, mark, Some(&layer.id), text, hero_at, limit);
+        b.push(layer);
+    }
+
+    // Right column, from the number's cap line down.
+    let mut cursor = cap_top;
+    if let Some(meaning) = beat.primary.meaning() {
+        let label = ctx.ts.fit_line(Voice::LABEL, meaning, r.w, 34.0 * u);
+        recipes::headline_lines_in(
+            ctx,
+            b,
+            "label",
+            &label,
+            cursor,
+            TextAlign::Left,
+            ctx.palette.ink,
+            ev[0],
+            false,
+            rcol,
+        );
+        cursor += label.height() + 28.0 * u;
+    }
+    if let Some(c) = percent {
+        let style = DataStyle {
+            ink: ctx.palette.ink,
+            accent: ctx.palette.accent,
+            muted: ctx.palette.ink.with_alpha(0x55),
+            track: ctx.palette.ink.with_alpha(0x33),
+            u,
+        };
+        let rect = BoxRect {
+            x: r.x,
+            y: cursor,
+            width: r.w,
+            height: 12.0 * u,
+        };
+        let p = paced(plan.lang.preset, ev[1], limit, 1.6);
+        let mut bar = dataviz::progress_bar(
+            &b.id("progress"),
+            rect,
+            (c.0 / 100.0) as f32,
+            &style,
+            ev[1],
+            &p,
+        );
+        for l in bar.layers.iter_mut() {
+            l.depth = recipes::plane(plan.lang.depth.midground);
+        }
+        fade_tracks_in(b, &bar.layers, ev[1]);
+        recipes::absorb(b, bar, 21);
+        cursor += 12.0 * u + 44.0 * u;
+    }
+
+    // The closing line, serif, left aligned under the label / bar.
+    let text = b.plan.display.body.as_deref().unwrap_or(&beat.statement);
+    let statement = ctx
+        .ts
+        .fit_block(Voice::SERIF, text, r.w, 0.3 * h, 104.0 * u, 4);
+    let start = hero_at + 0.45;
+    let (sh, _) = recipes::headline_lines_in(
+        ctx,
+        b,
+        "statement",
+        &statement,
+        cursor,
+        TextAlign::Left,
+        ctx.palette.ink,
+        start,
+        false,
+        rcol,
+    );
+    let rule_y = cursor + sh + 26.0 * u;
+    recipes::underline(
+        ctx,
+        b,
+        "statement_rule",
+        (r.x, rule_y, 120.0 * u, 8.0 * u),
+        ctx.palette.ink,
+        start + 0.5,
+    );
+
+    if let Some(sec) = &beat.secondary {
+        let side = (0.14 * h).min(r.bottom() - rule_y - 60.0 * u).max(0.08 * h);
+        let slot = Slot {
+            cx: r.x + side / 2.0,
+            cy: rule_y + 40.0 * u + side / 2.0,
+            w: side,
+            h: side,
+        };
+        if let Some(mut layer) = recipes::place_subject(
+            ctx,
+            b,
+            carries,
+            Which::Secondary,
+            sec,
+            slot,
+            (0.0, 0.0),
+            ctx.palette.muted,
+            ev[1],
+            Entrance::Rise,
+            None,
+            None,
+            "support",
+        )? {
+            layer.z_index = 22;
+            b.push(layer);
+        }
+    }
+    // A carried-in number parks above the right column's label.
+    b.anchor = Some(Slot {
+        cx: r.x + 150.0 * u,
+        cy: (cap_top - 80.0 * u).max(0.17 * h),
+        w: 260.0 * u,
+        h: 64.0 * u,
     });
     Ok(())
 }

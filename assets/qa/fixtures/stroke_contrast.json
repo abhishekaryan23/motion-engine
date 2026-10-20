@@ -1,0 +1,46 @@
+{
+ "kind": "rendered",
+ "note": "A black curve drawn across black dots.",
+ "program": {
+  "version": "2.0",
+  "meta": {
+   "name": "owner_curve",
+   "aspect": "16:9",
+   "duration": 1.6
+  },
+  "palette": {
+   "background": "#FF4A1C",
+   "ink": "#111111",
+   "accent": "#FF4A1C",
+   "muted": "#111111"
+  },
+  "components": [
+   {
+    "id": "g",
+    "kind": "backdrop"
+   },
+   {
+    "id": "tone",
+    "kind": "field",
+    "preset": "halftone",
+    "colour": "ink",
+    "focus": "center"
+   },
+   {
+    "id": "flow",
+    "kind": "chart",
+    "chart": "spring",
+    "values": [
+     0,
+     22
+    ],
+    "colour": "ink"
+   }
+  ]
+ },
+ "before": {
+  "design_passes": false,
+  "mutate": "black_dots"
+ },
+ "expect_detector": "stroke_contrast"
+}

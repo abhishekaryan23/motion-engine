@@ -162,6 +162,12 @@ pub struct ResolvedLayer<'a> {
     /// (0.14) Polyline points replacing the layer's own (`path_morph`).
     #[serde(skip_serializing_if = "Option::is_none")]
     pub points: Option<Vec<[f32; 2]>>,
+    /// (v2) Path geometry of a path layer under `morph`, replacing its `d`.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub path: Option<crate::path::BezPath>,
+    /// (v2) The layer's path mask this frame (after `mask_morph`).
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub mask: Option<ResolvedMask>,
     /// (0.16) Gaussian blur radius in px for this layer (depth of field).
     #[serde(skip_serializing_if = "Option::is_none")]
     pub blur: Option<f32>,
@@ -173,6 +179,13 @@ pub struct ResolvedLayer<'a> {
     pub projective: Option<[f32; 9]>,
     /// Resolved children of a group, in draw order.
     pub children: Vec<ResolvedLayer<'a>>,
+}
+
+/// (v2) A path mask in the layer's box space.
+#[derive(Debug, Clone, PartialEq, Serialize)]
+pub struct ResolvedMask {
+    pub path: crate::path::BezPath,
+    pub invert: bool,
 }
 
 /// A resolved colour tint: rendered RGB moves toward `color` by `amount`
@@ -480,8 +493,8 @@ fn shared_motion(project: &MotionProject, layer: &Layer, t: f64) -> SharedMotion
         }
     };
     if let Some((m, p)) = pick(&|op| matches!(op, MotionOp::Move { .. })) {
-        if let MotionOp::Move { from, to } = &m.op {
-            out.offset = (lerp(from[0], to[0], p), lerp(from[1], to[1], p));
+        if let MotionOp::Move { from, to, via } = &m.op {
+            out.offset = move_at(*from, *to, *via, p);
         }
     }
     if let Some((m, p)) = pick(&|op| matches!(op, MotionOp::Scale { .. })) {
@@ -786,6 +799,23 @@ where
     }
 }
 
+/// (0.24 Wave 2) The offset of a `move` at progress `p`: the line from
+/// `from` to `to`, or the quadratic Bezier through the control point `via`.
+fn move_at(from: [f32; 2], to: [f32; 2], via: Option<[f32; 2]>, p: f64) -> (f32, f32) {
+    match via {
+        None => (lerp(from[0], to[0], p), lerp(from[1], to[1], p)),
+        Some(c) => {
+            let (a, b) = ((1.0 - p) * (1.0 - p), 2.0 * (1.0 - p) * p);
+            let q = p * p;
+            let (a, b, q) = (a as f32, b as f32, q as f32);
+            (
+                a * from[0] + b * c[0] + q * to[0],
+                a * from[1] + b * c[1] + q * to[1],
+            )
+        }
+    }
+}
+
 fn lerp(a: f32, b: f32, p: f64) -> f32 {
     a + (b - a) * p as f32
 }
@@ -974,8 +1004,8 @@ fn resolve_layer_with<'a>(
     let mut move_offset = (0.0f32, 0.0f32);
     let mut has_move = false;
     if let Some((m, p)) = channel_progress(motions, t, |op| matches!(op, MotionOp::Move { .. })) {
-        if let MotionOp::Move { from, to } = &m.op {
-            move_offset = (lerp(from[0], to[0], p), lerp(from[1], to[1], p));
+        if let MotionOp::Move { from, to, via } = &m.op {
+            move_offset = move_at(*from, *to, *via, p);
             has_move = true;
         }
     }
@@ -1246,7 +1276,7 @@ fn resolve_layer_with<'a>(
         _ => None,
     };
     let trim = match &layer.kind {
-        LayerKind::Polyline { .. } => {
+        LayerKind::Polyline { .. } | LayerKind::Path { .. } | LayerKind::Instances { .. } => {
             channel_progress(motions, t, |op| matches!(op, MotionOp::Trim { .. })).and_then(
                 |(m, p)| match &m.op {
                     MotionOp::Trim { from, to } => Some(lerp(*from, *to, p).clamp(0.0, 1.0)),
@@ -1265,6 +1295,21 @@ fn resolve_layer_with<'a>(
         LayerKind::Polyline { points, closed, .. } => morph_points(motions, t, points, *closed),
         _ => None,
     };
+    let path = match &layer.kind {
+        LayerKind::Path { d, .. } => morph_path(motions, t, d, |op| match op {
+            MotionOp::Morph { to } => Some(to),
+            _ => None,
+        }),
+        _ => None,
+    };
+    let mask = layer.mask.as_ref().map(|m| ResolvedMask {
+        path: morph_path(motions, t, &m.d, |op| match op {
+            MotionOp::MaskMorph { to } => Some(to),
+            _ => None,
+        })
+        .unwrap_or_else(|| crate::path::parse(&m.d).unwrap_or_default()),
+        invert: m.invert,
+    });
 
     let (sprite_frame, insert_frame) = match &layer.kind {
         LayerKind::Image {
@@ -1287,6 +1332,8 @@ fn resolve_layer_with<'a>(
     let resolved = ResolvedLayer {
         glyphs,
         points,
+        path,
+        mask,
         blur,
         projective,
         id: &layer.id,
@@ -1329,7 +1376,7 @@ fn revolve_offset(radius: f32, at: [f32; 2], from: [f32; 2], to: [f32; 2], p: f6
 /// The sprite spec of `asset` when it is a sprite-sequence asset.
 fn sprite_spec<'a>(assets: &AssetMap<'a>, asset: &str) -> Option<&'a crate::scene::SpriteSpec> {
     let a = assets.get(asset)?;
-    if a.kind == AssetKind::SpriteSequence {
+    if matches!(a.kind, AssetKind::SpriteSequence | AssetKind::Video) {
         a.sprite.as_ref()
     } else {
         None
@@ -1566,6 +1613,28 @@ fn morph_points(
             .map(|(u, v)| [lerp(u[0], v[0], p), lerp(u[1], v[1], p)])
             .collect(),
     )
+}
+
+/// (v2) Path geometry under the morphs picked by `target` at scene-local
+/// `t`: `None` before the first morph starts; then the own path (or the
+/// previous morph's target when chained) morphed toward `to`, holding `to`
+/// after the end. Unparseable data (rejected by validation) is empty.
+fn morph_path(
+    motions: &[&Motion],
+    t: f64,
+    own: &str,
+    target: impl Fn(&MotionOp) -> Option<&String>,
+) -> Option<crate::path::BezPath> {
+    let morphs: Vec<(&Motion, &String)> = motions
+        .iter()
+        .filter_map(|m| target(&m.op).map(|to| (*m, to)))
+        .collect();
+    let at = morphs.iter().rposition(|(m, _)| m.start <= t)?;
+    let (m, to) = morphs[at];
+    let from = at.checked_sub(1).map_or(own, |i| morphs[i].1.as_str());
+    let parse = |d: &str| crate::path::parse(d).unwrap_or_default();
+    let p = progress_at(m, t - m.start) as f32;
+    Some(crate::path::morph(&parse(from), &parse(to), p))
 }
 
 /// `n` points spread evenly by arc length along `pts` (an open path, or a
@@ -2060,5 +2129,22 @@ mod tests {
         let persistent = PostEffect { duration: 0.0, ..e };
         assert_eq!(post_strength(&persistent, 0.5), 0.0);
         assert_eq!(post_strength(&persistent, 9.0), 1.0);
+    }
+
+    #[test]
+    fn a_move_with_via_travels_a_quadratic_arc() {
+        assert_eq!(move_at([0.0, 0.0], [10.0, 0.0], None, 0.5), (5.0, 0.0));
+        // Control point above the middle: the curve peaks halfway at half the bulge.
+        let (x, y) = move_at([0.0, 0.0], [10.0, 0.0], Some([5.0, -4.0]), 0.5);
+        assert!((x - 5.0).abs() < 1e-6 && (y + 2.0).abs() < 1e-6);
+        // Ends are exact.
+        assert_eq!(
+            move_at([1.0, 2.0], [3.0, 4.0], Some([9.0, 9.0]), 0.0),
+            (1.0, 2.0)
+        );
+        assert_eq!(
+            move_at([1.0, 2.0], [3.0, 4.0], Some([9.0, 9.0]), 1.0),
+            (3.0, 4.0)
+        );
     }
 }

@@ -8,54 +8,61 @@
 //! (the cut is a 0.01 s opacity step, no crossfade); the last unit holds to
 //! the scene end. Layouts rotate by unit index: A giant word, B inverse accent
 //! field with the word in `on_accent`, C the word above the beat's picture
-//! (55 % of the layout height). A word slams in at scale 1.8 → 1 on a spring;
-//! short words also cascade glyph by glyph. Spec: docs/GENRE_GRAMMARS.md.
-//! Finishing effects (grain, shake, flashes, echo, pulse) come from the FX
-//! director.
+//! (55 % of the layout height). A word is the beat's lead (0.24 Wave 1,
+//! `compiler::choreography`): it lands on its word, scales up through a short
+//! overshoot and settles on the look's spring while it fades in, and then
+//! stays still; pictures are its support and slide in a little later after a
+//! counter-move. Spec: docs/GENRE_GRAMMARS.md. Finishing effects (grain, flashes) come
+//! from the FX director.
 //!
-//! Speech words are not available inside builders, so the units come from the
-//! display title (the statement on screen); a keyword, primary value and
-//! secondary value (the other side of a comparison) the title does not contain
-//! are appended as their own units, in that order (the value is the payoff).
-//! (0.22) An object's value is a unit too (the figure of a stat card), and
-//! the unit that shows the picture is the one with the pictured object's
-//! value, so the figure slams above its picture. With a voice-over the
-//! keyword is appended only when the narrator says it in the beat (owner
-//! rule: no slammed word nobody says).
-//! Units run 0.6–1.0 s by syllable weight, stretched up to 1.8x when the
-//! window has room and squeezed (down to 0.45 s) when it has not. The picture
-//! is shown by exactly one unit (the last C-layout one, or the last unit when
-//! the beat has fewer than three) so a carried subject is placed once.
+//! Without a voice-over the units come from the display title (the statement on
+//! screen); a keyword, primary value and secondary value (the other side of a
+//! comparison) the title does not contain are appended as their own units, in
+//! that order (the value is the payoff). (0.22) An object's value is a unit
+//! too (the figure of a stat card), and the unit that shows the picture is the
+//! one with the pictured object's value, so the figure slams above its
+//! picture. Units run 0.6–1.0 s by syllable weight, stretched up to 1.8x when
+//! the window has room and squeezed (down to 0.45 s) when it has not. The
+//! picture is shown by exactly one unit so a carried subject is placed once.
+//!
+//! (0.24) With a voice-over (`ctx.spoken`) every cut sits on its word:
+//! a figure [`WORD_CUE_LEAD`] before its number, a title or a keyword stamp on
+//! the word, in spoken order, never before ENTER or closer than 0.45 s to the
+//! previous cut. A title or keyword whose words the narrator never says is not
+//! slammed; a statement said only in part, or a beat whose first word comes
+//! late with no figure to open on, stands in as one small title (never a
+//! slam, never an eyebrow) from the beat's first content word. A figure the
+//! narrator never reads out opens such a beat instead. The picture comes when
+//! its name is said (the figure's word follows on its own cut, inside the same
+//! group). Earning rules: a keyword slam needs a new word (not a stem of the
+//! title or a value), the payoff or an impact beat whose spoken stress it is,
+//! and a slot in the stamp budget; at most two big text units per beat (the
+//! value plus the keyword or one title); the colour field or band belongs to
+//! the focal unit (the figure, else the primary value). Every cut is declared
+//! with `B::reveal` so word cues and speech QA hold it to the voice.
 
 use super::placement::{self, Rect, SubjectFacts};
 use super::{plate, Composition};
 use crate::assets::{AssetRole, ManifestEntry};
 use crate::checks::TEXT_CONTRAST_DISPLAY;
+use crate::compiler::choreography;
 use crate::compiler::explore::contrast_ratio;
 use crate::compiler::recipes::{self, Entrance, Slot, B};
+use crate::compiler::signature::{self, MotionSignature};
+use crate::compiler::speech_plan::{anchor_time, name_time, WORD_CUE_LEAD};
 use crate::compiler::typeset::{text_layer, Block, Voice};
-use crate::compiler::{base_layer, direction, mix, mo, treatment, Carry, CompileError, Ctx, Which};
+use crate::compiler::{
+    base_layer, direction, mix, mo, round3, treatment, Carry, CompileError, Ctx, Which,
+};
 use crate::easing::Easing;
-use crate::intent::{Beat, Subject, SubjectKind};
-use crate::scene::{
-    GlyphOrder, GlyphPose, Layer, LayerKind, Motion, MotionOp, SpringSpec, TextAlign,
-};
+use crate::intent::{Beat, Energy, Purpose, Subject, SubjectKind};
+use crate::scene::{Layer, LayerKind, MotionOp, TextAlign};
+use crate::speech::RevealRole;
 
-/// Word slam: scale 1.8 -> 1 on this spring over [`SLAM_TIME`].
-const SLAM: SpringSpec = SpringSpec {
-    stiffness: 520.0,
-    damping: 26.0,
-    mass: 1.0,
-};
-const SLAM_TIME: f64 = 0.22;
-const SLAM_FROM: f32 = 1.8;
-/// Glyph cascade of short words: stagger between glyphs, start pose.
-const CASCADE_STAGGER: f64 = 0.02;
-const CASCADE_FROM_SCALE: f32 = 1.4;
-/// Words with at most this many glyphs also cascade.
-const CASCADE_MAX_GLYPHS: usize = 8;
 /// A hard cut is an opacity step of this length.
 const CUT_FADE: f64 = 0.01;
+/// (0.24 Wave 2) A cut leads its word by two frames.
+const CUT_LEAD: f64 = 0.05;
 /// Unit length bounds (s) and the share of the last unit that must remain.
 const UNIT_MIN: f64 = 0.6;
 const UNIT_MAX: f64 = 1.0;
@@ -64,8 +71,12 @@ const LAST_MIN: f64 = 1.0;
 const MAX_UNITS: usize = 7;
 /// Picture height share of the layout height (layout C).
 const PICTURE_HEIGHT: f32 = 0.55;
-/// Slow hold zoom of a word after its slam.
-const HOLD_ZOOM: f32 = 1.05;
+/// (0.24 Wave 1) The word overshoots to this scale on its way to rest: it
+/// still fits then.
+const HOLD_ZOOM: f32 = 1.06;
+/// (0.24) Type size of the small title that opens a beat whose first slam
+/// word comes late (px at a 1080 px short side).
+const SMALL_TITLE: f32 = 96.0;
 
 #[derive(Debug, Clone, PartialEq)]
 struct Unit {
@@ -74,6 +85,17 @@ struct Unit {
     syllables: usize,
     /// The primary value or the keyword: never merged, never dropped first.
     pinned: bool,
+    /// (0.24) What the unit stands for (reveal anchors, the earning rules).
+    role: UnitRole,
+}
+
+/// (0.24) What a punch unit is: a piece of the statement, the keyword slam,
+/// or a value (the primary's or the secondary's figure).
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+enum UnitRole {
+    Title,
+    Keyword,
+    Value,
 }
 
 impl Unit {
@@ -82,7 +104,21 @@ impl Unit {
             text: words.join(" "),
             syllables: words.iter().map(|w| syllables(w)).sum(),
             pinned,
+            role: UnitRole::Title,
         }
+    }
+
+    fn with_role(mut self, role: UnitRole) -> Unit {
+        self.role = role;
+        self
+    }
+
+    /// The words a narrator would say for this unit (small words left out).
+    fn content_words(&self) -> Vec<&str> {
+        self.text
+            .split_whitespace()
+            .filter(|w| !is_stop(w))
+            .collect()
     }
 
     fn key(&self) -> String {
@@ -96,10 +132,6 @@ impl Unit {
     /// Natural on-screen time by syllable weight, 0.6–1.0 s.
     fn natural(&self) -> f64 {
         (0.2 + 0.2 * self.syllables as f64).clamp(UNIT_MIN, UNIT_MAX)
-    }
-
-    fn glyphs(&self) -> usize {
-        self.text.chars().filter(|c| !c.is_whitespace()).count()
     }
 }
 
@@ -138,6 +170,13 @@ fn syllables(word: &str) -> usize {
         prev = v;
     }
     n.max(1)
+}
+
+/// Two normalised words that are one word to a viewer: equal, or one is the
+/// other's stem ("tax" / "taxed", "double" / "doubled").
+fn same_stem(a: &str, b: &str) -> bool {
+    let (short, long) = if a.len() <= b.len() { (a, b) } else { (b, a) };
+    short == long || (short.len() >= 3 && long.starts_with(short))
 }
 
 fn is_stop(word: &str) -> bool {
@@ -227,12 +266,17 @@ struct Tok {
     end: bool,
 }
 
+/// (0.24 M9) A statement of at most this many words is shown as written:
+/// "Around the world" never becomes "AROUND WORLD".
+const KEEP_WORDS: usize = 5;
+
 fn title_tokens(text: &str) -> Vec<Tok> {
     let mut toks: Vec<Tok> = Vec::new();
+    let as_written = text.split_whitespace().count() <= KEEP_WORDS;
     for raw in text.split_whitespace() {
         let word = shown(raw);
         let end = raw.ends_with(['.', ',', ';', ':', '!', '?', '…', '—']);
-        if word.is_empty() || is_filler(&word) {
+        if word.is_empty() || (is_filler(&word) && !as_written) {
             if let (true, Some(prev)) = (end, toks.last_mut()) {
                 prev.end = true;
             }
@@ -258,13 +302,22 @@ fn value_words(s: &Subject) -> Vec<String> {
 /// primary value and keyword as their own units (see the module docs). The
 /// keyword gets a unit of its own only when `keyword_spoken` (always without
 /// a voice-over).
+#[cfg(test)]
 fn punch_units(beat: &Beat, keyword_spoken: bool) -> Vec<Unit> {
+    punch_units_with(beat, keyword_spoken, true)
+}
+
+/// [`punch_units`]; `pin_keyword` false (a voice-over) leaves a keyword the
+/// title already contains inside the title's unit ("TOP 1%", not "TOP" and
+/// "1%" as two slams).
+fn punch_units_with(beat: &Beat, keyword_spoken: bool, pin_keyword: bool) -> Vec<Unit> {
     let primary: Vec<String> = value_words(&beat.primary);
     let keyword: Vec<String> = beat.keyword.as_deref().map(words_of).unwrap_or_default();
     // The other side of a comparison: its written value is shown after the
     // primary (an object secondary's figure too; its picture is not a word).
     let secondary: Vec<String> = beat.secondary.as_ref().map(value_words).unwrap_or_default();
     let toks = title_tokens(&beat.statement);
+    let as_written = beat.statement.split_whitespace().count() <= KEEP_WORDS;
     let keys: Vec<String> = toks.iter().map(|t| norm(&t.text)).collect();
     let find = |seq: &[String]| -> Option<usize> {
         let want: Vec<String> = seq.iter().map(|t| norm(t)).collect();
@@ -273,17 +326,26 @@ fn punch_units(beat: &Beat, keyword_spoken: bool) -> Vec<Unit> {
         }
         (0..=keys.len() - want.len()).find(|&i| keys[i..i + want.len()] == want[..])
     };
-    // Pinned spans of the title: (start, len).
-    let mut spans: Vec<(usize, usize)> = Vec::new();
-    for seq in [&primary, &keyword, &secondary] {
+    // Pinned spans of the title: (start, len, role).
+    let mut spans: Vec<(usize, usize, UnitRole)> = Vec::new();
+    for (seq, role) in [
+        (&primary, UnitRole::Value),
+        (&keyword, UnitRole::Keyword),
+        (&secondary, UnitRole::Value),
+    ] {
+        if role == UnitRole::Keyword && !pin_keyword {
+            continue;
+        }
         if let Some(i) = find(seq) {
-            let overlaps = spans.iter().any(|&(s, l)| i < s + l && s < i + seq.len());
+            let overlaps = spans
+                .iter()
+                .any(|&(s, l, _)| i < s + l && s < i + seq.len());
             if !overlaps {
-                spans.push((i, seq.len()));
+                spans.push((i, seq.len(), role));
             }
         }
     }
-    spans.sort_unstable();
+    spans.sort_unstable_by_key(|&(s, l, _)| (s, l));
 
     let mut units: Vec<Unit> = Vec::new();
     let mut pending: Vec<&str> = Vec::new();
@@ -296,10 +358,10 @@ fn punch_units(beat: &Beat, keyword_spoken: bool) -> Vec<Unit> {
     };
     let mut i = 0;
     while i < toks.len() {
-        if let Some(&(s, l)) = spans.iter().find(|&&(s, _)| s == i) {
+        if let Some(&(s, l, role)) = spans.iter().find(|&&(s, _, _)| s == i) {
             flush(&mut pending, &mut units);
             let words: Vec<&str> = toks[s..s + l].iter().map(|t| t.text.as_str()).collect();
-            units.push(Unit::new(&words, true));
+            units.push(Unit::new(&words, true).with_role(role));
             i += l;
             continue;
         }
@@ -310,8 +372,11 @@ fn punch_units(beat: &Beat, keyword_spoken: bool) -> Vec<Unit> {
         let next = toks
             .get(i)
             .map(|n| n.text.as_str())
-            .filter(|_| !spans.iter().any(|&(s, _)| s == i));
+            .filter(|_| !spans.iter().any(|&(s, _, _)| s == i));
         let wait = match (pending.len(), next) {
+            // A short statement keeps its small words; they ride with the
+            // word they lead ("IN THE RED", "OUT OF TIME").
+            (_, Some(_)) if as_written && !tok.end && is_stop(t) => true,
             (1, Some(n)) if !tok.end => {
                 is_stop(t)
                     || (is_numberish(t) && !is_stop(n))
@@ -326,7 +391,7 @@ fn punch_units(beat: &Beat, keyword_spoken: bool) -> Vec<Unit> {
     flush(&mut pending, &mut units);
 
     // The keyword, then the primary value (the payoff) always get a unit.
-    let extra = |words: &[String], units: &mut Vec<Unit>| {
+    let extra = |words: &[String], role: UnitRole, units: &mut Vec<Unit>| {
         if words.is_empty() {
             return;
         }
@@ -334,31 +399,37 @@ fn punch_units(beat: &Beat, keyword_spoken: bool) -> Vec<Unit> {
         if units.iter().any(|u| u.key() == key) {
             return;
         }
-        // Nothing new to say: every content word is already on screen.
-        let content: Vec<String> = words
-            .iter()
-            .filter(|w| !is_stop(w))
-            .map(|w| norm(w))
-            .collect();
-        let on_screen = |c: &String| {
-            units
-                .iter()
-                .any(|u| u.key().split(' ').any(|k| k == c.as_str()))
+        // (0.24) A value of up to three words is one unit, a longer one is
+        // shown in two-word chunks. Each chunk is dropped when every content
+        // word of it (or its stem: TAXED / TAX) is already on screen.
+        let chunks: Vec<&[String]> = if words.len() <= 3 {
+            vec![words]
+        } else {
+            words.chunks(2).collect()
         };
-        if !content.is_empty() && content.iter().all(on_screen) {
-            return;
-        }
-        // A long value is shown in two-word chunks.
-        for chunk in words.chunks(2) {
+        for chunk in chunks {
+            let content: Vec<String> = chunk
+                .iter()
+                .filter(|w| !is_stop(w))
+                .map(|w| norm(w))
+                .collect();
+            let on_screen = |c: &String| {
+                units
+                    .iter()
+                    .any(|u| u.key().split(' ').any(|k| same_stem(k, c)))
+            };
+            if !content.is_empty() && content.iter().all(on_screen) {
+                continue;
+            }
             let w: Vec<&str> = chunk.iter().map(String::as_str).collect();
-            units.push(Unit::new(&w, true));
+            units.push(Unit::new(&w, true).with_role(role));
         }
     };
     if keyword_spoken {
-        extra(&keyword, &mut units);
+        extra(&keyword, UnitRole::Keyword, &mut units);
     }
-    extra(&primary, &mut units);
-    extra(&secondary, &mut units);
+    extra(&primary, UnitRole::Value, &mut units);
+    extra(&secondary, UnitRole::Value, &mut units);
 
     if units.is_empty() {
         let all: Vec<String> = toks.iter().map(|t| t.text.clone()).collect();
@@ -456,9 +527,25 @@ fn layouts_from(n: usize, picture: bool, on: Option<usize>, start: usize) -> Vec
     v
 }
 
-fn sprung(mut m: Motion, s: SpringSpec) -> Motion {
-    m.spring = Some(s);
-    m
+/// (0.24 Wave 1) A picture arrives as a support to the beat's lead: it
+/// slides `slide_px` from the side this beat opens toward (alternating by
+/// beat) after a short counter-move, `role_lag` behind its cue, on the
+/// look's support spring (`choreography::plan`).
+fn arrive(b: &mut B, id: &str, at: f64, sig: &MotionSignature, u: f32, salt: usize) {
+    b.motions.retain(|m| {
+        !(m.target == id && matches!(m.op, MotionOp::Fade { .. } | MotionOp::Move { .. }))
+    });
+    let life = b.plan.life;
+    let phrase = choreography::Phrase::new(b.plan.index, life, &[]);
+    let cue = choreography::Cue {
+        role: choreography::Role::Support,
+        at,
+        side: signature::slide_side(salt),
+        stress: None,
+    };
+    let mut plan = choreography::plan(sig, &phrase, &cue);
+    plan.dur = plan.dur.min(sig.slide_secs + 0.1);
+    b.motions.extend(mo::arrive(id, &plan, u));
 }
 
 /// The beat's picture: a delivered image, else the object subject.
@@ -587,6 +674,339 @@ fn word_layer(
     l
 }
 
+/// (0.24) The words that name the picture: its asset and what it stands for
+/// (never the figure's value). `None` for a picture that is no object.
+fn picture_name(picture: Option<&Picture>, beat: &Beat) -> Option<Vec<String>> {
+    let obj = match picture {
+        Some(Picture::Object(_, Subject::Object(o))) => Some(o),
+        Some(Picture::Delivered(..)) => match &beat.primary {
+            Subject::Object(o) => Some(o),
+            _ => None,
+        },
+        _ => None,
+    };
+    obj.map(|o| {
+        let mut v = vec![o.asset.replace(['_', '-'], " ")];
+        v.extend(o.meaning.clone());
+        v
+    })
+}
+
+/// (0.24) The narrator's last content word of the beat is its spoken stress.
+fn last_content_word(spoken: &[(String, f64)]) -> Option<String> {
+    spoken
+        .iter()
+        .rev()
+        .map(|(w, _)| shown(w))
+        .find(|w| !w.is_empty() && !is_stop(w) && !is_numberish(w))
+        .map(|w| norm(&w))
+}
+
+/// (0.24) A keyword slam is earned when the narrator says it in the beat, it
+/// is new (no word of the title or the values), the beat is the payoff or an
+/// impact beat whose spoken stress it is, and the story's stamp budget has a
+/// slot for the beat. Without a voice-over: always (the old rule).
+fn keyword_earned(ctx: &Ctx, beat: &Beat, index: usize) -> bool {
+    let Some(keyword) = beat.keyword.as_deref() else {
+        return true;
+    };
+    if ctx.spoken.is_empty() {
+        return true;
+    }
+    if !super::dossier::stamp_allowed(ctx, keyword) {
+        return false;
+    }
+    let words = words_of(keyword);
+    let mut on_screen: Vec<String> = title_tokens(&beat.statement)
+        .iter()
+        .map(|t| norm(&t.text))
+        .collect();
+    on_screen.extend(value_words(&beat.primary).iter().map(|w| norm(w)));
+    if let Some(s) = &beat.secondary {
+        on_screen.extend(value_words(s).iter().map(|w| norm(w)));
+    }
+    let is_new = words
+        .iter()
+        .filter(|w| !is_stop(w))
+        .any(|w| !on_screen.iter().any(|o| same_stem(&norm(w), o)));
+    if !is_new {
+        return false;
+    }
+    let stress = match beat.purpose {
+        Purpose::Reveal => true,
+        _ => {
+            beat.energy == Energy::Impact
+                && last_content_word(&ctx.spoken)
+                    .zip(words.last().map(|w| norm(w)))
+                    .is_some_and(|(last, k)| same_stem(&last, &k))
+        }
+    };
+    stress && ctx.budget.stamp_ok(index)
+}
+
+/// A unit's lead before its word (a hard cut on the word itself for a title
+/// or a stamp, [`WORD_CUE_LEAD`] before a figure).
+fn lead_of(role: UnitRole) -> f64 {
+    match role {
+        // (Wave 2) Every cut leads its word by the rise to the word's peak.
+        UnitRole::Value | UnitRole::Title | UnitRole::Keyword => WORD_CUE_LEAD,
+    }
+}
+
+fn reveal_role(role: UnitRole) -> RevealRole {
+    match role {
+        UnitRole::Value => RevealRole::Value,
+        UnitRole::Keyword => RevealRole::Stamp,
+        UnitRole::Title => RevealRole::Title,
+    }
+}
+
+/// (0.24) The spoken schedule of a voiced beat.
+struct Schedule {
+    units: Vec<Unit>,
+    /// Group start (a picture unit may start before its word).
+    starts: Vec<f64>,
+    /// When the word itself slams in.
+    words: Vec<f64>,
+    /// The word was placed on its spoken onset (not pushed later by the
+    /// floor between cuts, not a leftover).
+    exact: Vec<bool>,
+    /// The unit that shows the picture, when the beat has one.
+    pic: Option<usize>,
+    /// Picture start was placed on the country's name.
+    pic_exact: bool,
+    /// The only unit is the small title of an unspoken statement.
+    small: bool,
+}
+
+/// Order the units by the voice, drop what nobody says (a title or keyword
+/// whose words are never spoken), keep at most two text units, and place every
+/// cut on its word. Units never come before ENTER (`t0`) or closer than
+/// [`UNIT_FLOOR`] to each other.
+fn spoken_schedule(
+    units: Vec<Unit>,
+    spoken: &[(String, f64)],
+    beat: &Beat,
+    picture: Option<&Picture>,
+    t0: f64,
+    end: f64,
+) -> Schedule {
+    let onset = |u: &Unit| {
+        let words = u.content_words();
+        // "C$300K" is said as "three hundred thousand dollars".
+        let plain: Vec<String> = words
+            .iter()
+            .map(|w| match w.find(['$', '£', '€', '¥', '₹']) {
+                Some(i) if i > 0 && w[..i].chars().all(|c| c.is_ascii_alphabetic()) => {
+                    w[i..].to_string()
+                }
+                _ => (*w).to_string(),
+            })
+            .collect();
+        let plain_refs: Vec<&str> = plain.iter().map(String::as_str).collect();
+        anchor_time(spoken, &words)
+            .or_else(|| anchor_time(spoken, &plain_refs))
+            .or_else(|| {
+                // "TAXED" is said as "tax", "DOUBLED" as "double".
+                let stems: Vec<String> = words
+                    .iter()
+                    .flat_map(|w| {
+                        let w = norm(w);
+                        ["ing", "ed", "d", "s"]
+                            .iter()
+                            .filter_map(|suf| w.strip_suffix(suf).map(str::to_string))
+                            .filter(|st| st.len() >= 3)
+                            .collect::<Vec<_>>()
+                    })
+                    .collect();
+                let refs: Vec<&str> = stems.iter().map(String::as_str).collect();
+                if refs.is_empty() {
+                    None
+                } else {
+                    anchor_time(spoken, &refs)
+                }
+            })
+    };
+    let mut timed: Vec<(Unit, Option<f64>)> = units
+        .iter()
+        .cloned()
+        .map(|u| {
+            let at = onset(&u);
+            (u, at)
+        })
+        .collect();
+    // Words nobody says are not slammed.
+    timed.retain(|(u, at)| u.role == UnitRole::Value || at.is_some());
+    // Spoken order; units nobody says (a figure the narrator never reads out)
+    // follow the last spoken one.
+    timed.sort_by(|a, b| match (a.1, b.1) {
+        (Some(x), Some(y)) => x.total_cmp(&y),
+        (Some(_), None) => std::cmp::Ordering::Less,
+        (None, Some(_)) => std::cmp::Ordering::Greater,
+        (None, None) => std::cmp::Ordering::Equal,
+    });
+    // The picture belongs to the figure it is the object of.
+    let pictured: Vec<String> = match picture {
+        Some(Picture::Object(_, s)) => value_words(s),
+        Some(Picture::Delivered(..)) if beat.primary.kind() == SubjectKind::Object => {
+            value_words(&beat.primary)
+        }
+        _ => Vec::new(),
+    };
+    let key_of = |chunk: &[String]| chunk.iter().map(|w| norm(w)).collect::<Vec<_>>().join(" ");
+    let figure_key = pictured.chunks(2).next().map(key_of);
+    let figure_of = |timed: &[(Unit, Option<f64>)]| {
+        figure_key
+            .as_ref()
+            .and_then(|key| timed.iter().position(|(u, _)| &u.key() == key))
+    };
+    let name_parts: Vec<String> = picture_name(picture, beat).unwrap_or_default();
+    let pic_onset = (!name_parts.is_empty())
+        .then(|| {
+            let parts: Vec<&str> = name_parts.iter().map(String::as_str).collect();
+            name_time(spoken, &parts)
+        })
+        .flatten();
+    let first_cut = |timed: &[(Unit, Option<f64>)]| {
+        timed
+            .first()
+            .and_then(|(u, at)| at.map(|a| a - lead_of(u.role)))
+            .unwrap_or(t0)
+    };
+    // The beat opens on its picture when the picture is its first unit and its
+    // name is said (or it needs no name) near ENTER.
+    let pic_start = pic_onset.map_or(t0, |a| (a - WORD_CUE_LEAD).max(t0));
+    let pic_first = |timed: &[(Unit, Option<f64>)]| {
+        picture.is_some()
+            && figure_of(timed).unwrap_or(timed.len().saturating_sub(1)) == 0
+            && pic_start - t0 <= 0.6
+    };
+    // A statement the narrator does not say in full stands in as one small
+    // title (never a slam) for a beat that would otherwise show nothing for a
+    // while: it comes once the beat's first content word is spoken.
+    let mut small = false;
+    let first_word = spoken
+        .iter()
+        .find(|(w, _)| !is_stop(&shown(w)) && !shown(w).is_empty())
+        .map(|(_, at)| *at);
+    if timed.is_empty() {
+        // Nothing of it is said: the units follow each other from ENTER.
+        timed = units.iter().cloned().map(|u| (u, None)).collect();
+    }
+    // At most two text units: the value plus the keyword or one title.
+    if timed.iter().any(|(u, _)| u.role != UnitRole::Title) {
+        while timed.len() > 2 {
+            match timed.iter().position(|(u, _)| u.role == UnitRole::Title) {
+                Some(i) => {
+                    timed.remove(i);
+                }
+                None => break,
+            }
+        }
+    }
+    // A beat whose first word comes late opens on its unspoken figure (the
+    // payoff the narration leads up to) rather than on nothing.
+    let mut late_open = !pic_first(&timed) && first_cut(&timed) - t0 > 0.6;
+    if late_open {
+        if let Some(i) = timed
+            .iter()
+            .position(|(u, at)| u.role == UnitRole::Value && at.is_none())
+        {
+            let v = timed.remove(i);
+            timed.insert(0, v);
+            late_open = false;
+        }
+    }
+    if late_open {
+        // The topic of the statement opens the beat; the words that state its
+        // conclusion (a number, the keyword) wait for the narrator.
+        let stated: Vec<String> = super::super::recipes::title_stated_words(beat, &beat.statement)
+            .iter()
+            .flat_map(|w| w.split_whitespace().map(norm).collect::<Vec<_>>())
+            .collect();
+        let statement: Vec<&str> = beat
+            .statement
+            .split_whitespace()
+            .filter(|w| {
+                let n = norm(w);
+                !stated.iter().any(|s| same_stem(s, &n))
+            })
+            .collect();
+        let has_content = statement.iter().any(|w| !is_stop(w));
+        if has_content && statement.len() <= 8 {
+            let mut u = Unit::new(&statement, false);
+            u.role = UnitRole::Title;
+            let at = first_word
+                .map(|f| (f - WORD_CUE_LEAD).max(t0))
+                .unwrap_or(t0);
+            timed.insert(0, (u, Some(at)));
+            small = true;
+        }
+    }
+    let figure = figure_of(&timed);
+    let pic = picture
+        .is_some()
+        .then(|| figure.unwrap_or(timed.len().saturating_sub(1)));
+    // Raw start of each group, then the floor between cuts.
+    let n = timed.len();
+    let mut raw: Vec<(f64, f64, bool, bool)> = Vec::with_capacity(n);
+    let mut prev_word = t0;
+    for (k, (u, at)) in timed.iter().enumerate() {
+        let want = at.map(|a| a - lead_of(u.role));
+        let word = want
+            .unwrap_or(if k == 0 { t0 } else { prev_word + UNIT_MIN })
+            .max(t0);
+        // (Wave 2) The cut (the ground changing) leads its word by two frames:
+        // the word is the lead, the cut its support.
+        let mut start = (word - CUT_LEAD).max(t0);
+        let mut pic_exact = false;
+        if pic == Some(k) {
+            let want_pic = pic_onset.map(|a| a - WORD_CUE_LEAD);
+            let at_pic = want_pic.unwrap_or(t0).max(t0).min(word);
+            pic_exact = want_pic.is_some_and(|w| (w - at_pic).abs() < 0.01);
+            start = at_pic;
+        }
+        prev_word = word;
+        raw.push((
+            start,
+            word,
+            want.is_some_and(|w| (w - word).abs() < 0.01),
+            pic_exact,
+        ));
+    }
+    let mut out = Schedule {
+        units: Vec::new(),
+        starts: Vec::new(),
+        words: Vec::new(),
+        exact: Vec::new(),
+        pic: None,
+        pic_exact: false,
+        small,
+    };
+    let latest = (end - 0.2).max(t0);
+    let mut prev_start: Option<f64> = None;
+    for (k, ((u, _), (start, word, exact, pic_exact))) in timed.into_iter().zip(raw).enumerate() {
+        let floor = prev_start.map_or(t0, |p| p + UNIT_FLOOR);
+        let mut st = start.max(floor);
+        if st > latest && !out.units.is_empty() {
+            continue; // no room left to read it before ANTICIPATE
+        }
+        st = st.min(latest).max(floor.min(latest));
+        // The word is the lead, the cut its support: never on the same frame.
+        let w = word.max(st + CUT_LEAD).min(latest.max(st));
+        if pic == Some(k) {
+            out.pic = Some(out.units.len());
+            out.pic_exact = pic_exact && (st - start).abs() < 0.01;
+        }
+        out.exact.push(exact && (w - word).abs() < CUT_LEAD + 0.01);
+        out.units.push(u);
+        out.starts.push(round3(st));
+        out.words.push(round3(w));
+        prev_start = Some(st);
+    }
+    out
+}
+
 pub(crate) fn build(
     ctx: &mut Ctx,
     b: &mut B,
@@ -595,6 +1015,7 @@ pub(crate) fn build(
 ) -> Result<(), CompileError> {
     let (w, h, u, m) = (ctx.w, ctx.h, ctx.u, ctx.margin());
     let plan = b.plan;
+    let sig = signature::for_look(ctx.art.as_ref().map(|(a, _)| a.look));
     let life = plan.life;
     let t0 = plan.enter_at();
     let end = life
@@ -603,19 +1024,37 @@ pub(crate) fn build(
         .max(t0 + LAST_MIN + UNIT_FLOOR);
     let land = placement::side_by_side(&ctx.frame);
 
-    let keyword_spoken = b
-        .beat
-        .keyword
-        .as_deref()
-        .is_none_or(|k| super::dossier::stamp_allowed(ctx, k));
-    let mut units = punch_units(b.beat, keyword_spoken);
-    fit_units(&mut units, end - t0);
+    let spoken = ctx.spoken.clone();
+    let voiced = !spoken.is_empty();
+    let keyword_spoken = if voiced {
+        keyword_earned(ctx, b.beat, plan.index)
+    } else {
+        b.beat
+            .keyword
+            .as_deref()
+            .is_none_or(|k| super::dossier::stamp_allowed(ctx, k))
+    };
+    let picture = find_picture(ctx, b);
+    let mut units = punch_units_with(b.beat, keyword_spoken, !voiced);
+    // (0.24) With a voice-over every cut sits on its word.
+    let mut sched: Option<Schedule> = None;
+    let cuts: Vec<f64> = if voiced {
+        let s = spoken_schedule(units, &spoken, b.beat, picture.as_ref(), t0, end);
+        units = s.units.clone();
+        let starts = s.starts.clone();
+        sched = Some(s);
+        starts
+    } else {
+        fit_units(&mut units, end - t0);
+        if units.is_empty() {
+            return Ok(());
+        }
+        cut_times(&units, t0, end)
+    };
     if units.is_empty() {
         return Ok(());
     }
     let n = units.len();
-    let cuts = cut_times(&units, t0, end);
-    let picture = find_picture(ctx, b);
     // (0.22) The figure of the pictured object slams above its picture.
     let pictured_value = match &picture {
         Some(Picture::Object(_, s)) => value_words(s),
@@ -628,6 +1067,41 @@ pub(crate) fn build(
         let key = chunk.iter().map(|w| norm(w)).collect::<Vec<_>>().join(" ");
         units.iter().position(|u| u.key() == key)
     });
+    // The unit that shows the picture, and the unit the accent belongs to:
+    // the figure (or else the primary value).
+    let on = match &sched {
+        Some(s) => s.pic.or(on),
+        None => on,
+    };
+    let focal_unit = on.or_else(|| units.iter().position(|u| u.role == UnitRole::Value));
+    let wipe_takes_field = plan.wipe_in
+        && matches!(
+            ctx.taste.transition.family,
+            crate::compiler::taste::TransitionFamily::Geometric
+                | crate::compiler::taste::TransitionFamily::Kinetic
+        );
+    let field_here = ctx.budget.field_ok(plan.index) && !wipe_takes_field;
+    let layouts_for = |start: usize| -> Vec<Layout> {
+        let mut v = layouts_from(n, picture.is_some(), on, start);
+        if voiced {
+            // (0.24) The colour belongs to the focal unit alone; the field
+            // and band the budget allows are claimed by it below.
+            for (k, l) in v.iter_mut().enumerate() {
+                if *l != Layout::Picture {
+                    *l = if Some(k) == focal_unit && !units[k].text.is_empty() {
+                        if field_here {
+                            Layout::Inverse
+                        } else {
+                            Layout::Banded
+                        }
+                    } else {
+                        Layout::Giant
+                    };
+                }
+            }
+        }
+        v
+    };
     // (0.23) Under a direction seed the A / B / C cycle starts at the beat's
     // seeded layout instead of at A. The beat's kicker is set in the ink colour,
     // so where the ink does not read on the accent field (the same colour in
@@ -643,9 +1117,7 @@ pub(crate) fn build(
             let k = (0..3)
                 .map(|d| (first + d) % 3)
                 .find(|&s| {
-                    ink_reads_on_field
-                        || layouts_from(n, picture.is_some(), on, s)[on_screen_at_read]
-                            != Layout::Inverse
+                    ink_reads_on_field || layouts_for(s)[on_screen_at_read] != Layout::Inverse
                 })
                 .unwrap_or(first);
             let name = ["giant", "inverse", "banded"][k];
@@ -654,7 +1126,32 @@ pub(crate) fn build(
         }
         None => 0,
     };
-    let plan_layouts = layouts_from(n, picture.is_some(), on, start);
+    let mut plan_layouts = layouts_for(start);
+    // (0.24 M9) Accent budget: one colour field per video (the payoff beat,
+    // and not under a colour wipe), one band per allowed beat. A cut that
+    // loses its field or band keeps the giant word, set in the accent colour
+    // where that reads on the ground.
+    let mut field_left = ctx.budget.field_ok(plan.index) && !wipe_takes_field;
+    // The band's slot is claimed by the first band the beat draws.
+    let mut block_left: Option<bool> = None;
+    let accent_word =
+        contrast_ratio(ctx.palette.accent, ctx.palette.paper) >= TEXT_CONTRAST_DISPLAY as f32;
+    let mut accent_words = vec![false; n];
+    for (k, l) in plan_layouts.iter_mut().enumerate() {
+        let keep = match l {
+            Layout::Inverse => std::mem::replace(&mut field_left, false),
+            Layout::Banded => {
+                let ok = block_left.unwrap_or_else(|| ctx.budget.block_ok(plan.index));
+                block_left = Some(false);
+                ok
+            }
+            _ => continue,
+        };
+        if !keep {
+            accent_words[k] = *l == Layout::Inverse && accent_word;
+            *l = Layout::Giant;
+        }
+    }
     let geo = picture.as_ref().map(|p| picture_geo(ctx, p, land));
     let lean = if mix(plan.seed, 0x51A3).is_multiple_of(2) {
         1.0
@@ -665,9 +1162,12 @@ pub(crate) fn build(
     let bleed = 0.03 * w;
     let text_w = w - 2.0 * m;
 
+    let stresses = ctx.stresses.clone();
+    let mut punched = false;
     for (k, unit) in units.iter().enumerate() {
         let cut = cuts[k];
-        let unit_end = if k + 1 < n { cuts[k + 1] } else { end };
+        let word_cut = sched.as_ref().map_or(cut, |s| s.words[k]);
+        let small = sched.as_ref().is_some_and(|s| s.small && k == 0);
         let layout = plan_layouts[k];
         let gid = b.id(&format!("cut.{k}"));
         let mut kids: Vec<Layer> = Vec::new();
@@ -692,6 +1192,7 @@ pub(crate) fn build(
             },
         };
         let color = match layout {
+            Layout::Giant if accent_words[k] => ctx.palette.accent,
             Layout::Giant | Layout::Picture => ctx.palette.ink,
             Layout::Inverse | Layout::Banded => ctx.palette.on_accent,
         };
@@ -708,7 +1209,7 @@ pub(crate) fn build(
             &unit.text,
             (region.w - 2.0 * pad) / HOLD_ZOOM,
             region.h / HOLD_ZOOM,
-            520.0 * u,
+            if small { SMALL_TITLE * u } else { 520.0 * u },
         );
         let centre = (region.x + region.w / 2.0, region.y + region.h / 2.0);
 
@@ -764,10 +1265,7 @@ pub(crate) fn build(
                         b.motions.retain(|mo| {
                             !(mo.target == id && matches!(mo.op, MotionOp::MaskReveal { .. }))
                         });
-                        b.motions.push(sprung(
-                            mo::scale(&id, cut, 0.3, 1.3, 1.0, Easing::OutQuint),
-                            SLAM,
-                        ));
+                        arrive(b, &id, cut, &sig, u, plan.index + k);
                         for mut l in plated.layers {
                             l.rotation_degrees += tilt;
                             kids.push(l);
@@ -799,10 +1297,7 @@ pub(crate) fn build(
                                         MotionOp::ClipReveal { .. } | MotionOp::Scale { .. }
                                     ))
                             });
-                            b.motions.push(sprung(
-                                mo::scale(&id, cut, 0.3, 1.3, 1.0, Easing::OutQuint),
-                                SLAM,
-                            ));
+                            arrive(b, &id, cut, &sig, u, plan.index + k);
                             l.z_index = 5;
                             l.rotation_degrees += tilt;
                             // (0.23 A5a) A library picture has no contrast guard
@@ -828,48 +1323,73 @@ pub(crate) fn build(
         }
 
         // The word.
-        let word_id = b.id(&format!("cut.{k}.word"));
-        kids.push(word_layer(ctx, word_id.clone(), &block, color, centre));
-        b.motions.push(sprung(
-            mo::scale(&word_id, cut, SLAM_TIME, SLAM_FROM, 1.0, Easing::OutQuint),
-            SLAM,
-        ));
-        if unit.glyphs() <= CASCADE_MAX_GLYPHS {
-            let glyphs = unit.glyphs().max(1);
-            b.motions.push(sprung(
-                Motion {
-                    id: None,
-                    target: word_id.clone(),
-                    start: cut,
-                    duration: SLAM_TIME + CASCADE_STAGGER * (glyphs - 1) as f64,
-                    easing: Easing::OutQuint,
-                    spring: None,
-                    op: MotionOp::GlyphCascade {
-                        stagger: CASCADE_STAGGER,
-                        from: GlyphPose {
-                            dx: 0.0,
-                            dy: 0.0,
-                            scale: CASCADE_FROM_SCALE,
-                            rotation: 0.0,
-                            opacity: 0.0,
-                        },
-                        order: GlyphOrder::Forward,
-                        seed: (plan.seed as u32) ^ (k as u32),
-                    },
+        let word_id = b.id(&format!("cut.{k}.{}", if small { "small" } else { "word" }));
+        let mut word = word_layer(ctx, word_id.clone(), &block, color, centre);
+        // (Wave 2) A word of several lines reveals line by line.
+        let line_rise = match &word.kind {
+            LayerKind::Text(t) => sig.line_rise * t.font_size * t.line_height,
+            _ => 0.0,
+        };
+        // (A stand-in small title is shown from the beat's first content word,
+        // not in reading order: its lines stay one block for the speech QA.)
+        let word_lines = if small {
+            None
+        } else {
+            choreography::split_into_lines(&mut word)
+        };
+        // (0.24) A figure over its picture lands on its own word.
+        let delayed = word_cut > cut + 0.02;
+        if unit.role == UnitRole::Keyword && sched.is_some() {
+            // (0.24) A slammed keyword is a stamp to the accent QA.
+            kids.push(base_layer(
+                b.id(&format!("cut.{k}.stamp")),
+                (0.0, 0.0, w, h),
+                LayerKind::Group {
+                    children: vec![word],
                 },
-                SLAM,
+                10,
             ));
+        } else {
+            kids.push(word);
         }
-        let hold_from = cut + SLAM_TIME + 0.02;
-        if unit_end - hold_from > 0.25 {
-            b.motions.push(mo::scale(
-                &word_id,
-                hold_from,
-                unit_end - hold_from,
-                1.0,
-                HOLD_ZOOM,
-                Easing::Linear,
-            ));
+        // (0.24 Wave 1) The hero is the lead: it lands on its word (no
+        // lag), scales up through a short overshoot to rest on the look's
+        // spring and fades in. No hold zoom: at rest it is still.
+        {
+            let life = plan.life;
+            let phrase = choreography::Phrase::new(plan.index, life, &stresses);
+            // (Wave 2) The beat's one stress punch: the cut whose word is the
+            // spoken stress peaks on it.
+            let stress = (!punched && !small && sched.as_ref().is_some_and(|s| s.exact[k]))
+                .then(|| {
+                    phrase
+                        .stress_at(word_cut + WORD_CUE_LEAD, 0.15)
+                        .map(|s| s.t)
+                })
+                .flatten();
+            punched |= stress.is_some();
+            let cue = choreography::Cue {
+                role: choreography::Role::Lead,
+                at: word_cut,
+                side: 1.0,
+                stress,
+            };
+            let lead = choreography::plan(&sig, &phrase, &cue);
+            b.motions.extend(mo::arrive(&word_id, &lead, u));
+            for i in 0..word_lines.unwrap_or(0) {
+                let line = choreography::Plan {
+                    start: lead.start + sig.line_stagger * i as f64,
+                    dur: sig.line_secs,
+                    ..lead
+                };
+                b.motions.extend(mo::reveal_lines(
+                    &format!("{word_id}.l{i}"),
+                    &line,
+                    1,
+                    line_rise,
+                    0.0,
+                ));
+            }
         }
 
         // The unit: a group visible from its cut to the next (hard cut).
@@ -892,6 +1412,36 @@ pub(crate) fn build(
             ));
         }
         b.push(group);
+        // (0.24) Declare what each cut stands for so the word cues, the
+        // lint and the speech QA hold it to the voice. A cut pushed off its
+        // word by the floor between cuts is not declared.
+        if let Some(s) = sched.as_ref().filter(|s| !(s.small && k == 0)) {
+            // "C$300K" is said as "three hundred thousand dollars": the
+            // figure without its currency letters is an entry too.
+            let mut words: Vec<String> = Vec::new();
+            for w in unit.content_words() {
+                words.push(w.to_string());
+                if let Some(i) = w.find(['$', '£', '€', '¥', '₹']) {
+                    if i > 0 && w[..i].chars().all(|c| c.is_ascii_alphabetic()) {
+                        words.push(w[i..].to_string());
+                    }
+                }
+            }
+            let role = reveal_role(unit.role);
+            let group_name = format!("cut.{k}");
+            if delayed {
+                if s.pic == Some(k) && s.pic_exact {
+                    if let Some(parts) = picture_name(picture.as_ref(), b.beat) {
+                        b.reveal(&group_name, parts, RevealRole::Content);
+                    }
+                }
+                if s.exact[k] {
+                    b.reveal(&format!("{group_name}.word"), words, role);
+                }
+            } else if s.exact[k] {
+                b.reveal(&group_name, words, role);
+            }
+        }
     }
     Ok(())
 }
@@ -1024,6 +1574,138 @@ mod tests {
             [Banded, Giant, Inverse, Picture]
         );
         assert_eq!(layouts_from(1, true, None, 2), [Picture]);
+    }
+
+    fn said(words: &[(&str, f64)]) -> Vec<(String, f64)> {
+        words.iter().map(|(w, t)| ((*w).to_string(), *t)).collect()
+    }
+
+    #[test]
+    fn a_title_with_the_keywords_stem_keeps_the_title_only() {
+        let b = beat(json!({
+            "purpose": "emphasize",
+            "statement": "Taxed",
+            "primary": {"kind": "phrase", "value": "200K"},
+            "keyword": "tax"
+        }));
+        assert_eq!(texts(&punch_units(&b, true)), ["Taxed", "200K"]);
+        // A value that says the keyword again is one unit, not two.
+        let b = beat(json!({
+            "purpose": "explain",
+            "statement": "Your turn",
+            "primary": {"kind": "phrase", "value": "Drop your flag"},
+            "keyword": "flag"
+        }));
+        assert_eq!(
+            texts(&punch_units_with(&b, false, false)),
+            ["Your turn", "Drop your flag"]
+        );
+    }
+
+    #[test]
+    fn cuts_follow_the_voice_and_unspoken_words_are_not_slammed() {
+        let b = beat(json!({
+            "purpose": "emphasize",
+            "statement": "Taxed",
+            "primary": {"kind": "phrase", "value": "$200K"},
+            "keyword": "tax"
+        }));
+        let units = punch_units_with(&b, false, false);
+        let spoken = said(&[
+            ("In", 0.1),
+            ("the", 0.2),
+            ("UK", 0.3),
+            ("two", 1.0),
+            ("hundred", 1.2),
+            ("thousand", 1.4),
+            ("goes", 2.0),
+            ("to", 2.3),
+            ("tax", 2.5),
+        ]);
+        let s = spoken_schedule(units, &spoken, &b, None, 0.2, 5.0);
+        assert_eq!(texts(&s.units), ["$200K", "Taxed"]);
+        // Every word comes WORD_CUE_LEAD before its spoken onset (it peaks on
+        // it); the cut leads the word by CUT_LEAD.
+        assert!(
+            (s.words[0] - (1.0 - WORD_CUE_LEAD)).abs() < 0.01,
+            "{:?}",
+            s.words
+        );
+        assert!(
+            (s.words[1] - (2.5 - WORD_CUE_LEAD)).abs() < 0.01,
+            "{:?}",
+            s.words
+        );
+        assert!(
+            (s.starts[1] - (s.words[1] - CUT_LEAD)).abs() < 0.01,
+            "{:?}",
+            s.starts
+        );
+        assert!(s.exact.iter().all(|e| *e));
+        // A statement nobody says is not slammed.
+        let b = beat(json!({
+            "purpose": "emphasize",
+            "statement": "Closer",
+            "primary": {"kind": "phrase", "value": "$300K"}
+        }));
+        let units = punch_units_with(&b, false, false);
+        let spoken = said(&[
+            ("about", 0.2),
+            ("three", 0.3),
+            ("hundred", 0.5),
+            ("thousand", 0.7),
+        ]);
+        let s = spoken_schedule(units, &spoken, &b, None, 0.2, 5.0);
+        assert_eq!(texts(&s.units), ["$300K"]);
+        assert!(!s.small);
+    }
+
+    #[test]
+    fn a_late_first_word_opens_on_a_small_title_or_the_unspoken_figure() {
+        // The statement is said late and a figure is never read out: the
+        // figure opens the beat, the title follows on its word.
+        let b = beat(json!({
+            "purpose": "emphasize",
+            "statement": "Top 1%",
+            "primary": {"kind": "number", "value": "$731,000"}
+        }));
+        let units = punch_units_with(&b, false, false);
+        let spoken = said(&[
+            ("This", 0.1),
+            ("is", 0.3),
+            ("the", 0.5),
+            ("top", 1.7),
+            ("one", 2.1),
+            ("percent", 2.3),
+        ]);
+        let s = spoken_schedule(units, &spoken, &b, None, 0.25, 5.0);
+        assert_eq!(texts(&s.units), ["$731,000", "Top 1%"]);
+        assert!((s.starts[0] - 0.25).abs() < 0.01);
+        assert!((s.words[1] - (1.7 - WORD_CUE_LEAD)).abs() < 0.01);
+        // No figure to open on: the statement is set small at ENTER.
+        let b = beat(json!({
+            "purpose": "emphasize",
+            "statement": "Your turn",
+            "primary": {"kind": "phrase", "value": "Drop your flag"}
+        }));
+        let units = punch_units_with(&b, false, false);
+        let spoken = said(&[
+            ("So", 0.1),
+            ("which", 0.4),
+            ("is", 0.6),
+            ("easiest", 0.9),
+            ("drop", 4.0),
+            ("your", 4.2),
+            ("flag", 4.4),
+        ]);
+        let s = spoken_schedule(units, &spoken, &b, None, 0.25, 8.0);
+        assert!(s.small);
+        assert_eq!(texts(&s.units), ["Your turn", "Drop your flag"]);
+        assert!(
+            s.starts[0] < 0.6 && (s.words[1] - (4.0 - WORD_CUE_LEAD)).abs() < 0.01,
+            "{:?}",
+            s.starts
+        );
     }
 
     #[test]

@@ -475,7 +475,7 @@ fn legacy_label_slot(ctx: &Ctx, cand: &Candidate, land: bool, right: bool) -> (f
 // ---------------------------------------------------------------------------
 // (0.10 Q) Subject-first layouts
 //
-// The owner's review of weak-model reels: assets too small or pushed into the
+// A review of weak-model reels: assets too small or pushed into the
 // background, headline type printed over people, every image beat laid out the
 // same. A subject-first layout puts the TYPE and the SUBJECT in disjoint
 // regions (so nothing is ever printed over the picture and a head is never
@@ -1644,6 +1644,7 @@ pub(super) fn build(
                 stroke: Some(Stroke {
                     color: ctx.palette.ink.with_alpha(0x22),
                     width: 2.0 * u,
+                    brush: None,
                 }),
             },
             Z_FRONT,
@@ -1775,11 +1776,13 @@ mod tests {
         };
         let ctx = Ctx {
             reveals: Default::default(),
+            family: None,
             warnings: Vec::new(),
             direction_seed: None,
             beat_params: BTreeMap::new(),
             direction_take: None,
             direction_beats: BTreeMap::new(),
+            budget: crate::compiler::accent_budget::AccentBudget::unlimited(),
             emotion: None,
             art: None,
             w: 1080.0,
@@ -1798,6 +1801,8 @@ mod tests {
             focal: Default::default(),
             stack: None,
             spoken: Default::default(),
+            spoken_ends: Default::default(),
+            stresses: Default::default(),
             beat_count: 1,
             sequence: Default::default(),
         };
@@ -1956,11 +1961,13 @@ mod tests {
         let frame = crate::compiler::layout_frame::LayoutFrame::new(w, h).expect("frame");
         let ctx = Ctx {
             reveals: Default::default(),
+            family: None,
             warnings: Vec::new(),
             direction_seed: None,
             beat_params: BTreeMap::new(),
             direction_take: None,
             direction_beats: BTreeMap::new(),
+            budget: crate::compiler::accent_budget::AccentBudget::unlimited(),
             emotion: None,
             art: None,
             w: w as f32,
@@ -1979,6 +1986,8 @@ mod tests {
             focal: Default::default(),
             stack: None,
             spoken: Default::default(),
+            spoken_ends: Default::default(),
+            stresses: Default::default(),
             beat_count: 1,
             sequence: Default::default(),
         };

@@ -27,19 +27,19 @@
 #                            (golden/fixtures/variety/tight/*.speech.json: every gap
 #                            between sentences 0.30 s) instead of the `say` ones
 #         REGEN_TIGHT=1      rebuild the tight fixtures from the default ones and exit
-#                            (docs/plans/sprint_0_23/tools/tighten_speech.py --all)
+#                            (scripts/bench/tighten_speech.py --all)
 #         REGEN_FIXTURES=1   re-synthesise the speech fixtures and exit:
 #                              motion-engine voice <intent> --tts-model say --align onset -o <tmp>
 #                            for each story (macOS only); only the .speech.json is
 #                            kept, the wav lives in a temp dir that is deleted.
 #
-# Metric definitions live in docs/plans/sprint_0_23/tools/variety_report.py.
+# Metric definitions live in scripts/bench/variety_report.py.
 # Rendered frames are never kept: sheet.py deletes its own, and this script sweeps
 # the output directory for any stray frame_*.png on exit.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-TOOLS=docs/plans/sprint_0_23/tools
+TOOLS=scripts/bench
 ENGINE=${ENGINE:-target/release/motion-engine}
 SPEECH=${SPEECH:-default}
 case "$SPEECH" in
@@ -79,7 +79,7 @@ fi
 
 mkdir -p "$OUT"
 sweep_frames() {
-  # Owner rule: no rendered frames are kept (only ever under the bench output).
+  # Rule: no rendered frames are kept (only ever under the bench output).
   find "$OUT" -name 'frame_*.png' -delete 2>/dev/null || true
 }
 trap sweep_frames EXIT

@@ -19,7 +19,7 @@ pub enum ModelsCmd {
     /// Show every known model, its kind, size and whether it is installed.
     List,
     /// Download a model (whisper-tiny.en | whisper-base.en | whisper-small.en |
-    /// wav2vec2-base-960h) and verify its SHA256.
+    /// whisper-large-v3-turbo | wav2vec2-base-960h) and verify its SHA256.
     Fetch {
         /// Model name (see `models list`).
         name: String,
@@ -183,7 +183,7 @@ pub fn run(cmd: ModelsCmd) -> Result<()> {
                 ),
             };
             eprintln!();
-            println!("installed {} (sha256 {sha})", path.display());
+            info!("installed {} (sha256 {sha})", path.display());
             Ok(())
         }
         ModelsCmd::Path { name } => {

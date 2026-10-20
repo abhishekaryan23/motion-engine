@@ -1,0 +1,176 @@
+{
+ "version": "2.0",
+ "meta": {
+  "name": "gen_assets",
+  "aspect": "16:9",
+  "duration": 10.0
+ },
+ "palette": {
+  "background": "#0A0F12",
+  "ink": "#F1EEE6",
+  "accent": "#7FD8C8",
+  "muted": "#5A6670",
+  "grounds": [
+   "#0E1A16"
+  ]
+ },
+ "fonts": {
+  "display": "cabinet_grotesk_extrabold",
+  "serif": "instrument_serif_regular",
+  "mono": "ibm_plex_mono"
+ },
+ "assets": [
+  {
+   "id": "sea_spray",
+   "prompt": "macro photograph of ocean spray droplets frozen mid-air over a deep teal wave, crisp, high contrast, backlit",
+   "kind": "plate",
+   "seed": 7
+  },
+  {
+   "id": "fern_plate",
+   "prompt": "dark moody macro photograph of unfurling fern fronds in deep forest shade, rich green, soft rim light, shallow depth of field, mostly dark background",
+   "kind": "plate",
+   "seed": 11
+  }
+ ],
+ "components": [
+  {
+   "id": "night",
+   "kind": "backdrop",
+   "preset": "flat",
+   "end": 5.0
+  },
+  {
+   "id": "spray_word",
+   "kind": "title",
+   "preset": "display",
+   "text": "Spray",
+   "size": "xl",
+   "slot": "center",
+   "style": {
+    "fill": {
+     "kind": "image",
+     "image": "gen:sea_spray"
+    },
+    "case": "upper"
+   },
+   "end": 5.0
+  },
+  {
+   "id": "forest",
+   "kind": "backdrop",
+   "preset": "flat",
+   "colour": "ground1",
+   "image": "gen:fern_plate",
+   "image_opacity": 0.42,
+   "start": 5.0
+  },
+  {
+   "id": "grown_title",
+   "kind": "title",
+   "preset": "stacked",
+   "text": "Grown, not drawn",
+   "size": "xl",
+   "slot": "center",
+   "start": 5.0,
+   "style": {
+    "case": "as_written"
+   }
+  }
+ ],
+ "camera": [
+  {
+   "at": 0,
+   "do": "reset"
+  },
+  {
+   "at": 0.5,
+   "do": "push",
+   "to": 1.012
+  },
+  {
+   "at": 1.0,
+   "do": "push",
+   "to": 1.024
+  },
+  {
+   "at": 1.5,
+   "do": "push",
+   "to": 1.036
+  },
+  {
+   "at": 2.0,
+   "do": "push",
+   "to": 1.048
+  },
+  {
+   "at": 2.5,
+   "do": "push",
+   "to": 1.06
+  },
+  {
+   "at": 3.0,
+   "do": "push",
+   "to": 1.072
+  },
+  {
+   "at": 3.5,
+   "do": "push",
+   "to": 1.084
+  },
+  {
+   "at": 4.0,
+   "do": "push",
+   "to": 1.096
+  },
+  {
+   "at": 4.5,
+   "do": "push",
+   "to": 1.108
+  },
+  {
+   "at": 5,
+   "do": "reset"
+  },
+  {
+   "at": 5.5,
+   "do": "push",
+   "to": 1.012
+  },
+  {
+   "at": 6.0,
+   "do": "push",
+   "to": 1.024
+  },
+  {
+   "at": 6.5,
+   "do": "push",
+   "to": 1.036
+  },
+  {
+   "at": 7.0,
+   "do": "push",
+   "to": 1.048
+  },
+  {
+   "at": 7.5,
+   "do": "push",
+   "to": 1.06
+  },
+  {
+   "at": 8.0,
+   "do": "push",
+   "to": 1.072
+  },
+  {
+   "at": 8.5,
+   "do": "push",
+   "to": 1.084
+  },
+  {
+   "at": 9.0,
+   "do": "push",
+   "to": 1.096
+  }
+ ]
+}

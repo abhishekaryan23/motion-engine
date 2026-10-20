@@ -24,6 +24,8 @@ pub enum Profile {
     Creator,
     /// Opus-class or a human: the full toolset (≈ 16 tools).
     Operator,
+    /// (v2) MotionEngine 2: make_video, edit_video, preview, critique.
+    V2,
 }
 
 impl Profile {
@@ -32,13 +34,14 @@ impl Profile {
             Profile::Weak => "weak",
             Profile::Creator => "creator",
             Profile::Operator => "operator",
+            Profile::V2 => "v2",
         }
     }
 
     /// Creator and operator accept a full CreativeIntent, a StyleProfile object
     /// and production options; weak accepts the lite story and a tone word.
     pub fn full_control(self) -> bool {
-        !matches!(self, Profile::Weak)
+        !matches!(self, Profile::Weak | Profile::V2)
     }
 }
 
@@ -80,6 +83,9 @@ pub const OPERATOR_EXTRA: [&str; 8] = [
 
 /// The tools a profile lists, in listing order.
 pub fn tool_names(profile: Profile, allow_scene_edits: bool) -> Vec<&'static str> {
+    if profile == Profile::V2 {
+        return crate::v2::TOOLS.to_vec();
+    }
     let mut names: Vec<&'static str> = WEAK_TOOLS.to_vec();
     if profile.full_control() {
         names.extend(CREATOR_EXTRA);
@@ -104,6 +110,7 @@ pub fn budget_chars(profile: Profile) -> usize {
         Profile::Weak => WEAK_BUDGET_CHARS,
         Profile::Creator => CREATOR_BUDGET_CHARS,
         Profile::Operator => OPERATOR_BUDGET_CHARS,
+        Profile::V2 => crate::v2::BUDGET_CHARS,
     }
 }
 
@@ -113,6 +120,7 @@ pub fn reply_budget_chars(profile: Profile) -> usize {
         Profile::Weak => 800,
         Profile::Creator => 1_000,
         Profile::Operator => 1_600,
+        Profile::V2 => 800,
     }
 }
 

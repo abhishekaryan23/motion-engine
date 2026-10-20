@@ -1,0 +1,33 @@
+{
+ "kind": "program",
+ "program": {
+  "version": "2.0",
+  "meta": {
+   "name": "fixture",
+   "duration": 3.0
+  },
+  "palette": {
+   "background": "#F2EEE6",
+   "ink": "#111111",
+   "accent": "#E04A12",
+   "muted": "#6B6B6B"
+  },
+  "components": [
+   {
+    "id": "k",
+    "kind": "title",
+    "preset": "label",
+    "text": "Selected work",
+    "slot": "top"
+   },
+   {
+    "id": "t",
+    "kind": "title",
+    "preset": "stacked",
+    "text": "Motion"
+   }
+  ]
+ },
+ "repair": true,
+ "id": "eyebrow"
+}

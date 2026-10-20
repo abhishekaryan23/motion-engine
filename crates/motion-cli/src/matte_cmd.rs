@@ -61,7 +61,7 @@ fn helper() -> Result<PathBuf> {
     };
     if stale {
         std::fs::create_dir_all(&root)?;
-        println!("matte: compiling the Vision helper (once)");
+        detail!("matte: compiling the Vision helper (once)");
         let status = Command::new("swiftc")
             .arg("-O")
             .arg(&src)
@@ -202,11 +202,11 @@ pub fn run(args: MatteArgs) -> Result<()> {
             e.width = w;
             e.height = h;
             n += 1;
-            println!("matte: {} -> {}", src.display(), e.path);
+            detail!("matte: {} -> {}", src.display(), e.path);
         }
         let out = mpath.with_extension("matted.json");
         std::fs::write(&out, serde_json::to_string_pretty(&manifest)? + "\n")?;
-        println!("matte: {n} image(s) cut out; wrote {}", out.display());
+        info!("matte: {n} image(s) cut out; wrote {}", out.display());
         return Ok(());
     }
     let input = args
@@ -223,12 +223,12 @@ pub fn run(args: MatteArgs) -> Result<()> {
             let stem = f.file_stem().and_then(|s| s.to_str()).unwrap_or("image");
             let out = output.join(format!("{stem}.png"));
             matte_file(&bin, f, &out, args.crop)?;
-            println!("matte: {} -> {}", f.display(), out.display());
+            detail!("matte: {} -> {}", f.display(), out.display());
         }
-        println!("matte: {} image(s)", files.len());
+        info!("matte: {} image(s)", files.len());
     } else {
         matte_file(&bin, &input, &output, args.crop)?;
-        println!("matte: wrote {}", output.display());
+        info!("matte: wrote {}", output.display());
     }
     Ok(())
 }

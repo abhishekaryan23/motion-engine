@@ -1,0 +1,299 @@
+{
+  "version": "2.0",
+  "meta": {
+    "name": "kyro_cloud_ad",
+    "aspect": "9:16",
+    "duration": 14.0,
+    "fps": "30",
+    "end_beat": 28
+  },
+  "palette": {
+    "background": "#F4F1EA",
+    "ink": "#0E1015",
+    "accent": "#D7263D",
+    "muted": "#E0DDD6",
+    "grounds": [
+      "#D7263D",
+      "#0B0E14"
+    ]
+  },
+  "fonts": {
+    "display": "archivo_black",
+    "serif": "instrument_serif_italic",
+    "mono": "ibm_plex_mono"
+  },
+  "tempo": "fast",
+  "music": {
+    "track": "driving_pulse",
+    "start": 0.107
+  },
+  "components": [
+    {
+      "id": "paper",
+      "kind": "backdrop",
+      "end_beat": 8
+    },
+    {
+      "id": "open",
+      "kind": "kinetic_text",
+      "preset": "poster_cuts",
+      "start_beat": 0,
+      "beat_cuts": 1,
+      "words": [
+        "PUBLIC",
+        "CLOUD",
+        "BILLS",
+        "HURT?",
+        "MEET",
+        "KYRO",
+        "9.1.1",
+        "CLOUD"
+      ],
+      "end_beat": 8,
+      "dot": true,
+      "stress": [
+        3,
+        6
+      ],
+      "timeline": [
+        {
+          "beat": 4,
+          "do": "cut",
+          "flip": true
+        }
+      ]
+    },
+    {
+      "id": "crimson",
+      "kind": "backdrop",
+      "colour": "ground1",
+      "start_beat": 8,
+      "end_beat": 16
+    },
+    {
+      "id": "tone",
+      "kind": "field",
+      "preset": "halftone",
+      "colour": "ink",
+      "focus": "trail",
+      "depth": 0.25,
+      "start_beat": 8,
+      "end_beat": 16,
+      "timeline": [
+        {
+          "at": 0,
+          "do": "enter",
+          "style": "fade"
+        }
+      ]
+    },
+    {
+      "id": "tco_bento",
+      "kind": "bento",
+      "title": "KYRO 9.1.1 CORE METRICS",
+      "start_beat": 8,
+      "end_beat": 16,
+      "beat_cuts": 2,
+      "tilt_in": [
+        -14.0,
+        10.0
+      ],
+      "tiles": [
+        {
+          "stat": "40%",
+          "title": "LOWER TCO",
+          "detail": "VS PUBLIC CLOUD",
+          "accent": true
+        },
+        {
+          "stat": "2X",
+          "title": "VM DENSITY",
+          "detail": "NVME TIERING"
+        },
+        {
+          "stat": "1-MIN",
+          "title": "RPO RECOVERY",
+          "detail": "CYBER RESILIENCE",
+          "accent": true
+        },
+        {
+          "stat": "46%",
+          "title": "DISK DEDUP",
+          "detail": "GLOBAL ESA"
+        }
+      ],
+      "timeline": [
+        {
+          "beat": 8,
+          "do": "enter",
+          "style": "fade"
+        }
+      ]
+    },
+    {
+      "id": "obsidian",
+      "kind": "backdrop",
+      "colour": "ground2",
+      "start_beat": 16,
+      "end_beat": 24
+    },
+    {
+      "id": "grid",
+      "kind": "field",
+      "preset": "grid",
+      "depth": 0.2,
+      "start_beat": 16,
+      "end_beat": 24,
+      "timeline": [
+        {
+          "at": 0,
+          "do": "enter",
+          "style": "fade"
+        }
+      ]
+    },
+    {
+      "id": "ai_mesh",
+      "kind": "diagram",
+      "preset": "outline",
+      "z": -20.0,
+      "nodes": [
+        "PRIVATE AI",
+        "SHARED GPU",
+        "TENANT ISO",
+        "ZERO LEAK",
+        "MICRO FW",
+        "L7 ROUTER",
+        "QUICK PATCH"
+      ],
+      "start_beat": 16,
+      "end_beat": 24,
+      "beat_cuts": 1,
+      "timeline": [
+        {
+          "beat": 16,
+          "do": "enter",
+          "style": "fade"
+        },
+        {
+          "beat": 22,
+          "do": "tilt",
+          "from": [
+            -10.0,
+            8.0
+          ],
+          "to": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "paper2",
+      "kind": "backdrop",
+      "start_beat": 24
+    },
+    {
+      "id": "close",
+      "kind": "lockup",
+      "start_beat": 24,
+      "headline": "KYRO 9.1.1",
+      "subline": "Own your private AI cloud.",
+      "rules_from": [
+        [
+          0.0,
+          0.82
+        ],
+        [
+          0.35,
+          0.82
+        ],
+        [
+          0.65,
+          0.18
+        ],
+        [
+          1.0,
+          0.18
+        ]
+      ],
+      "timeline": [
+        {
+          "beat": 24,
+          "do": "enter",
+          "style": "pop"
+        },
+        {
+          "beat": 26,
+          "do": "sheen"
+        }
+      ]
+    }
+  ],
+  "camera": [
+    {
+      "beat": 9,
+      "do": "orbit",
+      "yaw": 5.0,
+      "pitch": -3.0
+    },
+    {
+      "beat": 11,
+      "do": "dolly",
+      "to": -65.0
+    },
+    {
+      "beat": 13,
+      "do": "orbit",
+      "yaw": -4.0,
+      "pitch": 2.5
+    },
+    {
+      "beat": 15,
+      "do": "reset"
+    },
+    {
+      "beat": 20,
+      "do": "push",
+      "to": 1.12
+    },
+    {
+      "beat": 23,
+      "do": "reset"
+    },
+    {
+      "beat": 25,
+      "do": "orbit",
+      "yaw": 3.5,
+      "pitch": -2.0
+    },
+    {
+      "beat": 27,
+      "do": "dolly",
+      "to": -45.0
+    },
+    {
+      "beat": 28,
+      "do": "push",
+      "to": 1.08
+    }
+  ],
+  "transitions": [
+    {
+      "beat": 8,
+      "kind": "whip"
+    },
+    {
+      "beat": 16,
+      "kind": "colour_flip"
+    },
+    {
+      "beat": 24,
+      "kind": "impact"
+    }
+  ],
+  "film": {
+    "grain": 0.02
+  }
+}

@@ -7,7 +7,7 @@ Only the `.speech.json` is committed; the synthesised wav is never kept
 
 | File | Story |
 |---|---|
-| `sleep_review.speech.json`, `money_review.speech.json` | `docs/plans/sprint_0_23/stories/*.intent.json` |
+| `sleep_review.speech.json`, `money_review.speech.json` | `examples/bench/stories/*.intent.json` |
 | `collection-accumulate`, `state-change`, `derived-metric`, `layers` | `examples/public/*.intent.json` |
 | `ai_learns` | `examples/topics/ai_learns.intent.json` |
 | `space` | `examples/cinematic/space.intent.json` |
@@ -41,7 +41,7 @@ on them.
 
 ## `tight/`: the continuous take (A4-short)
 
-The owner's voice rule is one continuous take, so a real narration leaves 0.25-0.6 s
+The voice rule is one continuous take, so a real narration leaves 0.25-0.6 s
 between sentences; the `say` fixtures above leave up to 1.2-1.3 s in places
 (`state-change` 1.32 s, `layers` 1.24 / 1.32 s, `money_review` 1.24 s). `tight/` holds
 the same eight maps with every gap between two consecutive sentences set to exactly
@@ -53,8 +53,8 @@ was removed and the 0.9 s tail after the last word is kept). A one-sentence stor
 Made by a small deterministic script, no clock, no randomness, no audio:
 
 ```
-python3 docs/plans/sprint_0_23/tools/tighten_speech.py --all      # or: REGEN_TIGHT=1 scripts/variety_bench.sh
-python3 docs/plans/sprint_0_23/tools/tighten_speech.py in.speech.json out.speech.json --gap 0.30
+python3 scripts/bench/tighten_speech.py --all      # or: REGEN_TIGHT=1 scripts/variety_bench.sh
+python3 scripts/bench/tighten_speech.py in.speech.json out.speech.json --gap 0.30
 ```
 
 Run the bench on them with `SPEECH=tight scripts/variety_bench.sh` (report in

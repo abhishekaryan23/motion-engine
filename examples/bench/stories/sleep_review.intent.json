@@ -1,0 +1,30 @@
+{
+  "version": "0.2",
+  "title": "sleep_review",
+  "format": "vertical",
+  "beats": [
+    { "purpose": "emphasize", "statement": "Your brain cleans itself at night",
+      "narration": "Every night, while you sleep, your brain quietly runs a cleaning cycle.",
+      "primary": { "kind": "object", "asset": "brain", "meaning": "the brain" },
+      "energy": "impact", "keyword": "sleep" },
+    { "purpose": "reveal", "statement": "Waste clears much faster",
+      "narration": "During deep sleep, waste is flushed out about sixty percent faster than when you are awake.",
+      "primary": { "kind": "number", "value": "60%", "meaning": "faster clearance" },
+      "energy": "building", "keyword": "faster" },
+    { "purpose": "compare", "statement": "What you need versus what you get",
+      "narration": "Adults need about seven hours, but many of us get closer to five.",
+      "primary": { "kind": "number", "value": "7 hours", "meaning": "needed" },
+      "secondary": { "kind": "number", "value": "5 hours", "meaning": "typical" },
+      "relationship": "separate", "energy": "building" },
+    { "purpose": "explain", "statement": "Sleep repairs four things",
+      "narration": "Those missing hours cost you memory, mood, focus and even your immune defence.",
+      "primary": { "kind": "collection", "meaning": "what sleep repairs", "items": [
+        { "kind": "phrase", "value": "Memory" }, { "kind": "phrase", "value": "Mood" },
+        { "kind": "phrase", "value": "Focus" }, { "kind": "phrase", "value": "Immunity" } ] },
+      "relationship": "accumulate", "energy": "building" },
+    { "purpose": "emphasize", "statement": "Sleep is not lazy",
+      "narration": "So tonight, treat sleep as maintenance, not laziness.",
+      "primary": { "kind": "phrase", "value": "Maintenance", "meaning": "sleep" },
+      "energy": "calm", "keyword": "rest" }
+  ]
+}

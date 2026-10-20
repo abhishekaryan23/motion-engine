@@ -336,6 +336,7 @@ pub(super) fn build(
             stroke: Some(Stroke {
                 color: ctx.palette.card.with_alpha(0x40),
                 width: 2.0 * u,
+                brush: None,
             }),
         },
         25,

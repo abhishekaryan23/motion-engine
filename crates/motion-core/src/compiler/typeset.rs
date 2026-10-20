@@ -72,6 +72,15 @@ impl Voice {
         letter_spacing: 0.08,
         line_height: 1.2,
     };
+    /// (0.24) A source / unit tag: mono, tracked 0.06, not caps.
+    pub const MARKER: Voice = Voice {
+        role: FontRole::Mono,
+        weight: 400,
+        italic: false,
+        uppercase: false,
+        letter_spacing: 0.06,
+        line_height: 1.2,
+    };
     pub const BODY: Voice = Voice {
         role: FontRole::Body,
         weight: 400,
@@ -108,6 +117,33 @@ impl Block {
 
 /// Reference size for measurement; widths scale linearly with size.
 const REF_SIZE: f32 = 100.0;
+
+/// (0.24 Wave 1) The inequality sign and what a display voice says instead.
+/// The joined form (a private-use joiner, not whitespace) keeps the words together through line
+/// breaking until [`Typesetter::forced_lines`] puts them on their own line.
+pub const NOT_EQUAL: char = '≠';
+const IS_NOT: &str = "IS\u{e000}NOT";
+
+/// Whether a voice is a display/number voice at weight 700 or more: the roles
+/// whose heavy caps cannot be matched by a hairline `≠`. Labels and mono keep it.
+pub fn substitutes_symbols(voice: &Voice) -> bool {
+    voice.weight >= 700
+        && matches!(
+            voice.role,
+            FontRole::Display | FontRole::DisplayCondensed | FontRole::Number
+        )
+}
+
+/// Whether `text` set in `voice` has its `≠` replaced by words (the compile
+/// warning `display_symbol_substituted`).
+pub fn is_substituted(voice: &Voice, text: &str) -> bool {
+    substitutes_symbols(voice) && text.contains(NOT_EQUAL)
+}
+
+/// `line` with the joined words spelt with a plain space.
+fn spelt(line: &str) -> String {
+    line.replace(IS_NOT, "IS NOT")
+}
 
 /// (0.10 Q) The display headline budget of the beat being built
 /// (`taste_rules::HEADLINE_MAX_*`). [`Typesetter::fit_block`] applies it to the
@@ -170,6 +206,16 @@ impl<'a> Typesetter<'a> {
     }
 
     pub fn prepare(voice: &Voice, text: &str) -> String {
+        // (0.24 Wave 1) Display faces draw `≠` as a hairline beside their
+        // heavy caps (or lack it): the compiler says it in words, on its own
+        // line (see [`Typesetter::forced_lines`]).
+        let swapped;
+        let text = if substitutes_symbols(voice) && text.contains(NOT_EQUAL) {
+            swapped = text.replace(NOT_EQUAL, &format!(" {IS_NOT} "));
+            swapped.as_str()
+        } else {
+            text
+        };
         let t = text.split_whitespace().collect::<Vec<_>>().join(" ");
         if voice.uppercase {
             t.to_uppercase()
@@ -293,6 +339,8 @@ impl<'a> Typesetter<'a> {
                 max_width: None,
                 uppercase: false,
                 ink,
+                fill: None,
+                outline: None,
             },
             origin,
             line_advance: block.line_advance(),
@@ -301,9 +349,61 @@ impl<'a> Typesetter<'a> {
         }
     }
 
+    /// (0.24 Wave 1) `INCOME ≠ WEALTH` is set as `INCOME / IS NOT / WEALTH`:
+    /// the words around the substituted sign share a line each, the sign's
+    /// words stand alone. `None` when `prepared` has no substituted sign.
+    fn forced_lines(prepared: &str) -> Option<Vec<String>> {
+        if !prepared.contains(IS_NOT) {
+            return None;
+        }
+        let mut lines: Vec<String> = Vec::new();
+        let mut run: Vec<&str> = Vec::new();
+        for word in prepared.split(' ') {
+            if word == IS_NOT {
+                if !run.is_empty() {
+                    lines.push(run.join(" "));
+                    run.clear();
+                }
+                lines.push(spelt(word));
+            } else {
+                run.push(word);
+            }
+        }
+        if !run.is_empty() {
+            lines.push(run.join(" "));
+        }
+        Some(lines)
+    }
+
+    /// Set the forced lines at the largest size within the limits.
+    fn set_forced(
+        &self,
+        voice: Voice,
+        lines: Vec<String>,
+        max_w: f32,
+        max_h: f32,
+        max_size: f32,
+    ) -> Block {
+        let widest = lines
+            .iter()
+            .map(|l| self.width(&voice, l, REF_SIZE))
+            .fold(1.0, f32::max);
+        let size = (max_w / widest * REF_SIZE)
+            .min(max_h / (lines.len() as f32 * voice.line_height))
+            .min(max_size * self.gain(&voice))
+            .max(1.0);
+        let line_widths = lines.iter().map(|l| self.width(&voice, l, size)).collect();
+        Block {
+            lines,
+            size,
+            line_widths,
+            voice,
+        }
+    }
+
     /// Set `text` on one line at the largest size <= `max_size` fitting `max_width`.
     pub fn fit_line(&self, voice: Voice, text: &str, max_width: f32, max_size: f32) -> Block {
-        let line = Self::prepare(&voice, text);
+        let line = spelt(&Self::prepare(&voice, text));
         let w100 = self.width(&voice, &line, REF_SIZE).max(1.0);
         let size = (max_width / w100 * REF_SIZE)
             .min(max_size * self.gain(&voice))
@@ -322,6 +422,15 @@ impl<'a> Typesetter<'a> {
     pub fn set_wrapped(&self, voice: Voice, text: &str, size: f32, max_width: f32) -> Block {
         let size = size * self.gain(&voice);
         let prepared = Self::prepare(&voice, text);
+        if let Some(lines) = Self::forced_lines(&prepared) {
+            let line_widths = lines.iter().map(|l| self.width(&voice, l, size)).collect();
+            return Block {
+                lines,
+                size,
+                line_widths,
+                voice,
+            };
+        }
         let words: Vec<&str> = prepared.split(' ').collect();
         for n in 1..=words.len().max(1) {
             let lines = self.balance(&voice, &words, n);
@@ -442,6 +551,9 @@ impl<'a> Typesetter<'a> {
         max_lines: usize,
     ) -> Block {
         let prepared = Self::prepare(&voice, text);
+        if let Some(lines) = Self::forced_lines(&prepared) {
+            return self.set_forced(voice, lines, max_w, max_h, max_size);
+        }
         let words: Vec<&str> = prepared.split(' ').collect();
         let mut best: Option<Block> = None;
         for n in 1..=max_lines.min(words.len()).max(1) {
@@ -535,10 +647,11 @@ pub fn text_layer(id: String, block: &Block, color: Color, align: TextAlign) -> 
         z_index: 0,
         visible: true,
         clip: None,
+        mask: None,
         depth: None,
         layout: None,
         kind: LayerKind::Text(TextStyle {
-            text: block.text(),
+            text: spelt(&block.text()),
             font_role: block.voice.role,
             font_size: round2(block.size),
             font_weight: block.voice.weight,
@@ -550,6 +663,8 @@ pub fn text_layer(id: String, block: &Block, color: Color, align: TextAlign) -> 
             max_width: None,
             uppercase: false,
             ink: None,
+            fill: None,
+            outline: None,
         }),
     }
 }

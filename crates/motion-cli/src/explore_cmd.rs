@@ -101,6 +101,7 @@ pub fn cmd_explore(args: &ExploreArgs) -> Result<()> {
             no_captions: false,
             take: 0,
             candidates: 0,
+            backdrop_avoid: Vec::new(),
         };
         let mut project = compile_with_options(
             &intent,
@@ -133,7 +134,7 @@ pub fn cmd_explore(args: &ExploreArgs) -> Result<()> {
             "record": project.project.exploration,
             "typography": typography,
         }));
-        println!(
+        detail!(
             "variant {i}: seed {seed} -> {} ({typography})",
             path.display()
         );
@@ -144,7 +145,7 @@ pub fn cmd_explore(args: &ExploreArgs) -> Result<()> {
     let json_path = out_abs.join("explore.json");
     std::fs::write(&json_path, serde_json::to_string_pretty(&summary)? + "\n")
         .with_context(|| format!("writing {}", json_path.display()))?;
-    println!(
+    info!(
         "sheet {} ; summary {}",
         sheet.display(),
         json_path.display()

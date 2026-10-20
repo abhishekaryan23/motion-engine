@@ -47,12 +47,14 @@ pub fn style_preview(
         .with_scale(temporal::scale_gains(taste.scale));
     let manifest = AssetManifest::empty();
     let mut ctx = Ctx {
+        family: None,
         reveals: Default::default(),
         warnings: Vec::new(),
         direction_seed: None,
         beat_params: BTreeMap::new(),
         direction_take: None,
         direction_beats: BTreeMap::new(),
+        budget: crate::compiler::accent_budget::AccentBudget::unlimited(),
         emotion: None,
         art: None,
         w: W,
@@ -73,6 +75,8 @@ pub fn style_preview(
         focal: BTreeMap::new(),
         stack: None,
         spoken: Vec::new(),
+        spoken_ends: Vec::new(),
+        stresses: Vec::new(),
         beat_count: 1,
         sequence: Default::default(),
     };
@@ -267,6 +271,7 @@ fn specimen_scene(ctx: &Ctx) -> Scene {
             stroke: Some(Stroke {
                 color: pal.muted,
                 width: 2.0,
+                brush: None,
             }),
         };
         layers.push(chip);
@@ -318,6 +323,7 @@ fn specimen_scene(ctx: &Ctx) -> Scene {
         stroke: Some(Stroke {
             color: pal.ink,
             width: 3.0,
+            brush: None,
         }),
     };
     layers.insert(0, card);

@@ -14,23 +14,36 @@ use motion_core::compiler::{
 };
 use motion_core::{validate, AssetLibrary, CreativeIntent, MotionProject, StyleProfile};
 use motion_render::asset_qa::{validate_manifest, AssetQaReport};
-use motion_render::export::{encode_mp4, render_frames_with, FrameRange, RenderOptions};
+use motion_render::export::{
+    encode_mp4_with, render_frames_with, render_to_mp4_stream_quality, FrameRange, Quality,
+    RenderOptions,
+};
 use motion_render::ingest::{ingest, IngestOptions};
 use motion_render::{
     lifecycle_report, structural_profile, visual_report, CpuRenderer, FontMeasure, MotionProfile,
     SceneQa,
 };
 
+#[macro_use]
+mod log;
 mod audio_cmd;
+mod edit_cmd;
+mod edit_cutaway;
+mod edit_render;
+mod edit_sound;
 mod explore_cmd;
 mod fonts_cmd;
+mod gen_providers_cmd;
+mod make_cmd;
 mod matte_cmd;
 mod mix_cmd;
 mod models_cmd;
 mod music_cmd;
+mod program_cmd;
 mod qa_intel;
 mod reel_cmd;
 mod reference_cmd;
+mod serve_cmd;
 mod sfx_cmd;
 mod style_cmd;
 mod voice_cmd;
@@ -42,6 +55,12 @@ mod voice_cmd;
     about = "Semantic editorial motion graphics engine"
 )]
 struct Cli {
+    /// Only warnings and errors.
+    #[arg(short, long, global = true)]
+    quiet: bool,
+    /// Per-scene and per-step detail.
+    #[arg(short, long, global = true, action = clap::ArgAction::Count)]
+    verbose: u8,
     #[command(subcommand)]
     cmd: Cmd,
 }
@@ -197,6 +216,10 @@ enum Cmd {
         /// EVOLVE snaps to word starts, captions are word-synced. Overrides music snapping.
         #[arg(long)]
         speech: Option<PathBuf>,
+        /// (0.24) Footage plan `<name>.footage.json` (operator file): `role: plate` clips
+        /// play as a muted full-bleed video backdrop under their beat's type. Needs ffmpeg.
+        #[arg(long)]
+        footage: Option<PathBuf>,
         /// (0.10 Q) Story-keyed variety: `auto` (seed from the story text) or a
         /// number. Curated palette per look, grammar rotation for repeated
         /// beats, rotating subject-first image layouts. Off = byte-identical.
@@ -212,6 +235,11 @@ enum Cmd {
         /// --variety when above 1; the default 1 is a plain compile.
         #[arg(long, default_value_t = 1)]
         candidates: u8,
+        /// (0.24 V1) Channel memory (`variety.ledger.json`): read the backdrop
+        /// families the channel used last, steer this video's family away from
+        /// them, and record this video's. Read only with --variety.
+        #[arg(long)]
+        backdrop_ledger: Option<PathBuf>,
         /// (0.10 Q) Art direction: `auto` (look chosen from the emotion the
         /// taste evokes) or classical_neon, halftone_cutout, clay_pop,
         /// ornament_editorial, journey. Curated palette, ground plate, asset
@@ -233,17 +261,41 @@ enum Cmd {
         brand: BrandArgs,
     },
     /// (0.9) Emotion typography registry: list faces/options, render specimens.
+    ///
+    /// Without a subcommand: `--sheet out.png [--format vertical|landscape]`
+    /// renders the pairing comparison sheet (same frame, one tile per
+    /// pairing); with neither, lists the faces/options the motion gate excludes.
     Fonts {
         #[command(subcommand)]
-        cmd: fonts_cmd::FontsCmd,
+        cmd: Option<fonts_cmd::FontsCmd>,
+        /// (0.24) Render the pairing comparison sheet to this PNG.
+        #[arg(long)]
+        sheet: Option<PathBuf>,
+        #[arg(long, value_enum, default_value = "vertical", requires = "sheet")]
+        format: fonts_cmd::SheetFormat,
+        #[arg(long, default_value = "assets")]
+        assets: PathBuf,
     },
-    /// (0.10) TTS provider keys: `set-key`, `show`, `test`.
+    /// TTS keys (`set-key`, `show`, `test`) and (P1) generation platforms
+    /// (`connect`, `tools`, `quote`, `generate`).
     Providers {
         #[command(subcommand)]
         cmd: voice_cmd::ProvidersCmd,
     },
     /// (0.10) Synthesize the intent's statements into <title>.voice.wav + <title>.speech.json.
     Voice(voice_cmd::VoiceArgs),
+    /// (0.24 E1) Raw talking-head video in: transcript, EditPlan and a preview edit
+    /// (lower third, number callouts, keywords, chapter cards, karaoke captions).
+    Edit(edit_cmd::EditArgs),
+    /// (v2) Brief or intent → recipe → program → MP4 + critique; one JSON line out.
+    Make(make_cmd::MakeArgs),
+    /// (v2) Host a local HTTP REST server for MotionEngine v2 Shorts and video generation.
+    Serve(serve_cmd::ServeArgs),
+    /// (v2) MotionEngine 2 programs: `validate`, `compile` (to a MotionScene).
+    Program {
+        #[command(subcommand)]
+        cmd: program_cmd::ProgramCmd,
+    },
     /// (0.20) Local recogniser models for `voice --align local`: `list`, `fetch`, `path`.
     Models {
         #[command(subcommand)]
@@ -317,12 +369,36 @@ enum Cmd {
     },
     /// Validate a MotionScene JSON.
     Validate { scene: PathBuf },
+    /// (0.24) Anti-slop critique: 8 scored axes plus the top findings. Exit 0 always.
+    Critique {
+        scene: PathBuf,
+        /// Print the full critique as JSON.
+        #[arg(long)]
+        json: bool,
+        /// Ban lists (default: the bundled assets/taste/slop.json).
+        #[arg(long)]
+        rules: Option<PathBuf>,
+        /// (0.24 M9) The style the scene was compiled from: names the tone in the
+        /// design read and declares the dials `dial_mismatch` checks.
+        #[arg(long)]
+        style: Option<PathBuf>,
+    },
     /// Render a MotionScene to PNG frames and an MP4.
     Render {
         scene: PathBuf,
-        /// Output directory (default: <scene dir>/<project name>/).
+        /// Output directory (default: <scene dir>/<scene file stem>/).
         #[arg(long)]
         out_dir: Option<PathBuf>,
+        /// Quick look: half-size stream-encoded `<stem>.proxy.mp4` (crf 28, veryfast).
+        #[arg(long)]
+        proxy: bool,
+        /// (0.24 M9) Encode quality: `delivery` (default: crf 20, max 8 Mbit/s), `master`
+        /// (crf 17, max 16 Mbit/s, the archive copy) or `proxy` (same as --proxy).
+        #[arg(long, value_parser = parse_quality, default_value = "delivery")]
+        quality: Quality,
+        /// Cap render threads (default: all cores).
+        #[arg(long)]
+        jobs: Option<usize>,
         /// Render only this frame (no video).
         #[arg(long)]
         frame: Option<u32>,
@@ -345,7 +421,7 @@ enum Cmd {
         #[arg(long, value_enum)]
         makeup_gain: Option<MakeupArg>,
         /// (0.10) SpeechMap JSON (`voice`): mix the voice-over (unducked, on top)
-        /// into the MP4. The music bed ducks 10 dB and the SFX bus 4 dB under it.
+        /// into the MP4. The music bed ducks 10 dB and the SFX bus 8 dB under it.
         /// Works without --sfx-library (voice-over only).
         #[arg(long)]
         speech: Option<PathBuf>,
@@ -358,6 +434,14 @@ enum Cmd {
         /// stdout) when the build or machine has no GPU support. Default: CPU.
         #[arg(long)]
         gpu: bool,
+        /// (0.24 M10) Brand mark PNG drawn by the renderer as the top layer of
+        /// every frame (operator option; never part of the scene).
+        #[arg(long)]
+        brand_mark: Option<PathBuf>,
+        /// (0.24 M10) Default corner of the brand mark: tl, tr, bl or br. The
+        /// mark moves to another corner on a beat whose text collides with it.
+        #[arg(long, default_value = "tr", value_parser = ["tl", "tr", "bl", "br"])]
+        brand_mark_corner: String,
     },
     /// Measure curated pack sounds into a self-contained SFX library directory.
     SfxIndex {
@@ -544,7 +628,9 @@ enum Cmd {
 }
 
 fn main() -> Result<()> {
-    match Cli::parse().cmd {
+    let cli = Cli::parse();
+    log::set_level(cli.quiet, cli.verbose);
+    match cli.cmd {
         Cmd::Compile {
             intent,
             style,
@@ -555,9 +641,11 @@ fn main() -> Result<()> {
             asset_family,
             music,
             speech,
+            footage,
             variety,
             take,
             candidates,
+            backdrop_ledger,
             art,
             no_captions,
             music_energy,
@@ -574,9 +662,11 @@ fn main() -> Result<()> {
             &asset_family,
             music.as_deref(),
             speech.as_deref(),
+            footage.as_deref(),
             variety.as_deref(),
             take,
             candidates,
+            backdrop_ledger.as_deref(),
             art.as_deref(),
             no_captions,
             music_energy.as_deref(),
@@ -584,10 +674,19 @@ fn main() -> Result<()> {
             &canvas,
             &brand,
         ),
-        Cmd::Fonts { cmd } => fonts_cmd::run(cmd),
+        Cmd::Fonts {
+            cmd,
+            sheet,
+            format,
+            assets,
+        } => fonts_cmd::run_fonts(cmd, sheet, format, &assets),
         Cmd::Providers { cmd } => voice_cmd::run_providers(cmd),
         Cmd::Voice(args) => voice_cmd::run_voice(args),
+        Cmd::Edit(args) => edit_cmd::run(args),
+        Cmd::Make(args) => make_cmd::run(args),
+        Cmd::Serve(args) => serve_cmd::run(args),
         Cmd::Models { cmd } => models_cmd::run(cmd),
+        Cmd::Program { cmd } => program_cmd::run(cmd),
         Cmd::Matte(args) => matte_cmd::run(args),
         Cmd::Reel(args) => reel_cmd::run_reel(args),
         Cmd::PlanAssets {
@@ -658,9 +757,36 @@ fn main() -> Result<()> {
             let report = cmd_validate_assets(&manifest, prompts.as_deref(), json)?;
             exit_on_fail(&report)
         }
+        Cmd::Critique {
+            scene,
+            json,
+            rules,
+            style,
+        } => {
+            let (project, _base) = load_scene(&scene)?;
+            let rules = match rules {
+                Some(p) => motion_core::SlopRules::from_json(&read(&p)?)
+                    .with_context(|| format!("parsing rules {}", p.display()))?,
+                None => motion_core::SlopRules::bundled(),
+            };
+            let style = match style {
+                Some(p) => Some(
+                    motion_core::StyleProfile::from_json(&read(&p)?)
+                        .with_context(|| format!("parsing style {}", p.display()))?,
+                ),
+                None => None,
+            };
+            let c = motion_core::critique_with(&project, &rules, style.as_ref());
+            if json {
+                println!("{}", serde_json::to_string_pretty(&c)?);
+            } else {
+                print!("{}", c.to_text());
+            }
+            Ok(())
+        }
         Cmd::Validate { scene } => {
             let (project, base) = load_scene(&scene)?;
-            println!(
+            info!(
                 "ok: {} scene(s), {} shared element(s), {:.2}s, {} frames",
                 project.scenes.len(),
                 project.shared.len(),
@@ -673,6 +799,9 @@ fn main() -> Result<()> {
         Cmd::Render {
             scene,
             out_dir,
+            proxy,
+            quality,
+            jobs,
             frame,
             no_video,
             keep_frames,
@@ -682,8 +811,29 @@ fn main() -> Result<()> {
             speech,
             music,
             gpu,
+            brand_mark,
+            brand_mark_corner,
         } => {
-            let mp4 = cmd_render(&scene, out_dir, frame, no_video, keep_frames, gpu)?;
+            let brand_mark = brand_mark.map(|p| {
+                (
+                    p,
+                    motion_render::brand_mark::Corner::parse(&brand_mark_corner)
+                        .unwrap_or(motion_render::brand_mark::Corner::Tr),
+                )
+            });
+            let mp4 = cmd_render(
+                &scene,
+                RenderArgs {
+                    out_dir,
+                    frame,
+                    no_video,
+                    keep_frames,
+                    gpu,
+                    brand_mark,
+                    quality: if proxy { Quality::Proxy } else { quality },
+                    jobs,
+                },
+            )?;
             match mp4 {
                 Some(mp4) => audio_cmd::mix_after_render(
                     &scene,
@@ -813,6 +963,7 @@ fn main() -> Result<()> {
                     speech,
                     audio_plan.as_deref(),
                     mixed.as_deref(),
+                    sfx_library.as_deref(),
                 )?;
                 if json {
                     println!("{}", serde_json::to_string_pretty(&report)?);
@@ -944,7 +1095,7 @@ fn cmd_asset_prompts(plan: &Path, output: Option<&Path>) -> Result<()> {
     match output {
         Some(path) => {
             std::fs::write(path, json)?;
-            println!(
+            info!(
                 "derived {} generator prompt(s) from {} request(s) -> {}",
                 prompts.specs.len(),
                 plan.requests.len(),
@@ -977,7 +1128,7 @@ fn cmd_ingest_assets(
     )?;
     print_asset_report(&outcome.report, json)?;
     if !json {
-        println!(
+        info!(
             "manifest: {} ({} image(s), {} missing)",
             output.display(),
             outcome.manifest.assets.len(),
@@ -1114,6 +1265,41 @@ fn read_manifest(path: &Path, library_root: &Path) -> Result<AssetManifest> {
     Ok(manifest)
 }
 
+/// (0.24) Read a footage plan; plate paths resolve against the plan's folder
+/// (made absolute) and missing `frame_count`/`fps` are probed with ffprobe.
+fn load_footage(path: &Path) -> Result<motion_core::footage::FootagePlan> {
+    use motion_core::footage::{FootagePlan, FootageRole};
+    let text = std::fs::read_to_string(path)
+        .with_context(|| format!("reading footage plan {}", path.display()))?;
+    let mut plan = FootagePlan::from_json(&text)
+        .with_context(|| format!("parsing footage plan {}", path.display()))?;
+    let dir = path.parent().unwrap_or(Path::new("."));
+    for clip in plan
+        .clips
+        .iter_mut()
+        .filter(|c| c.role == FootageRole::Plate)
+    {
+        let file = dir.join(&clip.path);
+        let abs = file
+            .canonicalize()
+            .with_context(|| format!("plate video {} not found", file.display()))?;
+        if !motion_core::scene::is_video_path(&clip.path) {
+            bail!(
+                "plate '{}': extension must be one of {}",
+                clip.path,
+                motion_core::scene::VIDEO_EXTENSIONS.join(", ")
+            );
+        }
+        if clip.frame_count == 0 || clip.fps <= 0.0 {
+            let p = motion_render::video::probe(&abs)?;
+            clip.frame_count = p.frame_count;
+            clip.fps = p.fps;
+        }
+        clip.path = abs.to_string_lossy().into_owned();
+    }
+    Ok(plan)
+}
+
 #[allow(clippy::too_many_arguments)]
 fn cmd_compile(
     intent_path: &Path,
@@ -1125,9 +1311,11 @@ fn cmd_compile(
     asset_families: &[String],
     music_path: Option<&Path>,
     speech_path: Option<&Path>,
+    footage_path: Option<&Path>,
     variety: Option<&str>,
     take: u64,
     candidates: u8,
+    backdrop_ledger: Option<&Path>,
     art: Option<&str>,
     no_captions: bool,
     music_energy: Option<&Path>,
@@ -1186,12 +1374,17 @@ fn cmd_compile(
                 .with_context(|| format!("--variety '{n}': expected auto or a number"))?,
         ),
     };
+    // (0.24 V1) The channel's last backdrop families steer this video's.
+    let ledger = backdrop_ledger.filter(|_| opts.variety.is_some());
+    if let Some(path) = ledger {
+        opts.backdrop_avoid = read_ledger(path);
+    }
     // (0.23) The take reaches the compiler only under a variety seed; a take
     // other than 0 is confirmed in one stdout line (default output unchanged).
     opts.take = take;
     if take != 0 {
         if opts.variety.is_some() {
-            println!("take {take}");
+            info!("take {take}");
         } else {
             println!("take {take} ignored (no --variety)");
         }
@@ -1199,6 +1392,9 @@ fn cmd_compile(
     if let Some(path) = speech_path {
         let statements = voice_cmd::spoken_lines(&intent);
         opts.speech = Some(voice_cmd::load_speech(path, &statements)?);
+    }
+    if let Some(path) = footage_path {
+        opts.footage = Some(load_footage(path)?);
     }
     if let Some(path) = music_energy {
         // A MusicPlan names its track relative to the plan file.
@@ -1271,21 +1467,57 @@ fn cmd_compile(
             base_dir: &out_abs,
             asset_root: &asset_root,
         };
-        let result = motion_render::score::best_of(&input, |k| {
-            let m = FontMeasure::with_fonts(font_paths.iter().map(PathBuf::as_path))
-                .map_err(|e| motion_core::CompileError::Invalid(format!("fonts: {e}")))?;
-            motion_core::compiler::compile_candidate(
-                &intent,
-                &style,
-                principles,
-                &library,
-                &m,
-                &manifest,
-                music.as_ref(),
-                &opts,
-                k,
-            )
-        })?;
+        let judge = |o: &motion_core::compiler::CompileOptions| {
+            motion_render::score::best_of(&input, |k| {
+                let m = FontMeasure::with_fonts(font_paths.iter().map(PathBuf::as_path))
+                    .map_err(|e| motion_core::CompileError::Invalid(format!("fonts: {e}")))?;
+                motion_core::compiler::compile_candidate(
+                    &intent,
+                    &style,
+                    principles,
+                    &library,
+                    &m,
+                    &manifest,
+                    music.as_ref(),
+                    o,
+                    k,
+                )
+            })
+        };
+        let mut result = judge(&opts)?;
+        // (0.24) Never ship a failure while a layout that passes exists: when
+        // every candidate failed a hard check (clipped text, contrast, ...),
+        // recompile under the plain editorial look (typographic grammars, no
+        // camera projection) and the plain compiler, and ship the first clean
+        // one. Only when nothing is clean does the best failing candidate ship
+        // (and says so).
+        if let Some(why) = result.shipped_with_failure.clone() {
+            let tried = result.project.project.art.as_ref().map(|a| a.look.clone());
+            let fallbacks: [Option<motion_core::compiler::art_direction::ArtMode>; 2] = [
+                Some(motion_core::compiler::art_direction::ArtMode::Force(
+                    motion_core::compiler::art_direction::Look::OrnamentEditorial,
+                ))
+                .filter(|_| tried.as_deref() != Some("ornament_editorial")),
+                None,
+            ];
+            for art in fallbacks {
+                if art.is_none() && tried.is_none() {
+                    continue;
+                }
+                let mut fb = opts.clone();
+                fb.art = art;
+                let Ok(next) = judge(&fb) else { continue };
+                if next.shipped_with_failure.is_none() {
+                    best_lines.push(format!(
+                        "warning[layout_fallback]: {why}; recompiled with {} and it passes",
+                        fb.art
+                            .map_or("the plain compiler", |_| "the plain editorial look")
+                    ));
+                    result = next;
+                    break;
+                }
+            }
+        }
         best_lines.push(result.summary());
         if let Some(why) = &result.shipped_with_failure {
             best_lines.push(format!(
@@ -1316,10 +1548,15 @@ fn cmd_compile(
     let rel = pathdiff::diff_paths(&assets_abs, &out_abs).unwrap_or(assets_abs.clone());
     project.asset_root = Some(rel.to_string_lossy().replace('\\', "/"));
 
+    // (0.24 M9) A picture that vanishes into its ground gets a keyline.
+    let keyed = motion_render::guard_pictures(&mut project, &out_abs);
+    if keyed > 0 {
+        info!("keyline: {keyed} picture(s) low in contrast against their ground");
+    }
     validate(&project, Some(&out_abs))
         .map_err(|e| anyhow::anyhow!("compiled scene failed validation:\n{e}"))?;
     std::fs::write(output, project.to_json_pretty() + "\n")?;
-    println!(
+    info!(
         "compiled {} beat(s) -> {} ({} scenes, {} shared, {:.2}s)",
         intent.beats.len(),
         output.display(),
@@ -1327,6 +1564,17 @@ fn cmd_compile(
         project.shared.len(),
         project.duration_seconds()
     );
+    // (0.24 V1) Record this video's backdrop family on the channel's ledger.
+    if let Some(path) = ledger {
+        let family = motion_core::compiler::backdrop_family(
+            &intent,
+            &style,
+            principles,
+            &opts.backdrop_avoid,
+        );
+        println!("backdrop: {}", family.name());
+        write_ledger(path, &opts.backdrop_avoid, family.name())?;
+    }
     // (0.23) What best-of-N chose, and (never silent) when nothing was clean.
     for line in &best_lines {
         println!("{line}");
@@ -1336,6 +1584,37 @@ fn cmd_compile(
     for w in &warnings {
         println!("{}", format_warning(w));
     }
+    Ok(())
+}
+
+/// (0.24 V1) The families the channel used, oldest first (`variety.ledger.json`:
+/// `{"backdrops": ["ink", ...]}`); empty when the file is absent or unreadable.
+fn read_ledger(path: &Path) -> Vec<String> {
+    std::fs::read_to_string(path)
+        .ok()
+        .and_then(|t| serde_json::from_str::<serde_json::Value>(&t).ok())
+        .and_then(|v| {
+            v.get("backdrops").and_then(|b| {
+                b.as_array().map(|a| {
+                    a.iter()
+                        .filter_map(|x| x.as_str().map(str::to_string))
+                        .collect()
+                })
+            })
+        })
+        .unwrap_or_default()
+}
+
+/// Append `family` to the ledger, keeping the last eight.
+fn write_ledger(path: &Path, seen: &[String], family: &str) -> Result<()> {
+    let mut all: Vec<String> = seen.to_vec();
+    all.push(family.to_string());
+    let from = all.len().saturating_sub(8);
+    let body = serde_json::json!({ "backdrops": &all[from..] });
+    if let Some(dir) = path.parent().filter(|p| !p.as_os_str().is_empty()) {
+        std::fs::create_dir_all(dir)?;
+    }
+    std::fs::write(path, serde_json::to_string_pretty(&body)? + "\n")?;
     Ok(())
 }
 
@@ -1360,42 +1639,104 @@ fn load_scene(path: &Path) -> Result<(MotionProject, PathBuf)> {
     Ok((project, base))
 }
 
-fn cmd_render(
-    scene: &Path,
+/// `render` flags that are not the scene path.
+struct RenderArgs {
     out_dir: Option<PathBuf>,
     frame: Option<u32>,
     no_video: bool,
     keep_frames: bool,
     gpu: bool,
-) -> Result<Option<PathBuf>> {
+    brand_mark: Option<(PathBuf, motion_render::brand_mark::Corner)>,
+    quality: Quality,
+    jobs: Option<usize>,
+}
+
+fn parse_quality(s: &str) -> Result<Quality, String> {
+    Quality::parse(s).ok_or_else(|| format!("unknown quality `{s}` (master, delivery or proxy)"))
+}
+
+/// The scene file name without `.motion.json` / `.json`.
+fn scene_stem(scene: &Path) -> String {
+    let name = scene
+        .file_name()
+        .map(|n| n.to_string_lossy().into_owned())
+        .unwrap_or_else(|| "scene".to_string());
+    name.strip_suffix(".motion.json")
+        .or_else(|| name.strip_suffix(".json"))
+        .unwrap_or(&name)
+        .to_string()
+}
+
+fn cmd_render(scene: &Path, args: RenderArgs) -> Result<Option<PathBuf>> {
+    match args.jobs {
+        Some(n) => motion_render::export::with_threads(n, || cmd_render_inner(scene, args))?,
+        None => cmd_render_inner(scene, args),
+    }
+}
+
+fn cmd_render_inner(scene: &Path, args: RenderArgs) -> Result<Option<PathBuf>> {
+    let RenderArgs {
+        out_dir,
+        frame,
+        no_video,
+        keep_frames,
+        gpu,
+        brand_mark,
+        quality,
+        jobs: _,
+    } = args;
+    let options = RenderOptions {
+        gpu_post: gpu,
+        brand_mark,
+    };
+    let proxy = quality == Quality::Proxy;
     let (project, base) = load_scene(scene)?;
-    let out_dir = out_dir.unwrap_or_else(|| base.join(&project.project.name));
+    let stem = scene_stem(scene);
+    let out_dir = out_dir.unwrap_or_else(|| base.join(&stem));
     let started = Instant::now();
+
+    // (0.25) Zero-disk streaming path: when rendering a full video and individual
+    // frames are not explicitly requested to be kept on disk, stream directly to
+    // FFmpeg's stdin pipe. 0 intermediate PNG files are written to disk.
+    if frame.is_none() && !no_video && (!keep_frames || proxy) {
+        std::fs::create_dir_all(&out_dir)?;
+        let mp4 = out_dir.join(if proxy {
+            format!("{stem}.proxy.mp4")
+        } else {
+            format!("{stem}.mp4")
+        });
+        let report = render_to_mp4_stream_quality(&project, &base, &mp4, options.clone(), quality)?;
+        if let Some(notice) = &report.gpu_notice {
+            println!("{notice}");
+        }
+        info!(
+            "rendered {} frame(s) -> {} in {:.1}s",
+            project.frame_count(),
+            mp4.display(),
+            started.elapsed().as_secs_f32()
+        );
+        return Ok(Some(mp4));
+    }
+
     let range = match frame {
         Some(f) => FrameRange::Only(f),
         None => FrameRange::All,
     };
-    let report = render_frames_with(
-        &project,
-        &base,
-        &out_dir,
-        range,
-        RenderOptions { gpu_post: gpu },
-    )?;
+    let report = render_frames_with(&project, &base, &out_dir, range, options)?;
     if let Some(notice) = &report.gpu_notice {
         println!("{notice}");
     }
     let written = report.frames;
-    println!(
+    detail!(
         "rendered {} frame(s) to {} in {:.1}s",
         written.len(),
         out_dir.display(),
         started.elapsed().as_secs_f32()
     );
     if frame.is_none() && !no_video {
-        let mp4 = out_dir.join(format!("{}.mp4", project.project.name));
-        encode_mp4(&out_dir, project.canvas.fps, &mp4)?;
-        println!("encoded {}", mp4.display());
+        let mp4 = out_dir.join(format!("{stem}.mp4"));
+        encode_mp4_with(&out_dir, project.canvas.fps, &mp4, quality)?;
+        info!("encoded {} ({} frames)", mp4.display(), written.len());
         // (0.22) The frames are 1-4 MB each and the MP4 now holds them.
         if !keep_frames {
             for path in &written {
@@ -1404,6 +1745,11 @@ fn cmd_render(
         }
         return Ok(Some(mp4));
     }
+    info!(
+        "rendered {} frame(s) to {}",
+        written.len(),
+        out_dir.display()
+    );
     Ok(None)
 }
 

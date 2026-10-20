@@ -65,6 +65,8 @@ pub enum DtwPreset {
     TinyEn,
     BaseEn,
     SmallEn,
+    /// Multilingual large-v3-turbo.
+    LargeV3Turbo,
 }
 
 /// A downloadable recogniser model: pinned URL and SHA256, never fetched
@@ -113,6 +115,16 @@ pub const MODELS: &[ModelSpec] = &[
         bytes: 487_614_201,
         preset: DtwPreset::SmallEn,
         note: "more accurate, about 3x slower",
+    },
+    ModelSpec {
+        name: "whisper-large-v3-turbo",
+        file: "ggml-large-v3-turbo.bin",
+        url: "https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-large-v3-turbo.bin",
+        // Hugging Face LFS oid / x-linked-etag of the file (2026-10-12).
+        sha256: "1fc70f774d38eb169993ac391eea357ef47c88757ef72ee5943879b7e8e2bc69",
+        bytes: 1_624_555_275,
+        preset: DtwPreset::LargeV3Turbo,
+        note: "multilingual (Hindi/Hinglish), most accurate, about 1.6 GB",
     },
 ];
 
@@ -306,6 +318,12 @@ pub struct LocalParams {
     /// feature `asr-ctc` and the `wav2vec2-base-960h` model.
     #[serde(default)]
     pub ctc: bool,
+    /// (0.24) Anti-loop decoding: temperature fallback, entropy / log-prob /
+    /// no-speech thresholds, blank and non-speech suppression, and a Roman
+    /// Hinglish prompt when the language is not English. Off by default so
+    /// existing cached results and measurements stay valid.
+    #[serde(default)]
+    pub guard: bool,
 }
 
 impl Default for LocalParams {
@@ -316,6 +334,7 @@ impl Default for LocalParams {
             dtw: true,
             threads: 0,
             ctc: false,
+            guard: false,
         }
     }
 }
@@ -334,6 +353,9 @@ impl LocalParams {
             self.beam_size.max(1),
             u8::from(self.dtw)
         );
+        if self.guard {
+            key.push_str(";guard=1");
+        }
         if self.ctc {
             key.push_str(";ctc=1;ctcalign=");
             key.push_str(crate::asr_ctc::ALIGN_VERSION);
@@ -426,10 +448,47 @@ pub fn transcribe(
     params: &LocalParams,
     cache_root: &Path,
 ) -> Result<(Vec<AsrWord>, bool), VoiceError> {
+    let t = transcribe_detect(wav, spec, models_root, params, cache_root)?;
+    Ok((t.words, t.cached))
+}
+
+/// Result of [`transcribe_detect`].
+#[derive(Debug, Clone)]
+pub struct Transcribed {
+    pub words: Vec<AsrWord>,
+    pub cached: bool,
+    /// The language whisper decoded in (`en`, `hi`, ...); `params.language`
+    /// when a cache entry predates language tracking.
+    pub language: String,
+    /// Whether CTC refinement ran (skipped for non-English audio: the
+    /// wav2vec2 aligner is English-only).
+    pub ctc_applied: bool,
+}
+
+/// [`transcribe`] that also reports the detected language and whether CTC
+/// refinement was applied. With `params.ctc` and a non-English result the
+/// refinement is skipped (the aligner knows English letters only).
+pub fn transcribe_detect(
+    wav: &[u8],
+    spec: &ModelSpec,
+    models_root: &Path,
+    params: &LocalParams,
+    cache_root: &Path,
+) -> Result<Transcribed, VoiceError> {
     let path = cache_path(cache_root, spec.sha256, params, wav);
+    let lang_path = path.with_extension("lang");
     if let Ok(text) = std::fs::read_to_string(&path) {
         if let Ok(words) = serde_json::from_str::<Vec<AsrWord>>(&text) {
-            return Ok((words, true));
+            let lang = std::fs::read_to_string(&lang_path)
+                .map(|l| l.trim().to_string())
+                .unwrap_or_else(|_| params.language.clone());
+            let ctc_applied = params.ctc && lang == "en";
+            return Ok(Transcribed {
+                words,
+                cached: true,
+                language: lang,
+                ctc_applied,
+            });
         }
     }
     let model = model_path(models_root, spec);
@@ -447,8 +506,9 @@ pub fn transcribe(
     }
     let decoded = crate::wav::decode(wav)?;
     let audio = resample_16k(&decoded.samples, decoded.sample_rate);
-    let mut words = recognise(&audio, &model, spec.preset, params)?;
-    if params.ctc {
+    let (mut words, language) = recognise(&audio, &model, spec.preset, params)?;
+    let ctc_applied = params.ctc && language == "en";
+    if ctc_applied {
         // whisper supplies WHAT was said; CTC forced alignment WHEN.
         words = crate::asr_ctc::refine(&audio, &words, models_root)?;
     }
@@ -456,7 +516,13 @@ pub fn transcribe(
     let tmp = path.with_extension("tmp");
     std::fs::write(&tmp, serde_json::to_string(&words).unwrap_or_default())?;
     std::fs::rename(&tmp, &path)?;
-    Ok((words, false))
+    std::fs::write(&lang_path, &language)?;
+    Ok(Transcribed {
+        words,
+        cached: false,
+        language,
+        ctc_applied,
+    })
 }
 
 /// One whisper text token (special and timestamp tokens are dropped).
@@ -739,11 +805,11 @@ fn recognise(
     model: &Path,
     preset: DtwPreset,
     params: &LocalParams,
-) -> Result<Vec<AsrWord>, VoiceError> {
-    let segs = recognise_segments(audio16k, model, preset, params)?;
+) -> Result<(Vec<AsrWord>, String), VoiceError> {
+    let (segs, language) = recognise_segments_lang(audio16k, model, preset, params)?;
     let (mut words, own) = build_words(&segs, TIMESTAMP_SOURCE);
     starts_after_pauses(&mut words, &own, &envelope_db_f32(audio16k, WHISPER_RATE));
-    Ok(words)
+    Ok((words, language))
 }
 
 /// whisper's raw segments for 16 kHz mono audio (diagnostics and the
@@ -761,6 +827,25 @@ pub fn recognise_segments(
     preset: DtwPreset,
     params: &LocalParams,
 ) -> Result<Vec<RawSegment>, VoiceError> {
+    recognise_segments_lang(audio16k, model, preset, params).map(|(segs, _)| segs)
+}
+
+/// Roman Hinglish prompt: biases a multilingual model toward Roman script
+/// and the spoken forms of numbers instead of Devanagari.
+#[cfg(feature = "asr-local")]
+const HINGLISH_PROMPT: &str =
+    "Hanji, toh aaj hum baat karenge ki paisa kaise banta hai. Matlab 50 hazaar, 2 lakh ya 10 crore, kuch bhi ho sakta hai.";
+
+/// [`recognise_segments`] plus the language whisper decoded in. With
+/// `params.language == "auto"` whisper detects it; `params.guard` turns on the
+/// anti-loop safeguards.
+#[cfg(feature = "asr-local")]
+pub fn recognise_segments_lang(
+    audio16k: &[f32],
+    model: &Path,
+    preset: DtwPreset,
+    params: &LocalParams,
+) -> Result<(Vec<RawSegment>, String), VoiceError> {
     use whisper_rs::{
         DtwMode, DtwModelPreset, DtwParameters, FullParams, SamplingStrategy, WhisperContext,
         WhisperContextParameters,
@@ -770,7 +855,7 @@ pub fn recognise_segments(
     // Route whisper.cpp / ggml logging away from stderr (no log backend: dropped).
     whisper_rs::install_logging_hooks();
     if audio16k.is_empty() {
-        return Ok(Vec::new());
+        return Ok((Vec::new(), params.language.clone()));
     }
     let mut cp = WhisperContextParameters::default();
     cp.use_gpu(true);
@@ -779,6 +864,7 @@ pub fn recognise_segments(
             DtwPreset::TinyEn => DtwModelPreset::TinyEn,
             DtwPreset::BaseEn => DtwModelPreset::BaseEn,
             DtwPreset::SmallEn => DtwModelPreset::SmallEn,
+            DtwPreset::LargeV3Turbo => DtwModelPreset::LargeV3Turbo,
         };
         cp.dtw_parameters(DtwParameters {
             mode: DtwMode::ModelPreset { model_preset },
@@ -809,10 +895,26 @@ pub fn recognise_segments(
     fp.set_print_progress(false);
     fp.set_print_realtime(false);
     fp.set_print_timestamps(false);
+    if params.guard {
+        // Anti-loop: retry hot when a window is repetitive (entropy) or
+        // unlikely (log-prob), skip silence, suppress blanks / non-speech.
+        fp.set_temperature_inc(0.2);
+        fp.set_entropy_thold(2.4);
+        fp.set_logprob_thold(-1.0);
+        fp.set_no_speech_thold(0.6);
+        fp.set_suppress_blank(true);
+        fp.set_suppress_nst(true);
+        if params.language != "en" {
+            fp.set_initial_prompt(HINGLISH_PROMPT);
+        }
+    }
     if params.threads > 0 {
         fp.set_n_threads(i32::try_from(params.threads).unwrap_or(i32::MAX));
     }
     state.full(fp, audio16k).map_err(|e| err("decode", e))?;
+    let language = whisper_rs::get_lang_str(state.full_lang_id_from_state())
+        .unwrap_or("en")
+        .to_string();
     let eot = ctx.token_eot();
     let mut out = Vec::new();
     for seg in state.as_iter() {
@@ -845,7 +947,7 @@ pub fn recognise_segments(
             tokens,
         });
     }
-    Ok(out)
+    Ok((out, language))
 }
 
 #[cfg(not(feature = "asr-local"))]
@@ -854,7 +956,7 @@ fn recognise(
     _model: &Path,
     _preset: DtwPreset,
     _params: &LocalParams,
-) -> Result<Vec<AsrWord>, VoiceError> {
+) -> Result<(Vec<AsrWord>, String), VoiceError> {
     Err(VoiceError::Unsupported("local word timing"))
 }
 

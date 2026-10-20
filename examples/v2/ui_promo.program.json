@@ -1,0 +1,312 @@
+{
+ "version": "2.0",
+ "meta": {
+  "name": "ui_promo",
+  "aspect": "16:9",
+  "duration": 10.0,
+  "end_beat": 20
+ },
+ "palette": {
+  "background": "#0C0C0D",
+  "ink": "#F2F0EA",
+  "accent": "#C8F25A",
+  "muted": "#3A3A3C"
+ },
+ "music": {
+  "track": "driving_pulse",
+  "start": 0.107
+ },
+ "components": [
+  {
+   "id": "ground",
+   "kind": "backdrop"
+  },
+  {
+   "id": "grid",
+   "kind": "field",
+   "preset": "grid",
+   "colour": "muted"
+  },
+  {
+   "id": "ask",
+   "kind": "kinetic_text",
+   "preset": "poster_cuts",
+   "words": [
+    "What",
+    "are we",
+    "making?",
+    "Watch."
+   ],
+   "stress": [
+    2
+   ],
+   "start_beat": 0,
+   "beat_cuts": 1,
+   "end_beat": 4
+  },
+  {
+   "id": "ui",
+   "kind": "device_frame",
+   "slot": "lead",
+   "start_beat": 4,
+   "end_beat": 20,
+   "states": [
+    {
+     "shape": "pill",
+     "title": "Describe a scene…",
+     "fill": "muted"
+    },
+    {
+     "shape": "pill",
+     "title": "Paper cut-out, 12 s",
+     "fill": "muted"
+    },
+    {
+     "shape": "button",
+     "title": "Generate",
+     "fill": "accent"
+    },
+    {
+     "shape": "card",
+     "title": "Three directions",
+     "items": [
+      "Paper cut-out",
+      "Ink & grain",
+      "Neon grid"
+     ]
+    },
+    {
+     "shape": "card",
+     "title": "Paper cut-out",
+     "detail": "12 s · 1080p",
+     "cta": "Render"
+    },
+    {
+     "shape": "toast",
+     "title": "Rendered in 4.1 s",
+     "detail": "Ready to post",
+     "icon": "check"
+    }
+   ],
+   "steps": [
+    {
+     "beat": 6,
+     "do": "to_state",
+     "state": 1
+    },
+    {
+     "beat": 8,
+     "do": "click",
+     "then": 2
+    },
+    {
+     "beat": 10,
+     "do": "click",
+     "then": 3
+    },
+    {
+     "beat": 14,
+     "do": "click",
+     "then": 4
+    },
+    {
+     "beat": 17,
+     "do": "click",
+     "then": 5
+    }
+   ]
+  },
+  {
+   "id": "w0",
+   "kind": "title",
+   "preset": "display",
+   "text": "Describe",
+   "slot": "trail",
+   "size": "xl",
+   "colour": "ink",
+   "start_beat": 4,
+   "end_beat": 5
+  },
+  {
+   "id": "w1",
+   "kind": "title",
+   "preset": "display",
+   "text": "it.",
+   "slot": "trail",
+   "size": "xl",
+   "colour": "ink",
+   "start_beat": 5,
+   "end_beat": 6
+  },
+  {
+   "id": "w2",
+   "kind": "title",
+   "preset": "display",
+   "text": "Pick",
+   "slot": "trail",
+   "size": "xl",
+   "colour": "ink",
+   "start_beat": 6,
+   "end_beat": 7
+  },
+  {
+   "id": "w3",
+   "kind": "title",
+   "preset": "display",
+   "text": "a look.",
+   "slot": "trail",
+   "size": "xl",
+   "colour": "ink",
+   "start_beat": 7,
+   "end_beat": 8
+  },
+  {
+   "id": "w4",
+   "kind": "title",
+   "preset": "display",
+   "text": "Generate.",
+   "slot": "trail",
+   "size": "xl",
+   "colour": "accent",
+   "start_beat": 8,
+   "end_beat": 9
+  },
+  {
+   "id": "w5",
+   "kind": "title",
+   "preset": "display",
+   "text": "Three",
+   "slot": "trail",
+   "size": "xl",
+   "colour": "ink",
+   "start_beat": 9,
+   "end_beat": 10
+  },
+  {
+   "id": "w6",
+   "kind": "title",
+   "preset": "display",
+   "text": "takes.",
+   "slot": "trail",
+   "size": "xl",
+   "colour": "ink",
+   "start_beat": 10,
+   "end_beat": 11
+  },
+  {
+   "id": "w7",
+   "kind": "title",
+   "preset": "display",
+   "text": "Choose",
+   "slot": "trail",
+   "size": "xl",
+   "colour": "ink",
+   "start_beat": 11,
+   "end_beat": 12
+  },
+  {
+   "id": "w8",
+   "kind": "title",
+   "preset": "display",
+   "text": "one.",
+   "slot": "trail",
+   "size": "xl",
+   "colour": "ink",
+   "start_beat": 12,
+   "end_beat": 13
+  },
+  {
+   "id": "w9",
+   "kind": "title",
+   "preset": "display",
+   "text": "Render.",
+   "slot": "trail",
+   "size": "xl",
+   "colour": "accent",
+   "start_beat": 13,
+   "end_beat": 14
+  },
+  {
+   "id": "w10",
+   "kind": "title",
+   "preset": "display",
+   "text": "4.1",
+   "slot": "trail",
+   "size": "xl",
+   "colour": "accent",
+   "start_beat": 14,
+   "end_beat": 15
+  },
+  {
+   "id": "w11",
+   "kind": "title",
+   "preset": "display",
+   "text": "seconds.",
+   "slot": "trail",
+   "size": "xl",
+   "colour": "ink",
+   "start_beat": 15,
+   "end_beat": 16
+  },
+  {
+   "id": "w12",
+   "kind": "title",
+   "preset": "display",
+   "text": "Ready",
+   "slot": "trail",
+   "size": "xl",
+   "colour": "ink",
+   "start_beat": 16,
+   "end_beat": 17
+  },
+  {
+   "id": "w13",
+   "kind": "title",
+   "preset": "display",
+   "text": "to post.",
+   "slot": "trail",
+   "size": "xl",
+   "colour": "ink",
+   "start_beat": 17,
+   "end_beat": 18
+  },
+  {
+   "id": "w14",
+   "kind": "title",
+   "preset": "display",
+   "text": "Made",
+   "slot": "trail",
+   "size": "xl",
+   "colour": "ink",
+   "start_beat": 18,
+   "end_beat": 19
+  },
+  {
+   "id": "w15",
+   "kind": "title",
+   "preset": "display",
+   "text": "here.",
+   "slot": "trail",
+   "size": "xl",
+   "colour": "ink",
+   "start_beat": 19,
+   "end_beat": 20
+  },
+  {
+   "id": "end",
+   "kind": "title",
+   "preset": "display",
+   "text": "Made, not mocked.",
+   "size": "xl",
+   "colour": "accent",
+   "start_beat": 20,
+   "timeline": [
+    {
+     "at": 0.0,
+     "do": "enter",
+     "style": "fade"
+    }
+   ]
+  }
+ ]
+}

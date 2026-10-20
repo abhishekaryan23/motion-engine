@@ -33,6 +33,10 @@ pub struct ReelArgs {
     /// paid opt-ins gemini, mai, deepgram. Always one take in one voice.
     #[arg(long, default_value = "auto")]
     pub tts_model: String,
+    /// (0.24) Provider voice id: keeps one narrator across looks/takes
+    /// (overrides the emotion-chosen voice; see `voice --voice`).
+    #[arg(long)]
+    pub voice: Option<String>,
     /// Music bed: auto (default: the mood read from the story's content picks
     /// a bed of the catalog; none when no bed fits), none, or a bed id from
     /// assets/music/catalog.json.
@@ -92,6 +96,9 @@ pub struct ReelArgs {
     /// Delivered images (AssetManifest JSON) for the compile.
     #[arg(long)]
     pub asset_manifest: Option<PathBuf>,
+    /// (0.24) Footage plan (`<name>.footage.json`, video plates) for the compile.
+    #[arg(long)]
+    pub footage: Option<PathBuf>,
     /// Asset library root.
     #[arg(long, default_value = "assets")]
     pub assets: PathBuf,
@@ -105,6 +112,14 @@ pub struct ReelArgs {
     /// build with `--features gpu`, falls back to the CPU with one line).
     #[arg(long)]
     pub gpu: bool,
+    /// (0.24 M10) Brand mark PNG, drawn by the renderer as the top layer of
+    /// every frame (forwarded to `render --brand-mark`). An operator option,
+    /// not part of the intent or style.
+    #[arg(long)]
+    pub brand_mark: Option<PathBuf>,
+    /// (0.24 M10) The brand mark's default corner: tl, tr (default), bl or br.
+    #[arg(long, default_value = "tr", value_parser = ["tl", "tr", "bl", "br"])]
+    pub brand_mark_corner: String,
     /// (0.21) Brand colours, forwarded to `compile --brand`.
     #[command(flatten)]
     pub brand: crate::BrandArgs,
@@ -292,7 +307,11 @@ fn run(step: &str, mut cmd: Command, quiet: bool) -> Result<String> {
     }
     if !quiet {
         for line in stdout.lines() {
-            println!("  {line}");
+            if line.starts_with("warning") {
+                println!("  {line}");
+            } else {
+                detail!("  {line}");
+            }
         }
     }
     Ok(stdout)
@@ -331,7 +350,7 @@ pub fn run_reel(args: ReelArgs) -> Result<()> {
     if args.plan_only {
         print_music(&decision);
         if let Some((_, plan)) = &decision.bed {
-            println!("music plan: {}", plan.display());
+            info!("music plan: {}", plan.display());
         }
         return Ok(());
     }
@@ -355,7 +374,7 @@ pub fn run_reel(args: ReelArgs) -> Result<()> {
     };
 
     // 1. Voice-over.
-    println!("[1/5] voice ({} · emotion {emotion})", args.tts_model);
+    detail!("[1/5] voice ({} · emotion {emotion})", args.tts_model);
     let mut c = Command::new(&exe);
     c.arg("voice")
         .arg(&args.intent)
@@ -368,6 +387,9 @@ pub fn run_reel(args: ReelArgs) -> Result<()> {
         .arg("-o")
         .arg(&out);
     style_args(&mut c);
+    if let Some(v) = &args.voice {
+        c.arg("--voice").arg(v);
+    }
     if args.offline {
         c.arg("--offline");
     }
@@ -378,7 +400,7 @@ pub fn run_reel(args: ReelArgs) -> Result<()> {
     let music = decision.bed.map(|(_, plan)| plan);
 
     // 2. Compile.
-    println!(
+    detail!(
         "[2/5] compile (art {}, variety {})",
         args.art,
         if args.no_variety { "off" } else { "auto" }
@@ -398,6 +420,15 @@ pub fn run_reel(args: ReelArgs) -> Result<()> {
     }
     if !args.no_variety {
         c.arg("--variety").arg("auto");
+        // (0.24 V1) The channel's memory sits beside the output directory, so
+        // every video of a channel steers its backdrop family away from the
+        // last ones.
+        c.arg("--backdrop-ledger").arg(
+            out.parent()
+                .filter(|p| !p.as_os_str().is_empty())
+                .unwrap_or(Path::new("."))
+                .join("variety.ledger.json"),
+        );
     }
     // (0.23) Take 0 is the default and adds nothing to the compile command.
     if args.take != 0 {
@@ -417,6 +448,9 @@ pub fn run_reel(args: ReelArgs) -> Result<()> {
     if let Some(m) = &args.asset_manifest {
         c.arg("--asset-manifest").arg(m);
     }
+    if let Some(f) = &args.footage {
+        c.arg("--footage").arg(f);
+    }
     for f in &args.asset_family {
         c.arg("--asset-family").arg(f);
     }
@@ -432,7 +466,7 @@ pub fn run_reel(args: ReelArgs) -> Result<()> {
     run("compile", c, false)?;
 
     // 4. Sound design plan + render.
-    println!("[4/5] sound design + render");
+    detail!("[4/5] sound design + render");
     let mut c = Command::new(&exe);
     c.arg("plan-audio")
         .arg(&scene)
@@ -466,13 +500,19 @@ pub fn run_reel(args: ReelArgs) -> Result<()> {
     if args.gpu {
         c.arg("--gpu");
     }
+    if let Some(mark) = &args.brand_mark {
+        c.arg("--brand-mark")
+            .arg(mark)
+            .arg("--brand-mark-corner")
+            .arg(&args.brand_mark_corner);
+    }
     let rendered = run("render", c, true)?;
     // The render step is quiet; surface its one-line GPU fallback notice.
     for line in rendered.lines().filter(|l| l.starts_with("gpu:")) {
         println!("  {line}");
     }
-    let frames_dir = out.join(&intent.title);
-    let video = frames_dir.join(format!("{}.mp4", intent.title));
+    let frames_dir = out.join(&stem);
+    let video = frames_dir.join(format!("{stem}.mp4"));
     if !args.keep_frames {
         if let Ok(rd) = std::fs::read_dir(&frames_dir) {
             for e in rd.flatten() {
@@ -485,7 +525,7 @@ pub fn run_reel(args: ReelArgs) -> Result<()> {
     }
 
     // 5. QA.
-    println!("[5/5] speech QA");
+    detail!("[5/5] speech QA");
     let mut c = Command::new(&exe);
     c.arg("qa")
         .arg(&scene)
@@ -499,9 +539,9 @@ pub fn run_reel(args: ReelArgs) -> Result<()> {
     for line in qa.lines().filter(|l| {
         l.contains("FAIL") || l.starts_with("  max caption") || l.starts_with("speech qa")
     }) {
-        println!("  {}", line.trim());
+        info!("  {}", line.trim());
     }
-    println!("video: {}", video.display());
+    info!("video: {}", video.display());
     Ok(())
 }
 

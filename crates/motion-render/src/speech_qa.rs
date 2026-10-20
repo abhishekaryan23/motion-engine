@@ -16,8 +16,10 @@
 //! | `bed_over_voice` | (0.23) the bed's largest 400 ms level in the narration gaps at most 6 dB under the voice's integrated loudness, FAIL above |
 //! | `speech_band_masking` | (0.23, WARN) the bed's 300-4000 Hz level while the voice speaks at most 18 dB under the voice's |
 //! | `speech_rate` | (0.20) per sentence, syllables / (last word end - first word start): FAIL outside `SPEECH_RATE_FAIL`, WARN outside `SPEECH_RATE_WARN` |
-//! | `reveal_before_speech` | (0.20) no anchored layer (`ArtRecord.reveals`; kicker exempt) becomes readable more than `REVEAL_LEAD_MAX` before its anchor word starts |
+//! | `reveal_before_speech` | (0.20) no text layer whose words the narrator says in its beat (declared anchors in `ArtRecord.reveals`, else its own text; (0.24) the kicker is exempt) becomes readable more than `REVEAL_LEAD_MAX` before its word starts |
 //! | `reveal_late` | (0.20, WARN) an anchored layer readable more than `REVEAL_LATE_MAX` after its anchor word ends |
+//! | `reveal_unspoken` | (0.24, WARN) a text more than twice the caption size whose words the narrator never says in its beat (the small title of an unspoken statement is allowed) |
+//! | `slam_density` | (0.24) a slam beat shows at most two big text units, and no keyword unit repeats a word of the title or the value |
 //! | `spoken_mismatch` | (0.20) the recognised words (`SpeechMap.recognised`) against the script: FAIL on a missing / changed content word (a number, an anchor word), WARN otherwise; SKIP without recognised words |
 //!
 //! A check may also WARN: the verdict stays PASS, the finding is printed.
@@ -137,6 +139,11 @@ pub struct SpeechQaReport {
     /// <t> s, "<word>" ends at <t> s (late <ms> ms)`, or `beat N: <group>
     /// (<role>) never readable, "<word>" ends at <t> s`.
     pub reveal_late_findings: Vec<String>,
+    /// (0.24) `reveal_unspoken` findings: `beat N: "<text>" (<group>) is <px>
+    /// px type and the narrator never says it`.
+    pub reveal_unspoken_findings: Vec<String>,
+    /// (0.24) `slam_density` findings: `beat N: <what>`.
+    pub slam_density_findings: Vec<String>,
     /// (0.20) `spoken_mismatch` findings: `beat N: missing "<word>"` /
     /// `beat N: "<script>" heard as "<recognised>"`.
     pub spoken_mismatch_findings: Vec<String>,
@@ -181,6 +188,8 @@ impl SpeechQaReport {
             "speech_rate" => &self.speech_rate_findings,
             "reveal_before_speech" => &self.reveal_before_speech_findings,
             "reveal_late" => &self.reveal_late_findings,
+            "reveal_unspoken" => &self.reveal_unspoken_findings,
+            "slam_density" => &self.slam_density_findings,
             "spoken_mismatch" => &self.spoken_mismatch_findings,
             _ => &[],
         }
@@ -355,6 +364,13 @@ pub fn speech_report(
         reveals.late.status,
         reveals.late.detail,
     ));
+    checks.push(check(
+        "reveal_unspoken",
+        reveals.unspoken.status,
+        reveals.unspoken.detail,
+    ));
+    let density = slam_density(project);
+    checks.push(check("slam_density", density.status, density.detail));
     let mismatch = spoken_mismatch_check(project, speech);
     checks.push(check("spoken_mismatch", mismatch.status, mismatch.detail));
 
@@ -538,6 +554,8 @@ pub fn speech_report(
         speech_rate_findings: rate.findings,
         reveal_before_speech_findings: reveals.before.findings,
         reveal_late_findings: reveals.late.findings,
+        reveal_unspoken_findings: reveals.unspoken.findings,
+        slam_density_findings: density.findings,
         spoken_mismatch_findings: mismatch.findings,
         reveal_timings: reveals.timings,
     })
@@ -789,15 +807,121 @@ fn speech_rate_check(speech: &SpeechMap) -> Outcome {
 struct RevealOutcome {
     before: Outcome,
     late: Outcome,
+    /// (0.24) `reveal_unspoken`: large text the narrator never says.
+    unspoken: Outcome,
     timings: Vec<RevealTiming>,
+}
+
+/// (0.24) Groups of furniture and deck copy: never judged against the voice.
+fn furniture_group(group: &str) -> bool {
+    matches!(
+        group.split('.').next().unwrap_or(""),
+        "kicker"
+            | "kicker_rule"
+            | "marker"
+            | "folio"
+            | "index"
+            | "ticks"
+            | "data"
+            | "data_rule"
+            | "body"
+            | "body_rule"
+            | "serif"
+            | "serif_rule"
+            | "statement"
+            | "statement_rule"
+            | "stage_front"
+            | "wipe"
+            | "caption"
+    )
+}
+
+/// (0.24) A text leaf of a beat scene: its group path after the prefix, its
+/// words and its font size.
+struct TextLeaf {
+    group: String,
+    text: String,
+    font_size: f32,
+}
+
+fn text_leaves(layers: &[motion_core::scene::Layer], prefix: &str, out: &mut Vec<TextLeaf>) {
+    use motion_core::scene::LayerKind;
+    for l in layers {
+        match &l.kind {
+            LayerKind::Group { children } => text_leaves(children, prefix, out),
+            LayerKind::Text(style) => {
+                let Some(group) = l.id.strip_prefix(prefix) else {
+                    continue;
+                };
+                if style.text.chars().any(char::is_alphanumeric) && !furniture_group(group) {
+                    out.push(TextLeaf {
+                        group: group.to_string(),
+                        text: style.text.clone(),
+                        font_size: style.font_size,
+                    });
+                }
+            }
+            _ => {}
+        }
+    }
+}
+
+/// (0.24) The anchor entries of a text: the whole phrase (matched as a
+/// sequence), and with a currency figure ("C$300K") the same without the
+/// currency letters.
+fn phrase_entries(text: &str) -> Vec<String> {
+    let phrase = text.split_whitespace().collect::<Vec<_>>().join(" ");
+    let plain = text
+        .split_whitespace()
+        .map(|w| match w.find(['$', '£', '€', '¥', '₹']) {
+            Some(i) if i > 0 && w[..i].chars().all(|c| c.is_ascii_alphabetic()) => &w[i..],
+            _ => w,
+        })
+        .collect::<Vec<_>>()
+        .join(" ");
+    let mut out = vec![phrase.clone()];
+    if plain != phrase {
+        out.push(plain);
+    }
+    out
+}
+
+/// (0.24) The size of the captions' type (the median of the caption scene's
+/// text), the yardstick of "large" text.
+fn caption_size(project: &MotionProject) -> f32 {
+    use motion_core::scene::LayerKind;
+    fn sizes(layers: &[motion_core::scene::Layer], out: &mut Vec<f32>) {
+        for l in layers {
+            match &l.kind {
+                LayerKind::Group { children } => sizes(children, out),
+                LayerKind::Text(style) => out.push(style.font_size),
+                _ => {}
+            }
+        }
+    }
+    let mut v = Vec::new();
+    for s in project
+        .scenes
+        .iter()
+        .filter(|s| s.id == motion_core::compiler::captions::CAPTION_SCENE_ID)
+    {
+        sizes(&s.layers, &mut v);
+    }
+    v.sort_by(f32::total_cmp);
+    v.get(v.len() / 2)
+        .copied()
+        .unwrap_or(0.04 * project.canvas.width.min(project.canvas.height) as f32)
 }
 
 /// The kicker (section label) names no conclusion by design: never judged.
 fn exempt_group(group: &str) -> bool {
-    matches!(
-        group.split('.').next().unwrap_or(""),
-        "kicker" | "kicker_rule"
-    )
+    // (0.24) The small title of an unspoken statement opens a slam beat on
+    // purpose: it is the one allowed text that is not tied to a word.
+    group.ends_with(".small")
+        || matches!(
+            group.split('.').next().unwrap_or(""),
+            "kicker" | "kicker_rule" | "marker"
+        )
 }
 
 fn role_name(role: RevealRole) -> &'static str {
@@ -835,40 +959,105 @@ fn reveal_checks(
     project: &MotionProject,
     speech: &SpeechMap,
 ) -> Result<RevealOutcome, RenderError> {
-    let reveals = project
-        .project
-        .art
-        .as_ref()
-        .map(|a| &a.reveals)
-        .filter(|r| !r.is_empty());
-    let Some(reveals) = reveals else {
-        let skip = || Outcome {
-            status: CheckStatus::Skip,
-            detail: "no reveal anchors (compiled without --art)".to_string(),
-            findings: Vec::new(),
-        };
+    let skip = |why: &str| Outcome {
+        status: CheckStatus::Skip,
+        detail: why.to_string(),
+        findings: Vec::new(),
+    };
+    if speech.words.is_empty() {
         return Ok(RevealOutcome {
-            before: skip(),
-            late: skip(),
+            before: skip("no spoken words"),
+            late: skip("no spoken words"),
+            unspoken: skip("no spoken words"),
             timings: Vec::new(),
         });
-    };
+    }
+    let declared = project.project.art.as_ref().map(|a| &a.reveals);
+    let cap_size = caption_size(project);
 
-    // Beat scenes with anchors, in beat order.
-    let mut beats: Vec<(usize, &motion_core::scene::Scene, &Vec<RevealAnchor>)> = reveals
-        .iter()
-        .filter_map(|(id, anchors)| {
-            let beat = beat_of_scene(id)?;
-            let scene = project.scenes.iter().find(|s| s.id == *id)?;
-            Some((beat, scene, anchors))
-        })
-        .collect();
+    // Beat scenes, in beat order, with their declared anchors and (0.24) one
+    // derived anchor per text leaf no declared anchor covers: whatever text a
+    // builder put on screen is held to the voice, declared or not.
+    let mut beats: Vec<(usize, &motion_core::scene::Scene, Vec<RevealAnchor>)> = Vec::new();
+    let mut large: BTreeMap<(usize, String), (String, f32)> = BTreeMap::new();
+    for scene in &project.scenes {
+        let Some(beat) = beat_of_scene(&scene.id) else {
+            continue;
+        };
+        let Some(prefix) = scene_prefix(scene) else {
+            continue;
+        };
+        let mut anchors: Vec<RevealAnchor> = declared
+            .and_then(|d| d.get(&scene.id))
+            .cloned()
+            .unwrap_or_default();
+        let mut derived: BTreeMap<String, usize> = BTreeMap::new();
+        let mut leaves = Vec::new();
+        text_leaves(&scene.layers, &prefix, &mut leaves);
+        for mut leaf in leaves {
+            // The lines of one headline are one title: judged as a group, at
+            // the earliest of its words.
+            let derived_title = ["head", "title"].iter().find(|h| {
+                leaf.group
+                    .strip_prefix(*h)
+                    .and_then(|r| r.strip_prefix('.'))
+                    .is_some_and(|n| !n.is_empty() && n.chars().all(|c| c.is_ascii_digit()))
+            });
+            if let Some(h) = derived_title {
+                let group = (*h).to_string();
+                if let Some(a) = derived.get(&group) {
+                    anchors[*a].words.extend(phrase_entries(&leaf.text));
+                    continue;
+                }
+                leaf.group = group;
+            }
+            // The ghost word is a faint backdrop (and out of focus in some
+            // looks): its builder times it, the QA does not judge it.
+            if matches!(leaf.group.split('.').next(), Some("ghost" | "ghost_word")) {
+                continue;
+            }
+            let covered = anchors.iter().any(|a| {
+                leaf.group == a.group
+                    || leaf
+                        .group
+                        .strip_prefix(a.group.as_str())
+                        .is_some_and(|t| t.starts_with('.'))
+            });
+            if covered || anchors.iter().any(|a| a.group == leaf.group) {
+                continue;
+            }
+            // The phrase the layer stands for (a title is judged by its whole
+            // phrase, not by any one of its words), and "C$300K" is said as
+            // "three hundred thousand dollars": the figure without its
+            // currency letters is tried too.
+            let words = phrase_entries(&leaf.text);
+            let head = leaf.group.split('.').next().unwrap_or("");
+            let role = match head {
+                "head" | "title" => RevealRole::Title,
+                "ghost" | "ghost_word" => RevealRole::Label,
+                _ => RevealRole::Content,
+            };
+            large.insert(
+                (beat, leaf.group.clone()),
+                (leaf.text.replace('\n', " "), leaf.font_size),
+            );
+            derived.insert(leaf.group.clone(), anchors.len());
+            anchors.push(RevealAnchor {
+                group: leaf.group,
+                words,
+                role,
+            });
+        }
+        beats.push((beat, scene, anchors));
+    }
     beats.sort_by_key(|b| b.0);
 
     let mut targets: Vec<GroupRef> = Vec::new();
     let mut timings: Vec<RevealTiming> = Vec::new();
     let mut unspoken = 0usize;
-    for (beat, scene, anchors) in beats {
+    let mut unspoken_large: Vec<String> = Vec::new();
+    for (beat, scene, anchors) in &beats {
+        let beat = *beat;
         let Some(prefix) = scene_prefix(scene) else {
             continue;
         };
@@ -896,6 +1085,17 @@ fn reveal_checks(
             }
             let Some((at, role)) = best else {
                 unspoken += 1;
+                // The small title of an unspoken statement is allowed.
+                if let Some((text, size)) = large.get(&(beat, group.to_string())) {
+                    if *size > 2.0 * cap_size && !group.ends_with(".small") {
+                        unspoken_large.push(format!(
+                            "beat {}: \"{}\" ({group}) is {:.0} px type and the narrator never says it",
+                            beat + 1,
+                            text,
+                            size
+                        ));
+                    }
+                }
                 continue;
             };
             let heard = words
@@ -1039,11 +1239,117 @@ fn reveal_checks(
         ),
         findings: late,
     };
+    let unspoken_outcome = Outcome {
+        status: if unspoken_large.is_empty() {
+            CheckStatus::Pass
+        } else {
+            CheckStatus::Warn
+        },
+        detail: format!(
+            "{} large text(s) over twice the caption size that the narrator never says",
+            unspoken_large.len()
+        ),
+        findings: unspoken_large,
+    };
     Ok(RevealOutcome {
         before,
         late,
+        unspoken: unspoken_outcome,
         timings,
     })
+}
+
+// --- slam_density ------------------------------------------------------------
+
+/// (0.24) `slam_density` over the slam beats (`cut.N` groups): more than two
+/// big text units in a beat, or a unit repeating a word another one shows,
+/// FAILs; a project without slam units SKIPs.
+fn slam_density(project: &MotionProject) -> Outcome {
+    use motion_core::scene::{Layer, LayerKind};
+    // (unit group, text) of every big word of the scene.
+    fn words(layers: &[Layer], out: &mut Vec<(String, String)>) {
+        for l in layers {
+            match &l.kind {
+                LayerKind::Group { children } => words(children, out),
+                LayerKind::Text(style) => {
+                    let last = l.id.rsplit('.').next().unwrap_or("");
+                    if last == "word" && l.id.contains(".cut.") {
+                        out.push((l.id.clone(), style.text.clone()));
+                    }
+                }
+                _ => {}
+            }
+        }
+    }
+    let stem = |a: &str, b: &str| {
+        let (short, long) = if a.len() <= b.len() { (a, b) } else { (b, a) };
+        short == long || (short.len() >= 3 && long.starts_with(short))
+    };
+    let mut findings = Vec::new();
+    let mut slam_beats = 0usize;
+    for scene in &project.scenes {
+        let Some(beat) = beat_of_scene(&scene.id) else {
+            continue;
+        };
+        let mut units = Vec::new();
+        words(&scene.layers, &mut units);
+        if units.is_empty() {
+            continue;
+        }
+        slam_beats += 1;
+        if units.len() > 2 {
+            findings.push(format!(
+                "beat {}: {} big text units ({}), at most 2",
+                beat + 1,
+                units.len(),
+                units
+                    .iter()
+                    .map(|u| u.1.replace('\n', " "))
+                    .collect::<Vec<_>>()
+                    .join(", ")
+            ));
+        }
+        let norm_words: Vec<Vec<String>> = units
+            .iter()
+            .map(|u| {
+                u.1.split_whitespace()
+                    .map(normalize_word)
+                    .filter(|w| w.len() >= 3)
+                    .collect()
+            })
+            .collect();
+        'pairs: for i in 0..units.len() {
+            for j in i + 1..units.len() {
+                let dup = norm_words[i]
+                    .iter()
+                    .any(|a| norm_words[j].iter().any(|b| stem(a, b)));
+                if dup {
+                    findings.push(format!(
+                        "beat {}: \"{}\" repeats a word of \"{}\"",
+                        beat + 1,
+                        units[j].1.replace('\n', " "),
+                        units[i].1.replace('\n', " ")
+                    ));
+                    break 'pairs;
+                }
+            }
+        }
+    }
+    if slam_beats == 0 {
+        return Outcome {
+            status: CheckStatus::Skip,
+            detail: "no slam units".to_string(),
+            findings,
+        };
+    }
+    Outcome {
+        status: pass_fail(findings.is_empty()),
+        detail: format!(
+            "{slam_beats} slam beat(s), {} finding(s) (at most 2 big text units, none repeating another)",
+            findings.len()
+        ),
+        findings,
+    }
 }
 
 // --- spoken_mismatch -------------------------------------------------------

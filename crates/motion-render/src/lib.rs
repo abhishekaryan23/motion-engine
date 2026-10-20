@@ -11,6 +11,7 @@ pub mod audio_mix;
 pub mod audio_qa;
 pub mod autokey;
 pub mod blur;
+pub mod brand_mark;
 pub mod contrast_qa;
 pub mod cpu;
 pub mod decode;
@@ -32,11 +33,12 @@ pub mod story_qa;
 pub mod text;
 pub mod texture;
 pub mod treatment;
+pub mod video;
 pub mod visual_qa;
 pub mod warp;
 
 pub use cpu::CpuRenderer;
-pub use image_index::image_index;
+pub use image_index::{guard_pictures, image_index};
 pub use qa::{
     lifecycle_report, structural_profile, MotionProfile, PhaseActivity, SceneQa, SpikeLevel, Status,
 };

@@ -32,10 +32,8 @@
           "duration_seconds": 12.77,
           "evolve_stage_scales": 0,
           "frame_count": 384,
-          "furniture_kinds": [
-            "folio_rule"
-          ],
-          "furniture_layers": 3,
+          "furniture_kinds": [],
+          "furniture_layers": 0,
           "mean_read_span": 0.654,
           "spring_entrances": 0,
           "spring_total": 0,
@@ -108,19 +106,17 @@
           "backdrop_motion_times": 3,
           "backdrop_motions": 36,
           "beat_scenes": 3,
-          "camera_max_push": 0.049,
+          "camera_max_push": 0.03,
           "camera_max_track": 33.287,
           "duration_seconds": 11.406,
           "evolve_stage_scales": 3,
           "frame_count": 343,
-          "furniture_kinds": [
-            "sticker"
-          ],
-          "furniture_layers": 3,
+          "furniture_kinds": [],
+          "furniture_layers": 0,
           "mean_read_span": 0.5,
-          "spring_entrances": 9,
-          "spring_total": 16,
-          "wipe_layers": 2
+          "spring_entrances": 8,
+          "spring_total": 12,
+          "wipe_layers": 0
         }
       }
     },
@@ -155,10 +151,8 @@
           "duration_seconds": 9.37,
           "evolve_stage_scales": 0,
           "frame_count": 282,
-          "furniture_kinds": [
-            "folio_rule"
-          ],
-          "furniture_layers": 2,
+          "furniture_kinds": [],
+          "furniture_layers": 0,
           "mean_read_span": 1.263,
           "spring_entrances": 0,
           "spring_total": 0,
@@ -231,18 +225,16 @@
           "backdrop_motion_times": 2,
           "backdrop_motions": 21,
           "beat_scenes": 2,
-          "camera_max_push": 0.081,
+          "camera_max_push": 0.03,
           "camera_max_track": 33.287,
           "duration_seconds": 8.334,
           "evolve_stage_scales": 2,
           "frame_count": 251,
-          "furniture_kinds": [
-            "sticker"
-          ],
-          "furniture_layers": 2,
+          "furniture_kinds": [],
+          "furniture_layers": 0,
           "mean_read_span": 0.594,
-          "spring_entrances": 27,
-          "spring_total": 35,
+          "spring_entrances": 25,
+          "spring_total": 32,
           "wipe_layers": 2
         }
       }

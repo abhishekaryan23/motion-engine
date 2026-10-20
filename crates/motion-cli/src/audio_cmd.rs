@@ -228,7 +228,7 @@ pub fn cmd_plan_audio(
             .iter()
             .filter(|a| a.to.is_none())
             .count();
-        println!(
+        detail!(
             "speech: moved {} cue(s) off word onsets, dropped {dropped}",
             plan.speech_adjustments.len() - dropped
         );
@@ -249,7 +249,7 @@ pub fn cmd_plan_audio(
                 .join(", ")
         }
     };
-    println!(
+    info!(
         "planned {} cue(s) -> {} (kinds: {}; families: {})",
         plan.cues.len(),
         out.display(),
@@ -476,16 +476,23 @@ pub fn run_mix(job: &MixJob) -> Result<String> {
 /// unless an SFX library or a speech file is given; see SOUND_DESIGN §4 and
 /// VOICE.md.
 pub fn mix_after_render(scene: &Path, mp4: &Path, a: &RenderAudio) -> Result<()> {
-    if a.sfx_library.is_none() && a.speech.is_none() {
+    // (v2) `program compile` writes a bed-only plan (music, no cues) beside
+    // the scene: render mixes it without an SFX library.
+    let bed_only = (a.sfx_library.is_none() && a.speech.is_none() && a.audio_plan.is_none())
+        .then(|| default_plan_path(scene))
+        .filter(|p| load_plan(p).is_ok_and(|plan| plan.cues.is_empty() && plan.music.is_some()));
+    if a.sfx_library.is_none() && a.speech.is_none() && bed_only.is_none() {
         if a.music.is_some() {
             bail!("--music needs --speech or --sfx-library to mix into");
         }
         return Ok(());
     }
-    let audio_plan = a.sfx_library.map(|_| {
-        a.audio_plan
-            .map(Path::to_path_buf)
-            .unwrap_or_else(|| default_plan_path(scene))
+    let audio_plan = bed_only.or_else(|| {
+        a.sfx_library.map(|_| {
+            a.audio_plan
+                .map(Path::to_path_buf)
+                .unwrap_or_else(|| default_plan_path(scene))
+        })
     });
     if let Some(plan_path) = audio_plan.as_ref().filter(|p| !p.is_file()) {
         bail!(
@@ -516,7 +523,7 @@ pub fn mix_after_render(scene: &Path, mp4: &Path, a: &RenderAudio) -> Result<()>
         }
     };
     std::fs::rename(&tmp, mp4).with_context(|| format!("replacing {}", mp4.display()))?;
-    println!("{summary} -> {}", mp4.display());
+    info!("{summary} -> {}", mp4.display());
     Ok(())
 }
 
@@ -527,6 +534,7 @@ pub fn speech_qa(
     speech: &Path,
     audio_plan: Option<&Path>,
     mixed: Option<&Path>,
+    sfx_library: Option<&Path>,
 ) -> Result<motion_render::speech_qa::SpeechQaReport> {
     let map = motion_core::speech::SpeechMap::from_json(&read(speech)?)
         .with_context(|| format!("parsing speech file {}", speech.display()))?;
@@ -579,9 +587,82 @@ pub fn speech_qa(
         &dir_of(speech),
         mixed,
     ));
+    // (0.24 M7) The SFX stem against the voice, per 400 ms window.
+    report.checks.push(sfx_over_voice_check(
+        &map,
+        &dir_of(speech),
+        plan.as_ref(),
+        sfx_library,
+        project.duration_seconds(),
+    ));
     let failed = report.checks.iter().any(|c| c.status == CheckStatus::Fail);
     report.verdict = if failed { "FAIL" } else { "PASS" }.to_string();
     Ok(report)
+}
+
+/// (0.24 M7) `sfx_over_voice`: one line, the worst window.
+fn sfx_over_voice_check(
+    map: &motion_core::speech::SpeechMap,
+    speech_dir: &Path,
+    plan: Option<&AudioPlan>,
+    sfx_library: Option<&Path>,
+    duration: f64,
+) -> motion_render::speech_qa::SpeechQaCheck {
+    use motion_render::speech_qa::{CheckStatus, SpeechQaCheck};
+    let make = |status, detail: String| SpeechQaCheck {
+        name: "sfx_over_voice".to_string(),
+        status,
+        detail,
+    };
+    let Some(plan) = plan else {
+        return make(CheckStatus::Skip, "no audio plan".into());
+    };
+    if plan.cues.is_empty() {
+        return make(CheckStatus::Skip, "the plan has no cues".into());
+    }
+    let Some(lib_path) = library_path(sfx_library) else {
+        return make(
+            CheckStatus::Skip,
+            "no SFX library (--sfx-library or MOTION_SFX_LIBRARY)".into(),
+        );
+    };
+    let voice = speech_dir.join(&map.audio);
+    if !voice.is_file() {
+        return make(
+            CheckStatus::Skip,
+            format!("voice file {} not found", voice.display()),
+        );
+    }
+    let (library, root) = match load_library(&lib_path) {
+        Ok(l) => l,
+        Err(e) => return make(CheckStatus::Fail, format!("sfx library: {e:#}")),
+    };
+    let m = motion_render::mix_qa::sfx_over_voice_qa(&motion_render::mix_qa::SfxQa {
+        plan,
+        speech: map,
+        voice: &voice,
+        sfx_root: &root,
+        library: &library,
+        duration,
+        temp_base: None,
+    });
+    match m {
+        Err(e) => make(CheckStatus::Fail, format!("could not measure: {e}")),
+        Ok(m) => match m.worst_margin_lu {
+            None => make(CheckStatus::Pass, "no SFX audible while the voice speaks".into()),
+            Some(w) => make(
+                motion_render::mix_qa::sfx_over_voice_status(w),
+                format!(
+                    "worst window {w:.1} LU under the voice at {:.1}s (voice {:.1}, sfx {:.1} LUFS; {} windows; min {:.0} LU)",
+                    m.worst_at,
+                    m.worst_voice_lufs,
+                    m.worst_sfx_lufs,
+                    m.windows,
+                    motion_render::mix_qa::SFX_OVER_VOICE_MIN_LU
+                ),
+            ),
+        },
+    }
 }
 
 fn qa_report(

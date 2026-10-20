@@ -1,0 +1,164 @@
+{
+  "version": "2.0",
+  "meta": {
+    "name": "p5_brush_golden_showcase",
+    "aspect": "16:9",
+    "duration": 10.2,
+    "fps": "30",
+    "end_beat": 28
+  },
+  "palette": {
+    "background": "#F4EFE6",
+    "ink": "#0B0906",
+    "accent": "#D94E28",
+    "muted": "#E0DBD2",
+    "grounds": [
+      "#ECE5D8",
+      "#181614"
+    ]
+  },
+  "fonts": {
+    "display": "clash_display_bold",
+    "serif": "instrument_serif_italic",
+    "mono": "ibm_plex_mono"
+  },
+  "tempo": "normal",
+  "music": {
+    "track": "warm_piano"
+  },
+  "film": {
+    "grain": 0.022,
+    "fringe": 0.35
+  },
+  "camera": [
+    { "beat": 2, "do": "orbit", "yaw": -3.0, "pitch": 2.0 },
+    { "beat": 6, "do": "reset" },
+    { "beat": 10, "do": "orbit", "yaw": 3.5, "pitch": -2.0 },
+    { "beat": 14, "do": "reset" },
+    { "beat": 18, "do": "dolly", "to": -40.0 },
+    { "beat": 22, "do": "reset" },
+    { "beat": 25, "do": "orbit", "yaw": 2.5, "pitch": -1.5 },
+    { "beat": 27, "do": "dolly", "to": -35.0 },
+    { "beat": 28, "do": "push", "to": 1.05 }
+  ],
+  "transitions": [
+    { "beat": 8, "kind": "whip" },
+    { "beat": 16, "kind": "whip" },
+    { "beat": 20, "kind": "whip" },
+    { "beat": 24, "kind": "whip" }
+  ],
+  "components": [
+    {
+      "id": "bg",
+      "kind": "backdrop",
+      "preset": "flat",
+      "start_beat": 0,
+      "timeline": [
+        { "beat": 0, "do": "enter", "style": "fade" }
+      ]
+    },
+    {
+      "id": "act1_spiral",
+      "kind": "sketch",
+      "preset": "golden_spiral",
+      "field": "hand",
+      "wiggle": 1.6,
+      "title": "DIVINE PROPORTION",
+      "caption": "PHI 1.618 : WATERCOLOR & HATCH",
+      "beat_cuts": 1,
+      "seed": 42,
+      "start_beat": 0,
+      "end_beat": 8,
+      "timeline": [
+        { "beat": 0, "do": "enter", "style": "draw" }
+      ]
+    },
+    {
+      "id": "act2_arch",
+      "kind": "sketch",
+      "preset": "architectural_hatch",
+      "field": "waves",
+      "wiggle": 1.8,
+      "title": "ARCHITECTURAL STUDY",
+      "caption": "CROSS HATCH : PIGMENT WASH",
+      "beat_cuts": 1,
+      "seed": 108,
+      "start_beat": 8,
+      "end_beat": 16,
+      "timeline": [
+        { "beat": 8, "do": "enter", "style": "draw" }
+      ]
+    },
+    {
+      "id": "act3_golden_bento",
+      "kind": "bento",
+      "preset": "golden_spiral",
+      "beat_cuts": 1,
+      "start_beat": 16,
+      "end_beat": 20,
+      "tiles": [
+        {
+          "stat": "1.618",
+          "title": "GOLDEN RATIO",
+          "detail": "61.8% MAJOR : 38.2% MINOR",
+          "accent": true
+        },
+        {
+          "stat": "11",
+          "title": "NATURAL BRUSHES",
+          "detail": "CHARCOAL, ROTRING & PEN",
+          "accent": false
+        },
+        {
+          "stat": "7",
+          "title": "FLOW FIELDS",
+          "detail": "WAVES, SPIRAL & SEABED",
+          "accent": false
+        },
+        {
+          "stat": "14X",
+          "title": "WET BLEED",
+          "detail": "WATERCOLOR PIGMENT POOLING",
+          "accent": true
+        }
+      ],
+      "timeline": [
+        { "beat": 16, "do": "enter", "style": "pop" }
+      ]
+    },
+    {
+      "id": "act4_flow",
+      "kind": "sketch",
+      "preset": "flow_field",
+      "field": "waves",
+      "wiggle": 1.5,
+      "title": "VECTOR STREAMLINES",
+      "caption": "P5.BRUSH : PRESSURE TAPER",
+      "beat_cuts": 1,
+      "seed": 77,
+      "start_beat": 20,
+      "end_beat": 24,
+      "timeline": [
+        { "beat": 20, "do": "enter", "style": "draw" }
+      ]
+    },
+    {
+      "id": "act5_outro",
+      "kind": "lockup",
+      "preset": "monolith_split",
+      "headline": "MOTION ENGINE",
+      "subline": "Generative Natural Media & Golden Proportion",
+      "badge": "P5.BRUSH V2",
+      "specs": [
+        "PHI : 1.618034",
+        "BRUSHES : TIER 1 + 2",
+        "QA : DETERMINISTIC"
+      ],
+      "start_beat": 24,
+      "timeline": [
+        { "beat": 24, "do": "enter", "style": "pop" },
+        { "beat": 26, "do": "sheen" }
+      ]
+    }
+  ]
+}

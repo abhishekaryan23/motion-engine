@@ -1,0 +1,161 @@
+{
+ "version": "2.0",
+ "meta": {
+  "name": "coffee_story",
+  "aspect": "16:9",
+  "duration": 14.0,
+  "end_beat": 24,
+  "brief": "a short data story about how people drink coffee"
+ },
+ "palette": {
+  "background": "#F3EEE4",
+  "ink": "#161412",
+  "accent": "#D7402B",
+  "muted": "#6E675E"
+ },
+ "fonts": {
+  "display": "archivo_black",
+  "serif": "instrument_serif_italic",
+  "mono": "ibm_plex_mono"
+ },
+ "music": {
+  "track": "bright_upbeat",
+  "start": 0.508
+ },
+ "components": [
+  {
+   "id": "g",
+   "kind": "backdrop"
+  },
+  {
+   "id": "open",
+   "kind": "kinetic_text",
+   "preset": "poster_cuts",
+   "dot": true,
+   "start_beat": 0,
+   "end_beat": 6,
+   "beat_cuts": 1,
+   "words": [
+    "TWO",
+    "CUPS",
+    "A",
+    "DAY",
+    "IS",
+    "NORMAL"
+   ],
+   "stress": [
+    5
+   ],
+   "timeline": [
+    {
+     "beat": 4,
+     "do": "cut",
+     "flip": true
+    }
+   ]
+  },
+  {
+   "id": "orders",
+   "kind": "chart",
+   "chart": "bar",
+   "values": [
+    9,
+    12,
+    14,
+    17,
+    21,
+    26,
+    31
+   ],
+   "hero": 6,
+   "callout": "31k",
+   "title": "Cold brew orders, thousands",
+   "start_beat": 6,
+   "end_beat": 14,
+   "beat_cuts": 1,
+   "timeline": [
+    {
+     "beat": 6,
+     "do": "enter",
+     "style": "draw"
+    },
+    {
+     "beat": 13,
+     "do": "pop_label"
+    }
+   ],
+   "labels": [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul"
+   ]
+  },
+  {
+   "id": "when",
+   "kind": "chart",
+   "chart": "bar",
+   "values": [
+    14,
+    32,
+    21,
+    18,
+    15
+   ],
+   "hero": 1,
+   "callout": "32%",
+   "start_beat": 14,
+   "end_beat": 22,
+   "beat_cuts": 1,
+   "timeline": [
+    {
+     "beat": 14,
+     "do": "enter",
+     "style": "draw"
+    },
+    {
+     "beat": 20,
+     "do": "pop_label"
+    }
+   ],
+   "labels": [
+    "6am",
+    "9am",
+    "Noon",
+    "3pm",
+    "9pm"
+   ],
+   "title": "Share of cups by hour"
+  },
+  {
+   "id": "close",
+   "kind": "kinetic_text",
+   "preset": "poster_cuts",
+   "dot": true,
+   "start_beat": 22,
+   "beat_cuts": 1,
+   "words": [
+    "SIP",
+    "IT",
+    "SLOW"
+   ],
+   "stress": [
+    2
+   ]
+  }
+ ],
+ "transitions": [
+  {
+   "beat": 14,
+   "kind": "colour_flip"
+  },
+  {
+   "beat": 22,
+   "kind": "whip"
+  }
+ ],
+ "tempo": "fast"
+}

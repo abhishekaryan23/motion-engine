@@ -64,6 +64,8 @@ pub struct ResourceCtx<'a> {
 pub const URI_LITE_GUIDE: &str = "motionengine://guide/lite-story";
 pub const URI_FULL_GUIDE: &str = "motionengine://guide/full";
 pub const URI_INTENT_GUIDE: &str = "motionengine://guide/intent";
+pub const URI_V2_GUIDE: &str = "motionengine://guide/v2";
+pub const URI_V2_SCHEMA: &str = "motionengine://schema/v2";
 pub const URI_OPTIONS: &str = "motionengine://options";
 pub const URI_STYLES: &str = "motionengine://styles";
 pub const EXAMPLES_PREFIX: &str = "motionengine://examples/";
@@ -82,6 +84,7 @@ const JSON: &str = "application/json";
 
 const LITE_GUIDE: &str = include_str!("../../../docs/mcp/lite_story_guide.md");
 const INTENT_GUIDE: &str = include_str!("../../../docs/mcp/intent_guide.md");
+const V2_GUIDE: &str = include_str!("../../../docs/mcp/v2_guide.md");
 
 /// A lite story, as the arguments of a `make_video` call.
 pub struct LiteExample {
@@ -217,6 +220,20 @@ pub fn list(profile: Profile) -> Vec<ResourceDef> {
             MARKDOWN,
         ),
     ];
+    if profile == Profile::V2 {
+        out.push(def(
+            URI_V2_GUIDE,
+            "MotionEngine 2.0 guide",
+            "Complete v2 authoring & editing reference: recipes, 19 fonts, 5 lockup presets, components, slots, cutouts, and edit+patch workflow.",
+            MARKDOWN,
+        ));
+        out.push(def(
+            URI_V2_SCHEMA,
+            "MotionProgram 2.0 schema",
+            "JSON Schema for MotionProgram v2.0 (schema/motion_program.json).",
+            JSON,
+        ));
+    }
     if profile.full_control() {
         out.push(def(
             URI_INTENT_GUIDE,
@@ -283,6 +300,11 @@ pub fn read(uri: &str, ctx: &ResourceCtx) -> Option<String> {
     match uri {
         URI_LITE_GUIDE => return Some(LITE_GUIDE.to_string()),
         URI_FULL_GUIDE => return Some(full_guide(ctx.config)),
+        URI_V2_GUIDE => return Some(V2_GUIDE.to_string()),
+        URI_V2_SCHEMA => {
+            let path = ctx.config.repo.join("schema/motion_program.json");
+            return std::fs::read_to_string(path).ok();
+        }
         URI_STYLES => return Some(styles_text()),
         URI_INTENT_GUIDE if full => return Some(INTENT_GUIDE.to_string()),
         URI_OPTIONS if full => {

@@ -1,0 +1,36 @@
+{
+ "kind": "program",
+ "program": {
+  "version": "2.0",
+  "meta": {
+   "name": "fixture",
+   "duration": 3.0
+  },
+  "palette": {
+   "background": "#F2EEE6",
+   "ink": "#111111",
+   "accent": "#E04A12",
+   "muted": "#6B6B6B"
+  },
+  "components": [
+   {
+    "id": "h",
+    "kind": "hud",
+    "corners": [
+     "Board reel",
+     "24 fps",
+     "",
+     ""
+    ]
+   },
+   {
+    "id": "t",
+    "kind": "title",
+    "text": "126 bpm",
+    "slot": "bottom"
+   }
+  ]
+ },
+ "repair": true,
+ "id": "meta_text"
+}

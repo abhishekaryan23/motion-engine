@@ -1,0 +1,187 @@
+{
+  "version": "2.0",
+  "meta": {
+    "name": "v2_916_var1_cyber_drafting",
+    "aspect": "9:16",
+    "duration": 14.0,
+    "fps": "30",
+    "end_beat": 28
+  },
+  "palette": {
+    "background": "#0A0C10",
+    "ink": "#F4F6F8",
+    "accent": "#00F5A0",
+    "muted": "#1C2029",
+    "grounds": [
+      "#121620",
+      "#062E22"
+    ]
+  },
+  "fonts": {
+    "display": "clash_display_bold",
+    "serif": "instrument_serif_italic",
+    "mono": "space_mono_bold"
+  },
+  "tempo": "fast",
+  "music": {
+    "track": "driving_pulse",
+    "start": 0.107
+  },
+  "film": {
+    "grain": 0.018,
+    "fringe": 0.55
+  },
+  "camera": [
+    { "beat": 2, "do": "orbit", "yaw": -3.0, "pitch": 2.0 },
+    { "beat": 6, "do": "reset" },
+    { "beat": 9, "do": "orbit", "yaw": 3.5, "pitch": -2.5 },
+    { "beat": 11, "do": "dolly", "to": -40.0 },
+    { "beat": 13, "do": "orbit", "yaw": -3.0, "pitch": 2.0 },
+    { "beat": 15, "do": "reset" },
+    { "beat": 18, "do": "dolly", "to": -45.0 },
+    { "beat": 22, "do": "reset" },
+    { "beat": 25, "do": "orbit", "yaw": 2.5, "pitch": -1.5 },
+    { "beat": 27, "do": "dolly", "to": -35.0 },
+    { "beat": 28, "do": "push", "to": 1.05 }
+  ],
+  "transitions": [
+    { "beat": 8, "kind": "whip" },
+    { "beat": 16, "kind": "colour_flip" },
+    { "beat": 24, "kind": "impact" }
+  ],
+  "components": [
+    {
+      "id": "bg_dark_1",
+      "kind": "backdrop",
+      "preset": "flat",
+      "colour": "background",
+      "start_beat": 0,
+      "end_beat": 16
+    },
+    {
+      "id": "act1_top_kinetic",
+      "kind": "kinetic_text",
+      "preset": "poster_cuts",
+      "slot": "top",
+      "words": [
+        "FIBONACCI",
+        "COMPILED",
+        "1.618034",
+        "VERIFIED",
+        "ZERO SLOP",
+        "AETHER CAD",
+        "GOLDEN GRID",
+        "LOCKED."
+      ],
+      "stress": [1, 2, 5, 7],
+      "beat_cuts": 1,
+      "start_beat": 0,
+      "end_beat": 8
+    },
+    {
+      "id": "act1_bottom_vortex",
+      "kind": "sketch",
+      "preset": "flow_field",
+      "slot": "bottom",
+      "field": "spiral",
+      "wiggle": 1.4,
+      "title": "VECTOR VORTEX",
+      "caption": "32 STREAMLINES : GOLDEN EYE",
+      "beat_cuts": 1,
+      "seed": 404,
+      "start_beat": 0,
+      "end_beat": 8,
+      "timeline": [
+        { "beat": 0, "do": "enter", "style": "draw" }
+      ]
+    },
+    {
+      "id": "act2_bento_golden",
+      "kind": "bento",
+      "preset": "golden_spiral",
+      "title": "COMPUTATIONAL RATIO",
+      "beat_cuts": 2,
+      "tilt_in": [8.0, -6.0],
+      "start_beat": 8,
+      "end_beat": 16,
+      "tiles": [
+        {
+          "stat": "1.618",
+          "title": "PHI MODULAR",
+          "detail": "FIBONACCI GRID KERNEL",
+          "accent": true
+        },
+        {
+          "stat": "0.42ms",
+          "title": "VECTOR SOLVER",
+          "detail": "60FPS DETERMINISTIC",
+          "accent": false
+        },
+        {
+          "stat": "61.8%",
+          "title": "MAJOR SPLIT",
+          "detail": "PRIMARY FOCUS ZONE",
+          "accent": false
+        },
+        {
+          "stat": "38.2%",
+          "title": "MINOR SPLIT",
+          "detail": "SECONDARY TELEMETRY",
+          "accent": true
+        }
+      ],
+      "timeline": [
+        { "beat": 8, "do": "enter", "style": "pop" }
+      ]
+    },
+    {
+      "id": "bg_slate_2",
+      "kind": "backdrop",
+      "preset": "flat",
+      "colour": "ground1",
+      "start_beat": 16,
+      "end_beat": 24
+    },
+    {
+      "id": "act3_elevation",
+      "kind": "sketch",
+      "preset": "architectural_hatch",
+      "field": "hand",
+      "wiggle": 1.3,
+      "title": "AETHER PAVILION",
+      "caption": "ROTRING ELEVATION : MINT WASH",
+      "beat_cuts": 1,
+      "seed": 909,
+      "start_beat": 16,
+      "end_beat": 24,
+      "timeline": [
+        { "beat": 16, "do": "enter", "style": "draw" }
+      ]
+    },
+    {
+      "id": "bg_dark_3",
+      "kind": "backdrop",
+      "preset": "flat",
+      "colour": "background",
+      "start_beat": 24
+    },
+    {
+      "id": "act4_terminal",
+      "kind": "lockup",
+      "preset": "terminal_prompt",
+      "badge": "DETERMINISTIC CAD",
+      "headline": "aether build --phi",
+      "subline": "Generative Natural Media & Golden Ratio Engine",
+      "specs": [
+        "STATUS : COMPILED [0.42ms]",
+        "RATIO : PHI 1.618034",
+        "BRUSH : ROTRING + WASH"
+      ],
+      "start_beat": 24,
+      "timeline": [
+        { "beat": 24, "do": "enter", "style": "pop" },
+        { "beat": 26, "do": "sheen" }
+      ]
+    }
+  ]
+}

@@ -1,16 +1,20 @@
 [workspace]
 resolver = "2"
-members = ["crates/motion-core", "crates/motion-render", "crates/motion-voice", "crates/motion-cli", "crates/motion-mcp", "crates/motion-mcp/eval"]
+members = ["crates/motion-core", "crates/motion-render", "crates/motion-voice", "crates/motion-cli", "crates/motion-mcp", "crates/motion-mcp/eval", "crates/motion-program", "crates/motion-bridge", "crates/motion-providers"]
 
 [workspace.package]
-version = "0.2.0"
+version = "2.3.0"
 edition = "2021"
-license = "LicenseRef-Limited"
+license-file = "LICENSE"
+publish = false
 
 [workspace.dependencies]
 motion-core = { path = "crates/motion-core" }
 motion-render = { path = "crates/motion-render" }
 motion-voice = { path = "crates/motion-voice" }
+motion-program = { path = "crates/motion-program" }
+motion-bridge = { path = "crates/motion-bridge" }
+motion-providers = { path = "crates/motion-providers" }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 thiserror = "2"
@@ -25,5 +29,14 @@ jsonschema = { version = "0.58", default-features = false }
 sha2 = "0.10"
 crc32fast = "1"
 
+[profile.dev]
+debug = 1
+split-debuginfo = "unpacked"
+
+[profile.test]
+debug = 1
+strip = "debuginfo"
+
 [profile.dev.package."*"]
 opt-level = 2
+debug = 0

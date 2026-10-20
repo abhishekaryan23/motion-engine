@@ -245,7 +245,7 @@ pub const SPEECH_RATE_FAIL: (f64, f64) = (3.0, 9.0);
 pub const SPEECH_RATE_WARN: (f64, f64) = (3.5, 7.5);
 /// `reveal_before_speech`: an anchored layer may become readable at most
 /// this long (seconds) before its anchor word starts. The kicker is exempt.
-pub const REVEAL_LEAD_MAX: f64 = 0.35;
+pub const REVEAL_LEAD_MAX: f64 = 0.15;
 /// `reveal_late` (WARN): readable more than this long (seconds) after its
 /// anchor word ends means the viewer heard it before seeing it.
 pub const REVEAL_LATE_MAX: f64 = 0.8;

@@ -708,7 +708,10 @@ fn render_frames_with_gpu_post_matches_the_default_cpu_path() {
         repo_root(),
         &gpu_dir,
         FrameRange::All,
-        RenderOptions { gpu_post: true },
+        RenderOptions {
+            gpu_post: true,
+            ..Default::default()
+        },
     )
     .expect("gpu render");
     assert_eq!(cpu_report.gpu_notice, None, "default path is silent CPU");

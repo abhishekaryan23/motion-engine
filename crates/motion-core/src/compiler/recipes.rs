@@ -165,6 +165,39 @@ pub(crate) fn title_key_words(beat: &Beat, title: &str) -> Vec<String> {
     out
 }
 
+/// (0.24) [`title_key_words`], and else the keyword when the title says it in
+/// another form ("It doubled" says "double"): the words a title states that the
+/// narrator has not said yet.
+pub(crate) fn title_stated_words(beat: &Beat, title: &str) -> Vec<String> {
+    let words = title_key_words(beat, title);
+    if !words.is_empty() {
+        return words;
+    }
+    let Some(k) = beat.keyword.as_deref() else {
+        return words;
+    };
+    let norm = |t: &str| crate::speech::normalize_word(t);
+    let wanted: Vec<String> = k
+        .split_whitespace()
+        .map(norm)
+        .filter(|w| !w.is_empty())
+        .collect();
+    let have: Vec<String> = crate::speech::statement_tokens(title)
+        .iter()
+        .map(|t| norm(t))
+        .collect();
+    let stem = |w: &String| {
+        have.iter().any(|h| {
+            h == w || (w.len() >= 3 && h.len() >= 3 && (h.starts_with(w) || w.starts_with(h)))
+        })
+    };
+    if !wanted.is_empty() && wanted.iter().all(stem) {
+        vec![k.to_string()]
+    } else {
+        words
+    }
+}
+
 pub(crate) fn build_beat(
     ctx: &mut Ctx,
     plan: &BeatPlan,
@@ -222,6 +255,7 @@ pub(crate) fn build_beat(
         ctx.reveals.insert(plan.index, b.reveals.clone());
     }
     super::furniture::furniture(ctx, &mut b);
+    unbox(&mut b);
     close_carries(ctx, &mut b, carries);
     let mut scene = wrap_stage(ctx, b);
     clamp_to_scene(&mut scene);
@@ -229,6 +263,7 @@ pub(crate) fn build_beat(
     // beat anticipates its exit is brought into view first.
     if ctx.direction_seed.is_some() {
         pull_late_text_into_view(&mut scene);
+        hasten_headline(&mut scene, &plan.prefix, plan.index);
     }
     // (0.23 W4) No voice-over names a number here: counts settle by READ and
     // hold before ANTICIPATE. With one, `apply_word_cues` does it once the
@@ -302,9 +337,17 @@ fn compose<'p>(
     let built = grammar::builder(comp)(ctx, &mut b, carries, comp);
     ctx.ts.set_headline_budget(None);
     if built.is_ok() {
-        kicker(ctx, &mut b);
+        marker(ctx, &mut b);
+        one_rule(&mut b);
+        // (0.24) A number the beat says is unchanged lands static: no count-up.
+        if direction::says_unchanged(beat) {
+            b.motions
+                .retain(|m| !matches!(m.op, MotionOp::Count { .. }));
+        }
         if dy > 0.0 {
             shift_content(ctx.w, h_eff, h_real, dy, &mut b, carries);
+        } else {
+            stretch_bleeds(&mut b.stage, ctx.w, h_eff, h_real - h_eff);
         }
     }
     ctx.h = h_real;
@@ -482,6 +525,30 @@ fn shift_content(w: f32, h_eff: f32, h_real: f32, dy: f32, b: &mut B, carries: &
                     *y += dy;
                 }
             }
+        }
+    }
+}
+
+/// (0.24 M10) Builders lay out on the canvas minus the caption lane
+/// (`h_eff`), so a full-bleed colour field they size to "the canvas" stopped
+/// above the lane (the navy strip under the $13M field). Grow every layer that
+/// covers the whole laid-out canvas (width and height, starting at or above
+/// the top edge, inside groups that start at the origin) by `extra` so the
+/// field reaches the real bottom edge (the tall-canvas path stretches its own).
+fn stretch_bleeds(layers: &mut [Layer], w: f32, h_eff: f32, extra: f32) {
+    if extra <= 0.0 {
+        return;
+    }
+    for l in layers {
+        if let LayerKind::Group { children } = &mut l.kind {
+            if l.x.abs() < 0.5 && l.y.abs() < 0.5 {
+                stretch_bleeds(children, w, h_eff, extra);
+            }
+            continue;
+        }
+        let covers = l.y <= 0.5 && l.width >= w - 1.0 && l.height >= h_eff - 1.0;
+        if covers && matches!(l.kind, LayerKind::Rectangle { .. }) && l.anchor_y == 0.0 {
+            l.height += extra;
         }
     }
 }
@@ -721,16 +788,26 @@ pub(crate) struct Region {
 /// a headline (motion-language driven) and the corner anchor for carried-in
 /// subjects. Returns the free region below the headline.
 pub(super) fn structured_head(ctx: &mut Ctx, b: &mut B) -> Region {
+    structured_head_with(ctx, b, false)
+}
+
+/// [`structured_head`]; `compact` (0.24: a wide ranking chart that needs the
+/// height for its rows) sets the headline small, as a title line at the top.
+pub(super) fn structured_head_with(ctx: &mut Ctx, b: &mut B, compact: bool) -> Region {
     let (w, h, u, m) = (ctx.w, ctx.h, ctx.u, ctx.margin());
     let t = b.plan.enter_at();
     ghost(ctx, b, 0.62 * h);
-    let top = 0.17 * h;
+    let (top, max_h, max_size, below) = if compact {
+        (ctx.frame.safe.y.max(0.075 * h), 0.056 * h, 48.0 * u, 0.0)
+    } else {
+        (0.17 * h, 0.15 * h, 120.0 * u, 64.0 * u)
+    };
     let head = ctx.ts.fit_block(
         Voice::HEADLINE,
         &b.beat.statement,
         w - 2.0 * m,
-        0.15 * h,
-        120.0 * u,
+        max_h,
+        max_size,
         3,
     );
     let (head_h, done) = headline_lines(
@@ -752,8 +829,8 @@ pub(super) fn structured_head(ctx: &mut Ctx, b: &mut B) -> Region {
         h: 64.0 * u,
     });
     Region {
-        top: top + head_h + 64.0 * u,
-        bottom: h - 0.07 * h,
+        top: top + head_h + below,
+        bottom: h - if compact { 0.04 } else { 0.07 } * h,
         margin: m,
         start: done,
     }
@@ -762,42 +839,6 @@ pub(super) fn structured_head(ctx: &mut Ctx, b: &mut B) -> Region {
 // ---------------------------------------------------------------------------
 // Skeleton
 // ---------------------------------------------------------------------------
-
-/// (0.10 Q) The kicker's label: "the result" for a reveal, else the
-/// primary's, then the secondary's `meaning` when it reads as a label
-/// (`taste_rules::kicker_ok`: at most three words; a description such as
-/// "family walking together with child" never does), else the beat's purpose
-/// word. (0.21) An emphasize beat without such a meaning has no label: a bare
-/// "NOTE" says nothing.
-fn kicker_label(beat: &Beat) -> Option<&str> {
-    if beat.purpose == Purpose::Reveal {
-        return Some("the result");
-    }
-    beat.primary
-        .meaning()
-        .into_iter()
-        .chain(beat.secondary.as_ref().and_then(|s| s.meaning()))
-        .find(|m| taste_rules::kicker_ok(m))
-        .or(match beat.purpose {
-            Purpose::Emphasize => None,
-            Purpose::Compare => Some("compare"),
-            Purpose::Contrast => Some("contrast"),
-            Purpose::Reveal => Some("result"),
-            Purpose::Explain => Some("why"),
-        })
-}
-
-/// (0.21) The kicker's text. A number only when the story counts (a countdown
-/// or a list in order, [`super::sequence`]): `05 — sharks`, or `05` alone;
-/// otherwise the label alone. `None` = no kicker.
-fn kicker_text(rank: Option<u32>, label: Option<&str>) -> Option<String> {
-    match (rank.map(super::sequence::rank_text), label) {
-        (Some(r), Some(l)) => Some(format!("{r} — {l}")),
-        (Some(r), None) => Some(r),
-        (None, Some(l)) => Some(l.to_string()),
-        (None, None) => None,
-    }
-}
 
 /// (0.23 W4) The label a hero that waits for its word shows meanwhile: the
 /// primary's `meaning` when it reads as a label (`taste_rules::kicker_ok`) and
@@ -817,82 +858,220 @@ pub(crate) fn placeholder_label(beat: &Beat) -> Option<String> {
     (!gives_it_away).then(|| meaning.to_uppercase())
 }
 
-fn kicker(ctx: &Ctx, b: &mut B) {
-    let beat = b.beat;
-    let Some(text) = kicker_text(ctx.sequence.rank(b.plan.index), kicker_label(beat)) else {
+/// (0.24) Seconds from ENTER until the headline's first line shows (the
+/// eyebrow kicker no longer opens the beat).
+const HEADLINE_TO_CONTENT: f64 = 0.35;
+/// (0.24) The longest the first headline line takes to come in when the beat
+/// would otherwise show nothing within the dead-air limit.
+const HASTENED_ENTRANCE_S: f64 = 0.35;
+
+/// (0.24) Product path: a beat whose ENTER leaves the headline's first line
+/// past the dead-air limit (`DEAD_AIR_FIRST_READABLE_S` into the video, else
+/// `DEAD_AIR_MAX_HOLD_S` into the beat) brings that line in faster: its
+/// entrance motions take at most [`HASTENED_ENTRANCE_S`].
+fn hasten_headline(scene: &mut Scene, prefix: &str, index: usize) {
+    use crate::checks::{DEAD_AIR_FIRST_READABLE_S, DEAD_AIR_MAX_HOLD_S};
+    let Some(life) = scene.lifecycle else {
         return;
     };
-    // (0.23 W4) A held hero's label line already says it: no second, smaller copy.
-    let label_id = b.id("hero_label");
-    if b.stage.iter().any(|l| {
-        l.id == label_id
-            && matches!(&l.kind, LayerKind::Text(t) if t.text.to_lowercase() == text.to_lowercase())
-    }) {
+    let limit = if index == 0 {
+        DEAD_AIR_FIRST_READABLE_S
+    } else {
+        DEAD_AIR_MAX_HOLD_S
+    };
+    if life.enter + HEADLINE_TO_CONTENT <= limit {
         return;
     }
-    let m = ctx.margin();
-    let block = ctx
-        .ts
-        .fit_line(Voice::KICKER, &text, ctx.w - 2.0 * m, 30.0 * ctx.u);
-    let y = 0.105 * ctx.h;
-    let id = b.id("kicker");
-    let mut layer = text_layer(id.clone(), &block, ctx.palette.ink, TextAlign::Left);
-    layer.x = m;
-    layer.y = y;
-    layer.z_index = 30;
+    let (first, group) = (format!("{prefix}.head.0"), format!("{prefix}.head"));
+    for m in scene
+        .motions
+        .iter_mut()
+        .filter(|m| (m.target == first || m.target == group) && m.start < life.settle)
+    {
+        m.duration = m.duration.min(HASTENED_ENTRANCE_S);
+    }
+}
+
+/// (0.24) At most one rule per beat: when a builder drew several decoration
+/// rules, the first by priority stays, with its motions; the rest go.
+fn one_rule(b: &mut B) {
+    const PRIORITY: [&str; 4] = ["hero_rule", "statement_rule", "body_rule", "serif_rule"];
+    let present: Vec<String> = PRIORITY
+        .iter()
+        .map(|n| b.id(n))
+        .filter(|id| b.stage.iter().any(|l| &l.id == id))
+        .collect();
+    for gone in present.iter().skip(1) {
+        b.stage.retain(|l| &l.id != gone);
+        b.motions.retain(|m| &m.target != gone);
+    }
+}
+
+/// Bounding box `(x0, y0, x1, y1)` of the beat's headline lines on the stage.
+fn headline_box(b: &B) -> Option<(f32, f32, f32, f32)> {
+    let head = format!("{}.head", b.plan.prefix);
+    b.stage
+        .iter()
+        .filter(|l| l.id.starts_with(&head) && matches!(l.kind, LayerKind::Text(_)))
+        .map(|l| (l.x, l.y, l.x + l.width, l.y + l.height))
+        .reduce(|a, c| (a.0.min(c.0), a.1.min(c.1), a.2.max(c.2), a.3.max(c.3)))
+}
+
+/// (0.24 V1) No decoration boxes: the cards and panels a recipe lays behind its
+/// type or picture (`<name>.card`, `panel`) are never drawn, so the type sits on
+/// the ground. They stay as hidden layout anchors (carried pictures and the
+/// builders' geometry are laid out against them). A box that IS the content (an
+/// evidence note, a collection item, a dossier document, a chart panel) keeps
+/// its own builder's ids and is drawn.
+fn unbox(b: &mut B) {
+    for l in b.stage.iter_mut() {
+        let boxed = matches!(
+            l.kind,
+            LayerKind::Rectangle { .. } | LayerKind::RoundedRectangle { .. }
+        );
+        let name = l.id.rsplit('.').next().unwrap_or("");
+        let content =
+            l.id.split('.')
+                .any(|seg| matches!(seg, "note" | "items" | "item" | "paper" | "doc"));
+        if boxed && matches!(name, "card" | "panel") && !content {
+            l.visible = false;
+        }
+    }
+}
+
+/// (0.24) The beat's marker (`direction::decide_marker`): nothing by default,
+/// a large running index in the gutter on a counted story, a source / unit
+/// tag beside the figure, or a stamp on a hype impact beat. Replaces the
+/// eyebrow kicker and its rule.
+fn marker(ctx: &Ctx, b: &mut B) {
+    let look = ctx.art.as_ref().map(|(a, _)| a.look);
+    let rank = ctx.sequence.rank(b.plan.index);
+    let mark = direction::decide_marker(b.beat, &b.beat.statement, rank, look);
     let p = b.plan.lang.preset;
     let t = b.plan.enter_at();
-    // (0.23 W2c) The planned entrance and accent; the identity is the old kicker.
-    let bp = ctx.params_for(b.plan.index);
-    b.motions.push(edge_entrance(
-        &bp,
-        &id,
-        t,
-        p.duration * 0.9,
-        Reveal::Clip,
-        Direction::Up,
-        p.easing,
-    ));
-    b.push(layer);
-
-    let rule_w = match bp.accent {
-        AccentMark::None => return,
-        AccentMark::Underline => block.width(),
-        _ => 96.0,
-    };
-    let rule_h = if bp.accent == AccentMark::Underline {
-        4.0
-    } else {
-        7.0
-    };
-    let rule_id = b.id("kicker_rule");
-    let rule = rect_layer(
-        rule_id.clone(),
-        (
-            m,
-            y + block.height() + 14.0 * ctx.u,
-            if bp.accent == AccentMark::Underline {
-                rule_w
+    let m = ctx.margin();
+    let u = ctx.u;
+    let id = b.id("marker");
+    match mark {
+        direction::Marker::None => {}
+        direction::Marker::Index { rank, label } => {
+            let Some((hx0, hy0, hx1, hy1)) = headline_box(b) else {
+                return;
+            };
+            let text = match label {
+                Some(l) => format!("{} \u{2013} {l}", super::sequence::rank_text(rank)),
+                None => super::sequence::rank_text(rank),
+            };
+            let hh = hy1 - hy0;
+            let (left, right) = (hx0 - m, ctx.w - m - hx1);
+            let (gutter, on_left) = if left > right {
+                (left, true)
             } else {
-                rule_w * ctx.u
-            },
-            rule_h * ctx.u,
-        ),
-        ctx.palette.accent,
-        31,
-    );
-    b.motions.push(mo::mask(
-        &rule_id,
-        t + 0.12,
-        0.6,
-        Direction::Right,
-        Easing::OutCubic,
+                (right, false)
+            };
+            let max_size = (0.42 * hh).max(48.0 * u);
+            if gutter >= 0.2 * ctx.w {
+                let block = ctx
+                    .ts
+                    .fit_line(Voice::HERO_NUMBER, &text, gutter - 16.0 * u, max_size);
+                let mut layer = text_layer(id.clone(), &block, ctx.palette.ink, TextAlign::Left);
+                layer.x = if on_left { m } else { ctx.w - m - layer.width };
+                layer.y = (hy0 + hy1) / 2.0 - block.height() / 2.0;
+                layer.z_index = 30;
+                self::marker_in(b, layer, &id, t, p.duration, p.easing, block.height());
+            } else {
+                // No gutter: above the headline, left on its axis, if there is room.
+                let size = (0.2 * hh).max(40.0 * u).min(max_size);
+                let block = ctx
+                    .ts
+                    .fit_line(Voice::HERO_NUMBER, &text, ctx.w - 2.0 * m, size);
+                let y = hy0 - block.height() - 12.0 * u;
+                if y < 0.03 * ctx.h {
+                    return;
+                }
+                let mut layer = text_layer(id.clone(), &block, ctx.palette.ink, TextAlign::Left);
+                layer.x = hx0;
+                layer.y = y;
+                layer.z_index = 30;
+                self::marker_in(b, layer, &id, t, p.duration, p.easing, block.height());
+            }
+        }
+        direction::Marker::Tag(text) => {
+            let hero = b.id("hero.");
+            let fig = b
+                .focal
+                .as_ref()
+                .and_then(|f| b.stage.iter().find(|l| &l.id == f))
+                .or_else(|| {
+                    b.stage
+                        .iter()
+                        .find(|l| l.id.starts_with(&hero) && matches!(l.kind, LayerKind::Text(_)))
+                });
+            let Some(fig) = fig else {
+                return;
+            };
+            let (fx, fy, fh) = (
+                fig.x - fig.anchor_x * fig.width * fig.scale_x.abs(),
+                fig.y - fig.anchor_y * fig.height * fig.scale_y.abs(),
+                fig.height * fig.scale_y.abs(),
+            );
+            let block = ctx
+                .ts
+                .fit_line(Voice::MARKER, &text, ctx.w - 2.0 * m, 24.0 * u);
+            let mut layer = text_layer(id.clone(), &block, ctx.palette.ink, TextAlign::Left);
+            layer.x = fx.max(m);
+            layer.y = fy + fh + 14.0 * u;
+            layer.z_index = 30;
+            // After the figure settles, a short wipe.
+            let at = t + p.duration + 0.2;
+            b.motions
+                .push(mo::mask(&id, at, 0.3, Direction::Right, Easing::OutCubic));
+            b.push(layer);
+        }
+    }
+}
+
+/// The running index enters from below with the beat's easing (0.36 s), one
+/// stagger step before the headline; nothing counts.
+fn marker_in(b: &mut B, layer: Layer, id: &str, t: f64, _dur: f64, easing: Easing, h: f32) {
+    let start = (t - 0.06).max(0.0);
+    b.motions.push(mo::shift(
+        id,
+        start,
+        0.36,
+        [0.0, 0.4 * h],
+        [0.0, 0.0],
+        easing,
     ));
-    b.push(rule);
+    b.motions.push(mo::fade(id, start, 0.36, 0.0, 1.0, easing));
+    b.push(layer);
+}
+
+/// (0.24) A wordless far plane for a parallax beat whose ghost word was left
+/// out: one faint full-width band on the background plane.
+fn far_plane(ctx: &Ctx, b: &mut B) {
+    let id = b.id("far_plane");
+    let mut layer = base_layer(
+        id,
+        (-0.05 * ctx.w, 0.55 * ctx.h, 1.1 * ctx.w, 0.4 * ctx.h),
+        LayerKind::Rectangle {
+            fill: ctx.palette.ink.with_alpha(0x06),
+            stroke: None,
+        },
+        0,
+    );
+    layer.depth = plane(b.plan.lang.depth.background);
+    b.push(layer);
 }
 
 /// Large, faint background word with slow parallax drift.
 pub(super) fn ghost(ctx: &Ctx, b: &mut B, cy: f32) {
+    ghost_in(ctx, b, cy, None);
+}
+
+/// [`ghost`] sized to and sitting behind a column `(x, width)` (0.24 M4:
+/// side-by-side layouts). `None` is the full canvas.
+pub(super) fn ghost_in(ctx: &Ctx, b: &mut B, cy: f32, column: Option<(f32, f32)>) {
     let beat = b.beat;
     let Some(word) = beat
         .keyword
@@ -902,9 +1081,26 @@ pub(super) fn ghost(ctx: &Ctx, b: &mut B, cy: f32) {
     else {
         return;
     };
-    let block = ctx
-        .ts
-        .fit_line(Voice::GHOST, word, ctx.w * 1.25, 0.36 * ctx.h);
+    // (0.24) One ghost word per video, on the payoff beat, and never one that
+    // repeats what the beat already shows.
+    if !ctx.budget.ghost_ok(b.plan.index) || super::accent_budget::ghost_repeats(beat, word) {
+        // A parallax beat still needs something on its far plane for the
+        // camera to move against: a barely-there band, not a word.
+        if b.plan.lang.language == Language::Parallax {
+            far_plane(ctx, b);
+        }
+        return;
+    }
+    let (gx, gw) = match column {
+        Some((x, cw)) => (x - 0.05 * cw, 1.1 * cw),
+        None => (-0.05 * ctx.w, ctx.w * 1.25),
+    };
+    let block = ctx.ts.fit_line(Voice::GHOST, word, gw, 0.36 * ctx.h);
+    // (0.24) The ghost spells the keyword: it does not say it before the
+    // narrator does.
+    let said = (beat.keyword.as_deref() == Some(word))
+        .then(|| super::speech_plan::anchor_time(&ctx.spoken, &[word]))
+        .flatten();
     let id = b.id("ghost");
     let alpha = match ctx.taste.density.ghost_word {
         Level::Low => 0x08,
@@ -917,11 +1113,16 @@ pub(super) fn ghost(ctx: &Ctx, b: &mut B, cy: f32) {
         ctx.palette.ink.with_alpha(alpha),
         TextAlign::Left,
     );
-    layer.x = -0.05 * ctx.w;
+    layer.x = gx;
     layer.y = cy - block.height() / 2.0;
     layer.z_index = 0;
     layer.depth = plane(b.plan.lang.depth.background);
-    let t = b.plan.enter_at();
+    let mut t = b.plan.enter_at();
+    if let Some(at) = said {
+        // Late enough to leave the fade-in room before ANTICIPATE.
+        let latest = (b.plan.life.anticipate - 1.2).max(t);
+        t = (at - super::speech_plan::WORD_CUE_LEAD).clamp(t, latest);
+    }
     // (0.23) The parallax pull-back below fades the same channel from
     // ANTICIPATE: when the 1.2 s fade-in would still be running then (a short
     // speech-led beat) the two overlap and the scene does not validate, so the
@@ -1033,11 +1234,18 @@ fn wrap_stage(ctx: &Ctx, b: B) -> Scene {
     let (shifts, step) = temporal::hierarchy_shifts(ctx.taste.rhythm);
     let mut held = 1.0f32;
     let span = life.anticipate - life.evolve;
+    // (0.24 M10) The stage never steps in by more than the look's camera
+    // budget over a beat (3 %): reframes are slow pushes, not zoom-bursts.
+    let sig = super::signature::for_look(ctx.art.as_ref().map(|(a, _)| a.look));
+    let push_cap = 1.0 + sig.camera_push_max;
     if shifts > 0 && span > 0.8 {
         let dur = (span / shifts as f64).min(0.7) * 0.8;
         for k in 0..shifts {
             let at = life.evolve + span * k as f64 / shifts as f64;
-            let to = held * (1.0 + direction::amplitude(&bp, step));
+            let to = (held * (1.0 + direction::amplitude(&bp, step))).min(push_cap);
+            if to <= held + 1e-4 {
+                continue;
+            }
             motions.push(mo::scale(&stage_id, at, dur, held, to, plan.lang.settle));
             held = to;
         }
@@ -1054,14 +1262,18 @@ fn wrap_stage(ctx: &Ctx, b: B) -> Scene {
         } else {
             1.0
         };
-        motions.push(mo::scale(
-            &stage_id,
-            life.anticipate,
-            plan.duration - life.anticipate,
-            held,
-            held * anticipate_scale * shrink,
-            Easing::InOutCubic,
-        ));
+        // (0.24 Wave 1) No stage shrink on the way out: the exit is a fade
+        // plus a drift. Only a planned scale-down family pulls back.
+        if bp.exit == ExitFamily::ScaleDown {
+            motions.push(mo::scale(
+                &stage_id,
+                life.anticipate,
+                plan.duration - life.anticipate,
+                held,
+                held * anticipate_scale * shrink,
+                Easing::InOutCubic,
+            ));
+        }
         // (0.23 W2c) The planned exit family, else the taste's gesture.
         let exit = match bp.exit {
             ExitFamily::Fade => ExitGesture::Fade,
@@ -1138,14 +1350,26 @@ fn wrap_stage(ctx: &Ctx, b: B) -> Scene {
                 Easing::InCubic,
             ));
         } else {
-            motions.push(mo::fade(
-                &stage_id,
-                plan.exit_at(),
-                o * if exit == ExitGesture::Fade { 0.9 } else { 0.6 },
-                1.0,
-                0.0,
-                Easing::OutCubic,
-            ));
+            let fade_len = o * if exit == ExitGesture::Fade { 0.9 } else { 0.6 };
+            // (0.24 Wave 1) A plain fade or punch leaves by `mo::leave`: fade
+            // plus a drift opposite to the rise the entrance came in on.
+            if matches!(exit, ExitGesture::Fade | ExitGesture::Punch) {
+                motions.extend(mo::leave(
+                    &stage_id,
+                    plan.exit_at(),
+                    fade_len,
+                    sig.exit_drift_px * ctx.u,
+                ));
+            } else {
+                motions.push(mo::fade(
+                    &stage_id,
+                    plan.exit_at(),
+                    fade_len,
+                    1.0,
+                    0.0,
+                    Easing::OutCubic,
+                ));
+            }
             match exit {
                 ExitGesture::Slide => {
                     let lead = [ANTICIPATE_LIFT * lift_k * ctx.u, 0.0];
@@ -1166,18 +1390,8 @@ fn wrap_stage(ctx: &Ctx, b: B) -> Scene {
                         Easing::InCubic,
                     ));
                 }
-                ExitGesture::Punch => {
-                    let from = held * anticipate_scale;
-                    motions.push(mo::scale(
-                        &stage_id,
-                        plan.exit_at(),
-                        o * 0.6,
-                        from,
-                        from * 1.14,
-                        Easing::InCubic,
-                    ));
-                }
-                ExitGesture::Fade | ExitGesture::Lift => {}
+                // (0.24 Wave 1) Fade and Punch left through `mo::leave` above.
+                ExitGesture::Punch | ExitGesture::Fade | ExitGesture::Lift => {}
             }
         }
     }
@@ -1322,12 +1536,44 @@ pub(super) fn headline_lines(
     start: f64,
     entrance_up: bool,
 ) -> (f32, f64) {
+    headline_lines_in(
+        ctx,
+        b,
+        name,
+        block,
+        top,
+        align,
+        color,
+        start,
+        entrance_up,
+        None,
+    )
+}
+
+/// [`headline_lines`] aligned within a column `(x, width)` instead of the
+/// full canvas (0.24 M4: side-by-side layouts). `None` is the canvas.
+#[allow(clippy::too_many_arguments)]
+pub(super) fn headline_lines_in(
+    ctx: &Ctx,
+    b: &mut B,
+    name: &str,
+    block: &Block,
+    top: f32,
+    align: TextAlign,
+    color: Color,
+    start: f64,
+    entrance_up: bool,
+    column: Option<(f32, f32)>,
+) -> (f32, f64) {
     let lang = b.plan.lang;
     let p = lang.preset;
-    let line_x = |width: f32| match align {
-        TextAlign::Left => ctx.margin(),
-        TextAlign::Center => (ctx.w - width) / 2.0,
-        TextAlign::Right => ctx.w - ctx.margin() - width,
+    let line_x = |width: f32| match (column, align) {
+        (Some((x, _)), TextAlign::Left) => x,
+        (Some((x, cw)), TextAlign::Center) => x + (cw - width) / 2.0,
+        (Some((x, cw)), TextAlign::Right) => x + cw - width,
+        (None, TextAlign::Left) => ctx.margin(),
+        (None, TextAlign::Center) => (ctx.w - width) / 2.0,
+        (None, TextAlign::Right) => ctx.w - ctx.margin() - width,
     };
     // (0.23 W2c) Word cascades take the beat's easing, travel and stagger.
     let kp = direction::kinetic_params(
@@ -1486,13 +1732,18 @@ const DECK_MIN_U: f32 = 30.0;
 /// `taste_rules::BODY_MAX_LINES` lines (shrunk toward a floor, then cut with
 /// "…"), never display size. `None` when the beat has no body copy.
 pub(super) fn deck_block(ctx: &Ctx, b: &B) -> Option<Block> {
+    deck_block_w(ctx, b, ctx.w - 2.0 * ctx.margin())
+}
+
+/// [`deck_block`] measured to `width` (a column).
+pub(super) fn deck_block_w(ctx: &Ctx, b: &B, width: f32) -> Option<Block> {
     let text = b.plan.display.body.as_deref()?;
     Some(ctx.ts.fit_body(
         Voice::BODY,
         text,
         DECK_SIZE_U * ctx.u,
         DECK_MIN_U * ctx.u,
-        ctx.w - 2.0 * ctx.margin(),
+        width,
         taste_rules::BODY_MAX_LINES,
     ))
 }
@@ -1505,7 +1756,19 @@ pub(super) fn deck_space(ctx: &Ctx, block: &Block) -> f32 {
 /// Place a measured deck under a title block whose bottom is `top`; it reads
 /// in at `start` (when the title has read in).
 pub(super) fn deck_lines(ctx: &Ctx, b: &mut B, block: &Block, top: f32, start: f64) {
-    headline_lines(
+    deck_lines_in(ctx, b, block, top, start, None);
+}
+
+/// [`deck_lines`] aligned in a column `(x, width)`.
+pub(super) fn deck_lines_in(
+    ctx: &Ctx,
+    b: &mut B,
+    block: &Block,
+    top: f32,
+    start: f64,
+    column: Option<(f32, f32)>,
+) {
+    headline_lines_in(
         ctx,
         b,
         "deck",
@@ -1515,6 +1778,7 @@ pub(super) fn deck_lines(ctx: &Ctx, b: &mut B, block: &Block, top: f32, start: f
         ctx.palette.ink,
         start,
         false,
+        column,
     );
 }
 
@@ -1677,6 +1941,37 @@ fn collage_card_with(
     start: f64,
     out: &mut Vec<Layer>,
 ) {
+    collage_card_dirs(
+        ctx,
+        b,
+        bp,
+        name,
+        center,
+        size,
+        tilt,
+        halftone_dir,
+        start,
+        (Direction::Down, Direction::Up),
+        out,
+    );
+}
+
+/// [`collage_card_with`] with the wipe directions of the halftone patch and the
+/// card (0.24 M4: a side-by-side zone enters from its own side).
+#[allow(clippy::too_many_arguments)]
+fn collage_card_dirs(
+    ctx: &Ctx,
+    b: &mut B,
+    bp: &direction::BeatParams,
+    name: &str,
+    center: (f32, f32),
+    size: (f32, f32),
+    tilt: f32,
+    halftone_dir: (f32, f32),
+    start: f64,
+    (ht_wipe, card_wipe): (Direction, Direction),
+    out: &mut Vec<Layer>,
+) {
     let u = ctx.u;
     if ctx.layered() && bp.accent != AccentMark::None {
         let (hw, hh) = (size.0 * 0.9, size.1 * 0.9);
@@ -1708,7 +2003,7 @@ fn collage_card_with(
             start,
             0.9,
             Reveal::Mask,
-            Direction::Down,
+            ht_wipe,
             Easing::OutCubic,
         ));
         out.push(ht);
@@ -1723,6 +2018,7 @@ fn collage_card_with(
             stroke: Some(Stroke {
                 color: ctx.palette.ink.with_alpha(0x22),
                 width: 2.0 * u,
+                brush: None,
             }),
         },
         10,
@@ -1736,7 +2032,7 @@ fn collage_card_with(
         start + 0.08,
         0.75,
         Reveal::Mask,
-        Direction::Up,
+        card_wipe,
         Easing::OutQuint,
     ));
     b.motions.push(mo::rotate(
@@ -2330,7 +2626,14 @@ fn close_carries(ctx: &Ctx, b: &mut B, carries: &mut [Carry]) {
             ));
             c.open = false;
         } else {
-            let hold_at = plan.exit_at().max(last_at);
+            // (0.24) Side by side the carried subject sits in its own column; it
+            // leaves only once the beat is over, not across the headline that is
+            // still fading out.
+            let hold_at = if c.open && grammar::placement::side_by_side(&ctx.frame) {
+                plan.exit_at().max(plan.duration).max(last_at)
+            } else {
+                plan.exit_at().max(last_at)
+            };
             c.element.track.push(track_key(
                 &plan.id,
                 hold_at,
@@ -2365,6 +2668,9 @@ pub(super) fn emphasize(
     carries: &mut Vec<Carry>,
     _c: Composition,
 ) -> Result<(), CompileError> {
+    if grammar::placement::side_by_side(&ctx.frame) {
+        return emphasize_wide(ctx, b, carries);
+    }
     let (w, h, u, m) = (ctx.w, ctx.h, ctx.u, ctx.margin());
     let t = b.plan.enter_at();
     // (0.23 C2b) The beat's planned direction; the identity is the old beat.
@@ -2458,6 +2764,11 @@ pub(super) fn emphasize(
         let mut layer = layer;
         layer.z_index = 22;
         hero_local = Some(layer.id.clone());
+        // (0.24) A figure the beat is about is its focal element: the layout
+        // QA holds it to dominate the headline.
+        if matches!(layer.kind, LayerKind::Text(_)) && beat.primary.kind() == SubjectKind::Number {
+            b.focal = Some(layer.id.clone());
+        }
         placed.push(Placed::of(&layer));
         b.push(layer);
     }
@@ -2587,6 +2898,9 @@ pub(super) fn contrast(
     carries: &mut Vec<Carry>,
     _c: Composition,
 ) -> Result<(), CompileError> {
+    if grammar::placement::side_by_side(&ctx.frame) {
+        return contrast_wide(ctx, b, carries);
+    }
     let (w, h, u, m) = (ctx.w, ctx.h, ctx.u, ctx.margin());
     let plan = b.plan;
     let beat = b.beat;
@@ -2650,6 +2964,7 @@ pub(super) fn contrast(
             stroke: Some(Stroke {
                 color: ctx.palette.ink,
                 width: 3.0 * u,
+                brush: None,
             }),
         },
         12,
@@ -2934,6 +3249,595 @@ pub(super) fn contrast(
     Ok(())
 }
 
+/// Headline budget for a column layout (0.24 M4): `max_h_share` of the layout
+/// height, `max_lines` lines, the usual size floor.
+fn column_budget(ctx: &Ctx, beat: &Beat, max_h_share: f32, max_lines: usize) -> HeadlineBudget {
+    HeadlineBudget {
+        text: Typesetter::prepare(&Voice::HEADLINE, &beat.statement),
+        max_h: max_h_share * ctx.h,
+        max_lines,
+        min_size: (HEADLINE_FLOOR_U * ctx.u).max(ctx.frame.min_type_px),
+    }
+}
+
+/// emphasize on a side-by-side canvas (0.24 M4): an editorial split, 56/44.
+/// Left, centred as a block: headline, deck, serif note. Right: the hero card,
+/// centred. The ghost sits behind the right column. Stagger is unchanged: the
+/// headline leads, then the hero.
+fn emphasize_wide(ctx: &mut Ctx, b: &mut B, carries: &mut Vec<Carry>) -> Result<(), CompileError> {
+    let (w, h, u, m) = (ctx.w, ctx.h, ctx.u, ctx.margin());
+    let (l, r) = grammar::placement::columns(ctx, 0.56, 72.0);
+    let lcol = Some((l.x, l.w));
+    let t = b.plan.enter_at();
+    let bp = ctx.params_for(b.plan.index);
+    let mut placed: Vec<Placed> = Vec::new();
+    ghost_in(ctx, b, 0.58 * h, Some((r.x, r.w)));
+
+    // Left column block: headline, deck, serif note, centred vertically.
+    let beat = b.beat;
+    ctx.ts
+        .set_headline_budget(Some(column_budget(ctx, beat, 0.46, 3)));
+    // At most 3 lines: the layout QA caps a wide canvas's headline there.
+    let head = ctx.ts.fit_block(
+        Voice::HEADLINE,
+        &beat.statement,
+        l.w,
+        0.46 * h,
+        176.0 * u,
+        3,
+    );
+    let deck = deck_block_w(ctx, b, l.w);
+    let deck_h = deck.as_ref().map_or(0.0, |d| deck_space(ctx, d));
+    let note = match &beat.secondary {
+        Some(sec) if sec.kind() != SubjectKind::Object => Some(ctx.ts.fit_block(
+            Voice::SERIF,
+            sec.display_text().unwrap_or(""),
+            l.w,
+            0.1 * h,
+            84.0 * u,
+            2,
+        )),
+        _ => None,
+    };
+    let note_gap = 56.0 * u;
+    let note_h = note
+        .as_ref()
+        .map_or(0.0, |n| note_gap + n.height() + 23.0 * u);
+    let total = head.height() + deck_h + note_h;
+    let top = (l.y + (l.h - total) / 2.0).max(0.19 * h);
+    let (head_h, lines_done) = headline_lines_in(
+        ctx,
+        b,
+        "head",
+        &head,
+        top,
+        TextAlign::Left,
+        ctx.palette.ink,
+        t + 0.1,
+        true,
+        lcol,
+    );
+    if let Some(d) = &deck {
+        deck_lines_in(ctx, b, d, top + head_h, lines_done, lcol);
+    }
+
+    // Right column: the hero card, centred (up to 0.55h tall).
+    let object_note = matches!(&beat.secondary, Some(s) if s.kind() == SubjectKind::Object);
+    let (hero_h, support) = if object_note {
+        (0.40 * h, 0.22 * h)
+    } else {
+        ((0.55 * h).min(r.h), 0.0)
+    };
+    let support_gap = if object_note { 0.05 * h } else { 0.0 };
+    let stack = hero_h + support_gap + support;
+    let hero_top = (r.y + (r.h - stack) / 2.0).max(0.15 * h);
+    let card_cx = r.x + r.w / 2.0;
+    let slot = Slot {
+        cx: card_cx,
+        cy: hero_top + hero_h / 2.0,
+        w: r.w - 120.0 * u,
+        h: hero_h - 80.0 * u,
+    };
+    let mut mid = Vec::new();
+    collage_card_with(
+        ctx,
+        b,
+        &bp,
+        "hero",
+        (slot.cx, slot.cy),
+        (r.w, hero_h),
+        -2.2,
+        (-1.0, -1.0),
+        lines_done - 0.2,
+        &mut mid,
+    );
+    for layer in mid {
+        b.push(layer);
+    }
+    let mut hero_local: Option<String> = None;
+    if let Some(mut layer) = place_subject(
+        ctx,
+        b,
+        carries,
+        Which::Primary,
+        &beat.primary,
+        slot,
+        (0.0, 0.0),
+        ctx.palette.ink,
+        lines_done,
+        Entrance::Rise,
+        None,
+        None,
+        "hero",
+    )? {
+        layer.z_index = 22;
+        hero_local = Some(layer.id.clone());
+        // (0.24) A figure the beat is about is its focal element: the layout
+        // QA holds it to dominate the headline.
+        if matches!(layer.kind, LayerKind::Text(_)) && beat.primary.kind() == SubjectKind::Number {
+            b.focal = Some(layer.id.clone());
+        }
+        placed.push(Placed::of(&layer));
+        b.push(layer);
+    }
+
+    let life = b.plan.life;
+    let events = life.evolve_events(2);
+    let (ev0, ev1) = (events[0], events[1]);
+    if let (None, Some(id)) = (&beat.secondary, &hero_local) {
+        b.motions.push(mo::scale(
+            id,
+            ev0,
+            (life.anticipate - ev0).max(0.1),
+            1.0,
+            direction::scale_amplitude(
+                &bp,
+                1.0 + (HERO_CROP_SCALE - 1.0) * temporal::secondary_gain(&ctx.taste.motion),
+            ),
+            Easing::InOutCubic,
+        ));
+    }
+    if b.plan.lang.language == Language::Minimal {
+        let y = hero_top + hero_h + 0.03 * h;
+        accent_rule(
+            ctx,
+            b,
+            &bp,
+            "hero_rule",
+            MarkShape::Rule,
+            (r.x, y, 140.0 * u, 5.0 * u),
+            (r.x, y, r.w, 4.0 * u),
+            ev1,
+        );
+    }
+    if let Some(sec) = &beat.secondary {
+        match (&note, sec.kind()) {
+            (Some(block), _) => {
+                let mut cursor = top + head_h + deck_h + note_gap;
+                headline_lines_in(
+                    ctx,
+                    b,
+                    "serif",
+                    block,
+                    cursor,
+                    TextAlign::Left,
+                    ctx.palette.ink,
+                    ev0,
+                    false,
+                    lcol,
+                );
+                cursor += block.height() + 14.0 * u;
+                let uw = block.width().min(l.w);
+                accent_rule(
+                    ctx,
+                    b,
+                    &bp,
+                    "serif_rule",
+                    MarkShape::Underline,
+                    (l.x, cursor, 140.0 * u, 9.0 * u),
+                    (l.x, cursor, uw, 9.0 * u),
+                    if ev1 + 0.7 <= life.anticipate {
+                        ev1
+                    } else {
+                        ev0 + 0.4
+                    },
+                );
+            }
+            (None, SubjectKind::Object) => {
+                let slot = Slot {
+                    cx: r.right() - support / 2.0,
+                    cy: hero_top + hero_h + support_gap + support / 2.0,
+                    w: support,
+                    h: support,
+                };
+                if let Some(mut layer) = place_subject(
+                    ctx,
+                    b,
+                    carries,
+                    Which::Secondary,
+                    sec,
+                    slot,
+                    (0.0, 0.0),
+                    ctx.palette.ink,
+                    ev0,
+                    Entrance::Rise,
+                    None,
+                    None,
+                    "support",
+                )? {
+                    layer.z_index = 24;
+                    placed.push(Placed::of(&layer));
+                    b.push(layer);
+                }
+            }
+            _ => {}
+        }
+    }
+    direction::steer_entrances(&bp, &mut b.motions, &placed);
+    b.anchor = Some(Slot {
+        cx: w - m - 130.0 * u,
+        cy: 0.115 * h,
+        w: 260.0 * u,
+        h: 64.0 * u,
+    });
+    Ok(())
+}
+
+/// contrast on a side-by-side canvas (0.24 M4): the headline is one band across
+/// the top (at most 0.62w, two lines); below it zone A and zone B are two equal
+/// columns over the remaining height, divided by the connective in the centre
+/// gutter. A enters from the left, B from the right.
+fn contrast_wide(ctx: &mut Ctx, b: &mut B, carries: &mut Vec<Carry>) -> Result<(), CompileError> {
+    let (w, h, u, m) = (ctx.w, ctx.h, ctx.u, ctx.margin());
+    let plan = b.plan;
+    let beat = b.beat;
+    let p = plan.lang.preset;
+    let t = plan.enter_at();
+    let bp = ctx.params_for(plan.index);
+    let mut placed: Vec<Placed> = Vec::new();
+    let relationship = beat.relationship.unwrap_or(match beat.purpose {
+        Purpose::Compare => Relationship::Separate,
+        _ => Relationship::Compress,
+    });
+    ghost(ctx, b, 0.52 * h);
+
+    ctx.ts
+        .set_headline_budget(Some(column_budget(ctx, beat, 0.24, 2)));
+    let top = 0.17 * h;
+    let head_w = (0.62 * w).min(w - 2.0 * m);
+    let head = ctx.ts.fit_block(
+        Voice::HEADLINE,
+        &beat.statement,
+        head_w,
+        0.24 * h,
+        120.0 * u,
+        2,
+    );
+    let (head_h, head_done) = headline_lines(
+        ctx,
+        b,
+        "head",
+        &head,
+        top,
+        TextAlign::Left,
+        ctx.palette.ink,
+        t + 0.05,
+        true,
+    );
+    let head_h = head_h
+        + match deck_block_w(ctx, b, head_w) {
+            Some(d) => {
+                deck_lines_in(ctx, b, &d, top + head_h, head_done, None);
+                deck_space(ctx, &d)
+            }
+            None => 0.0,
+        };
+
+    let life = plan.life;
+    let events = life.evolve_events(3);
+    let (ev_zone, ev_rel, ev_conn) = (events[0], events[1], events[2]);
+    let rel_start = ev_rel;
+    let rel_end = (life.anticipate - 0.05)
+        .max(rel_start + 0.5)
+        .min(plan.duration - 0.05)
+        .max(rel_start + 0.1);
+
+    // Two equal columns below the headline band, the remaining height.
+    let (mut za, mut zb) = grammar::placement::columns(ctx, 0.5, 216.0);
+    let y0 = top + head_h + 0.05 * h;
+    let bottom = za.bottom();
+    za.y = y0;
+    za.h = (bottom - y0).max(0.25 * h);
+    zb.y = za.y;
+    zb.h = za.h;
+    let gutter_x = za.right();
+    let gutter_w = zb.x - za.right();
+
+    let panel_id = b.id("panel");
+    b.push(base_layer(
+        panel_id.clone(),
+        (za.x, za.y, za.w, za.h),
+        LayerKind::RoundedRectangle {
+            fill: ctx.palette.card,
+            radius: 14.0 * u,
+            stroke: Some(Stroke {
+                color: ctx.palette.ink,
+                width: 3.0 * u,
+                brush: None,
+            }),
+        },
+        12,
+    ));
+    b.motions.push(edge_entrance(
+        &bp,
+        &panel_id,
+        t + 0.25,
+        0.8,
+        Reveal::Mask,
+        Direction::Right,
+        Easing::OutQuint,
+    ));
+
+    let (primary_pressure, panel_to, zone_scale, zone_dy, connective) = match relationship {
+        Relationship::Compress => (
+            Some(Pressure {
+                start: rel_start,
+                end: rel_end,
+                scale: 0.7,
+                dy: 0.0,
+            }),
+            Some((
+                za.x + 0.1 * za.w,
+                za.y + 0.19 * za.h,
+                za.w * 0.8,
+                za.h * 0.62,
+            )),
+            (0.84, 1.16),
+            -0.045 * h * 0.25,
+            "meanwhile,",
+        ),
+        Relationship::Grow | Relationship::Accumulate => {
+            (None, None, (0.8, 1.2), -0.02 * h * 0.25, "and still")
+        }
+        Relationship::Separate => (
+            Some(Pressure {
+                start: rel_start,
+                end: rel_end,
+                scale: 1.0,
+                dy: 0.0,
+            }),
+            None,
+            (1.0, 1.0),
+            0.03 * h * 0.25,
+            "versus",
+        ),
+        Relationship::Replace => (
+            Some(Pressure {
+                start: rel_start,
+                end: rel_end,
+                scale: 0.55,
+                dy: 0.0,
+            }),
+            None,
+            (1.0, 1.08),
+            0.0,
+            "instead,",
+        ),
+        Relationship::Carry => (None, None, (1.0, 1.04), 0.0, "still"),
+    };
+    if let Some(to) = panel_to {
+        b.motions.push(mo::expand(
+            &panel_id,
+            rel_start,
+            rel_end - rel_start,
+            to,
+            Easing::InOutCubic,
+        ));
+    }
+    let slot_a = Slot {
+        cx: za.x + za.w / 2.0,
+        cy: za.y + za.h / 2.0,
+        w: za.w * 0.8,
+        h: za.h * 0.7,
+    };
+    if let Some(mut l) = place_subject(
+        ctx,
+        b,
+        carries,
+        Which::Primary,
+        &beat.primary,
+        slot_a,
+        (0.0, 0.0),
+        ctx.palette.ink,
+        t + 0.45,
+        Entrance::Rise,
+        primary_pressure,
+        Some(panel_id.as_str()),
+        "evidence",
+    )? {
+        l.z_index = 22;
+        placed.push(Placed::of(&l));
+        b.push(l);
+    }
+
+    // Connective: the serif voice names the relationship, centred in the gutter.
+    let conn = ctx
+        .ts
+        .fit_line(Voice::SERIF, connective, gutter_w - 16.0 * u, 64.0 * u);
+    headline_lines_in(
+        ctx,
+        b,
+        "connective",
+        &conn,
+        za.y,
+        TextAlign::Center,
+        ctx.palette.muted,
+        ev_conn,
+        false,
+        Some((gutter_x, gutter_w)),
+    );
+
+    // Zone B: collage group in the right column.
+    let zone_id = b.id("zone_b");
+    let mut zone_children = Vec::new();
+    let card = (zb.w * 0.86, zb.h * 0.84);
+    let local_c = (zb.w / 2.0, zb.h / 2.0);
+    collage_card_dirs(
+        ctx,
+        b,
+        &bp,
+        "zone_b",
+        local_c,
+        card,
+        3.0,
+        (1.0, 1.0),
+        ev_zone,
+        (Direction::Left, Direction::Left),
+        &mut zone_children,
+    );
+    if let Some(sec) = &beat.secondary {
+        let side = card.0.min(card.1) * 0.78;
+        let slot = Slot {
+            cx: zb.x + zb.w / 2.0,
+            cy: zb.y + zb.h / 2.0,
+            w: side,
+            h: side,
+        };
+        let object_like = sec.without_value();
+        let shown = if sec.kind() == SubjectKind::Object {
+            &object_like
+        } else {
+            sec
+        };
+        if let Some(mut l) = place_subject(
+            ctx,
+            b,
+            carries,
+            Which::Secondary,
+            shown,
+            slot,
+            (zb.x, zb.y),
+            ctx.palette.ink,
+            ev_zone + 0.15,
+            Entrance::Rise,
+            None,
+            None,
+            "pressure",
+        )? {
+            l.z_index = 14;
+            placed.push(Placed::of(&l));
+            zone_children.push(l);
+        }
+        if let (SubjectKind::Object, Some(value)) = (sec.kind(), sec.value()) {
+            let stamp = ctx
+                .ts
+                .fit_line(Voice::HERO_NUMBER, value, zb.w * 0.5, 0.11 * h);
+            let id = b.id("stamp");
+            let mut l = text_layer(id.clone(), &stamp, ctx.palette.accent, TextAlign::Left);
+            let grow = f32::max(f32::max(zone_scale.0, zone_scale.1), 1.0);
+            let right_edge = local_c.0 + (zb.w / 2.0) / grow;
+            let tilt_slack = 0.1 * l.height;
+            l.x =
+                (local_c.0 + card.0 * 0.5 - l.width * 0.55).min(right_edge - l.width - tilt_slack);
+            l.y = (local_c.1 - card.1 * 0.5 - l.height * 0.45).max(0.0);
+            l.rotation_degrees = -5.0;
+            l.z_index = 30;
+            let strike = match plan.lang.language {
+                _ if bp.accent == AccentMark::Stamp => Easing::ImpactSpring,
+                Language::Minimal | Language::Data => p.easing,
+                _ => Easing::ImpactSpring,
+            };
+            let stamp_at = ev_zone + 0.3;
+            let count = if plan.lang.data_numbers {
+                mo::count(&id, stamp_at, p.duration * 2.2, value, plan.lang.settle)
+            } else {
+                None
+            };
+            let glyphs = if count.is_some() {
+                0
+            } else {
+                value.chars().filter(|c| !c.is_whitespace()).count()
+            };
+            b.motions.extend(direction::stamp_entrance(
+                &bp,
+                &id,
+                stamp_at,
+                p.duration,
+                strike,
+                glyphs,
+                p.travel * 0.5 * u,
+            ));
+            b.motions.extend(count);
+            zone_children.push(l);
+        }
+    }
+    let mut zone = base_layer(
+        zone_id.clone(),
+        (zb.x + zb.w / 2.0, zb.y + zb.h / 2.0, zb.w, zb.h),
+        LayerKind::Group {
+            children: zone_children,
+        },
+        14,
+    );
+    zone.anchor_x = 0.5;
+    zone.anchor_y = 0.5;
+    if zone_scale.0 != zone_scale.1 {
+        b.motions.push(mo::scale(
+            &zone_id,
+            rel_start,
+            rel_end - rel_start,
+            zone_scale.0,
+            zone_scale.1,
+            Easing::InOutCubic,
+        ));
+    }
+    if zone_dy != 0.0 {
+        b.motions.push(mo::shift(
+            &zone_id,
+            rel_start,
+            rel_end - rel_start,
+            [0.0, 0.0],
+            [0.0, zone_dy],
+            Easing::InOutCubic,
+        ));
+    }
+    b.push(zone);
+
+    // The divider: a vertical line down the gutter, under the connective.
+    if let (Relationship::Separate, Some(shape)) =
+        (relationship, direction::accent_shape(&bp, MarkShape::Rule))
+    {
+        let id = b.id("divider");
+        let thick = match shape {
+            MarkShape::Rule => 6.0,
+            MarkShape::Underline => 3.0,
+        } * u;
+        let x = gutter_x + gutter_w / 2.0 - thick / 2.0;
+        let y1 = za.y + conn.height() + 24.0 * u;
+        b.push(rect_layer(
+            id.clone(),
+            (x, (y1 + za.bottom()) / 2.0, thick, 0.0),
+            ctx.palette.accent,
+            26,
+        ));
+        b.motions.push(mo::expand(
+            &id,
+            rel_start,
+            rel_end - rel_start,
+            (x, y1, thick, za.bottom() - y1),
+            Easing::InOutCubic,
+        ));
+    }
+    direction::steer_entrances(&bp, &mut b.motions, &placed);
+    b.anchor = Some(Slot {
+        cx: w - m - 130.0 * u,
+        cy: 0.115 * h,
+        w: 260.0 * u,
+        h: 64.0 * u,
+    });
+    Ok(())
+}
+
 /// explain: headline from the primary phrase, statement as body copy, an
 /// optional supporting object on a collage card.
 pub(super) fn explain(
@@ -3146,6 +4050,7 @@ mod short_beat_tests {
             z_index: 0,
             visible: true,
             clip: None,
+            mask: None,
             depth: None,
             z: None,
             tilt: None,
@@ -3170,6 +4075,8 @@ mod short_beat_tests {
                 max_width: None,
                 uppercase: false,
                 ink: None,
+                fill: None,
+                outline: None,
             }),
         )
     }
@@ -3332,6 +4239,7 @@ mod beat_params_tests {
         let manifest = crate::assets::AssetManifest::empty();
         let mut ctx = Ctx {
             reveals: Default::default(),
+            family: None,
             warnings: Vec::new(),
             direction_seed: None,
             beat_params: params
@@ -3339,6 +4247,7 @@ mod beat_params_tests {
                 .unwrap_or_default(),
             direction_take: None,
             direction_beats: BTreeMap::new(),
+            budget: crate::compiler::accent_budget::AccentBudget::unlimited(),
             emotion: None,
             art: None,
             w: 1080.0,
@@ -3357,6 +4266,8 @@ mod beat_params_tests {
             focal: Default::default(),
             stack: None,
             spoken: Default::default(),
+            spoken_ends: Default::default(),
+            stresses: Default::default(),
             beat_count: 3,
             sequence: crate::compiler::sequence::Sequence {
                 order: None,
@@ -3391,23 +4302,8 @@ mod beat_params_tests {
         };
         let s = scene_with(Some(p));
         assert_ne!(json(&base), json(&s));
-        // The kicker wipes in from the planned side.
-        let kicker = s
-            .motions
-            .iter()
-            .find(|m| m.target.ends_with(".kicker"))
-            .expect("kicker motion");
-        assert!(
-            matches!(
-                kicker.op,
-                MotionOp::MaskReveal {
-                    direction: Direction::Left,
-                    ..
-                }
-            ),
-            "{:?}",
-            kicker.op
-        );
+        // (0.24) No eyebrow kicker any more.
+        assert!(!s.motions.iter().any(|m| m.target.ends_with(".kicker")));
         // The stage leaves on a hard cut.
         assert!(s.motions.iter().any(|m| m.target.ends_with(".stage")
             && (m.duration - 0.066).abs() < 1e-9

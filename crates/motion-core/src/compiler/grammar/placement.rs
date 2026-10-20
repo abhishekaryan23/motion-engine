@@ -19,6 +19,20 @@ pub(crate) fn side_by_side(frame: &LayoutFrame) -> bool {
     frame.is_landscape() || (frame.is_square() && frame.aspect > 1.05)
 }
 
+/// (0.24 M4) Two columns inside the safe area for a side-by-side layout: the
+/// left takes `ratio` of the width left after the gutter (`gutter_u` in `u`),
+/// the right the rest. Both span the safe height (full content height).
+pub(crate) fn columns(ctx: &crate::compiler::Ctx, ratio: f32, gutter_u: f32) -> (Rect, Rect) {
+    let s = ctx.frame.safe;
+    let gutter = gutter_u * ctx.u;
+    let usable = (s.w - gutter).max(0.0);
+    let lw = usable * ratio.clamp(0.1, 0.9);
+    (
+        Rect::new(s.x, s.y, lw, s.h),
+        Rect::new(s.x + lw + gutter, s.y, usable - lw, s.h),
+    )
+}
+
 /// One of today's three canvases. Pre-0.9 layouts that fall short of the
 /// responsive floors (e.g. type below `min_type_px`) are frozen there.
 pub(crate) fn is_legacy_canvas(frame: &LayoutFrame) -> bool {

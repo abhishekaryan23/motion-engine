@@ -205,6 +205,7 @@ pub(crate) fn compose(ctx: &mut Ctx, b: &mut B, region: Region) -> Result<(), Co
                 stroke: Some(Stroke {
                     color: ctx.palette.ink,
                     width: 2.0 * u,
+                    brush: None,
                 }),
             },
             12,
@@ -285,6 +286,31 @@ pub(crate) fn compose(ctx: &mut Ctx, b: &mut B, region: Region) -> Result<(), Co
             }
             b.push(piece.layer);
         }
+    }
+
+    // (0.24) The headline waits for the verdict word it states.
+    b.reveal(
+        "head",
+        super::recipes::title_stated_words(beat, &beat.statement),
+        crate::speech::RevealRole::Title,
+    );
+    // (0.24) Each card comes with its figure, not with its label: the anchor of
+    // an item is its value. The last item, the punchline, also waits for the
+    // keyword when the narrator never reads its figure out.
+    for (i, item) in coll.items.iter().enumerate() {
+        let value = match item {
+            CollectionItem::Number(a) | CollectionItem::Phrase(a) => a.value.clone(),
+            CollectionItem::Object(o) => o.value.clone(),
+        };
+        let mut words: Vec<String> = value.into_iter().collect();
+        if i + 1 == n {
+            words.extend(beat.keyword.clone());
+        }
+        b.reveal(
+            &format!("items.{i}"),
+            words,
+            crate::speech::RevealRole::Value,
+        );
     }
 
     // ---- caption (another structured subject, shown small) -----------------

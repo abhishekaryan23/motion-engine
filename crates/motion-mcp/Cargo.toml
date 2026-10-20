@@ -3,11 +3,15 @@ name = "motion-mcp"
 description = "MotionEngine as MCP tools: weak, creator and operator profiles over stdio"
 version.workspace = true
 edition.workspace = true
-license.workspace = true
+license-file.workspace = true
+publish.workspace = true
 
 [[bin]]
 name = "motion-mcp"
 path = "src/main.rs"
+# No unit tests in the binary (they live in the lib): skip its empty test
+# harness, which costs a first-launch security scan on macOS.
+test = false
 
 [dependencies]
 motion-core.workspace = true

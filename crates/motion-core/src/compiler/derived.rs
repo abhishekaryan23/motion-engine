@@ -372,6 +372,8 @@ fn count_slot(blk: &Block, color: Color, x: f32, y: f32, widest: f32) -> NumberS
             max_width: None,
             uppercase: false,
             ink: None,
+            fill: None,
+            outline: None,
         },
         rect: BoxRect {
             x,

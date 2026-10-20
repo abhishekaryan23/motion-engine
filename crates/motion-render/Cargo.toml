@@ -3,7 +3,8 @@ name = "motion-render"
 description = "MotionEngine rendering: Renderer trait, CPU backend (tiny-skia), asset cache, textures, FFmpeg export"
 version.workspace = true
 edition.workspace = true
-license.workspace = true
+license-file.workspace = true
+publish.workspace = true
 
 [dependencies]
 motion-core.workspace = true
@@ -21,6 +22,11 @@ crc32fast.workspace = true
 wgpu = { version = "30", optional = true, default-features = false, features = ["std", "parking_lot", "wgsl", "metal", "vulkan", "dx12"] }
 pollster = { version = "1", optional = true }
 bytemuck = { version = "1", optional = true, features = ["derive"] }
+
+[[test]]
+name = "gpu_parity"
+path = "tests/gpu_parity.rs"
+required-features = ["gpu"]
 
 [features]
 default = []

@@ -1,0 +1,66 @@
+{
+ "kind": "program",
+ "program": {
+  "version": "2.0",
+  "meta": {
+   "name": "fixture",
+   "duration": 3.0
+  },
+  "palette": {
+   "background": "#F2EEE6",
+   "ink": "#111111",
+   "accent": "#E04A12",
+   "muted": "#6B6B6B"
+  },
+  "components": [
+   {
+    "id": "d",
+    "kind": "shape",
+    "shape": "circle",
+    "slot": "top",
+    "timeline": [
+     {
+      "at": 0,
+      "do": "enter",
+      "style": "pop"
+     }
+    ]
+   }
+  ]
+ },
+ "fixed": {
+  "version": "2.0",
+  "meta": {
+   "name": "fixture",
+   "duration": 3.0
+  },
+  "palette": {
+   "background": "#F2EEE6",
+   "ink": "#111111",
+   "accent": "#E04A12",
+   "muted": "#6B6B6B"
+  },
+  "components": [
+   {
+    "id": "t",
+    "kind": "title",
+    "text": "Done"
+   },
+   {
+    "id": "d",
+    "kind": "shape",
+    "shape": "circle",
+    "anchor": "t",
+    "mark": "marker",
+    "timeline": [
+     {
+      "at": 0,
+      "do": "enter",
+      "style": "pop"
+     }
+    ]
+   }
+  ]
+ },
+ "id": "meaningless_shape"
+}

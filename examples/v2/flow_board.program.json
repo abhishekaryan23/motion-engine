@@ -1,0 +1,56 @@
+{
+ "version": "2.0",
+ "meta": {
+  "name": "flow_board",
+  "aspect": "16:9",
+  "duration": 5.0,
+  "end_beat": 8,
+  "brief": "how a video gets made, step by step"
+ },
+ "palette": {
+  "background": "#0B0C10",
+  "ink": "#F2EFE8",
+  "accent": "#FF4A1C",
+  "muted": "#8C93A3"
+ },
+ "music": {
+  "track": "driving_pulse",
+  "start": 0.107
+ },
+ "tempo": "fast",
+ "components": [
+  {
+   "id": "g",
+   "kind": "backdrop"
+  },
+  {
+   "id": "flow",
+   "kind": "diagram",
+   "preset": "cards",
+   "nodes": [
+    "Brief",
+    "Script",
+    "Voice",
+    "Edit",
+    "Publish"
+   ],
+   "start_beat": 0,
+   "beat_cuts": 2
+  },
+  {
+   "id": "cap",
+   "kind": "kinetic_text",
+   "preset": "type_on",
+   "slot": "bottom",
+   "colour": "muted",
+   "start_beat": 1,
+   "beat_cuts": 2,
+   "words": [
+    "why it exists",
+    "lines that land",
+    "said out loud",
+    "cut on the beat"
+   ]
+  }
+ ]
+}

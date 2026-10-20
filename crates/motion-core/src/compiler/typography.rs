@@ -13,23 +13,30 @@
 //!   story_key, "typography") over the candidate list in registry order.
 //! * Classic tone at level 0 is GroteskSerif; at level >= 1 its candidates are
 //!   the legacy pairing plus the options of `tone_emotions.classic`.
-//! * Reference-derived pairings and an explicit `typography_style` keep their
-//!   legacy pairing at every level (reference fidelity / explicit constraint).
+//! * Reference-derived pairings keep their legacy pairing at every level
+//!   (reference fidelity). (0.24) An explicit `typography_style` (and the
+//!   Classic tone's GroteskSerif) is a category constraint at level >= 1: only
+//!   options whose face classes fit the pairing are candidates (widening to
+//!   the tone's emotions, then the legacy pairing, when none fit).
 //! * A candidate whose face files are missing under the library root, or whose
 //!   body/number faces lack digits, is skipped for the next option of the same
 //!   emotion, then option 1, then the legacy pairing; the skip is recorded in
-//!   `fallback_from`.
+//!   `fallback_from`. A restricted face (licence forbids redistribution,
+//!   `restricted_fallbacks`) is never missing while its open fallback file
+//!   exists: the choice and the FontSet keep the original face and the
+//!   loaders read the fallback ([`resolve_font_path`]).
 //! * Every emotion option loads its role faces + `fallback_face` +
 //!   `always_loaded` (glyph fallback for ₹ € digits).
 
 use std::collections::{BTreeMap, HashMap};
-use std::path::Path;
+use std::path::{Path, PathBuf};
 use std::sync::OnceLock;
 
 use serde::{Deserialize, Serialize};
 
 use super::taste::{
-    ResolvedStyleProfile, ResolvedTemperature, ResolvedTone, TemperamentKind, TypographyPairing,
+    Genre, ResolvedStyleProfile, ResolvedTemperature, ResolvedTone, TemperamentKind,
+    TypographyPairing,
 };
 use super::theme::{FontFace, FontSet};
 use crate::scene::FontRole;
@@ -183,6 +190,62 @@ struct RawFace {
     italic: bool,
     #[serde(default)]
     coverage: Option<FaceCoverage>,
+    #[serde(default)]
+    class: Option<String>,
+    #[serde(default)]
+    contrast: Option<Contrast>,
+    #[serde(default)]
+    width: Option<Width>,
+    #[serde(default)]
+    x_height: Option<f64>,
+    #[serde(default)]
+    tabular_digits: Option<bool>,
+}
+
+/// Stroke contrast of a face (registry metadata, hand-assigned).
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum Contrast {
+    Low,
+    Medium,
+    High,
+}
+
+/// Set width of a face (registry metadata, hand-assigned).
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum Width {
+    Condensed,
+    Normal,
+    Extended,
+}
+
+/// Motion metadata of a face. `x_height` (x-glyph height over H-glyph height)
+/// and `tabular_digits` (all 0-9 advances within 1 %) are measured from the
+/// font file by `tests/motion_type.rs`; they are `None` for faces not bundled.
+#[derive(Debug, Clone, Copy, PartialEq, Serialize)]
+pub struct FaceMeta {
+    pub weight: u16,
+    pub contrast: Contrast,
+    pub width: Width,
+    pub x_height: Option<f64>,
+    pub tabular_digits: Option<bool>,
+}
+
+#[derive(Deserialize, Default)]
+struct RawUseFor {
+    #[serde(default)]
+    temperaments: Vec<String>,
+}
+
+#[derive(Deserialize)]
+struct RawPairing {
+    id: String,
+    emotion: String,
+    #[serde(default)]
+    roles: BTreeMap<String, String>,
+    #[serde(default)]
+    use_for: RawUseFor,
 }
 
 #[derive(Deserialize)]
@@ -213,12 +276,26 @@ struct RawRegistry {
     /// Face id -> face id used when the first face's file is missing.
     #[serde(default)]
     substitutes: BTreeMap<String, String>,
+    /// Restricted face file -> open fallback file in the same folder, read
+    /// in its place when the restricted file is absent (see
+    /// [`resolve_font_path`]).
+    #[serde(default)]
+    restricted_fallbacks: BTreeMap<String, String>,
+    /// (0.24) Pairing library v2.
+    #[serde(default)]
+    pairings: Vec<RawPairing>,
+    /// (0.24) genre -> tone -> pairing ids.
+    #[serde(default)]
+    usage: BTreeMap<String, BTreeMap<String, Vec<String>>>,
 }
 
 struct FaceInfo {
     face: FontFace,
     family: Option<String>,
     coverage: Option<FaceCoverage>,
+    /// grotesk | condensed | geometric | serif | slab | sans | mono | hand.
+    class: Option<String>,
+    meta: FaceMeta,
 }
 
 struct RegOption {
@@ -240,8 +317,38 @@ struct Registry {
     tone_emotions: BTreeMap<String, Vec<Emotion>>,
     /// Face index -> substitute face index (used when the file is missing).
     substitutes: BTreeMap<usize, usize>,
+    /// Restricted face file name -> open fallback file name (same folder).
+    restricted: BTreeMap<String, String>,
+    /// (0.24) Pairing library v2 (`emotion` is the closest emotion, for reports).
+    pairings: Vec<RegOption>,
+    /// Pairing id -> temperaments it suits (empty = all).
+    pairing_temperaments: BTreeMap<String, Vec<String>>,
+    usage: BTreeMap<String, BTreeMap<String, Vec<String>>>,
     /// Fatal data errors (parse + structure).
     errors: Vec<String>,
+}
+
+/// Body text needs an x-height of at least this fraction of the cap height.
+const MIN_BODY_X_HEIGHT: f64 = 0.66;
+
+fn genre_name(g: Genre) -> &'static str {
+    match g {
+        Genre::Standard => "standard",
+        Genre::Street => "street",
+        Genre::Documentary => "documentary",
+        Genre::Hype => "hype",
+        Genre::Studio => "studio",
+        Genre::Cinematic => "cinematic",
+    }
+}
+
+fn temperament_name(k: TemperamentKind) -> &'static str {
+    match k {
+        TemperamentKind::Restrained => "restrained",
+        TemperamentKind::Editorial => "editorial",
+        TemperamentKind::Precise => "precise",
+        TemperamentKind::Energetic => "energetic",
+    }
 }
 
 fn leak(s: &str) -> &'static str {
@@ -273,6 +380,14 @@ impl Registry {
                 },
                 family: f.family.clone(),
                 coverage: f.coverage,
+                class: f.class.clone(),
+                meta: FaceMeta {
+                    weight: f.weight,
+                    contrast: f.contrast.unwrap_or(Contrast::Medium),
+                    width: f.width.unwrap_or(Width::Normal),
+                    x_height: f.x_height,
+                    tabular_digits: f.tabular_digits,
+                },
             });
         }
         let lookup = |id: &str| face_index.get(id).copied();
@@ -287,6 +402,35 @@ impl Registry {
                     substitutes.insert(i, j);
                 }
                 _ => errors.push(format!("substitutes names unknown face {a} -> {b}")),
+            }
+        }
+        let mut restricted = BTreeMap::new();
+        for (from, to) in &raw.restricted_fallbacks {
+            let split = |p: &str| {
+                let p = Path::new(p);
+                (
+                    p.parent().map(Path::to_path_buf),
+                    p.file_name().and_then(|n| n.to_str()).map(str::to_string),
+                )
+            };
+            let ((from_dir, from_name), (to_dir, to_name)) = (split(from), split(to));
+            if !raw.faces.iter().any(|f| &f.file == from) {
+                errors.push(format!(
+                    "restricted_fallbacks names unknown face file {from}"
+                ));
+            }
+            if raw.restricted_fallbacks.contains_key(to) {
+                errors.push(format!(
+                    "restricted_fallbacks: fallback {to} of {from} is itself restricted"
+                ));
+            }
+            match (from_name, to_name) {
+                (Some(a), Some(b)) if from_dir == to_dir => {
+                    restricted.insert(a, b);
+                }
+                _ => errors.push(format!(
+                    "restricted_fallbacks: {from} -> {to} must be files in one folder"
+                )),
             }
         }
         let mut always = Vec::new();
@@ -317,55 +461,84 @@ impl Registry {
             }
         }
         let mut options = Vec::new();
+        let build = |o: &RawOption, emotion: Emotion, errors: &mut Vec<String>| -> RegOption {
+            let mut problems = Vec::new();
+            let mut roles = BTreeMap::new();
+            for role in FontRole::ALL {
+                match o.roles.get(role_name(role)) {
+                    None => problems.push(format!("missing role {}", role_name(role))),
+                    Some(id) => match lookup(id) {
+                        None => problems.push(format!(
+                            "role {} references unknown face {id}",
+                            role_name(role)
+                        )),
+                        Some(i) => {
+                            roles.insert(role, i);
+                            let needs_digits = matches!(role, FontRole::Body | FontRole::Number);
+                            if needs_digits && faces[i].coverage.is_some_and(|c| !c.digits) {
+                                problems.push(format!(
+                                    "{} face {id} has no digit coverage",
+                                    role_name(role)
+                                ));
+                            }
+                        }
+                    },
+                }
+            }
+            for key in o.roles.keys() {
+                if parse_role(key).is_none() {
+                    problems.push(format!("unknown role {key}"));
+                }
+            }
+            if let Some(lp) = &o.legacy_pairing {
+                if !raw.legacy_pairings.contains_key(lp) {
+                    problems.push(format!("unknown legacy_pairing {lp}"));
+                }
+            }
+            for p in &problems {
+                errors.push(format!("option {}: {p}", o.id));
+            }
+            RegOption {
+                id: o.id.clone(),
+                emotion,
+                roles,
+                problems,
+            }
+        };
         for (ename, opts) in &raw.emotions {
             let Some(emotion) = parse_emotion(ename) else {
                 errors.push(format!("emotions names unknown emotion {ename}"));
                 continue;
             };
             for o in opts {
-                let mut problems = Vec::new();
-                let mut roles = BTreeMap::new();
-                for role in FontRole::ALL {
-                    match o.roles.get(role_name(role)) {
-                        None => problems.push(format!("missing role {}", role_name(role))),
-                        Some(id) => match lookup(id) {
-                            None => problems.push(format!(
-                                "role {} references unknown face {id}",
-                                role_name(role)
-                            )),
-                            Some(i) => {
-                                roles.insert(role, i);
-                                let needs_digits =
-                                    matches!(role, FontRole::Body | FontRole::Number);
-                                if needs_digits && faces[i].coverage.is_some_and(|c| !c.digits) {
-                                    problems.push(format!(
-                                        "{} face {id} has no digit coverage",
-                                        role_name(role)
-                                    ));
-                                }
-                            }
-                        },
+                options.push(build(o, emotion, &mut errors));
+            }
+        }
+        let mut pairings = Vec::new();
+        let mut pairing_temperaments = BTreeMap::new();
+        for q in &raw.pairings {
+            let Some(emotion) = parse_emotion(&q.emotion) else {
+                errors.push(format!(
+                    "pairing {} names unknown emotion {}",
+                    q.id, q.emotion
+                ));
+                continue;
+            };
+            let o = RawOption {
+                id: q.id.clone(),
+                roles: q.roles.clone(),
+                legacy_pairing: None,
+            };
+            pairings.push(build(&o, emotion, &mut errors));
+            pairing_temperaments.insert(q.id.clone(), q.use_for.temperaments.clone());
+        }
+        for (genre, tones) in &raw.usage {
+            for (tone, ids) in tones {
+                for id in ids {
+                    if !raw.pairings.iter().any(|q| &q.id == id) {
+                        errors.push(format!("usage.{genre}.{tone} names unknown pairing {id}"));
                     }
                 }
-                for key in o.roles.keys() {
-                    if parse_role(key).is_none() {
-                        problems.push(format!("unknown role {key}"));
-                    }
-                }
-                if let Some(lp) = &o.legacy_pairing {
-                    if !raw.legacy_pairings.contains_key(lp) {
-                        problems.push(format!("unknown legacy_pairing {lp}"));
-                    }
-                }
-                for p in &problems {
-                    errors.push(format!("option {}: {p}", o.id));
-                }
-                options.push(RegOption {
-                    id: o.id.clone(),
-                    emotion,
-                    roles,
-                    problems,
-                });
             }
         }
         options.sort_by_key(|o| Emotion::ALL.iter().position(|e| *e == o.emotion));
@@ -393,10 +566,138 @@ impl Registry {
             fallback,
             always,
             substitutes,
+            restricted,
             options,
             adjacency,
             tone_emotions,
+            pairings,
+            pairing_temperaments,
+            usage: raw.usage,
             errors,
+        }
+    }
+
+    /// Does the option satisfy the category of a legacy pairing? Judged on the
+    /// registry face classes of its display / voice / body roles.
+    fn matches_category(&self, o: &RegOption, pairing: TypographyPairing) -> bool {
+        use TypographyPairing as P;
+        let class = |r: FontRole| {
+            o.roles
+                .get(&r)
+                .and_then(|i| self.faces[*i].class.as_deref())
+        };
+        let display = class(FontRole::Display);
+        let voice = class(FontRole::SerifEmotional);
+        let body = class(FontRole::Body);
+        let sans_display = matches!(display, Some("grotesk" | "condensed" | "geometric"));
+        let serif_display = matches!(display, Some("serif" | "slab"));
+        match pairing {
+            P::GroteskSerif => sans_display && matches!(voice, Some("serif" | "slab")),
+            P::PosterBold => sans_display,
+            P::SerifSans | P::HumanistSerif => serif_display && body == Some("sans"),
+            P::PrecisionGrotesk => matches!(display, Some("grotesk" | "condensed")),
+            P::FriendlyGeometric => matches!(display, Some("geometric" | "grotesk")),
+            P::CondensedMono => matches!(display, Some("condensed" | "grotesk")),
+        }
+    }
+
+    /// (0.24) Motion gate for one face in one role. `words` is the number of
+    /// words set in it (`usize::MAX` = unknown / long).
+    fn gate_face(&self, i: usize, role: FontRole, words: usize) -> Result<(), String> {
+        let m = &self.faces[i].meta;
+        if m.weight < 400 {
+            return Err(format!("weight {} < 400", m.weight));
+        }
+        let heavy_role = matches!(
+            role,
+            FontRole::Display | FontRole::DisplayCondensed | FontRole::Number
+        );
+        if heavy_role
+            && m.weight < 600
+            && !(role == FontRole::Display && m.contrast == Contrast::High)
+        {
+            return Err(format!("weight {} < 600 for {}", m.weight, role_name(role)));
+        }
+        if role == FontRole::Body {
+            match m.x_height {
+                None => return Err("x_height not measured".to_string()),
+                Some(x) if x < MIN_BODY_X_HEIGHT => {
+                    return Err(format!("x_height {x} < {MIN_BODY_X_HEIGHT} for body"))
+                }
+                Some(_) => {}
+            }
+            if m.contrast == Contrast::High {
+                return Err("high stroke contrast at body size".to_string());
+            }
+        }
+        // Count lays its text out per frame at the current width (no reserved
+        // final width), so figures must be tabular or the number jitters.
+        if role == FontRole::Number && m.tabular_digits != Some(true) {
+            return Err("digits not tabular (count jitters)".to_string());
+        }
+        if m.width == Width::Extended && !(role == FontRole::Display && words <= 3) {
+            return Err(format!(
+                "extended: display with <= 3 words only ({} words, {})",
+                if words == usize::MAX {
+                    "many".to_string()
+                } else {
+                    words.to_string()
+                },
+                role_name(role)
+            ));
+        }
+        Ok(())
+    }
+
+    /// Gate an option or pairing (all roles, unknown word count).
+    fn gate_option(&self, o: &RegOption) -> Result<(), Vec<String>> {
+        let mut why = Vec::new();
+        for (role, i) in &o.roles {
+            if let Err(e) = self.gate_face(*i, *role, usize::MAX) {
+                why.push(format!(
+                    "{} ({}): {e}",
+                    self.faces[*i].face.asset_id,
+                    role_name(*role)
+                ));
+            }
+        }
+        if why.is_empty() {
+            Ok(())
+        } else {
+            Err(why)
+        }
+    }
+
+    fn gate_ok(&self, o: &RegOption) -> bool {
+        self.gate_option(o).is_ok()
+    }
+
+    /// Level-1 pairing candidates for a tone / genre / temperament.
+    fn pairing_candidates(&self, genre: &str, tone: &str, kind: &str) -> Vec<&RegOption> {
+        let ids = self
+            .usage
+            .get(genre)
+            .and_then(|t| t.get(tone))
+            .or_else(|| self.usage.get("standard").and_then(|t| t.get(tone)));
+        let all: Vec<&RegOption> = ids
+            .into_iter()
+            .flatten()
+            .filter_map(|id| self.pairings.iter().find(|p| &p.id == id))
+            .filter(|p| self.gate_ok(p))
+            .collect();
+        let suited: Vec<&RegOption> = all
+            .iter()
+            .copied()
+            .filter(|p| {
+                self.pairing_temperaments
+                    .get(&p.id)
+                    .is_none_or(|t| t.is_empty() || t.iter().any(|k| k == kind))
+            })
+            .collect();
+        if suited.is_empty() {
+            all
+        } else {
+            suited
         }
     }
 
@@ -418,13 +719,40 @@ impl Registry {
     }
 
     fn option(&self, id: &str) -> Option<&RegOption> {
-        self.options.iter().find(|o| o.id == id)
+        self.options
+            .iter()
+            .chain(self.pairings.iter())
+            .find(|o| o.id == id)
+    }
+
+    /// `path`, or the open fallback of a restricted face when `path` is
+    /// absent and the fallback exists (see [`resolve_font_path`]).
+    fn font_path(&self, path: &Path) -> PathBuf {
+        if path.is_file() {
+            return path.to_path_buf();
+        }
+        let fallback = path
+            .file_name()
+            .and_then(|n| n.to_str())
+            .and_then(|n| self.restricted.get(n))
+            .map(|f| path.with_file_name(f));
+        match fallback {
+            Some(f) if f.is_file() => f,
+            _ => path.to_path_buf(),
+        }
+    }
+
+    /// Is the face file `rel` usable under `root` (itself or its restricted
+    /// fallback)?
+    fn face_file_usable(&self, root: &Path, rel: &str) -> bool {
+        self.font_path(&root.join(rel)).is_file()
     }
 
     /// The face actually used for index `i` under `root`: itself when its file
-    /// exists, else its registry substitute when that file exists.
+    /// (or its restricted fallback) exists, else its registry substitute when
+    /// that file exists.
     fn resolve_face(&self, i: usize, root: &Path) -> Option<usize> {
-        let exists = |k: usize| root.join(self.faces[k].face.path).is_file();
+        let exists = |k: usize| self.face_file_usable(root, self.faces[k].face.path);
         if exists(i) {
             Some(i)
         } else {
@@ -463,7 +791,7 @@ impl Registry {
         let mut set = self.option_fontset(o)?;
         for (i, j) in &self.substitutes {
             let (from, to) = (&self.faces[*i].face, &self.faces[*j].face);
-            if !root.join(from.path).is_file() {
+            if !self.face_file_usable(root, from.path) {
                 for f in set.roles.values_mut() {
                     if f.asset_id == from.asset_id {
                         *f = to.clone();
@@ -476,7 +804,7 @@ impl Registry {
             set.faces
                 .iter()
                 .filter(|f| !set.roles.values().any(|r| r.asset_id == f.asset_id))
-                .filter(|f| root.join(f.path).is_file())
+                .filter(|f| self.face_file_usable(root, f.path))
                 .cloned(),
         );
         faces.sort_by_key(|f| f.asset_id);
@@ -532,6 +860,9 @@ pub struct FaceReport {
     pub weight: u16,
     pub italic: bool,
     pub file_exists: bool,
+    /// The open file read in its place when a restricted face's own file is
+    /// absent (`None` when the file exists or has no usable fallback).
+    pub fallback_file: Option<String>,
     pub coverage: Option<FaceCoverage>,
 }
 
@@ -564,6 +895,16 @@ fn report(reg: &Registry, root: &Path) -> RegistryReport {
             weight: f.face.weight,
             italic: f.face.italic,
             file_exists: root.join(f.face.path).is_file(),
+            fallback_file: {
+                let full = root.join(f.face.path);
+                let used = reg.font_path(&full);
+                (used != full).then(|| {
+                    Path::new(f.face.path)
+                        .with_file_name(used.file_name().unwrap_or_default())
+                        .to_string_lossy()
+                        .into_owned()
+                })
+            },
             coverage: f.coverage,
         })
         .collect();
@@ -575,7 +916,7 @@ fn report(reg: &Registry, root: &Path) -> RegistryReport {
             for i in o.roles.values() {
                 let f = &reg.faces[*i].face;
                 let msg = format!("missing file {}", f.path);
-                if !root.join(f.path).is_file() && !problems.contains(&msg) {
+                if !reg.face_file_usable(root, f.path) && !problems.contains(&msg) {
                     problems.push(msg);
                 }
             }
@@ -604,6 +945,40 @@ pub fn validate_registry(library_root: &Path) -> RegistryReport {
 /// Same as [`validate_registry`] for an arbitrary registry document (tests).
 pub fn validate_registry_str(json: &str, library_root: &Path) -> RegistryReport {
     report(&Registry::parse(json), library_root)
+}
+
+/// The file to read for the font at `path`: `path` itself when it exists;
+/// otherwise, when `path` names a restricted face (its licence forbids
+/// redistribution; `restricted_fallbacks` in the registry) and its open
+/// fallback exists in the same folder, that fallback; otherwise `path`
+/// unchanged (the caller reports it missing). Deterministic: the same files
+/// present give the same answer.
+pub fn resolve_font_path(path: &Path) -> PathBuf {
+    registry().font_path(path)
+}
+
+/// The open fallback file (registry-relative, e.g. `fonts/Lato-Bold.ttf`)
+/// of a restricted face file (e.g. `fonts/Satoshi-Bold.otf`), if any.
+pub fn restricted_fallback(file: &str) -> Option<String> {
+    let p = Path::new(file);
+    let name = p.file_name()?.to_str()?;
+    registry()
+        .restricted
+        .get(name)
+        .map(|f| p.with_file_name(f).to_string_lossy().into_owned())
+}
+
+/// Every restricted face file with its open fallback, both registry-relative,
+/// sorted by face file.
+pub fn restricted_fallbacks() -> Vec<(String, String)> {
+    let mut out: Vec<(String, String)> = registry()
+        .faces
+        .iter()
+        .filter_map(|f| restricted_fallback(f.face.path).map(|t| (f.face.path.to_string(), t)))
+        .collect();
+    out.sort();
+    out.dedup();
+    out
 }
 
 /// Option ids of an emotion, in registry order.
@@ -742,10 +1117,15 @@ pub fn resolve_typography(
             FontSet::for_pairing(taste.typography),
         )
     };
-    let locked = taste.typography != default_pairing(taste.tone);
+    // A reference-derived pairing stays pinned; an explicit `typography_style`
+    // (and the Classic tone's own GroteskSerif) is a category constraint.
+    let locked = taste.typography != default_pairing(taste.tone) && !taste.typography_explicit;
     if req.emotion.is_none() && (locked || level == 0) {
         return legacy(resolved, Vec::new());
     }
+    let category = (req.emotion.is_none()
+        && (taste.typography_explicit || taste.tone == ResolvedTone::Classic))
+        .then_some(taste.typography);
     let tone_list: &[Emotion] = reg
         .tone_emotions
         .get(tone_name(taste.tone))
@@ -753,26 +1133,71 @@ pub fn resolve_typography(
         .unwrap_or(&[]);
     let mut cands: Vec<Candidate> = Vec::new();
     let report_emotion = req.emotion.unwrap_or(resolved);
+    // (0.24) Level >= 1 only draws motion-safe faces: emotion options must pass
+    // the gate; level 1 without an override draws the pairing library v2.
+    let safe = |o: &&RegOption| reg.gate_ok(o);
+    let pairings = || {
+        reg.pairing_candidates(
+            genre_name(taste.genre),
+            tone_name(taste.tone),
+            temperament_name(taste.motion.kind),
+        )
+    };
     match req.emotion {
         Some(e) if level == 0 => {
             cands.extend(reg.options_of(e).take(1).map(Candidate::Option));
         }
         Some(e) => {
             for em in included_emotions(reg, e, level, tone_list) {
+                // An explicit `--emotion` is the operator's choice: not gated.
                 cands.extend(reg.options_of(em).map(Candidate::Option));
-            }
-        }
-        None if taste.tone == ResolvedTone::Classic => {
-            cands.push(Candidate::Legacy);
-            for em in tone_list {
-                cands.extend(reg.options_of(*em).map(Candidate::Option));
             }
         }
         None => {
-            for em in included_emotions(reg, resolved, level, tone_list) {
-                cands.extend(reg.options_of(em).map(Candidate::Option));
+            if taste.tone == ResolvedTone::Classic {
+                cands.push(Candidate::Legacy);
+            }
+            cands.extend(pairings().into_iter().map(Candidate::Option));
+            if level >= 2 {
+                let emotions = if taste.tone == ResolvedTone::Classic {
+                    tone_list.to_vec()
+                } else {
+                    included_emotions(reg, resolved, level, tone_list)
+                };
+                for em in emotions {
+                    cands.extend(reg.options_of(em).filter(safe).map(Candidate::Option));
+                }
             }
         }
+    }
+    if let Some(pairing) = category {
+        let keep = |c: &Candidate| match c {
+            Candidate::Legacy => true,
+            Candidate::Option(o) => reg.matches_category(o, pairing),
+        };
+        let mut matching: Vec<Candidate> = cands.iter().copied().filter(keep).collect();
+        if !matching.iter().any(|c| matches!(c, Candidate::Option(_))) {
+            // Nothing in the level's set fits: widen to every safe pairing, then
+            // every safe emotion option of the tone.
+            matching = reg
+                .pairings
+                .iter()
+                .filter(|o| reg.gate_ok(o) && reg.matches_category(o, pairing))
+                .map(Candidate::Option)
+                .collect();
+            if matching.is_empty() {
+                matching = tone_list
+                    .iter()
+                    .flat_map(|em| reg.options_of(*em))
+                    .filter(|o| reg.gate_ok(o) && reg.matches_category(o, pairing))
+                    .map(Candidate::Option)
+                    .collect();
+            }
+        }
+        if matching.is_empty() {
+            return legacy(report_emotion, Vec::new());
+        }
+        cands = matching;
     }
     if cands.is_empty() {
         return legacy(report_emotion, Vec::new());
@@ -786,7 +1211,15 @@ pub fn resolve_typography(
     };
     // Availability fallback: next option of the same emotion (wrapping, which
     // reaches option 1), then the legacy pairing.
-    let siblings: Vec<&RegOption> = reg.options_of(picked.emotion).collect();
+    let is_pairing = reg.pairings.iter().any(|p| p.id == picked.id);
+    let siblings: Vec<&RegOption> = if is_pairing {
+        vec![picked]
+    } else {
+        reg.options_of(picked.emotion)
+            .filter(|o| category.is_none_or(|p| reg.matches_category(o, p)))
+            .filter(|o| req.emotion.is_some() || reg.gate_ok(o))
+            .collect()
+    };
     let start = siblings.iter().position(|o| o.id == picked.id).unwrap_or(0);
     let mut skipped = Vec::new();
     for k in 0..siblings.len() {
@@ -800,7 +1233,11 @@ pub fn resolve_typography(
                 );
                 return (
                     TypographyChoice {
-                        emotion: o.emotion,
+                        emotion: if is_pairing {
+                            report_emotion
+                        } else {
+                            o.emotion
+                        },
                         option: Some(o.id.clone()),
                         legacy: None,
                         fallback_from: skipped,
@@ -818,4 +1255,90 @@ pub fn resolve_typography(
 pub fn option_faces(option_id: &str) -> Option<BTreeMap<FontRole, FontFace>> {
     let reg = registry();
     reg.option(option_id).and_then(|o| reg.option_roles(o))
+}
+
+// ---------------------------------------------------------------------------
+// (0.24) Motion gate: public API
+// ---------------------------------------------------------------------------
+
+/// Motion metadata of a registry face.
+pub fn face_meta(face_id: &str) -> Option<FaceMeta> {
+    registry()
+        .faces
+        .iter()
+        .find(|f| f.face.asset_id == face_id)
+        .map(|f| f.meta)
+}
+
+/// Is `face_id` safe for `role` in motion when `words` words are set in it?
+/// `Err` carries the reason. Rules: no weight < 400; display / number need
+/// weight >= 600 unless the face is high-contrast and the role is display;
+/// body needs x-height >= 0.66 of cap height and low/medium contrast; number
+/// needs tabular digits; extended faces only for display with <= 3 words.
+pub fn motion_safe(face_id: &str, role: FontRole, words: usize) -> Result<(), String> {
+    let reg = registry();
+    let i = reg
+        .faces
+        .iter()
+        .position(|f| f.face.asset_id == face_id)
+        .ok_or_else(|| format!("unknown face {face_id}"))?;
+    reg.gate_face(i, role, words)
+}
+
+/// Pairing library v2 ids, in registry order.
+pub fn pairing_ids() -> Vec<String> {
+    registry().pairings.iter().map(|p| p.id.clone()).collect()
+}
+
+/// Does a pairing or emotion option pass the motion gate (every role, long
+/// text)? `Err` lists one reason per failing face.
+pub fn pairing_gate(id: &str) -> Result<(), Vec<String>> {
+    let reg = registry();
+    match reg.option(id) {
+        Some(o) => reg.gate_option(o),
+        None => Err(vec![format!("unknown pairing or option {id}")]),
+    }
+}
+
+/// Display-face class of a pairing / option (`serif`, `slab`, `grotesk`, ...).
+pub fn display_class(id: &str) -> Option<String> {
+    let reg = registry();
+    let o = reg.option(id)?;
+    let i = o.roles.get(&FontRole::Display)?;
+    reg.faces[*i].class.clone()
+}
+
+/// One option or pairing the motion gate excludes.
+#[derive(Debug, Clone, PartialEq, Serialize)]
+pub struct GateExclusion {
+    pub id: String,
+    pub reasons: Vec<String>,
+}
+
+/// Every emotion option and pairing that fails the motion gate.
+pub fn gate_exclusions() -> Vec<GateExclusion> {
+    let reg = registry();
+    reg.options
+        .iter()
+        .chain(reg.pairings.iter())
+        .filter_map(|o| {
+            reg.gate_option(o).err().map(|reasons| GateExclusion {
+                id: o.id.clone(),
+                reasons,
+            })
+        })
+        .collect()
+}
+
+/// The level-1 pairing candidates for a taste (ids, registry usage order).
+pub fn level1_candidates(taste: &ResolvedStyleProfile) -> Vec<String> {
+    registry()
+        .pairing_candidates(
+            genre_name(taste.genre),
+            tone_name(taste.tone),
+            temperament_name(taste.motion.kind),
+        )
+        .into_iter()
+        .map(|o| o.id.clone())
+        .collect()
 }

@@ -1,0 +1,41 @@
+{
+ "kind": "rendered",
+ "note": "The first fix: dots knocked out round the label (a box + 0.25 em, faded over 1 em).",
+ "program": {
+  "version": "2.0",
+  "meta": {
+   "name": "holes",
+   "aspect": "16:9",
+   "duration": 1.6
+  },
+  "palette": {
+   "background": "#F2EEE6",
+   "ink": "#111111",
+   "accent": "#FF4D00",
+   "muted": "#8A857C"
+  },
+  "components": [
+   {
+    "id": "g",
+    "kind": "backdrop"
+   },
+   {
+    "id": "tone",
+    "kind": "field",
+    "preset": "halftone"
+   },
+   {
+    "id": "label",
+    "kind": "title",
+    "preset": "label",
+    "text": "five steps one token",
+    "size": "s"
+   }
+  ]
+ },
+ "before": {
+  "design_passes": false,
+  "mutate": "box_knockout"
+ },
+ "expect_detector": "texture_hole"
+}

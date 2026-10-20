@@ -135,6 +135,9 @@ pub fn spring_progress(elapsed: f64, duration: f64, s: crate::scene::SpringSpec)
 
 /// Raw oscillator response x(t) for unit step (may overshoot; tends to 1).
 pub fn spring_response(t: f64, s: crate::scene::SpringSpec) -> f64 {
+    if t.is_nan() || t <= 0.0 {
+        return 0.0;
+    }
     let (k, c, m) = (
         s.stiffness as f64,
         s.damping as f64,
@@ -154,6 +157,33 @@ pub fn spring_response(t: f64, s: crate::scene::SpringSpec) -> f64 {
         let r = (zeta * zeta - 1.0).sqrt();
         let (r1, r2) = (-w0 * (zeta - r), -w0 * (zeta + r));
         1.0 + (r2 * (r1 * t).exp() - r1 * (r2 * t).exp()) / (r1 - r2)
+    }
+}
+
+/// Raw oscillator velocity x'(t) for unit step (rate of change of [`spring_response`]).
+pub fn spring_velocity(t: f64, s: crate::scene::SpringSpec) -> f64 {
+    if t.is_nan() || t <= 0.0 {
+        return 0.0;
+    }
+    let (k, c, m) = (
+        s.stiffness as f64,
+        s.damping as f64,
+        (s.mass as f64).max(1e-6),
+    );
+    if k <= 0.0 {
+        return 0.0;
+    }
+    let w0 = (k / m).sqrt();
+    let zeta = c / (2.0 * (k * m).sqrt());
+    if (zeta - 1.0).abs() < 1e-6 {
+        w0 * w0 * t * (-w0 * t).exp()
+    } else if zeta < 1.0 {
+        let wd = w0 * (1.0 - zeta * zeta).sqrt();
+        (w0 * w0 / wd) * (-zeta * w0 * t).exp() * (wd * t).sin()
+    } else {
+        let r = (zeta * zeta - 1.0).sqrt();
+        let (r1, r2) = (-w0 * (zeta - r), -w0 * (zeta + r));
+        (w0 * w0 / (r1 - r2)) * ((r1 * t).exp() - (r2 * t).exp())
     }
 }
 
@@ -183,5 +213,27 @@ mod spring_tests {
             mass: 1.0,
         };
         assert!((0..80).any(|i| spring_progress(i as f64 * 0.01, 0.8, bouncy) > 1.02));
+    }
+
+    #[test]
+    fn spring_velocity_matches_derivative() {
+        let specs = [
+            SpringSpec::SNAPPY,
+            SpringSpec::BOUNCY,
+            SpringSpec::HEAVY,
+            SpringSpec::GENTLE,
+        ];
+        let h = 1e-6;
+        for s in specs {
+            for step in 1..=20 {
+                let t = step as f64 * 0.05;
+                let num_v = (spring_response(t + h, s) - spring_response(t - h, s)) / (2.0 * h);
+                let ana_v = spring_velocity(t, s);
+                assert!(
+                    (num_v - ana_v).abs() < 1e-4,
+                    "velocity mismatch at t={t}: num={num_v}, ana={ana_v}"
+                );
+            }
+        }
     }
 }

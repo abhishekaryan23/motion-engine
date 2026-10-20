@@ -26,5 +26,6 @@
   "state_change.motion.json@macos-aarch64": "2697cf35a7bff3c0",
   "texture.motion.json@macos-aarch64": "1e9f75593548bcd8",
   "type_image.motion.json@macos-aarch64": "b0c3e29bbc5952ba",
-  "typography.motion.json@macos-aarch64": "3a3902e6a7fde17c"
+  "typography.motion.json@macos-aarch64": "3a3902e6a7fde17c",
+  "v2_morph.motion.json@macos-aarch64": "b53a4e8cc6bb3b43"
 }

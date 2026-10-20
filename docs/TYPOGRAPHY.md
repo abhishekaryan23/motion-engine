@@ -22,12 +22,26 @@ Every option also loads `fallback_face` (IBM Plex Mono: ₹ € digits) and the 
 Editorial with a warm temperature turns trust into warmth. Operator override:
 `compile --emotion <name>`.
 
+## Defaults (0.24)
+`compile`, `resolve-style` and `reel` (which runs `compile`) default to
+`--explore 1`: a deterministic pick among the curated options of the resolved
+emotion, hash(seed, story key), so videos stop all landing on the same few
+legacy faces. The library `CompileOptions` default stays level 0.
+
 ## Level 0 is the 0.8 look
-With `--explore 0` (default) and no `--emotion`, the tone keeps its 0.8 pairing
+With `--explore 0` and no `--emotion`, the tone keeps its 0.8 pairing
 (editorial HumanistSerif, technical PrecisionGrotesk, playful FriendlyGeometric,
 classic GroteskSerif) byte-for-byte; three of those are option 1 of trust,
-precision and joy. Reference-derived pairings and an explicit `typography_style`
-stay fixed at every level.
+precision and joy. Reference-derived pairings stay fixed at every level.
+
+## Category rule (explicit `typography_style`)
+At level >= 1 an explicit `typography_style` (and the Classic tone's
+GroteskSerif) is a category constraint, not a pin: only options whose face
+`class` (registry.json: grotesk, condensed, geometric, serif, slab, sans, mono,
+hand) fits the pairing are candidates. grotesk_serif = grotesk/condensed/
+geometric display + serif/slab voice; condensed_mono = condensed/grotesk display.
+If the level's emotions have no match the tone's other emotions are tried, then
+the legacy pairing.
 
 ## Options (✗ = face file not bundled yet → option falls back)
 | option | display | display cond. | voice | body | mono | number |
@@ -85,9 +99,18 @@ of 33 options available until the Collletttivo files land.
 ## Faces and licences
 Static instances only (no variable fonts), licence texts in `assets/fonts/licenses/`:
 OFL (google/fonts: Anton, Archivo Black, Barlow, Bebas Neue, DM Serif Display, Fira
-Sans, IBM Plex Mono/Serif, Instrument Serif, Lato, Poppins, Space Mono, Zilla Slab),
-ITF Free Font License (Fontshare: Zodiak, Satoshi, Clash Display, Cabinet Grotesk,
-Panchang), 1001Fonts FFC (Frantically, words only — no digits). Sprat, Necto Mono
+Sans, IBM Plex Mono/Serif, Instrument Serif, Lato, Poppins, Space Mono, Zilla Slab).
+Optional faces, not in the repository because their licences forbid redistribution
+(`assets/fonts/RESTRICTED.md`): Fontshare Free Font License (Zodiak, Satoshi, Clash
+Display, Cabinet Grotesk, Panchang) and 1001fonts freeware (Frantically, words only — no
+digits). `scripts/fetch_fonts.sh` downloads the Fontshare families; Frantically is a
+manual download. Without them every loader reads an open fallback from
+`restricted_fallbacks` in the registry (Satoshi → Lato, Cabinet Grotesk → Fira Sans /
+Barlow / Poppins / Archivo Black, Clash Display → Poppins / Archivo Black, Panchang →
+Poppins, Zodiak → Instrument Serif / DM Serif Display, Frantically → Zilla Slab SemiBold
+Italic). The typography choice, the gate and the compiled scene do not change (they
+still name the original face); only the glyphs drawn do, so goldens and tests use open
+faces and pass either way. Sprat, Necto Mono
 and Mazius Display (Collletttivo) need the foundry's download flow: drop the
 static OTFs into `assets/fonts/` with the registry file names
 (`Sprat-Light/Regular/Bold.otf`, `NectoMono-Regular.otf`,
@@ -96,3 +119,41 @@ code changes.
 
 ₹ coverage: Satoshi, Panchang, Instrument Serif, DM Serif, Barlow and Archivo
 Black have no ₹ glyph; it renders from the fallback face.
+
+## Beat markers (0.24)
+
+There is no eyebrow kicker or kicker rule. `direction::decide_marker` picks per beat: nothing (default); a running index (`Voice::HERO_NUMBER`, display size, in the gutter opposite the headline, only on a counted story); a source/unit tag (`Voice::MARKER`: mono, 0.06 tracking, not caps) under the figure when the beat carries a unit or source the headline lacks (a unit such as "a year" or "per month", or a source such as "SmartAsset, 2024"; never what the picture already shows). No look parks tracked caps labels in a corner, and the beat's purpose word never renders. ClayPop/StudioPop show no text markers. A beat has at most one rule (`one_rule`, furniture). `slop_eyebrow_label` flags the old pattern.
+
+
+## Motion-safe type system (0.24 M8)
+
+Research basis: type in motion needs heavy or medium weights (thin strokes shimmer and break up under compression); low stroke contrast when small (high-contrast serifs only at display size); a large x-height for small text; tabular digits for counters (a count must not jitter sideways); open spacing for animated text; at most 2 families per piece plus a mono label.
+
+Every registry face carries `weight`, `contrast` (low|medium|high), `width` (condensed|normal|extended), and measured `x_height` (x over H glyph height) and `tabular_digits` (all 0-9 advances within 1 %). `crates/motion-core/tests/motion_type.rs` fails if they drift from the font files.
+
+`motion_safe(face, role, words)`: no weight < 400 anywhere; display/display_condensed/number need weight >= 600 unless the face is high-contrast and the role is `display`; body needs x_height >= 0.66 and low/medium contrast; number needs `tabular_digits` (Count re-lays out text each frame at the current width, so non-tabular figures jitter); `extended` faces only for display with <= 3 words. Options and pairings that fail are excluded at levels >= 1 (`motion-engine fonts` lists each with its reason). Level 0 and level-0 `--emotion` are not gated.
+
+Pairing library v2 (`pairings` in registry.json; all pass the gate; the 7 legacy pairings are unchanged and ungated):
+| id | display | voice | body | mono | number | use for |
+|---|---|---|---|---|---|---|
+| satoshi_editorial | Satoshi Bold | Instrument Serif Italic | Satoshi Medium | IBM Plex Mono | Lato Bold* | modern editorial, tech explainers, startups |
+| clash_cabinet | Clash Display Semibold | DM Serif Italic | Cabinet Grotesk Medium | Space Mono | Archivo Black* | creator/hype, announcements, product |
+| zodiak_documentary | Zodiak Bold | Zodiak Italic | Satoshi Regular | IBM Plex Mono | Lato Bold* | culture, history, long-form documentary |
+| slab_news | Zilla Slab Bold | Zilla Slab SemiBold Italic | Lato Regular | IBM Plex Mono | Lato Bold* | warm news, local stories, explainers |
+| instrument_cinema | Instrument Serif (display >= 8 % canvas height; not enforced yet) | Instrument Serif Italic | Satoshi Medium | Space Mono | Lato Bold* | slow cinematic, essays, luxury |
+
+*Substituted: the planned figure faces (Satoshi/Clash/Zodiak/Zilla Bold, Barlow Condensed Bold) have proportional default digits and fail the tabular rule; the renderer does not apply `tnum`. instrument_cinema's display_condensed is Barlow Condensed SemiBold (Instrument Serif Regular fails the display_condensed weight rule).
+
+Selection: level 0 = the tone's legacy pairing. Level 1 (no `--emotion`) = hash(seed, level, story key) over `usage[genre][tone]` pairings, narrowed by `use_for.temperaments` (Classic tone and explicit typography_style stay a category constraint and keep the legacy pairing as a candidate / widen to all pairings). Levels 2-3 add the gated emotion options. `--emotion` at level >= 1 draws only gated options (currently none pass, so it falls back to legacy).
+
+Usage matrix (genre x tone -> pairings):
+| genre | editorial | technical | playful | classic |
+|---|---|---|---|---|
+| standard | zodiak_documentary, slab_news, satoshi_editorial, instrument_cinema | satoshi_editorial, slab_news, clash_cabinet | clash_cabinet, slab_news, satoshi_editorial | satoshi_editorial, slab_news, clash_cabinet |
+| documentary | zodiak_documentary, instrument_cinema | slab_news, satoshi_editorial (finance/news) | slab_news, clash_cabinet | zodiak_documentary, slab_news |
+| street | clash_cabinet | clash_cabinet | clash_cabinet | clash_cabinet |
+| hype | clash_cabinet, satoshi_editorial | same | same | same |
+| studio | satoshi_editorial, clash_cabinet | same | same | same |
+| cinematic | instrument_cinema, satoshi_editorial, zodiak_documentary | same | same | same |
+
+Comparison sheet: `motion-engine fonts --sheet out.png [--format vertical|landscape]` renders one tile per pairing (7 legacy + 5 v2) through the CPU renderer.

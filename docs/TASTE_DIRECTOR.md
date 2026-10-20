@@ -14,8 +14,7 @@ The model never picks a hex color, a font, a duration or an easing curve. It say
 Source of truth: `crates/motion-core/src/compiler/taste.rs` (semantic resolution),
 `compiler/temporal.rs` (the only place tendencies become numbers), and the
 consumers `backdrop.rs`, `transition.rs`, `furniture.rs`, `recipes.rs`
-(`wrap_stage`, ghost word), `mod.rs` (`plan_timing_with`). Design rationale:
-`DECISIONS.md` entries 44-50.
+(`wrap_stage`, ghost word), `mod.rs` (`plan_timing_with`).
 
 ## 1. Pipeline
 

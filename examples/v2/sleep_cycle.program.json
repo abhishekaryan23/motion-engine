@@ -1,0 +1,146 @@
+{
+ "version": "2.0",
+ "meta": {
+  "name": "sleep_cycle",
+  "aspect": "9:16",
+  "duration": 12.0,
+  "end_beat": 24,
+  "brief": "a vertical about rest and recovery at night"
+ },
+ "palette": {
+  "background": "#1B1F3B",
+  "ink": "#F4F1EA",
+  "accent": "#FFB23F",
+  "muted": "#A9AECB"
+ },
+ "fonts": {
+  "display": "anton",
+  "serif": "instrument_serif_italic",
+  "mono": "space_mono"
+ },
+ "music": {
+  "track": "retro_groove",
+  "start": 0.132
+ },
+ "components": [
+  {
+   "id": "g",
+   "kind": "backdrop"
+  },
+  {
+   "id": "open",
+   "kind": "kinetic_text",
+   "preset": "poster_cuts",
+   "dot": true,
+   "start_beat": 0,
+   "end_beat": 8,
+   "beat_cuts": 1,
+   "words": [
+    "SLEEP",
+    "IS",
+    "NOT",
+    "LAZY",
+    "IT",
+    "IS",
+    "REPAIR",
+    "WORK"
+   ],
+   "stress": [
+    6
+   ],
+   "timeline": [
+    {
+     "beat": 2,
+     "do": "cut",
+     "flip": true
+    },
+    {
+     "beat": 4,
+     "do": "cut",
+     "flip": true
+    }
+   ]
+  },
+  {
+   "id": "moon",
+   "kind": "shape",
+   "shape": "circle",
+   "size": "xl",
+   "start_beat": 8,
+   "end_beat": 11,
+   "timeline": [
+    {
+     "beat": 8,
+     "do": "enter",
+     "style": "pop"
+    },
+    {
+     "beat": 9,
+     "do": "morph",
+     "to": "ring"
+    },
+    {
+     "beat": 10,
+     "do": "recolour",
+     "to": "accent"
+    }
+   ]
+  },
+  {
+   "id": "cycle",
+   "kind": "kinetic_text",
+   "preset": "poster_cuts",
+   "start_beat": 11,
+   "end_beat": 16,
+   "beat_cuts": 1,
+   "words": [
+    "NINETY",
+    "MINUTES",
+    "A",
+    "CYCLE",
+    "FIVE"
+   ],
+   "stress": [
+    4
+   ]
+  },
+  {
+   "id": "stages",
+   "kind": "diagram",
+   "preset": "cards",
+   "nodes": [
+    "Light",
+    "Deep",
+    "Dream",
+    "Wake",
+    "Again"
+   ],
+   "start_beat": 16,
+   "beat_cuts": 2
+  },
+  {
+   "id": "note",
+   "kind": "kinetic_text",
+   "preset": "type_on",
+   "slot": "bottom",
+   "start_beat": 17,
+   "beat_cuts": 2,
+   "words": [
+    "drift off",
+    "body rebuilds",
+    "mind sorts",
+    "ready"
+   ]
+  }
+ ],
+ "transitions": [
+  {
+   "beat": 8,
+   "kind": "colour_flip"
+  },
+  {
+   "beat": 16,
+   "kind": "whip"
+  }
+ ]
+}

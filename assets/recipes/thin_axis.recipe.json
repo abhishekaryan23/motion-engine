@@ -1,0 +1,7 @@
+{
+  "description": "Dark navy board, thin muted axes, one gold series, big number callouts.",
+  "palette": { "background": "#0F1626", "ink": "#F3F1EA", "accent": "#F2B544", "muted": "#56627A" },
+  "fonts": { "display": "cabinet_grotesk_extrabold", "serif": "instrument_serif_italic", "mono": "ibm_plex_mono" },
+  "tempo": "normal",
+  "allow": ["gradient"]
+}

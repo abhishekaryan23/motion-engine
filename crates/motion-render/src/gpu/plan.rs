@@ -442,6 +442,8 @@ pub(crate) fn plan_posts(w: u32, h: u32, posts: &[ResolvedPost<'_>]) -> Plan {
             }
             PostKind::Grain { amount, seed } => pl.grain(*amount, *seed, p.time, s),
             PostKind::Vignette { amount } => pl.vignette(*amount, s),
+            // CPU only: the renderer never hands these frames to the GPU.
+            PostKind::Shockwave { .. } => {}
         }
     }
     pl.plan.result = pl.cur;

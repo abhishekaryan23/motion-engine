@@ -620,6 +620,10 @@ fn anchor_of(
     (read, AnchorSource::Read)
 }
 
+/// (0.24) A count may start at most this long (seconds) before its number is
+/// said.
+pub const COUNT_EARLY_START_S: f64 = 0.15;
+
 /// `count_unsettled` over every counting text layer of every beat. `speech`
 /// anchors the counts on the narrator's words; without it every anchor is the
 /// beat's READ (or the count's own start when later).
@@ -668,6 +672,16 @@ pub fn count_unsettled(
                     read.unwrap_or(count_start),
                 )
             };
+            // (0.24) A count that starts well before its number is said counts
+            // up to a value the narrator has not reached.
+            let early_start = match &source {
+                AnchorSource::SpokenValue(word)
+                    if raw_anchor - count_start > COUNT_EARLY_START_S + EPS =>
+                {
+                    Some((raw_anchor - count_start, word.clone()))
+                }
+                _ => None,
+            };
             // Never earlier than the count's own start.
             let anchor = if raw_anchor < count_start {
                 source = AnchorSource::CountStart;
@@ -702,6 +716,16 @@ pub fn count_unsettled(
                 note: None,
             };
             let mut problems: Vec<(CheckStatus, String)> = Vec::new();
+            if let Some((lead, word)) = early_start {
+                problems.push((
+                    CheckStatus::Warn,
+                    format!(
+                        "starts {} before its number (\"{word}\"; limit {:.0} ms)",
+                        secs(lead),
+                        COUNT_EARLY_START_S * 1000.0
+                    ),
+                ));
+            }
             match settle_frame {
                 None => problems.push((CheckStatus::Fail, "never shows its final value".into())),
                 Some(sf) => {

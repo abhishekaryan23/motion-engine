@@ -1,10 +1,8 @@
-# MotionEngine over MCP (`motion-mcp`, Sprint 0.21)
+# MotionEngine over MCP (`motion-mcp`)
 
 `motion-mcp` exposes MotionEngine as MCP tools over stdio, so any model can make a finished,
 narrated motion-graphics video. A small model writes one short story object; the engine designs,
 voices, animates, renders and checks the video, and answers in one short line.
-
-Plan and rationale: `docs/plans/SPRINT_0_21_MCP_SERVER.md`. Decisions 123–127 in `DECISIONS.md`.
 
 ## Set up
 
@@ -15,7 +13,7 @@ cargo build --release -p motion-mcp                                # the MCP ser
 
 Register it with your client. For Claude Code, copy `docs/mcp/claude-code.mcp.json` to `.mcp.json`
 in your project (or merge it into `~/.claude.json`) and replace `/ABSOLUTE/PATH/TO/MotionEngine`.
-Any MCP client works the same way: start `motion-mcp --profile <weak|creator|operator> --repo
+Any MCP client works the same way: start `motion-mcp --profile <v2|weak|creator|operator> --repo
 <MotionEngine checkout>` as a stdio server.
 
 Check it without a model client:
@@ -28,6 +26,21 @@ python3 scripts/mcp_call.py make_video '{"story": {...}}' # one call, progress o
 The voice uses the free OpenRouter TTS (Fish S2.1 Pro, pinned male narrator). The key is read by
 the engine exactly as `motion-engine providers` stores it; the MCP server never reads, logs or
 returns it, and the server itself makes no network calls.
+
+
+## Profile `v2` (MotionEngine 2)
+
+`--profile v2` exposes four tools for beat-synced motion graphics from a brief:
+
+| tool | in | out |
+|---|---|---|
+| `make_video` | `brief` (direction words set length/aspect/recipe and never show; quoted text, numbers and statements are content) or `intent` (a CreativeIntent), optional `aspect`, `seconds`, `recipe` | `video`, `program`, `sheet`, `qa` (`pass` or failing mistake-ledger ids), `critique`, `top` (≤ 3 findings) |
+| `edit_video` | `path` of a talking-head video, optional `plan`, `plan_only` | `video`, `plan` |
+| `preview` | a made video | one small JPEG frame |
+| `critique` | a made video | score /40, axes, top 3 findings |
+
+Brief → finished video is three calls (`make_video`, `critique`, `preview`); measured ≈ 750–940
+tokens of tool I/O per 60 s video (`cargo test -p motion-mcp --test mcp v2::kpi -- --ignored`).
 
 ## Profiles: control grows with the model, the contract does not
 
@@ -176,4 +189,4 @@ beats, running by one, up from 1 or down). Intro and outro beats stay unnumbered
 Phase 1 runs the existing `motion-engine reel` as a subprocess (progress per pipeline stage).
 Phase 2 moves the pipeline into a library with frame-level progress and MCP Tasks, adds hybrid
 picture/style retrieval, the creator's ≤ 20 s draft contact sheet and the operator tools. See
-`BUILD_STATUS.md` for what is done.
+`CHANGELOG.md` for what has shipped.

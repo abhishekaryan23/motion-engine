@@ -1,5 +1,5 @@
 //! (0.23) Frozen names and thresholds of the QA checks added in sprint 0.23
-//! (plan `docs/plans/SPRINT_0_23_VARIETY_QA_AUDIO.md` §1, §3 W4 / W5a, §4).
+//! (see `docs/DESIGN_RULES.md`).
 //! Every report, test and bench uses these constants; thresholds change only
 //! through the coordinator.
 
@@ -29,7 +29,7 @@ pub const BED_OVER_VOICE: &str = "bed_over_voice";
 /// Speech QA (stems, WARN): the bed's 300–4000 Hz level under speech stays at
 /// or below voice + [`SPEECH_BAND_MASKING_MAX_DB`].
 pub const SPEECH_BAND_MASKING: &str = "speech_band_masking";
-/// (0.23, owner decision) Layout QA: two readable, non-decorative text layers
+/// (0.23, design decision) Layout QA: two readable, non-decorative text layers
 /// overlap. Text over text is a defect in general; a deliberate impact overlap
 /// is allowed only when one of the two is an impact layer (stamp, punchword,
 /// slam unit, echo — `layout_qa::IMPACT_LAYERS`), neither is a value / figure,

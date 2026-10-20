@@ -1,0 +1,127 @@
+{
+ "id": "empty_app_state",
+ "kind": "program",
+ "program": {
+  "version": "2.0",
+  "meta": {
+   "name": "phone_flow",
+   "aspect": "9:16",
+   "duration": 10.4
+  },
+  "palette": {
+   "background": "#E7E3DC",
+   "ink": "#151515",
+   "accent": "#2F5BFF",
+   "muted": "#A8A39A"
+  },
+  "components": [
+   {
+    "id": "ground",
+    "kind": "backdrop"
+   },
+   {
+    "id": "phone",
+    "kind": "device_frame",
+    "device": "phone",
+    "preset": "flat_mono",
+    "timeline": [
+     {
+      "at": 0.0,
+      "do": "enter",
+      "style": "rise"
+     }
+    ],
+    "states": [
+     {
+      "shape": "icon",
+      "title": "Pay",
+      "fill": "accent"
+     },
+     {
+      "shape": "sheet",
+      "title": "Send to Mira",
+      "detail": "Dinner, Friday",
+      "amount": "€24.00",
+      "items": [
+       "From Savings"
+      ],
+      "cta": "Hold to send"
+     },
+     {
+      "shape": "pill",
+      "title": "Sent",
+      "icon": "check",
+      "fill": "ink"
+     },
+     {
+      "shape": "toast",
+      "title": "Mira received €24.00",
+      "detail": "Just now",
+      "icon": "check"
+     }
+    ],
+    "steps": [
+     {
+      "at": 1.9,
+      "do": "click",
+      "then": 1
+     },
+     {
+      "at": 3.4,
+      "do": "hold",
+      "secs": 0.9,
+      "then": 2
+     },
+     {
+      "at": 6.2,
+      "do": "toast",
+      "state": 3
+     }
+    ]
+   }
+  ]
+ },
+ "fixed": {
+  "version": "2.0",
+  "meta": {
+   "name": "phone_flow",
+   "aspect": "9:16",
+   "duration": 10.4
+  },
+  "palette": {
+   "background": "#E7E3DC",
+   "ink": "#151515",
+   "accent": "#2F5BFF",
+   "muted": "#A8A39A"
+  },
+  "components": [
+   {
+    "id": "ground",
+    "kind": "backdrop"
+   },
+   {
+    "id": "phone",
+    "kind": "device_frame",
+    "device": "phone",
+    "preset": "flat_mono",
+    "flow": {
+     "kind": "payment",
+     "app": "Pay",
+     "actor": "Sam",
+     "counterparty": "Mira",
+     "amount": "€24.00",
+     "item": "Savings",
+     "note": "Dinner, Friday",
+     "reply": "liked your payment"
+    },
+    "timeline": [
+     {
+      "at": 0.0,
+      "do": "enter",
+      "style": "rise"
+     }
+    ]
+   }
+  ]
+ }
+}

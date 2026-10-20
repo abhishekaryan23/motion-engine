@@ -1160,10 +1160,11 @@ fn keyword_time(
     })
 }
 
-const HERO_SKIP: [&str; 11] = [
+const HERO_SKIP: [&str; 12] = [
     "ghost",
     "backdrop",
     "kicker",
+    "marker",
     "furniture",
     "rule",
     "caption",
@@ -1300,7 +1301,7 @@ fn content_boxes(
             let mut offsets: Vec<[f32; 2]> = vec![[0.0, 0.0]];
             for m in motions.iter().filter(|m| m.target == l.id) {
                 match m.op {
-                    MotionOp::Move { from, to } => offsets.extend([from, to]),
+                    MotionOp::Move { from, to, .. } => offsets.extend([from, to]),
                     MotionOp::Scale { from, to, .. } => grow = grow.max(from).max(to),
                     _ => {}
                 }
@@ -1822,6 +1823,8 @@ mod kinetic_tests {
                 line_height: 1.0,
                 letter_spacing: 0.0,
                 ink: None,
+                fill: None,
+                outline: None,
                 max_width: None,
                 uppercase: false,
             }),
@@ -1894,6 +1897,7 @@ mod kinetic_tests {
                 MotionOp::Move {
                     from: [0.0, 140.0],
                     to: [0.0, 0.0],
+                    via: None,
                 },
             ),
         ];

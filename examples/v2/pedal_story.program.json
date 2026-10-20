@@ -1,0 +1,246 @@
+{
+ "version": "2.0",
+ "meta": {
+  "name": "pedal_story",
+  "aspect": "9:16",
+  "duration": 16.0,
+  "end_beat": 32,
+  "brief": "Bold vertical spot for a cycle-share scheme; say \"ride more\" and \"drive less\"."
+ },
+ "palette": {
+  "background": "#0E0F12",
+  "ink": "#F3F0EA",
+  "accent": "#FFC21A",
+  "muted": "#F3F0EA",
+  "grounds": [
+   "#FFC21A",
+   "#F3F0EA"
+  ]
+ },
+ "fonts": {
+  "display": "archivo_black",
+  "serif": "instrument_serif_italic",
+  "mono": "ibm_plex_mono"
+ },
+ "tempo": "fast",
+ "music": {
+  "track": "driving_pulse",
+  "start": 0.107
+ },
+ "components": [
+  {
+   "id": "night",
+   "kind": "backdrop",
+   "end_beat": 8
+  },
+  {
+   "id": "grid",
+   "kind": "field",
+   "preset": "grid",
+   "end_beat": 8,
+   "timeline": [
+    {
+     "at": 0,
+     "do": "enter",
+     "style": "fade"
+    }
+   ]
+  },
+  {
+   "id": "open",
+   "kind": "kinetic_text",
+   "preset": "poster_cuts",
+   "start_beat": 0,
+   "beat_cuts": 1,
+   "words": [
+    "PEDAL",
+    "PAST",
+    "THE",
+    "JAM",
+    "RIDE",
+    "MORE",
+    "DRIVE",
+    "LESS"
+   ],
+   "end_beat": 8,
+   "dot": true,
+   "stress": [
+    5
+   ],
+   "timeline": [
+    {
+     "beat": 6,
+     "do": "cut",
+     "flip": true
+    }
+   ]
+  },
+  {
+   "id": "sun",
+   "kind": "backdrop",
+   "colour": "ground1",
+   "start_beat": 8,
+   "end_beat": 16
+  },
+  {
+   "id": "tone",
+   "kind": "field",
+   "preset": "halftone",
+   "focus": "top",
+   "start_beat": 8,
+   "end_beat": 16,
+   "timeline": [
+    {
+     "at": 0,
+     "do": "enter",
+     "style": "fade"
+    }
+   ]
+  },
+  {
+   "id": "mins",
+   "kind": "chart",
+   "chart": "bar",
+   "values": [
+    24,
+    19,
+    17,
+    35,
+    12
+   ],
+   "labels": [
+    "car",
+    "bus",
+    "tram",
+    "walk",
+    "bike"
+   ],
+   "hero": 4,
+   "callout": "12 min",
+   "title": "Minutes across town",
+   "colour": "ink",
+   "start_beat": 8,
+   "end_beat": 16,
+   "beat_cuts": 1,
+   "timeline": [
+    {
+     "beat": 8,
+     "do": "enter",
+     "style": "draw"
+    },
+    {
+     "beat": 13,
+     "do": "pop_label"
+    }
+   ],
+   "size": "xl"
+  },
+  {
+   "id": "paper",
+   "kind": "backdrop",
+   "colour": "ground2",
+   "start_beat": 16,
+   "end_beat": 28
+  },
+  {
+   "id": "dots",
+   "kind": "field",
+   "preset": "grid",
+   "start_beat": 16,
+   "end_beat": 28,
+   "timeline": [
+    {
+     "at": 0,
+     "do": "enter",
+     "style": "fade"
+    }
+   ]
+  },
+  {
+   "id": "rides",
+   "kind": "chart",
+   "chart": "bar",
+   "preset": "paper",
+   "values": [
+    2,
+    3,
+    5,
+    6,
+    8,
+    11,
+    13,
+    16,
+    18,
+    21,
+    24
+   ],
+   "hero": 10,
+   "callout": "24k",
+   "title": "Rides a day, thousands",
+   "start_beat": 16,
+   "end_beat": 28,
+   "beat_cuts": 1,
+   "timeline": [
+    {
+     "beat": 16,
+     "do": "enter",
+     "style": "draw"
+    },
+    {
+     "beat": 27,
+     "do": "pop_label"
+    }
+   ],
+   "size": "xl",
+   "labels": []
+  },
+  {
+   "id": "night2",
+   "kind": "backdrop",
+   "start_beat": 28
+  },
+  {
+   "id": "close",
+   "kind": "kinetic_text",
+   "preset": "poster_cuts",
+   "start_beat": 28,
+   "beat_cuts": 1,
+   "words": [
+    "RIDE",
+    "MORE",
+    "DRIVE",
+    "LESS",
+    "GO"
+   ],
+   "dot": true,
+   "stress": [
+    4
+   ]
+  }
+ ],
+ "camera": [
+  {
+   "beat": 14,
+   "do": "push",
+   "to": 1.08
+  },
+  {
+   "beat": 15,
+   "do": "reset"
+  }
+ ],
+ "transitions": [
+  {
+   "beat": 8,
+   "kind": "colour_flip"
+  },
+  {
+   "beat": 16,
+   "kind": "whip"
+  },
+  {
+   "beat": 28,
+   "kind": "whip"
+  }
+ ]
+}

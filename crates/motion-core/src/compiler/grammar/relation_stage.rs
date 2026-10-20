@@ -177,7 +177,7 @@ fn resolve(ctx: &Ctx, b: &B, which: Which) -> Option<Pic> {
         let f = SubjectFacts::from_entry(&entry);
         (f.subject.width * f.aspect / f.subject.height.max(0.05)).clamp(0.2, 5.0)
     } else if ctx.library.find_object(&o.asset).is_some() {
-        1.0
+        ctx.library.object_aspect(&o.asset).unwrap_or(1.0)
     } else {
         return None;
     };
@@ -389,6 +389,7 @@ fn badge(ctx: &Ctx, id: String, c: (f32, f32), d: f32, text: &str, depth: Option
             stroke: Some(Stroke {
                 color: ctx.palette.accent,
                 width: 0.07 * d,
+                brush: None,
             }),
         },
         0,
@@ -517,6 +518,7 @@ fn stamp(
                 stroke: Some(Stroke {
                     color: ctx.palette.accent,
                     width: (0.004 * short).max(1.5),
+                    brush: None,
                 }),
             },
             0,
@@ -1096,6 +1098,7 @@ pub(super) fn stat_card(
             stroke: Some(Stroke {
                 color: ctx.palette.accent,
                 width: 0.006 * short,
+                brush: None,
             }),
         },
         0,
@@ -1430,6 +1433,7 @@ fn connector(
                     Stroke {
                         color: ink.with_alpha(0xB0),
                         width: 0.45 * sw,
+                        brush: None,
                     },
                     false,
                     None,
@@ -1463,6 +1467,7 @@ fn connector(
                 Stroke {
                     color: accent,
                     width: sw,
+                    brush: None,
                 },
                 false,
                 None,
@@ -1487,6 +1492,7 @@ fn connector(
                 Stroke {
                     color: accent,
                     width: sw,
+                    brush: None,
                 },
                 false,
                 None,
@@ -1508,6 +1514,7 @@ fn connector(
                 Stroke {
                     color: accent,
                     width: 1.0,
+                    brush: None,
                 },
                 true,
                 Some(accent),

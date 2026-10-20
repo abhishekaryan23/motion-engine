@@ -1,0 +1,204 @@
+{
+ "version": "2.0",
+ "meta": {
+  "name": "data_cut",
+  "aspect": "16:9",
+  "duration": 14.398,
+  "end_beat": 24
+ },
+ "palette": {
+  "background": "#EDEDEA",
+  "ink": "#0D0D0D",
+  "accent": "#E8322B",
+  "muted": "#A3A3A0"
+ },
+ "fonts": {
+  "display": "anton",
+  "serif": "instrument_serif_italic",
+  "mono": "space_mono"
+ },
+ "music": {
+  "track": "bright_upbeat",
+  "start": 0.508
+ },
+ "components": [
+  {
+   "id": "ground",
+   "kind": "backdrop"
+  },
+  {
+   "id": "open",
+   "kind": "kinetic_text",
+   "preset": "poster_cuts",
+   "start_beat": 0,
+   "end": 3.2,
+   "beat_cuts": 1,
+   "words": [
+    "THE",
+    "NUMBERS",
+    "ARE",
+    "IN",
+    "LOOK",
+    "CLOSER"
+   ],
+   "stress": [
+    3
+   ],
+   "timeline": [
+    {
+     "beat": 2,
+     "do": "cut",
+     "flip": true
+    },
+    {
+     "beat": 4,
+     "do": "cut",
+     "flip": true
+    }
+   ]
+  },
+  {
+   "id": "tone",
+   "kind": "field",
+   "preset": "halftone",
+   "focus": "trail",
+   "colour": "muted",
+   "start_beat": 6,
+   "end": 7.466,
+   "timeline": [
+    {
+     "at": 0,
+     "do": "enter",
+     "style": "fade"
+    }
+   ]
+  },
+  {
+   "id": "line",
+   "kind": "chart",
+   "chart": "line",
+   "preset": "paper",
+   "values": [
+    3,
+    5,
+    4,
+    7,
+    9,
+    8,
+    12,
+    14
+   ],
+   "hero": 7,
+   "callout": "14k",
+   "start_beat": 6,
+   "end": 7.466,
+   "timeline": [
+    {
+     "beat": 6,
+     "do": "enter",
+     "style": "draw"
+    },
+    {
+     "beat": 9,
+     "do": "pop_label"
+    },
+    {
+     "at": 3.866,
+     "do": "exit"
+    }
+   ],
+   "size": "xl"
+  },
+  {
+   "id": "cap1",
+   "kind": "kinetic_text",
+   "preset": "type_on",
+   "slot": "top",
+   "start_beat": 6,
+   "end": 7.466,
+   "beat_cuts": 1,
+   "words": [
+    "users",
+    "week 1",
+    "week 2",
+    "week 4",
+    "week 6",
+    "week 8",
+    "peak week",
+    "and rising"
+   ]
+  },
+  {
+   "id": "donut",
+   "kind": "chart",
+   "chart": "donut",
+   "preset": "paper",
+   "values": [
+    58,
+    24,
+    18
+   ],
+   "hero": 0,
+   "callout": "58%",
+   "start_beat": 14,
+   "end": 11.732,
+   "timeline": [
+    {
+     "beat": 14,
+     "do": "enter",
+     "style": "draw"
+    },
+    {
+     "beat": 17,
+     "do": "pop_label"
+    },
+    {
+     "at": 3.866,
+     "do": "exit"
+    }
+   ],
+   "size": "xl"
+  },
+  {
+   "id": "cap2",
+   "kind": "kinetic_text",
+   "preset": "type_on",
+   "slot": "top",
+   "start_beat": 14,
+   "end": 11.732,
+   "beat_cuts": 1,
+   "words": [
+    "revenue",
+    "by source",
+    "direct",
+    "majority",
+    "partners",
+    "24%",
+    "other",
+    "18%"
+   ]
+  },
+  {
+   "id": "close",
+   "kind": "kinetic_text",
+   "preset": "poster_cuts",
+   "start_beat": 22,
+   "beat_cuts": 1,
+   "words": [
+    "UP",
+    "AND",
+    "RIGHT"
+   ],
+   "stress": [
+    2
+   ],
+   "timeline": [
+    {
+     "beat": 23,
+     "do": "cut",
+     "flip": true
+    }
+   ]
+  }
+ ]
+}

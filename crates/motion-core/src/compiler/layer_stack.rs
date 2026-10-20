@@ -405,6 +405,7 @@ fn label_card(
             stroke: Some(Stroke {
                 color: ctx.palette.accent.with_alpha(0xB0),
                 width: (2.5 * u).max(1.5),
+                brush: None,
             }),
         },
         0,

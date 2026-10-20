@@ -1,0 +1,233 @@
+{
+  "version": "2.0",
+  "meta": {
+    "name": "idea_4_hyperion_compiler",
+    "aspect": "16:9",
+    "duration": 12.8,
+    "fps": "30",
+    "end_beat": 32
+  },
+  "palette": {
+    "background": "#0A0D12",
+    "ink": "#E2E8F0",
+    "accent": "#FF9E00",
+    "muted": "#526074",
+    "grounds": [
+      "#111722",
+      "#241907"
+    ]
+  },
+  "fonts": {
+    "display": "barlow_condensed_bold",
+    "serif": "zilla_slab_bold",
+    "mono": "ibm_plex_mono"
+  },
+  "tempo": "fast",
+  "music": {
+    "track": "retro_groove",
+    "start": 0.132
+  },
+  "allow": ["gradient"],
+  "film": {
+    "grain": 0.018,
+    "fringe": 0.6
+  },
+  "camera": [
+    { "beat": 1, "do": "push", "to": 1.03 },
+    { "beat": 2, "do": "orbit", "yaw": -2.5, "pitch": 1.5 },
+    { "beat": 4, "do": "dolly", "to": -45.0 },
+    { "beat": 5, "do": "orbit", "yaw": 2.5, "pitch": -1.5 },
+    { "beat": 7, "do": "reset" },
+    { "beat": 9, "do": "orbit", "yaw": 4.5, "pitch": -2.5 },
+    { "beat": 11, "do": "dolly", "to": -55.0 },
+    { "beat": 13, "do": "orbit", "yaw": -3.5, "pitch": 2.0 },
+    { "beat": 15, "do": "reset" },
+    { "beat": 17, "do": "orbit", "yaw": 2.8, "pitch": -1.6 },
+    { "beat": 19, "do": "dolly", "to": -42.0 },
+    { "beat": 21, "do": "orbit", "yaw": -2.4, "pitch": 1.4 },
+    { "beat": 23, "do": "reset" },
+    { "beat": 25, "do": "orbit", "yaw": 3.5, "pitch": -2.0 },
+    { "beat": 27, "do": "dolly", "to": -45.0 },
+    { "beat": 29, "do": "orbit", "yaw": -3.0, "pitch": 2.0 },
+    { "beat": 31, "do": "reset" },
+    { "beat": 32, "do": "push", "to": 1.05 }
+  ],
+  "transitions": [
+    { "beat": 8, "kind": "whip" },
+    { "beat": 16, "kind": "colour_flip" },
+    { "beat": 24, "kind": "impact" }
+  ],
+  "components": [
+    {
+      "id": "bg_code",
+      "kind": "backdrop",
+      "preset": "flat",
+      "colour": "ground1",
+      "image": "generated/idea_4_bg.png",
+      "image_opacity": 0.34,
+      "depth": 0.14,
+      "start_beat": 0,
+      "end_beat": 8
+    },
+    {
+      "id": "kernel_synthesis",
+      "kind": "code_block",
+      "preset": "terminal_dark",
+      "language": "rust",
+      "size": "xl",
+      "lines": [
+        "#[hyperion::fabric(zero_copy)]",
+        "pub fn dispatch(msg: Frame) -> Outcome {",
+        "    let pool = Cluster::alloc(64);",
+        "    msg.pipe::<VectorKernel>().resolve()",
+        "}"
+      ],
+      "steps": [
+        { "beat": 0, "do": "type", "line": 2 },
+        { "beat": 3, "do": "retype", "line": 2, "to": "    // 0 allocs: 14ms" },
+        { "beat": 6, "do": "highlight", "line": 0 },
+        { "beat": 7, "do": "highlight", "line": 3 }
+      ],
+      "start_beat": 0,
+      "end_beat": 8
+    },
+    {
+      "id": "bg_benchmarks",
+      "kind": "backdrop",
+      "preset": "flat",
+      "image": "generated/idea_4_bg.png",
+      "image_opacity": 0.36,
+      "depth": 0.15,
+      "start_beat": 8,
+      "end_beat": 16
+    },
+    {
+      "id": "bench_title_left",
+      "kind": "title",
+      "preset": "stacked",
+      "slot": "left",
+      "size": "xl",
+      "text": "ZERO ALLOC",
+      "start_beat": 8,
+      "end_beat": 16,
+      "timeline": [
+        { "beat": 8, "do": "enter", "style": "pop" },
+        { "beat": 11, "do": "hit" },
+        { "beat": 14, "do": "recolour", "to": "accent" }
+      ]
+    },
+    {
+      "id": "benchmark_bento",
+      "kind": "bento",
+      "preset": "pillars",
+      "slot": "right",
+      "beat_cuts": 2,
+      "tilt_in": [-10.0, 8.0],
+      "start_beat": 8,
+      "end_beat": 16,
+      "tiles": [
+        {
+          "stat": "42us",
+          "title": "COLD START",
+          "detail": "DETERMINISTIC",
+          "accent": true
+        },
+        {
+          "stat": "33800X",
+          "title": "SPIN-UP",
+          "detail": "ZERO RUNTIME",
+          "accent": false
+        },
+        {
+          "stat": "48.4M",
+          "title": "REQ / SEC",
+          "detail": "256 CORES",
+          "accent": false
+        },
+        {
+          "stat": "4.1MB",
+          "title": "RSS HEAP",
+          "detail": "CONSTANT",
+          "accent": true
+        }
+      ],
+      "timeline": [
+        { "beat": 8, "do": "enter", "style": "fade" }
+      ]
+    },
+    {
+      "id": "bg_chart_stages",
+      "kind": "backdrop",
+      "preset": "flat",
+      "image": "generated/idea_4_bg.png",
+      "image_opacity": 0.14,
+      "depth": 0.14,
+      "start_beat": 16,
+      "end_beat": 24
+    },
+    {
+      "id": "throughput_bars",
+      "kind": "chart",
+      "preset": "thin_axis",
+      "chart": "bar",
+      "slot": "left",
+      "title": "Clean Build Throughput (K LOC/s)",
+      "values": [180, 240, 310, 1240],
+      "labels": ["GCC 15", "LLVM 20", "RUSTC", "HYPERION"],
+      "hero": 3,
+      "callout": "1.24M LOC/s",
+      "size": "m",
+      "start_beat": 16,
+      "end_beat": 24,
+      "timeline": [
+        { "beat": 16, "do": "enter", "style": "draw" },
+        { "beat": 19, "do": "pop_label" }
+      ]
+    },
+    {
+      "id": "pass_pipeline",
+      "kind": "diagram",
+      "preset": "rail",
+      "slot": "right",
+      "nodes": [
+        "AST PARSE",
+        "SSA LOWER",
+        "SIMD VEC",
+        "ELF LINK"
+      ],
+      "beat_cuts": 2,
+      "start_beat": 16,
+      "end_beat": 24,
+      "timeline": [
+        { "beat": 16, "do": "enter", "style": "fade" }
+      ]
+    },
+    {
+      "id": "bg_close_hyperion",
+      "kind": "backdrop",
+      "preset": "flat",
+      "image": "generated/idea_4_bg.png",
+      "image_opacity": 0.40,
+      "depth": 0.12,
+      "start_beat": 24
+    },
+    {
+      "id": "hyperion_lockup",
+      "kind": "lockup",
+      "preset": "terminal_prompt",
+      "headline": "cargo install hyperion",
+      "subline": "Zero-Latency Deterministic Binary Synthesis.",
+      "subline_font": "serif",
+      "specs": [
+        "TARGET: X86_64 + AARCH64 [OK]"
+      ],
+      "start_beat": 24,
+      "timeline": [
+        { "beat": 24, "do": "enter", "style": "pop" },
+        { "beat": 26, "do": "sheen" },
+        { "beat": 28, "do": "advance" },
+        { "beat": 30, "do": "recolour", "to": "accent" }
+      ]
+    }
+  ]
+}

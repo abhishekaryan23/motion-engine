@@ -1826,7 +1826,7 @@ fn gate(args: &MakeVideoArgs, profile: Profile, notes: &mut Notes) -> (Productio
     let mut options = args.options.clone().unwrap_or_default();
     let mut describe = args.describe;
     match profile {
-        Profile::Weak => {
+        Profile::Weak | Profile::V2 => {
             if !options.is_empty() {
                 notes.add(
                     Prio::Ignored,

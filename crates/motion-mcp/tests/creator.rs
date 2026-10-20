@@ -605,9 +605,14 @@ fn view_frames_on_a_copy_of_a_real_job() {
     let Some(engine) = real_engine("view_frames_on_a_copy_of_a_real_job") else {
         return;
     };
-    let source = std::env::var_os("MOTION_REAL_JOB").map(PathBuf::from).unwrap_or_else(|| {
-        PathBuf::from("output/jobs/test_job")
-    });
+    // A finished job folder (`<repo>/output/jobs/<job>`) to copy; skipped
+    // when MOTION_REAL_JOB is not set.
+    let Some(source) = std::env::var_os("MOTION_REAL_JOB").map(PathBuf::from) else {
+        eprintln!(
+            "skipping view_frames_on_a_copy_of_a_real_job: set MOTION_REAL_JOB to a job folder"
+        );
+        return;
+    };
     if !source.join("reel").is_dir() {
         eprintln!(
             "skipping view_frames_on_a_copy_of_a_real_job: no real job at {}",

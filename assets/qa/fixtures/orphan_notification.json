@@ -1,0 +1,130 @@
+{
+ "id": "orphan_notification",
+ "kind": "program",
+ "program": {
+  "version": "2.0",
+  "meta": {
+   "name": "phone_flow",
+   "aspect": "9:16",
+   "duration": 10.4
+  },
+  "palette": {
+   "background": "#E7E3DC",
+   "ink": "#151515",
+   "accent": "#2F5BFF",
+   "muted": "#A8A39A"
+  },
+  "components": [
+   {
+    "id": "ground",
+    "kind": "backdrop"
+   },
+   {
+    "id": "phone",
+    "kind": "device_frame",
+    "device": "phone",
+    "preset": "flat_mono",
+    "timeline": [
+     {
+      "at": 0.0,
+      "do": "enter",
+      "style": "rise"
+     }
+    ],
+    "states": [
+     {
+      "shape": "icon",
+      "title": "Pay",
+      "fill": "accent"
+     },
+     {
+      "shape": "sheet",
+      "title": "Send to Mira",
+      "detail": "Dinner, Friday",
+      "amount": "€24.00",
+      "items": [
+       "From Savings"
+      ],
+      "cta": "Hold to send"
+     },
+     {
+      "shape": "sheet",
+      "title": "Sent to Mira",
+      "detail": "Dinner, Friday · Just now",
+      "amount": "€24.00",
+      "items": [
+       "From Savings"
+      ],
+      "cta": "Done"
+     },
+     {
+      "shape": "toast",
+      "title": "Mira · €24.00",
+      "detail": "Dinner, Friday"
+     }
+    ],
+    "steps": [
+     {
+      "at": 1.9,
+      "do": "click",
+      "then": 1
+     },
+     {
+      "at": 3.4,
+      "do": "hold",
+      "secs": 0.9,
+      "then": 2
+     },
+     {
+      "at": 7.5,
+      "do": "toast",
+      "state": 3
+     }
+    ]
+   }
+  ]
+ },
+ "fixed": {
+  "version": "2.0",
+  "meta": {
+   "name": "phone_flow",
+   "aspect": "9:16",
+   "duration": 10.4
+  },
+  "palette": {
+   "background": "#E7E3DC",
+   "ink": "#151515",
+   "accent": "#2F5BFF",
+   "muted": "#A8A39A"
+  },
+  "components": [
+   {
+    "id": "ground",
+    "kind": "backdrop"
+   },
+   {
+    "id": "phone",
+    "kind": "device_frame",
+    "device": "phone",
+    "preset": "flat_mono",
+    "flow": {
+     "kind": "payment",
+     "app": "Pay",
+     "actor": "Sam",
+     "counterparty": "Mira",
+     "amount": "€24.00",
+     "item": "Savings",
+     "note": "Dinner, Friday",
+     "reply": "liked your payment"
+    },
+    "timeline": [
+     {
+      "at": 0.0,
+      "do": "enter",
+      "style": "rise"
+     }
+    ]
+   }
+  ]
+ }
+}

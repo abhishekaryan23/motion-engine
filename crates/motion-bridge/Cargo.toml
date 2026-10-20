@@ -1,0 +1,16 @@
+[package]
+name = "motion-bridge"
+description = "MotionEngine 2 bridge: a short brief or a CreativeIntent becomes a MotionProgram through a named recipe"
+version.workspace = true
+edition.workspace = true
+license-file.workspace = true
+publish.workspace = true
+
+[lib]
+test = false
+
+[dependencies]
+motion-core.workspace = true
+motion-program.workspace = true
+serde.workspace = true
+serde_json.workspace = true

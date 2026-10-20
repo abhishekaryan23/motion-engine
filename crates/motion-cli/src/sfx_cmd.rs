@@ -44,7 +44,7 @@ pub fn cmd_sfx_index(
         });
         println!("{}", serde_json::to_string_pretty(&value)?);
     } else {
-        println!(
+        info!(
             "indexed {n} sound(s) ({} measured, {} cached) -> {}",
             report.measured,
             report.cached,
@@ -52,10 +52,10 @@ pub fn cmd_sfx_index(
         );
         if !families.is_empty() {
             let line: Vec<String> = families.iter().map(|(f, c)| format!("{f}={c}")).collect();
-            println!("families: {}", line.join(" "));
+            detail!("families: {}", line.join(" "));
         }
         for (id, err) in &report.failed {
-            println!("failed {id}: {err}");
+            warn!("failed {id}: {err}");
         }
     }
     if n == 0 {
@@ -66,6 +66,6 @@ pub fn cmd_sfx_index(
 
 pub fn cmd_sfx_pack(library: &Path, output: &Path) -> Result<()> {
     let n = build_pack(library, output)?;
-    println!("packed {n} file(s) -> {}", output.display());
+    info!("packed {n} file(s) -> {}", output.display());
     Ok(())
 }

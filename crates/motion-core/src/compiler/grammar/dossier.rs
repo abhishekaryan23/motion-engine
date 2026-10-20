@@ -182,6 +182,7 @@ fn card(
                 stroke: Some(Stroke {
                     color: ctx.palette.ink.with_alpha(0x40),
                     width: 2.0 * u,
+                    brush: None,
                 }),
             },
             3,
@@ -532,7 +533,7 @@ fn figure_values(b: &B) -> Vec<(String, Option<String>)> {
     first.into_iter().chain(second).collect()
 }
 
-/// (0.22, owner rule) With a voice-over a word is stamped only when the
+/// (0.22, design rule) With a voice-over a word is stamped only when the
 /// narrator says it in this beat (`speech_plan::anchor_time`: stemmed, numbers
 /// by value); without one, always. A stamp of a word nobody says lands on
 /// nothing. The faint background keyword is not a stamp and always stays.
@@ -599,17 +600,14 @@ struct ClipText<'a> {
     block: &'a Block,
     keyword: Option<&'a str>,
     pad: f32,
-    text_w: f32,
-    bar_h: f32,
-    bar_gap: f32,
-    bars_top: f32,
-    bars: usize,
+    /// (0.24 M9) The highlighter is an accent block: budgeted.
+    highlight: bool,
 }
 
 /// The clipping's layers (card-local): a highlighter behind the keyword's
 /// words (else the first line) that grows at `evolve`, the serif title, and
-/// the seeded redaction bars wiped on after the card lands (`t`).
-fn clip_kids(ctx: &Ctx, b: &mut B, c: &ClipText, evolve: f64, t: f64, seed: u64) -> Vec<Layer> {
+/// nothing else (no placeholder text bars).
+fn clip_kids(ctx: &Ctx, b: &mut B, c: &ClipText, evolve: f64) -> Vec<Layer> {
     let (title_block, pad) = (c.block, c.pad);
     let mut kids: Vec<Layer> = Vec::new();
     let title_id = b.id("clip.title");
@@ -637,64 +635,33 @@ fn clip_kids(ctx: &Ctx, b: &mut B, c: &ClipText, evolve: f64, t: f64, seed: u64)
         .width(&Voice::SERIF, &line[..to_b.min(line.len())], size);
     let adv = title_block.line_advance();
     let hl_pad = 0.05 * size;
-    let hl_id = b.id("clip.highlight");
-    let mut hl = base_layer(
-        hl_id.clone(),
-        (
-            pad + before - hl_pad,
-            pad + li as f32 * adv + 0.14 * adv,
-            (upto - before) + 2.0 * hl_pad,
-            0.76 * adv,
-        ),
-        LayerKind::Rectangle {
-            fill: ctx.palette.accent,
-            stroke: None,
-        },
-        4,
-    );
-    hl.opacity = HIGHLIGHT_OPACITY;
-    b.motions.push(mo::mask(
-        &hl_id,
-        evolve,
-        0.5,
-        Direction::Right,
-        Easing::OutCubic,
-    ));
-    kids.push(hl);
-    kids.push(title_layer);
-    // Redaction bars: seeded widths, wiped on after the card lands.
-    for i in 0..c.bars {
-        let last = i + 1 == c.bars;
-        let share = if last {
-            0.35 + 0.3 * frac(seed, 0xE0 + i as u64)
-        } else {
-            0.72 + 0.28 * frac(seed, 0xE0 + i as u64)
-        };
-        let id = b.id(&format!("clip.bar.{i}"));
-        let mut bar = base_layer(
-            id.clone(),
+    if c.highlight {
+        let hl_id = b.id("clip.highlight");
+        let mut hl = base_layer(
+            hl_id.clone(),
             (
-                pad,
-                c.bars_top + i as f32 * (c.bar_h + c.bar_gap),
-                c.text_w * share,
-                c.bar_h,
+                pad + before - hl_pad,
+                pad + li as f32 * adv + 0.14 * adv,
+                (upto - before) + 2.0 * hl_pad,
+                0.76 * adv,
             ),
             LayerKind::Rectangle {
-                fill: ctx.palette.ink,
+                fill: ctx.palette.accent,
                 stroke: None,
             },
-            6,
+            4,
         );
-        bar.opacity = 0.92;
+        hl.opacity = HIGHLIGHT_OPACITY;
         b.motions.push(mo::mask(
-            &id,
-            t + 0.5 + 0.1 * i as f64,
-            0.35,
+            &hl_id,
+            evolve,
+            0.5,
             Direction::Right,
             Easing::OutCubic,
         ));
-        kids.push(bar);
+        kids.push(hl);
     }
+    kids.push(title_layer);
     kids
 }
 
@@ -903,6 +870,9 @@ pub(crate) fn build(
         !wa.is_empty() && wa.iter().all(|x| wb.contains(x))
     };
     let focal_value = figures.first().map(|(v, _)| v.clone());
+    // (0.24 M9) The highlighter claims the window's accent block before the
+    // stamp asks, so the two land on different beats.
+    let highlight = ctx.budget.block_ok(b.plan.index);
     let mut drop_label = false;
     let mut stamp_text = keyword
         .clone()
@@ -917,7 +887,7 @@ pub(crate) fn build(
     // the card then keeps its label.
     if stamp_text
         .as_deref()
-        .is_some_and(|s| !stamp_allowed(ctx, s))
+        .is_some_and(|s| !stamp_allowed(ctx, s) || !ctx.budget.stamp_ok(b.plan.index))
     {
         stamp_text = None;
         drop_label = false;
@@ -936,16 +906,13 @@ pub(crate) fn build(
     let text_w = clip_w - 2.0 * pad;
     let bar_h = (0.03 * clip_w).max(10.0 * u);
     let bar_gap = 0.75 * bar_h;
-    let n_bars = 3 + (frac(seed, 0xB4) * 3.0) as usize;
-    let mut bars = n_bars.min(5);
+    // (0.24 M9) No placeholder text bars: a pretend line of text is slop.
+    let bars = 0usize;
     let title_max_h = (0.55 * clip_max_h - pad).max(40.0 * u);
     let title_block = fit_title(ctx, &title, text_w, title_max_h);
     let title_h = title_block.height();
     let bars_h = |n: usize| n as f32 * bar_h + (n.saturating_sub(1)) as f32 * bar_gap;
-    let gap_title = 1.1 * bar_h;
-    while bars > 3 && pad * 2.0 + title_h + gap_title + bars_h(bars) > clip_max_h {
-        bars -= 1;
-    }
+    let gap_title = 0.5 * bar_h;
     let clip_h = pad * 2.0 + title_h + gap_title + bars_h(bars);
     let clip_rot = (frac(seed, 0xC1) - 0.5) * 4.0; // -2..2 degrees
 
@@ -987,6 +954,16 @@ pub(crate) fn build(
         } else {
             sf * avail
         };
+        let pictured: Vec<&str> = if picture.is_some() {
+            [Some(&b.beat.primary), b.beat.secondary.as_ref()]
+                .into_iter()
+                .flatten()
+                .filter(|s| s.kind() == SubjectKind::Object)
+                .filter_map(|s| s.meaning())
+                .collect()
+        } else {
+            Vec::new()
+        };
         let labels: Vec<Option<Block>> = figures
             .iter()
             .enumerate()
@@ -994,6 +971,9 @@ pub(crate) fn build(
                 meaning
                     .as_deref()
                     .filter(|_| !(i == 0 && drop_label))
+                    // (0.24 M9) A label that only names what the picture beside
+                    // it shows ("UNITED KINGDOM" over the Union Jack) is dropped.
+                    .filter(|m| !pictured.iter().any(|p| repeats(m, p) && repeats(p, m)))
                     .map(|s| fit_line(ctx, Voice::LABEL, s, inner_w, 34.0 * u))
             })
             .collect();
@@ -1149,18 +1129,13 @@ pub(crate) fn build(
     let evolve = evolve_at(ctx, b, t, fig.as_ref().map_or(0, |f| f.entries.len()));
 
     // ---- clip card -------------------------------------------------------
-    let bars_top = pad + title_h + gap_title;
     let clip = ClipText {
         block: &title_block,
         keyword: keyword.as_deref(),
         pad,
-        text_w,
-        bar_h,
-        bar_gap,
-        bars_top,
-        bars,
+        highlight,
     };
-    let kids = clip_kids(ctx, b, &clip, evolve, t, seed);
+    let kids = clip_kids(ctx, b, &clip, evolve);
     if held_clip {
         let title_id = b.id("clip.title");
         b.motions.push(mo::fade(
@@ -1350,6 +1325,7 @@ pub(crate) fn build(
                     stroke: Stroke {
                         color: crate::compiler::brand::mark_color(ctx.style, RED),
                         width: 8.0 * u,
+                        brush: None,
                     },
                     closed: false,
                     fill: None,
@@ -1440,7 +1416,7 @@ pub(crate) fn build(
                 let swing = 0.5 * sw * 8.0_f32.to_radians().sin()
                     + 0.5 * clip_at.w * clip_at.rot.abs().to_radians().sin();
                 let clear_y = pad + title_h + 0.12 * sh + sh / 2.0 + swing;
-                let local_y = (bars_top + bars_h(bars) / 2.0).max(clear_y);
+                let local_y = (pad + title_h + gap_title + bars_h(bars) / 2.0).max(clear_y);
                 clip_at.canvas_point(0.06 * clip_at.w + sw / 2.0, local_y)
             }
         };
@@ -1474,6 +1450,7 @@ pub(crate) fn build(
                 stroke: Some(Stroke {
                     color: ctx.palette.accent,
                     width: 6.0 * u,
+                    brush: None,
                 }),
             },
             0,
@@ -1705,13 +1682,14 @@ fn build_pair(
             .filter(|w| !w.is_empty())
             .collect()
     };
+    let highlight = ctx.budget.block_ok(b.plan.index);
     let stamp_text = keyword.clone().filter(|k| {
         let kw = words_of(k);
         let repeats = sides.iter().filter_map(|s| s.value.as_deref()).any(|v| {
             let vw = words_of(v);
             !kw.is_empty() && kw.iter().all(|x| vw.contains(x))
         });
-        !repeats && stamp_allowed(ctx, k)
+        !repeats && stamp_allowed(ctx, k) && ctx.budget.stamp_ok(b.plan.index)
     });
 
     // Reveal anchors: each picture arrives when its subject is named, each
@@ -1754,15 +1732,12 @@ fn build_pair(
     let text_w = clip_w - 2.0 * pad;
     let bar_h = (0.03 * clip_w).max(10.0 * u);
     let bar_gap = 0.75 * bar_h;
-    let mut bars = (3 + (frac(seed, 0xB4) * 3.0) as usize).min(5);
+    let bars = 0usize; // (0.24 M9) no placeholder text bars
     let title_max_h = (0.55 * clip_max_h - pad).max(40.0 * u);
     let title_block = fit_title(ctx, &title, text_w, title_max_h);
     let title_h = title_block.height();
     let bars_h = |n: usize| n as f32 * bar_h + (n.saturating_sub(1)) as f32 * bar_gap;
-    let gap_title = 1.1 * bar_h;
-    while bars > 3 && pad * 2.0 + title_h + gap_title + bars_h(bars) > clip_max_h {
-        bars -= 1;
-    }
+    let gap_title = 0.5 * bar_h;
     let stamp_geo = stamp_text.as_deref().map(|kw| {
         let max_w = by_class(0.24, 0.30, 0.42) * w;
         let block = ctx
@@ -1979,18 +1954,13 @@ fn build_pair(
     let evolve = evolve_at(ctx, b, t, underlines);
 
     // ---- clip card (focal: the comparison) --------------------------------
-    let bars_top = pad + title_h + gap_title;
     let clip = ClipText {
         block: &title_block,
         keyword: keyword.as_deref(),
         pad,
-        text_w,
-        bar_h,
-        bar_gap,
-        bars_top,
-        bars,
+        highlight,
     };
-    let kids = clip_kids(ctx, b, &clip, evolve, t, seed);
+    let kids = clip_kids(ctx, b, &clip, evolve);
     b.focal = Some(b.id("clip"));
     let clip_group = card(ctx, b, "clip", clip_at, 10, 0, true, kids);
     slide_in(b, &clip_group.id, t, [0.0, 0.09 * h], 3.0);
@@ -2153,6 +2123,7 @@ fn build_pair(
                         stroke: Stroke {
                             color: crate::compiler::brand::mark_color(ctx.style, RED),
                             width: 8.0 * u,
+                            brush: None,
                         },
                         closed: false,
                         fill: None,
@@ -2207,6 +2178,7 @@ fn build_pair(
                 stroke: Some(Stroke {
                     color: ctx.palette.accent,
                     width: 6.0 * u,
+                    brush: None,
                 }),
             },
             0,

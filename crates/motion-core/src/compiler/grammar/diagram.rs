@@ -151,6 +151,7 @@ fn build_track(ctx: &Ctx, b: &mut B, t0: f64) {
                 stroke: Stroke {
                     color: ink.with_alpha(0x8C),
                     width: 5.0 * u,
+                    brush: None,
                 },
                 closed: false,
                 fill: None,
@@ -212,6 +213,7 @@ fn build_track(ctx: &Ctx, b: &mut B, t0: f64) {
             stroke: Stroke {
                 color: ctx.palette.accent,
                 width: 7.0 * u,
+                brush: None,
             },
             closed: false,
             fill: None,
@@ -287,6 +289,7 @@ fn build_stage(ctx: &Ctx, b: &mut B, t0: f64) {
                 stroke: Some(Stroke {
                     color: stroke,
                     width: 2.5 * u,
+                    brush: None,
                 }),
             },
             9,
@@ -379,6 +382,7 @@ fn token(ctx: &Ctx, b: &B, p: &TokenParams) -> Token {
     let outline = Stroke {
         color: ink,
         width: 3.5 * u,
+        brush: None,
     };
     let name = p.name;
 
@@ -485,6 +489,7 @@ fn token(ctx: &Ctx, b: &B, p: &TokenParams) -> Token {
             stroke: p.primary.then_some(Stroke {
                 color: ink,
                 width: 2.5 * u,
+                brush: None,
             }),
         },
         2,
@@ -662,7 +667,11 @@ fn draw_arrow(ctx: &Ctx, b: &mut B, pts: &[(f32, f32)], start: f64, dur: f64, ea
     b.push(poly_layer(
         id,
         &shaft,
-        Stroke { color, width },
+        Stroke {
+            color,
+            width,
+            brush: None,
+        },
         false,
         None,
         mid,
@@ -688,7 +697,11 @@ fn draw_arrow(ctx: &Ctx, b: &mut B, pts: &[(f32, f32)], start: f64, dur: f64, ea
     b.push(poly_layer(
         head_id,
         &tri,
-        Stroke { color, width: 1.0 },
+        Stroke {
+            color,
+            width: 1.0,
+            brush: None,
+        },
         true,
         Some(color),
         mid,
@@ -728,6 +741,7 @@ fn badge(
             stroke: Some(Stroke {
                 color: connector_color(ctx),
                 width: 0.07 * d,
+                brush: None,
             }),
         },
         0,
@@ -1596,6 +1610,7 @@ pub(super) fn build(
                 Stroke {
                     color: connector_color(ctx),
                     width: ARROW_WIDTH * u,
+                    brush: None,
                 },
                 false,
                 None,
@@ -1700,6 +1715,7 @@ pub(super) fn build(
                             ctx.palette.accent
                         },
                         width: 7.0 * u,
+                        brush: None,
                     },
                     closed: false,
                     fill: None,
@@ -1845,11 +1861,13 @@ mod tests {
         };
         let mut ctx = Ctx {
             reveals: Default::default(),
+            family: None,
             warnings: Vec::new(),
             direction_seed: None,
             beat_params: BTreeMap::new(),
             direction_take: None,
             direction_beats: BTreeMap::new(),
+            budget: crate::compiler::accent_budget::AccentBudget::unlimited(),
             emotion: None,
             art: None,
             w,
@@ -1868,6 +1886,8 @@ mod tests {
             focal: Default::default(),
             stack: None,
             spoken: Default::default(),
+            spoken_ends: Default::default(),
+            stresses: Default::default(),
             beat_count: beats.len(),
             sequence: Default::default(),
         };

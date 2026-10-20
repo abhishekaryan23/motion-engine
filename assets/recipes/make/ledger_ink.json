@@ -1,0 +1,12 @@
+{
+  "description": "Ledger paper, ink charts with one red hero, serif display; steadier 112 BPM grid.",
+  "palette": { "background": "#EFE8DA", "ink": "#1B1A17", "accent": "#C8361E", "muted": "#7A7062" },
+  "fonts": { "display": "dm_serif_italic", "serif": "instrument_serif_italic", "mono": "ibm_plex_mono" },
+  "tempo": "fast",
+  "music": "bright_upbeat",
+  "poster": "glyph_drop",
+  "body": "type_on",
+  "chart": "paper",
+  "diagram": "cards",
+  "techniques": ["diagram", "morph"]
+}

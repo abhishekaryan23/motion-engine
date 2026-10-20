@@ -49,6 +49,24 @@ pub(crate) const Z_HERO: f32 = 0.0;
 pub(crate) const Z_TITLE: f32 = -120.0;
 pub(crate) const Z_BOKEH: f32 = -700.0;
 
+/// (0.24) The camera's dolly magnifies the planes in front of the focus
+/// (`f / (z + f - d)`: the title at `Z_TITLE` and the figure grow up to about
+/// 18 % at the end of a push-in), and the depth compensation only makes the
+/// laid-out size true at the move's midpoint. A line fitted to the full safe
+/// width therefore ran off the canvas at READ (`text_clipped`: "NEARLY
+/// TRIPLE", "ONE LAP, NINETY MINUTES"). On the product path (seeded) wide
+/// text is fitted with this headroom so it stays inside the safe area for the
+/// whole move; the legacy path keeps its widths.
+const DOLLY_HEADROOM: f32 = 1.2;
+
+fn dolly_headroom(ctx: &Ctx) -> f32 {
+    if ctx.direction_seed.is_some() {
+        DOLLY_HEADROOM
+    } else {
+        1.0
+    }
+}
+
 /// (0.19) Where a beat's picture comes in from. Chosen from the beat index
 /// alone (deterministic, and neighbours always differ), so a story's pictures
 /// swing in from the right, the left, below and above in turn instead of all
@@ -298,11 +316,24 @@ pub(super) fn place_picture(
     let Some((which, subject)) = object else {
         return Ok(None);
     };
+    // (0.24) A library object is a square layer that draws its sheet contained:
+    // the sheet (a 4:3 PNG, say) is fitted into the target and the square is
+    // as long as the fitted sheet's longer side, so a wide target is filled
+    // and not left a quarter small. Square sheets keep `min(w, h)`.
+    let aspect = subject
+        .asset()
+        .and_then(|a| ctx.library.object_aspect(a))
+        .unwrap_or(1.0);
+    let fitted = (
+        target.w.min(target.h * aspect),
+        target.h.min(target.w / aspect),
+    );
+    let side = fitted.0.max(fitted.1);
     let slot = Slot {
         cx: target.x + target.w / 2.0,
         cy: target.y + target.h / 2.0,
-        w: target.w,
-        h: target.h,
+        w: side,
+        h: side,
     };
     let Some(mut l) = recipes::place_subject(
         ctx,
@@ -788,15 +819,42 @@ pub(super) fn title_bottom(ctx: &Ctx, b: &B, max_w: f32) -> f32 {
 /// added when the hero does not wait that long, the beat has no label, or the
 /// line would leave the safe area.
 fn held_hero_label(ctx: &Ctx, b: &mut B, words: &[String], hero_bottom: f32, t: f64) {
-    let Some(text) = recipes::placeholder_label(b.beat) else {
-        return;
-    };
     if !crate::compiler::speech_lifecycle::hero_waits(ctx, words) {
         return;
     }
+    // (0.24) With no label of its own (or one that gives the value away) a
+    // revealed result still shows that something is coming: the placeholder
+    // has a job (dead air), unlike the eyebrow kicker it replaces.
     let (w, h, u) = (ctx.w, ctx.h, ctx.u);
+    let text = match recipes::placeholder_label(b.beat) {
+        Some(t) => t,
+        // No label of its own: a short accent rule draws where the result will
+        // land. It fills the dead air without a generic "THE RESULT" eyebrow.
+        None if b.beat.purpose == crate::intent::Purpose::Reveal => {
+            let id = b.id("hero_wait");
+            let rw = 0.16 * w;
+            let mut l = crate::compiler::rect_layer(
+                id.clone(),
+                ((w - rw) / 2.0, hero_bottom + 0.012 * h, rw, 4.0 * u),
+                ctx.palette.accent,
+                14,
+            );
+            l.z = Some(Z_HERO);
+            b.motions.push(mo::mask(
+                &id,
+                t,
+                0.6,
+                crate::scene::Direction::Right,
+                Easing::OutCubic,
+            ));
+            b.stage.push(l);
+            return;
+        }
+        None => return,
+    };
+    let name = "hero_label";
     let line = ctx.ts.fit_line(Voice::LABEL, &text, 0.8 * w, 44.0 * u);
-    let id = b.id("hero_label");
+    let id = b.id(name);
     let mut l = text_layer(id.clone(), &line, ctx.palette.ink, TextAlign::Center);
     l.x = (w - l.width) / 2.0;
     l.y = hero_bottom + 0.012 * h;
@@ -881,7 +939,7 @@ pub(crate) fn build(
 
     // (0.19) A compare / contrast beat of two pictures shows how they relate;
     // every other beat is a hero on the focus plane with a supporting picture.
-    let title_max_w = w - 2.0 * ctx.margin();
+    let title_max_w = (w - 2.0 * ctx.margin()) / dolly_headroom(ctx);
     let title_bottom = title_bottom(ctx, b, title_max_w);
     let related = relation_stage::build(
         ctx,
@@ -1062,7 +1120,7 @@ pub(crate) fn build(
                 let safe = ctx.frame.safe;
                 let seeded = ctx.direction_seed.is_some();
                 let fit_w = if seeded {
-                    (0.9 * w).min((safe.w - 2.0) / 1.02)
+                    (0.9 * w).min((safe.w - 2.0) / 1.02) / dolly_headroom(ctx)
                 } else {
                     0.9 * w
                 };
@@ -1097,7 +1155,7 @@ pub(crate) fn build(
                 };
                 if beside {
                     let fit_w = if seeded {
-                        (0.5 * w).min((side_w - 2.0) / 1.02)
+                        (0.5 * w).min((side_w - 2.0) / 1.02) / dolly_headroom(ctx)
                     } else {
                         0.5 * w
                     };

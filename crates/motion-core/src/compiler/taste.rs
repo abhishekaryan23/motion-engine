@@ -384,6 +384,11 @@ pub struct ResolvedStyleProfile {
     pub palette: PaletteProfile,
     pub background: BackgroundGrammar,
     pub typography: TypographyPairing,
+    /// (0.24) True when an explicit `typography_style` (not the tone default,
+    /// not a reference) chose `typography`: the registry then treats it as a
+    /// category constraint instead of a pin.
+    #[serde(default, skip_serializing_if = "std::ops::Not::not")]
+    pub typography_explicit: bool,
     pub material: MaterialFinish,
     pub image_treatment: ImageTreatmentBias,
     pub motion: MotionTemperament,
@@ -626,6 +631,7 @@ pub fn resolve_with(
         palette,
         background,
         typography,
+        typography_explicit: style.typography_style == TypographyStyle::CondensedMono,
         material,
         image_treatment,
         motion,

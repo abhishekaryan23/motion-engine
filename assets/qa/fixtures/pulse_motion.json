@@ -1,0 +1,74 @@
+{
+ "kind": "scene",
+ "scene": {
+  "version": "0.2",
+  "project": {
+   "name": "fx",
+   "duration_seconds": 2.0
+  },
+  "canvas": {
+   "width": 640,
+   "height": 360,
+   "fps": 30,
+   "background": "#111111"
+  },
+  "scenes": [
+   {
+    "id": "s",
+    "start_seconds": 0,
+    "duration_seconds": 2.0,
+    "layers": [
+     {
+      "id": "w",
+      "x": 320,
+      "y": 180,
+      "width": 200,
+      "height": 40,
+      "anchor_x": 0.5,
+      "anchor_y": 0.5,
+      "z_index": 5,
+      "type": "text",
+      "text": "Beat",
+      "font_role": "body",
+      "font_size": 30,
+      "color": "#F2EEE6"
+     }
+    ],
+    "motions": [
+     {
+      "target": "w",
+      "start": 0,
+      "duration": 2.0,
+      "op": "shake",
+      "amplitude": [
+       4,
+       4
+      ],
+      "frequency": 8
+     }
+    ]
+   }
+  ]
+ },
+ "fixed": {
+  "version": "2.0",
+  "meta": {
+   "name": "fixture",
+   "duration": 3.0
+  },
+  "palette": {
+   "background": "#F2EEE6",
+   "ink": "#111111",
+   "accent": "#E04A12",
+   "muted": "#6B6B6B"
+  },
+  "components": [
+   {
+    "id": "t",
+    "kind": "title",
+    "text": "Beat"
+   }
+  ]
+ },
+ "id": "pulse_motion"
+}

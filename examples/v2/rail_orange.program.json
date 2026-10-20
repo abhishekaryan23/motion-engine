@@ -1,0 +1,81 @@
+{
+ "version": "2.0",
+ "meta": {
+  "name": "rail_orange",
+  "aspect": "16:9",
+  "duration": 4.558,
+  "end_beat": 8
+ },
+ "palette": {
+  "background": "#FF4A1C",
+  "ink": "#111111",
+  "accent": "#F7F3EC",
+  "muted": "#7A2A14"
+ },
+ "fonts": {
+  "display": "anton",
+  "serif": "instrument_serif_italic",
+  "mono": "space_mono"
+ },
+ "music": {
+  "track": "retro_groove",
+  "start": 0.132
+ },
+ "components": [
+  {
+   "id": "g",
+   "kind": "backdrop"
+  },
+  {
+   "id": "head",
+   "kind": "title",
+   "preset": "stacked",
+   "text": "Day one to now",
+   "size": "l",
+   "slot": "top",
+   "start_beat": 0,
+   "end": 1.974,
+   "colour": "ink",
+   "timeline": [
+    {
+     "at": 0,
+     "do": "enter",
+     "style": "rise"
+    }
+   ]
+  },
+  {
+   "id": "rail",
+   "kind": "diagram",
+   "preset": "rail",
+   "nodes": [
+    "Day 1",
+    "Week 1",
+    "Month 1",
+    "Year 1",
+    "Now"
+   ],
+   "start_beat": 0,
+   "beat_cuts": 1,
+   "end": 1.974
+  },
+  {
+   "id": "close",
+   "kind": "kinetic_text",
+   "preset": "poster_cuts",
+   "colour": "ink",
+   "start_beat": 5,
+   "beat_cuts": 1,
+   "dot": true,
+   "words": [
+    "KEEP",
+    "ON",
+    "GOING",
+    "NOW"
+   ],
+   "stress": [
+    3
+   ]
+  }
+ ]
+}

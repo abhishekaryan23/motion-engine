@@ -44,23 +44,22 @@ motion-engine providers show        # provider, masked key (sk-or-…abcd), sour
 motion-engine providers test openrouter
 ```
 
-## Voice choice (engine-owned, owner rules 2026-10-02)
-Owner rules: **free OpenRouter TTS only, one voice, one take, a continuous
+## Voice choice (engine-owned)
+Defaults: **free OpenRouter TTS, one voice, one take, a continuous
 script.** A reel whose beats were read in separate calls sounded like a
-different speaker per beat; Hinglish narration is dropped.
+different speaker per beat. Narration is English.
 
 `--tts-model auto` (default) is **Fish S2.1 Pro free**
 (`fish-audio/s2.1-pro-free:free`), the only free TTS model OpenRouter lists.
 OpenRouter lists no voices for it, but passes `voice` to Fish as a
-voice-library model id. **(0.18, owner rule: male narrators only.)** Without
-an id Fish picks a different speaker on every request — our renders measured
-82–221 Hz median pitch, some of them female — so the engine always pins one of
-three public, generic male narrators (no celebrity or character clones),
+voice-library model id. Without an id Fish picks a different speaker on every
+request (renders measured 82–221 Hz median pitch), so the engine always pins one
+of three public, generic narrator voices (no celebrity or character clones),
 checked with a pitch test on the free model: **Ethan**
 `536d3a5e000945adb7038665781a4aca` (a curious explainer, ≈107 Hz), **Slax**
 `c5f56a6cc2ec4fa8920cb4c5889a3fb7` (clear, precise, ≈107 Hz) and **calm
 storyteller male** `e686ae649ee44f219a108aacba206c1a` (deep documentary,
-≈92 Hz). Every other model's table is male too. `say`
+≈92 Hz). `say`
 (macOS, offline) and the paid models `gemini`, `mai` and `deepgram` are
 explicit opt-ins only; a failed paid opt-in falls back to Fish for the
 **whole take**. `--voice` overrides the provider voice id.

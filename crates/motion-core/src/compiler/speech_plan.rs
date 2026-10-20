@@ -135,6 +135,12 @@ pub(crate) fn snap_evolve(
 
 /// A content group starts entering this long before the word that names it.
 pub const WORD_CUE_LEAD: f64 = 0.12;
+/// (0.24) A headline waits for its word only when that word starts within this
+/// long (scene-local seconds) after the beat starts.
+const TITLE_WAIT_MAX_S: f64 = 0.9;
+/// ... and within this long when it is the video's first beat (its content
+/// is due within 0.5 s).
+const FIRST_TITLE_WAIT_MAX_S: f64 = 0.25;
 /// Shifts smaller than this are not worth a cue.
 const WORD_CUE_MIN_SHIFT: f64 = 0.15;
 /// A multi-word anchor matches when its words are spoken in order with at
@@ -151,6 +157,7 @@ const FIXED_GROUPS: &[&str] = &[
     "wipe",
     "kicker",
     "kicker_rule",
+    "marker",
     "data",
     "data_rule",
     "index",
@@ -853,18 +860,24 @@ pub(crate) fn first_term(text: &str) -> Option<String> {
 struct Hit {
     at: f64,
     word: String,
+    /// Index (in the spoken words) of the last word of the hit.
+    last: usize,
 }
 
 /// The words of one beat as heard: each token with the start time of its
 /// first word and its spoken text.
 struct Heard {
     toks: Vec<(Tok, f64, String)>,
+    /// Spoken-word index of the last word of each token.
+    lasts: Vec<usize>,
 }
 
 impl Heard {
     fn new(spoken: &[(String, f64)]) -> Heard {
         let raw: Vec<&str> = spoken.iter().map(|(w, _)| w.as_str()).collect();
-        let toks = tokenize(&raw)
+        let spans = tokenize(&raw);
+        let lasts = spans.iter().map(|s| s.last).collect();
+        let toks = spans
             .into_iter()
             .filter_map(|s| {
                 let at = spoken.get(s.first)?.1;
@@ -878,7 +891,7 @@ impl Heard {
                 Some((s.tok, at, text))
             })
             .collect();
-        Heard { toks }
+        Heard { toks, lasts }
     }
 
     /// The earliest hit of any entry.
@@ -911,7 +924,11 @@ impl Heard {
                 .map(|t| t.2.as_str())
                 .collect::<Vec<_>>()
                 .join(" ");
-            best = Some(Hit { at: *at, word });
+            best = Some(Hit {
+                at: *at,
+                word,
+                last: self.lasts.get(last).copied().unwrap_or(0),
+            });
         }
         best
     }
@@ -946,7 +963,6 @@ pub fn anchor_time(spoken: &[(String, f64)], words: &[&str]) -> Option<f64> {
 /// `group` names the subject, not a layer. The speech-aware lifecycle places
 /// phases from them, speech QA treats their words as content words, and
 /// builders that declare no layer anchors fall back to them.
-#[allow(dead_code)] // used by 0.20 workstream D (speech-aware lifecycle)
 pub(crate) fn beat_anchors(beat: &Beat) -> Vec<RevealAnchor> {
     fn words_of(s: &Subject) -> Vec<String> {
         let mut out = Vec::new();
@@ -1541,6 +1557,68 @@ pub(crate) fn apply_word_cues(
         }
     }
 
+    // (0.24) A headline no anchor covers still does not say a word before the
+    // narrator: it waits for the first of its words that is spoken, as long as
+    // that is within the dead-air allowance of the beat's start (a beat never
+    // shows nothing for longer to save a word's surprise).
+    for name in ["head", "title"] {
+        if anchors
+            .iter()
+            .any(|a| a.group.split('.').next() == Some(name))
+        {
+            continue;
+        }
+        let nested = format!("{name}.");
+        let mut members: Vec<String> = Vec::new();
+        let mut hit: Option<Hit> = None;
+        for (id, tokens) in &ids {
+            let Some(rest) = id.strip_prefix(&prefix) else {
+                continue;
+            };
+            if rest != name && !rest.starts_with(&nested) {
+                continue;
+            }
+            members.push(id.clone());
+            let raw: Vec<&str> = tokens.iter().map(String::as_str).collect();
+            for span in tokenize(&raw).into_iter().filter(|s| s.tok.content()) {
+                if let Some(h) = heard.sequence(std::slice::from_ref(&span.tok)) {
+                    hit = earliest(hit, h);
+                }
+            }
+        }
+        let Some(hit) = hit else { continue };
+        if members.is_empty() || on_sphere(scene, &members) {
+            continue;
+        }
+        let wait_max = if scene.start_seconds < 1e-6 {
+            FIRST_TITLE_WAIT_MAX_S
+        } else {
+            TITLE_WAIT_MAX_S
+        };
+        if hit.at - WORD_CUE_LEAD > wait_max {
+            continue;
+        }
+        if let Retimed::Moved(from, to, clamped) = retime(
+            scene,
+            &members,
+            &life,
+            hit.at,
+            WORD_CUE_LEAD,
+            policy,
+            Freedom::Arrival,
+        ) {
+            claimed.extend(members);
+            moves.push(WordCueMove {
+                group: name.to_string(),
+                word: hit.word,
+                from,
+                to,
+                role: Some(RevealRole::Title),
+                clamped,
+            });
+        }
+    }
+
     // Name-matching fallback for the groups no anchor covers.
     let covered: Vec<&str> = anchors
         .iter()
@@ -1939,6 +2017,137 @@ pub(crate) fn settle_counts(
         if fitted < d - 1e-6 {
             scene.motions[i].duration = round3(fitted);
         }
+    }
+}
+
+/// (0.24 Wave 2) A spoken stress: a number or the clause's last content word.
+#[derive(Debug, Clone, PartialEq)]
+pub struct Stress {
+    /// Scene-local onset and end of the stressed word(s).
+    pub t: f64,
+    pub end: f64,
+    pub word: String,
+    /// 2 = a number, 1 = the last content word.
+    pub weight: u8,
+}
+
+/// (0.24 Wave 2) The stresses of a beat's narration (at most three, by
+/// time): every number phrase (weight 2, at most two) and the last content
+/// word (weight 1). `ends[i]` is the end of `spoken[i]`. Pure.
+pub(crate) fn stresses(spoken: &[(String, f64)], ends: &[f64]) -> Vec<Stress> {
+    let raw: Vec<&str> = spoken.iter().map(|(w, _)| w.as_str()).collect();
+    let end_of = |i: usize| ends.get(i).copied().unwrap_or(spoken[i].1 + 0.3);
+    let mut out: Vec<Stress> = Vec::new();
+    let mut last_content: Option<Span> = None;
+    for sp in tokenize(&raw) {
+        match &sp.tok {
+            Tok::Num(_) => {
+                if out.len() < 2 {
+                    out.push(Stress {
+                        t: spoken[sp.first].1,
+                        end: end_of(sp.last),
+                        word: raw[sp.first..=sp.last].join(" "),
+                        weight: 2,
+                    });
+                }
+            }
+            t if t.content() => last_content = Some(sp),
+            _ => {}
+        }
+    }
+    if let Some(sp) = last_content {
+        if !out.iter().any(|s| s.t >= spoken[sp.first].1 - 1e-9) {
+            out.push(Stress {
+                t: spoken[sp.first].1,
+                end: end_of(sp.last),
+                word: raw[sp.first..=sp.last].join(" "),
+                weight: 1,
+            });
+        }
+    }
+    out.sort_by(|a, b| a.t.total_cmp(&b.t));
+    out
+}
+
+/// (0.24 Wave 2) A count lands as its number finishes being said: its last
+/// step falls within 100 ms before the end of the word (never after), the
+/// count lengthening or shortening from its own start. Applies after
+/// [`settle_counts`]; a count that cannot (the word ends before the count
+/// could start, or it would end past the beat's exit) is left as it is.
+pub(crate) fn land_counts_on_word_end(
+    scene: &mut crate::scene::Scene,
+    words: &[(String, f64)],
+    ends: &[f64],
+) {
+    use crate::scene::MotionOp;
+    let Some(life) = scene.lifecycle else {
+        return;
+    };
+    if words.is_empty() {
+        return;
+    }
+    let heard = Heard::new(words);
+    let mut last: Vec<(String, usize)> = Vec::new();
+    for (i, m) in scene.motions.iter().enumerate() {
+        if !matches!(m.op, MotionOp::Count { .. }) {
+            continue;
+        }
+        match last.iter_mut().find(|(t, _)| *t == m.target) {
+            Some(slot) => slot.1 = i,
+            None => last.push((m.target.clone(), i)),
+        }
+    }
+    for (_, i) in last {
+        let m = &scene.motions[i];
+        let MotionOp::Count {
+            to,
+            decimals,
+            grouping,
+            prefix,
+            suffix,
+            ..
+        } = &m.op
+        else {
+            continue;
+        };
+        let text = crate::timeline::format_count(*to, *decimals, *grouping, prefix, suffix);
+        let Some(hit) = heard.find(&[text]) else {
+            continue;
+        };
+        let Some(&end) = ends.get(hit.last) else {
+            continue;
+        };
+        let s = m.start;
+        let target = m.target.clone();
+        // A count that rides a bar ends with it.
+        let item = target.rsplit_once('.').map_or("", |(a, _)| a);
+        if scene.motions.iter().any(|o| {
+            matches!(o.op, MotionOp::AccentExpand { .. } | MotionOp::Trim { .. })
+                && o.target.starts_with(item)
+        }) {
+            continue;
+        }
+        // The layer's exit, as the QA measures the hold: ANTICIPATE or its
+        // first fade-out.
+        let mut trail = Vec::new();
+        layer_trail(&scene.layers, &target, &mut trail);
+        let exit = scene
+            .motions
+            .iter()
+            .filter(|o| trail.contains(&o.target.as_str()) && o.start >= s)
+            .filter_map(|o| match o.op {
+                MotionOp::Fade { from, to } if to < from => Some(o.start),
+                _ => None,
+            })
+            .fold(life.anticipate, f64::min);
+        // The last step is shown a hair before the curve's end: aim 50 ms early.
+        let want = (end - 0.05 - s).min(hit.at + 0.75 - s);
+        let cap = exit - crate::checks::COUNT_HOLD_S - s;
+        let d = want.min(cap);
+        if d < COUNT_MIN_S || (d - m.duration).abs() < 0.02 {
+            continue;
+        }
+        scene.motions[i].duration = round3(d);
     }
 }
 
@@ -2408,6 +2617,7 @@ mod word_cue_tests {
             z_index: 0,
             visible: true,
             clip: None,
+            mask: None,
             depth: None,
             z: None,
             tilt: None,
@@ -2432,6 +2642,8 @@ mod word_cue_tests {
                 max_width: None,
                 uppercase: false,
                 ink: None,
+                fill: None,
+                outline: None,
             }),
         )
     }
@@ -2486,6 +2698,7 @@ mod word_cue_tests {
                 MotionOp::Move {
                     from: [0.0, 40.0],
                     to: [0.0, 0.0],
+                    via: None,
                 },
             ),
             motion(target, 5.1, 0.3, MotionOp::Fade { from: 1.0, to: 0.0 }),
@@ -2601,6 +2814,7 @@ mod word_cue_tests {
                 MotionOp::Move {
                     from: [0.0, 40.0],
                     to: [0.0, 0.0],
+                    via: None,
                 },
             ),
             motion(
@@ -2610,6 +2824,7 @@ mod word_cue_tests {
                 MotionOp::Move {
                     from: [0.0, 0.0],
                     to: [0.0, -10.0],
+                    via: None,
                 },
             ),
         ];
@@ -2801,7 +3016,7 @@ mod word_cue_tests {
         assert_eq!(durations(&s, "b1.hero")[..2], [0.5, 0.6]);
     }
 
-    /// The Wallet Atlas beat 1 figure card as the documentary look builds it:
+    /// The documentary story's beat 1 figure card as the documentary look builds it:
     /// the card slides in at 0.687 (fade 0.25, sprung shift and turn 0.9),
     /// its underline draws at EVOLVE + 0.15 and it fades with the depth exit
     /// after ANTICIPATE.
@@ -2830,6 +3045,7 @@ mod word_cue_tests {
                     MotionOp::Move {
                         from: [0.0, 170.0],
                         to: [0.0, 0.0],
+                        via: None,
                     },
                 ),
                 motion(
@@ -2857,7 +3073,7 @@ mod word_cue_tests {
         s
     }
 
-    /// The beat's words as measured on the Wallet Atlas voice-over.
+    /// The beat's words as measured on the documentary voice-over.
     fn world_trade_words() -> Vec<(String, f64)> {
         [
             ("Every", 0.3675),
@@ -2990,12 +3206,12 @@ mod word_cue_tests {
         );
         assert!(close(cues.dropped[0].early(), 0.5));
         assert_eq!(s.motions, before);
-        // Planned at 4.5 instead, 0.2 s before its word: it cannot wait
+        // Planned at 4.6 instead, 0.1 s before its word: it cannot wait
         // either, but within REVEAL_LEAD_MAX it still reads on its word, so
         // nothing is recorded.
         let mut s = make();
         for m in &mut s.motions {
-            m.start = 4.5;
+            m.start = 4.6;
         }
         let cues = apply_word_cues(&mut s, &words, &stamp, &hold);
         assert_eq!(cues, WordCues::default());
@@ -3589,5 +3805,56 @@ mod word_cue_tests {
             (moves[0].word.as_str(), moves[0].role),
             ("shark", Some(RevealRole::Value))
         );
+    }
+
+    #[test]
+    fn stresses_are_the_numbers_and_the_last_content_word() {
+        let spoken = said(
+            "it was thirteen million dollars for the richest country",
+            1.0,
+            0.4,
+        );
+        let ends: Vec<f64> = spoken.iter().map(|(_, t)| round3(t + 0.3)).collect();
+        let st = stresses(&spoken, &ends);
+        assert_eq!(st.len(), 2);
+        assert_eq!((st[0].weight, st[0].t), (2, 1.8));
+        assert!(st[0].word.contains("thirteen") && st[0].word.contains("million"));
+        assert_eq!(st[0].end, round3(2.2 + 0.3));
+        assert_eq!((st[1].weight, st[1].word.as_str()), (1, "country"));
+        assert!(st[0].t < st[1].t);
+        assert_eq!(st, stresses(&spoken, &ends));
+        assert!(stresses(&[], &[]).is_empty());
+    }
+
+    #[test]
+    fn a_count_lands_within_100_ms_before_its_number_ends() {
+        use crate::timeline::format_count;
+        let mut motions = enters("b1.card.value", 0.5);
+        motions.push(motion(
+            "b1.card.value",
+            0.5,
+            1.0,
+            MotionOp::Count {
+                from: 0.0,
+                to: 300.0,
+                decimals: 0,
+                grouping: false,
+                prefix: String::new(),
+                suffix: String::new(),
+            },
+        ));
+        let mut s = scene(vec![text("b1.card.value", "300")], motions);
+        let words = said("it was three hundred dollars", 0.6, 0.3);
+        let ends: Vec<f64> = words.iter().map(|(_, t)| round3(t + 0.25)).collect();
+        assert_eq!(format_count(300.0, 0, false, "", ""), "300");
+        land_counts_on_word_end(&mut s, &words, &ends);
+        let c = s
+            .motions
+            .iter()
+            .find(|m| matches!(m.op, MotionOp::Count { .. }))
+            .expect("count");
+        // "three hundred" ends at 1.5 + 0.25 = 1.75.
+        let last = c.start + c.duration;
+        assert!((1.75 - 0.1..=1.75).contains(&last), "{last}");
     }
 }

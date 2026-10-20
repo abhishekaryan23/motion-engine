@@ -1,0 +1,424 @@
+{
+ "version": "2.0",
+ "meta": {
+  "name": "worlds_reel",
+  "aspect": "16:9",
+  "duration": 13.03,
+  "end_beat": 24
+ },
+ "palette": {
+  "background": "#EFEBE3",
+  "ink": "#111111",
+  "accent": "#FF4A1C",
+  "muted": "#7C7F8A",
+  "grounds": [
+   "#0B0C10",
+   "#FF4A1C",
+   "#3B2BD6",
+   "#F2EFE8"
+  ]
+ },
+ "fonts": {
+  "display": "archivo_black",
+  "serif": "instrument_serif_italic",
+  "mono": "ibm_plex_mono"
+ },
+ "tempo": "fast",
+ "music": {
+  "track": "driving_pulse",
+  "start": 0.107
+ },
+ "components": [
+  {
+   "id": "s0_ground",
+   "kind": "backdrop",
+   "colour": "ground1",
+   "end": 1.905
+  },
+  {
+   "id": "s0_grid",
+   "kind": "field",
+   "preset": "grid",
+   "end": 1.905,
+   "timeline": [
+    {
+     "at": 0,
+     "do": "enter",
+     "style": "fade"
+    }
+   ]
+  },
+  {
+   "id": "count",
+   "kind": "kinetic_text",
+   "preset": "poster_cuts",
+   "ground": "ground1",
+   "colour": "ground4",
+   "dot": true,
+   "start_beat": 0,
+   "end": 1.905,
+   "beat_cuts": 1,
+   "words": [
+    "3",
+    "2",
+    "1",
+    "GO"
+   ],
+   "stress": [
+    3
+   ]
+  },
+  {
+   "id": "s1_ground",
+   "kind": "backdrop",
+   "start_beat": 4,
+   "end": 3.81
+  },
+  {
+   "id": "title",
+   "kind": "title",
+   "preset": "stacked",
+   "text": "Motion",
+   "size": "xl",
+   "start_beat": 4,
+   "end": 3.81,
+   "timeline": [
+    {
+     "at": 0,
+     "do": "enter",
+     "style": "pop"
+    },
+    {
+     "beat": 6,
+     "do": "hit"
+    }
+   ]
+  },
+  {
+   "id": "s1_chap",
+   "kind": "title",
+   "preset": "chapter",
+   "text": "Selected work",
+   "slot": "top_left",
+   "start_beat": 4,
+   "end": 3.81,
+   "timeline": [
+    {
+     "beat": 5,
+     "do": "enter",
+     "style": "wipe"
+    }
+   ]
+  },
+  {
+   "id": "s1_sub",
+   "kind": "title",
+   "preset": "label",
+   "text": "designer / 2026",
+   "slot": "bottom",
+   "start_beat": 4,
+   "end": 3.81,
+   "timeline": [
+    {
+     "beat": 7,
+     "do": "enter",
+     "style": "fade"
+    }
+   ]
+  },
+  {
+   "id": "s2_ground",
+   "kind": "backdrop",
+   "colour": "ground1",
+   "start_beat": 8,
+   "end": 5.715
+  },
+  {
+   "id": "tiles",
+   "kind": "field",
+   "preset": "tiles",
+   "colour": "muted",
+   "start_beat": 8,
+   "end": 5.715,
+   "timeline": [
+    {
+     "beat": 8,
+     "do": "enter",
+     "style": "draw"
+    },
+    {
+     "beat": 9,
+     "do": "wave",
+     "to": "accent"
+    },
+    {
+     "beat": 10,
+     "do": "wave",
+     "to": "ground3"
+    },
+    {
+     "beat": 11,
+     "do": "wave",
+     "to": "ground4"
+    }
+   ]
+  },
+  {
+   "id": "s2_chap",
+   "kind": "title",
+   "preset": "chapter",
+   "text": "Rhythm",
+   "slot": "top_left",
+   "colour": "ground4",
+   "start_beat": 8,
+   "end": 5.715,
+   "timeline": [
+    {
+     "at": 0,
+     "do": "enter",
+     "style": "wipe"
+    }
+   ]
+  },
+  {
+   "id": "s3_ground",
+   "kind": "backdrop",
+   "colour": "ground2",
+   "start_beat": 12,
+   "end": 7.62
+  },
+  {
+   "id": "s3_tone",
+   "kind": "field",
+   "preset": "halftone",
+   "focus": "trail",
+   "colour": "ink",
+   "start_beat": 12,
+   "end": 7.62,
+   "timeline": [
+    {
+     "at": 0,
+     "do": "enter",
+     "style": "draw"
+    }
+   ]
+  },
+  {
+   "id": "flow",
+   "kind": "chart",
+   "chart": "spring",
+   "values": [
+    0,
+    22
+   ],
+   "hero": 1,
+   "callout": "+22%",
+   "colour": "ink",
+   "start_beat": 12,
+   "end": 7.62,
+   "timeline": [
+    {
+     "beat": 12,
+     "do": "enter",
+     "style": "draw"
+    },
+    {
+     "beat": 15,
+     "do": "pop_label"
+    }
+   ]
+  },
+  {
+   "id": "s3_chap",
+   "kind": "title",
+   "preset": "chapter",
+   "text": "Flow",
+   "slot": "top_left",
+   "start_beat": 12,
+   "end": 7.62,
+   "timeline": [
+    {
+     "at": 0,
+     "do": "enter",
+     "style": "wipe"
+    }
+   ]
+  },
+  {
+   "id": "s3_cap",
+   "kind": "kinetic_text",
+   "preset": "type_on",
+   "slot": "bottom",
+   "start_beat": 13,
+   "end": 7.62,
+   "beat_cuts": 1,
+   "words": [
+    "overshoot",
+    "settle"
+   ]
+  },
+  {
+   "id": "s4_ground",
+   "kind": "backdrop",
+   "colour": "ground3",
+   "start_beat": 16,
+   "end": 10.477
+  },
+  {
+   "id": "bars",
+   "kind": "chart",
+   "chart": "bar",
+   "values": [
+    9,
+    13,
+    18,
+    22,
+    16,
+    24
+   ],
+   "hero": 5,
+   "callout": "98%",
+   "colour": "ground4",
+   "start_beat": 16,
+   "end": 10.477,
+   "timeline": [
+    {
+     "beat": 16,
+     "do": "enter",
+     "style": "draw"
+    },
+    {
+     "beat": 18,
+     "do": "pop_label"
+    }
+   ],
+   "slot": "center"
+  },
+  {
+   "id": "s4_chap",
+   "kind": "title",
+   "preset": "chapter",
+   "text": "Systems",
+   "slot": "top_left",
+   "colour": "ground4",
+   "start_beat": 16,
+   "end": 10.477,
+   "timeline": [
+    {
+     "at": 0,
+     "do": "enter",
+     "style": "wipe"
+    }
+   ]
+  },
+  {
+   "id": "s4_cap",
+   "kind": "kinetic_text",
+   "preset": "type_on",
+   "slot": "bottom",
+   "colour": "ground4",
+   "start_beat": 17,
+   "end": 10.477,
+   "beat_cuts": 2,
+   "words": [
+    "frames rendered",
+    "all on time",
+    "zero dropped"
+   ]
+  },
+  {
+   "id": "s5_ground",
+   "kind": "backdrop",
+   "colour": "ground1",
+   "start_beat": 22
+  },
+  {
+   "id": "end_dot",
+   "kind": "shape",
+   "shape": "circle",
+   "size": "s",
+   "slot": "top",
+   "start_beat": 22,
+   "timeline": [
+    {
+     "beat": 23,
+     "do": "enter",
+     "style": "pop"
+    },
+    {
+     "beat": 24,
+     "do": "recolour",
+     "to": "ground4"
+    }
+   ],
+   "anchor": "end_title",
+   "mark": "marker"
+  },
+  {
+   "id": "end_title",
+   "kind": "title",
+   "preset": "stacked",
+   "text": "One dot",
+   "size": "xl",
+   "colour": "ground4",
+   "slot": "center",
+   "start_beat": 22,
+   "timeline": [
+    {
+     "at": 0,
+     "do": "enter",
+     "style": "wipe"
+    },
+    {
+     "beat": 24,
+     "do": "hit"
+    }
+   ]
+  },
+  {
+   "id": "end_sub",
+   "kind": "title",
+   "preset": "label",
+   "text": "motion / art direction / systems",
+   "slot": "bottom",
+   "colour": "muted",
+   "start_beat": 23,
+   "timeline": [
+    {
+     "at": 0,
+     "do": "enter",
+     "style": "fade"
+    }
+   ]
+  }
+ ],
+ "camera": [
+  {
+   "beat": 13,
+   "do": "frame",
+   "component": "flow"
+  },
+  {
+   "beat": 16,
+   "do": "reset"
+  }
+ ],
+ "transitions": [
+  {
+   "beat": 8,
+   "kind": "whip"
+  },
+  {
+   "beat": 12,
+   "kind": "whip"
+  },
+  {
+   "beat": 16,
+   "kind": "colour_flip"
+  },
+  {
+   "beat": 20,
+   "kind": "whip"
+  }
+ ]
+}

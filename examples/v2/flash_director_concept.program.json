@@ -1,0 +1,280 @@
+{
+  "version": "2.0",
+  "meta": {
+    "name": "flash_director_concept",
+    "aspect": "16:9",
+    "duration": 10.2,
+    "fps": "30",
+    "end_beat": 28
+  },
+  "palette": {
+    "background": "#F2EDE2",
+    "ink": "#090B10",
+    "accent": "#9E2A1C",
+    "muted": "#DED9CE",
+    "grounds": [
+      "#EAE2D3",
+      "#090B10"
+    ]
+  },
+  "fonts": {
+    "display": "zodiak_bold",
+    "serif": "dm_serif_italic",
+    "mono": "space_mono_bold"
+  },
+  "tempo": "normal",
+  "music": {
+    "track": "warm_piano"
+  },
+  "film": {
+    "grain": 0.022,
+    "fringe": 0.35
+  },
+  "camera": [
+    { "beat": 2, "do": "orbit", "yaw": -3.0, "pitch": 2.0 },
+    { "beat": 6, "do": "reset" },
+    { "beat": 10, "do": "orbit", "yaw": 3.5, "pitch": -2.0 },
+    { "beat": 14, "do": "reset" },
+    { "beat": 18, "do": "dolly", "to": -40.0 },
+    { "beat": 22, "do": "reset" },
+    { "beat": 25, "do": "orbit", "yaw": 2.5, "pitch": -1.5 },
+    { "beat": 27, "do": "dolly", "to": -35.0 },
+    { "beat": 28, "do": "push", "to": 1.05 }
+  ],
+  "transitions": [
+    { "beat": 8, "kind": "whip" },
+    { "beat": 16, "kind": "colour_flip" },
+    { "beat": 20, "kind": "whip" },
+    { "beat": 24, "kind": "impact" }
+  ],
+  "components": [
+    {
+      "id": "bg",
+      "kind": "backdrop",
+      "preset": "flat",
+      "start_beat": 0,
+      "timeline": [
+        { "beat": 0, "do": "enter", "style": "fade" }
+      ]
+    },
+    {
+      "id": "act1_spiral",
+      "kind": "sketch",
+      "preset": "golden_spiral",
+      "field": "hand",
+      "wiggle": 1.6,
+      "title": "HARMONICES MUNDI",
+      "caption": "KEPLER 1619 : THE PRECIOUS JEWEL",
+      "beat_cuts": 1,
+      "seed": 1619,
+      "start_beat": 0,
+      "end_beat": 8,
+      "timeline": [
+        { "beat": 0, "do": "enter", "style": "draw" }
+      ]
+    },
+    {
+      "id": "act2_orbits",
+      "kind": "sketch",
+      "preset": "freeform",
+      "field": "hand",
+      "wiggle": 1.4,
+      "title": "CELESTIAL POLYHEDRA",
+      "caption": "MARS TO EARTH : 3 TO 2 FIFTH",
+      "beat_cuts": 1,
+      "seed": 360,
+      "start_beat": 8,
+      "end_beat": 16,
+      "elements": [
+        {
+          "shape": "circle",
+          "center": [0.34, 0.38],
+          "radius": 0.22,
+          "irregularity": 0.02,
+          "brush": "rotring",
+          "stroke_swatch": "ink",
+          "weight": 2.2,
+          "watercolor": {
+            "swatch": "muted",
+            "opacity": 0.55,
+            "bleed": 0.24,
+            "border": 0.35
+          }
+        },
+        {
+          "shape": "polygon",
+          "points": [
+            [0.34, 0.16],
+            [0.52, 0.54],
+            [0.16, 0.54]
+          ],
+          "brush": "hb",
+          "stroke_swatch": "ink",
+          "weight": 2.0,
+          "hatch": {
+            "dist": 12.0,
+            "angle_deg": 36.0,
+            "cross": true,
+            "brush": "hatch_brush",
+            "swatch": "ink",
+            "weight": 1.2
+          }
+        },
+        {
+          "shape": "circle",
+          "center": [0.34, 0.38],
+          "radius": 0.11,
+          "irregularity": 0.03,
+          "brush": "charcoal",
+          "stroke_swatch": "accent",
+          "weight": 2.8,
+          "watercolor": {
+            "swatch": "accent",
+            "opacity": 0.72,
+            "bleed": 0.28,
+            "border": 0.45
+          }
+        },
+        {
+          "shape": "rect",
+          "xywh": [0.58, 0.16, 0.32, 0.46],
+          "radius": 0.02,
+          "brush": "rotring",
+          "stroke_swatch": "ink",
+          "weight": 2.0,
+          "hatch": {
+            "dist": 14.0,
+            "angle_deg": -45.0,
+            "cross": false,
+            "brush": "rotring",
+            "swatch": "ink",
+            "weight": 1.1
+          }
+        },
+        {
+          "shape": "spline",
+          "points": [
+            [0.14, 0.38],
+            [0.34, 0.20],
+            [0.58, 0.38],
+            [0.86, 0.26]
+          ],
+          "pressures": [0.4, 1.4, 1.2, 0.5],
+          "curvature": 0.85,
+          "brush": "marker",
+          "stroke_swatch": "accent",
+          "weight": 3.4
+        },
+        {
+          "shape": "line",
+          "from": [0.12, 0.38],
+          "to": [0.88, 0.38],
+          "brush": "rotring",
+          "stroke_swatch": "ink",
+          "weight": 1.6
+        },
+        {
+          "shape": "arc",
+          "center": [0.74, 0.39],
+          "radius": 0.13,
+          "start_deg": -60.0,
+          "end_deg": 210.0,
+          "brush": "2b",
+          "stroke_swatch": "ink",
+          "weight": 2.4
+        },
+        {
+          "shape": "circle",
+          "center": [0.74, 0.39],
+          "radius": 0.045,
+          "brush": "pen",
+          "stroke_swatch": "ink",
+          "weight": 2.2,
+          "watercolor": {
+            "swatch": "accent",
+            "opacity": 0.82,
+            "bleed": 0.22,
+            "border": 0.45
+          }
+        }
+      ],
+      "timeline": [
+        { "beat": 8, "do": "enter", "style": "draw" }
+      ]
+    },
+    {
+      "id": "act3_golden_bento",
+      "kind": "bento",
+      "preset": "golden_spiral",
+      "title": "THE HARMONIC INVARIANT",
+      "beat_cuts": 1,
+      "tilt_in": [-10.0, 8.0],
+      "start_beat": 16,
+      "end_beat": 20,
+      "tiles": [
+        {
+          "stat": "1.618",
+          "title": "DIVINE RATIO",
+          "detail": "GOLDEN PROPORTION PHI",
+          "accent": true
+        },
+        {
+          "stat": "T^2 = a^3",
+          "title": "THIRD LAW",
+          "detail": "HARMONIC RATIO 1.000",
+          "accent": false
+        },
+        {
+          "stat": "3 : 2",
+          "title": "MARS DIAPENTE",
+          "detail": "PERFECT FIFTH INTERVAL",
+          "accent": false
+        },
+        {
+          "stat": "16 : 15",
+          "title": "EARTH ALTO",
+          "detail": "SEMITONE CHANT MI-FA-MI",
+          "accent": true
+        }
+      ],
+      "timeline": [
+        { "beat": 16, "do": "enter", "style": "pop" }
+      ]
+    },
+    {
+      "id": "act4_flow",
+      "kind": "sketch",
+      "preset": "flow_field",
+      "field": "spiral",
+      "wiggle": 1.5,
+      "title": "SOLAR VORTEX",
+      "caption": "KEPLERIAN ANGULAR VELOCITY",
+      "beat_cuts": 1,
+      "seed": 77,
+      "start_beat": 20,
+      "end_beat": 24,
+      "timeline": [
+        { "beat": 20, "do": "enter", "style": "draw" }
+      ]
+    },
+    {
+      "id": "act5_outro",
+      "kind": "lockup",
+      "preset": "orbital_seal",
+      "headline": "KEPLER 1619",
+      "subline": "Harmonices Mundi & Divine Proportion",
+      "badge": "LINZ OBSERVATORY",
+      "specs": [
+        "PHI : 1.618034 JEWEL",
+        "THIRD LAW : T^2 = a^3",
+        "MARS FIFTH : 3 TO 2",
+        "PLATE : ROTRING & WASH"
+      ],
+      "start_beat": 24,
+      "timeline": [
+        { "beat": 24, "do": "enter", "style": "pop" },
+        { "beat": 26, "do": "sheen" }
+      ]
+    }
+  ]
+}

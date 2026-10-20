@@ -870,13 +870,21 @@ pub(crate) fn build_layers(
 
             if sentence.backing {
                 let pad = 22.0 * u;
-                let top = (centre_y(0) - pitch / 2.0 - pad * 0.5).max(0.0);
-                let bottom = (centre_y(n - 1) + pitch / 2.0 + pad * 0.5).min(h);
-                let x0 = (bx0 - pad).max(0.0);
-                let x1 = (bx1 + pad).min(w);
+                // (0.24 M10) The pill hugs the lines that are on screen: it
+                // opens round line one and grows (never pops) as each later
+                // line speaks its first word. It used to be sized for the whole
+                // page from the first word, so a two-line page showed a
+                // two-line pill round one line of text.
+                let band_rect = |last: usize| {
+                    let top = (centre_y(0) - pitch / 2.0 - pad * 0.5).max(0.0);
+                    let bottom = (centre_y(last) + pitch / 2.0 + pad * 0.5).min(h);
+                    let x0 = (bx0 - pad).max(0.0);
+                    let x1 = (bx1 + pad).min(w);
+                    (x0, top, x1 - x0, bottom - top)
+                };
                 let bg_id = format!("{page_id}.bg");
                 let fill = env.palette.paper.with_alpha(BACKING_ALPHA);
-                let mut band = rect_layer(bg_id.clone(), (x0, top, x1 - x0, bottom - top), fill, 0);
+                let mut band = rect_layer(bg_id.clone(), band_rect(0), fill, 0);
                 band.kind = LayerKind::RoundedRectangle {
                     fill,
                     radius: 18.0 * u,
@@ -890,6 +898,13 @@ pub(crate) fn build_layers(
                     1.0,
                     Easing::OutCubic,
                 ));
+                for (k, line) in page.iter().enumerate().skip(1) {
+                    let Some(at) = line.first().map(|t| t.start) else {
+                        continue;
+                    };
+                    let dur = BAND_GROW_SECONDS.min((page_end - at).max(0.01));
+                    motions.push(mo::expand(&bg_id, at, dur, band_rect(k), Easing::OutCubic));
+                }
                 children.insert(0, band);
             }
 
@@ -913,6 +928,9 @@ pub(crate) fn build_layers(
     }
     (layers, motions)
 }
+
+/// (0.24 M10) Seconds the caption pill takes to grow by one line.
+const BAND_GROW_SECONDS: f64 = 0.2;
 
 #[cfg(test)]
 mod tests;

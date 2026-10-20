@@ -42,8 +42,9 @@ pub enum MakeupGain {
 
 /// (0.10) Gain reduction of the music bed while the voice-over speaks (dB).
 pub const BED_DUCK_DB: f64 = 10.0;
-/// (0.10) Gain reduction of the SFX bus while the voice-over speaks (dB).
-pub const SFX_DUCK_DB: f64 = 4.0;
+/// (0.10) Gain reduction of the SFX bus while the voice-over speaks (dB);
+/// 0.24 M7: 4 -> 8, a safety net under the planner's voice-relative levels.
+pub const SFX_DUCK_DB: f64 = 8.0;
 const BED_DUCK_RATIO: f64 = 20.0;
 const SFX_DUCK_RATIO: f64 = 4.0;
 /// The voice key is leveled before it reaches `sidechaincompress`: boosted by
@@ -56,7 +57,7 @@ const KEY_CHAIN: &str = "volume=20dB,alimiter=limit=0.1:attack=2:release=40:leve
 const KEY_EFFECTIVE_DB: f64 = -21.6;
 
 /// (0.10) A voice-over placed on the mix. It is the KEY of the ducking (music
-/// bed -10 dB, SFX bus -4 dB while it speaks) and is itself never ducked.
+/// bed -10 dB, SFX bus -8 dB while it speaks) and is itself never ducked.
 #[derive(Debug, Clone, PartialEq)]
 pub struct VoiceTrack {
     /// Audio file (any format ffmpeg reads).

@@ -62,6 +62,7 @@ fn layer(id: String, rect: BoxRect, kind: LayerKind) -> Layer {
         z_index: 0,
         visible: true,
         clip: None,
+        mask: None,
         depth: None,
         layout: None,
         kind,
@@ -189,6 +190,7 @@ pub fn counter(
         MotionOp::Move {
             from: [0.0, travel],
             to: [0.0, 0.0],
+            via: None,
         },
     ));
     e
@@ -533,6 +535,7 @@ pub fn path_draw(
             stroke: Stroke {
                 color: style.accent,
                 width: 8.0 * style.u,
+                brush: None,
             },
             closed: false,
             fill: None,

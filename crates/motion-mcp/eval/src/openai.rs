@@ -2,7 +2,7 @@
 //!
 //! Plain HTTP to a local server (LM Studio, llama.cpp, Ollama). No API keys
 //! are read from anywhere: paid hosted models are out of scope for this
-//! harness (they need the owner's OK, see the README).
+//! harness (they need explicit approval, see the README).
 
 use std::time::Duration;
 

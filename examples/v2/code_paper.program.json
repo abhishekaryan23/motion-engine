@@ -1,0 +1,32 @@
+{
+  "version": "2.0",
+  "meta": { "name": "code_paper", "aspect": "16:9", "duration": 11.0 },
+  "palette": { "background": "#EFE9DD", "ink": "#1B1A17", "accent": "#D9481C", "muted": "#9A9284" },
+  "components": [
+    { "id": "paper", "kind": "backdrop" },
+    {
+      "id": "head", "kind": "title", "preset": "serif", "text": "a function is a promise", "slot": "top", "size": "l",
+      "timeline": [ { "at": 0.2, "do": "enter", "style": "rise" } ]
+    },
+    {
+      "id": "code", "kind": "code_block", "preset": "paper_mono", "language": "rust", "size": "l", "start": 0.6,
+      "lines": [
+        "fn ease(t: f32) -> f32 {",
+        "    // slow in, fast out",
+        "    let k = 1.0 - t;",
+        "    1.0 - k * k * k",
+        "}"
+      ],
+      "steps": [
+        { "at": 0.2, "do": "type", "line": 0 },
+        { "at": 1.6, "do": "type", "line": 1 },
+        { "at": 2.9, "do": "type", "line": 2 },
+        { "at": 3.9, "do": "type", "line": 3 },
+        { "at": 4.9, "do": "type", "line": 4 },
+        { "at": 5.6, "do": "highlight", "line": 3 },
+        { "at": 6.6, "do": "retype", "line": 1, "to": "    // out-cubic: kept forever" },
+        { "at": 8.6, "do": "dissolve", "line": 2, "to": "remainder" }
+      ]
+    }
+  ]
+}

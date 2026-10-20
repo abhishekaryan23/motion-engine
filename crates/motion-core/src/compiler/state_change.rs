@@ -779,6 +779,13 @@ fn build_row(ctx: &Ctx, b: &mut B, row: &Row, g: &Geom, s: &Schedule, start: f64
     let name = row.name.as_str();
     let c = row.change;
     let panel_y = row.top + g.th + g.gap1;
+    // (0.24) The old state comes with the words that name it (the new one lands
+    // on its own EVOLVE event, which the narrator may reach too late to wait for).
+    b.reveal(
+        &format!("{name}.from"),
+        [c.from.clone()],
+        crate::speech::RevealRole::Content,
+    );
 
     // Panel (the card the state lives in).
     let panel_id = b.id(&format!("{name}.panel"));
@@ -791,6 +798,7 @@ fn build_row(ctx: &Ctx, b: &mut B, row: &Row, g: &Geom, s: &Schedule, start: f64
             stroke: Some(Stroke {
                 color: pal.ink,
                 width: 3.0 * u,
+                brush: None,
             }),
         },
         12,

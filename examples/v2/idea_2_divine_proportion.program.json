@@ -1,0 +1,235 @@
+{
+  "version": "2.0",
+  "meta": {
+    "name": "idea_2_divine_proportion",
+    "aspect": "1:1",
+    "duration": 13.0,
+    "fps": "30",
+    "end_beat": 32
+  },
+  "palette": {
+    "background": "#F6F2EB",
+    "ink": "#191817",
+    "accent": "#C84B31",
+    "muted": "#8E877D",
+    "grounds": [
+      "#ECE6DA",
+      "#191817"
+    ]
+  },
+  "fonts": {
+    "display": "cabinet_grotesk_extrabold",
+    "serif": "dm_serif_regular",
+    "mono": "space_mono"
+  },
+  "tempo": "normal",
+  "music": {
+    "track": "cinematic_strings",
+    "start": 0.46
+  },
+  "allow": ["gradient"],
+  "film": {
+    "grain": 0.022,
+    "fringe": 0.4
+  },
+  "camera": [
+    { "beat": 13, "do": "orbit", "yaw": -4.0, "pitch": 2.5 },
+    { "beat": 15, "do": "dolly", "to": -50.0 },
+    { "beat": 17, "do": "orbit", "yaw": 3.5, "pitch": -2.0 },
+    { "beat": 19, "do": "reset" },
+    { "beat": 29, "do": "orbit", "yaw": 3.0, "pitch": -2.0 },
+    { "beat": 31, "do": "dolly", "to": -40.0 },
+    { "beat": 32, "do": "push", "to": 1.05 }
+  ],
+  "transitions": [
+    { "beat": 12, "kind": "whip" },
+    { "beat": 20, "kind": "colour_flip" },
+    { "beat": 28, "kind": "impact" }
+  ],
+  "components": [
+    {
+      "id": "bg_parchment_1",
+      "kind": "backdrop",
+      "preset": "flat",
+      "image": "generated/idea_2_bg.png",
+      "image_opacity": 0.38,
+      "depth": 0.14,
+      "start_beat": 0,
+      "end_beat": 12
+    },
+    {
+      "id": "proportion_study",
+      "kind": "photo_stack",
+      "preset": "engraving_red",
+      "start_beat": 0,
+      "end_beat": 12,
+      "steps": [
+        {
+          "beat": 0,
+          "layout": "word_morph",
+          "text": "CHAOS",
+          "to_text": "ORDER",
+          "assets": ["marble_bust", "armillary_sphere"],
+          "stroke": "top_slash",
+          "ruled": true
+        },
+        {
+          "beat": 2,
+          "layout": "hero",
+          "assets": ["statue_eye"],
+          "stroke": "eye_oval"
+        },
+        {
+          "beat": 3,
+          "layout": "vitruvian",
+          "stroke": "rosette_circle"
+        },
+        {
+          "beat": 4,
+          "layout": "word_morph",
+          "text": "MARBLE",
+          "to_text": "SILICON",
+          "assets": ["statue_torso", "marble_brain"],
+          "stroke": "strike_morph",
+          "ruled": true
+        },
+        {
+          "beat": 6,
+          "layout": "hero",
+          "assets": ["marble_bust"],
+          "stroke": "rib_circle"
+        },
+        {
+          "beat": 7,
+          "layout": "blueprint",
+          "stroke": "rosette_circle"
+        },
+        {
+          "beat": 8,
+          "layout": "word_morph",
+          "text": "CHISEL",
+          "to_text": "MATRIX",
+          "assets": ["thinker_statue", "ornament_00cd"],
+          "stroke": "flourish",
+          "ruled": true
+        },
+        {
+          "beat": 10,
+          "layout": "hero",
+          "assets": ["hand_holding"],
+          "stroke": "starburst_stamp"
+        },
+        {
+          "beat": 11,
+          "layout": "constellation",
+          "stroke": "rosette_circle"
+        }
+      ]
+    },
+    {
+      "id": "bg_parchment_2",
+      "kind": "backdrop",
+      "preset": "flat",
+      "colour": "ground1",
+      "image": "generated/idea_2_bg.png",
+      "image_opacity": 0.34,
+      "depth": 0.16,
+      "start_beat": 12,
+      "end_beat": 20
+    },
+    {
+      "id": "golden_pillars",
+      "kind": "bento",
+      "preset": "pillars",
+      "title": "THE CANON OF PROPORTION",
+      "beat_cuts": 2,
+      "tilt_in": [10.0, -8.0],
+      "start_beat": 12,
+      "end_beat": 20,
+      "tiles": [
+        {
+          "stat": "1.618",
+          "title": "GOLDEN RATIO",
+          "detail": "HARMONIC INVARIANT",
+          "accent": true
+        },
+        {
+          "stat": "447BC",
+          "title": "PARTHENON",
+          "detail": "DORIC MODULUS",
+          "accent": false
+        },
+        {
+          "stat": "1490",
+          "title": "VITRUVIUS",
+          "detail": "LEONARDO STUDY",
+          "accent": false
+        },
+        {
+          "stat": "2026",
+          "title": "SILICON",
+          "detail": "GENERATIVE FORM",
+          "accent": true
+        }
+      ],
+      "timeline": [
+        { "beat": 12, "do": "enter", "style": "fade" }
+      ]
+    },
+    {
+      "id": "bg_parchment_3",
+      "kind": "backdrop",
+      "preset": "flat",
+      "image": "generated/idea_2_bg.png",
+      "image_opacity": 0.38,
+      "depth": 0.14,
+      "start_beat": 20,
+      "end_beat": 28
+    },
+    {
+      "id": "harmonic_drop",
+      "kind": "kinetic_text",
+      "preset": "glyph_drop",
+      "words": [
+        "SACRED",
+        "GEOMETRY",
+        "BECOMES",
+        "GENERATIVE",
+        "SILICON",
+        "HARMONY",
+        "RATIO",
+        "ETERNAL."
+      ],
+      "stress": [0, 4, 7],
+      "beat_cuts": 1,
+      "start_beat": 20,
+      "end_beat": 28
+    },
+    {
+      "id": "bg_parchment_4",
+      "kind": "backdrop",
+      "preset": "flat",
+      "image": "generated/idea_2_bg.png",
+      "image_opacity": 0.42,
+      "depth": 0.12,
+      "start_beat": 28
+    },
+    {
+      "id": "divine_lockup",
+      "kind": "lockup",
+      "preset": "editorial_badge",
+      "badge": "ARCHITECTURA",
+      "headline": "The Golden Ratio",
+      "headline_font": "serif",
+      "headline_case": "preserve",
+      "subline": "CLASSICAL PROPORTION IN GENERATIVE CODE",
+      "subline_font": "mono",
+      "subline_case": "upper",
+      "start_beat": 28,
+      "timeline": [
+        { "beat": 28, "do": "enter", "style": "pop" },
+        { "beat": 30, "do": "sheen" }
+      ]
+    }
+  ]
+}

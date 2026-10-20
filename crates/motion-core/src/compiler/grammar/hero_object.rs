@@ -12,6 +12,7 @@ use super::placement::{self, Rect, SubjectFacts};
 use super::plate::{self, events};
 use super::{Composition, Variant};
 use crate::assets::AssetRole;
+use crate::compiler::art_direction::HeroStyle;
 use crate::compiler::direction::{self, AccentMark, EntranceFamily, Placed, Reveal};
 use crate::compiler::recipes::{self, plane, Entrance, Slot, B};
 use crate::compiler::taste_rules::FRAME_PAD_MAX;
@@ -113,10 +114,18 @@ pub(super) fn build(
         true,
     );
 
-    // The object: ~55 % of the short side.
-    let mut side = 0.55 * w.min(h);
+    // The object: ~55 % of the short side; side by side (16:9) it fills its
+    // column (0.24: at least 38 % of the canvas height, see
+    // `taste_rules::SUBJECT_MIN_LONG_SIDE_WIDE`).
+    let mut side = if land {
+        (0.8 * h).min(0.46 * w)
+    } else {
+        0.55 * w.min(h)
+    };
     let (cx, mut cy) = if land {
-        (if mirror { 0.27 * w } else { 0.73 * w }, 0.55 * h)
+        let cx = if mirror { 0.27 * w } else { 0.73 * w };
+        let half = side / 2.0;
+        (cx.clamp(m + half, (w - m - half).max(m + half)), 0.52 * h)
     } else {
         (
             w / 2.0 + sign * 0.07 * w,
@@ -172,6 +181,14 @@ pub(super) fn build(
         (pad > FRAME_PAD_MAX)
             .then(|| subject_rules::shrink_wrap((sub.x, sub.y, sub.w, sub.h), HERO_CARD_PAD))
     });
+    // (0.24) Side by side the picture stands on the page: the grey disc and
+    // its contact shadow are dropped unless the look's art direction asks for
+    // the studio disc.
+    let plate_on = !land
+        || ctx
+            .art
+            .as_ref()
+            .is_some_and(|(a, _)| a.fx.hero_style == HeroStyle::Disc);
     let disc_id = b.id("plate");
     let (card_box, card_radius) = match wrapped {
         Some((wx, wy, ww, wh)) => ((wx + ww / 2.0, wy + wh / 2.0, ww, wh), 0.06 * ww.min(wh)),
@@ -186,6 +203,7 @@ pub(super) fn build(
             stroke: Some(Stroke {
                 color: ctx.palette.ink.with_alpha(0x22),
                 width: 2.0 * u,
+                brush: None,
             }),
         },
         9,
@@ -193,7 +211,7 @@ pub(super) fn build(
     disc_layer.anchor_x = 0.5;
     disc_layer.anchor_y = 0.5;
     disc_layer.depth = mid;
-    if !cutout {
+    if !cutout && plate_on {
         b.motions.push(mo::fade(
             &disc_id,
             t + 0.05,
@@ -222,12 +240,23 @@ pub(super) fn build(
     let ht_id = b.id("plate.halftone");
     let mut ht = texture_layer(
         &ht_id,
-        (
-            cx - side * 0.52 - sign * 0.2 * side,
-            cy - side * 0.45 + 0.17 * side,
-            side * 1.05,
-            side * 0.9,
-        ),
+        if plate_on {
+            (
+                cx - side * 0.52 - sign * 0.2 * side,
+                cy - side * 0.45 + 0.17 * side,
+                side * 1.05,
+                side * 0.9,
+            )
+        } else {
+            // (0.24) No plate: the patch is a ground under the picture, not a
+            // block the size of it.
+            (
+                cx - side * 0.44 + sign * 0.04 * side,
+                cy + side * 0.02,
+                side * 0.8,
+                side * 0.36,
+            )
+        },
         TextureSpec {
             material: Material::Halftone,
             seed: mix(plan.seed, 0x4E90),
@@ -253,11 +282,11 @@ pub(super) fn build(
         ));
         b.push(ht);
     }
-    if !cutout {
+    if !cutout && plate_on {
         b.push(disc_layer);
     }
 
-    let pills: &[(f32, u8)] = if cutout {
+    let pills: &[(f32, u8)] = if cutout || !plate_on {
         &[]
     } else {
         &[(0.82, 0x14), (0.56, 0x26)]

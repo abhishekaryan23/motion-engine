@@ -64,6 +64,9 @@ pub struct CatalogAsset {
     /// `PASS`, `WARN`, `FAIL` or `MISSING`.
     #[serde(default)]
     pub qa: String,
+    /// Optional L2-normalized multimodal embedding vector (EmbeddingGemma 2 MRL: 128d/256d/512d/768d).
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub embedding: Vec<f32>,
 }
 
 /// The best catalog asset for a request.
@@ -184,13 +187,17 @@ impl AssetLibrary {
                 if score < min_score || best.as_ref().is_some_and(|(s, _)| score <= *s) {
                     continue;
                 }
+                let mut match_entry = entry.clone();
+                if !asset.embedding.is_empty() {
+                    match_entry.embedding = asset.embedding.clone();
+                }
                 best = Some((
                     score,
                     CatalogMatch {
                         family: family.clone(),
                         id: asset.id.clone(),
                         rel_path: format!("library/{family}/{}", asset.file),
-                        entry: entry.clone(),
+                        entry: match_entry,
                         matched,
                     },
                 ));
@@ -228,7 +235,7 @@ impl AssetLibrary {
         if !self.families.iter().any(|f| f == family) {
             return None;
         }
-        let (_, manifest) = load_family(&self.root, family)?;
+        let (catalog, manifest) = load_family(&self.root, family)?;
         let wanted = format!("library.{id}");
         let mut entry = manifest
             .assets
@@ -237,6 +244,42 @@ impl AssetLibrary {
         entry.path = format!("library/{family}/{}", entry.path);
         entry.id = request_id.to_string();
         entry.serves = vec![request_id.to_string()];
+        if let Some(cat_asset) = catalog.assets.iter().find(|a| a.id == id) {
+            if !cat_asset.embedding.is_empty() {
+                entry.embedding = cat_asset.embedding.clone();
+            }
+        }
         Some(entry)
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn catalog_asset_embedding_deserialization() {
+        let json = r#"{
+            "id": "asset_1",
+            "file": "asset_1.png",
+            "role": "object",
+            "subject": "robot",
+            "tags": ["tech", "ai"],
+            "qa": "PASS",
+            "embedding": [0.1, 0.2, 0.3, 0.4]
+        }"#;
+
+        let asset: CatalogAsset = serde_json::from_str(json).unwrap();
+        assert_eq!(asset.id, "asset_1");
+        assert_eq!(asset.embedding, vec![0.1, 0.2, 0.3, 0.4]);
+
+        let json_no_emb = r#"{
+            "id": "asset_2",
+            "file": "asset_2.png",
+            "role": "object",
+            "qa": "PASS"
+        }"#;
+        let asset2: CatalogAsset = serde_json::from_str(json_no_emb).unwrap();
+        assert!(asset2.embedding.is_empty());
     }
 }

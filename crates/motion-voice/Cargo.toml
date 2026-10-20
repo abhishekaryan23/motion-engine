@@ -3,7 +3,8 @@ name = "motion-voice"
 description = "Voice-over providers (OpenRouter TTS, macOS say, fixtures) and the content-addressed voice cache. Network lives here, never in motion-core/motion-render."
 version.workspace = true
 edition.workspace = true
-license.workspace = true
+license-file.workspace = true
+publish.workspace = true
 
 [dependencies]
 motion-core.workspace = true

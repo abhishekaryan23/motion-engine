@@ -218,7 +218,7 @@ pub struct JobStatus {
     pub finished_unix: Option<u64>,
     /// The pid of the server that queued / runs the job (cleared when it
     /// finishes). Several servers (e.g. a weak and a creator one) share one
-    /// jobs folder: a live owner's job is waited on, never re-run or pruned.
+    /// jobs folder: a job whose owning process is alive is waited on, never re-run or pruned.
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub owner_pid: Option<u32>,
 }

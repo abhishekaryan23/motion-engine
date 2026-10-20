@@ -1,0 +1,3729 @@
+{
+  "$defs": {
+    "AccentStroke": {
+      "description": "Hand-painted vector stroke overlay drawn on top of a [`PhotoStep`].",
+      "oneOf": [
+        {
+          "const": "rosette_circle",
+          "description": "Sweeping hand-drawn circle with an accent tip around a radial rosette.",
+          "type": "string"
+        },
+        {
+          "const": "top_slash",
+          "description": "Top slash + exclamation stroke (`ask` → `ask !`).",
+          "type": "string"
+        },
+        {
+          "const": "flourish",
+          "description": "Calligraphic flourish header + baseline underline (`task`).",
+          "type": "string"
+        },
+        {
+          "const": "strike_morph",
+          "description": "Horizontal red strike-through morphing the leading letter (`draft` → `craft`).",
+          "type": "string"
+        },
+        {
+          "const": "neck_arc",
+          "description": "Sweeping calligraphic arc over the subject's crest + bottom scale rule.",
+          "type": "string"
+        },
+        {
+          "const": "eye_oval",
+          "description": "Hand-drawn ink + accent oval circling the eye/head.",
+          "type": "string"
+        },
+        {
+          "const": "starburst_stamp",
+          "description": "Precision geometric target reticle + cardinal ticks over the focal point.",
+          "type": "string"
+        },
+        {
+          "const": "bracket_dot",
+          "description": "Technical caliper bracket `[` with an accent locus dot.",
+          "type": "string"
+        },
+        {
+          "const": "rib_circle",
+          "description": "Double-ring anatomical circle + accent locus dot.",
+          "type": "string"
+        },
+        {
+          "const": "period_dot",
+          "description": "Accent ink drop / period dot (`Keep` → `Keep thinking.`).",
+          "type": "string"
+        }
+      ]
+    },
+    "Aspect": {
+      "oneOf": [
+        {
+          "const": "16:9",
+          "description": "1920×1080.",
+          "type": "string"
+        },
+        {
+          "const": "9:16",
+          "description": "1080×1920.",
+          "type": "string"
+        },
+        {
+          "const": "1:1",
+          "description": "1440×1440.",
+          "type": "string"
+        }
+      ]
+    },
+    "BackdropPreset": {
+      "oneOf": [
+        {
+          "const": "flat",
+          "description": "Flat colour.",
+          "type": "string"
+        },
+        {
+          "const": "glow",
+          "description": "Soft radial falloff from the centre (needs `allow: [\"gradient\"]`).",
+          "type": "string"
+        },
+        {
+          "const": "fall",
+          "description": "Gentle top-to-bottom falloff (needs `allow: [\"gradient\"]`).",
+          "type": "string"
+        }
+      ]
+    },
+    "Bed": {
+      "additionalProperties": false,
+      "description": "A bundled track (`assets/music/<track>.mp3`) played from `start` seconds\ninto the file; it fades out over the last `fade_out` seconds.",
+      "properties": {
+        "fade_out": {
+          "default": 1.0,
+          "format": "double",
+          "type": "number"
+        },
+        "gain_db": {
+          "default": 0.0,
+          "description": "Level offset on the track's own analysed gain (dB).",
+          "format": "double",
+          "type": "number"
+        },
+        "start": {
+          "default": 0.0,
+          "format": "double",
+          "type": "number"
+        },
+        "track": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "track"
+      ],
+      "type": "object"
+    },
+    "BentoPreset": {
+      "description": "Bento layout preset archetypes.",
+      "oneOf": [
+        {
+          "enum": [
+            "grid2x2",
+            "hero_left",
+            "pillars"
+          ],
+          "type": "string"
+        },
+        {
+          "const": "golden_spiral",
+          "description": "Recursive Golden Ratio (61.8% / 38.2%) Fibonacci subdivision grid.",
+          "type": "string"
+        }
+      ]
+    },
+    "BentoTile": {
+      "additionalProperties": false,
+      "description": "One metric or architecture card inside a [`Bento`] grid.",
+      "properties": {
+        "accent": {
+          "description": "Highlight this tile as an accent hero card.",
+          "type": "boolean"
+        },
+        "detail": {
+          "description": "Optional mono sub-caption (1..=28 chars, e.g. `\"VS PUBLIC CLOUD\"`, `\"NVME TIERING\"`).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "stat": {
+          "description": "Primary hero metric or badge (1..=12 chars, e.g. `\"40%\"`, `\"2X\"`, `\"1-MIN\"`, `\"vSAN ESA\"`).",
+          "type": "string"
+        },
+        "title": {
+          "description": "Concise label (1..=22 chars, e.g. `\"LOWER TCO\"`, `\"VM DENSITY\"`, `\"RPO RECOVERY\"`).",
+          "type": "string"
+        }
+      },
+      "required": [
+        "stat",
+        "title"
+      ],
+      "type": "object"
+    },
+    "CameraEvent": {
+      "description": "A camera move at program seconds `at` or music `beat`.",
+      "oneOf": [
+        {
+          "description": "Zoom to this factor (1..=1.8) about the current centre.",
+          "properties": {
+            "do": {
+              "const": "push",
+              "type": "string"
+            },
+            "to": {
+              "format": "float",
+              "type": "number"
+            }
+          },
+          "required": [
+            "do",
+            "to"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Centre the frame on a slot.",
+          "properties": {
+            "do": {
+              "const": "pan",
+              "type": "string"
+            },
+            "to": {
+              "$ref": "#/$defs/Slot"
+            }
+          },
+          "required": [
+            "do",
+            "to"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Frame a component: centre it and zoom so it fills ~70 % of the frame.",
+          "properties": {
+            "component": {
+              "type": "string"
+            },
+            "do": {
+              "const": "frame",
+              "type": "string"
+            }
+          },
+          "required": [
+            "do",
+            "component"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "2.5D camera orbit `[yaw_deg, pitch_deg]` in `-35..=35`.",
+          "properties": {
+            "do": {
+              "const": "orbit",
+              "type": "string"
+            },
+            "pitch": {
+              "default": 0.0,
+              "format": "float",
+              "type": "number"
+            },
+            "yaw": {
+              "default": 0.0,
+              "format": "float",
+              "type": "number"
+            }
+          },
+          "required": [
+            "do"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "2.5D camera dolly along Z in `-600..=600` px (negative pushes in, positive pulls back).",
+          "properties": {
+            "do": {
+              "const": "dolly",
+              "type": "string"
+            },
+            "to": {
+              "format": "float",
+              "type": "number"
+            }
+          },
+          "required": [
+            "do",
+            "to"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Dutch angle camera roll in `-25..=25` degrees.",
+          "properties": {
+            "deg": {
+              "format": "float",
+              "type": "number"
+            },
+            "do": {
+              "const": "roll",
+              "type": "string"
+            }
+          },
+          "required": [
+            "do",
+            "deg"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Rack depth-of-field focus to `z` px with optional `aperture` (`0.0..=1.0`).",
+          "properties": {
+            "aperture": {
+              "format": "float",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "do": {
+              "const": "focus",
+              "type": "string"
+            },
+            "z": {
+              "format": "float",
+              "type": "number"
+            }
+          },
+          "required": [
+            "do",
+            "z"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Back to the full frame.",
+          "properties": {
+            "do": {
+              "const": "reset",
+              "type": "string"
+            }
+          },
+          "required": [
+            "do"
+          ],
+          "type": "object"
+        }
+      ],
+      "properties": {
+        "at": {
+          "format": "double",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "beat": {
+          "format": "uint32",
+          "minimum": 0,
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ChartKind": {
+      "oneOf": [
+        {
+          "enum": [
+            "line",
+            "area",
+            "bar",
+            "donut"
+          ],
+          "type": "string"
+        },
+        {
+          "const": "spring",
+          "description": "A spring response from `values[0]` to `values[1]`: the curve is\ndrawn by the same closed-form spring that moves its dot.",
+          "type": "string"
+        }
+      ]
+    },
+    "ChartPreset": {
+      "oneOf": [
+        {
+          "const": "thin_axis",
+          "description": "Thin muted axis, one accent series.",
+          "type": "string"
+        },
+        {
+          "const": "paper",
+          "description": "Ink series on paper; the hero in accent.",
+          "type": "string"
+        }
+      ]
+    },
+    "CodeBlock": {
+      "description": "Mono code typed in with a caret: lines, a language for colouring and\nsteps (`type`, `retype`, `dissolve`, `highlight`).",
+      "properties": {
+        "language": {
+          "$ref": "#/$defs/Language",
+          "default": "plain"
+        },
+        "lines": {
+          "description": "1..=14 lines of at most 48 characters (no tabs).",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "preset": {
+          "$ref": "#/$defs/CodePreset",
+          "default": "paper_mono"
+        },
+        "size": {
+          "$ref": "#/$defs/Size",
+          "default": "m"
+        },
+        "slot": {
+          "$ref": "#/$defs/Slot",
+          "default": "center"
+        },
+        "steps": {
+          "description": "In time order; `at` is seconds from the component start. Without any\n`type` step every line types in, one after another, from 0.3 s;\notherwise lines without a `type` step are shown from the start.",
+          "items": {
+            "$ref": "#/$defs/CodeStep"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "lines"
+      ],
+      "type": "object"
+    },
+    "CodePreset": {
+      "oneOf": [
+        {
+          "const": "paper_mono",
+          "description": "Ink on the page, muted line numbers, accent keywords.",
+          "type": "string"
+        },
+        {
+          "const": "terminal_dark",
+          "description": "A dark window (ink) with light type and a title bar.",
+          "type": "string"
+        }
+      ]
+    },
+    "CodeStep": {
+      "oneOf": [
+        {
+          "description": "Type line `line` (0-based) at 0.05 s a character.",
+          "properties": {
+            "do": {
+              "const": "type",
+              "type": "string"
+            },
+            "line": {
+              "format": "uint",
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "do",
+            "line"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Delete line `line` back to its start, then type `to` in its place.",
+          "properties": {
+            "do": {
+              "const": "retype",
+              "type": "string"
+            },
+            "line": {
+              "format": "uint",
+              "minimum": 0,
+              "type": "integer"
+            },
+            "to": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "do",
+            "line",
+            "to"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Line `line` crumbles into ink speckles; with `to`, a serif italic\nword rises in its place.",
+          "properties": {
+            "do": {
+              "const": "dissolve",
+              "type": "string"
+            },
+            "line": {
+              "format": "uint",
+              "minimum": 0,
+              "type": "integer"
+            },
+            "to": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "do",
+            "line"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "A band sweeps in behind line `line` (once per line).",
+          "properties": {
+            "do": {
+              "const": "highlight",
+              "type": "string"
+            },
+            "line": {
+              "format": "uint",
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "do",
+            "line"
+          ],
+          "type": "object"
+        }
+      ],
+      "properties": {
+        "at": {
+          "default": 0.0,
+          "description": "Seconds from the component start (fallback when no `beat`/`bar`).",
+          "format": "double",
+          "type": "number"
+        },
+        "bar": {
+          "description": "On the downbeat of bar n (beat 4n) instead.",
+          "format": "uint32",
+          "minimum": 0,
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "beat": {
+          "description": "On music beat n instead (program beat grid, snapped to a frame).",
+          "format": "uint32",
+          "minimum": 0,
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "Component": {
+      "description": "One component: on screen from `start` to `end` (default: the program\nend), with a kind-specific preset and content, animated by `timeline`.",
+      "oneOf": [
+        {
+          "description": "Full-frame ground.",
+          "properties": {
+            "colour": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Swatch"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Ground colour (default: the background swatch)."
+            },
+            "image": {
+              "description": "Optional relative path under `assets/` to a background image plate\n(e.g. `\"generated/idea_1_bg.png\"`), composited over the ground colour.",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "image_opacity": {
+              "description": "Opacity of the background image plate (`0.05..=1.0`, default `0.24`).",
+              "format": "float",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "kind": {
+              "const": "backdrop",
+              "type": "string"
+            },
+            "preset": {
+              "$ref": "#/$defs/BackdropPreset",
+              "default": "flat"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "One hero primitive that keeps its identity and morphs.",
+          "properties": {
+            "anchor": {
+              "description": "The component this shape marks (it is centred on that\ncomponent's slot). A shape that neither changes (morph, move,\norbit, bounce, fill, spin) nor anchors to content is decoration\nand is rejected (`slop_meaningless_shape`).",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "colour": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Swatch"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Default: accent."
+            },
+            "kind": {
+              "const": "shape",
+              "type": "string"
+            },
+            "mark": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Mark"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "How an anchored shape marks its anchor's measured bounds: a ring\naround them (≤ 1.12×), an underline, or a marker dot at the edge."
+            },
+            "preset": {
+              "$ref": "#/$defs/ShapePreset",
+              "default": "solid"
+            },
+            "shape": {
+              "$ref": "#/$defs/ShapeSpec"
+            },
+            "size": {
+              "$ref": "#/$defs/Size",
+              "default": "m"
+            },
+            "slot": {
+              "$ref": "#/$defs/Slot",
+              "default": "center"
+            }
+          },
+          "required": [
+            "kind",
+            "shape"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "A short line of type.",
+          "properties": {
+            "colour": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Swatch"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Default: ink."
+            },
+            "kind": {
+              "const": "title",
+              "type": "string"
+            },
+            "preset": {
+              "$ref": "#/$defs/TitlePreset",
+              "default": "display"
+            },
+            "size": {
+              "$ref": "#/$defs/Size",
+              "default": "m"
+            },
+            "slot": {
+              "$ref": "#/$defs/Slot",
+              "default": "center"
+            },
+            "style": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/TypeStyle"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Type treatment: fill (solid, gradient, image), outline, letter case."
+            },
+            "text": {
+              "description": "At most 60 characters (24 at size `xl`).",
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind",
+            "text"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Big type, a few words per frame, advanced by `cut` verbs.",
+          "properties": {
+            "beat_cuts": {
+              "description": "With music: cut to the next word every this many beats from the\ncomponent's `start_beat` (adds `cut` events; explicit cuts stay).",
+              "format": "uint32",
+              "minimum": 0,
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "colour": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Swatch"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Default: ink."
+            },
+            "dot": {
+              "description": "An accent dot ends every word like a full stop and hops to the\nnext word on each cut (one element carried across the cuts).",
+              "type": "boolean"
+            },
+            "ground": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Swatch"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Poster ground swatch (default: background; `flip` swaps it with\nthe type colour)."
+            },
+            "kind": {
+              "const": "kinetic_text",
+              "type": "string"
+            },
+            "preset": {
+              "$ref": "#/$defs/KineticPreset",
+              "default": "poster_cuts"
+            },
+            "slot": {
+              "$ref": "#/$defs/Slot",
+              "default": "center"
+            },
+            "stress": {
+              "description": "Indices of words set in the accent.",
+              "items": {
+                "format": "uint",
+                "minimum": 0,
+                "type": "integer"
+              },
+              "type": "array"
+            },
+            "style": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/TypeStyle"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Type treatment: fill (solid, gradient, image), outline, letter case."
+            },
+            "words": {
+              "description": "Shown one after another (1..=40 items of 1..=24 characters);\nthe first at the component start, each `cut` shows the next.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "kind",
+            "words"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "A chart with one hero value.",
+          "properties": {
+            "beat_cuts": {
+              "description": "With music: reveal one value per this many beats from\n`start_beat` (bar i on beat i), then the hero lands.",
+              "format": "uint32",
+              "minimum": 0,
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "callout": {
+              "description": "Big number shown at the hero, at most 12 characters.",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "chart": {
+              "$ref": "#/$defs/ChartKind",
+              "default": "line"
+            },
+            "colour": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Swatch"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Series and hero colour (default: the preset's; set it when the\nchart sits on an accent-coloured ground)."
+            },
+            "hero": {
+              "description": "The value the chart is about (dot, accent, callout).",
+              "format": "uint",
+              "minimum": 0,
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "kind": {
+              "const": "chart",
+              "type": "string"
+            },
+            "labels": {
+              "description": "Empty, or one short label per value.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "preset": {
+              "$ref": "#/$defs/ChartPreset",
+              "default": "thin_axis"
+            },
+            "size": {
+              "$ref": "#/$defs/Size",
+              "default": "m"
+            },
+            "slot": {
+              "$ref": "#/$defs/Slot",
+              "default": "center"
+            },
+            "title": {
+              "description": "What the chart measures, set above it (at most 32 characters,\ne.g. \"Weekly signups, thousands\").",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "values": {
+              "description": "2..=24 values (donut: 2..=8, non-negative).",
+              "items": {
+                "format": "double",
+                "type": "number"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "kind",
+            "values"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Nodes and edges built step by step: each `advance` reveals the next\nnode (its edge draws first) and an accent dot travels the edge.",
+          "properties": {
+            "beat_cuts": {
+              "description": "With music: advance every this many beats from `start_beat`.",
+              "format": "uint32",
+              "minimum": 0,
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "colour": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Swatch"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Node outline/fill and dot colour override (default: preset's)."
+            },
+            "edges": {
+              "description": "`[from, to]` node indices; default: a chain 0→1→2…",
+              "items": {
+                "items": {
+                  "format": "uint",
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                "maxItems": 2,
+                "minItems": 2,
+                "type": "array"
+              },
+              "type": "array"
+            },
+            "kind": {
+              "const": "diagram",
+              "type": "string"
+            },
+            "nodes": {
+              "description": "2..=8 node labels (at most 18 characters each).",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "preset": {
+              "$ref": "#/$defs/DiagramPreset",
+              "default": "outline"
+            },
+            "slot": {
+              "$ref": "#/$defs/Slot",
+              "default": "center"
+            }
+          },
+          "required": [
+            "kind",
+            "nodes"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Frame furniture: up to four tiny mono labels in the corners.",
+          "properties": {
+            "corners": {
+              "description": "`[top-left, top-right, bottom-left, bottom-right]`; empty strings\nleave a corner blank. At most 24 characters each.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "kind": {
+              "const": "hud",
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind",
+            "corners"
+          ],
+          "type": "object"
+        },
+        {
+          "$ref": "#/$defs/CodeBlock",
+          "description": "Mono code typed in with a caret (`steps`: type, retype, dissolve, highlight).",
+          "properties": {
+            "kind": {
+              "const": "code_block",
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "type": "object"
+        },
+        {
+          "$ref": "#/$defs/DeviceFrame",
+          "description": "A phone, laptop or bare stage with a morphing UI container, a cursor and a camera.",
+          "properties": {
+            "kind": {
+              "const": "device_frame",
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "A dense, structured metric and feature card grid with 2.5D card tilt and step reveals.",
+          "properties": {
+            "beat_cuts": {
+              "description": "With music: reveal the next tile every this many beats from `start_beat`.",
+              "format": "uint32",
+              "minimum": 0,
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "kind": {
+              "const": "bento",
+              "type": "string"
+            },
+            "preset": {
+              "$ref": "#/$defs/BentoPreset",
+              "default": "grid2x2"
+            },
+            "slot": {
+              "$ref": "#/$defs/Slot",
+              "default": "center"
+            },
+            "tiles": {
+              "description": "2..=6 metric/feature tiles.",
+              "items": {
+                "$ref": "#/$defs/BentoTile"
+              },
+              "type": "array"
+            },
+            "tilt_in": {
+              "description": "Optional 2.5D card tilt entrance angle `[pitch_deg, yaw_deg]` (default: `[-12.0, 8.0]`).",
+              "items": {
+                "format": "float",
+                "type": "number"
+              },
+              "maxItems": 2,
+              "minItems": 2,
+              "type": [
+                "array",
+                "null"
+              ]
+            },
+            "title": {
+              "description": "Optional section header above the grid (at most 32 characters).",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "kind",
+            "tiles"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "A closing typographic lockup: headline, a line under it and the\nrules that frame them.",
+          "properties": {
+            "badge": {
+              "description": "Optional custom badge / status pill label (`\"EDITION\"`, `\"LIVE\"`, `\"SOVEREIGN\"`).",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "colour": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Swatch"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Type colour (default: ink)."
+            },
+            "headline": {
+              "description": "1..=24 characters, set in the brand's chosen headline face and case.",
+              "type": "string"
+            },
+            "headline_case": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/LockupCase"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Optional letter-case override for the headline (`upper`, `preserve`)."
+            },
+            "headline_font": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/LockupFont"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Optional font role override for the headline (`display`, `serif`, `mono`, `sans`)."
+            },
+            "kind": {
+              "const": "lockup",
+              "type": "string"
+            },
+            "preset": {
+              "$ref": "#/$defs/LockupPreset",
+              "default": "spline_frame"
+            },
+            "rules_from": {
+              "description": "Where the rules arrive from: a cubic Bézier in frame fractions\n(x right, y down; start, two controls, end). They spring straight\ninto baselines. Absent: they grow out from the centre.",
+              "items": {
+                "items": {
+                  "format": "float",
+                  "type": "number"
+                },
+                "maxItems": 2,
+                "minItems": 2,
+                "type": "array"
+              },
+              "maxItems": 4,
+              "minItems": 4,
+              "type": [
+                "array",
+                "null"
+              ]
+            },
+            "specs": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "subline": {
+              "description": "The line under it, at most 48 characters.",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "subline_case": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/LockupCase"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Optional letter-case override for the subline (`upper`, `preserve`)."
+            },
+            "subline_font": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/LockupFont"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Optional font role override for the subline (`serif`, `mono`, `sans`, `display`)."
+            }
+          },
+          "required": [
+            "kind",
+            "headline"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "An editorial engraving / cutout collage sequence with hand-drawn strokes and word-pair morphs.",
+          "properties": {
+            "beat_cuts": {
+              "description": "With music: advance to the next step every this many beats from\n`start_beat`.",
+              "format": "uint32",
+              "minimum": 0,
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "kind": {
+              "const": "photo_stack",
+              "type": "string"
+            },
+            "preset": {
+              "$ref": "#/$defs/PhotoPreset",
+              "default": "engraving_red"
+            },
+            "slot": {
+              "$ref": "#/$defs/Slot",
+              "default": "center"
+            },
+            "steps": {
+              "description": "Sequence of shots in time order (1..=32).",
+              "items": {
+                "$ref": "#/$defs/PhotoStep"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "kind",
+            "steps"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "A `p5.brush` natural media sketch, flow field, hatched drafting composition, or Golden Spiral study.",
+          "properties": {
+            "beat_cuts": {
+              "description": "With music: stagger element reveals every this many beats.",
+              "format": "uint32",
+              "minimum": 0,
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "caption": {
+              "description": "Optional mono caption/annotation.",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "elements": {
+              "description": "Elements for `Freeform` (or additional overlays on presets).",
+              "items": {
+                "$ref": "#/$defs/SketchElement"
+              },
+              "type": "array"
+            },
+            "field": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/SketchField"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Global vector field for this sketch (`hand`, `waves`, `curved`, `spiral`, etc.)."
+            },
+            "kind": {
+              "const": "sketch",
+              "type": "string"
+            },
+            "plate": {
+              "description": "Draw the framed drafting plate (border, paper ground, title bar).\n`false`: strokes only, on a transparent box, so the sketch can sit\n`over` a title, photo_stack or chart (title/caption are then\nrejected; use a `title` component).",
+              "type": "boolean"
+            },
+            "preset": {
+              "$ref": "#/$defs/SketchPreset",
+              "default": "freeform"
+            },
+            "seed": {
+              "default": 0,
+              "format": "uint32",
+              "minimum": 0,
+              "type": "integer"
+            },
+            "size": {
+              "$ref": "#/$defs/Size",
+              "description": "Box size in the slot (default `m` = today's box; `s` 0.6x,\n`l` 1.15x, `xl` nearly the whole frame, centred)."
+            },
+            "slot": {
+              "$ref": "#/$defs/Slot",
+              "default": "center"
+            },
+            "title": {
+              "description": "Optional headline/title displayed in a clean high-contrast plate.",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "wiggle": {
+              "default": 1.5,
+              "description": "Global hand-wiggle intensity (0.0..=10.0, default 1.5).",
+              "format": "float",
+              "type": "number"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "A full-frame field of dots (one instanced primitive).",
+          "properties": {
+            "colour": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Swatch"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Default: muted."
+            },
+            "focus": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Slot"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Halftone: where the dots are largest (default: the centre)."
+            },
+            "kind": {
+              "const": "field",
+              "type": "string"
+            },
+            "preset": {
+              "$ref": "#/$defs/FieldPreset",
+              "default": "halftone"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "type": "object"
+        }
+      ],
+      "properties": {
+        "depth": {
+          "description": "Optional 2.5D parallax depth factor (`0.0` = pinned ground, `1.0` = subject plane, `>1.0` = foreground).",
+          "format": "float",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "end": {
+          "description": "Seconds from the program start; absent = the program end.",
+          "format": "double",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "end_beat": {
+          "description": "End on this music beat (cut there, on the same frame grid as the\nnext shot's start; overrides `end`).",
+          "format": "uint32",
+          "minimum": 0,
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "id": {
+          "description": "Unique id: lowercase letters, digits and `_`.",
+          "type": "string"
+        },
+        "over": {
+          "description": "Intentional layering: the id of a component this one is composited\nover (drawn above it). Exempts that pair from `component_overlap`;\nevery other overlap is still a defect.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "start": {
+          "default": 0.0,
+          "description": "Seconds from the program start.",
+          "format": "double",
+          "type": "number"
+        },
+        "start_beat": {
+          "description": "Start on this music beat instead (overrides `start`).",
+          "format": "uint32",
+          "minimum": 0,
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "tilt": {
+          "description": "Optional static 2.5D projective card tilt `[pitch_deg, yaw_deg]` in `-65..=65`.",
+          "items": {
+            "format": "float",
+            "type": "number"
+          },
+          "maxItems": 2,
+          "minItems": 2,
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "timeline": {
+          "description": "Verbs in time order; `at` is seconds from the component start.",
+          "items": {
+            "$ref": "#/$defs/Event"
+          },
+          "type": "array"
+        },
+        "z": {
+          "description": "Optional true 2.5D Z coordinate in px (`0.0` = focus plane, `>0.0` = farther, `<0.0` = closer).",
+          "format": "float",
+          "type": [
+            "number",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "type": "object"
+    },
+    "Device": {
+      "oneOf": [
+        {
+          "enum": [
+            "phone",
+            "laptop"
+          ],
+          "type": "string"
+        },
+        {
+          "const": "none",
+          "description": "No hardware: the UI sits on the page (a pointer taps it).",
+          "type": "string"
+        }
+      ]
+    },
+    "DeviceFrame": {
+      "description": "A phone, a laptop or a bare stage with one UI container that morphs\nbetween `states`, driven by `steps` (`to_state`, `click`, `hold`,\n`toast`, `zoom`). Sizes are real iOS points; the camera frames them.",
+      "properties": {
+        "device": {
+          "$ref": "#/$defs/Device",
+          "default": "none"
+        },
+        "flow": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/UiFlow"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "A typed flow (`payment`, `signup`, ...): states, steps and copy\nare derived from its fields. Give either `flow` or `states`."
+        },
+        "preset": {
+          "$ref": "#/$defs/DevicePreset",
+          "default": "flat_mono"
+        },
+        "slot": {
+          "$ref": "#/$defs/Slot",
+          "default": "center"
+        },
+        "states": {
+          "description": "1..=8 UI states (free text, validated for point of view, one\nsuccess at a time and app context); the first shows from the start.",
+          "items": {
+            "$ref": "#/$defs/UiState"
+          },
+          "type": "array"
+        },
+        "steps": {
+          "description": "In time order, at least 0.45 s apart (zoom excepted); `at` is seconds\nfrom the component start, or `beat`/`bar` on the music grid. Every\nstate holds for its read time (0.4 s + 0.3 s a line, 0.6 s at least).",
+          "items": {
+            "$ref": "#/$defs/UiStep"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "DevicePreset": {
+      "oneOf": [
+        {
+          "const": "flat_mono",
+          "description": "Light iOS: a #F2F2F7-like screen, white surfaces.",
+          "type": "string"
+        },
+        {
+          "const": "phone_dark",
+          "description": "Dark iOS: a black screen, raised grey surfaces.",
+          "type": "string"
+        }
+      ]
+    },
+    "DiagramPreset": {
+      "oneOf": [
+        {
+          "const": "outline",
+          "description": "Ink outlines on the ground, mono labels, thin connectors.",
+          "type": "string"
+        },
+        {
+          "const": "cards",
+          "description": "Filled cards (ink on light / light on dark), bold labels.",
+          "type": "string"
+        },
+        {
+          "const": "rail",
+          "description": "Round nodes on a line, like a process rail.",
+          "type": "string"
+        }
+      ]
+    },
+    "EnterStyle": {
+      "oneOf": [
+        {
+          "const": "pop",
+          "description": "Scale up from nothing on a small-overshoot spring.",
+          "type": "string"
+        },
+        {
+          "const": "rise",
+          "description": "Rise a short way while fading in.",
+          "type": "string"
+        },
+        {
+          "const": "fade",
+          "description": "Fade in.",
+          "type": "string"
+        },
+        {
+          "const": "draw",
+          "description": "Outline shapes: the stroke draws on; charts build; fields grow\nout from the centre.",
+          "type": "string"
+        },
+        {
+          "const": "wipe",
+          "description": "Titles: a mask wipes left to right.",
+          "type": "string"
+        }
+      ]
+    },
+    "Event": {
+      "description": "A verb at `at` seconds from the component start, or on music `beat` n\n(snapped to the nearest frame).",
+      "oneOf": [
+        {
+          "description": "Arrive. Without an `enter`, a component cuts in at its start.",
+          "properties": {
+            "do": {
+              "const": "enter",
+              "type": "string"
+            },
+            "style": {
+              "$ref": "#/$defs/EnterStyle",
+              "default": "pop"
+            }
+          },
+          "required": [
+            "do"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Leave. Without an `exit`, a component cuts out at its end.",
+          "properties": {
+            "do": {
+              "const": "exit",
+              "type": "string"
+            },
+            "style": {
+              "$ref": "#/$defs/ExitStyle",
+              "default": "cut"
+            }
+          },
+          "required": [
+            "do"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Shapes: become another shape (one shape, never cut).",
+          "properties": {
+            "do": {
+              "const": "morph",
+              "type": "string"
+            },
+            "to": {
+              "$ref": "#/$defs/ShapeSpec"
+            }
+          },
+          "required": [
+            "do",
+            "to"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Travel to another slot on a spring.",
+          "properties": {
+            "do": {
+              "const": "move",
+              "type": "string"
+            },
+            "to": {
+              "$ref": "#/$defs/Slot"
+            }
+          },
+          "required": [
+            "do",
+            "to"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Change colour to another swatch (once per component).",
+          "properties": {
+            "do": {
+              "const": "recolour",
+              "type": "string"
+            },
+            "to": {
+              "$ref": "#/$defs/Swatch"
+            }
+          },
+          "required": [
+            "do",
+            "to"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "A short struck-and-settle scale hit (one overshoot, no repeats).",
+          "properties": {
+            "do": {
+              "const": "hit",
+              "type": "string"
+            }
+          },
+          "required": [
+            "do"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Kinetic text: show the next word (hard cut); `flip` swaps ground and\nink from this word on.",
+          "properties": {
+            "do": {
+              "const": "cut",
+              "type": "string"
+            },
+            "flip": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "do"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Charts: the hero dot and callout pop in.",
+          "properties": {
+            "do": {
+              "const": "pop_label",
+              "type": "string"
+            }
+          },
+          "required": [
+            "do"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Shapes: a hop up and a spring landing.",
+          "properties": {
+            "do": {
+              "const": "bounce",
+              "type": "string"
+            }
+          },
+          "required": [
+            "do"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Shapes: travel to a slot along an arc.",
+          "properties": {
+            "do": {
+              "const": "orbit",
+              "type": "string"
+            },
+            "to": {
+              "$ref": "#/$defs/Slot"
+            }
+          },
+          "required": [
+            "do",
+            "to"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Shapes: grow until the shape covers the whole frame.",
+          "properties": {
+            "do": {
+              "const": "fill",
+              "type": "string"
+            }
+          },
+          "required": [
+            "do"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Shapes: shrink back from `fill` to their own size.",
+          "properties": {
+            "do": {
+              "const": "unfill",
+              "type": "string"
+            }
+          },
+          "required": [
+            "do"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Shapes: turn a half turn and settle.",
+          "properties": {
+            "do": {
+              "const": "spin",
+              "type": "string"
+            }
+          },
+          "required": [
+            "do"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Fields: a recolour that travels outward from the focus as a wave.",
+          "properties": {
+            "do": {
+              "const": "wave",
+              "type": "string"
+            },
+            "to": {
+              "$ref": "#/$defs/Swatch"
+            }
+          },
+          "required": [
+            "do",
+            "to"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Diagrams: reveal the next node. Charts: reveal the next value.",
+          "properties": {
+            "do": {
+              "const": "advance",
+              "type": "string"
+            }
+          },
+          "required": [
+            "do"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Lockups: a specular highlight travels across the headline once,\nleft to right.",
+          "properties": {
+            "do": {
+              "const": "sheen",
+              "type": "string"
+            }
+          },
+          "required": [
+            "do"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "2.5D projective tilt from `[pitch_deg, yaw_deg]` to `[pitch_deg, yaw_deg]`.",
+          "properties": {
+            "do": {
+              "const": "tilt",
+              "type": "string"
+            },
+            "from": {
+              "default": [
+                0.0,
+                0.0
+              ],
+              "items": {
+                "format": "float",
+                "type": "number"
+              },
+              "maxItems": 2,
+              "minItems": 2,
+              "type": "array"
+            },
+            "to": {
+              "items": {
+                "format": "float",
+                "type": "number"
+              },
+              "maxItems": 2,
+              "minItems": 2,
+              "type": "array"
+            }
+          },
+          "required": [
+            "do",
+            "to"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Motion trail echoes (`2..=6` copies behind a moving/scaling layer).",
+          "properties": {
+            "count": {
+              "format": "uint8",
+              "maximum": 255,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "do": {
+              "const": "echo",
+              "type": "string"
+            }
+          },
+          "required": [
+            "do",
+            "count"
+          ],
+          "type": "object"
+        }
+      ],
+      "properties": {
+        "at": {
+          "format": "double",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "beat": {
+          "format": "uint32",
+          "minimum": 0,
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ExitStyle": {
+      "oneOf": [
+        {
+          "enum": [
+            "fade"
+          ],
+          "type": "string"
+        },
+        {
+          "const": "cut",
+          "description": "Gone on the next frame: a hard cut (the default; crossfades read as\nslop).",
+          "type": "string"
+        },
+        {
+          "const": "shrink",
+          "description": "Scale down to nothing.",
+          "type": "string"
+        },
+        {
+          "const": "drop",
+          "description": "Drop a short way while fading out.",
+          "type": "string"
+        },
+        {
+          "const": "wipe",
+          "description": "Titles: a mask wipes off to the right.",
+          "type": "string"
+        }
+      ]
+    },
+    "Face": {
+      "description": "Bundled faces (assets/fonts, each under its own licence; restricted faces fall back to open ones, see assets/fonts/RESTRICTED.md).",
+      "enum": [
+        "archivo_black",
+        "poppins_black",
+        "anton",
+        "cabinet_grotesk_extrabold",
+        "clash_display_bold",
+        "panchang_extrabold",
+        "bebas_neue",
+        "barlow_condensed_bold",
+        "satoshi_bold",
+        "instrument_serif_italic",
+        "instrument_serif_regular",
+        "dm_serif_italic",
+        "dm_serif_regular",
+        "zodiak_italic",
+        "zodiak_bold",
+        "zilla_slab_bold",
+        "ibm_plex_mono",
+        "space_mono",
+        "space_mono_bold"
+      ],
+      "type": "string"
+    },
+    "Feature": {
+      "description": "Features banned unless listed in `allow`.",
+      "oneOf": [
+        {
+          "const": "gradient",
+          "description": "Gradient backdrops.",
+          "type": "string"
+        }
+      ]
+    },
+    "FieldPreset": {
+      "oneOf": [
+        {
+          "const": "halftone",
+          "description": "Dots that shrink away from the centre.",
+          "type": "string"
+        },
+        {
+          "const": "grid",
+          "description": "An even dot grid.",
+          "type": "string"
+        },
+        {
+          "const": "rings",
+          "description": "Dots on concentric rings.",
+          "type": "string"
+        },
+        {
+          "const": "tiles",
+          "description": "Rounded squares on a coarse grid (a tile board).",
+          "type": "string"
+        }
+      ]
+    },
+    "Film": {
+      "additionalProperties": false,
+      "description": "Faint, constant film texture (applied after everything else).",
+      "properties": {
+        "fringe": {
+          "default": 0.0,
+          "description": "Red/blue fringe in px at 1080 p, 0..=3.",
+          "format": "float",
+          "type": "number"
+        },
+        "grain": {
+          "default": 0.0,
+          "description": "Grain amount 0..=0.2 (0.04 is faint).",
+          "format": "float",
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "FlowKind": {
+      "oneOf": [
+        {
+          "const": "payment",
+          "description": "Send `amount` to `counterparty`: app icon → payment sheet → hold to\nsend → tick → receipt (same sheet).",
+          "type": "string"
+        },
+        {
+          "const": "signup",
+          "description": "Create an account (`item` = the app or plan): form → welcome.",
+          "type": "string"
+        },
+        {
+          "const": "upload",
+          "description": "Upload `item`: card → hold (progress) → tick → uploaded card.",
+          "type": "string"
+        },
+        {
+          "const": "share",
+          "description": "Share `item` with `counterparty`: share sheet → tap them → shared.",
+          "type": "string"
+        },
+        {
+          "const": "toggle_setting",
+          "description": "Turn on the `item` setting: a settings card whose switch flips.",
+          "type": "string"
+        }
+      ]
+    },
+    "Fonts": {
+      "additionalProperties": false,
+      "properties": {
+        "display": {
+          "$ref": "#/$defs/Face",
+          "default": "archivo_black"
+        },
+        "mono": {
+          "$ref": "#/$defs/Face",
+          "default": "ibm_plex_mono"
+        },
+        "serif": {
+          "$ref": "#/$defs/Face",
+          "default": "instrument_serif_italic"
+        }
+      },
+      "type": "object"
+    },
+    "Fps": {
+      "enum": [
+        "30",
+        "60"
+      ],
+      "type": "string"
+    },
+    "GenAsset": {
+      "additionalProperties": false,
+      "description": "One image to generate before rendering (see `MotionProgram.assets`).",
+      "properties": {
+        "aspect": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Aspect"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Canvas shape (default: the program's aspect for `plate`, 1:1 for `cutout`)."
+        },
+        "id": {
+          "description": "Referenced as `\"gen:<id>\"`; lowercase letters, digits and `_`.",
+          "type": "string"
+        },
+        "kind": {
+          "$ref": "#/$defs/GenKind",
+          "default": "plate"
+        },
+        "prompt": {
+          "description": "What to draw: subject, medium and light, no on-screen words.",
+          "type": "string"
+        },
+        "seed": {
+          "default": 0,
+          "description": "Explicit seed: the same prompt and seed give the same image.",
+          "format": "uint32",
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "prompt"
+      ],
+      "type": "object"
+    },
+    "GenKind": {
+      "description": "What a generated asset is for.",
+      "oneOf": [
+        {
+          "const": "plate",
+          "description": "A full-frame picture or texture (backdrop image, image-filled type).",
+          "type": "string"
+        },
+        {
+          "const": "cutout",
+          "description": "One isolated object with a transparent background.",
+          "type": "string"
+        }
+      ]
+    },
+    "Hit": {
+      "additionalProperties": false,
+      "description": "One SFX hit: `sound` is a library family (`hit_hard`, `whoosh_soft`,\n`subdrop`, ...) or an exact sound id (`hit_hard_03`).",
+      "properties": {
+        "at": {
+          "format": "double",
+          "type": "number"
+        },
+        "gain_db": {
+          "default": 0.0,
+          "description": "Offset from the family's target peak (dB).",
+          "format": "double",
+          "type": "number"
+        },
+        "sound": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "at",
+        "sound"
+      ],
+      "type": "object"
+    },
+    "KineticPreset": {
+      "oneOf": [
+        {
+          "const": "poster_cuts",
+          "description": "One giant word per frame on a full-frame ground; hard cuts, slow push.",
+          "type": "string"
+        },
+        {
+          "const": "glyph_drop",
+          "description": "Letters drop in with one small overshoot.",
+          "type": "string"
+        },
+        {
+          "const": "type_on",
+          "description": "Letters type on.",
+          "type": "string"
+        }
+      ]
+    },
+    "Language": {
+      "enum": [
+        "plain",
+        "rust",
+        "python",
+        "js",
+        "shell"
+      ],
+      "type": "string"
+    },
+    "LockupCase": {
+      "description": "Letter-casing mode for a brand's closing lockup text.",
+      "enum": [
+        "upper",
+        "preserve"
+      ],
+      "type": "string"
+    },
+    "LockupFont": {
+      "description": "Font role selector for a brand's closing lockup headline or subline.",
+      "enum": [
+        "display",
+        "serif",
+        "mono",
+        "sans"
+      ],
+      "type": "string"
+    },
+    "LockupPreset": {
+      "description": "Distinct closing lockup ending archetypes.",
+      "oneOf": [
+        {
+          "const": "spline_frame",
+          "description": "Classic horizontal rules springing from `rules_from` with centered headline and subline.",
+          "type": "string"
+        },
+        {
+          "const": "monolith_split",
+          "description": "Asymmetric Swiss / Brutalist split colophon: left-aligned brandmark,\nvertical accent pillar divider, right-hand bordered mono spec cards + accent status pill.",
+          "type": "string"
+        },
+        {
+          "const": "orbital_seal",
+          "description": "Geometric / Scientific circular seal: solid backing disc, concentric precision reticle rings\nwith cardinal ticks and counter-rotation, centered mark + subline.",
+          "type": "string"
+        },
+        {
+          "const": "terminal_prompt",
+          "description": "Developer / CLI command stamp: dark terminal window with header dots, typed CLI prompt\n(`> headline`), subline readout, and spec line.",
+          "type": "string"
+        },
+        {
+          "const": "editorial_badge",
+          "description": "Editorial / Luxury framed plaque: double-bordered museum frame, custom top accent badge,\nmixed-case or upright headline, short accent bar, and custom subline.",
+          "type": "string"
+        }
+      ]
+    },
+    "Mark": {
+      "enum": [
+        "ring",
+        "underline",
+        "marker"
+      ],
+      "type": "string"
+    },
+    "Meta": {
+      "additionalProperties": false,
+      "properties": {
+        "aspect": {
+          "$ref": "#/$defs/Aspect",
+          "default": "16:9",
+          "description": "Frame shape; layout adapts (see `Slot`)."
+        },
+        "brief": {
+          "description": "The request this program answers (direction, not script): QA fails\non-screen words copied from it unless they were quoted.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "duration": {
+          "description": "Total length in seconds (0 < duration <= 120).",
+          "format": "double",
+          "type": "number"
+        },
+        "end_beat": {
+          "description": "With music: end on this beat (the final hit). `duration` becomes\nthat beat plus most of one beat of hold, so no beat plays after it.",
+          "format": "uint32",
+          "minimum": 0,
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "fps": {
+          "$ref": "#/$defs/Fps",
+          "default": "30",
+          "description": "Frames per second."
+        },
+        "name": {
+          "description": "File-safe name: lowercase letters, digits and `_`.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "duration"
+      ],
+      "type": "object"
+    },
+    "Music": {
+      "additionalProperties": false,
+      "description": "A bundled track (`assets/music/<track>.mp3` with its `.music.json`\nanalysis). Beat `n` is the n-th analysed beat at or after `start`.",
+      "properties": {
+        "start": {
+          "default": 0.0,
+          "description": "Seconds into the track where the program starts.",
+          "format": "double",
+          "type": "number"
+        },
+        "track": {
+          "description": "Track name without extension, e.g. `driving_pulse`.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "track"
+      ],
+      "type": "object"
+    },
+    "Palette": {
+      "additionalProperties": false,
+      "description": "Four colours, `#RRGGBB`. Components name a swatch, never a colour, so a\nprogram has exactly one accent.",
+      "properties": {
+        "accent": {
+          "type": "string"
+        },
+        "background": {
+          "type": "string"
+        },
+        "grounds": {
+          "description": "Up to 4 extra full-frame grounds (`ground1`..`ground4`): sections\ncan each live in their own colour world while keeping one accent.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "ink": {
+          "type": "string"
+        },
+        "muted": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "background",
+        "ink",
+        "accent",
+        "muted"
+      ],
+      "type": "object"
+    },
+    "PhotoLayout": {
+      "description": "Visual layout grammar for one step of a [`PhotoStack`].",
+      "oneOf": [
+        {
+          "const": "brand_mark",
+          "description": "Geometric emblem mark + editorial serif wordmark, or radial rosette circle.",
+          "type": "string"
+        },
+        {
+          "const": "word_morph",
+          "description": "Serif word-pair morph (`ask` → `task`, `draft` → `craft`, `Keep` → `thinking.`)\nwith optional cutouts and ruled lines.",
+          "type": "string"
+        },
+        {
+          "const": "grid",
+          "description": "Scale variety \"many\": 3×3 grid of engravings/cutouts with a marked centre cell.",
+          "type": "string"
+        },
+        {
+          "const": "zoetrope",
+          "description": "Circular 12-spoke zoetrope ring of silhouettes rotating around an accent dot.",
+          "type": "string"
+        },
+        {
+          "const": "hero",
+          "description": "Scale variety \"big\": single hero cutout with hand-drawn accent strokes on top.",
+          "type": "string"
+        },
+        {
+          "const": "blueprint",
+          "description": "Radial geometric construction blueprint.",
+          "type": "string"
+        },
+        {
+          "const": "starburst3d",
+          "description": "Multi-layer 2.5D/3D extruded geometric emblem rotating in perspective.",
+          "type": "string"
+        },
+        {
+          "const": "constellation",
+          "description": "Sparse star-field with constellation lines drawing to an accent pointer.",
+          "type": "string"
+        },
+        {
+          "const": "vitruvian",
+          "description": "Woodcut circle-in-square geometric study with chords and sweeping arc.",
+          "type": "string"
+        }
+      ]
+    },
+    "PhotoPreset": {
+      "description": "Preset treatment and stroke aesthetic for a [`PhotoStack`].",
+      "oneOf": [
+        {
+          "const": "engraving_red",
+          "description": "High-contrast monochrome engraving/sculpture cutouts on light ground\nwith hand-drawn ink & terracotta accent strokes (`Path` + `Trim`).",
+          "type": "string"
+        },
+        {
+          "const": "editorial_cut",
+          "description": "Clean editorial cutouts with bold framing rules.",
+          "type": "string"
+        },
+        {
+          "const": "parallax",
+          "description": "Layered depth cutouts with parallax camera push.",
+          "type": "string"
+        }
+      ]
+    },
+    "PhotoStep": {
+      "additionalProperties": false,
+      "description": "One fast cut or state inside a [`PhotoStack`].",
+      "properties": {
+        "asset": {
+          "description": "Primary cutout asset id (e.g. `\"marble_bust\"`, `\"horse_head\"`).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "assets": {
+          "description": "Multiple cutout asset ids (for `grid` or paired cutouts in `word_morph`).",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "at": {
+          "default": 0.0,
+          "description": "Seconds from the component's start (filled from `beat` or `beat_cuts`).",
+          "format": "double",
+          "type": "number"
+        },
+        "beat": {
+          "description": "Music beat on which this step cuts in.",
+          "format": "uint32",
+          "minimum": 0,
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "layout": {
+          "$ref": "#/$defs/PhotoLayout",
+          "default": "hero",
+          "description": "Composition layout for this step."
+        },
+        "ruled": {
+          "description": "Draw horizontal ledger/notebook baselines across the frame.",
+          "type": "boolean"
+        },
+        "stroke": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/AccentStroke"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Hand-drawn stroke overlay animated with `Trim`."
+        },
+        "subtext": {
+          "description": "Secondary line revealed underneath (`\"thinking.\"`).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "text": {
+          "description": "Primary serif word or brand name (e.g. `\"ask\"`, `\"draft\"`, `\"Studio\"`).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "to_text": {
+          "description": "Target word when morphing (`\"task\"`, `\"craft\"`).",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "Recipe": {
+      "description": "Named style recipes (`assets/recipes/<name>.recipe.json`).",
+      "oneOf": [
+        {
+          "const": "poster_kinetic",
+          "description": "Off-white, black and one orange; heavy grotesk; fast cuts.",
+          "type": "string"
+        },
+        {
+          "const": "thin_axis",
+          "description": "Dark navy, thin axes, one gold series.",
+          "type": "string"
+        },
+        {
+          "const": "orange_dot",
+          "description": "Cream ground, one orange dot, muted dot fields.",
+          "type": "string"
+        }
+      ]
+    },
+    "ShapePreset": {
+      "oneOf": [
+        {
+          "const": "solid",
+          "description": "Solid fill.",
+          "type": "string"
+        },
+        {
+          "const": "outline",
+          "description": "Stroke only (can `draw` on).",
+          "type": "string"
+        }
+      ]
+    },
+    "ShapeSpec": {
+      "description": "A named primitive, or `{\"path\": \"<svg path data>\"}` in a 100×100 box.",
+      "oneOf": [
+        {
+          "enum": [
+            "circle",
+            "square",
+            "rounded",
+            "pill",
+            "triangle",
+            "diamond",
+            "star",
+            "ring",
+            "blob"
+          ],
+          "type": "string"
+        },
+        {
+          "additionalProperties": false,
+          "description": "SVG path data in a 100×100 box (`M L H V C S Q T A Z`).",
+          "properties": {
+            "path": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "path"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "Size": {
+      "description": "Relative size (shapes: share of the short side; titles: type size).",
+      "enum": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "type": "string"
+    },
+    "SketchBrush": {
+      "description": "Natural media brush presets supported by the sketch engine.",
+      "enum": [
+        "hb",
+        "2b",
+        "2h",
+        "cpencil",
+        "pen",
+        "rotring",
+        "spray",
+        "marker",
+        "marker2",
+        "charcoal",
+        "hatch_brush"
+      ],
+      "type": "string"
+    },
+    "SketchElement": {
+      "description": "An individual drawable natural-media mark or polygon.",
+      "oneOf": [
+        {
+          "description": "Straight line segment between normalized `[0..1]` points.",
+          "properties": {
+            "from": {
+              "items": {
+                "format": "float",
+                "type": "number"
+              },
+              "maxItems": 2,
+              "minItems": 2,
+              "type": "array"
+            },
+            "shape": {
+              "const": "line",
+              "type": "string"
+            },
+            "to": {
+              "items": {
+                "format": "float",
+                "type": "number"
+              },
+              "maxItems": 2,
+              "minItems": 2,
+              "type": "array"
+            }
+          },
+          "required": [
+            "shape",
+            "from",
+            "to"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Smooth cubic spline passing through control points with optional per-point pressures.",
+          "properties": {
+            "curvature": {
+              "default": 0.5,
+              "format": "float",
+              "type": "number"
+            },
+            "points": {
+              "items": {
+                "items": {
+                  "format": "float",
+                  "type": "number"
+                },
+                "maxItems": 2,
+                "minItems": 2,
+                "type": "array"
+              },
+              "type": "array"
+            },
+            "pressures": {
+              "items": {
+                "format": "float",
+                "type": "number"
+              },
+              "type": "array"
+            },
+            "shape": {
+              "const": "spline",
+              "type": "string"
+            }
+          },
+          "required": [
+            "shape",
+            "points"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Streamline following the sketch vector field from a start coordinate.",
+          "properties": {
+            "angle_deg": {
+              "default": 0.0,
+              "format": "float",
+              "type": "number"
+            },
+            "length": {
+              "format": "float",
+              "type": "number"
+            },
+            "shape": {
+              "const": "flow_line",
+              "type": "string"
+            },
+            "start": {
+              "items": {
+                "format": "float",
+                "type": "number"
+              },
+              "maxItems": 2,
+              "minItems": 2,
+              "type": "array"
+            }
+          },
+          "required": [
+            "shape",
+            "start",
+            "length"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Normalized rectangle `[x, y, w, h]` with optional corner radius.",
+          "properties": {
+            "radius": {
+              "default": 0.0,
+              "format": "float",
+              "type": "number"
+            },
+            "shape": {
+              "const": "rect",
+              "type": "string"
+            },
+            "xywh": {
+              "items": {
+                "format": "float",
+                "type": "number"
+              },
+              "maxItems": 4,
+              "minItems": 4,
+              "type": "array"
+            }
+          },
+          "required": [
+            "shape",
+            "xywh"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Circle with center and radius in normalized coordinates, plus hand irregularity.",
+          "properties": {
+            "center": {
+              "items": {
+                "format": "float",
+                "type": "number"
+              },
+              "maxItems": 2,
+              "minItems": 2,
+              "type": "array"
+            },
+            "irregularity": {
+              "default": 0.0,
+              "format": "float",
+              "type": "number"
+            },
+            "radius": {
+              "format": "float",
+              "type": "number"
+            },
+            "shape": {
+              "const": "circle",
+              "type": "string"
+            }
+          },
+          "required": [
+            "shape",
+            "center",
+            "radius"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Circular arc between two angles (in degrees, clockwise).",
+          "properties": {
+            "center": {
+              "items": {
+                "format": "float",
+                "type": "number"
+              },
+              "maxItems": 2,
+              "minItems": 2,
+              "type": "array"
+            },
+            "end_deg": {
+              "format": "float",
+              "type": "number"
+            },
+            "radius": {
+              "format": "float",
+              "type": "number"
+            },
+            "shape": {
+              "const": "arc",
+              "type": "string"
+            },
+            "start_deg": {
+              "format": "float",
+              "type": "number"
+            }
+          },
+          "required": [
+            "shape",
+            "center",
+            "radius",
+            "start_deg",
+            "end_deg"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Closed polygon through normalized vertex coordinates.",
+          "properties": {
+            "points": {
+              "items": {
+                "items": {
+                  "format": "float",
+                  "type": "number"
+                },
+                "maxItems": 2,
+                "minItems": 2,
+                "type": "array"
+              },
+              "type": "array"
+            },
+            "shape": {
+              "const": "polygon",
+              "type": "string"
+            }
+          },
+          "required": [
+            "shape",
+            "points"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Arbitrary SVG path data in normalized `0..1000` space, scaled to slot box.",
+          "properties": {
+            "d": {
+              "type": "string"
+            },
+            "shape": {
+              "const": "path",
+              "type": "string"
+            }
+          },
+          "required": [
+            "shape",
+            "d"
+          ],
+          "type": "object"
+        }
+      ],
+      "properties": {
+        "brush": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SketchBrush"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Stroke brush (omit if noStroke)."
+        },
+        "hatch": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SketchHatch"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Optional interior hatching (`brush.hatch`)."
+        },
+        "pressure": {
+          "description": "Optional pressure curve `[start, mid, end]` or `[start, end]`.",
+          "items": {
+            "format": "float",
+            "type": "number"
+          },
+          "type": "array"
+        },
+        "stroke_swatch": {
+          "$ref": "#/$defs/Swatch",
+          "default": "ink",
+          "description": "Stroke colour swatch (default: Ink)."
+        },
+        "tip_asset": {
+          "description": "Optional custom brush tip image asset.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "wash": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Swatch"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Optional flat wash fill swatch (`brush.wash`)."
+        },
+        "watercolor": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SketchWatercolor"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Optional interior watercolor bleed fill (`brush.fill` + `fillBleed`)."
+        },
+        "weight": {
+          "default": 1.0,
+          "description": "Stroke weight multiplier (default: 1.0).",
+          "format": "float",
+          "type": "number"
+        },
+        "wiggle": {
+          "description": "Optional per-element hand wiggle override (0..=10).",
+          "format": "float",
+          "type": [
+            "number",
+            "null"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "SketchField": {
+      "description": "Procedural vector flow field presets.",
+      "enum": [
+        "hand",
+        "curved",
+        "zigzag",
+        "waves",
+        "seabed",
+        "spiral",
+        "columns"
+      ],
+      "type": "string"
+    },
+    "SketchHatch": {
+      "additionalProperties": false,
+      "description": "Interior hatching specification (`brush.hatch`).",
+      "properties": {
+        "angle_deg": {
+          "default": 35.0,
+          "description": "Hatch line angle in degrees (default: 35.0).",
+          "format": "float",
+          "type": "number"
+        },
+        "brush": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SketchBrush"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Brush preset used to stroke hatch lines."
+        },
+        "continuous": {
+          "description": "Whether hatch strokes loop continuously.",
+          "type": "boolean"
+        },
+        "cross": {
+          "description": "If true, adds perpendicular cross-hatch lines.",
+          "type": "boolean"
+        },
+        "dist": {
+          "description": "Hatch spacing in pixels (default: 14.0 px).",
+          "format": "float",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "gradient": {
+          "default": 0.0,
+          "description": "Density gradient along hatch direction (0.0 = uniform).",
+          "format": "float",
+          "type": "number"
+        },
+        "rand": {
+          "default": 0.07999999821186066,
+          "description": "Randomness of line placement and jitter (default: 0.08).",
+          "format": "float",
+          "type": "number"
+        },
+        "swatch": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Swatch"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Hatch stroke color swatch."
+        },
+        "weight": {
+          "description": "Hatch stroke weight multiplier.",
+          "format": "float",
+          "type": [
+            "number",
+            "null"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "SketchPreset": {
+      "description": "Layout and composition presets for a [`Sketch`].",
+      "oneOf": [
+        {
+          "const": "freeform",
+          "description": "Renders user-authored `elements` in normalized `[0.0..1.0]` box coordinates.",
+          "type": "string"
+        },
+        {
+          "const": "golden_spiral",
+          "description": "Euclid/Fibonacci Golden Rectangle + Logarithmic Spiral study with watercolor wash\nchambers, hatched golden squares, and charcoal spiral curve leading into the golden eye.",
+          "type": "string"
+        },
+        {
+          "const": "flow_field",
+          "description": "Organic multi-streamline flow field tapestry around a calm central editorial title card.",
+          "type": "string"
+        },
+        {
+          "const": "architectural_hatch",
+          "description": "Architectural elevation and drafting composition with geometric cross-hatching,\ntechnical rotring callouts, and watercolor wash accents.",
+          "type": "string"
+        }
+      ]
+    },
+    "SketchWatercolor": {
+      "additionalProperties": false,
+      "description": "Interior watercolor bleed fill specification (`brush.fill` + `fillBleed`).",
+      "properties": {
+        "angle_deg": {
+          "description": "Optional dominant flow angle of the pigment bleed.",
+          "format": "float",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "bleed": {
+          "description": "Bleed intensity beyond the shape boundary (default: 0.35).",
+          "format": "float",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "border": {
+          "description": "Edge pigment accumulation border intensity (default: 0.45).",
+          "format": "float",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "inward": {
+          "description": "If true, bleed pools inward rather than bleeding out past the contour.",
+          "type": "boolean"
+        },
+        "opacity": {
+          "description": "Wash opacity (0.0..=1.0, default: 0.78).",
+          "format": "float",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "swatch": {
+          "$ref": "#/$defs/Swatch",
+          "description": "Color swatch for watercolor wash."
+        },
+        "texture": {
+          "description": "Granular paper texture absorption factor (default: 0.55).",
+          "format": "float",
+          "type": [
+            "number",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "swatch"
+      ],
+      "type": "object"
+    },
+    "Slot": {
+      "description": "Where a component sits. `lead`/`trail` are the left/right thirds in\nlandscape and the upper/lower thirds in portrait and square frames.",
+      "oneOf": [
+        {
+          "enum": [
+            "center",
+            "lead",
+            "trail",
+            "top",
+            "bottom",
+            "left",
+            "right"
+          ],
+          "type": "string"
+        },
+        {
+          "const": "top_left",
+          "description": "Titles: left-aligned near the top-left corner (chapter labels).",
+          "type": "string"
+        },
+        {
+          "const": "bottom_left",
+          "description": "Titles: left-aligned near the bottom-left corner.",
+          "type": "string"
+        }
+      ]
+    },
+    "SoundDesign": {
+      "additionalProperties": false,
+      "description": "A bed and hits, placed by hand at program seconds.",
+      "properties": {
+        "bed": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Bed"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "hits": {
+          "description": "SFX hits, each peaking at `at`.",
+          "items": {
+            "$ref": "#/$defs/Hit"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "Swatch": {
+      "description": "A palette entry.",
+      "enum": [
+        "background",
+        "ink",
+        "accent",
+        "muted",
+        "ground1",
+        "ground2",
+        "ground3",
+        "ground4"
+      ],
+      "type": "string"
+    },
+    "Tempo": {
+      "enum": [
+        "slow",
+        "normal",
+        "fast"
+      ],
+      "type": "string"
+    },
+    "TitlePreset": {
+      "oneOf": [
+        {
+          "const": "display",
+          "description": "Heavy grotesk, tight.",
+          "type": "string"
+        },
+        {
+          "const": "serif",
+          "description": "Serif italic, quiet.",
+          "type": "string"
+        },
+        {
+          "const": "label",
+          "description": "Small mono caps, tracked.",
+          "type": "string"
+        },
+        {
+          "const": "chapter",
+          "description": "Bold small caps: a section/chapter name (use with `top_left`).",
+          "type": "string"
+        },
+        {
+          "const": "stacked",
+          "description": "Big heavy caps with two offset echoes (accent, then muted) behind.",
+          "type": "string"
+        }
+      ]
+    },
+    "TransitionEvent": {
+      "description": "A transition at program seconds `at` or music `beat` (the cut point).",
+      "properties": {
+        "at": {
+          "format": "double",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "beat": {
+          "format": "uint32",
+          "minimum": 0,
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "kind": {
+          "$ref": "#/$defs/TransitionKind"
+        }
+      },
+      "required": [
+        "kind"
+      ],
+      "type": "object"
+    },
+    "TransitionKind": {
+      "oneOf": [
+        {
+          "const": "whip",
+          "description": "The camera whips sideways out of one shot and into the next, with\ndirectional blur at the cut.",
+          "type": "string"
+        },
+        {
+          "const": "colour_flip",
+          "description": "An accent panel wipes across and off, carrying the eye over the cut.",
+          "type": "string"
+        },
+        {
+          "const": "impact",
+          "description": "A landing: a two-frame shockwave ring from the frame centre, a short\nmotion blur and a decaying camera shake.",
+          "type": "string"
+        }
+      ]
+    },
+    "TypeCase": {
+      "description": "Letter case of displayed type.",
+      "oneOf": [
+        {
+          "enum": [
+            "upper"
+          ],
+          "type": "string"
+        },
+        {
+          "const": "preset",
+          "description": "The preset's case (most presets set display type in capitals).",
+          "type": "string"
+        },
+        {
+          "const": "as_written",
+          "description": "Exactly as written.",
+          "type": "string"
+        }
+      ]
+    },
+    "TypeFill": {
+      "description": "The paint inside the glyphs.",
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "description": "The component's colour.",
+          "properties": {
+            "kind": {
+              "const": "solid",
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "description": "A linear gradient between two swatches across the line's box.",
+          "properties": {
+            "angle_deg": {
+              "default": 0.0,
+              "description": "Gradient direction in degrees (0 = left to right).",
+              "format": "float",
+              "type": "number"
+            },
+            "from": {
+              "$ref": "#/$defs/Swatch"
+            },
+            "kind": {
+              "const": "gradient",
+              "type": "string"
+            },
+            "to": {
+              "$ref": "#/$defs/Swatch"
+            }
+          },
+          "required": [
+            "kind",
+            "from",
+            "to"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "description": "An image seen through the glyphs (a text mask), cover-fit to the\nline's box. Relative path under `assets/`.",
+          "properties": {
+            "image": {
+              "type": "string"
+            },
+            "kind": {
+              "const": "image",
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind",
+            "image"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "TypeStyle": {
+      "additionalProperties": false,
+      "description": "How a line of type is painted. Absent = solid colour, the preset's case.",
+      "properties": {
+        "case": {
+          "$ref": "#/$defs/TypeCase",
+          "default": "preset"
+        },
+        "fill": {
+          "$ref": "#/$defs/TypeFill",
+          "default": {
+            "kind": "solid"
+          }
+        },
+        "outline": {
+          "description": "Stroke the glyph outlines (in the fill colour) instead of filling them.",
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
+    "UiFlow": {
+      "additionalProperties": false,
+      "description": "A product flow on one actor's device; states and copy are derived.",
+      "properties": {
+        "actor": {
+          "description": "Whose device this is (a first name, or \"You\" = unnamed; signup\ngreets a name).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "amount": {
+          "description": "Payment: the amount with its currency, e.g. \"€24.00\".",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "app": {
+          "description": "The app's name (its icon opens the flow), at most 12 characters.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "counterparty": {
+          "description": "The other person (payment, share): a first name.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "item": {
+          "description": "The thing acted on: payment's source account, signup's app or plan,\nupload's and share's file, toggle's setting.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "kind": {
+          "$ref": "#/$defs/FlowKind"
+        },
+        "note": {
+          "description": "A short note (payment's memo, upload's destination).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reply": {
+          "description": "Later news from the counterparty as their verb phrase, e.g. \"liked\nyour payment\"; shown as a notification after the result. Never a\nrepeat of what the screen shows.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "kind"
+      ],
+      "type": "object"
+    },
+    "UiIcon": {
+      "oneOf": [
+        {
+          "const": "check",
+          "description": "A tick in a filled circle, drawn on.",
+          "type": "string"
+        }
+      ]
+    },
+    "UiShape": {
+      "oneOf": [
+        {
+          "const": "pill",
+          "description": "A 44 pt capsule sized to its label.",
+          "type": "string"
+        },
+        {
+          "const": "button",
+          "description": "A full-width 54 pt button (at the bottom of a phone screen).",
+          "type": "string"
+        },
+        {
+          "const": "toast",
+          "description": "A 64 pt notification under the island.",
+          "type": "string"
+        },
+        {
+          "const": "card",
+          "description": "A centred card: title, rows, optional amount and button.",
+          "type": "string"
+        },
+        {
+          "const": "sheet",
+          "description": "A bottom sheet: grabber, title, amount, rows, button.",
+          "type": "string"
+        },
+        {
+          "const": "icon",
+          "description": "A 120 pt app icon.",
+          "type": "string"
+        }
+      ]
+    },
+    "UiState": {
+      "description": "One state of the container.",
+      "properties": {
+        "amount": {
+          "description": "Card and sheet: the hero number (at most 10 characters).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "cta": {
+          "description": "Card and sheet: the primary button's label (at most 20 characters).",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "detail": {
+          "description": "A quieter line under the title, at most 36 characters.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "fill": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Swatch"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Container colour (default: the surface; never the ground)."
+        },
+        "icon": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/UiIcon"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "A leading vector icon (pills, buttons and toasts)."
+        },
+        "items": {
+          "description": "Card and sheet rows (at most 4, 24 characters each).",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "shape": {
+          "$ref": "#/$defs/UiShape",
+          "default": "pill"
+        },
+        "switches": {
+          "description": "Rows with a switch instead of a chevron (on/off per row, in row\norder); tapping such a row flips it in place.",
+          "items": {
+            "type": "boolean"
+          },
+          "type": "array"
+        },
+        "title": {
+          "description": "1..=28 characters; no ✓/→/emoji (use `icon`).",
+          "type": "string"
+        }
+      },
+      "required": [
+        "title"
+      ],
+      "type": "object"
+    },
+    "UiStep": {
+      "oneOf": [
+        {
+          "description": "The container morphs to state `state`.",
+          "properties": {
+            "do": {
+              "const": "to_state",
+              "type": "string"
+            },
+            "state": {
+              "format": "uint",
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "do",
+            "state"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "A tap: on the row the next state names (or `row`), else the button,\nelse the container; with `then`, the container morphs to that state\nat the step time (the tap lands 0.12 s before it).",
+          "properties": {
+            "do": {
+              "const": "click",
+              "type": "string"
+            },
+            "row": {
+              "format": "uint",
+              "minimum": 0,
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "then": {
+              "format": "uint",
+              "minimum": 0,
+              "type": [
+                "integer",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "do"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Press and hold the button for `secs` (0.4..=2.0): progress fills it,\nit collapses to a circle and a tick draws on; with `then`, the\ncontainer morphs to that state 1.1 s after the release.",
+          "properties": {
+            "do": {
+              "const": "hold",
+              "type": "string"
+            },
+            "secs": {
+              "format": "double",
+              "type": "number"
+            },
+            "then": {
+              "format": "uint",
+              "minimum": 0,
+              "type": [
+                "integer",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "do",
+            "secs"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "State `state` (a toast) grows out of the island, holds `hold` s\n(default 1.6, at least its read time) and goes back in.",
+          "properties": {
+            "do": {
+              "const": "toast",
+              "type": "string"
+            },
+            "hold": {
+              "format": "double",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "state": {
+              "format": "uint",
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "do",
+            "state"
+          ],
+          "type": "object"
+        },
+        {
+          "description": "Camera: `in` frames the current state, `out` shows the whole device.",
+          "properties": {
+            "do": {
+              "const": "zoom",
+              "type": "string"
+            },
+            "to": {
+              "$ref": "#/$defs/ZoomTo",
+              "default": "in"
+            }
+          },
+          "required": [
+            "do"
+          ],
+          "type": "object"
+        }
+      ],
+      "properties": {
+        "at": {
+          "default": 0.0,
+          "description": "Seconds from the component start (fallback when no `beat`/`bar`).",
+          "format": "double",
+          "type": "number"
+        },
+        "bar": {
+          "description": "On the downbeat of bar n (beat 4n) instead.",
+          "format": "uint32",
+          "minimum": 0,
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "beat": {
+          "description": "On music beat n instead (program beat grid, snapped to a frame).",
+          "format": "uint32",
+          "minimum": 0,
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "ZoomTo": {
+      "enum": [
+        "in",
+        "out"
+      ],
+      "type": "string"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "description": "A MotionEngine 2 program: palette, type, tempo and components on one\nexplicit timeline. Compiles deterministically to a MotionScene.",
+  "properties": {
+    "allow": {
+      "description": "Opt-in features that the taste rules ban by default (added to the\nrecipe's).",
+      "items": {
+        "$ref": "#/$defs/Feature"
+      },
+      "type": "array"
+    },
+    "assets": {
+      "description": "Images generated before rendering, from a prompt. Any image path in\nthe program may name one as `\"gen:<id>\"`. Generated once per\n(prompt, kind, aspect, seed) and cached; the render never waits on a\nnetwork or model call.",
+      "items": {
+        "$ref": "#/$defs/GenAsset"
+      },
+      "type": "array"
+    },
+    "camera": {
+      "description": "Program camera: pushes, pans and framing over every component\n(grounds stay put), on the same clock as the timeline.",
+      "items": {
+        "$ref": "#/$defs/CameraEvent"
+      },
+      "type": "array"
+    },
+    "components": {
+      "description": "Drawn back to front in list order.",
+      "items": {
+        "$ref": "#/$defs/Component"
+      },
+      "type": "array"
+    },
+    "film": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Film"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "A film finish over the whole program: faint grain and a soft\nchromatic fringe."
+    },
+    "fonts": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Fonts"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Type faces per role; default: the recipe's, else the heavy grotesk +\nserif italic + mono set."
+    },
+    "meta": {
+      "$ref": "#/$defs/Meta"
+    },
+    "music": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Music"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "A bundled music bed; its offline beat analysis lets events and\ncomponents use `beat` instead of seconds."
+    },
+    "palette": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Palette"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Required unless a recipe gives one."
+    },
+    "recipe": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Recipe"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "A style recipe: palette, type, tempo and allowances in one name.\nExplicit `palette`/`fonts`/`tempo`/`allow` override it."
+    },
+    "sound": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/SoundDesign"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Sound design without a beat clock: a bed and SFX hits at program\nseconds (a beat-led program uses `music` instead)."
+    },
+    "tempo": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Tempo"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Global speed of every verb: slow ×1.35, normal ×1, fast ×0.75."
+    },
+    "transitions": {
+      "description": "Shot transitions at program times (or beats).",
+      "items": {
+        "$ref": "#/$defs/TransitionEvent"
+      },
+      "type": "array"
+    },
+    "version": {
+      "description": "Schema version, `\"2.0\"`.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "version",
+    "meta",
+    "components"
+  ],
+  "title": "MotionProgram",
+  "type": "object"
+}

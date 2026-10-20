@@ -61,6 +61,18 @@ impl GroupRef {
 /// first layer's id up to its first dot, plus the dot (`b2.`). Falls back to
 /// `b<N>.` for a `beat_<N>` scene without layers.
 pub fn scene_prefix(scene: &Scene) -> Option<String> {
+    // (0.24) A footage plate (`plate.N`) sits first in a scene it backs: the
+    // beat's own prefix wins when the scene is `beat_<N>`.
+    if let Some(n) = scene
+        .id
+        .strip_prefix("beat_")
+        .filter(|n| n.parse::<usize>().is_ok())
+    {
+        let own = format!("b{n}.");
+        if scene.layers.iter().any(|l| l.id.starts_with(&own)) {
+            return Some(own);
+        }
+    }
     let from_layer = scene
         .layers
         .first()
@@ -172,6 +184,31 @@ fn leaf_readable(layer: &ResolvedLayer<'_>, opacity: f32, blur_sq: f32, limits: 
         .unwrap_or(1.0);
     if opacity * glyph < limits.opacity {
         return false;
+    }
+    // (0.24) A clip reveal slides the content inside a fixed box: until half
+    // of the content has slid in, the layer shows less than half of itself.
+    // The offset is the content's translation in the box's own space.
+    let t = &layer.transform;
+    let (dx, dy) = (
+        layer.content_transform.e - t.e,
+        layer.content_transform.f - t.f,
+    );
+    let det = t.a * t.d - t.b * t.c;
+    // A layer with no clip reveal reports an identity content transform.
+    if layer.content_transform != motion_core::timeline::Affine::IDENTITY
+        && (dx.abs() > 1e-3 || dy.abs() > 1e-3)
+        && det.abs() > 1e-9
+        && layer.width > 0.0
+        && layer.height > 0.0
+    {
+        // Solve [[a, c], [b, d]] * (ox, oy) = (dx, dy).
+        let ox = (dx * t.d - t.c * dy) / det;
+        let oy = (t.a * dy - t.b * dx) / det;
+        let shown_x = (1.0 - ox.abs() / layer.width).max(0.0);
+        let shown_y = (1.0 - oy.abs() / layer.height).max(0.0);
+        if shown_x * shown_y < limits.opacity {
+            return false;
+        }
     }
     // A big headline or a picture stays legible under more blur than small
     // type: the limit grows with the leaf's size (the cinematic title plane

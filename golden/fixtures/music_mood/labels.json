@@ -1,8 +1,8 @@
 {
-  "about": "Labelled stories for the music-mood tests (sprint 0.23 C4a). expected = the family a listener would call the story's mood; accepted = every family that still counts as a fit; style = the story's own StyleProfile (absent: tone auto). The optional stories are read from the repository root, else from $MOTION_MOOD_EXTRA_ROOT, else skipped.",
+  "about": "Labelled stories for the music-mood tests (sprint 0.23 C4a). expected = the family a listener would call the story's mood; accepted = every family that still counts as a fit; style = the story's own StyleProfile (absent: tone auto).",
   "stories": [
     {
-      "path": "docs/plans/sprint_0_23/stories/sleep_review.intent.json",
+      "path": "examples/bench/stories/sleep_review.intent.json",
       "expected": "neutral_explainer",
       "accepted": [
         "neutral_explainer",
@@ -12,7 +12,7 @@
       ]
     },
     {
-      "path": "docs/plans/sprint_0_23/stories/money_review.intent.json",
+      "path": "examples/bench/stories/money_review.intent.json",
       "expected": "neutral_explainer",
       "accepted": [
         "neutral_explainer",
@@ -363,26 +363,6 @@
         "somber",
         "dramatic"
       ]
-    }
-  ],
-  "optional": [
-    {
-      "path": "brand/wallet_atlas/content/intents_v3/inflation_ranking.intent.json",
-      "expected": "serious",
-      "accepted": [
-        "serious",
-        "neutral_explainer"
-      ],
-      "style": "brand/wallet_atlas/content/intents_v3/wallet_atlas.style.json"
-    },
-    {
-      "path": "brand/wallet_atlas/content/intents_v3/fuel_tank_cost.intent.json",
-      "expected": "neutral_explainer",
-      "accepted": [
-        "neutral_explainer",
-        "serious"
-      ],
-      "style": "brand/wallet_atlas/content/intents_v3/wallet_atlas.style.json"
     }
   ]
 }

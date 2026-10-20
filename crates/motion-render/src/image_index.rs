@@ -98,3 +98,12 @@ pub fn image_index(project: &MotionProject, base_dir: &Path) -> ImageIndex {
     }
     index
 }
+
+/// (0.24 M9) Give each picture of a freshly compiled `project` that would fail
+/// `asset_low_contrast` its keyline or sticker (see
+/// [`motion_core::subject_qa::guard_low_contrast`]). `base_dir` is the
+/// directory the project file will live in. Returns the pictures changed.
+pub fn guard_pictures(project: &mut MotionProject, base_dir: &Path) -> usize {
+    let index = image_index(project, base_dir);
+    motion_core::subject_qa::guard_low_contrast(project, &index)
+}

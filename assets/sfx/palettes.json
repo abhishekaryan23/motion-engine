@@ -1,0 +1,208 @@
+{
+  "version": "0.1",
+  "note": "Cue palettes (0.24 M5). The audio planner picks a palette from the art-direction look (ProjectMeta.art.look), else from the temperament, and draws every cue family from it. Families are listed in preference order; a later family is used only when an earlier one would exceed 40% of the video's cues. role_lufs are the loudness each role is normalised to (gain_db = role_lufs - sound.lufs, plus a deterministic jitter of at most 0.9 dB). Roles: open = first arrival, hero = the beat's lead reveal, hero_big_with = beds played with the video's biggest hero, riser = lead-in before that hero, transition = the cut whoosh, small = secondary arrivals, close = tail bed when the last beat is not the biggest. (0.24 M7) count = the family of a counting number's tick train (one tick per 1/N of its eased progress, never on the settle); count_lock = the soft hit on the settle when the beat's hero is elsewhere; count_max_per_s caps the train's rate; count_offset_db shifts the train's loudness. voice = the levels under a voice-over (LUFS-equiv, so every cue sits at least 12 LU below the voice while a word is spoken): per role while speaking, plus gap_boost_db in gaps between phrases (a gap is 0.25 s without a word), nucleus_db on a word's middle half, count_speech_db extra for ticks while speaking, count_max_per_s_speech the train rate cap under speech.",
+  "role_lufs": {
+    "hero": -20.0,
+    "transition": -24.0,
+    "small": -28.0,
+    "count": -28.0
+  },
+  "default": "editorial",
+  "palettes": {
+    "editorial": {
+      "looks": [
+        "ornament_editorial",
+        "dossier"
+      ],
+      "temperaments": [
+        "editorial",
+        "restrained"
+      ],
+      "open": [
+        "paper",
+        "tick"
+      ],
+      "hero": [
+        "hit_soft",
+        "subdrop"
+      ],
+      "hero_big_with": [
+        "subdrop"
+      ],
+      "riser": [],
+      "transition": [
+        "whoosh_soft",
+        "paper"
+      ],
+      "small": [
+        "tick"
+      ],
+      "close": [
+        "subdrop"
+      ],
+      "count": [
+        "tick"
+      ],
+      "count_lock": [
+        "hit_soft"
+      ]
+    },
+    "pop": {
+      "looks": [
+        "clay_pop",
+        "studio_pop"
+      ],
+      "temperaments": [
+        "energetic"
+      ],
+      "open": [
+        "pop"
+      ],
+      "hero": [
+        "hit_soft",
+        "pop"
+      ],
+      "hero_big_with": [],
+      "riser": [],
+      "transition": [
+        "swipe"
+      ],
+      "small": [
+        "pop"
+      ],
+      "close": [
+        "hit_soft"
+      ],
+      "count": [
+        "pop"
+      ],
+      "count_lock": [
+        "pop"
+      ],
+      "count_max_per_s": 8.0
+    },
+    "tech": {
+      "looks": [
+        "journey"
+      ],
+      "temperaments": [
+        "precise"
+      ],
+      "open": [
+        "notification",
+        "data"
+      ],
+      "hero": [
+        "notification",
+        "data",
+        "glitch"
+      ],
+      "hero_big_with": [],
+      "riser": [],
+      "transition": [
+        "glitch",
+        "data"
+      ],
+      "small": [
+        "click",
+        "data"
+      ],
+      "close": [
+        "notification"
+      ],
+      "count": [
+        "data"
+      ],
+      "count_lock": [
+        "click"
+      ]
+    },
+    "street": {
+      "looks": [
+        "street_collage",
+        "halftone_cutout",
+        "hype_slam"
+      ],
+      "temperaments": [],
+      "open": [
+        "glitch"
+      ],
+      "hero": [
+        "hit_hard",
+        "glitch"
+      ],
+      "hero_big_with": [
+        "subdrop"
+      ],
+      "riser": [],
+      "transition": [
+        "whoosh_hard",
+        "swipe"
+      ],
+      "small": [
+        "glitch",
+        "pop"
+      ],
+      "close": [
+        "hit_hard"
+      ],
+      "count": [
+        "tick"
+      ],
+      "count_lock": [
+        "hit_hard"
+      ]
+    },
+    "cinematic": {
+      "looks": [
+        "cinematic_3d",
+        "classical_neon"
+      ],
+      "temperaments": [],
+      "open": [
+        "whoosh_soft"
+      ],
+      "hero": [
+        "hit_hard",
+        "hit_soft"
+      ],
+      "hero_big_with": [
+        "subdrop"
+      ],
+      "riser": [
+        "riser"
+      ],
+      "transition": [
+        "whoosh_hard",
+        "whoosh_soft"
+      ],
+      "small": [
+        "tick"
+      ],
+      "close": [
+        "subdrop",
+        "riser"
+      ],
+      "count": [
+        "tick"
+      ],
+      "count_lock": [
+        "hit_soft"
+      ],
+      "count_offset_db": -4.0
+    }
+  },
+  "voice": {
+    "speaking": {
+      "hero": -30.0,
+      "transition": -32.0,
+      "small": -34.0,
+      "count": -36.0
+    },
+    "gap_boost_db": 4.0,
+    "nucleus_db": -3.0,
+    "count_speech_db": -3.0,
+    "count_max_per_s_speech": 10.0,
+    "phrase_gap_s": 0.25
+  }
+}

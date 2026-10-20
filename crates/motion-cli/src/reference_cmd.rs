@@ -224,7 +224,7 @@ pub fn cmd_validate_reference_style(
             cache::store_profile(cache_dir, &ev.reference_fingerprint, &canonical)
                 .context("caching the validated profile")?;
         }
-        (Some(_), None) => eprintln!("note: --cache-dir needs --bundle to cache the profile"),
+        (Some(_), None) => warn!("note: --cache-dir needs --bundle to cache the profile"),
         _ => {}
     }
 

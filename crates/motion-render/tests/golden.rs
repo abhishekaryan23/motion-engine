@@ -14,7 +14,7 @@ use motion_core::{evaluate_frame, validate, CreativeIntent, MotionProject, Style
 use motion_render::{CpuRenderer, FontMeasure, Renderer};
 use resvg::tiny_skia::Pixmap;
 
-const GOLDEN_FILES: [&str; 28] = [
+const GOLDEN_FILES: [&str; 29] = [
     "typography.motion.json",
     "movement.motion.json",
     "masking.motion.json",
@@ -44,6 +44,8 @@ const GOLDEN_FILES: [&str; 28] = [
     "hero_object.motion.json",
     "evidence_stack.motion.json",
     "type_image.motion.json",
+    // v2 phase 1: filled Bezier paths, morph, gradients, trim, path masks
+    "v2_morph.motion.json",
 ];
 
 /// Scenes whose first frame is intentionally an empty canvas (everything
@@ -201,6 +203,7 @@ fn golden_frames_change_over_time() {
         "dual_state_change.motion.json",
         "derived_metric.motion.json",
         "derived_metric_compare.motion.json",
+        "v2_morph.motion.json",
     ] {
         let project = load(file);
         let renderer = CpuRenderer::new(&project, &golden_dir()).expect("renderer");

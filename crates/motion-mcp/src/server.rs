@@ -113,9 +113,15 @@ impl ServerHandler for McpServer {
                 profile::build_version(),
                 self.service.profile().name()
             ));
+        let instructions = match self.service.profile() {
+            crate::profile::Profile::V2 => {
+                "Make or edit a video with make_video, inspect with preview (sheet: true), score with critique; guide: resource motionengine://guide/v2"
+            }
+            _ => INSTRUCTIONS,
+        };
         rmcp::model::ServerConfig::new(caps)
             .with_server_info(implementation)
-            .with_instructions(INSTRUCTIONS)
+            .with_instructions(instructions)
     }
 
     async fn list_tools(

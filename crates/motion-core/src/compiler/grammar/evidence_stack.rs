@@ -47,6 +47,7 @@ fn sheet(
             stroke: Some(Stroke {
                 color: ctx.palette.ink.with_alpha(0x22),
                 width: 2.0 * ctx.u,
+                brush: None,
             }),
         },
         z,
@@ -515,6 +516,7 @@ pub(super) fn build(
                     stroke: Some(Stroke {
                         color: ctx.palette.ink.with_alpha(0x22),
                         width: 2.0 * u,
+                        brush: None,
                     }),
                 },
                 14,

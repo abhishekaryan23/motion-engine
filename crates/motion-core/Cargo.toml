@@ -3,7 +3,8 @@ name = "motion-core"
 description = "MotionEngine core: CreativeIntent, StyleProfile, MotionCompiler, MotionScene, validation, timeline evaluation"
 version.workspace = true
 edition.workspace = true
-license.workspace = true
+license-file.workspace = true
+publish.workspace = true
 
 [dependencies]
 serde.workspace = true
@@ -13,3 +14,4 @@ schemars.workspace = true
 
 [dev-dependencies]
 jsonschema.workspace = true
+ttf-parser = { version = "0.25", default-features = false, features = ["std"] }

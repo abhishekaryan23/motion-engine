@@ -1,0 +1,30 @@
+{
+  "version": "0.2",
+  "title": "money_review",
+  "format": "vertical",
+  "beats": [
+    { "purpose": "emphasize", "statement": "Small savings grow quietly",
+      "narration": "Put a little money away every month and something surprising happens.",
+      "primary": { "kind": "object", "asset": "piggy_bank", "meaning": "savings" },
+      "energy": "impact", "keyword": "save" },
+    { "purpose": "reveal", "statement": "Seven percent a year",
+      "narration": "At seven percent a year, your interest starts earning interest of its own.",
+      "primary": { "kind": "number", "value": "7%", "meaning": "yearly return" },
+      "energy": "building", "keyword": "interest" },
+    { "purpose": "compare", "statement": "Early beats late",
+      "narration": "Start at twenty-five and you end with about twice what you get starting at thirty-five.",
+      "primary": { "kind": "number", "value": "$240,000", "meaning": "start at 25" },
+      "secondary": { "kind": "number", "value": "$120,000", "meaning": "start at 35" },
+      "relationship": "separate", "energy": "building" },
+    { "purpose": "explain", "statement": "Three habits that compound",
+      "narration": "Automate it, raise it each year, and never touch it.",
+      "primary": { "kind": "collection", "meaning": "habits", "items": [
+        { "kind": "phrase", "value": "Automate" }, { "kind": "phrase", "value": "Raise yearly" },
+        { "kind": "phrase", "value": "Never touch" } ] },
+      "relationship": "accumulate", "energy": "building" },
+    { "purpose": "emphasize", "statement": "Time does the work",
+      "narration": "You do not need to be rich to start. You need time.",
+      "primary": { "kind": "phrase", "value": "Time", "meaning": "patience" },
+      "energy": "calm", "keyword": "time" }
+  ]
+}

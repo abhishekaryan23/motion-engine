@@ -170,7 +170,7 @@ sits between back and front lines. Accent-wipe beats don't carry.
 ## Subject-first image layouts (0.10 Q)
 
 Weak-model reels put type over people, shrink the picture and repeat one layout
-(owner review, DECISIONS 85–86). TypeImageInterlock beats can therefore take a
+(found in review). TypeImageInterlock beats can therefore take a
 **subject-first** layout (`grammar/type_image.rs`, `ImageLayout`): type and
 subject live in **disjoint regions** (nothing printed over the picture, a head
 never covered), the subject alpha bounds are as large as the remaining room

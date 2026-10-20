@@ -1,0 +1,28 @@
+{
+  "version": "2.0",
+  "meta": { "name": "terminal_laptop", "aspect": "16:9", "duration": 9.0 },
+  "palette": { "background": "#F4F1EA", "ink": "#121212", "accent": "#FF6A2B", "muted": "#8A857C" },
+  "components": [
+    { "id": "ground", "kind": "backdrop" },
+    {
+      "id": "mac", "kind": "device_frame", "device": "laptop", "end": 4.6,
+      "states": [
+        { "shape": "toast", "title": "Build failed", "detail": "1 test · motion_core", "fill": "ink" },
+        { "shape": "toast", "title": "All green", "detail": "412 tests · 3.2 s", "fill": "accent" }
+      ],
+      "steps": [ { "at": 1.6, "do": "click", "then": 1 }, { "at": 2.4, "do": "zoom", "to": "in" } ],
+      "timeline": [ { "at": 0.0, "do": "enter", "style": "fade" }, { "at": 4.2, "do": "exit" } ]
+    },
+    {
+      "id": "term", "kind": "code_block", "preset": "terminal_dark", "language": "shell", "start": 4.4, "size": "l",
+      "lines": [ "$ cargo test --all", "  412 passed; 0 failed", "$ motion-engine render promo" ],
+      "steps": [
+        { "at": 0.3, "do": "type", "line": 0 },
+        { "at": 1.5, "do": "type", "line": 1 },
+        { "at": 2.6, "do": "type", "line": 2 },
+        { "at": 3.9, "do": "highlight", "line": 1 }
+      ],
+      "timeline": [ { "at": 0.0, "do": "enter", "style": "rise" } ]
+    }
+  ]
+}

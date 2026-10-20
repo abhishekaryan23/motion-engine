@@ -92,3 +92,25 @@ grammar (docs/COMPOSITION_GRAMMAR.md); the language only decides how it moves.
 Every behavior follows anticipation → action → settle → read → secondary evolution
 → bridge where appropriate. Avoid: motion that only starts on boundaries, identical
 durations, constant bounce, continuous unnecessary motion, all layers moving together.
+
+## Motion signature (0.24 M10)
+
+Speech-lock (`speech_lifecycle`) decides WHEN text appears; the per-look
+**motion signature** (`compiler::signature`, data) decides HOW it moves. Every look
+uses one small vocabulary and differs in character, not in stacked effects.
+Nothing pulses, glitches, echoes or shakes (`slop_flicker` fails a project that does),
+and bloom is Cinematic3d only and never on text.
+
+| element | motion | where it is applied |
+|---|---|---|
+| headline lines | rise 0.35 line heights from a baseline mask, 0.42 s OutQuint, 70 ms stagger | headline builders (language preset; table values) |
+| hero figure / word | spring scale 0.94 → 1 plus opacity 0 → 1, 0.45 s, overshoot ≤ 2 % | kinetic slam (`KineticSlam`) |
+| pictures, flags, cards | slide 24–40 px from the side the beat opens toward + fade, 0.5 s OutCubic; side alternates by beat | kinetic slam pictures |
+| support text | fades in 0.3 s, 60–120 ms after its lead | table values |
+| exits | 0.25 s fade + 12 px drift opposite the entrance; no zoom-burst exit | stage exit (`punch` is a drift) |
+| camera | one slow push per beat, at most 3 % (documentary 2 %) | beat camera, stage reframes, footage plates |
+| payoff colour field | full canvas (x 0..w, y 0..h), past the caption lane | `recipes::stretch_bleeds` |
+
+Looks: Hype is snappier with bigger slides (spring 380/34, 40 px, 0.40 s hero);
+Documentary is slower and smaller (24 px, 0.55 s hero, 2 % camera); Cinematic has the
+longest eases (HEAVY spring, 0.7 s hero, 0.75 s slide); every other look takes the base.

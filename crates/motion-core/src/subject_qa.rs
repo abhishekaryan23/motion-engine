@@ -249,7 +249,7 @@ fn is_gentle(m: &crate::scene::Motion) -> bool {
     m.duration >= GENTLE_SECONDS
         || match &m.op {
             MotionOp::Scale { from, to, .. } => (to - from).abs() <= GENTLE_SCALE,
-            MotionOp::Move { from, to } => {
+            MotionOp::Move { from, to, .. } => {
                 (to[0] - from[0]).hypot(to[1] - from[1]) <= GENTLE_MOVE_PX
             }
             _ => false,
@@ -463,6 +463,25 @@ pub(crate) fn check_subjects(
             }
         }
 
+        // (0.24) subject_too_small: the picture of a side-by-side layout on a
+        // wide canvas fills its column.
+        if matches!(role_of(id), "hero" | "prop") && frame.class == crate::intent::Format::Landscape
+        {
+            let long = s.bounds.w.max(s.bounds.h) / frame.h.max(1.0);
+            if long + 1e-4 < crate::compiler::taste_rules::SUBJECT_MIN_LONG_SIDE_WIDE {
+                push(finding(
+                    scene,
+                    id,
+                    LayoutCheck::SubjectTooSmall,
+                    format!(
+                        "frame {n}: the picture's longest side is {} of the canvas height (min {})",
+                        pct(long),
+                        pct(crate::compiler::taste_rules::SUBJECT_MIN_LONG_SIDE_WIDE)
+                    ),
+                ));
+            }
+        }
+
         // text_over_subject
         let mut covered = 0.0f32;
         for (i, t) in leaves.iter().enumerate() {
@@ -605,6 +624,116 @@ pub(crate) fn check_subjects(
             }
         }
     }
+}
+
+/// (0.24 M9) Give every picture that `asset_low_contrast` flags the treatment
+/// that makes it read: a thin light (or dark) keyline on an opaque image, a
+/// sticker outline on a cutout. A picture that carries a treatment keeps it
+/// and only gains the missing edge or sticker. Pure and deterministic; the
+/// compiler has no pixels, so this runs where the image facts exist (the CLI
+/// compile, after [`ImageIndex`] is built). Returns the layers changed.
+pub fn guard_low_contrast(project: &mut MotionProject, images: &ImageIndex) -> usize {
+    let Ok(frame) = LayoutFrame::new(project.canvas.width, project.canvas.height) else {
+        return 0;
+    };
+    let report = crate::layout_qa::layout_report_with(project, &frame, images);
+    let ids: Vec<String> = report
+        .findings
+        .iter()
+        .filter(|f| f.check == LayoutCheck::AssetLowContrast)
+        .map(|f| f.layer.clone())
+        .collect();
+    if ids.is_empty() {
+        return 0;
+    }
+    let paths: BTreeMap<String, String> = project
+        .assets
+        .iter()
+        .map(|a| (a.id.clone(), a.path.clone()))
+        .collect();
+    let u = project.canvas.width.min(project.canvas.height) as f32 / 1080.0;
+    let mut changed = 0;
+    let fix = |layers: &mut [crate::scene::Layer], id: &str| {
+        fn go(
+            layers: &mut [crate::scene::Layer],
+            id: &str,
+            paths: &BTreeMap<String, String>,
+            images: &ImageIndex,
+            u: f32,
+        ) -> bool {
+            for l in layers {
+                if l.id == id {
+                    let LayerKind::Image {
+                        asset, treatment, ..
+                    } = &mut l.kind
+                    else {
+                        return false;
+                    };
+                    let Some(facts) = paths.get(asset.as_str()).and_then(|p| images.get(p)) else {
+                        return false;
+                    };
+                    let Some(mean) = facts.mean_color else {
+                        return false;
+                    };
+                    let mut t = treatment.clone().unwrap_or_else(ImageTreatment::natural);
+                    let subject = treated_color(mean, &t);
+                    let light = Color::rgb(0xF4, 0xEF, 0xE6);
+                    let dark = Color::rgb(0x17, 0x15, 0x13);
+                    let color = if contrast_ratio(subject, light) >= contrast_ratio(subject, dark) {
+                        light
+                    } else {
+                        dark
+                    };
+                    if facts.alpha {
+                        t.sticker = Some(crate::scene::Sticker {
+                            color,
+                            width_px: crate::compiler::subject_rules::STICKER_WIDTH_U * u,
+                        });
+                        t.edge = None;
+                        t.shadow = None;
+                    } else {
+                        t.edge = Some(crate::scene::PaperEdge {
+                            color,
+                            width: crate::compiler::subject_rules::KEYLINE_WIDTH_U * u,
+                        });
+                    }
+                    *treatment = Some(t);
+                    return true;
+                }
+                if let LayerKind::Group { children } = &mut l.kind {
+                    if go(children, id, paths, images, u) {
+                        return true;
+                    }
+                }
+            }
+            false
+        }
+        go(layers, id, &paths, images, u)
+    };
+    let mut done: Vec<&str> = Vec::new();
+    for id in &ids {
+        if done.contains(&id.as_str()) {
+            continue;
+        }
+        done.push(id);
+        let mut hit = false;
+        for scene in &mut project.scenes {
+            hit = fix(&mut scene.layers, id);
+            if hit {
+                break;
+            }
+        }
+        if !hit {
+            for shared in &mut project.shared {
+                hit = fix(std::slice::from_mut(&mut shared.layer), id);
+                if hit {
+                    break;
+                }
+            }
+        }
+        changed += usize::from(hit);
+    }
+    changed
 }
 
 /// An opaque image's keyline (a 2u+ edge) separates it when its colour

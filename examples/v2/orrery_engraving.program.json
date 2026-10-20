@@ -1,0 +1,198 @@
+{
+  "version": "2.0",
+  "meta": {
+    "name": "orrery_engraving",
+    "aspect": "9:16",
+    "duration": 15.4,
+    "fps": "30",
+    "end_beat": 28
+  },
+  "music": {
+    "track": "bright_upbeat",
+    "start": 0.508
+  },
+  "palette": {
+    "background": "#FAF8F5",
+    "ink": "#141312",
+    "accent": "#C84B31",
+    "muted": "#E6E4E1"
+  },
+  "fonts": {
+    "display": "clash_display_bold",
+    "serif": "dm_serif_italic",
+    "mono": "ibm_plex_mono"
+  },
+  "components": [
+    {
+      "id": "ground",
+      "kind": "backdrop",
+      "preset": "flat"
+    },
+    {
+      "id": "engraving_reel",
+      "kind": "photo_stack",
+      "preset": "engraving_red",
+      "start_beat": 0,
+      "steps": [
+        {
+          "beat": 0,
+          "layout": "brand_mark",
+          "text": "Orrery"
+        },
+        {
+          "beat": 1,
+          "layout": "brand_mark",
+          "asset": "ornament_00cd",
+          "stroke": "rosette_circle"
+        },
+        {
+          "beat": 2,
+          "layout": "word_morph",
+          "text": "ask",
+          "to_text": "task",
+          "assets": ["armillary_sphere", "atlas_globe"],
+          "stroke": "top_slash"
+        },
+        {
+          "beat": 4,
+          "layout": "grid",
+          "assets": [
+            "armillary_sphere",
+            "laurel",
+            "ancient_coin",
+            "scales",
+            "ornament_00cd",
+            "hourglass",
+            "owl_statue",
+            "greek_helmet",
+            "atlas_globe"
+          ]
+        },
+        {
+          "beat": 5,
+          "layout": "zoetrope"
+        },
+        {
+          "beat": 6,
+          "layout": "hero",
+          "asset": "horse_head",
+          "stroke": "neck_arc"
+        },
+        {
+          "beat": 7,
+          "layout": "hero",
+          "asset": "marble_bust",
+          "stroke": "eye_oval",
+          "ruled": true
+        },
+        {
+          "beat": 8,
+          "layout": "hero",
+          "asset": "statue_eye",
+          "stroke": "eye_oval",
+          "ruled": true
+        },
+        {
+          "beat": 9,
+          "layout": "word_morph",
+          "text": "draft",
+          "to_text": "craft",
+          "assets": ["bust_profile", "scales"],
+          "stroke": "strike_morph",
+          "ruled": true
+        },
+        {
+          "beat": 11,
+          "layout": "blueprint"
+        },
+        {
+          "beat": 12,
+          "layout": "starburst3d"
+        },
+        {
+          "beat": 13,
+          "layout": "hero",
+          "asset": "statue_torso",
+          "stroke": "starburst_stamp"
+        },
+        {
+          "beat": 14,
+          "layout": "hero",
+          "asset": "hand_holding",
+          "stroke": "bracket_dot"
+        },
+        {
+          "beat": 15,
+          "layout": "constellation"
+        },
+        {
+          "beat": 16,
+          "layout": "hero",
+          "asset": "winged_victory",
+          "stroke": "neck_arc"
+        },
+        {
+          "beat": 17,
+          "layout": "vitruvian"
+        },
+        {
+          "beat": 18,
+          "layout": "hero",
+          "asset": "thinker_statue",
+          "stroke": "rib_circle"
+        },
+        {
+          "beat": 19,
+          "layout": "hero",
+          "asset": "marble_brain",
+          "stroke": "rib_circle"
+        },
+        {
+          "beat": 20,
+          "layout": "word_morph",
+          "text": "spark",
+          "to_text": "art",
+          "assets": ["owl_statue", "laurel"],
+          "stroke": "flourish"
+        },
+        {
+          "beat": 22,
+          "layout": "hero",
+          "asset": "hands_touching",
+          "stroke": "neck_arc",
+          "ruled": true
+        },
+        {
+          "beat": 23,
+          "layout": "word_morph",
+          "text": "Keep",
+          "subtext": "thinking.",
+          "assets": ["chess_knight", "ancient_coin"],
+          "stroke": "period_dot"
+        },
+        {
+          "beat": 25,
+          "layout": "hero",
+          "asset": "laurel",
+          "stroke": "starburst_stamp"
+        },
+        {
+          "beat": 26,
+          "layout": "blueprint"
+        },
+        {
+          "beat": 27,
+          "layout": "starburst3d"
+        },
+        {
+          "beat": 28,
+          "layout": "brand_mark",
+          "text": "Orrery"
+        }
+      ]
+    }
+  ],
+  "film": {
+    "grain": 0.025
+  }
+}

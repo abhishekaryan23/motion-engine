@@ -1,0 +1,199 @@
+{
+ "version": "2.0",
+ "meta": {
+  "name": "board_reel",
+  "aspect": "16:9",
+  "duration": 15.0,
+  "end_beat": 28,
+  "brief": "a showreel about how springs move"
+ },
+ "palette": {
+  "background": "#0B0E14",
+  "ink": "#F2EFE8",
+  "accent": "#FF5A1F",
+  "muted": "#8C93A3"
+ },
+ "fonts": {
+  "display": "archivo_black",
+  "serif": "instrument_serif_italic",
+  "mono": "ibm_plex_mono"
+ },
+ "tempo": "fast",
+ "music": {
+  "track": "driving_pulse",
+  "start": 0.107
+ },
+ "components": [
+  {
+   "id": "ground",
+   "kind": "backdrop"
+  },
+  {
+   "id": "open",
+   "kind": "kinetic_text",
+   "preset": "poster_cuts",
+   "dot": true,
+   "start_beat": 0,
+   "beat_cuts": 1,
+   "words": [
+    "PULL",
+    "IT",
+    "BACK",
+    "LET",
+    "GO",
+    "IT",
+    "FLIES",
+    "PAST"
+   ],
+   "stress": [
+    4
+   ],
+   "timeline": [
+    {
+     "beat": 3,
+     "do": "cut",
+     "flip": true
+    },
+    {
+     "beat": 6,
+     "do": "cut",
+     "flip": true
+    }
+   ],
+   "end_beat": 8
+  },
+  {
+   "id": "spring",
+   "kind": "chart",
+   "chart": "spring",
+   "values": [
+    0,
+    22
+   ],
+   "hero": 1,
+   "callout": "+22%",
+   "start_beat": 8,
+   "timeline": [
+    {
+     "beat": 8,
+     "do": "enter",
+     "style": "draw"
+    },
+    {
+     "beat": 12,
+     "do": "pop_label"
+    }
+   ],
+   "end_beat": 16
+  },
+  {
+   "id": "cap1",
+   "kind": "kinetic_text",
+   "preset": "type_on",
+   "slot": "top",
+   "colour": "muted",
+   "start_beat": 9,
+   "beat_cuts": 2,
+   "words": [
+    "fast rise",
+    "one overshoot",
+    "then calm",
+    "and it holds"
+   ],
+   "end_beat": 16
+  },
+  {
+   "id": "bars",
+   "kind": "chart",
+   "chart": "bar",
+   "values": [
+    9,
+    11,
+    13,
+    16,
+    18,
+    22
+   ],
+   "labels": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat"
+   ],
+   "hero": 3,
+   "callout": "22k",
+   "title": "Signups, thousands",
+   "start_beat": 16,
+   "beat_cuts": 1,
+   "timeline": [
+    {
+     "beat": 16,
+     "do": "enter",
+     "style": "draw"
+    },
+    {
+     "beat": 22,
+     "do": "pop_label"
+    }
+   ],
+   "end_beat": 24
+  },
+  {
+   "id": "close",
+   "kind": "kinetic_text",
+   "preset": "poster_cuts",
+   "dot": true,
+   "start_beat": 24,
+   "beat_cuts": 1,
+   "words": [
+    "EASE",
+    "IN",
+    "EASE",
+    "OUT",
+    "LAND"
+   ],
+   "stress": [
+    4
+   ],
+   "timeline": [
+    {
+     "beat": 26,
+     "do": "cut",
+     "flip": true
+    }
+   ]
+  }
+ ],
+ "camera": [
+  {
+   "beat": 10,
+   "do": "frame",
+   "component": "spring"
+  },
+  {
+   "beat": 14,
+   "do": "reset"
+  },
+  {
+   "beat": 23,
+   "do": "frame",
+   "component": "bars"
+  }
+ ],
+ "transitions": [
+  {
+   "beat": 8,
+   "kind": "whip"
+  },
+  {
+   "beat": 16,
+   "kind": "colour_flip"
+  },
+  {
+   "beat": 24,
+   "kind": "whip"
+  }
+ ]
+}

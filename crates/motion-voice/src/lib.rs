@@ -100,7 +100,7 @@ impl TtsModel {
     }
 }
 
-/// Rule: `--tts-model auto` is the free OpenRouter voice (owner rule: free
+/// Rule: `--tts-model auto` is the free OpenRouter voice (design rule: free
 /// TTS only, one voice, one take).
 pub fn auto_model() -> TtsModel {
     TtsModel::Fish
@@ -153,12 +153,12 @@ pub const FISH_CALM_STORYTELLER: &str = "e686ae649ee44f219a108aacba206c1a";
 pub fn voice_for(profile: VoiceProfile, model: TtsModel) -> VoiceChoice {
     use VoiceProfile as P;
     let (voice, rate) = match (model, profile) {
-        // (0.18) Male narrators on every model (owner rule).
+        // (0.18) Male narrators on every model (design rule).
         (TtsModel::Deepgram, P::CalmNarrator) => ("flux-miles-en", None),
         (TtsModel::Deepgram, P::Bright) => ("flux-jack-en", None),
         (TtsModel::Deepgram, P::LowSlow) => ("flux-marcus-en", None),
         (TtsModel::Deepgram, P::Clear) => ("flux-colin-en", None),
-        // (0.18, owner rule: male narrators only, one per take.) Public Fish
+        // (0.18, design rule: male narrators only, one per take.) Public Fish
         // voice-library models, generic narrators (no celebrity or character
         // clones), chosen by tags, use and a pitch check on the free model:
         // "Ethan" (a curious explainer, ~107 Hz), "Slax" (clear, precise,

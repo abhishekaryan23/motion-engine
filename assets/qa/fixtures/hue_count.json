@@ -1,0 +1,63 @@
+{
+ "kind": "rendered",
+ "note": "Four coloured grounds plus an accent, as written (no hue budget).",
+ "program": {
+  "version": "2.0",
+  "meta": {
+   "name": "hues",
+   "aspect": "16:9",
+   "duration": 2.0
+  },
+  "palette": {
+   "background": "#F2EEE6",
+   "ink": "#111111",
+   "accent": "#FF4A1C",
+   "muted": "#8A857C",
+   "grounds": [
+    "#3B2BD6",
+    "#18A558",
+    "#C21DB7",
+    "#E8C21A"
+   ]
+  },
+  "components": [
+   {
+    "id": "a",
+    "kind": "backdrop",
+    "colour": "ground1",
+    "end": 0.5
+   },
+   {
+    "id": "b",
+    "kind": "backdrop",
+    "colour": "ground2",
+    "start": 0.5,
+    "end": 1.0
+   },
+   {
+    "id": "c",
+    "kind": "backdrop",
+    "colour": "ground3",
+    "start": 1.0,
+    "end": 1.5
+   },
+   {
+    "id": "d",
+    "kind": "backdrop",
+    "colour": "ground4",
+    "start": 1.5
+   },
+   {
+    "id": "t",
+    "kind": "title",
+    "text": "Four worlds",
+    "end": 0.5
+   }
+  ]
+ },
+ "before": {
+  "design_passes": true,
+  "mutate": "raw_grounds"
+ },
+ "expect_detector": "hue_count"
+}

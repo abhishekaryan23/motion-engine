@@ -143,7 +143,17 @@ fn shift(
     from: [f32; 2],
     to: [f32; 2],
 ) -> Motion {
-    motion(target, start, duration, easing, MotionOp::Move { from, to })
+    motion(
+        target,
+        start,
+        duration,
+        easing,
+        MotionOp::Move {
+            from,
+            to,
+            via: None,
+        },
+    )
 }
 
 fn scale(target: &str, start: f64, duration: f64, easing: Easing, from: f32, to: f32) -> Motion {
@@ -207,6 +217,7 @@ fn unit_layer(
         z_index: 0,
         visible: true,
         clip: None,
+        mask: None,
         depth: None,
         layout: None,
         kind: LayerKind::Text(style),
@@ -490,6 +501,18 @@ pub fn keyword_punch(
         0.0,
     ));
     out
+}
+
+/// (0.24 Wave 2) The stress punch of a spoken word: `target` swells from 1 to
+/// `peak` so that it peaks exactly at `onset` (the word's start), then settles
+/// back over `down` seconds. The rise carries the id `stress:<onset>` so QA
+/// can check the peak against the voice. No flicker: one swell, no repeat.
+pub fn stress_punch(target: &str, onset: f64, up: f64, down: f64, peak: f32) -> Vec<Motion> {
+    let r3 = |x: f64| (x * 1000.0).round() / 1000.0;
+    let mut rise = scale(target, r3(onset - up), r3(up), Easing::OutCubic, 1.0, peak);
+    rise.id = Some(format!("stress:{onset:.3}"));
+    let fall = scale(target, r3(onset), r3(down), Easing::InOutCubic, peak, 1.0);
+    vec![rise, fall]
 }
 
 /// Glyph-cluster run (one line): clusters start spread apart around the line

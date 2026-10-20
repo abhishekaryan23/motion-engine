@@ -1,0 +1,45 @@
+{
+ "id": "eyebrow_kicker",
+ "note": "Kicker text inside a component: a bento header above the grid (LAST YEAR, IN NUMBERS) or a lockup pill (EST. 2019) is an eyebrow too",
+ "from": "output/replicate/studio/original.mp4",
+ "kind": "program",
+ "program": {
+  "version": "2.0",
+  "meta": {
+   "name": "fixture",
+   "duration": 6.0
+  },
+  "palette": {
+   "background": "#F2EEE6",
+   "ink": "#111111",
+   "accent": "#E04A12",
+   "muted": "#6B6B6B"
+  },
+  "components": [
+   {
+    "id": "grid",
+    "kind": "bento",
+    "preset": "golden_spiral",
+    "title": "Last year, in numbers",
+    "end": 3.0,
+    "tiles": [
+     {"stat": "38", "title": "IDENTITIES", "detail": "FROM SCRATCH", "accent": true},
+     {"stat": "14", "title": "PRODUCT LAUNCHES", "detail": "WEB AND APP"},
+     {"stat": "4.9", "title": "CLIENT RATING", "detail": "OUT OF 5"}
+    ]
+   },
+   {
+    "id": "lock",
+    "kind": "lockup",
+    "preset": "editorial_badge",
+    "headline": "Fernway",
+    "headline_case": "preserve",
+    "subline": "Studio for things worth keeping.",
+    "badge": "EST. 2019",
+    "start": 3.0
+   }
+  ]
+ },
+ "repair": true,
+ "expect_detector": "eyebrow_kicker"
+}

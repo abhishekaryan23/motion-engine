@@ -304,6 +304,7 @@ fn ingest_spec(
         analysis: None,
         keyed: keyed.is_some(),
         generator: sidecar.generator.clone(),
+        embedding: Vec::new(),
     };
     let analysis = analyze(
         &decoded.pixmap,
@@ -501,6 +502,7 @@ fn entry_from_cache(
         analysis: Some(analysis),
         keyed: cached.keyed,
         generator: cached.generator.clone(),
+        embedding: Vec::new(),
     }
 }
 

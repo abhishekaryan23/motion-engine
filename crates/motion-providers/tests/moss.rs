@@ -464,8 +464,21 @@ fn lockfile_written_and_reused() {
     assert!(!lock2.paths().contains_key("fern"));
 }
 
+/// The keying scripts need python3 with numpy, scipy and Pillow.
+fn keying_tools_available() -> bool {
+    std::process::Command::new("python3")
+        .args(["-c", "import numpy, scipy, PIL"])
+        .output()
+        .map(|o| o.status.success())
+        .unwrap_or(false)
+}
+
 #[test]
 fn keyed_cutout_is_magenta_free() {
+    if !keying_tools_available() {
+        eprintln!("skipping: python3 with numpy, scipy and Pillow is not available");
+        return;
+    }
     let raw = png(Color::from_rgba8(255, 0, 255, 255), 256, 256);
     // The raw generation is all magenta ground: the check refuses it.
     assert!(cutout::check_magenta_free(&raw).is_err());

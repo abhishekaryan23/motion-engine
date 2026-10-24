@@ -27,7 +27,7 @@ jobs:
       - name: System packages (ffmpeg, fonts)
         run: |
           sudo apt-get update -q
-          sudo apt-get install -y -q --no-install-recommends ffmpeg fontconfig fonts-dejavu-core
+          sudo apt-get install -y -q --no-install-recommends ffmpeg fontconfig fonts-dejavu-core python3-numpy python3-scipy python3-pil
 
       - uses: dtolnay/rust-toolchain@1.92.0  # pinned: the version the repo is tested on; newer clippy adds lints
         with:

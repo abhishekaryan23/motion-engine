@@ -72,7 +72,8 @@ impl VoiceProvider for MacSay {
     }
 }
 
-#[cfg(test)]
+// macOS `say` only: on other systems the module (and its imports) would be unused.
+#[cfg(all(test, target_os = "macos"))]
 mod tests {
     use super::*;
     use crate::wav;

@@ -453,3 +453,53 @@ fn two_line_pages_do_not_orphan_a_word() {
         balanced[1].len()
     );
 }
+
+/// (0.24 M10) The backing pill hugs the lines that are on screen: one line of
+/// text high until line two speaks, then it grows (accent_expand) to two.
+#[test]
+fn backing_pill_hugs_the_visible_lines() {
+    let frame = LayoutFrame::new(1080, 1920).unwrap();
+    let mut s = sentence(LINE, None, 0.0, 0.25);
+    s.backing = true;
+    s.end = 0.25 * 18.0 + 0.4;
+    let (layers, motions) = build(CaptionTreatment::SerifItalic, &frame, &s);
+    let f = flat(&layers);
+    let band = f
+        .iter()
+        .find(|l| l.id == "cap.p0.bg")
+        .expect("backing")
+        .to_owned();
+    // The two lines' tops: the text layers (not the `.on` copies or pills).
+    let mut ys: Vec<f32> = f
+        .iter()
+        .filter(|l| text_of(l).is_some() && !l.id.ends_with(".on"))
+        .map(|l| l.y)
+        .collect();
+    ys.sort_by(|a, b| a.total_cmp(b));
+    ys.dedup_by(|a, b| (*a - *b).abs() < 20.0);
+    assert_eq!(ys.len(), 2, "the sentence sets two lines: {ys:?}");
+    let pitch = ys[1] - ys[0];
+    // Opens one line high (pitch + padding), not two.
+    assert!(
+        band.height < 1.5 * pitch + 60.0 && band.height > 0.9 * pitch,
+        "opening height {} for pitch {pitch}",
+        band.height
+    );
+    // Grows to two lines when the second line starts.
+    let grow: Vec<(f64, f32)> = motions
+        .iter()
+        .filter(|m| m.target == "cap.p0.bg")
+        .filter_map(|m| match &m.op {
+            MotionOp::AccentExpand { to } => Some((m.start, to.height)),
+            _ => None,
+        })
+        .collect();
+    assert_eq!(grow.len(), 1, "one growth step: {grow:?}");
+    let (at, height) = grow[0];
+    assert!(
+        (height - (band.height + pitch)).abs() < 1.0,
+        "{height} vs {}",
+        band.height + pitch
+    );
+    assert!(at > 0.0, "grows when line two speaks: {at}");
+}

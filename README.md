@@ -1,357 +1,196 @@
-<div align="center">
+# MotionEngine
 
-# 🎬 MotionEngine
+MotionEngine is a Rust engine that turns a short brief, or a small JSON program, into a finished
+motion-graphics video. It plans the piece on the beat grid of a music track, lays out kinetic type,
+charts, diagrams, product-UI flows, sketches and photo collages, checks the result against a ledger
+of known design mistakes, repairs what it can, and renders an MP4 with music and sound. Compiling and
+rendering are deterministic: the same inputs and seeds give the same scene and the same frames.
 
-**Autonomous Editorial Motion Graphics & Video Generation Engine in Rust**
+It is built for agent harnesses. A model writes a brief or a `CreativeIntent` and gets back a video
+path, a QA verdict and a critique score in one short JSON line, at a cost of a few hundred tokens per
+video.
 
-[![License](https://img.shields.io/badge/license-Limited%20(Evaluation%20Only)-red.svg)](LICENSE)
-[![Rust](https://img.shields.io/badge/rust-1.80%2B-orange.svg)](https://www.rust-lang.org)
-[![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux-lightgrey.svg)]()
+## Gallery
 
-*Transform declarative semantic intent into broadcast-grade editorial motion graphics with synchronized narration, procedural typography, and reactive sound design.*
+| | |
+|---|---|
+| [![Capability highlights](showcase/capability_highlights_preview.gif)](showcase/capability_highlights_720p.mp4) | [![Type styles](showcase/type_styles_preview.gif)](showcase/type_styles_720p.mp4) |
+| **Capability highlights**: type, charts, product UI, sketch, layering, lockups ([MP4](showcase/capability_highlights_720p.mp4)) | **Type styles**: gradient, image and outline fills, case control, doodles drawn with the type ([MP4](showcase/type_styles_720p.mp4)) |
+| [![Charts and diagrams](showcase/charts_diagrams_preview.gif)](showcase/capability_highlights_720p.mp4) | [![Product UI](showcase/product_ui_preview.gif)](showcase/capability_highlights_720p.mp4) |
+| **Charts and diagrams**: line, area and bar charts, rail and card diagrams | **Product UI**: typed payment, promo and sign-up flows on device frames |
 
-<br/>
+[![Layering, before and after](showcase/layering_before_after_preview.gif)](showcase/layering_before_after_720p.mp4)
 
-<p align="center">
-  <img src="showcase/documentary_money_preview.gif" width="23%" alt="Documentary Money Preview" />
-  <img src="showcase/countdown_tense_preview.gif" width="23%" alt="Countdown Tense Preview" />
-  <img src="showcase/layers_documentary_preview.gif" width="23%" alt="Layers Breakdown Preview" />
-  <img src="showcase/short_state_change_preview.gif" width="23%" alt="State Change Preview" />
-</p>
-<p align="center">
-  <i>Live MotionEngine renders: Documentary Dossier · Kinetic Countdown · Layers Hierarchy · State Change</i>
-</p>
+**Layering**: the same program before (left) and after (right) intentional layering (`over`) and
+plate-less sketches ([MP4](showcase/layering_before_after_720p.mp4)).
 
-</div>
+[![Generated assets](showcase/generated_assets_preview.gif)](showcase/generated_assets_720p.mp4)
 
----
+**Generated assets**: a bundled texture (left) against a generated image plate used as a type fill
+(right) ([MP4](showcase/generated_assets_720p.mp4)).
 
-## 🎥 Showcase Video Previews
+Narrated v1 reels (voice-over with word-synced captions) are in [showcase/](showcase/README.md).
 
-MotionEngine compiles declarative intent directly into broadcast-grade 1080×1920 (or 720×1280) H.264 + AAC MP4 videos. Below are rendered showcase cuts included directly in the repository:
+## Features
 
-### 1. Vox-Style Financial Documentary (`documentary_money_720p.mp4`)
-* **Genre / Style**: Documentary / Dossier Look
-* **Key Features**: Evidence desk styling, paper clippings, stamps, figure cards, and word-synchronized voiceover.
-* **Full Master MP4**: [▶️ Download / Watch `documentary_money_720p.mp4`](showcase/documentary_money_720p.mp4)
+- **Components**: backdrop, shape, title, kinetic text, chart, field, HUD, diagram, code block,
+  device frame, lockup, sketch, bento and photo stack. A program is a closed
+  vocabulary of components and verbs, validated before anything is drawn.
+- **Layering**: a sketch, shape, photo stack, backdrop or field can be drawn `over` a named component
+  on purpose; accidental overlaps are still rejected.
+- **Type styles**: solid, gradient or image fills (text masks), outlines, case control, measured
+  fitting, poster cuts, glyph drops and type-on.
+- **Sketch**: natural-media strokes in the style of p5.brush (hatching, flow fields, watercolour,
+  golden spirals, architectural hatch), with or without a framed plate.
+- **Product UI**: device frames with typed flows (payment, sign-up, upload, share, settings toggle),
+  real app states, cursor and tap targets.
+- **Charts**: line, area, bar and donut charts that draw on the beat, spring curves, count-up
+  callouts, thousands separators.
+- **Diagrams**: rail, card and outline diagrams that build one node per beat.
+- **Bento** metric grids, **lockups** (five presets for closing titles) and **photo stacks** (nine
+  layouts over a bundled cutout library).
+- **Transitions**: whip, colour flip and impact; a program camera with push, pan, frame, orbit, dolly, roll and focus moves.
+- **Music and beat sync**: bundled tracks with offline beat analysis; every start and end snaps to a
+  frame on the beat grid, and the final hit lands on a downbeat. Sound effects and a mix to −16 LUFS.
+- **QA mistake ledger**: every known design defect is a detector with a fixture. Programs are checked
+  statically and on rendered frames, auto-repaired up to twice, and refused if a gate still fails.
+- **MCP server**: `motion-mcp` exposes the engine to any MCP client; brief to video in three calls.
+- **Generated assets**: programs can declare image plates and cutouts (`gen:<id>`). They are made
+  once through an asset provider (OpenArt over MCP, or an optional local MOSS-Image server), cached
+  and pinned in a lockfile, so later compiles are offline and byte-identical.
+- **v1 narrated reels**: `CreativeIntent` → voiced explainer with karaoke captions, picture library,
+  art direction, speech QA, and an auto-edit mode for talking-head video.
 
-<p align="center">
-  <a href="showcase/documentary_money_720p.mp4">
-    <img src="showcase/documentary_money_preview.gif" width="300px" alt="Financial Documentary Preview" />
-  </a>
-</p>
+## Requirements
 
----
+- Rust, stable toolchain, edition 2021 (tested with 1.92).
+- FFmpeg and ffprobe on `PATH`, with libx264 and AAC.
+- Optional: `cmake` for local word timing (`--features asr-local,asr-ctc`).
+- Optional: an [OpenRouter](https://openrouter.ai) API key for the free narration voice in v1 reels.
+  `--tts-model say` uses the offline macOS voice instead.
+- Optional: a GPU (Metal, Vulkan or DX12) for `render --gpu` post effects (build with `--features gpu`);
+  the CPU renderer is the reference.
 
-### 2. Kinetic Rocket Countdown (`countdown_tense_720p.mp4`)
-* **Genre / Style**: Kinetic Slam / Tense Mood
-* **Key Features**: High-velocity countdown beats, audio-reactive hits, and kinetic display typography.
-* **Full Master MP4**: [▶️ Download / Watch `countdown_tense_720p.mp4`](showcase/countdown_tense_720p.mp4)
+macOS and Linux are supported. Everything in the default build and test run works offline.
 
-<p align="center">
-  <a href="showcase/countdown_tense_720p.mp4">
-    <img src="showcase/countdown_tense_preview.gif" width="300px" alt="Rocket Countdown Preview" />
-  </a>
-</p>
-
----
-
-### 3. Layers Hierarchy Breakdown (`layers_documentary_720p.mp4`)
-* **Genre / Style**: Layers Grammar / Documentary
-* **Key Features**: Multi-tier vertical conceptual breakdown with persistent depth focus and level boundaries.
-* **Full Master MP4**: [▶️ Download / Watch `layers_documentary_720p.mp4`](showcase/layers_documentary_720p.mp4)
-
-<p align="center">
-  <a href="showcase/layers_documentary_720p.mp4">
-    <img src="showcase/layers_documentary_preview.gif" width="300px" alt="Layers Breakdown Preview" />
-  </a>
-</p>
-
----
-
-### 4. High-Speed State Change (`short_state_change_720p.mp4`)
-* **Genre / Style**: State Change Grammar
-* **Key Features**: Directional velocity transitions and before/after comparative entity states.
-* **Full Master MP4**: [▶️ Download / Watch `short_state_change_720p.mp4`](showcase/short_state_change_720p.mp4)
-
-<p align="center">
-  <a href="showcase/short_state_change_720p.mp4">
-    <img src="showcase/short_state_change_preview.gif" width="300px" alt="State Change Preview" />
-  </a>
-</p>
-
----
-
-## 🏛️ System Architecture (from Archify)
-
-MotionEngine translates high-level semantic intent into fully composed, broadcast-grade editorial motion graphics videos with synchronized narration and sound design.
-
-### Archify System Architecture Diagram
-
-```mermaid
-graph TD
-    Author["Author / LLM Agent<br/><i>(CreativeIntent v0.2 + StyleProfile)</i>"] -->|intent JSON| Reel["motion-engine reel<br/><i>(motion-cli orchestrator)</i>"]
-    
-    subgraph Voice Pipeline
-        Reel -->|1. voice pass| Voice["motion-voice<br/><i>(TTS · ASR · script)</i>"]
-        Voice -->|HTTPS| Provider["OpenRouter / Neural TTS<br/><i>(Fish Audio S2.1 Pro / macOS say)</i>"]
-        Voice -->|read/write| Cache[("Voice Cache<br/><i>sha256-addressed WAV</i>")]
-    end
-    
-    subgraph Semantic Compilation
-        Reel -->|2. compile pass| Compiler["Compiler<br/><i>(motion-core)</i>"]
-        Voice -->|SpeechMap & word timings| Compiler
-        Assets[("Asset Library<br/><i>fonts · cutouts · loops · music</i>")] -->|catalog resolution| Compiler
-        Compiler -->|MotionScene graph| Timeline["Timeline<br/><i>(evaluate_frame)</i>"]
-    end
-    
-    subgraph Rasterization & Audio Mixing
-        Timeline -->|ResolvedFrame| Renderer["CPU Renderer<br/><i>(tiny-skia · cosmic-text)</i>"]
-        Assets -->|music bed · SFX cues| Mixer["Audio Mixer<br/><i>(FFmpeg · ducking · -16 LUFS)</i>"]
-        Renderer -->|encode frames| Video["MP4 Reel<br/><i>(H.264 + AAC 30fps)</i>"]
-        Mixer -->|audio stream| Video
-    end
-    
-    Video --> QA["Speech + Layout QA<br/><i>(qa --speech)</i>"]
-```
-
-### Interactive Archify Offline Diagrams
-
-The repository includes standalone, interactive HTML architecture diagrams generated with [Archify](https://github.com/tt-a1i/archify) in [`docs/architecture/`](docs/architecture/):
-
-* 📊 **[System Architecture Diagram](docs/architecture/system-architecture.html)** — Full crate layout, network boundary, and inter-stage data contracts.
-* 🔄 **[Reel Workflow Pipeline](docs/architecture/reel-workflow.html)** — Step-by-step pipeline execution, take rotations, and fallback chains.
-* 🎙️ **[Voice-Over Sequence](docs/architecture/voice-sequence.html)** — Script pass, single take synthesis, and Whisper CTC word-level timing alignment.
-
----
-
-## ⚡ Workspace Crates
-
-* **`motion-core`**: Core domain logic, schema definitions (`CreativeIntent`, `StyleProfile`, `MotionScene`), semantic layout grammars, typography, and animation easing.
-* **`motion-render`**: High-performance CPU rasterizer built on Tiny-Skia, audio bus mixer, and FFmpeg video pipeline.
-* **`motion-voice`**: Voice synthesis pipeline, OpenRouter / local TTS integration, and local Whisper ASR word-timing alignment.
-* **`motion-cli`**: Command-line interface (`compile`, `render`, `voice`, `reel`, `validate`).
-* **`motion-mcp`**: Model Context Protocol (MCP) server enabling AI coding assistants (Claude Desktop, Antigravity, Cursor) to author and render videos autonomously.
-
----
-
-## 🛠️ Prerequisites
-
-* **Rust**: `1.80` or later ([rustup.rs](https://rustup.rs/))
-* **FFmpeg**: `6.0` or later with `libx264` and `aac` enabled:
-  ```bash
-  # macOS (Homebrew)
-  brew install ffmpeg
-
-  # Ubuntu / Debian
-  sudo apt-get install ffmpeg
-  ```
-* **TTS Provider (Optional)**:
-  * For neural speech synthesis: an [OpenRouter](https://openrouter.ai/) API key (Fish Audio S2.1 Pro free tier supported).
-  * For offline testing on macOS: the system `say` synthesizer is supported without any API key.
-
----
-
-## 🚀 Installation & Setup
-
-### 1. Build from Source
+## Install
 
 ```bash
 git clone https://github.com/abhishekaryan23/motion-engine.git
 cd motion-engine
-
-# Build release binaries with local ASR features enabled
-cargo build --release --features asr-local,asr-ctc
+cargo build --release -p motion-cli          # the motion-engine binary
+cargo build --release -p motion-mcp          # the MCP server (optional)
 ```
 
-The resulting binary will be at `target/release/motion-engine`. Add it to your `PATH` or create an alias:
+Fonts (under their own open licences, `assets/fonts/licenses/`) and music beds are bundled in `assets/`; nothing
+else needs to be installed. Some optional faces are fetched with `scripts/fetch_fonts.sh` (`assets/fonts/RESTRICTED.md`);
+without them the engine uses open fallbacks.
+
+## Quick start
+
+From a brief:
 
 ```bash
-export PATH="$PWD/target/release:$PATH"
+./target/release/motion-engine make --brief "Cold brew orders grew from 12k in January to 31k in July. Most cups are bought before 9am."
 ```
 
-### 2. Configure Voice Providers (Optional)
+One JSON line comes back with the MP4 path (under `output/make/<name>/`), the program, a per-beat
+contact sheet, `qa` (`pass` or the failing ledger ids) and a critique score out of 40. Direction words
+in the brief ("a 15 s vertical", "go all out") set length, aspect and recipe and never appear on
+screen; quoted text, numbers and statements are content.
 
-If using OpenRouter for neural voice synthesis:
+From a program (QA, auto-repair, then render):
 
 ```bash
-# Set your API key securely
-motion-engine providers set-key openrouter
-# Paste your key when prompted
+./target/release/motion-engine program render examples/v2/coffee_story.program.json
 ```
 
-Alternatively, set the environment variable:
-```bash
-export OPENROUTER_API_KEY="sk-or-v1-..."
-```
-
----
-
-## 💻 Quick Start & CLI Usage
-
-### Option A: The All-in-One `reel` Command
-
-The fastest way to generate a complete video from intent to master MP4:
+Check a program without rendering, or run every offline command at once:
 
 ```bash
-motion-engine reel examples/public/minimal-emphasize.intent.json \
-  --style examples/public/minimal.style.json \
-  -o output/minimal.mp4
+./target/release/motion-engine program qa examples/v2/flow_board.program.json
+scripts/cli_smoke.sh
 ```
 
-### Option B: The Granular 3-Stage Pipeline
-
-#### Step 1: Synthesize & Align Narration
-```bash
-motion-engine voice examples/topics/fuel.intent.json \
-  -o output/voice/ \
-  --tts-model fish \
-  --align local \
-  --asr-ctc on
-```
-
-#### Step 2: Compile Semantic Motion Scene
-```bash
-motion-engine compile examples/topics/fuel.intent.json \
-  --style examples/taste/editorial_warm.style.json \
-  --speech output/voice/fuel.speech.json \
-  --art dossier \
-  -o output/fuel.motion.json
-```
-
-#### Step 3: Render Master Video
-```bash
-motion-engine render output/fuel.motion.json \
-  --speech output/voice/fuel.speech.json \
-  --out-dir output/render/
-```
-
----
-
-## 📝 Authoring Video Intents (`CreativeIntent` v0.2)
-
-MotionEngine uses declarative JSON specifications. You state **what** the video communicates; the engine decides camera paths, typography sizes, and layout compositions.
-
-### Minimal Example
+## A minimal MotionProgram
 
 ```json
 {
-  "version": "0.2",
-  "title": "coffee_facts",
-  "format": "vertical",
-  "beats": [
-    {
-      "purpose": "emphasize",
-      "statement": "Morning ritual",
-      "narration": "Over two billion cups of coffee are poured every single morning.",
-      "primary": { "kind": "number", "value": "2.25B", "meaning": "cups per day" },
-      "secondary": { "kind": "phrase", "value": "Worldwide", "meaning": "scale" },
-      "energy": "impact",
-      "keyword": "coffee"
-    },
-    {
-      "purpose": "compare",
-      "statement": "Nordic consumption",
-      "narration": "Finland leads the world at twelve kilograms per person, while the US sits at four.",
-      "primary":   { "kind": "object", "asset": "flag_finland", "value": "12 kg", "meaning": "Finland" },
-      "secondary": { "kind": "object", "asset": "flag_us",      "value": "4.5 kg", "meaning": "United States" },
-      "relationship": "separate",
-      "energy": "building",
-      "keyword": "highest"
-    },
-    {
-      "purpose": "reveal",
-      "statement": "The daily impact",
-      "narration": "That cup is not just caffeine — it is a global trade network linking sixty countries.",
-      "primary": { "kind": "number", "value": "60+", "meaning": "exporting nations" },
-      "energy": "impact",
-      "keyword": "global"
-    }
+  "version": "2.0",
+  "meta": { "name": "flow_board", "aspect": "16:9", "duration": 5.0, "end_beat": 8 },
+  "palette": { "background": "#0B0C10", "ink": "#F2EFE8", "accent": "#FF4A1C", "muted": "#8C93A3" },
+  "music": { "track": "driving_pulse", "start": 0.107 },
+  "tempo": "fast",
+  "components": [
+    { "id": "g", "kind": "backdrop" },
+    { "id": "flow", "kind": "diagram", "preset": "cards",
+      "nodes": ["Brief", "Script", "Voice", "Edit", "Publish"], "start_beat": 0, "beat_cuts": 2 },
+    { "id": "cap", "kind": "kinetic_text", "preset": "type_on", "slot": "bottom", "colour": "muted",
+      "start_beat": 1, "beat_cuts": 2,
+      "words": ["why it exists", "lines that land", "said out loud", "cut on the beat"] }
   ]
 }
 ```
 
-### Supported Beat Purposes
+Components are placed in slots and timed in beats; the engine decides sizes, easing, colours (from
+palette roles) and layout. The schema is `schema/motion_program.json`; more samples are in
+`examples/v2/`.
 
-* **`emphasize`**: Bold hook or core thesis; headline + hero figure card.
-* **`compare`**: Direct head-to-head comparison between two stat cards with auto-drawn dividers.
-* **`contrast`**: Tension / gap comparison with relationship connectors.
-* **`reveal`**: Climactic takeaway; large display figure card with energetic entrance.
-* **`explain`**: Definition or calm contextual breakdown.
-
-### Structured Subject Types
-
-* **`number`**: Numeric figures (`"value": "4.1%"`, `"$120"`, `"-15%"`). Renders in massive serif or grotesque display type.
-* **`phrase`**: Text claims or labels.
-* **`object`**: Pictured subject looked up in the asset library (`assets/library/`). Combined with `value`, becomes a **Stat Card**.
-* **`collection`**: Multi-item lists. When carrying numeric values, automatically compiles into an **Animated Ranking Bar Chart**.
-
----
-
-## 🎨 Art Direction & Style Profiles
-
-Control visual tone via `StyleProfile`:
-
-```json
-{
-  "tone": "documentary",
-  "polarity": "dark",
-  "temperature": "warm",
-  "temperament": "balanced",
-  "density": "balanced",
-  "seed": 1
-}
-```
-
-* **`tone`**: `documentary` (Vox/dossier evidence desk), `cinematic` (3D multiplane depth & bokeh), `studio` (bold studio cutouts & discs), `editorial` (warm magazine typography), `street` (urban poster collage), `playful` (bouncy energetic motion).
-* **`polarity`**: `dark` or `light`.
-* **`temperature`**: `warm` or `cool`.
-* **`temperament`**: `restrained`, `balanced`, or `energetic`.
-
----
-
-## 🤖 Model Context Protocol (MCP)
-
-MotionEngine includes a first-class MCP server (`motion-mcp`) allowing AI coding agents (Claude Desktop, Antigravity, Cursor) to compose, check, and render videos autonomously.
-
-### Claude Desktop Configuration
-
-Add to your `claude_desktop_config.json`:
-
-```json
-{
-  "mcpServers": {
-    "motion-engine": {
-      "command": "/path/to/motion-engine/target/release/motion-mcp",
-      "args": ["--root", "/path/to/motion-engine"]
-    }
-  }
-}
-```
-
----
-
-## 🧪 Verification & Smoke Tests
-
-Run the built-in public interface smoke test:
+## MCP
 
 ```bash
-bash scripts/public_smoke.sh
+cargo build --release -p motion-mcp
+./target/release/motion-mcp --profile v2
 ```
 
----
+The `v2` profile has four tools: `make_video` (brief or `CreativeIntent` → MP4, QA and critique),
+`edit_video`, `preview` (one small frame or the beat sheet) and `critique`. A typical session is
+`make_video` → `critique` → `preview`. The `weak`, `creator` and `operator` profiles serve v1 narrated
+reels with fewer or more tools depending on the model. To register the server with an MCP client,
+copy `docs/mcp/claude-code.mcp.json` to `.mcp.json` and set the binary path. Details:
+[docs/MCP.md](docs/MCP.md).
 
-## 📄 License
+## Project layout
 
-MotionEngine is licensed under the **MotionEngine Limited License**.
+| Crate | Role |
+|---|---|
+| `crates/motion-core` | Intent and style schemas, the v1 compiler, the `MotionScene` format, timeline evaluation, easing and springs, audio planning, critique. No pixels, no network. |
+| `crates/motion-render` | The `Renderer` trait and CPU backend (tiny-skia), text shaping and outlines (cosmic-text), textures, the asset cache, optional GPU post effects, PNG and FFmpeg export. |
+| `crates/motion-program` | `MotionProgram`: schema, validation, deterministic lowering, components, palette roles and design passes, camera, layout, QA and the mistake ledger with repairs. |
+| `crates/motion-bridge` | Brief or intent → program: named recipes, the bar planner on the beat grid, claim headlines, typed UI flows. |
+| `crates/motion-providers` | Asset providers: an MCP client with OAuth, the OpenArt adapter, the local MOSS-Image provider, spend policy, cache, lockfiles. |
+| `crates/motion-voice` | Text to speech, voice cache, optional local speech recognition for word timing. |
+| `crates/motion-mcp` | The MCP server. |
+| `crates/motion-cli` | The `motion-engine` binary. |
 
-* **Permitted**: Personal inspection, non-commercial evaluation, local testing, and academic study.
-* **Prohibited**: Commercial production, SaaS deployment, hosted video generation services, or commercial redistribution without an explicit written license.
+Bundled data: `assets/` (fonts, picture and loop library, music beds, recipes, the mistake ledger and
+its fixtures), `examples/` (programs, intents and styles), `golden/` (regression scenes and frames),
+`schema/` (public JSON schemas), `benchmarks/` (reference-interpreter benchmark).
 
-For full license terms and commercial licensing inquiries, please see [LICENSE](LICENSE).
+## Documentation
 
----
+- [ARCHITECTURE.md](ARCHITECTURE.md): data flow, crate boundaries, determinism rules
+- [docs/DESIGN_RULES.md](docs/DESIGN_RULES.md): the taste gates, colour roles, UI kit and sound rules
+- [docs/PROVIDERS.md](docs/PROVIDERS.md): asset providers, spend policy, cache and lockfiles
+- [docs/MCP.md](docs/MCP.md) and [docs/mcp/](docs/mcp/): the MCP server and its guides
+- [docs/PUBLIC_INTERFACE.md](docs/PUBLIC_INTERFACE.md): the stable interface for AI consumers
+- [docs/AI_AUTHORING_GUIDE.md](docs/AI_AUTHORING_GUIDE.md), [docs/CLI_CONSUMER_GUIDE.md](docs/CLI_CONSUMER_GUIDE.md): writing briefs and intents, using the CLI
+- [docs/MOTION_QA.md](docs/MOTION_QA.md), [docs/TESTING.md](docs/TESTING.md): QA and tests
+- Subsystems: [VOICE](docs/VOICE.md), [SOUND_DESIGN](docs/SOUND_DESIGN.md), [TYPOGRAPHY](docs/TYPOGRAPHY.md),
+  [ART_DIRECTION](docs/ART_DIRECTION.md), [GENRE_GRAMMARS](docs/GENRE_GRAMMARS.md),
+  [MOTION_OPS_2](docs/MOTION_OPS_2.md), [POST_EFFECTS](docs/POST_EFFECTS.md),
+  [ASSET_PIPELINE](docs/ASSET_PIPELINE.md), [architecture diagrams](docs/architecture/README.md)
+- [CHANGELOG.md](CHANGELOG.md), [SECURITY.md](SECURITY.md)
 
-## 🛡️ Security
+## Contributing
 
-Please report any security vulnerabilities via [GitHub Private Vulnerability Reporting](https://github.com/abhishekaryan23/motion-engine/security/advisories/new). See [SECURITY.md](SECURITY.md) for details.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the development setup, the test gate, determinism rules
+and how to add a component or a mistake-ledger entry.
+
+## License
+
+MotionEngine is released under the **MotionEngine Limited License**: you may clone, build and run it
+for personal evaluation, research and non-commercial testing. Commercial use, hosting it as a
+service and redistribution need a separate written license. Read [LICENSE](LICENSE) for the terms.
+The bundled fonts keep their own open licenses (`assets/fonts/licenses/`), and the music beds carry
+the terms in `assets/music/`.

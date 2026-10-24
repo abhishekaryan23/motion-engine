@@ -15,11 +15,16 @@ use super::taste::{AnnotationStyle, DensityLevel};
 use super::typeset::{text_layer, Voice};
 use super::{base_layer, mo, rect_layer, Ctx};
 use crate::easing::Easing;
-use crate::intent::Purpose;
 use crate::scene::{Color, Direction, Layer, LayerKind, TextAlign};
 
 /// z of all furniture: above the ghost word (0), below every content layer.
 const Z: i32 = 4;
+
+/// Asset id of the default corner and divider flourish.
+pub(crate) const ORNAMENT_ASSET: &str = "asset.ornament_0021";
+
+/// Library path of [`ORNAMENT_ASSET`].
+pub(crate) const ORNAMENT_PATH: &str = "library/aikakirja_ornaments/ornament_0021.png";
 
 /// Add this beat's annotation layers to the stage.
 pub(crate) fn furniture(ctx: &Ctx, b: &mut B) {
@@ -30,9 +35,23 @@ pub(crate) fn furniture(ctx: &Ctx, b: &mut B) {
     let dense = ctx.taste.density.level == DensityLevel::Dense;
     match ctx.taste.density.annotation {
         AnnotationStyle::None => {}
-        AnnotationStyle::Editorial => editorial(ctx, b, dense),
+        AnnotationStyle::Editorial => editorial(ctx, b),
         AnnotationStyle::Structured => structured(ctx, b, dense),
         AnnotationStyle::Graphic => graphic(ctx, b, dense),
+    }
+    // (0.24 V1) No ornament frame (corner flourishes, divider) either: a look's
+    // `ornaments` flag no longer boxes the page in.
+    no_decoration_rules(b);
+}
+
+/// (0.24 V1) No default hairlines: the builders' decoration rules (under the
+/// hero, the statement, the body, the serif line) are never drawn (hidden
+/// layers: the builders' geometry still reads them). A look's structural line
+/// is the technical tone's tick scale, which is not a rule.
+fn no_decoration_rules(b: &mut B) {
+    let decoration = ["hero_rule", "statement_rule", "body_rule", "serif_rule"].map(|n| b.id(n));
+    for l in b.stage.iter_mut().filter(|l| decoration.contains(&l.id)) {
+        l.visible = false;
     }
 }
 
@@ -177,69 +196,29 @@ fn rule(b: &mut B, name: &str, rect: (f32, f32, f32, f32), color: Color, t: f64)
     b.push(layer);
 }
 
-fn purpose_word(p: Purpose) -> &'static str {
-    match p {
-        Purpose::Emphasize => "note",
-        Purpose::Compare => "compare",
-        Purpose::Contrast => "contrast",
-        Purpose::Reveal => "result",
-        Purpose::Explain => "why",
-    }
-}
-
-/// Height of a label line at `size` (where the folio sits, with or without one).
-fn label_height(ctx: &Ctx, size: f32) -> f32 {
-    ctx.ts
-        .fit_line(Voice::LABEL, "00", ctx.w - 2.0 * ctx.margin(), size)
-        .height()
-}
-
-/// Editorial: a hairline rule along the bottom margin, with the folio number
-/// at its right end when the story counts.
-fn editorial(ctx: &Ctx, b: &mut B, dense: bool) {
+/// Editorial: the folio number at the bottom-right margin when the story
+/// counts. (0.24 V1) No hairline rule under the page.
+fn editorial(ctx: &Ctx, b: &mut B) {
     let (w, h, u) = (ctx.w, ctx.h, ctx.u);
     let (m, my) = inset(ctx, b, ctx.margin());
     let t = arrival(b);
-    let base = h - my;
-    let th = match folio(ctx, b) {
-        Some(n) => {
-            label(
-                ctx,
-                b,
-                "folio",
-                &n,
-                22.0 * u,
-                ctx.palette.muted,
-                (w - m, base),
-                true,
-                t,
-            )
-            .1
-        }
-        None => label_height(ctx, 22.0 * u),
-    };
-    let rule_y = base - th - 16.0 * u;
-    rule(
-        b,
-        "folio_rule",
-        (m, rule_y, w - 2.0 * m, 2.0 * u),
-        ctx.palette.muted.with_alpha(0x90),
-        t,
-    );
-    if dense {
-        // A short accent tick where the rule starts.
-        rule(
+    if let Some(n) = folio(ctx, b) {
+        label(
+            ctx,
             b,
-            "folio_tick",
-            (m, rule_y - 6.0 * u, 40.0 * u, 8.0 * u),
-            ctx.palette.accent,
-            t + 0.1,
+            "folio",
+            &n,
+            22.0 * u,
+            ctx.palette.muted,
+            (w - m, h - my),
+            true,
+            t,
         );
     }
 }
 
-/// Structured (technical): coordinate ticks down the left edge, a hairline
-/// rule and a mono data label along the bottom margin.
+/// Structured (technical): coordinate ticks down the left edge and a mono
+/// data label along the bottom margin.
 fn structured(ctx: &Ctx, b: &mut B, dense: bool) {
     let (w, h, u) = (ctx.w, ctx.h, ctx.u);
     let (m, my) = inset(ctx, b, ctx.margin());
@@ -251,7 +230,7 @@ fn structured(ctx: &Ctx, b: &mut B, dense: bool) {
         Some(n) => format!("SEC {n} · T+{:.1}", b.plan.start),
         None => format!("T+{:.1}", b.plan.start),
     };
-    let (_, th) = label(ctx, b, "data", &text, 20.0 * u, muted, (m, base), false, t);
+    label(ctx, b, "data", &text, 20.0 * u, muted, (m, base), false, t);
     if let Some(n) = &folio {
         label(
             ctx,
@@ -265,14 +244,6 @@ fn structured(ctx: &Ctx, b: &mut B, dense: bool) {
             t,
         );
     }
-    rule(
-        b,
-        "data_rule",
-        (m, base - th - 14.0 * u, w - 2.0 * m, 2.0 * u),
-        muted.with_alpha(0x80),
-        t,
-    );
-
     // Tick scale in the left margin: every fifth tick is long.
     let ticks = 21;
     let (top, span) = (0.2 * h, 0.6 * h);
@@ -359,26 +330,11 @@ fn graphic(ctx: &Ctx, b: &mut B, dense: bool) {
         b.push(layer);
     }
 
-    // Sticker: rounded tag with the beat's role, tilted a few degrees.
-    let tag_w = sticker(
-        ctx,
-        b,
-        "sticker",
-        purpose_word(b.beat.purpose),
-        (m, h - my),
-        t + 0.1,
-    );
+    // (0.24 M9) No purpose pill: the beat's internal role never renders. Only
+    // a counting story's rank tag survives, in dense looks.
     if let (true, Some(n)) = (dense, &folio) {
-        // A second tag beside the first: the item's rank.
         let n = format!("no. {n}");
-        sticker(
-            ctx,
-            b,
-            "sticker2",
-            &n,
-            (m + tag_w + 14.0 * u, h - my),
-            t + 0.25,
-        );
+        sticker(ctx, b, "sticker2", &n, (m, h - my), t + 0.25);
     }
 }
 
@@ -458,11 +414,13 @@ mod tests {
         let manifest = crate::assets::AssetManifest::empty();
         let ctx = Ctx {
             reveals: Default::default(),
+            family: None,
             warnings: Vec::new(),
             direction_seed: None,
             beat_params: BTreeMap::new(),
             direction_take: None,
             direction_beats: BTreeMap::new(),
+            budget: crate::compiler::accent_budget::AccentBudget::unlimited(),
             emotion: None,
             art: None,
             w: 1080.0,
@@ -481,6 +439,8 @@ mod tests {
             focal: Default::default(),
             stack: None,
             spoken: Default::default(),
+            spoken_ends: Default::default(),
+            stresses: Default::default(),
             beat_count: 1,
             sequence: crate::compiler::sequence::Sequence {
                 order: rank.map(|_| crate::compiler::sequence::Order::Ascending),
@@ -538,17 +498,14 @@ mod tests {
     }
 
     #[test]
-    fn editorial_adds_a_rule_and_a_folio_only_when_the_story_counts() {
+    fn editorial_adds_a_folio_only_when_the_story_counts() {
         let (layers, _, _) = added(r#"{"tone":"editorial"}"#);
-        assert!(has(&layers, "folio_rule"));
+        assert!(!has(&layers, "folio_rule"), "no default hairline");
         assert!(!layers.iter().any(|l| l.id.ends_with(".folio")));
         assert!(!has_number(&layers), "{:?}", texts(&layers));
         let (ranked, _, _) = added_ranked(r#"{"tone":"editorial"}"#, Some(2));
         assert!(ranked.iter().any(|l| l.id.ends_with(".folio")));
         assert!(texts(&ranked).contains(&"02".to_string()));
-        // The rule sits at the same height either way.
-        let rule_y = |ls: &[Layer]| ls.iter().find(|l| l.id.ends_with("folio_rule")).unwrap().y;
-        assert!((rule_y(&layers) - rule_y(&ranked)).abs() < 1e-3);
     }
 
     #[test]
@@ -577,12 +534,16 @@ mod tests {
     #[test]
     fn playful_adds_numeral_and_sticker_and_dense_adds_more() {
         let (plain, _, _) = added(r#"{"tone":"playful","density":"dense"}"#);
-        assert!(has(&plain, ".sticker"));
-        assert!(!has(&plain, ".numeral") && !has(&plain, ".sticker2"));
+        // (0.24 M9) The beat's purpose word never renders: no sticker without a rank.
+        assert!(!has(&plain, ".sticker") && !has(&plain, ".numeral"));
         assert!(!has_number(&plain), "{:?}", texts(&plain));
+        let all = texts(&plain).join(" ").to_lowercase();
+        for word in ["note", "compare", "contrast", "result", "why"] {
+            assert!(!all.contains(word), "{word} leaked: {all}");
+        }
         let (layers, _, _) = added_ranked(r#"{"tone":"playful"}"#, Some(2));
         assert!(has(&layers, ".numeral"));
-        assert!(has(&layers, ".sticker"));
+        assert!(!has(&layers, ".sticker."));
         let (balanced, _, _) = added_ranked(r#"{"tone":"playful","density":"balanced"}"#, Some(2));
         let (dense, _, _) = added_ranked(r#"{"tone":"playful","density":"dense"}"#, Some(2));
         assert!(dense.len() > balanced.len());
@@ -604,5 +565,75 @@ mod tests {
                 assert!(l.y >= 0.0 && l.y + l.height <= 1920.0, "{} y", l.id);
             }
         }
+    }
+
+    fn added_with_art(
+        style_json: &str,
+        art: Option<crate::compiler::art_direction::ArtDirection>,
+    ) -> (Vec<Layer>, Vec<Motion>, f64) {
+        let style: StyleProfile = serde_json::from_str(style_json).expect("style");
+        let intent: CreativeIntent = serde_json::from_str(INTENT).expect("intent");
+        let plans = plan_timing(&intent, &style);
+        let library = AssetLibrary::new(concat!(env!("CARGO_MANIFEST_DIR"), "/../../assets"));
+        let fonts = FontSet::for_style(&style);
+        let ts = Typesetter::new(&ApproxMeasure, &library.root, &fonts);
+        let manifest = crate::assets::AssetManifest::empty();
+        let ctx = Ctx {
+            reveals: Default::default(),
+            family: None,
+            warnings: Vec::new(),
+            direction_seed: None,
+            beat_params: BTreeMap::new(),
+            direction_take: None,
+            direction_beats: BTreeMap::new(),
+            budget: crate::compiler::accent_budget::AccentBudget::unlimited(),
+            emotion: None,
+            art: art.map(|a| (a, None)),
+            w: 1080.0,
+            h: 1920.0,
+            u: 1.0,
+            style: &style,
+            taste: crate::compiler::taste::resolve(&style),
+            palette: Palette::for_style(&style),
+            ts,
+            library: &library,
+            assets: BTreeMap::new(),
+            format: Format::Vertical,
+            frame: crate::compiler::layout_frame::LayoutFrame::for_format(Format::Vertical),
+            manifest: &manifest,
+            image_carry: Default::default(),
+            focal: Default::default(),
+            stack: None,
+            spoken: Default::default(),
+            spoken_ends: Default::default(),
+            stresses: Default::default(),
+            beat_count: 1,
+            sequence: crate::compiler::sequence::Sequence {
+                order: None,
+                ranks: vec![None, None],
+            },
+        };
+        let mut b = B {
+            reveals: Vec::new(),
+            plan: &plans[1],
+            beat: &intent.beats[1],
+            stage: Vec::new(),
+            motions: Vec::new(),
+            anchor: None,
+            placed: Vec::new(),
+            split_above: None,
+            focal: None,
+        };
+        furniture(&ctx, &mut b);
+        (b.stage, b.motions, plans[1].life.settle)
+    }
+
+    #[test]
+    fn ornament_editorial_frames_nothing() {
+        use crate::compiler::art_direction::{look_defaults, Look};
+        let art = look_defaults(Look::OrnamentEditorial);
+        let (layers, _, _) = added_with_art(r#"{"tone":"editorial"}"#, Some(art));
+        assert!(!has(&layers, "ornament"), "no corners or divider");
+        assert!(!has(&layers, "_rule"), "no hairlines");
     }
 }

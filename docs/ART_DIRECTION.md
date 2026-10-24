@@ -1,6 +1,6 @@
 # Art direction & variety (0.10 Q / 0.12)
 
-Owner review of weak-model reels: "the colour theme always stays the same, the
+A review of weak-model reels found: "the colour theme always stays the same, the
 flow always stays the same, the videos feel repetitive". Each tone had exactly
 one palette and each purpose exactly one grammar, so five similar beats gave
 five identical screens and every story in the same tone looked alike.

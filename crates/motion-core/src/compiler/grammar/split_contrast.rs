@@ -173,6 +173,7 @@ pub(super) fn build(
         Some(Stroke {
             color: ink,
             width: 3.0 * u,
+            brush: None,
         }),
         if rel == Rel::Carry { 13 } else { 12 },
     ));

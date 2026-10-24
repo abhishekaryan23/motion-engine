@@ -1,0 +1,45 @@
+{
+ "kind": "program",
+ "program": {
+  "version": "2.0",
+  "meta": {
+   "name": "fixture",
+   "duration": 3.0
+  },
+  "palette": {
+   "background": "#F2EEE6",
+   "ink": "#111111",
+   "accent": "#E04A12",
+   "muted": "#6B6B6B"
+  },
+  "components": [
+   {
+    "id": "c",
+    "kind": "chart",
+    "chart": "bar",
+    "values": [
+     1,
+     2,
+     3
+    ],
+    "labels": [
+     "q1",
+     "q2",
+     "q3"
+    ],
+    "hero": 2
+   },
+   {
+    "id": "cap",
+    "kind": "kinetic_text",
+    "preset": "type_on",
+    "slot": "top",
+    "words": [
+     "q3 leads"
+    ]
+   }
+  ]
+ },
+ "repair": true,
+ "id": "echo_labels"
+}

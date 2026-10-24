@@ -47,6 +47,19 @@ pub(crate) fn backdrop_scene_around(
     text: &[Vec<TextZone>],
 ) -> Scene {
     let mut scene = backdrop_grammar(ctx, plans, total, text);
+    // (0.24 V1) The video's backdrop family: grounds that change per beat
+    // group over the flat / paper ground. Print fields and the technical grid
+    // already recompose per beat and keep their own worlds.
+    if let Some(family) = ctx.family {
+        let own_world = ctx.art.as_ref().is_none_or(|(a, _)| a.fx.grammar.is_none())
+            && matches!(
+                ctx.taste.background,
+                BackgroundGrammar::PrintFields | BackgroundGrammar::TechnicalGrid
+            );
+        if !own_world {
+            super::ground::apply(ctx, family, plans, total, &mut scene);
+        }
+    }
     // (0.10 Q) Art direction: a `grounds` plate (chosen by emotion, never by
     // story words) sits just above the paper, under every other backdrop layer.
     if let Some((art, Some(plate))) = &ctx.art {
@@ -1206,11 +1219,13 @@ mod tests {
         };
         let mut ctx = Ctx {
             reveals: Default::default(),
+            family: None,
             warnings: Vec::new(),
             direction_seed: None,
             beat_params: BTreeMap::new(),
             direction_take: None,
             direction_beats: BTreeMap::new(),
+            budget: crate::compiler::accent_budget::AccentBudget::unlimited(),
             emotion: None,
             art: None,
             w,
@@ -1229,6 +1244,8 @@ mod tests {
             focal: Default::default(),
             stack: None,
             spoken: Default::default(),
+            spoken_ends: Default::default(),
+            stresses: Default::default(),
             beat_count: 1,
             sequence: Default::default(),
         };
@@ -1249,6 +1266,53 @@ mod tests {
                 _ => None,
             })
             .expect("grid group")
+    }
+
+    #[test]
+    fn every_family_changes_the_ground_per_beat_group_and_keeps_the_ink_readable() {
+        use crate::compiler::ground::FAMILIES;
+        for family in FAMILIES {
+            with_ctx(
+                r#"{"tone":"editorial","polarity":"dark"}"#,
+                "landscape",
+                |ctx, plans, total| {
+                    ctx.family = Some(family);
+                    let scene = backdrop_scene(ctx, plans, total);
+                    let grounds: Vec<&Layer> = scene
+                        .layers
+                        .iter()
+                        .filter(|l| l.id.starts_with("backdrop.ground"))
+                        .collect();
+                    // Four beats: two groups of two, never the same ground twice.
+                    assert_eq!(grounds.len(), 2, "{family:?}");
+                    assert_ne!(grounds[0].kind, grounds[1].kind, "{family:?}");
+                    // Group 0 is on from the start, group 1 fades in at the boundary.
+                    assert_eq!(grounds[0].opacity, 1.0);
+                    assert_eq!(grounds[1].opacity, 0.0);
+                    assert!(scene.motions.iter().any(
+                        |m| m.target == grounds[1].id && matches!(m.op, MotionOp::Fade { .. })
+                    ));
+                    // The palette's ink reads on the family's colours.
+                    for g in &grounds {
+                        let LayerKind::Group { children } = &g.kind else {
+                            panic!("ground group")
+                        };
+                        for c in children {
+                            let fill = match &c.kind {
+                                LayerKind::Rectangle { fill, .. }
+                                | LayerKind::RoundedRectangle { fill, .. } => fill.with_alpha(255),
+                                _ => continue,
+                            };
+                            assert!(
+                                contrast_ratio(ctx.palette.ink, fill) >= 4.5,
+                                "{family:?} {}",
+                                c.id
+                            );
+                        }
+                    }
+                },
+            );
+        }
     }
 
     #[test]
@@ -1281,7 +1345,7 @@ mod tests {
                 assert_eq!(drift.easing, Easing::Linear);
                 assert!((drift.duration - round3(total)).abs() < 2e-3);
                 match &drift.op {
-                    MotionOp::Move { from, to } => {
+                    MotionOp::Move { from, to, .. } => {
                         assert_eq!(*from, [0.0, 0.0]);
                         assert_eq!(to[0].abs(), 90.0 * ctx.u);
                         assert_eq!(to[1].abs(), 90.0 * ctx.u);

@@ -3,8 +3,8 @@ name = "motion-mcp-eval"
 description = "Dev-only eval harness: a local OpenAI-compatible model drives motion-mcp over stdio"
 version.workspace = true
 edition.workspace = true
-license.workspace = true
-publish = false
+license-file.workspace = true
+publish.workspace = true
 
 [[bin]]
 name = "motion-mcp-eval"

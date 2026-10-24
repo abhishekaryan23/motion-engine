@@ -1,0 +1,184 @@
+{
+  "version": "2.0",
+  "meta": {
+    "name": "idea_3_aeris_bio_orbit",
+    "aspect": "9:16",
+    "duration": 13.0,
+    "fps": "30",
+    "end_beat": 24
+  },
+  "palette": {
+    "background": "#050B14",
+    "ink": "#EDF2F7",
+    "accent": "#10D994",
+    "muted": "#4A6278",
+    "grounds": [
+      "#0A1424",
+      "#073628"
+    ]
+  },
+  "fonts": {
+    "display": "clash_display_bold",
+    "serif": "zodiak_bold",
+    "mono": "space_mono_bold"
+  },
+  "tempo": "fast",
+  "music": {
+    "track": "bright_upbeat",
+    "start": 0.508
+  },
+  "allow": ["gradient"],
+  "film": {
+    "grain": 0.018,
+    "fringe": 0.5
+  },
+  "camera": [
+    { "beat": 1, "do": "push", "to": 1.02 },
+    { "beat": 2, "do": "orbit", "yaw": 2.5, "pitch": -1.5 },
+    { "beat": 4, "do": "dolly", "to": -35.0 },
+    { "beat": 5, "do": "orbit", "yaw": -2.5, "pitch": 1.5 },
+    { "beat": 6, "do": "push", "to": 1.02 },
+    { "beat": 7, "do": "reset" },
+    { "beat": 9, "do": "orbit", "yaw": 4.0, "pitch": -2.5 },
+    { "beat": 11, "do": "dolly", "to": -50.0 },
+    { "beat": 13, "do": "orbit", "yaw": -3.5, "pitch": 2.0 },
+    { "beat": 15, "do": "reset" },
+    { "beat": 21, "do": "orbit", "yaw": 3.0, "pitch": -2.0 },
+    { "beat": 23, "do": "dolly", "to": -40.0 },
+    { "beat": 24, "do": "push", "to": 1.05 }
+  ],
+  "transitions": [
+    { "beat": 8, "kind": "whip" },
+    { "beat": 16, "kind": "colour_flip" },
+    { "beat": 20, "kind": "impact" }
+  ],
+  "components": [
+    {
+      "id": "bg_chart",
+      "kind": "backdrop",
+      "preset": "flat",
+      "image": "generated/idea_3_bg.png",
+      "image_opacity": 0.22,
+      "depth": 0.15,
+      "start_beat": 0,
+      "end_beat": 8
+    },
+    {
+      "id": "biocarbon_flux",
+      "kind": "chart",
+      "preset": "thin_axis",
+      "chart": "area",
+      "title": "Carbon Flux (mg C/m2/d)",
+      "values": [214, 348, 260, 412, 285, 520, 640, 742],
+      "labels": ["Q1", "Q2", "Q3", "Q4", "Q5", "Q6", "Q7", "Q8"],
+      "hero": 7,
+      "callout": "742 mgC",
+      "size": "m",
+      "start_beat": 0,
+      "end_beat": 8,
+      "timeline": [
+        { "beat": 0, "do": "enter", "style": "draw" },
+        { "beat": 3, "do": "pop_label" }
+      ]
+    },
+    {
+      "id": "bg_bento_telemetry",
+      "kind": "backdrop",
+      "preset": "flat",
+      "image": "generated/idea_3_bg.png",
+      "image_opacity": 0.36,
+      "depth": 0.16,
+      "start_beat": 8,
+      "end_beat": 16
+    },
+    {
+      "id": "sensor_matrix",
+      "kind": "bento",
+      "preset": "hero_left",
+      "title": "AERIS BIOSENSOR PIPELINE",
+      "beat_cuts": 2,
+      "tilt_in": [10.0, -8.0],
+      "start_beat": 8,
+      "end_beat": 16,
+      "tiles": [
+        {
+          "stat": "4.82mg",
+          "title": "CHL-A SCAN",
+          "detail": "443NM LIDAR PEAK",
+          "accent": true
+        },
+        {
+          "stat": "-18.4uM",
+          "title": "O2 TELEMETRY",
+          "detail": "THERMOCLINE 142M",
+          "accent": false
+        },
+        {
+          "stat": "0.418",
+          "title": "EXPORT E-RATIO",
+          "detail": "PUMP +132% SURGE",
+          "accent": false
+        },
+        {
+          "stat": "1.85Gt",
+          "title": "CARBON SINK",
+          "detail": "RESIDENCE >100 YRS",
+          "accent": true
+        }
+      ],
+      "timeline": [
+        { "beat": 8, "do": "enter", "style": "fade" }
+      ]
+    },
+    {
+      "id": "bg_orbital",
+      "kind": "backdrop",
+      "preset": "flat",
+      "image": "generated/idea_3_bg.png",
+      "image_opacity": 0.36,
+      "depth": 0.14,
+      "start_beat": 16,
+      "end_beat": 20
+    },
+    {
+      "id": "orbital_drop",
+      "kind": "kinetic_text",
+      "preset": "glyph_drop",
+      "words": [
+        "OCEAN",
+        "CARBON",
+        "PUMP",
+        "LIVE."
+      ],
+      "stress": [1, 3],
+      "beat_cuts": 1,
+      "start_beat": 16,
+      "end_beat": 20
+    },
+    {
+      "id": "bg_close_aeris",
+      "kind": "backdrop",
+      "preset": "flat",
+      "image": "generated/idea_3_bg.png",
+      "image_opacity": 0.40,
+      "depth": 0.12,
+      "start_beat": 20
+    },
+    {
+      "id": "aeris_lockup",
+      "kind": "lockup",
+      "preset": "orbital_seal",
+      "badge": "ORBITAL MESH",
+      "headline": "AERIS BIO-ORBIT",
+      "headline_font": "display",
+      "subline": "PLANETARY CARBON TELEMETRY",
+      "subline_font": "mono",
+      "subline_case": "upper",
+      "start_beat": 20,
+      "timeline": [
+        { "beat": 20, "do": "enter", "style": "pop" },
+        { "beat": 22, "do": "sheen" }
+      ]
+    }
+  ]
+}

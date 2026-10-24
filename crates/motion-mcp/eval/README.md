@@ -1,6 +1,6 @@
 # motion-mcp-eval
 
-Dev-only eval harness for the MCP server (`docs/plans/SPRINT_0_21_MCP_SERVER.md` section 11):
+Dev-only eval harness for the MCP server (see `docs/MCP.md`):
 how well does a small local model drive `motion-mcp` through its tools?
 
 It starts **one** `motion-mcp` server (stdio, the rmcp client) for the whole run, hands the
@@ -113,13 +113,13 @@ Targets (plan section 1, weak profile):
 | tool definitions | <= 1.2k tokens | `prompt_tokens` of a request with the tools minus one without, on the model; also the chars of the MCP tool list |
 | tool replies | <= 200 tokens | characters / 4 of every reply the model read; the largest is judged |
 
-## Paid models need the owner's OK
+## Paid models need explicit approval
 
 The plan also names Haiku 4.5 (Anthropic) and a Flash-class model (OpenRouter) for the creator and
-second weak-tier evals. They cost money, so they run **only with the owner's OK**. This harness
+second weak-tier evals. They cost money, so they run **only with explicit approval**. This harness
 supports OpenAI-compatible endpoints only, sends no authorization header, and never reads
 `OPENROUTER_API_KEY` or `ANTHROPIC_API_KEY` (or any other key). A paid run needs a deliberate
-change to the harness (and the owner's approval first).
+change to the harness (and approval first).
 
 A rendered run makes the server's own voice calls through the engine (free OpenRouter TTS, one
 pinned voice); that is the engine's existing behavior and the harness does not touch the key.

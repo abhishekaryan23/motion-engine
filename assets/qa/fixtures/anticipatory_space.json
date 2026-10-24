@@ -1,0 +1,76 @@
+{
+ "kind": "option",
+ "id": "anticipatory_space",
+ "option": "follow_content",
+ "program": {
+  "version": "2.0",
+  "meta": {
+   "name": "fixture",
+   "duration": 6.0
+  },
+  "palette": {
+   "background": "#F2EEE6",
+   "ink": "#111111",
+   "accent": "#E04A12",
+   "muted": "#6B6B6B"
+  },
+  "components": [
+   {
+    "id": "flow",
+    "kind": "diagram",
+    "preset": "cards",
+    "nodes": [
+     "Brief",
+     "Script",
+     "Voice",
+     "Edit"
+    ],
+    "start": 0.0,
+    "end": 3.0,
+    "timeline": [
+     {
+      "at": 0.8,
+      "do": "advance"
+     },
+     {
+      "at": 1.6,
+      "do": "advance"
+     },
+     {
+      "at": 2.4,
+      "do": "advance"
+     }
+    ]
+   },
+   {
+    "id": "bars",
+    "kind": "chart",
+    "chart": "bar",
+    "values": [
+     3,
+     5,
+     9
+    ],
+    "labels": [
+     "Mon",
+     "Tue",
+     "Wed"
+    ],
+    "hero": 2,
+    "callout": "9k",
+    "start": 3.0,
+    "timeline": [
+     {
+      "at": 0.0,
+      "do": "enter",
+      "style": "draw"
+     },
+     {
+      "at": 1.8,
+      "do": "pop_label"
+     }
+    ]
+   }
+  ]
+ }
+}

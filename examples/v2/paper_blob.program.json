@@ -1,0 +1,150 @@
+{
+ "version": "2.0",
+ "meta": {
+  "name": "paper_blob",
+  "aspect": "16:9",
+  "duration": 12.352,
+  "end_beat": 28
+ },
+ "palette": {
+  "background": "#F4F1EA",
+  "ink": "#1B1B1B",
+  "accent": "#2F5BFF",
+  "muted": "#CFC8BA"
+ },
+ "fonts": {
+  "display": "dm_serif_italic",
+  "serif": "instrument_serif_italic",
+  "mono": "ibm_plex_mono"
+ },
+ "music": {
+  "track": "retro_groove",
+  "start": 0.132
+ },
+ "components": [
+  {
+   "id": "ground",
+   "kind": "backdrop"
+  },
+  {
+   "id": "rings",
+   "kind": "field",
+   "preset": "rings",
+   "focus": "lead",
+   "timeline": [
+    {
+     "beat": 0,
+     "do": "enter",
+     "style": "fade"
+    },
+    {
+     "beat": 20,
+     "do": "recolour",
+     "to": "ink"
+    }
+   ]
+  },
+  {
+   "id": "blob",
+   "kind": "shape",
+   "shape": "circle",
+   "size": "l",
+   "slot": "lead",
+   "timeline": [
+    {
+     "beat": 0,
+     "do": "enter",
+     "style": "pop"
+    },
+    {
+     "beat": 3,
+     "do": "bounce"
+    },
+    {
+     "beat": 5,
+     "do": "morph",
+     "to": "square"
+    },
+    {
+     "beat": 7,
+     "do": "spin"
+    },
+    {
+     "beat": 9,
+     "do": "morph",
+     "to": "pill"
+    },
+    {
+     "beat": 11,
+     "do": "bounce"
+    },
+    {
+     "beat": 13,
+     "do": "morph",
+     "to": "ring"
+    },
+    {
+     "beat": 15,
+     "do": "hit"
+    },
+    {
+     "beat": 17,
+     "do": "morph",
+     "to": "star"
+    },
+    {
+     "beat": 19,
+     "do": "spin"
+    },
+    {
+     "beat": 21,
+     "do": "recolour",
+     "to": "ink"
+    },
+    {
+     "beat": 23,
+     "do": "morph",
+     "to": "blob"
+    },
+    {
+     "beat": 27,
+     "do": "morph",
+     "to": "circle"
+    },
+    {
+     "beat": 25,
+     "do": "fill"
+    }
+   ]
+  },
+  {
+   "id": "words",
+   "kind": "kinetic_text",
+   "preset": "glyph_drop",
+   "slot": "trail",
+   "start_beat": 0,
+   "beat_cuts": 2,
+   "words": [
+    "small",
+    "shapes",
+    "big",
+    "ideas",
+    "one",
+    "dot",
+    "many",
+    "moves",
+    "no",
+    "noise",
+    "just",
+    "rhythm",
+    "and",
+    "a finish",
+    "done."
+   ],
+   "stress": [
+    5,
+    13
+   ]
+  }
+ ]
+}

@@ -1,0 +1,175 @@
+{
+  "version": "2.0",
+  "meta": {
+    "name": "v2_916_var2_bauhaus_editorial",
+    "aspect": "9:16",
+    "duration": 12.8,
+    "fps": "30",
+    "end_beat": 32
+  },
+  "palette": {
+    "background": "#F6F2EB",
+    "ink": "#121110",
+    "accent": "#B82914",
+    "muted": "#E2DDD3",
+    "grounds": [
+      "#ECE6DA",
+      "#141210"
+    ]
+  },
+  "fonts": {
+    "display": "archivo_black",
+    "serif": "dm_serif_italic",
+    "mono": "ibm_plex_mono"
+  },
+  "tempo": "fast",
+  "music": {
+    "track": "retro_groove",
+    "start": 0.132
+  },
+  "film": {
+    "grain": 0.022,
+    "fringe": 0.4
+  },
+  "camera": [
+    { "beat": 2, "do": "orbit", "yaw": -3.0, "pitch": 2.0 },
+    { "beat": 6, "do": "reset" },
+    { "beat": 10, "do": "dolly", "to": -40.0 },
+    { "beat": 13, "do": "orbit", "yaw": 4.0, "pitch": -2.5 },
+    { "beat": 15, "do": "dolly", "to": -50.0 },
+    { "beat": 17, "do": "orbit", "yaw": -3.5, "pitch": 2.0 },
+    { "beat": 19, "do": "reset" },
+    { "beat": 22, "do": "orbit", "yaw": 3.0, "pitch": -2.0 },
+    { "beat": 26, "do": "reset" },
+    { "beat": 29, "do": "orbit", "yaw": 3.0, "pitch": -2.0 },
+    { "beat": 31, "do": "dolly", "to": -40.0 },
+    { "beat": 32, "do": "push", "to": 1.05 }
+  ],
+  "transitions": [
+    { "beat": 12, "kind": "colour_flip" },
+    { "beat": 20, "kind": "whip" },
+    { "beat": 28, "kind": "impact" }
+  ],
+  "components": [
+    {
+      "id": "bg_alabaster",
+      "kind": "backdrop",
+      "preset": "flat",
+      "colour": "background",
+      "start_beat": 0,
+      "end_beat": 12
+    },
+    {
+      "id": "act1_vertical_spiral",
+      "kind": "sketch",
+      "preset": "golden_spiral",
+      "field": "hand",
+      "wiggle": 1.5,
+      "title": "PROPORTIO DIVINA",
+      "caption": "WEIMAR 1919 : GOLDEN CHAMBERS",
+      "beat_cuts": 1,
+      "seed": 1919,
+      "start_beat": 0,
+      "end_beat": 12,
+      "timeline": [
+        { "beat": 0, "do": "enter", "style": "draw" }
+      ]
+    },
+    {
+      "id": "bg_obsidian_flip",
+      "kind": "backdrop",
+      "preset": "flat",
+      "colour": "ground2",
+      "start_beat": 12,
+      "end_beat": 20
+    },
+    {
+      "id": "act2_word_morph",
+      "kind": "photo_stack",
+      "preset": "engraving_red",
+      "start_beat": 12,
+      "end_beat": 20,
+      "steps": [
+        {
+          "beat": 12,
+          "layout": "word_morph",
+          "text": "CHAOS",
+          "to_text": "ORDER",
+          "assets": ["marble_bust", "armillary_sphere"],
+          "stroke": "top_slash",
+          "ruled": true
+        },
+        {
+          "beat": 14,
+          "layout": "vitruvian",
+          "stroke": "rosette_circle"
+        },
+        {
+          "beat": 16,
+          "layout": "word_morph",
+          "text": "DRAFT",
+          "to_text": "1.618",
+          "assets": ["statue_torso", "marble_brain"],
+          "stroke": "strike_morph",
+          "ruled": true
+        },
+        {
+          "beat": 18,
+          "layout": "blueprint",
+          "stroke": "rosette_circle"
+        }
+      ]
+    },
+    {
+      "id": "bg_parchment_3",
+      "kind": "backdrop",
+      "preset": "flat",
+      "colour": "ground1",
+      "start_beat": 20,
+      "end_beat": 28
+    },
+    {
+      "id": "act3_radial_chart",
+      "kind": "chart",
+      "preset": "thin_axis",
+      "chart": "donut",
+      "title": "Bauhaus Proportion Index",
+      "values": [62, 38, 76, 84, 96],
+      "labels": ["MAJOR", "MINOR", "GRID", "SCALE", "PHI"],
+      "hero": 4,
+      "callout": "96% PHI",
+      "beat_cuts": 1,
+      "start_beat": 20,
+      "end_beat": 28,
+      "timeline": [
+        { "beat": 20, "do": "enter", "style": "draw" },
+        { "beat": 23, "do": "pop_label" }
+      ]
+    },
+    {
+      "id": "bg_alabaster_4",
+      "kind": "backdrop",
+      "preset": "flat",
+      "colour": "background",
+      "start_beat": 28
+    },
+    {
+      "id": "act4_monolith",
+      "kind": "lockup",
+      "preset": "monolith_split",
+      "badge": "WEIMAR ARCHIVE",
+      "headline": "BAUHAUS 1919",
+      "subline": "Form Follows Golden Proportion",
+      "specs": [
+        "RATIO : 1 TO 1.618",
+        "SECTION : 61.8 / 38.2",
+        "MEDIA : ROTRING & WASH"
+      ],
+      "start_beat": 28,
+      "timeline": [
+        { "beat": 28, "do": "enter", "style": "pop" },
+        { "beat": 30, "do": "sheen" }
+      ]
+    }
+  ]
+}

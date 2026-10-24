@@ -125,17 +125,21 @@ as `missing field \`version\``.
 ### render
 
 ```text
-motion-engine render <SCENE> [--out-dir <DIR>] [--frame <N>] [--no-video] [--keep-frames]
+motion-engine render <SCENE> [--out-dir <DIR>] [--frame <N>] [--no-video] [--keep-frames] [--proxy] [--quality master|delivery|proxy] [--jobs <N>]
 ```
 
-- Default output directory: `<directory of the scene file>/<intent title>/`
-  (for `output/demo/train.motion.json` with title `train_example`:
-  `output/demo/train_example/`). Override with `--out-dir`. Directories are created.
+- Default output directory: `<directory of the scene file>/<scene file stem>/`
+  (for `output/demo/train.motion.json`: `output/demo/train/`; the stem strips
+  `.motion.json` / `.json`, so two scenes of one project do not clobber each other). Override with `--out-dir`. Directories are created.
 - Full render: writes `frame_000000.png`, `frame_000001.png`, ..., encodes
-  `<intent title>.mp4` (H.264, yuv420p, 30 fps) in the same directory, then
+  `<stem>.mp4` (H.264, yuv420p, 30 fps) in the same directory, then
   deletes the PNG frames (1-4 MB each). `--keep-frames` keeps them. Canvas size
   comes from the intent's `format`: `vertical` 1080x1920, `square` 1080x1080,
   `landscape` 1920x1080.
+- `--quality`: `delivery` (default, crf 20, `-maxrate 8M -bufsize 16M`), `master` (crf 17, `-maxrate 16M -bufsize 32M`, the archive copy; a 60 s reel was 120 MB before delivery became the default) or `proxy`.
+- `--proxy`: quick look, the same as `--quality proxy`. Streams a half-size `<stem>.proxy.mp4` (crf 28, veryfast), no PNGs.
+- `--jobs <N>`: cap render threads (default: all cores).
+- Global `-q` prints only warnings and errors; `-v` adds per-step detail. The default is one summary line per command.
 - `--no-video`: write the PNG frames only; ffmpeg is not run (and not required).
 - `--frame <N>`: render that single PNG only, no video. Frame numbers start at 0;
   the frame count is duration x 30 (`validate` prints it, e.g. 5.20s = 156 frames,
@@ -149,8 +153,7 @@ $BIN render output/demo/train.motion.json
 ```
 
 ```text
-rendered 156 frame(s) to output/demo/train_example in 7.6s
-encoded output/demo/train_example/train_example.mp4
+rendered 156 frame(s) -> output/demo/train/train.mp4 in 7.6s
 ```
 
 ```bash
@@ -366,3 +369,14 @@ motion-engine plan-assets story.intent.json --style style.json --reference-style
 Validation checks the profile contract (v0.2, or the legacy v0.1; v0.2 adds the optional `visual_language` table, see [VISUAL_LANGUAGE.md](VISUAL_LANGUAGE.md)) and, when supplied, its fingerprint against the bundle. If invalid, the command can write a repair-request file; an external orchestrator decides whether to call its model once with that request. The CLI never invokes a model. `resolve-style` prints resolved choices and coverage diagnostics (`MATCH`, `PARTIAL`, `OVERRIDDEN`, `UNSUPPORTED`, `UNKNOWN`); these are not quality scores. See the three reference docs for evidence, protocol, and profile details.
 
 Use `--json` for machine-readable evidence, validation or resolution output. Explicit fields in `--style` override applicable reference dimensions; omit it or use an all-auto style to let the reference supply them. `--cache-dir output/reference-cache` is available on evidence generation and validation (validation also needs `--bundle`). A failed response can be sent for one repair using `--repair-request output/repair.json`; validate the repaired response without requesting another repair. No command automatically loops or calls a model.
+
+## critique (0.24)
+`motion-engine critique <scene.motion.json> [--json] [--rules slop.json] [--style style.json]` prints the total (/40), the
+design read (`Reading this as: <tone> for <format>, dial ENERGY n / RHYTHM n / MOTION n`), one line per axis
+(hierarchy, type, colour, motion_rhythm, variety, legibility, asset_coherence, audio), the top 3 findings with beat
+and layer id and any notes (<= 14 lines). `--json` prints everything. Exit code 0 always. See docs/MOTION_QA.md.
+With `--style` the dials come from the style's temperament, density and motion language and `dial_mismatch` flags a scene
+that measures 4 or more steps away from a declared dial. `note_unsourced_numbers` is advice (never a failure): the story
+shows number figures and no beat carries a source (add one, e.g. `meaning: "SmartAsset, 2024"`). The accent budget
+(`slop_accent_overuse`: one full-frame colour field per video, one accent block and one stamp per three beats) and
+`slop_skeleton_lines` (stacked bars that pretend to be text) and `slop_flicker` (a pulse, glitch or echo, or more than one camera shake) are checked too.

@@ -10,7 +10,8 @@ use std::path::Path;
 use std::process::{Command, Stdio};
 
 use motion_core::audio::{
-    beat_scenes, information_cap, min_spacing, snap_tolerance, AudioPlan, CueKind, SfxLibrary,
+    beat_scenes, information_cap, is_count_tick, min_spacing, snap_tolerance, AudioPlan, CueKind,
+    SfxLibrary,
 };
 use motion_core::compiler::taste::{CompositionRhythm, DensityLevel};
 use motion_core::MotionProject;
@@ -284,7 +285,7 @@ pub fn audio_report_with_music(
     let mut transient: Vec<f64> = plan
         .cues
         .iter()
-        .filter(|c| !c.family.is_bed())
+        .filter(|c| !c.family.is_bed() && !is_count_tick(c))
         .map(|c| c.time)
         .collect();
     transient.sort_by(|a, b| a.total_cmp(b));

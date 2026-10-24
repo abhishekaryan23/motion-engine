@@ -1,0 +1,12 @@
+{
+  "description": "Cream ground, a halftone field and one orange dot carried through the words.",
+  "style": "orange_dot",
+  "tempo": "fast",
+  "music": "bright_upbeat",
+  "field": "halftone",
+  "poster": "poster_cuts",
+  "body": "glyph_drop",
+  "chart": "paper",
+  "diagram": "outline",
+  "techniques": ["morph", "diagram"]
+}

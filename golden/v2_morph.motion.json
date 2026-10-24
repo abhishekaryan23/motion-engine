@@ -1,0 +1,49 @@
+{
+  "version": "0.2",
+  "project": { "name": "v2_morph", "duration_seconds": 2.0 },
+  "canvas": { "width": 480, "height": 270, "fps": 30, "background": "#F1ECE2" },
+  "scenes": [
+    {
+      "id": "s",
+      "start_seconds": 0.0,
+      "duration_seconds": 2.0,
+      "layers": [
+        {
+          "id": "ground", "x": 0, "y": 0, "width": 480, "height": 270, "type": "path",
+          "d": "M0 0H480V270H0Z",
+          "fill": { "gradient": "linear", "from": [0, 0], "to": [0, 270],
+                    "stops": [ { "at": 0, "color": "#F1ECE2" }, { "at": 1, "color": "#DCD3C4" } ] }
+        },
+        {
+          "id": "glow", "x": 360, "y": 135, "width": 200, "height": 200, "anchor_x": 0.5, "anchor_y": 0.5, "type": "path",
+          "d": "M0 100A100 100 0 1 1 200 100A100 100 0 1 1 0 100Z",
+          "fill": { "gradient": "radial", "center": [100, 100], "radius": 100,
+                    "stops": [ { "at": 0, "color": "#FF5A1F66" }, { "at": 1, "color": "#FF5A1F00" } ] }
+        },
+        {
+          "id": "hero", "x": 140, "y": 135, "width": 120, "height": 120, "anchor_x": 0.5, "anchor_y": 0.5, "type": "path",
+          "d": "M60 0C93 0 120 27 120 60C120 93 93 120 60 120C27 120 0 93 0 60C0 27 27 0 60 0Z",
+          "fill": "#FF5A1F", "fill_rule": "even_odd"
+        },
+        {
+          "id": "outline", "x": 140, "y": 135, "width": 170, "height": 170, "anchor_x": 0.5, "anchor_y": 0.5, "type": "path",
+          "d": "M85 0A85 85 0 1 1 85 170A85 85 0 1 1 85 0Z",
+          "stroke": { "color": "#151413", "width": 4 }
+        },
+        {
+          "id": "card", "x": 360, "y": 135, "width": 140, "height": 90, "anchor_x": 0.5, "anchor_y": 0.5, "type": "rectangle",
+          "fill": "#151413",
+          "mask": { "d": "M0 0H0V90H0Z" }
+        }
+      ],
+      "motions": [
+        { "target": "hero", "start": 0.2, "duration": 0.8, "spring": { "stiffness": 260, "damping": 25.8 },
+          "op": "morph", "to": "M60 0L74 41L117 41L82 66L95 107L60 82L25 107L38 66L3 41L46 41Z" },
+        { "target": "hero", "start": 1.1, "duration": 0.8, "easing": "in_out_cubic",
+          "op": "morph", "to": "M0 0H120V120H0ZM30 30V90H90V30Z" },
+        { "target": "outline", "start": 0.0, "duration": 1.2, "easing": "in_out_cubic", "op": "trim", "from": 0, "to": 1 },
+        { "target": "card", "start": 0.3, "duration": 0.9, "easing": "in_out_cubic", "op": "mask_morph", "to": "M0 0H140V90H0Z" }
+      ]
+    }
+  ]
+}

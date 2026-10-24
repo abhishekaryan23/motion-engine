@@ -1,6 +1,6 @@
 //! (0.23) The direction layer: takes, per-beat direction parameters, the
 //! direction record and best-of-N candidate scores (plan
-//! `docs/plans/SPRINT_0_23_VARIETY_QA_AUDIO.md` §4).
+//! `docs/DESIGN_RULES.md`).
 //!
 //! Everything here runs only under `CompileOptions.variety`: a compile
 //! without a variety seed never reads a take, never builds a direction and
@@ -20,7 +20,7 @@ use serde::{Deserialize, Serialize};
 use super::art_direction::Look;
 use super::mix;
 use crate::easing::Easing;
-use crate::intent::Energy;
+use crate::intent::{Beat, Energy, Purpose, Subject};
 use crate::motion::kinetic::KineticParams;
 use crate::motion::stagger::StaggerSpec;
 use crate::scene::{Direction, Layer, LayerKind, Motion, MotionOp};
@@ -68,6 +68,8 @@ pub enum Dim {
     Read,
     /// Music bed among the compatible beds.
     Bed,
+    /// (0.24) Stamp tilt of a beat marker.
+    Marker,
 }
 
 impl Dim {
@@ -87,6 +89,7 @@ impl Dim {
             Dim::Exit => 0xE1D7_0000,
             Dim::Read => 0x2EAD_0000,
             Dim::Bed => 0xBED0_0000,
+            Dim::Marker => 0x3A4B_E200,
         }
     }
 }
@@ -634,7 +637,7 @@ fn steer_entrance(p: &BeatParams, motions: &mut [Motion], pl: &Placed) {
                 };
                 m.easing = entrance_easing(p, m.easing);
             }
-            Op::Move { from, to } if *to == [0.0, 0.0] && *from != [0.0, 0.0] => {
+            Op::Move { from, to, .. } if *to == [0.0, 0.0] && *from != [0.0, 0.0] => {
                 *from = [travel(p, from[0]), travel(p, from[1])];
                 m.easing = entrance_easing(p, m.easing);
                 entry.get_or_insert(i);
@@ -1390,6 +1393,149 @@ pub struct DirectionRecord {
     pub shipped_with_failure: Option<String>,
 }
 
+// ---------------------------------------------------------------------------
+// (0.24) Beat marker: what, if anything, labels a beat
+// ---------------------------------------------------------------------------
+
+/// What marks a beat. The
+/// default is nothing: a label that restates the headline or names the
+/// purpose is never printed.
+#[derive(Debug, Clone, PartialEq)]
+pub enum Marker {
+    /// No marker (the default).
+    None,
+    /// The running index of a counted story (countdown, ordered list), set
+    /// large in the gutter; `label` only when it adds words the headline lacks.
+    Index { rank: u32, label: Option<String> },
+    /// A source or unit the headline does not state, set next to the figure.
+    Tag(String),
+}
+
+fn words(s: &str) -> Vec<String> {
+    s.split(|c: char| !c.is_alphanumeric())
+        .filter(|w| !w.is_empty())
+        .map(|w| {
+            let w = w.to_lowercase();
+            match w.strip_suffix('s') {
+                Some(stem) if stem.len() > 2 => stem.to_string(),
+                _ => w,
+            }
+        })
+        .collect()
+}
+
+/// True when every word of `label` is already in `headline` or names the
+/// beat's purpose ("the result", "why", "compare").
+fn restates(label: &str, headline: &str, purpose: Purpose) -> bool {
+    let head = words(headline);
+    let purpose_words: &[&str] = match purpose {
+        Purpose::Emphasize => &["note"],
+        Purpose::Compare => &["compare"],
+        Purpose::Contrast => &["contrast"],
+        Purpose::Reveal => &["result", "the", "reveal"],
+        Purpose::Explain => &["why", "explain"],
+    };
+    let l = words(label);
+    !l.is_empty()
+        && l.iter()
+            .all(|w| head.contains(w) || purpose_words.contains(&w.as_str()))
+}
+
+/// The first short label (primary, then secondary `meaning`) that says
+/// something the headline and the purpose do not.
+fn surviving_label(beat: &Beat, headline: &str) -> Option<String> {
+    beat.primary
+        .meaning()
+        .into_iter()
+        .chain(beat.secondary.as_ref().and_then(|s| s.meaning()))
+        .find(|m| super::taste_rules::kicker_ok(m) && !restates(m, headline, beat.purpose))
+        .map(str::to_string)
+}
+
+/// A unit or a provenance: "per month", "/ share", "RBI, 2024", "source: ...".
+fn is_unit_or_source(m: &str) -> bool {
+    let l = m.trim().to_lowercase();
+    let year = l.as_bytes().windows(4).any(|w| {
+        w.iter().all(u8::is_ascii_digit) && (w.starts_with(b"19") || w.starts_with(b"20"))
+    });
+    let per_period = [
+        "a year", "a month", "a week", "a day", "an hour", "each", "every",
+    ]
+    .iter()
+    .any(|u| l == *u || l.starts_with(&format!("{u} ")));
+    l.starts_with("per ")
+        || per_period
+        || l.starts_with('/')
+        || l.starts_with("source")
+        || l.starts_with("via ")
+        || l.starts_with("est")
+        || year
+}
+
+/// The source or unit the beat carries and the headline does not state.
+fn tag_text(beat: &Beat, headline: &str) -> Option<String> {
+    let m = match &beat.primary {
+        Subject::DerivedMetric(d) => d.meaning.as_deref()?,
+        Subject::Number(a) => a.meaning.as_deref().filter(|m| is_unit_or_source(m))?,
+        _ => return None,
+    };
+    (super::taste_rules::kicker_ok(m) && !restates(m, headline, beat.purpose))
+        .then(|| m.trim().to_string())
+}
+
+/// (0.24) True when the beat's headline, meaning or keyword says its number
+/// did not change ("flat", "unchanged", "the same", "stayed"): such a number
+/// lands static instead of counting up.
+pub fn says_unchanged(beat: &Beat) -> bool {
+    const WORDS: [&str; 8] = [
+        "flat",
+        "unchanged",
+        "stayed",
+        "stays",
+        "stagnant",
+        "constant",
+        "steady",
+        "frozen",
+    ];
+    let mut text = vec![beat.statement.as_str()];
+    text.extend(beat.keyword.as_deref());
+    text.extend(beat.primary.meaning());
+    text.extend(beat.secondary.as_ref().and_then(|s| s.meaning()));
+    text.iter().any(|t| {
+        let ws: Vec<String> = t
+            .split(|c: char| !c.is_alphanumeric())
+            .map(str::to_lowercase)
+            .collect();
+        // "the same" says unchanged only after a verb of staying ("stayed the
+        // same", "remains the same"); "same shop, two months" does not.
+        let stays = ws
+            .iter()
+            .any(|w| matches!(w.as_str(), "stay" | "remain" | "remained" | "remains"));
+        ws.iter().any(|w| WORDS.contains(&w.as_str())) || (stays && ws.iter().any(|w| w == "same"))
+    })
+}
+
+/// Decide the marker of beat `index` from its structure and the look.
+/// `rank` is the beat's place in a counted story (`sequence`), `headline` the
+/// title on screen. Pure.
+pub fn decide_marker(beat: &Beat, headline: &str, rank: Option<u32>, look: Option<Look>) -> Marker {
+    // Clay and studio looks never show text markers.
+    if matches!(look, Some(Look::ClayPop | Look::StudioPop)) {
+        return Marker::None;
+    }
+    let label = surviving_label(beat, headline);
+    if let Some(rank) = rank {
+        return Marker::Index { rank, label };
+    }
+    // The dossier's figure card already labels its figure (mono, small).
+    if look == Some(Look::Dossier) {
+        return Marker::None;
+    }
+    // (0.24 M9) No corner caps label in any look: a tag is a unit or source
+    // beside its figure and only when it adds information.
+    tag_text(beat, headline).map_or(Marker::None, Marker::Tag)
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -1718,6 +1864,7 @@ mod c2b_tests {
                 MotionOp::Move {
                     from: [0.0, 60.0],
                     to: [0.0, 0.0],
+                    via: None,
                 },
             ),
             motion(
@@ -1728,6 +1875,7 @@ mod c2b_tests {
                 MotionOp::Move {
                     from: [0.0, 0.0],
                     to: [0.0, 40.0],
+                    via: None,
                 },
             ),
             motion(
@@ -1833,7 +1981,8 @@ mod c2b_tests {
             m[1].op,
             MotionOp::Move {
                 from: [0.0, 90.0],
-                to: [0.0, 0.0]
+                to: [0.0, 0.0],
+                via: None,
             }
         );
         assert_eq!(m[1].easing, Easing::OutQuint);

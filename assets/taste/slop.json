@@ -1,0 +1,43 @@
+{
+  "stock_phrases": [
+    "unlock the power",
+    "in today's fast-paced world",
+    "in today's digital age",
+    "game-changer",
+    "game changer",
+    "let's dive in",
+    "dive into",
+    "revolutionize",
+    "seamlessly",
+    "elevate your",
+    "delve",
+    "take it to the next level",
+    "supercharge",
+    "cutting-edge",
+    "state-of-the-art",
+    "harness the power",
+    "unleash the",
+    "look no further",
+    "ever-evolving",
+    "in the realm of",
+    "tapestry",
+    "navigate the landscape",
+    "stay ahead of the curve",
+    "revolutionary",
+    "whether you're a"
+  ],
+  "ai_palette": {
+    "purple": { "hue_min": 255, "hue_max": 295, "min_sat": 0.4, "min_val": 0.35 },
+    "blue": { "hue_min": 205, "hue_max": 255, "min_sat": 0.4, "min_val": 0.35 },
+    "neon_cyan": { "hue_min": 165, "hue_max": 200, "min_sat": 0.8, "min_val": 0.85 },
+    "near_black_max_luma": 0.12,
+    "flag_pure_grounds": true
+  },
+  "thresholds": {
+    "max_fx_per_beat": 3,
+    "min_stagger_ms": 34,
+    "max_showy_transition_ratio": 0.34,
+    "max_font_families": 3,
+    "eyebrow": { "max_words": 3, "max_cap_height": 0.035, "top_band": 0.14, "max_rule_u": 8.0, "rule_gap": 0.03 }
+  }
+}

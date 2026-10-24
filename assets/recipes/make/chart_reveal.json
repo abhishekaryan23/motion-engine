@@ -1,0 +1,16 @@
+{
+  "description": "Dark board, thin axes, one orange hero series; numbers lead, words land on the beats.",
+  "style": "thin_axis",
+  "tempo": "fast",
+  "music": "driving_pulse",
+  "field": "grid",
+  "poster": "poster_cuts",
+  "body": "glyph_drop",
+  "chart": "thin_axis",
+  "diagram": "rail",
+  "techniques": [
+    "morph",
+    "chart",
+    "diagram"
+  ]
+}

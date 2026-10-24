@@ -10,7 +10,7 @@
 //! | `bed_over_voice` | the bed's largest momentary (400 ms) loudness in the narration gaps - the voice's integrated loudness |
 //! | `speech_band_masking` | the bed's 300-4000 Hz level - the voice's 300-4000 Hz level over the voiced segments |
 //!
-//! The definitions are those of `docs/plans/sprint_0_23/tools/stem_levels.py`
+//! The definitions are those of `scripts/bench/stem_levels.py`
 //! (the bench cross-checks the two). *Voiced segments*: the word spans of the
 //! SpeechMap ([`voiced_spans`]) shifted by the voice's offset, merged across
 //! gaps shorter than [`VOICED_MERGE_GAP_S`]. *Loudness* over the segments: the
@@ -474,6 +474,124 @@ pub fn measure_stems(
     Ok(evaluate(&v, &b, &segments))
 }
 
+/// (0.24 M7) The SFX stem must sit at least this far under the voice in every
+/// 400 ms window while the narrator speaks (LU); closer FAILs `sfx_over_voice`.
+pub const SFX_OVER_VOICE_MIN_LU: f64 = 10.0;
+
+/// What [`sfx_over_voice`] measured.
+#[derive(Debug, Clone, PartialEq)]
+pub struct SfxOverVoice {
+    /// Voiced windows where the SFX stem was audible (above the absolute gate).
+    pub windows: usize,
+    /// The smallest voice-minus-SFX momentary loudness over those windows (LU).
+    pub worst_margin_lu: Option<f64>,
+    /// Centre (s) of that window.
+    pub worst_at: f64,
+    pub worst_voice_lufs: f64,
+    pub worst_sfx_lufs: f64,
+}
+
+/// Per 400 ms window (100 ms hop) whose centre lies in a voiced `segment`:
+/// the voice's momentary loudness minus the SFX stem's; the worst (smallest)
+/// is reported. Windows with a silent stem on either side are skipped.
+pub fn sfx_over_voice(
+    voice: &StemLevels,
+    sfx: &StemLevels,
+    segments: &[(f64, f64)],
+) -> SfxOverVoice {
+    let (v, x) = (voice.momentary_lufs(), sfx.momentary_lufs());
+    let mut out = SfxOverVoice {
+        windows: 0,
+        worst_margin_lu: None,
+        worst_at: 0.0,
+        worst_voice_lufs: f64::NEG_INFINITY,
+        worst_sfx_lufs: f64::NEG_INFINITY,
+    };
+    for (k, (&vl, &sl)) in v.iter().zip(x.iter()).enumerate() {
+        let centre = WINDOW_BLOCKS as f64 / 2.0 * HOP_S + k as f64 * HOP_S;
+        let voiced = segments
+            .iter()
+            .any(|&(a, b)| centre >= a - 1e-6 && centre <= b + 1e-6);
+        if !voiced || vl <= ABSOLUTE_GATE_LUFS || sl <= ABSOLUTE_GATE_LUFS {
+            continue;
+        }
+        out.windows += 1;
+        let margin = vl - sl;
+        if out.worst_margin_lu.is_none_or(|w| margin < w) {
+            out.worst_margin_lu = Some(margin);
+            out.worst_at = centre;
+            out.worst_voice_lufs = vl;
+            out.worst_sfx_lufs = sl;
+        }
+    }
+    out
+}
+
+/// PASS at [`SFX_OVER_VOICE_MIN_LU`] or more, FAIL below.
+pub fn sfx_over_voice_status(margin_lu: f64) -> CheckStatus {
+    if margin_lu >= SFX_OVER_VOICE_MIN_LU {
+        CheckStatus::Pass
+    } else {
+        CheckStatus::Fail
+    }
+}
+
+/// What [`sfx_over_voice_qa`] rebuilds the SFX stem from.
+pub struct SfxQa<'a> {
+    pub plan: &'a AudioPlan,
+    pub speech: &'a SpeechMap,
+    /// The voice-over audio file (placed at 0 s).
+    pub voice: &'a Path,
+    pub sfx_root: &'a Path,
+    pub library: &'a SfxLibrary,
+    pub duration: f64,
+    pub temp_base: Option<&'a Path>,
+}
+
+/// Rebuild the mix's SFX stem (the music bed is irrelevant to it and left
+/// out) with the plan's levels and the voice-relative trim and duck, then
+/// measure it against the voice stem per window ([`sfx_over_voice`]).
+pub fn sfx_over_voice_qa(q: &SfxQa) -> Result<SfxOverVoice, RenderError> {
+    let mut plan = q.plan.clone();
+    plan.music = None;
+    let relative = plan.levels.map(|levels| VoiceRelative {
+        envelope: Some(DuckEnvelope::from_speech(q.speech, &levels)),
+        bed_lufs: None,
+        bed_lra: None,
+        voiced: voiced_spans(q.speech),
+    });
+    let voice = VoiceTrack {
+        path: q.voice.to_path_buf(),
+        offset: 0.0,
+        gain_db: 0.0,
+    };
+    let default_base = std::env::temp_dir();
+    let dir = TempDir::create(q.temp_base.unwrap_or(&default_base))?;
+    let files = write_stems(
+        q.voice,
+        &plan,
+        q.sfx_root,
+        q.library,
+        None,
+        q.duration,
+        &dir.0,
+        &MixOptions {
+            voice: Some(&voice),
+            relative: relative.as_ref(),
+            ..MixOptions::default()
+        },
+    )?;
+    let (Some(voice_stem), Some(sfx_stem)) = (files.voice, files.sfx) else {
+        return Err(RenderError::Encode(
+            "sfx_over_voice: the voice and sfx stems were not written".into(),
+        ));
+    };
+    let segments = voiced_segments(q.speech, 0.0);
+    let v = meter_file(&voice_stem, &segments)?;
+    let x = meter_file(&sfx_stem, &segments)?;
+    Ok(sfx_over_voice(&v, &x, &segments))
+}
+
 /// A directory removed when dropped (also on an error return or a panic).
 struct TempDir(PathBuf);
 
@@ -613,6 +731,67 @@ mod tests {
             m.push(chunk);
         }
         m.finish()
+    }
+
+    #[test]
+    fn a_quiet_sfx_stem_passes_sfx_over_voice_and_a_loud_one_fails() {
+        // Voice: 1 kHz at 0.1 (-20 LUFS) while speaking in 0.5..5.5. SFX: a
+        // 300 ms burst at 2.0 s and another at 4.0 s.
+        let voice = sine(1000.0, 0.1);
+        let segments = [(0.5, 5.5)];
+        let v = stereo(6.0, |t| {
+            if (0.5..5.5).contains(&t) {
+                voice(t)
+            } else {
+                0.0
+            }
+        });
+        let sfx = |amp: f64| {
+            let tone = sine(2000.0, amp);
+            stereo(6.0, move |t| {
+                if (2.0..2.3).contains(&t) || (4.0..4.3).contains(&t) {
+                    tone(t)
+                } else {
+                    0.0
+                }
+            })
+        };
+        let vm = meter(&v, &segments);
+        // 0.01 is 20 dB under the voice: every window passes by a wide margin.
+        let quiet = sfx_over_voice(&vm, &meter(&sfx(0.01), &segments), &segments);
+        let margin = quiet.worst_margin_lu.expect("audible");
+        assert!(
+            margin > 18.0 && sfx_over_voice_status(margin) == CheckStatus::Pass,
+            "{margin}"
+        );
+        assert!(quiet.windows > 0);
+        // 0.08 is 2 dB under: FAIL, and the worst window sits on a burst.
+        let loud = sfx_over_voice(&vm, &meter(&sfx(0.08), &segments), &segments);
+        let margin = loud.worst_margin_lu.expect("audible");
+        assert!(
+            margin < SFX_OVER_VOICE_MIN_LU && sfx_over_voice_status(margin) == CheckStatus::Fail,
+            "{margin}"
+        );
+        assert!(
+            (1.8..=2.5).contains(&loud.worst_at) || (3.8..=4.5).contains(&loud.worst_at),
+            "{}",
+            loud.worst_at
+        );
+        // A burst in the silence before the voice does not count against it.
+        let early = stereo(6.0, |t| {
+            if (0.0..0.3).contains(&t) {
+                0.5 * sine(2000.0, 1.0)(t)
+            } else {
+                0.0
+            }
+        });
+        let r = sfx_over_voice(&vm, &meter(&early, &segments), &segments);
+        // (Filter ringing leaks a sliver into the first voiced window.)
+        assert!(
+            r.worst_margin_lu.is_none_or(|m| m > 20.0),
+            "{:?}",
+            r.worst_margin_lu
+        );
     }
 
     #[test]

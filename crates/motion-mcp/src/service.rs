@@ -125,6 +125,12 @@ impl Service {
         if !names.contains(&name) {
             return unknown_tool(name, &names);
         }
+        if p == Profile::V2 {
+            return within_budget(
+                crate::v2::call(&self.config, name, args),
+                profile::reply_budget_chars(p),
+            );
+        }
         let out = match name {
             profile::MAKE_VIDEO => self.make_video(args, ctx),
             profile::REVISE_VIDEO => self.revise_video(args, ctx),

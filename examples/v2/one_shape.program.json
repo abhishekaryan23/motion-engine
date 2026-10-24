@@ -1,0 +1,151 @@
+{
+ "version": "2.0",
+ "meta": {
+  "name": "one_shape",
+  "aspect": "16:9",
+  "duration": 10.0
+ },
+ "palette": {
+  "background": "#F1ECE2",
+  "ink": "#151413",
+  "accent": "#FF5A1F",
+  "muted": "#8E877B"
+ },
+ "allow": [
+  "gradient"
+ ],
+ "components": [
+  {
+   "id": "ground",
+   "kind": "backdrop",
+   "preset": "glow"
+  },
+  {
+   "id": "label",
+   "kind": "title",
+   "preset": "label",
+   "text": "a study in one shape",
+   "slot": "top",
+   "size": "m",
+   "colour": "muted",
+   "end": 9.6,
+   "timeline": [
+    {
+     "at": 0.3,
+     "do": "enter",
+     "style": "fade"
+    },
+    {
+     "at": 9.1,
+     "do": "exit"
+    }
+   ]
+  },
+  {
+   "id": "orbit",
+   "kind": "shape",
+   "preset": "outline",
+   "shape": "circle",
+   "size": "l",
+   "colour": "ink",
+   "start": 0.4,
+   "end": 3.4,
+   "timeline": [
+    {
+     "at": 0.0,
+     "do": "enter",
+     "style": "draw"
+    },
+    {
+     "at": 2.5,
+     "do": "exit"
+    }
+   ],
+   "anchor": "hero"
+  },
+  {
+   "id": "hero",
+   "kind": "shape",
+   "shape": "circle",
+   "size": "m",
+   "timeline": [
+    {
+     "at": 0.2,
+     "do": "enter",
+     "style": "pop"
+    },
+    {
+     "at": 1.5,
+     "do": "morph",
+     "to": "square"
+    },
+    {
+     "at": 2.5,
+     "do": "morph",
+     "to": "pill"
+    },
+    {
+     "at": 3.4,
+     "do": "move",
+     "to": "lead"
+    },
+    {
+     "at": 4.4,
+     "do": "morph",
+     "to": "ring"
+    },
+    {
+     "at": 5.4,
+     "do": "hit"
+    },
+    {
+     "at": 6.2,
+     "do": "morph",
+     "to": "star"
+    },
+    {
+     "at": 7.0,
+     "do": "recolour",
+     "to": "ink"
+    },
+    {
+     "at": 7.6,
+     "do": "move",
+     "to": "center"
+    },
+    {
+     "at": 8.3,
+     "do": "morph",
+     "to": "blob"
+    },
+    {
+     "at": 9.4,
+     "do": "exit",
+     "style": "shrink"
+    }
+   ]
+  },
+  {
+   "id": "line",
+   "kind": "title",
+   "preset": "serif",
+   "text": "one shape, never cut",
+   "slot": "trail",
+   "size": "l",
+   "start": 3.6,
+   "end": 7.6,
+   "timeline": [
+    {
+     "at": 0.2,
+     "do": "enter",
+     "style": "wipe"
+    },
+    {
+     "at": 3.4,
+     "do": "exit",
+     "style": "wipe"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+{
+  "description": "Off-white, black and one orange; heavy grotesk; fast hard cuts on the beat.",
+  "palette": { "background": "#F2EEE6", "ink": "#111111", "accent": "#FF4D00", "muted": "#8A857C" },
+  "fonts": { "display": "archivo_black", "serif": "instrument_serif_italic", "mono": "ibm_plex_mono" },
+  "tempo": "fast",
+  "allow": []
+}

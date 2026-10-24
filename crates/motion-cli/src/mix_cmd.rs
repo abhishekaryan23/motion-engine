@@ -116,6 +116,6 @@ pub fn cmd_mix(args: &MixArgs) -> Result<()> {
         legacy: args.legacy,
         stems: args.stems.as_deref(),
     })?;
-    println!("{summary} -> {}", args.output.display());
+    info!("{summary} -> {}", args.output.display());
     Ok(())
 }

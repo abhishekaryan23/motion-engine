@@ -1,0 +1,48 @@
+{
+ "kind": "rendered",
+ "note": "'+21%' over a dense, high-contrast halftone with no calm zone.",
+ "program": {
+  "version": "2.0",
+  "meta": {
+   "name": "owner_orange",
+   "aspect": "16:9",
+   "duration": 1.6
+  },
+  "palette": {
+   "background": "#FF4A1C",
+   "ink": "#111111",
+   "accent": "#FF4A1C",
+   "muted": "#111111"
+  },
+  "components": [
+   {
+    "id": "g",
+    "kind": "backdrop"
+   },
+   {
+    "id": "tone",
+    "kind": "field",
+    "preset": "halftone",
+    "colour": "ink"
+   },
+   {
+    "id": "num",
+    "kind": "title",
+    "text": "+21%",
+    "size": "xl"
+   },
+   {
+    "id": "chap",
+    "kind": "title",
+    "preset": "chapter",
+    "text": "Flow",
+    "slot": "top_left"
+   }
+  ]
+ },
+ "before": {
+  "design_passes": false,
+  "mutate": "black_dots"
+ },
+ "expect_detector": "busy_under_type"
+}

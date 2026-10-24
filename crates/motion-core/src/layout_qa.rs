@@ -106,6 +106,7 @@ const DECORATIVE_NAMES: &[&str] = &[
     "numeral",
     "sticker",
     "sticker2",
+    "ornament",
 ];
 
 /// Decorative layers matched on the whole id below the beat prefix.
@@ -152,6 +153,11 @@ pub enum LayoutCheck {
     /// (0.18) The beat's stamp does not touch the focal layer: emphasis must
     /// land on what the beat is about.
     EmphasisOffFocal,
+    /// (0.24) The beat's focal element is a text (a figure) that does not
+    /// dominate the beat's headline: it must be at least
+    /// `FOCAL_OVER_TITLE_MIN` x the title's type size. Every beat's main thing
+    /// dominates; the title is its support.
+    FocalNotDominant,
     /// (0.23) Rendered: text readable at READ does not contrast with the
     /// pixels around its ink box (`checks::TEXT_LOCAL_CONTRAST`). Emitted by
     /// the renderer's pixel pass, never by the structural report.
@@ -177,6 +183,7 @@ impl LayoutCheck {
             LayoutCheck::AssetLowContrast => "asset_low_contrast",
             LayoutCheck::FocalOutOfFocus => "focal_out_of_focus",
             LayoutCheck::EmphasisOffFocal => "emphasis_off_focal",
+            LayoutCheck::FocalNotDominant => "focal_not_dominant",
             LayoutCheck::TextLocalContrast => crate::checks::TEXT_LOCAL_CONTRAST,
             LayoutCheck::TextOverlap => crate::checks::TEXT_OVERLAP,
         }
@@ -293,7 +300,9 @@ pub fn layout_report_with(
                     };
                     // Caption layers are judged in their own pass below.
                     let mut found = Vec::new();
-                    for layer in resolved.layers.iter().filter(|l| !is_caption_layer(l.id)) {
+                    for layer in resolved.layers.iter().filter(|l| {
+                        !is_caption_layer(l.id) && l.scene.is_none_or(|sc| sc == scene.id)
+                    }) {
                         check_layer(&sample, layer, 1.0, None, false, &mut found);
                     }
                     // (0.10) A camera push/track deliberately carries margin
@@ -308,7 +317,9 @@ pub fn layout_report_with(
                         let still = still.get_or_insert_with(|| without_camera(project));
                         let mut without = Vec::new();
                         if let Ok(r) = evaluate_frame(still, n) {
-                            for layer in r.layers.iter().filter(|l| !is_caption_layer(l.id)) {
+                            for layer in r.layers.iter().filter(|l| {
+                                !is_caption_layer(l.id) && l.scene.is_none_or(|sc| sc == scene.id)
+                            }) {
                                 check_layer(&sample, layer, 1.0, None, false, &mut without);
                             }
                         }
@@ -409,6 +420,24 @@ fn push(
 /// (0.18) Depth-of-field blur (px) above which the focal layer is out of focus.
 pub const FOCAL_BLUR_MAX: f32 = 1.5;
 
+/// (0.24) A focal figure is at least this many times the title's type size
+/// (the compilers set 1.5; the floor leaves room for the two fonts' cap
+/// heights).
+pub const FOCAL_OVER_TITLE_MIN: f32 = 1.3;
+
+/// (0.24) Effective type size (px on the canvas) of the first text layer found
+/// under `l` whose id is a headline layer of `prefix`, and of text `l` itself.
+fn headline_px(l: &ResolvedLayer<'_>, prefix: &str, out: &mut f32) {
+    if let LayerKind::Text(style) = l.kind {
+        if is_headline_id(prefix, l.id) {
+            *out = out.max(style.font_size * scale_of(&l.transform));
+        }
+    }
+    for c in &l.children {
+        headline_px(c, prefix, out);
+    }
+}
+
 /// (0.18) The beat's focal layer is sharp, and its stamp (`<prefix>.stamp`)
 /// touches it. Beats without a recorded focal layer are not judged.
 fn focal_findings(
@@ -458,6 +487,25 @@ fn focal_findings(
     let Some(prefix) = scene_prefix(scene) else {
         return;
     };
+    // (0.24) A focal figure dominates the headline.
+    if let LayerKind::Text(style) = node.kind {
+        let figure = style.font_size * scale_of(&node.transform);
+        let mut title = 0.0f32;
+        for t in layers {
+            headline_px(t, &prefix, &mut title);
+        }
+        if title > 0.0 && figure + 0.5 < FOCAL_OVER_TITLE_MIN * title {
+            push(
+                findings,
+                scene,
+                focal,
+                LayoutCheck::FocalNotDominant,
+                format!(
+                    "frame {n}: the figure is {figure:.0}px against a {title:.0}px title (needs {FOCAL_OVER_TITLE_MIN}x)"
+                ),
+            );
+        }
+    }
     let stamp_id = format!("{prefix}.stamp");
     let Some(stamp) = layers.iter().find_map(|t| find(t, &stamp_id)) else {
         return;
@@ -682,7 +730,31 @@ pub fn is_decorative(layer_id: &str, kind: &LayerKind) -> bool {
     } else {
         first
     };
-    DECORATIVE_NAMES.contains(&name) || DECORATIVE_PATHS.contains(&path)
+    let device_chrome = !prefixed
+        && [
+            ".key0",
+            ".key1",
+            ".key2",
+            ".key3",
+            ".body",
+            ".rim",
+            ".home",
+            ".island",
+            ".status_l",
+            ".status_r",
+            ".lid",
+            ".base",
+            ".notch",
+            ".hinge",
+            ".touch",
+            ".ripple0",
+            ".ripple1",
+            ".progress0",
+            ".progress1",
+        ]
+        .iter()
+        .any(|suf| path.ends_with(suf));
+    DECORATIVE_NAMES.contains(&name) || DECORATIVE_PATHS.contains(&path) || device_chrome
 }
 
 /// The stage group wrapping a beat's content (`wrap_stage`): it carries the
@@ -949,5 +1021,26 @@ fn check_layer(
                 );
             }
         }
+    }
+}
+
+#[cfg(test)]
+mod ornament_tests {
+    use super::*;
+    use crate::scene::{Fit, ImageTreatment};
+
+    #[test]
+    fn ornament_layers_are_decorative() {
+        let kind = LayerKind::Image {
+            asset: "asset.ornament_0021".to_string(),
+            fit: Fit::Contain,
+            treatment: Some(ImageTreatment::natural()),
+            playback: None,
+            insert: None,
+        };
+        for id in ["b1.ornament.corner.tl", "b12.ornament.divider"] {
+            assert!(is_decorative(id, &kind), "{id} should be decorative");
+        }
+        assert!(!is_decorative("b1.subject", &kind));
     }
 }

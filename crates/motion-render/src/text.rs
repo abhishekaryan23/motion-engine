@@ -42,12 +42,15 @@ impl TextEngine {
         }
     }
 
-    /// Load a font file (once) and return its family name.
+    /// Load a font file (once) and return its family name. A restricted face
+    /// whose file is absent is read from its open fallback
+    /// ([`motion_core::compiler::typography::resolve_font_path`]).
     pub fn load(&mut self, path: &Path) -> Result<String, RenderError> {
         if let Some(f) = self.families.get(path) {
             return Ok(f.clone());
         }
-        let data = std::fs::read(path)
+        let file = motion_core::compiler::typography::resolve_font_path(path);
+        let data = std::fs::read(&file)
             .map_err(|e| RenderError::Asset(format!("font {}: {e}", path.display())))?;
         let ids = self
             .fonts
@@ -287,6 +290,8 @@ impl TextMeasure for FontMeasure {
             max_width: None,
             uppercase: false,
             ink: None,
+            fill: None,
+            outline: None,
         };
         engine.measure(&family, &style)
     }
@@ -316,9 +321,42 @@ impl TextMeasure for FontMeasure {
             max_width: None,
             uppercase: false,
             ink: None,
+            fill: None,
+            outline: None,
         };
         let path = engine.outline(&family, &style, 0.0)?;
         let b = path.bounds();
         Some((b.top(), b.bottom()))
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    fn fonts_dir() -> PathBuf {
+        PathBuf::from(concat!(env!("CARGO_MANIFEST_DIR"), "/../../assets/fonts"))
+    }
+
+    /// A restricted face whose file is absent loads its open fallback, with
+    /// or without the restricted files in the checkout.
+    #[test]
+    fn missing_restricted_face_loads_its_open_fallback() {
+        let dir = std::env::temp_dir().join(format!("motion_text_fallback_{}", std::process::id()));
+        let _ = std::fs::remove_dir_all(&dir);
+        std::fs::create_dir_all(&dir).unwrap();
+        for f in ["Lato-Bold.ttf", "ArchivoBlack-Regular.ttf"] {
+            std::fs::copy(fonts_dir().join(f), dir.join(f)).unwrap();
+        }
+        let mut engine = TextEngine::new();
+        assert_eq!(engine.load(&dir.join("Satoshi-Bold.otf")).unwrap(), "Lato");
+        assert_eq!(
+            engine.load(&dir.join("ClashDisplay-Bold.otf")).unwrap(),
+            "Archivo Black"
+        );
+        // No fallback file: a clean error, no panic.
+        assert!(engine.load(&dir.join("Zodiak-Bold.otf")).is_err());
+        assert!(engine.load(&dir.join("Nope.ttf")).is_err());
+        let _ = std::fs::remove_dir_all(&dir);
     }
 }

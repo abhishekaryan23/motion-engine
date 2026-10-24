@@ -59,6 +59,7 @@ fn back_pinned_text(ctx: &Ctx, b: &mut B, id: &str) {
             stroke: Some(Stroke {
                 color: ctx.palette.accent.with_alpha(0xB0),
                 width: (2.5 * ctx.u).max(1.5),
+                brush: None,
             }),
         },
         0,

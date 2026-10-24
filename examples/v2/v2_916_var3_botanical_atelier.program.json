@@ -1,0 +1,174 @@
+{
+  "version": "2.0",
+  "meta": {
+    "name": "v2_916_var3_botanical_atelier",
+    "aspect": "9:16",
+    "duration": 13.0,
+    "fps": "30",
+    "end_beat": 32
+  },
+  "palette": {
+    "background": "#F3EFE6",
+    "ink": "#141612",
+    "accent": "#B84A2C",
+    "muted": "#DFD9CD",
+    "grounds": [
+      "#E8E2D5",
+      "#181B16"
+    ]
+  },
+  "fonts": {
+    "display": "zodiak_bold",
+    "serif": "instrument_serif_italic",
+    "mono": "space_mono"
+  },
+  "tempo": "normal",
+  "music": {
+    "track": "cinematic_strings",
+    "start": 0.46
+  },
+  "film": {
+    "grain": 0.024,
+    "fringe": 0.35
+  },
+  "camera": [
+    { "beat": 1, "do": "push", "to": 1.02 },
+    { "beat": 3, "do": "orbit", "yaw": -1.5, "pitch": 1.0 },
+    { "beat": 5, "do": "dolly", "to": -35.0 },
+    { "beat": 7, "do": "reset" },
+    { "beat": 10, "do": "orbit", "yaw": 3.0, "pitch": -2.0 },
+    { "beat": 14, "do": "reset" },
+    { "beat": 17, "do": "orbit", "yaw": 2.5, "pitch": -1.5 },
+    { "beat": 19, "do": "dolly", "to": -35.0 },
+    { "beat": 21, "do": "orbit", "yaw": -2.5, "pitch": 1.5 },
+    { "beat": 23, "do": "reset" },
+    { "beat": 25, "do": "orbit", "yaw": -3.0, "pitch": 2.0 },
+    { "beat": 27, "do": "dolly", "to": -30.0 },
+    { "beat": 29, "do": "orbit", "yaw": 2.5, "pitch": -1.5 },
+    { "beat": 31, "do": "dolly", "to": -35.0 },
+    { "beat": 32, "do": "push", "to": 1.05 }
+  ],
+  "transitions": [
+    { "beat": 8, "kind": "whip" },
+    { "beat": 16, "kind": "colour_flip" },
+    { "beat": 24, "kind": "whip" }
+  ],
+  "components": [
+    {
+      "id": "bg_washi_1",
+      "kind": "backdrop",
+      "preset": "flat",
+      "colour": "background",
+      "start_beat": 0,
+      "end_beat": 16
+    },
+    {
+      "id": "act1_glyph_drop",
+      "kind": "kinetic_text",
+      "preset": "glyph_drop",
+      "size": "m",
+      "words": [
+        "SINGLE",
+        "SEED",
+        "SPIRALS",
+        "INTO",
+        "PURE",
+        "GOLDEN",
+        "BOTANIC",
+        "FORM."
+      ],
+      "stress": [1, 2, 5, 7],
+      "beat_cuts": 1,
+      "start_beat": 0,
+      "end_beat": 8
+    },
+    {
+      "id": "act2_waves_flow",
+      "kind": "sketch",
+      "preset": "flow_field",
+      "field": "waves",
+      "wiggle": 1.7,
+      "title": "PHYLLOTAXIS",
+      "caption": "137.5 GOLDEN ANGLE CURRENTS",
+      "beat_cuts": 1,
+      "seed": 1375,
+      "start_beat": 8,
+      "end_beat": 16,
+      "timeline": [
+        { "beat": 8, "do": "enter", "style": "draw" }
+      ]
+    },
+    {
+      "id": "bg_sumi_dark",
+      "kind": "backdrop",
+      "preset": "flat",
+      "colour": "ground2",
+      "start_beat": 16,
+      "end_beat": 24
+    },
+    {
+      "id": "act3_pillars",
+      "kind": "bento",
+      "preset": "pillars",
+      "title": "BOTANICAL INVARIANTS",
+      "beat_cuts": 2,
+      "tilt_in": [-8.0, 6.0],
+      "start_beat": 16,
+      "end_beat": 24,
+      "tiles": [
+        {
+          "stat": "137.5",
+          "title": "GOLDEN ANGLE",
+          "detail": "SPIRAL PACKING DEG",
+          "accent": true
+        },
+        {
+          "stat": "21 : 34",
+          "title": "FLORET PARASTICHIES",
+          "detail": "FIBONACCI LATTICE",
+          "accent": false
+        },
+        {
+          "stat": "1.618",
+          "title": "APEX GROWTH",
+          "detail": "MAX PHOTON CAPTURE",
+          "accent": false
+        },
+        {
+          "stat": "14x",
+          "title": "WET WASH BLEED",
+          "detail": "ORGANIC PAPER GRAIN",
+          "accent": true
+        }
+      ],
+      "timeline": [
+        { "beat": 16, "do": "enter", "style": "pop" }
+      ]
+    },
+    {
+      "id": "bg_washi_4",
+      "kind": "backdrop",
+      "preset": "flat",
+      "colour": "background",
+      "start_beat": 24
+    },
+    {
+      "id": "act4_seal",
+      "kind": "lockup",
+      "preset": "orbital_seal",
+      "badge": "ATELIER BOTANICA",
+      "headline": "NATURA FORMA",
+      "subline": "Phyllotaxis & Natural Media Study",
+      "specs": [
+        "ANGLE : 137.5077 DEG",
+        "LATTICE : 21 BY 34",
+        "BRUSH : HB & WATERCOLOR"
+      ],
+      "start_beat": 24,
+      "timeline": [
+        { "beat": 24, "do": "enter", "style": "pop" },
+        { "beat": 28, "do": "sheen" }
+      ]
+    }
+  ]
+}

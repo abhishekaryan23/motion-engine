@@ -57,6 +57,8 @@ pub fn medium_of(family: &str) -> &'static str {
         "woodcut_kitchen" => "woodcut",
         "aikakirja_ornaments" => "ornaments",
         "grounds" => "background plates",
+        "fun_facts" => "eclectic cutout",
+        "ocean_layers" => "glossy 3D",
         f if f.starts_with("clay_") => "clay 3D",
         f if f.starts_with("people_") => "photo cutout people",
         f if f.starts_with("classical_") => "classical engraving",

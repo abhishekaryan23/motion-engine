@@ -28,7 +28,9 @@ pub(crate) fn panel_wipe(ctx: &Ctx, plan: &BeatPlan) -> (Vec<Layer>, Vec<Motion>
     }
     match ctx.taste.transition.family {
         TransitionFamily::Geometric => geometric(ctx, plan),
-        TransitionFamily::Kinetic => kinetic(ctx, plan),
+        // (0.24 M9) Kinetic bars flood the frame with the accent and a field
+        // colour: a full-frame colour field, so only the payoff beat's.
+        TransitionFamily::Kinetic if ctx.budget.field_ok(plan.index) => kinetic(ctx, plan),
         _ => (Vec::new(), Vec::new()),
     }
 }
@@ -62,11 +64,8 @@ fn geometric(ctx: &Ctx, plan: &BeatPlan) -> (Vec<Layer>, Vec<Motion>) {
     let (bx, by) = (w * BLEED, h * BLEED);
     let (pw, ph) = (w + 2.0 * bx, h + 2.0 * by);
     let edge = 8.0 * u;
-    let fill = if ctx.palette.fields.is_empty() {
-        ctx.palette.card
-    } else {
-        ctx.palette.field(plan.index)
-    };
+    // (0.24 M9) A neutral panel, not a colour field: the accent stays thin edges.
+    let fill = ctx.palette.card;
 
     let id = format!("{}.wipe", plan.prefix);
     let group = base_layer(
@@ -199,11 +198,13 @@ mod tests {
         let manifest = crate::assets::AssetManifest::empty();
         let ctx = Ctx {
             reveals: Default::default(),
+            family: None,
             warnings: Vec::new(),
             direction_seed: product.then_some(1),
             beat_params: BTreeMap::new(),
             direction_take: None,
             direction_beats: BTreeMap::new(),
+            budget: crate::compiler::accent_budget::AccentBudget::unlimited(),
             emotion: None,
             art: None,
             w: 1080.0,
@@ -222,6 +223,8 @@ mod tests {
             focal: Default::default(),
             stack: None,
             spoken: Default::default(),
+            spoken_ends: Default::default(),
+            stresses: Default::default(),
             beat_count: 1,
             sequence: Default::default(),
         };
@@ -236,7 +239,7 @@ mod tests {
         ms.sort_by(|a, b| a.start.total_cmp(&b.start));
         let mut cur = None;
         for m in ms {
-            let MotionOp::Move { from, to } = m.op else {
+            let MotionOp::Move { from, to, .. } = m.op else {
                 continue;
             };
             if t < m.start {

@@ -53,31 +53,30 @@ lifecycle (`beat_scenes`; the compiler's whole-piece backdrop has none); a
 hand-authored project without lifecycles treats every scene as a beat. The
 plan records the style's `min_spacing` and `information_cap` for QA.
 
-Candidates (scene `i`, start `S`, lifecycle `L`; scenes without lifecycle use
-`L.enter = 0` and give no arrivals):
-| kind | when (peak lands) | family (tables in `audio.rs`) |
+(0.24 M5) Cue taste. The palette table is `assets/sfx/palettes.json` (not code):
+a palette is picked by the art-direction look (`ProjectMeta.art.look`), else by
+temperament, and lists the families for each role: editorial (paper, tick,
+hit_soft, whoosh_soft, subdrop), pop (pop, swipe, hit_soft), tech (data, glitch,
+click, notification), street, cinematic (whoosh_hard, hit_hard, riser, subdrop).
+`click` is only in the tech palette.
+
+Slots (scene `i`, start `S`, lifecycle `L`; at most 1 hero + 2 small per beat):
+| role | when (peak lands) | families |
 |---|---|---|
-| open | first scene `S + L.enter` | `open_family(temperament)`: energetic → subdrop, precise → riser (tail) |
-| handoff | each scene `i ≥ 1`: midpoint of `[S_i, end_{i−1}]` (= `S_i` when no overlap) | `handoff_cue(transition)`: subtle → whoosh_soft at −24 dBFS, editorial → whoosh_soft, geometric → swipe, kinetic → whoosh_hard, hard → click |
-| impact | each impact-energy scene: `S + L.enter` | `impact_family`: hit_hard (energetic temperament or kinetic transition) else hit_soft |
-| impact (bed) | first impact scene: `S + L.enter`, subdrop, unless a subdrop cue already exists within 1.0 s | subdrop |
-| information | `S + a` for the first `information_cap(density)` of `arrival_times(scene)` | `information_cue(temperament, density)`: restrained → tick at −24 dBFS (none when sparse), editorial → click, precise → tick, energetic → pop. Arrivals are short transients only: a page-turn rustle (`paper`) reads as an unrelated page change, so no taste uses it |
+| hero | the beat's lead reveal at its settle: end of the first motion on the focal layer (`art.focal`), else a `shared.*` number, `.hero*`, `.zone_*`, `.stamp`, `.head.*`; fallback `S + L.settle`. On a MusicPlan an impact beat's hero moves to the nearest downbeat in `[handoff anchor, S + settle]` | `palette.hero` |
+| hero bed | the video's biggest beat (highest energy, last on ties): beds at the hero's instant, a riser peaking 20 ms before it where the palette has one | `hero_big_with`, `riser` |
+| close | the last beat's hero, when it is not the biggest | `palette.close` (beds only) |
+| open | first visible arrival of beat 0 (soft, transition loudness) | `palette.open` |
+| transition | overlap midpoint of cuts that move (overlap > 50 ms or not a hard cut); only every second moving cut | `palette.transition` |
+| small | the speech accent word (`ACCENT_LEAD` before it) then EVOLVE arrivals (`arrival_times`), within the beat's two small slots and `information_cap`; none for restrained + sparse | `palette.small` |
 
-Target peak = the table's level for handoffs, else `family.peak_target_db()`.
-`gain_db = round1(clamp(target − sound.peak_db, −40, +18))`.
+Rules applied in order: collisions (priority impact/open 3 > handoff 2 > information 1, hero first, then earlier; transient cues closer than `min_spacing` lose, beds exempt); breath (a non-bed cue within 250 ms before a hero is dropped); families in preference order, heroes first, a family skipped once it would exceed 40 % of the cues (with 5 or more); non-hero cues of a family still over 40 % are dropped, latest small first; sound = FNV pick among the family's sounds not used in the previous 4 cues (and, when possible, ones whose role loudness is reachable under the -2 dBFS peak ceiling).
+Loudness: `gain_db = role_lufs - lufs + jitter`, `role_lufs` hero -20, transition -24, small -28 (palette file), `lufs` = measured, or `peak_db - 18` when the sound is too short to measure, jitter in +-0.9 dB (FNV of seed, scene, kind, ordinal), then capped so the sample peak stays at or below -2 dBFS and clamped to [-40, +18]. No cue is louder than its beat's hero. `reason` = `"<kind>: <role> <what> (<palette>) -> <family>"`, accents `"accent: '<word>' (small, <palette>) -> <family>"`.
+**Count-up tick train (0.24 M7).** Every `Count` motion of 0.5 s or more gets a train of `count tick i/n` cues (kind impact, family `palette.count`: tick for editorial/street/cinematic, data for tech, pop for pop). A tick lands each time the motion's eased progress (spring counters: OutQuint, as the timeline) crosses the next 1/N step, N = round(16 ticks/s * duration / fastest progress rate), at least 4, so ticks speed up and slow down with the number. Rate cap 18/s (pop 8/s, 10/s under speech), at least 70 ms apart; the progress crossing at 1.0 (the settle) and everything within 250 ms of it get no tick; a tick within 250 ms before any hero, or 60 ms of another transient cue, is dropped; under speech a tick is nudged (+-120 ms, 5 ms steps) off the 80 ms word-onset zones, else dropped. Fewer than 3 survivors: no train. Gain follows the rate (up to 6 dB under the fastest tick at the slow ends, the last three ticks a further -2/-4/-6 dB; `role_lufs.count` -28 + `palette.count_offset_db`, cinematic -4). Sounds go round-robin through the family so a sample never repeats back to back. The settle gets the beat's hero when one lands within 150 ms, else a soft `count lock` (`palette.count_lock`: hit_soft, tech click, pop pop, street hit_hard). Trains are outside the variety, family-share and information-cap rules, `min_spacing` (QA included) and the speech mover; each tick is an ordinary `AudioCue` (`is_count_tick`), so the mixer needs no change.
 
-Sound choice: candidates `library.family(f)` (sorted by id); none → no cue.
-Index = `Fnv64(seed LE bytes, scene id, 0xff, kind, 0xff, ordinal LE) % n`,
-`seed = taste.effective.seed`, `ordinal` = position among that scene's cues
-of that kind. No RNG, no clocks.
+**Under a voice-over (0.24 M7).** With a SpeechMap the role targets come from `palettes.json` `voice` instead of `role_lufs`: while a word is spoken hero -30, transition -32, small -34, count -36 (+ -3 for ticks), every one at least 12 LU under `VOICE_LUFS` (-18); in gaps (silence of 0.25 s or more between words) +4 dB (still 8 LU under or more); a cue on a word's nucleus (its middle half) a further -3 dB; jitter only lowers. The 80 ms onset rule is unchanged. Without a SpeechMap the M5 targets are untouched. Mixer safety nets: the SFX sidechain duck is 8 dB (`SFX_DUCK_DB`) and the voice-relative SFX bus ceiling is 12 LU under the voice (`MixLevels::sfx_under_speech_db`).
 
-Collisions: transient cues (non-bed) closer than `min_spacing(rhythm)`
-(slow_breathing 0.6 · measured_editorial 0.45 · progressive 0.35 · active 0.25 ·
-high_frequency 0.15 s) keep the higher priority (impact = open 3 > handoff 2 >
-information 1); ties keep the earlier, then the smaller sound id. Accept in
-order (priority desc, time asc, sound id asc). Beds are exempt.
-Cues outside `[0, project duration]` are dropped. Output sorted by
-(time, priority desc, sound_id). `reason` = `"<kind>: <taste value> → <family>"`.
+Older tables (`handoff_cue`, `information_cue`, `impact_family`, `open_family`) stay as public reference data but no longer drive the plan.
 
 Music (Phase 3): with a MusicPlan, `music = MusicBed { track, gain_db,
 fade_in 0.5, fade_out 1.0, duck: true }`; cues are unchanged.
@@ -105,6 +104,8 @@ mono 48 kHz, envelope as §2; for every **isolated** cue (no other cue within
 `time`; error ≤ 1 frame (1/fps) = PASS, else WARN. Integrated LUFS and
 sample peak of the mix are reported. Verdict: FAIL on placement violations,
 WARN on alignment misses, else PASS.
+
+`qa --speech S --audio-plan P --sfx-library DIR` (0.24 M7) adds `sfx_over_voice`: the SFX stem is rebuilt as the mix makes it and metered against the voice stem per 400 ms window inside the spoken segments; FAIL when any window has the SFX within 10 LU of the voice; one line names the worst window.
 
 ## 6. CLI summary
 ```

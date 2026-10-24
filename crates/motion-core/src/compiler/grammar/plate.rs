@@ -689,6 +689,7 @@ fn placeholder(
             stroke: Some(Stroke {
                 color: ctx.palette.ink.with_alpha(0x22),
                 width: 2.0 * u,
+                brush: None,
             }),
         },
         z,
@@ -877,11 +878,13 @@ mod tests {
         let ts = Typesetter::new(&ApproxMeasure, &library.root, &fonts);
         let mut ctx = Ctx {
             reveals: Default::default(),
+            family: None,
             warnings: Vec::new(),
             direction_seed: None,
             beat_params: BTreeMap::new(),
             direction_take: None,
             direction_beats: BTreeMap::new(),
+            budget: crate::compiler::accent_budget::AccentBudget::unlimited(),
             emotion: None,
             art: None,
             w: 1080.0,
@@ -900,6 +903,8 @@ mod tests {
             focal: Default::default(),
             stack: None,
             spoken: Default::default(),
+            spoken_ends: Default::default(),
+            stresses: Default::default(),
             beat_count: 1,
             sequence: Default::default(),
         };

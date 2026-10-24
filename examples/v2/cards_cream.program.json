@@ -1,0 +1,103 @@
+{
+ "version": "2.0",
+ "meta": {
+  "name": "cards_cream",
+  "aspect": "16:9",
+  "duration": 7.999,
+  "end_beat": 12
+ },
+ "palette": {
+  "background": "#F3EEE4",
+  "ink": "#1A1A1A",
+  "accent": "#2F5BFF",
+  "muted": "#B9B1A2"
+ },
+ "fonts": {
+  "display": "cabinet_grotesk_extrabold",
+  "serif": "instrument_serif_italic",
+  "mono": "ibm_plex_mono"
+ },
+ "music": {
+  "track": "bright_upbeat",
+  "start": 0.508
+ },
+ "components": [
+  {
+   "id": "g",
+   "kind": "backdrop"
+  },
+  {
+   "id": "title",
+   "kind": "title",
+   "preset": "chapter",
+   "text": "System map",
+   "slot": "top_left",
+   "start_beat": 0,
+   "timeline": [
+    {
+     "at": 0,
+     "do": "enter",
+     "style": "wipe"
+    }
+   ]
+  },
+  {
+   "id": "map",
+   "kind": "diagram",
+   "preset": "cards",
+   "nodes": [
+    "Input",
+    "Parse",
+    "Validate",
+    "Lower",
+    "Render",
+    "Encode"
+   ],
+   "edges": [
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     3,
+     4
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "start_beat": 2,
+   "beat_cuts": 2
+  },
+  {
+   "id": "cap",
+   "kind": "kinetic_text",
+   "preset": "type_on",
+   "slot": "bottom",
+   "colour": "muted",
+   "start_beat": 1,
+   "beat_cuts": 2,
+   "words": [
+    "six parts",
+    "read it",
+    "check it",
+    "shape it",
+    "draw it",
+    "ship it"
+   ]
+  }
+ ]
+}

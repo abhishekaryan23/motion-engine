@@ -862,6 +862,7 @@ fn web_pattern(ctx: &Ctx, b: &mut B, center: (f32, f32), t: f64) {
     let stroke = crate::scene::Stroke {
         color,
         width: 3.0 * u,
+        brush: None,
     };
     let spokes = 12;
     let seed = b.plan.seed;
@@ -998,6 +999,7 @@ fn starburst(ctx: &mut Ctx, b: &mut B, center: (f32, f32), at: f64, subject: Opt
             stroke: crate::scene::Stroke {
                 color: ctx.palette.ink,
                 width: 3.0 * u,
+                brush: None,
             },
             closed: true,
             fill: Some(fill),

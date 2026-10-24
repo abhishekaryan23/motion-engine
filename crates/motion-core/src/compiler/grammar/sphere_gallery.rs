@@ -331,6 +331,7 @@ fn value_chip(ctx: &Ctx, id: &str, side: f32, value: &str) -> Layer {
             stroke: Some(Stroke {
                 color: ctx.palette.accent,
                 width: 3.0 * u,
+                brush: None,
             }),
         },
         0,
@@ -380,6 +381,7 @@ fn card(ctx: &Ctx, id: String, sphere: &Sphere, text: &str, number: bool) -> Lay
             stroke: Some(Stroke {
                 color: ctx.palette.accent,
                 width: 3.0 * u,
+                brush: None,
             }),
         },
         0,

@@ -362,6 +362,9 @@ pub struct ManifestEntry {
     /// Free-form generator metadata (vendor, model, prompt, seed ...). Never read by the engine.
     #[serde(default, skip_serializing_if = "serde_json::Map::is_empty")]
     pub generator: serde_json::Map<String, serde_json::Value>,
+    /// Optional L2-normalized multimodal embedding vector (EmbeddingGemma 2 MRL: 128d/256d/512d/768d).
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub embedding: Vec<f32>,
 }
 
 impl ManifestEntry {
@@ -387,6 +390,109 @@ impl ManifestEntry {
             })
             .or_else(|| self.analysis.as_ref().and_then(|a| a.head_estimate))
     }
+
+    /// Computes Matryoshka truncated cosine similarity against another embedding.
+    pub fn mrl_similarity(&self, other: &[f32], dim: usize) -> f32 {
+        mrl_cosine_similarity(&self.embedding, other, dim)
+    }
+
+    /// Computes Matryoshka truncated cosine similarity between two slices on the first `dim` dimensions.
+    pub fn mrl_cosine_similarity(a: &[f32], b: &[f32], dim: usize) -> f32 {
+        mrl_cosine_similarity(a, b, dim)
+    }
+
+    /// Selects the best candidate by Maximal Marginal Relevance (MMR).
+    pub fn mmr_select(
+        query_emb: &[f32],
+        candidates: &[(&str, &[f32])],
+        selected_embs: &[&[f32]],
+        lambda: f32,
+        mrl_dim: usize,
+    ) -> Option<(usize, f32)> {
+        mmr_select(query_emb, candidates, selected_embs, lambda, mrl_dim)
+    }
+}
+
+/// Computes Matryoshka truncated cosine similarity on the first `dim` dimensions
+/// (`128`, `256`, `512`, or `768`), properly re-normalizing the truncated slice per
+/// Matryoshka Representation Learning (MRL) math:
+///
+/// $$\text{sim}_{\text{MRL}}(a, b, d) = \frac{\sum_{i=0}^{d-1} a_i b_i}{\sqrt{\sum_{i=0}^{d-1} a_i^2} \cdot \sqrt{\sum_{i=0}^{d-1} b_i^2}}$$
+///
+/// Returns `0.0` if either slice is empty, if `dim == 0`, or if either truncated slice has zero norm.
+pub fn mrl_cosine_similarity(a: &[f32], b: &[f32], dim: usize) -> f32 {
+    let d = dim.min(a.len()).min(b.len());
+    if d == 0 {
+        return 0.0;
+    }
+    let mut dot = 0.0f32;
+    let mut norm_a_sq = 0.0f32;
+    let mut norm_b_sq = 0.0f32;
+    for (&ai, &bi) in a[..d].iter().zip(&b[..d]) {
+        dot += ai * bi;
+        norm_a_sq += ai * ai;
+        norm_b_sq += bi * bi;
+    }
+    let norm_a = norm_a_sq.sqrt();
+    let norm_b = norm_b_sq.sqrt();
+    if norm_a <= f32::EPSILON
+        || norm_b <= f32::EPSILON
+        || !norm_a.is_finite()
+        || !norm_b.is_finite()
+    {
+        return 0.0;
+    }
+    let denom = norm_a * norm_b;
+    let sim = dot / denom;
+    if !sim.is_finite() {
+        0.0
+    } else {
+        sim.clamp(-1.0, 1.0)
+    }
+}
+
+/// Implements Maximal Marginal Relevance (MMR) over Matryoshka embeddings:
+///
+/// $$\text{MMR}(c_i) = \lambda \cdot \text{sim}_{\text{MRL}}(q, c_i, d) - (1 - \lambda) \cdot \max_{s \in S} \text{sim}_{\text{MRL}}(c_i, s, d)$$
+///
+/// When selecting multiple visual/audio assets across beats, near-duplicate assets
+/// are automatically penalized.
+///
+/// Returns `None` if `candidates` is empty. Otherwise returns `Some((best_idx, best_mmr_score))`.
+pub fn mmr_select(
+    query_emb: &[f32],
+    candidates: &[(&str, &[f32])],
+    selected_embs: &[&[f32]],
+    lambda: f32,
+    mrl_dim: usize,
+) -> Option<(usize, f32)> {
+    if candidates.is_empty() {
+        return None;
+    }
+
+    let lambda = lambda.clamp(0.0, 1.0);
+    let mut best_idx = 0;
+    let mut best_score = f32::NEG_INFINITY;
+
+    for (idx, &(_name, cand_emb)) in candidates.iter().enumerate() {
+        let sim_query = mrl_cosine_similarity(query_emb, cand_emb, mrl_dim);
+        let max_sim_selected = if selected_embs.is_empty() {
+            0.0
+        } else {
+            selected_embs
+                .iter()
+                .map(|s| mrl_cosine_similarity(cand_emb, s, mrl_dim))
+                .fold(f32::NEG_INFINITY, f32::max)
+        };
+
+        let mmr_score = lambda * sim_query - (1.0 - lambda) * max_sim_selected;
+        if mmr_score > best_score {
+            best_score = mmr_score;
+            best_idx = idx;
+        }
+    }
+
+    Some((best_idx, best_score))
 }
 
 /// A request that has no usable image after ingestion (0.5).
@@ -1008,5 +1114,258 @@ impl AssetManifest {
         } else {
             Err(errs)
         }
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn mrl_cosine_similarity_empty_and_zero_norm() {
+        let v1 = vec![1.0, 2.0, 3.0];
+        let empty: Vec<f32> = Vec::new();
+        let zeros = vec![0.0, 0.0, 0.0];
+
+        assert_eq!(mrl_cosine_similarity(&empty, &v1, 128), 0.0);
+        assert_eq!(mrl_cosine_similarity(&v1, &empty, 128), 0.0);
+        assert_eq!(mrl_cosine_similarity(&zeros, &v1, 128), 0.0);
+        assert_eq!(mrl_cosine_similarity(&v1, &zeros, 128), 0.0);
+        assert_eq!(mrl_cosine_similarity(&v1, &v1, 0), 0.0);
+    }
+
+    #[test]
+    fn mrl_truncation_invariance_128d_256d_768d() {
+        // Construct 768-dimensional embedding vectors where:
+        // - v_base is the reference vector.
+        // - v_shared128 matches v_base in first 128 dimensions, differs completely thereafter.
+        // - v_shared256 matches v_base in first 256 dimensions, differs completely thereafter.
+        let mut v_base = vec![0.0f32; 768];
+        let mut v_shared128 = vec![0.0f32; 768];
+        let mut v_shared256 = vec![0.0f32; 768];
+
+        for i in 0..768 {
+            let val = ((i * 37 + 13) % 100) as f32 / 100.0 - 0.5;
+            v_base[i] = val;
+
+            if i < 128 {
+                v_shared128[i] = val;
+            } else {
+                v_shared128[i] = -val * 2.5 + 0.3; // completely different in tail
+            }
+
+            if i < 256 {
+                v_shared256[i] = val;
+            } else {
+                v_shared256[i] = -val * 1.8 - 0.7; // completely different in tail
+            }
+        }
+
+        // 1. Self similarity at 128d, 256d, 768d must all be exactly 1.0 (properly re-normalized)
+        let sim128_self = mrl_cosine_similarity(&v_base, &v_base, 128);
+        let sim256_self = mrl_cosine_similarity(&v_base, &v_base, 256);
+        let sim768_self = mrl_cosine_similarity(&v_base, &v_base, 768);
+        assert!(
+            (sim128_self - 1.0).abs() < 1e-6,
+            "128d self-sim: {sim128_self}"
+        );
+        assert!(
+            (sim256_self - 1.0).abs() < 1e-6,
+            "256d self-sim: {sim256_self}"
+        );
+        assert!(
+            (sim768_self - 1.0).abs() < 1e-6,
+            "768d self-sim: {sim768_self}"
+        );
+
+        // 2. Truncation invariance at 128d:
+        // Any modification beyond dimension 128 must have ZERO effect on 128d similarity.
+        let sim128 = mrl_cosine_similarity(&v_base, &v_shared128, 128);
+        assert!(
+            (sim128 - 1.0).abs() < 1e-6,
+            "128d shared must be 1.0: {sim128}"
+        );
+        // At 256d and 768d, v_shared128 must diverge from 1.0
+        let sim256_diverge = mrl_cosine_similarity(&v_base, &v_shared128, 256);
+        let sim768_diverge = mrl_cosine_similarity(&v_base, &v_shared128, 768);
+        assert!(
+            sim256_diverge < 0.99,
+            "256d should diverge: {sim256_diverge}"
+        );
+        assert!(
+            sim768_diverge < 0.99,
+            "768d should diverge: {sim768_diverge}"
+        );
+
+        // 3. Truncation invariance at 256d:
+        // Matches up to 256d must be 1.0 at 128d AND 256d, but diverge at 768d
+        let sim128_shared256 = mrl_cosine_similarity(&v_base, &v_shared256, 128);
+        let sim256_shared256 = mrl_cosine_similarity(&v_base, &v_shared256, 256);
+        let sim768_shared256 = mrl_cosine_similarity(&v_base, &v_shared256, 768);
+        assert!(
+            (sim128_shared256 - 1.0).abs() < 1e-6,
+            "128d prefix must match: {sim128_shared256}"
+        );
+        assert!(
+            (sim256_shared256 - 1.0).abs() < 1e-6,
+            "256d prefix must match: {sim256_shared256}"
+        );
+        assert!(
+            sim768_shared256 < 0.99,
+            "768d should diverge: {sim768_shared256}"
+        );
+
+        // 4. Scale invariance: scaling a vector by a positive constant preserves similarity
+        let v_scaled: Vec<f32> = v_base.iter().map(|&x| x * 4.2).collect();
+        assert!((mrl_cosine_similarity(&v_base, &v_scaled, 128) - 1.0).abs() < 1e-6);
+        assert!((mrl_cosine_similarity(&v_base, &v_scaled, 256) - 1.0).abs() < 1e-6);
+        assert!((mrl_cosine_similarity(&v_base, &v_scaled, 768) - 1.0).abs() < 1e-6);
+
+        // 5. Short slice tolerance: vector shorter than dim compares available dimensions
+        let short_a = vec![1.0, 0.0, 0.0];
+        let short_b = vec![1.0, 0.0, 0.0];
+        assert!((mrl_cosine_similarity(&short_a, &short_b, 128) - 1.0).abs() < 1e-6);
+    }
+
+    #[test]
+    fn mmr_select_diversity_deduplication() {
+        // Query embedding (e.g. asking for "futuristic robot hero")
+        let mut query = vec![0.0f32; 128];
+        query[0] = 1.0;
+
+        // Candidate 1: matches query well (sim ~ 0.8), but is almost identical to selected asset S0
+        let mut c1 = vec![0.0f32; 128];
+        c1[0] = 0.8;
+        c1[1] = 0.6; // normalized: 0.8^2 + 0.6^2 = 1.0
+
+        // Candidate 2: matches query equally well (sim ~ 0.8), but has a different visual feature axis
+        let mut c2 = vec![0.0f32; 128];
+        c2[0] = 0.8;
+        c2[2] = 0.6; // orthogonal in non-query dimensions to c1
+
+        // Already selected asset S0: very close to Candidate 1 (e.g. nearly same frame / pose)
+        let mut s0 = vec![0.0f32; 128];
+        s0[0] = 0.79;
+        s0[1] = 0.61;
+
+        // Verify that c1 and c2 match the query equally well
+        let sim_q_c1 = mrl_cosine_similarity(&query, &c1, 128);
+        let sim_q_c2 = mrl_cosine_similarity(&query, &c2, 128);
+        assert!((sim_q_c1 - 0.8).abs() < 1e-4, "sim_q_c1: {sim_q_c1}");
+        assert!((sim_q_c2 - 0.8).abs() < 1e-4, "sim_q_c2: {sim_q_c2}");
+
+        // Verify that c1 is a near-duplicate of s0, whereas c2 is visually distinct from s0
+        let sim_c1_s0 = mrl_cosine_similarity(&c1, &s0, 128);
+        let sim_c2_s0 = mrl_cosine_similarity(&c2, &s0, 128);
+        assert!(
+            sim_c1_s0 > 0.99,
+            "c1 and s0 must be near-duplicates: {sim_c1_s0}"
+        );
+        assert!(sim_c2_s0 < 0.70, "c2 must be distinct from s0: {sim_c2_s0}");
+
+        let candidates = [("c1_dup", c1.as_slice()), ("c2_distinct", c2.as_slice())];
+
+        // Case 1: Without any selected assets (selected_embs is empty),
+        // candidates tie on query relevance, and the first candidate (c1_dup, index 0) wins.
+        let first_pick = mmr_select(&query, &candidates, &[], 0.5, 128);
+        assert_eq!(
+            first_pick.expect("some").0,
+            0,
+            "Initial selection picks first candidate on tie"
+        );
+
+        // Case 2: With s0 in selected_embs, MMR diversity penalty triggers!
+        // c1_dup is heavily penalized for redundancy against s0.
+        // c2_distinct is chosen instead, proving diversity deduplication.
+        let selected = [s0.as_slice()];
+        let (chosen_idx, chosen_score) =
+            mmr_select(&query, &candidates, &selected, 0.5, 128).expect("some");
+        assert_eq!(
+            chosen_idx, 1,
+            "MMR must pick candidate 1 (c2_distinct), not the duplicate"
+        );
+
+        // Verify the score matches theoretical MMR
+        let expected_mmr_c1 = 0.5 * sim_q_c1 - 0.5 * sim_c1_s0;
+        let expected_mmr_c2 = 0.5 * sim_q_c2 - 0.5 * sim_c2_s0;
+        assert!(
+            expected_mmr_c2 > expected_mmr_c1,
+            "c2 MMR score must beat c1"
+        );
+        assert!((chosen_score - expected_mmr_c2).abs() < 1e-4);
+    }
+
+    #[test]
+    fn mmr_select_sequential_deduplication_across_beats() {
+        // Demonstrate multi-beat asset selection across a timeline:
+        let mut query = vec![0.0f32; 128];
+        query[0] = 1.0;
+
+        let mut a1 = vec![0.0f32; 128]; // Hero variation A
+        a1[0] = 0.8;
+        a1[1] = 0.6;
+
+        let mut a2 = vec![0.0f32; 128]; // Hero variation A duplicate
+        a2[0] = 0.8;
+        a2[1] = 0.59;
+        a2[2] = 0.05;
+
+        let mut b = vec![0.0f32; 128]; // Hero variation B (distinct angle)
+        b[0] = 0.8;
+        b[3] = 0.6;
+
+        // Beat 1: candidate pool contains a1 and b. Nothing selected yet -> picks hero_a1 (index 0)
+        let cands_beat1 = [("hero_a1", a1.as_slice()), ("hero_b", b.as_slice())];
+        let (beat1_idx, _) = mmr_select(&query, &cands_beat1, &[], 0.5, 128).unwrap();
+        assert_eq!(beat1_idx, 0, "Beat 1 selects hero_a1");
+
+        // Beat 2: hero_a1 is now in selected history. Unselected candidate pool has a2 (duplicate) and b (distinct).
+        let cands_beat2 = [("hero_a2_dup", a2.as_slice()), ("hero_b", b.as_slice())];
+        let selected_after_beat1 = [a1.as_slice()];
+        let (beat2_idx, _) =
+            mmr_select(&query, &cands_beat2, &selected_after_beat1, 0.5, 128).unwrap();
+        assert_eq!(
+            beat2_idx, 1,
+            "Beat 2 picks distinct hero_b, avoiding hero_a2 duplicate"
+        );
+
+        // Lambda boundary: lambda = 1.0 (pure relevance) ignores diversity penalty and selects duplicate
+        let (relevance_only_idx, _) =
+            mmr_select(&query, &cands_beat2, &selected_after_beat1, 1.0, 128).unwrap();
+        assert_eq!(
+            relevance_only_idx, 0,
+            "Lambda 1.0 ignores diversity penalty and picks first candidate on tie"
+        );
+
+        // Empty candidates returns None
+        assert!(mmr_select(&query, &[], &selected_after_beat1, 0.5, 128).is_none());
+    }
+
+    #[test]
+    fn manifest_entry_embedding_serde_roundtrip() {
+        let mut entry = ManifestEntry {
+            id: "beat_1.hero_subject".into(),
+            path: "hero.png".into(),
+            width: 1080,
+            height: 1920,
+            alpha: true,
+            ..Default::default()
+        };
+        // Empty embedding skips serialization
+        let json_without = serde_json::to_string(&entry).unwrap();
+        assert!(!json_without.contains("\"embedding\""));
+
+        // Non-empty embedding is serialized and deserialized
+        entry.embedding = vec![0.1, 0.5, -0.2, 0.9];
+        let json_with = serde_json::to_string(&entry).unwrap();
+        assert!(json_with.contains("\"embedding\""));
+
+        let deserialized: ManifestEntry = serde_json::from_str(&json_with).unwrap();
+        assert_eq!(deserialized.embedding, vec![0.1, 0.5, -0.2, 0.9]);
+
+        // Helper methods on ManifestEntry work
+        let other = vec![0.1, 0.5, -0.2, 0.9];
+        let sim = entry.mrl_similarity(&other, 4);
+        assert!((sim - 1.0).abs() < 1e-6);
     }
 }

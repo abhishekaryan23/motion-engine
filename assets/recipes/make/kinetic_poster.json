@@ -1,0 +1,15 @@
+{
+  "description": "Poster type story on a 126 BPM grid: giant words cut on every beat, one orange dot carried, shape morphs between ideas, thin-axis charts.",
+  "style": "poster_kinetic",
+  "tempo": "fast",
+  "music": "driving_pulse",
+  "poster": "poster_cuts",
+  "body": "glyph_drop",
+  "chart": "thin_axis",
+  "diagram": "outline",
+  "techniques": [
+    "morph",
+    "chart",
+    "diagram"
+  ]
+}

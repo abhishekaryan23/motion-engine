@@ -58,6 +58,9 @@ pub struct CpuRenderer {
     overrides: Mutex<TextOverrides>,
     /// (0.11) Sprite-sequence asset id -> where its frames live.
     sprites: HashMap<String, SpriteSource>,
+    /// (0.24) Video asset id -> file + frame clock; frames come from `videos`.
+    video_sources: HashMap<String, crate::video::VideoSource>,
+    videos: crate::video::VideoCache,
     /// (0.11) Image layer id -> static box size, for layers whose treatment is
     /// applied lazily per sprite frame (keeps the pixels-per-unit constant).
     sprite_layers: HashMap<String, (f32, f32)>,
@@ -66,6 +69,8 @@ pub struct CpuRenderer {
     /// (gpu feature) Optional GPU backend for the post stage; `None` = CPU.
     #[cfg(feature = "gpu")]
     gpu_post: Option<GpuPostState>,
+    /// (0.24 M10) Operator brand mark, drawn over the finished frame.
+    brand_mark: Option<crate::brand_mark::BrandMark>,
 }
 
 /// The GPU post backend and its health. The first GPU failure is recorded and
@@ -206,6 +211,14 @@ impl CpuRenderer {
 }
 
 impl CpuRenderer {
+    /// (0.24 M10) Draw `mark` over every finished frame.
+    pub fn with_brand_mark(mut self, mark: crate::brand_mark::BrandMark) -> Self {
+        self.brand_mark = Some(mark);
+        self
+    }
+}
+
+impl CpuRenderer {
     /// Full-frame post effects: the GPU backend when attached and healthy,
     /// otherwise the CPU reference.
     fn apply_post(&self, pm: &mut Pixmap, post: &[motion_core::timeline::ResolvedPost<'_>]) {
@@ -215,7 +228,8 @@ impl CpuRenderer {
             if post.is_empty() {
                 return;
             }
-            if !st.disabled.load(Ordering::Relaxed) {
+            let gpu_can = !post.iter().any(|p| p.kind.cpu_only());
+            if gpu_can && !st.disabled.load(Ordering::Relaxed) {
                 let result = match st.gpu.lock() {
                     Ok(mut g) => g.apply(pm, post).map_err(|e| e.to_string()),
                     Err(_) => Err("GPU backend poisoned by a panic".to_string()),
@@ -254,6 +268,7 @@ impl CpuRenderer {
 
         let mut images = HashMap::new();
         let mut sprites: HashMap<String, SpriteSource> = HashMap::new();
+        let mut video_sources: HashMap<String, crate::video::VideoSource> = HashMap::new();
         let mut svg_trees: HashMap<String, usvg::Tree> = HashMap::new();
         for a in &project.assets {
             let path = root.join(&a.path);
@@ -272,6 +287,26 @@ impl CpuRenderer {
                     svg_trees.insert(a.id.clone(), tree);
                 }
                 AssetKind::Font => {}
+                // (0.24) Decoded lazily through an ffmpeg pipe (see `video`).
+                AssetKind::Video => {
+                    let spec = a.sprite.as_ref().ok_or_else(|| {
+                        RenderError::Asset(format!("video asset '{}' has no sprite spec", a.id))
+                    })?;
+                    if !path.is_file() {
+                        return Err(RenderError::Asset(format!(
+                            "video {}: file not found",
+                            path.display()
+                        )));
+                    }
+                    video_sources.insert(
+                        a.id.clone(),
+                        crate::video::VideoSource {
+                            path,
+                            fps: spec.fps,
+                            frame_count: spec.frame_count,
+                        },
+                    );
+                }
                 // Frames are decoded lazily on first use (see `sprite_frame`).
                 AssetKind::SpriteSequence => {
                     let spec = a.sprite.as_ref().ok_or_else(|| {
@@ -305,10 +340,13 @@ impl CpuRenderer {
                 glyph_cache: HashMap::new(),
             }),
             sprites,
+            video_sources,
+            videos: crate::video::VideoCache::from_env(),
             sprite_layers: HashMap::new(),
             sprite_cache: Mutex::new(SpriteCache::default()),
             #[cfg(feature = "gpu")]
             gpu_post: None,
+            brand_mark: None,
         };
 
         let mut all: Vec<&Layer> = Vec::new();
@@ -361,7 +399,7 @@ impl CpuRenderer {
                     ..
                 } => {
                     asset_path(asset)?;
-                    if r.sprites.contains_key(asset) {
+                    if r.sprites.contains_key(asset) || r.video_sources.contains_key(asset) {
                         if treatment.is_some() {
                             r.sprite_layers
                                 .insert(layer.id.clone(), (layer.width, layer.height));
@@ -494,6 +532,247 @@ impl CpuRenderer {
         let ts = to_sk(l.content_transform);
         let (w, h) = (l.width, l.height);
         match l.kind {
+            LayerKind::Instances { d, fill, at } => {
+                // (v2) One combined path: the prototype placed at every
+                // visible instance, filled once.
+                let proto = sk_path(&motion_core::path::parse(d).unwrap_or_default());
+                let shown = l.trim.map_or(at.len() as f32, |f| f * at.len() as f32);
+                if let (Some(proto), Some(p)) = (proto, fill_paint(fill, l.opacity, l.tint)) {
+                    let mut pb = PathBuilder::new();
+                    for (i, a) in at.iter().enumerate() {
+                        let built = (shown - i as f32).clamp(0.0, 1.0);
+                        if built <= 0.0 {
+                            break;
+                        }
+                        // Knocked-out instances have scale 0: skip them.
+                        let k = built * a[2];
+                        if k <= 1e-3 {
+                            continue;
+                        }
+                        if let Some(t) = proto
+                            .clone()
+                            .transform(Transform::from_row(k, 0.0, 0.0, k, a[0], a[1]))
+                        {
+                            pb.push_path(&t);
+                        }
+                    }
+                    if let Some(all) = pb.finish() {
+                        target.fill_path(&all, &p, FillRule::Winding, ts, mask.as_ref());
+                    }
+                }
+            }
+            LayerKind::Path {
+                d,
+                fill,
+                stroke,
+                fill_rule,
+                shadows,
+            } => {
+                // (v2) `morph` supplies the geometry; otherwise parse `d`
+                // (validated; cheap next to rasterising).
+                let parsed;
+                let geo = match &l.path {
+                    Some(p) => p,
+                    None => {
+                        parsed = motion_core::path::parse(d).unwrap_or_default();
+                        &parsed
+                    }
+                };
+                let rule = match fill_rule {
+                    scene::PathFillRule::Nonzero => FillRule::Winding,
+                    scene::PathFillRule::EvenOdd => FillRule::EvenOdd,
+                };
+                // (v2) Elevation under the fill: each shadow is the shape
+                // offset, blurred and composited with the layer opacity.
+                if !shadows.is_empty() {
+                    if let Some(sk) = sk_path(geo) {
+                        let k = (ts.sx * ts.sy - ts.kx * ts.ky).abs().sqrt();
+                        for sh in shadows {
+                            let mut off = Self::blank_like(target)?;
+                            let mut p = Paint::default();
+                            p.set_color(sk_color(tinted(sh.color, l.tint), 1.0));
+                            p.anti_alias = true;
+                            let moved = ts.pre_translate(sh.offset[0], sh.offset[1]);
+                            off.fill_path(&sk, &p, rule, moved, None);
+                            blur::gaussian_blur(&mut off, sh.blur * 0.5 * k);
+                            let paint = PixmapPaint {
+                                opacity: l.opacity,
+                                quality: FilterQuality::Nearest,
+                                ..Default::default()
+                            };
+                            target.draw_pixmap(
+                                0,
+                                0,
+                                off.as_ref(),
+                                &paint,
+                                Transform::identity(),
+                                mask.as_ref(),
+                            );
+                        }
+                    }
+                }
+                if let Some(f) = fill {
+                    match f {
+                        scene::Fill::Watercolor { color, spec } => {
+                            let wc_color = tinted(*color, l.tint);
+                            let wc_layers = motion_core::brush::watercolor_layers(geo, spec);
+                            for wc in &wc_layers {
+                                if let Some(sk) = sk_path(&wc.path) {
+                                    let alpha = (l.opacity * wc.opacity).clamp(0.0, 1.0);
+                                    if wc.is_rim {
+                                        let st = Stroke {
+                                            width: 2.2,
+                                            line_cap: tiny_skia::LineCap::Round,
+                                            line_join: tiny_skia::LineJoin::Round,
+                                            ..Default::default()
+                                        };
+                                        target.stroke_path(
+                                            &sk,
+                                            &paint(wc_color, alpha),
+                                            &st,
+                                            ts,
+                                            mask.as_ref(),
+                                        );
+                                    } else {
+                                        target.fill_path(
+                                            &sk,
+                                            &paint(wc_color, alpha),
+                                            rule,
+                                            ts,
+                                            mask.as_ref(),
+                                        );
+                                    }
+                                }
+                            }
+                        }
+                        _ => {
+                            if let (Some(sk), Some(p)) =
+                                (sk_path(geo), fill_paint(f, l.opacity, l.tint))
+                            {
+                                target.fill_path(&sk, &p, rule, ts, mask.as_ref());
+                            }
+                        }
+                    }
+                }
+                // `trim` draws the outline on; the fill is not trimmed.
+                if let Some(s) = stroke.as_ref().filter(|s| s.width > 0.0) {
+                    let trimmed;
+                    let outline = match l.trim {
+                        Some(f) if f < 1.0 => {
+                            trimmed = geo.trimmed(f);
+                            &trimmed
+                        }
+                        _ => geo,
+                    };
+                    if let Some(ref bspec) = s.brush {
+                        let compiled = motion_core::brush::compile_stroke(
+                            outline,
+                            s.width,
+                            bspec,
+                            [w.max(1.0), h.max(1.0)],
+                        );
+                        let sc = tinted(s.color, l.tint);
+                        for ribbon in &compiled.ribbons {
+                            if let Some(sk) = sk_path(&ribbon.path) {
+                                let alpha = (l.opacity * ribbon.opacity).clamp(0.0, 1.0);
+                                target.fill_path(
+                                    &sk,
+                                    &paint(sc, alpha),
+                                    FillRule::Winding,
+                                    ts,
+                                    mask.as_ref(),
+                                );
+                            }
+                        }
+                        if !compiled.stamps.is_empty() {
+                            if let Some(tip_img) = bspec
+                                .tip_asset
+                                .as_deref()
+                                .and_then(|aid| self.images.get(aid))
+                            {
+                                let iw = tip_img.width() as f32;
+                                let ih = tip_img.height() as f32;
+                                if iw > 0.0 && ih > 0.0 {
+                                    for st in &compiled.stamps {
+                                        let alpha = (l.opacity * st.opacity).clamp(0.0, 1.0);
+                                        if alpha <= 0.0 || st.radius <= 0.0 {
+                                            continue;
+                                        }
+                                        let scale = (st.radius * 2.0) / iw.max(ih);
+                                        let deg = st.angle_rad.to_degrees();
+                                        let local = Transform::from_translate(-iw * 0.5, -ih * 0.5)
+                                            .post_scale(scale, scale)
+                                            .post_rotate(deg)
+                                            .post_translate(st.pos[0], st.pos[1])
+                                            .post_concat(ts);
+                                        let pp = PixmapPaint {
+                                            opacity: alpha,
+                                            quality: FilterQuality::Bilinear,
+                                            ..Default::default()
+                                        };
+                                        target.draw_pixmap(
+                                            0,
+                                            0,
+                                            tip_img.as_ref(),
+                                            &pp,
+                                            local,
+                                            mask.as_ref(),
+                                        );
+                                    }
+                                }
+                            } else {
+                                let mut buckets: [PathBuilder; 4] = [
+                                    PathBuilder::new(),
+                                    PathBuilder::new(),
+                                    PathBuilder::new(),
+                                    PathBuilder::new(),
+                                ];
+                                let mut counts = [0usize; 4];
+                                for st in &compiled.stamps {
+                                    let op = st.opacity.clamp(0.0, 1.0);
+                                    if op <= 0.01 || st.radius <= 0.05 {
+                                        continue;
+                                    }
+                                    let b = ((op * 3.99) as usize).min(3);
+                                    let r = st.radius;
+                                    buckets[b].push_circle(st.pos[0], st.pos[1], r);
+                                    counts[b] += 1;
+                                }
+                                let bucket_alphas = [0.22f32, 0.45, 0.72, 0.95];
+                                for (b, pb) in buckets.into_iter().enumerate() {
+                                    if counts[b] > 0 {
+                                        if let Some(sk) = pb.finish() {
+                                            let alpha =
+                                                (l.opacity * bucket_alphas[b]).clamp(0.0, 1.0);
+                                            target.fill_path(
+                                                &sk,
+                                                &paint(sc, alpha),
+                                                FillRule::Winding,
+                                                ts,
+                                                mask.as_ref(),
+                                            );
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    } else if let Some(sk) = sk_path(outline) {
+                        let st = Stroke {
+                            width: s.width,
+                            line_cap: tiny_skia::LineCap::Round,
+                            line_join: tiny_skia::LineJoin::Round,
+                            ..Default::default()
+                        };
+                        target.stroke_path(
+                            &sk,
+                            &paint(tinted(s.color, l.tint), l.opacity),
+                            &st,
+                            ts,
+                            mask.as_ref(),
+                        );
+                    }
+                }
+            }
             LayerKind::Polyline {
                 points,
                 stroke,
@@ -566,12 +845,20 @@ impl CpuRenderer {
                     };
                     self.overrides().glyphs(l.id, style, text, width)
                 });
+                // (v2.2) Gradient / image fills are shaders in box space;
+                // outline strokes the glyphs instead of filling them.
+                let fill_img = match &style.fill {
+                    Some(scene::TextFill::Image(a)) => self.images.get(a),
+                    _ => None,
+                };
+                let paint_of = |alpha: f32| text_paint(style, fill_img, (w, h), l.tint, alpha);
                 if let (Some(poses), Some(set)) = (poses, glyph_set) {
                     draw_posed_glyphs(
                         target,
                         &set,
                         poses,
-                        tinted(style.color, l.tint),
+                        &paint_of,
+                        style.outline,
                         l.opacity,
                         l.content_transform,
                         mask.as_ref(),
@@ -587,10 +874,11 @@ impl CpuRenderer {
                     None => self.text.get(l.id),
                 };
                 if let Some(path) = path {
-                    target.fill_path(
+                    draw_text_path(
+                        target,
                         path,
-                        &paint(tinted(style.color, l.tint), l.opacity),
-                        FillRule::Winding,
+                        &paint_of(l.opacity),
+                        style.outline,
                         ts,
                         mask.as_ref(),
                     );
@@ -603,7 +891,7 @@ impl CpuRenderer {
                 insert,
                 ..
             } => {
-                let img = self.image_ref(asset, l.sprite_frame)?;
+                let img = self.image_ref(asset, l.sprite_frame, (w, h))?;
                 let cover_mask;
                 let mask = if *fit == Fit::Cover && mask.is_none() {
                     cover_mask = Self::rect_mask(
@@ -789,9 +1077,18 @@ impl CpuRenderer {
         &self,
         asset: &str,
         frame: Option<u32>,
+        size: (f32, f32),
     ) -> Result<Option<ImgRef<'_>>, RenderError> {
         if let Some(img) = self.images.get(asset) {
             return Ok(Some(ImgRef::Still(img)));
+        }
+        if let Some(src) = self.video_sources.get(asset) {
+            let (w, h) = (
+                size.0.round().max(2.0) as u32,
+                size.1.round().max(2.0) as u32,
+            );
+            let f = frame.unwrap_or(0);
+            return Ok(Some(ImgRef::Frame(self.videos.frame(asset, src, f, w, h)?)));
         }
         match self.sprites.get(asset) {
             Some(src) => Ok(Some(ImgRef::Frame(self.sprite_frame(
@@ -889,7 +1186,7 @@ impl CpuRenderer {
         let Some(rect) = Rect::from_xywh(rx, ry, rw, rh) else {
             return Ok(());
         };
-        let Some(img) = self.image_ref(&ins.asset, l.insert_frame)? else {
+        let Some(img) = self.image_ref(&ins.asset, l.insert_frame, (rw, rh))? else {
             return Ok(());
         };
         let img = img.pixmap();
@@ -922,7 +1219,28 @@ impl CpuRenderer {
         Pixmap::new(w, h).ok_or(RenderError::Canvas(w, h))
     }
 
+    /// The layer's rectangular clip and (v2) path mask, multiplied.
     fn clip_mask(l: &ResolvedLayer<'_>, target: &Pixmap) -> Option<Mask> {
+        let clip = Self::rect_clip_mask(l, target);
+        let Some(m) = &l.mask else {
+            return clip;
+        };
+        let mut pm = Mask::new(target.width(), target.height())?;
+        if let Some(sk) = sk_path(&m.path) {
+            pm.fill_path(&sk, FillRule::Winding, true, to_sk(l.transform));
+        }
+        if m.invert {
+            pm.invert();
+        }
+        if let Some(c) = clip {
+            for (a, b) in pm.data_mut().iter_mut().zip(c.data()) {
+                *a = ((u16::from(*a) * u16::from(*b) + 127) / 255) as u8;
+            }
+        }
+        Some(pm)
+    }
+
+    fn rect_clip_mask(l: &ResolvedLayer<'_>, target: &Pixmap) -> Option<Mask> {
         let c = l.clip?;
         let (w, h) = (l.width, l.height);
         let rect = Rect::from_ltrb(
@@ -957,6 +1275,9 @@ impl Renderer for CpuRenderer {
         }
         // (0.15) Full-frame post effects on the composited frame.
         self.apply_post(&mut pm, &frame.post);
+        if let Some(mark) = &self.brand_mark {
+            mark.draw(&mut pm, mark.time_of(frame.frame));
+        }
         Ok(pm)
     }
 }
@@ -1018,6 +1339,123 @@ fn tinted(c: Color, tint: Option<ResolvedTint>) -> Color {
     }
 }
 
+/// (v2) A core Bezier path as a tiny-skia path (`None` when empty).
+fn sk_path(p: &motion_core::path::BezPath) -> Option<SkPath> {
+    let mut pb = PathBuilder::new();
+    for c in &p.contours {
+        if c.segs.is_empty() {
+            continue;
+        }
+        pb.move_to(c.start[0], c.start[1]);
+        for s in &c.segs {
+            pb.cubic_to(s.c1[0], s.c1[1], s.c2[0], s.c2[1], s.to[0], s.to[1]);
+        }
+        if c.closed {
+            pb.close();
+        }
+    }
+    pb.finish()
+}
+
+/// (v2) Paint for a solid or gradient fill in box space (the draw
+/// transform also maps the shader), with opacity and tint applied per stop.
+fn fill_paint(f: &scene::Fill, opacity: f32, tint: Option<ResolvedTint>) -> Option<Paint<'static>> {
+    use tiny_skia::{GradientStop, LinearGradient, Point, RadialGradient, SpreadMode};
+    let g = match f {
+        scene::Fill::Solid(c) | scene::Fill::Watercolor { color: c, .. } => {
+            return Some(paint(tinted(*c, tint), opacity))
+        }
+        scene::Fill::Gradient(g) => g,
+    };
+    let stops: Vec<GradientStop> = g
+        .stops()
+        .iter()
+        .map(|s| GradientStop::new(s.at, sk_color(tinted(s.color, tint), opacity)))
+        .collect();
+    let shader = match g {
+        scene::Gradient::Linear { from, to, .. } => LinearGradient::new(
+            Point::from_xy(from[0], from[1]),
+            Point::from_xy(to[0], to[1]),
+            stops,
+            SpreadMode::Pad,
+            Transform::identity(),
+        ),
+        scene::Gradient::Radial { center, radius, .. } => {
+            let c = Point::from_xy(center[0], center[1]);
+            RadialGradient::new(
+                c,
+                0.0,
+                c,
+                *radius,
+                stops,
+                SpreadMode::Pad,
+                Transform::identity(),
+            )
+        }
+    }?;
+    Some(Paint {
+        shader,
+        anti_alias: true,
+        ..Default::default()
+    })
+}
+
+/// (v2.2) The paint inside a text layer's glyphs: its solid colour, a
+/// gradient in box space, or an image cover-fit to the box (a text mask:
+/// the image shows only where glyphs are drawn). A missing image falls back
+/// to the solid colour (validated programs always carry it).
+fn text_paint<'a>(
+    style: &scene::TextStyle,
+    img: Option<&'a Pixmap>,
+    (w, h): (f32, f32),
+    tint: Option<ResolvedTint>,
+    opacity: f32,
+) -> Paint<'a> {
+    match (&style.fill, img) {
+        (Some(scene::TextFill::Gradient(g)), _) => {
+            fill_paint(&scene::Fill::Gradient(g.clone()), opacity, tint)
+                .unwrap_or_else(|| paint(tinted(style.color, tint), opacity))
+        }
+        (Some(scene::TextFill::Image(_)), Some(pm)) => {
+            let fit = fit_transform(pm.width() as f32, pm.height() as f32, w, h, Fit::Cover);
+            Paint {
+                shader: tiny_skia::Pattern::new(
+                    pm.as_ref(),
+                    tiny_skia::SpreadMode::Pad,
+                    FilterQuality::Bilinear,
+                    opacity.clamp(0.0, 1.0),
+                    fit,
+                ),
+                anti_alias: true,
+                ..Default::default()
+            }
+        }
+        _ => paint(tinted(style.color, tint), opacity),
+    }
+}
+
+/// (v2.2) Fill a glyph path, or stroke its outline at `outline` px.
+fn draw_text_path(
+    target: &mut Pixmap,
+    path: &SkPath,
+    p: &Paint<'_>,
+    outline: Option<f32>,
+    ts: Transform,
+    mask: Option<&Mask>,
+) {
+    match outline.filter(|w| w.is_finite() && *w > 0.0) {
+        Some(width) => {
+            let stroke = Stroke {
+                width,
+                line_join: tiny_skia::LineJoin::Round,
+                ..Default::default()
+            };
+            target.stroke_path(path, p, &stroke, ts, mask);
+        }
+        None => target.fill_path(path, p, FillRule::Winding, ts, mask),
+    }
+}
+
 fn paint(c: Color, opacity: f32) -> Paint<'static> {
     let mut p = Paint::default();
     p.set_color(sk_color(c, opacity));
@@ -1055,11 +1493,13 @@ fn stroke_path(
 /// others are drawn on their own with `translate(dx, dy)`, rotation and scale
 /// about their own centre, and `opacity * pose.opacity`. Glyphs without a pose
 /// entry are at rest.
-fn draw_posed_glyphs(
+#[allow(clippy::too_many_arguments)]
+fn draw_posed_glyphs<'p>(
     target: &mut Pixmap,
     glyphs: &[GlyphOutline],
     poses: &[GlyphPose],
-    color: Color,
+    paint_of: &dyn Fn(f32) -> Paint<'p>,
+    outline: Option<f32>,
     opacity: f32,
     content: Affine,
     mask: Option<&Mask>,
@@ -1077,7 +1517,7 @@ fn draw_posed_glyphs(
     }
     if any_rest {
         if let Some(path) = rest.finish() {
-            target.fill_path(&path, &paint(color, opacity), FillRule::Winding, ts, mask);
+            draw_text_path(target, &path, &paint_of(opacity), outline, ts, mask);
         }
     }
 
@@ -1098,10 +1538,11 @@ fn draw_posed_glyphs(
             .then_apply(Affine::rotate_degrees(pose.rotation))
             .then_apply(Affine::scale(pose.scale, pose.scale))
             .then_apply(Affine::translate(-cx, -cy));
-        target.fill_path(
+        draw_text_path(
+            target,
             &g.path,
-            &paint(color, alpha),
-            FillRule::Winding,
+            &paint_of(alpha),
+            outline,
             to_sk(content.then_apply(local)),
             mask,
         );

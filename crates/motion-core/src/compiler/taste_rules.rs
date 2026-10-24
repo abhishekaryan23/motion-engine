@@ -1,5 +1,5 @@
 //! (0.10 Q) Taste rules for shorts — core-owned budgets shared by builders and
-//! layout QA. They answer the owner's review of weak-model reels: giant
+//! layout QA. They answer a review of weak-model reels: giant
 //! headlines (narration written into `statement`), subjects too small or
 //! buried behind type, frames far bigger than their asset, assets that vanish
 //! into the ground, kickers that read like captions.
@@ -46,6 +46,11 @@ pub const NARROW_SUBJECT_ASPECT: f32 = 0.5;
 /// tall relative to the canvas height: on square and wide canvases a standing
 /// figure at half the frame height covers only a few percent of the area.
 pub const SUBJECT_MIN_HEIGHT: f32 = 0.42;
+/// (0.24) On a wide canvas the picture a side-by-side layout is about (a
+/// library or delivered object, `<beat>.hero.*`) has a longest side of at
+/// least this share of the canvas height: wide objects (a cheetah, a train)
+/// can never reach the area budget, so their size is judged by this one.
+pub const SUBJECT_MIN_LONG_SIDE_WIDE: f32 = 0.38;
 /// Text may cover at most this fraction of a subject's alpha bounds (ghost
 /// words and background fields exempt); heads never.
 pub const TEXT_OVER_SUBJECT_MAX: f32 = 0.04;
@@ -188,7 +193,7 @@ mod tests {
 
     #[test]
     fn long_statements_get_a_short_title() {
-        // The owner's spotlight test: narration written into `statement`.
+        // The spotlight test: narration written into `statement`.
         let b = beat(
             r#"{"purpose":"reveal","statement":"Nobody has the time to obsess over your minor mistakes so stop overthinking the room moved on hours ago","primary":{"kind":"phrase","value":"MOVE ON"}}"#,
         );

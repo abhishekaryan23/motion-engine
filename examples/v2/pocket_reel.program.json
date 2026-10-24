@@ -1,0 +1,228 @@
+{
+ "version": "2.0",
+ "meta": {
+  "name": "pocket_reel",
+  "aspect": "16:9",
+  "duration": 14.0,
+  "end_beat": 28,
+  "brief": "A 13 s launch reel for a budgeting app - punchy, on the beat, one colour."
+ },
+ "palette": {
+  "background": "#F2EEE6",
+  "ink": "#111111",
+  "accent": "#FF4A1C",
+  "muted": "#111111",
+  "grounds": [
+   "#FF4A1C",
+   "#0E0F12"
+  ]
+ },
+ "fonts": {
+  "display": "archivo_black",
+  "serif": "instrument_serif_italic",
+  "mono": "ibm_plex_mono"
+ },
+ "tempo": "fast",
+ "music": {
+  "track": "driving_pulse",
+  "start": 0.107
+ },
+ "components": [
+  {
+   "id": "paper",
+   "kind": "backdrop",
+   "end_beat": 8
+  },
+  {
+   "id": "open",
+   "kind": "kinetic_text",
+   "preset": "poster_cuts",
+   "start_beat": 0,
+   "beat_cuts": 1,
+   "words": [
+    "RENT",
+    "FOOD",
+    "FUN",
+    "SAVED?",
+    "ONE",
+    "APP",
+    "ADDS",
+    "UP"
+   ],
+   "end_beat": 8,
+   "dot": true,
+   "stress": [
+    7
+   ],
+   "timeline": [
+    {
+     "beat": 4,
+     "do": "cut",
+     "flip": true
+    }
+   ]
+  },
+  {
+   "id": "orange",
+   "kind": "backdrop",
+   "colour": "ground1",
+   "start_beat": 8,
+   "end_beat": 16
+  },
+  {
+   "id": "tone",
+   "kind": "field",
+   "preset": "halftone",
+   "colour": "ink",
+   "focus": "trail",
+   "start_beat": 8,
+   "end_beat": 16,
+   "timeline": [
+    {
+     "at": 0,
+     "do": "enter",
+     "style": "fade"
+    }
+   ]
+  },
+  {
+   "id": "saved",
+   "kind": "chart",
+   "chart": "bar",
+   "values": [
+    40,
+    65,
+    90,
+    120,
+    160,
+    200,
+    240
+   ],
+   "hero": 6,
+   "callout": "£240",
+   "colour": "ink",
+   "title": "Saved each month, £",
+   "labels": [
+    "J",
+    "F",
+    "M",
+    "A",
+    "M",
+    "J",
+    "J"
+   ],
+   "start_beat": 8,
+   "end_beat": 16,
+   "beat_cuts": 1,
+   "timeline": [
+    {
+     "beat": 8,
+     "do": "enter",
+     "style": "draw"
+    },
+    {
+     "beat": 15,
+     "do": "pop_label"
+    }
+   ]
+  },
+  {
+   "id": "night",
+   "kind": "backdrop",
+   "colour": "ground2",
+   "start_beat": 16,
+   "end_beat": 24
+  },
+  {
+   "id": "grid",
+   "kind": "field",
+   "preset": "grid",
+   "start_beat": 16,
+   "end_beat": 24,
+   "timeline": [
+    {
+     "at": 0,
+     "do": "enter",
+     "style": "fade"
+    }
+   ]
+  },
+  {
+   "id": "balance",
+   "kind": "chart",
+   "chart": "bar",
+   "values": [
+    100,
+    140,
+    130,
+    190,
+    240,
+    300,
+    380
+   ],
+   "hero": 6,
+   "callout": "£380",
+   "title": "Balance, £",
+   "start_beat": 16,
+   "end_beat": 24,
+   "beat_cuts": 1,
+   "timeline": [
+    {
+     "beat": 16,
+     "do": "enter",
+     "style": "draw"
+    },
+    {
+     "beat": 23,
+     "do": "pop_label"
+    }
+   ],
+   "labels": [
+    "J",
+    "F",
+    "M",
+    "A",
+    "M",
+    "J",
+    "J"
+   ]
+  },
+  {
+   "id": "paper2",
+   "kind": "backdrop",
+   "start_beat": 24
+  },
+  {
+   "id": "close",
+   "kind": "kinetic_text",
+   "preset": "poster_cuts",
+   "start_beat": 24,
+   "beat_cuts": 1,
+   "words": [
+    "MONEY",
+    "SORTED",
+    "IN",
+    "YOUR",
+    "POCKET"
+   ],
+   "dot": true,
+   "stress": [
+    4
+   ]
+  }
+ ],
+ "transitions": [
+  {
+   "beat": 8,
+   "kind": "whip"
+  },
+  {
+   "beat": 16,
+   "kind": "colour_flip"
+  },
+  {
+   "beat": 24,
+   "kind": "whip"
+  }
+ ]
+}

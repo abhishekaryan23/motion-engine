@@ -1,0 +1,229 @@
+{
+  "version": "2.0",
+  "meta": {
+    "name": "idea_1_aether_ledger",
+    "aspect": "16:9",
+    "duration": 14.0,
+    "fps": "30",
+    "end_beat": 28
+  },
+  "palette": {
+    "background": "#070A0F",
+    "ink": "#F0F4F8",
+    "accent": "#00D8E8",
+    "muted": "#475569",
+    "grounds": [
+      "#0D131D",
+      "#06363D"
+    ]
+  },
+  "fonts": {
+    "display": "panchang_extrabold",
+    "serif": "instrument_serif_regular",
+    "mono": "space_mono_bold"
+  },
+  "tempo": "fast",
+  "music": {
+    "track": "driving_pulse",
+    "start": 0.107
+  },
+  "allow": ["gradient"],
+  "film": {
+    "grain": 0.018,
+    "fringe": 0.6
+  },
+  "camera": [
+    { "beat": 1, "do": "push", "to": 1.03 },
+    { "beat": 5, "do": "orbit", "yaw": -3.0, "pitch": 2.0 },
+    { "beat": 7, "do": "reset" },
+    { "beat": 9, "do": "orbit", "yaw": 5.0, "pitch": -3.0 },
+    { "beat": 11, "do": "dolly", "to": -65.0 },
+    { "beat": 13, "do": "orbit", "yaw": -4.0, "pitch": 2.5 },
+    { "beat": 15, "do": "reset" },
+    { "beat": 17, "do": "orbit", "yaw": 2.8, "pitch": -1.6 },
+    { "beat": 20, "do": "dolly", "to": -42.0 },
+    { "beat": 23, "do": "reset" },
+    { "beat": 25, "do": "orbit", "yaw": 3.5, "pitch": -2.0 },
+    { "beat": 27, "do": "dolly", "to": -45.0 },
+    { "beat": 28, "do": "push", "to": 1.05 }
+  ],
+  "transitions": [
+    { "beat": 8, "kind": "whip" },
+    { "beat": 16, "kind": "colour_flip" },
+    { "beat": 24, "kind": "impact" }
+  ],
+  "components": [
+    {
+      "id": "bg_open",
+      "kind": "backdrop",
+      "preset": "flat",
+      "image": "generated/idea_1_bg.png",
+      "image_opacity": 0.34,
+      "depth": 0.14,
+      "start_beat": 0,
+      "end_beat": 8
+    },
+    {
+      "id": "hook_left",
+      "kind": "title",
+      "preset": "stacked",
+      "slot": "left",
+      "size": "xl",
+      "text": "OPTICAL",
+      "start_beat": 0,
+      "end_beat": 8,
+      "timeline": [
+        { "beat": 0, "do": "enter", "style": "pop" },
+        { "beat": 3, "do": "hit" },
+        { "beat": 6, "do": "recolour", "to": "accent" }
+      ]
+    },
+    {
+      "id": "hook_right",
+      "kind": "kinetic_text",
+      "preset": "glyph_drop",
+      "slot": "right",
+      "words": [
+        "240US",
+        "FINALITY",
+        "12",
+        "CORRIDORS",
+        "ZERO",
+        "CUSTODY",
+        "ATOMIC",
+        "CLEARING."
+      ],
+      "stress": [0, 6],
+      "beat_cuts": 1,
+      "start_beat": 0,
+      "end_beat": 8
+    },
+    {
+      "id": "bg_bento",
+      "kind": "backdrop",
+      "preset": "flat",
+      "colour": "ground1",
+      "image": "generated/idea_1_bg.png",
+      "image_opacity": 0.32,
+      "depth": 0.16,
+      "start_beat": 8,
+      "end_beat": 16
+    },
+    {
+      "id": "settlement_bento",
+      "kind": "bento",
+      "preset": "hero_left",
+      "title": "SOVEREIGN OPTICAL TELEMETRY",
+      "beat_cuts": 2,
+      "tilt_in": [-12.0, 10.0],
+      "start_beat": 8,
+      "end_beat": 16,
+      "tiles": [
+        {
+          "stat": "240us",
+          "title": "SETTLEMENT FINALITY",
+          "detail": "12 SOVEREIGN CORRIDORS",
+          "accent": true
+        },
+        {
+          "stat": "$42.8B",
+          "title": "DAILY ATOMIC VOLUME",
+          "detail": "ZERO COUNTERPARTY RISK",
+          "accent": false
+        },
+        {
+          "stat": "99.99%",
+          "title": "BYZANTINE UPTIME",
+          "detail": "SELF-HEALING SHARDS",
+          "accent": false
+        },
+        {
+          "stat": "1.42M",
+          "title": "TX PER SECOND",
+          "detail": "PHOTONIC CONSENSUS",
+          "accent": true
+        }
+      ],
+      "timeline": [
+        { "beat": 8, "do": "enter", "style": "fade" }
+      ]
+    },
+    {
+      "id": "bg_mesh",
+      "kind": "backdrop",
+      "preset": "flat",
+      "image": "generated/idea_1_bg.png",
+      "image_opacity": 0.18,
+      "depth": 0.15,
+      "start_beat": 16,
+      "end_beat": 24
+    },
+    {
+      "id": "sovereign_mesh",
+      "kind": "diagram",
+      "preset": "rail",
+      "slot": "left",
+      "nodes": [
+        "TOKYO",
+        "ZURICH",
+        "NEW YORK",
+        "FINALITY"
+      ],
+      "beat_cuts": 2,
+      "start_beat": 16,
+      "end_beat": 24,
+      "timeline": [
+        { "beat": 16, "do": "enter", "style": "fade" }
+      ]
+    },
+    {
+      "id": "corridor_throughput",
+      "kind": "chart",
+      "preset": "thin_axis",
+      "chart": "bar",
+      "slot": "right",
+      "title": "Settlement Throughput (K TPS)",
+      "values": [12, 48, 180, 1420],
+      "labels": ["SWIFT", "RTGS", "L2", "AETHER"],
+      "hero": 3,
+      "callout": "1.42M TPS",
+      "size": "m",
+      "start_beat": 16,
+      "end_beat": 24,
+      "timeline": [
+        { "beat": 16, "do": "enter", "style": "draw" },
+        { "beat": 19, "do": "pop_label" }
+      ]
+    },
+    {
+      "id": "bg_close",
+      "kind": "backdrop",
+      "preset": "flat",
+      "image": "generated/idea_1_bg.png",
+      "image_opacity": 0.38,
+      "depth": 0.12,
+      "start_beat": 24
+    },
+    {
+      "id": "aether_lockup",
+      "kind": "lockup",
+      "preset": "monolith_split",
+      "badge": "PHOTONIC BFT",
+      "headline": "AETHER LEDGER",
+      "headline_font": "display",
+      "subline": "Sovereign Optical Settlement",
+      "subline_font": "serif",
+      "subline_case": "preserve",
+      "specs": [
+        "FINALITY: 240US",
+        "VOLUME: $42.8B DAILY",
+        "MESH: 1.42M TPS"
+      ],
+      "start_beat": 24,
+      "timeline": [
+        { "beat": 24, "do": "enter", "style": "pop" },
+        { "beat": 26, "do": "sheen" }
+      ]
+    }
+  ]
+}

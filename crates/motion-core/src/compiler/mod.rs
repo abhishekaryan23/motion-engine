@@ -17,6 +17,7 @@
 //!    contributed by each beat they appear in
 //! 5. backdrop   — paper + grain spanning the whole piece
 
+mod accent_budget;
 pub mod art_direction;
 mod asset_plan;
 mod backdrop;
@@ -31,13 +32,16 @@ pub mod explore;
 mod furniture;
 pub mod fx;
 mod grammar;
+pub mod ground;
 mod layer_stack;
 pub mod layout_frame;
 mod loops;
 mod measure;
+pub mod plates;
 pub mod preview;
 mod recipes;
 pub mod sequence;
+pub mod signature;
 pub mod speech_lifecycle;
 pub mod speech_plan;
 mod state_change;
@@ -130,6 +134,29 @@ impl AssetLibrary {
         self
     }
 
+    /// (0.24) Width / height of a library PNG object (read from its header:
+    /// no pixels are decoded), `None` for an SVG or an unreadable file.
+    /// Library cutouts are 4:3 sheets, not squares: a layout that lays them out
+    /// as squares draws them a quarter smaller than the room it gave them.
+    pub fn object_aspect(&self, name: &str) -> Option<f32> {
+        use std::io::Read;
+        let (kind, rel) = self.find_object(name)?;
+        if kind != AssetKind::Image {
+            return None;
+        }
+        let mut head = [0u8; 24];
+        std::fs::File::open(self.root.join(rel))
+            .ok()?
+            .read_exact(&mut head)
+            .ok()?;
+        if &head[..8] != b"\x89PNG\r\n\x1a\n" {
+            return None;
+        }
+        let w = u32::from_be_bytes([head[16], head[17], head[18], head[19]]);
+        let h = u32::from_be_bytes([head[20], head[21], head[22], head[23]]);
+        (w > 0 && h > 0).then(|| (w as f32 / h as f32).clamp(0.2, 5.0))
+    }
+
     /// Locate a named object (`library/<name>.svg` preferred over `.png`).
     pub fn find_object(&self, name: &str) -> Option<(AssetKind, String)> {
         let safe = name
@@ -176,6 +203,23 @@ pub fn compile_with_assets(
 pub fn story_key_of(intent: &CreativeIntent) -> u64 {
     let statements: Vec<&str> = intent.beats.iter().map(|b| b.statement.as_str()).collect();
     taste::story_key(&intent.title, &statements)
+}
+
+/// (0.24 V1) The backdrop family a video gets: a pure function of the seed,
+/// the story and the tone, steered away from the channel's last families.
+pub fn backdrop_family(
+    intent: &CreativeIntent,
+    style: &StyleProfile,
+    reference: Option<&taste::ReferencePrinciples>,
+    avoid: &[String],
+) -> ground::Family {
+    let taste = resolve_taste(intent, style, reference);
+    ground::choose(
+        taste.effective.seed,
+        story_key_of(intent),
+        &format!("{:?}", taste.effective.tone),
+        avoid,
+    )
 }
 
 pub fn resolve_taste(
@@ -248,6 +292,10 @@ pub const WARN_MUSIC_FIT: &str = "music_fit";
 /// (0.23, W8) A compare / contrast of two subjects names a `relationship`
 /// that the composition does not draw (no connector, plus, VS or link).
 pub const WARN_RELATIONSHIP_DROPPED: &str = "relationship_dropped";
+/// (0.24 Wave 1) A display or number text carries `≠`, which heavy display
+/// faces draw as a hairline (or lack): the compiler sets it as `IS NOT` on
+/// its own line. Labels and mono text keep the sign.
+pub const WARN_DISPLAY_SYMBOL_SUBSTITUTED: &str = "display_symbol_substituted";
 
 /// (0.9) Operator inputs that sit beside CreativeIntent and StyleProfile
 /// (CLI flags, never authored by weak models). `Default` reproduces the 0.8
@@ -294,6 +342,10 @@ pub struct CompileOptions {
     /// scored (0 and 1 both mean a single compile). Read only under
     /// `variety`; candidate k uses `direction::candidate_seed(take seed, k)`.
     pub candidates: u8,
+    /// (0.24 V1) Backdrop families the channel used last (oldest first, only
+    /// the last three count): the video's family is chosen among the others.
+    /// Read only under `variety`.
+    pub backdrop_avoid: Vec<String>,
 }
 
 /// (0.8) Compile with an optional MusicPlan: handoffs snap to its downbeats
@@ -800,6 +852,14 @@ fn compile_at_level(
     let ts = Typesetter::new(measure, &library.root, &fonts)
         .with_scale(temporal::scale_gains(taste.scale));
     let mut ctx = Ctx {
+        family: opts.variety.map(|_| {
+            ground::choose(
+                style.seed,
+                story_key_of(intent),
+                &format!("{:?}", style.tone),
+                &opts.backdrop_avoid,
+            )
+        }),
         reveals: Default::default(),
         warnings: Vec::new(),
         direction_seed: opts
@@ -808,6 +868,7 @@ fn compile_at_level(
         beat_params: BTreeMap::new(),
         direction_take: opts.variety.map(|v| (v, opts.take, cand.k)),
         direction_beats: BTreeMap::new(),
+        budget: accent_budget::AccentBudget::plan(&intent.beats),
         emotion: Some(typography_choice.emotion),
         art: art.clone().map(|a| (a, plate_id.clone())),
         w: w as f32,
@@ -826,6 +887,8 @@ fn compile_at_level(
         focal: BTreeMap::new(),
         stack: None,
         spoken: Vec::new(),
+        spoken_ends: Vec::new(),
+        stresses: Vec::new(),
         beat_count: intent.beats.len(),
         sequence: sequence::detect(intent),
     };
@@ -843,6 +906,18 @@ fn compile_at_level(
                 id,
                 kind: AssetKind::Image,
                 path: format!("library/grounds/{plate}.png"),
+                sprite: None,
+            },
+        );
+    }
+    if ctx.art.as_ref().is_some_and(|(a, _)| a.ornaments) {
+        let id = furniture::ORNAMENT_ASSET.to_string();
+        ctx.assets.insert(
+            id.clone(),
+            Asset {
+                id,
+                kind: AssetKind::Image,
+                path: furniture::ORNAMENT_PATH.to_string(),
                 sprite: None,
             },
         );
@@ -986,6 +1061,7 @@ fn compile_at_level(
             .collect();
     }
     let mut scenes = vec![backdrop_scene];
+    let mut beat_stresses: BTreeMap<usize, Vec<speech_plan::Stress>> = BTreeMap::new();
     for (plan, beat) in plans.iter().zip(&intent.beats) {
         ctx.spoken = match &opts.speech {
             Some(speech) => speech
@@ -1002,6 +1078,27 @@ fn compile_at_level(
                 .unwrap_or_default(),
             None => Vec::new(),
         };
+        ctx.spoken_ends = match &opts.speech {
+            Some(speech) => speech
+                .sentences
+                .iter()
+                .find(|s| s.beat == plan.index)
+                .map(|sentence| {
+                    speech
+                        .words_in(sentence)
+                        .iter()
+                        .map(|w| round3(w.end - plan.start))
+                        .collect()
+                })
+                .unwrap_or_default(),
+            None => Vec::new(),
+        };
+        ctx.stresses = if ctx.spoken_ends.len() == ctx.spoken.len() {
+            speech_plan::stresses(&ctx.spoken, &ctx.spoken_ends)
+        } else {
+            Vec::new()
+        };
+        beat_stresses.insert(plan.index, ctx.stresses.clone());
         let mut scene = recipes::build_beat(&mut ctx, plan, beat, &mut carries, caption_reserve)?;
         // (0.10 Q) With a voice-over, content enters when it is spoken.
         if let Some(speech) = &opts.speech {
@@ -1072,6 +1169,16 @@ fn compile_at_level(
                 }
             }
         }
+        // (0.24 Wave 2) Counts land as their number ends.
+        speech_plan::land_counts_on_word_end(&mut scene, &ctx.spoken, &ctx.spoken_ends);
+        // (0.24 Wave 1) One motion grammar for every layout, after the word
+        // cues have placed every group.
+        choreography::choreograph(
+            &mut scene,
+            &signature::for_look(ctx.art.as_ref().map(|(a, _)| a.look)),
+            ctx.u,
+            &ctx.stresses,
+        );
         scenes.push(scene);
     }
     // (0.14) Genre looks: finishing effects (post, shakes, echoes, pulses).
@@ -1091,6 +1198,35 @@ fn compile_at_level(
     // direction records.
     for (beat, mv) in camera_picks {
         grammar::note_rotation(&mut ctx, beat, "camera", mv);
+    }
+    // (0.24 Wave 2) The camera with intent and the breath before each beat's
+    // payoff stress, after the look's finishing effects.
+    {
+        let sig = signature::for_look(ctx.art.as_ref().map(|(a, _)| a.look));
+        let first = plans.first().map(|p| p.index);
+        for ((scene, plan), beat) in scenes[1..].iter_mut().zip(&plans).zip(&intent.beats) {
+            let Some(life) = scene.lifecycle else {
+                continue;
+            };
+            let stresses = beat_stresses.get(&plan.index).cloned().unwrap_or_default();
+            let phrase = choreography::Phrase::new(plan.index, life, &stresses);
+            let role = if Some(plan.index) == first {
+                choreography::BeatRole::Hook
+            } else if beat.purpose == Purpose::Reveal {
+                choreography::BeatRole::Payoff
+            } else {
+                choreography::BeatRole::Body
+            };
+            // Genre looks only: a style's own camera language stays.
+            if ctx.art.is_some() {
+                choreography::camera_pass(scene, &sig, role, &phrase, ctx.u);
+            }
+            choreography::hold_pass(scene, &phrase);
+        }
+    }
+    // (0.24 M6) Footage-plan plates sit under every beat layer.
+    if let Some(plan) = opts.footage.as_ref() {
+        plates::apply(&mut ctx, &mut scenes[1..], plan);
     }
     // (0.10) Word-synced captions sit above every beat scene.
     if let Some(speech) = opts.speech.as_ref().filter(|_| captions_on) {
@@ -1153,6 +1289,25 @@ fn compile_at_level(
         &carries,
         opts.speech.as_ref(),
     ));
+    // (0.24 Wave 1) `≠` in a display text is spoken in words.
+    for (i, beat) in intent.beats.iter().enumerate() {
+        let mut texts: Vec<String> = vec![beat.statement.clone()];
+        texts.extend(beat.keyword.clone());
+        texts.extend(recipes::subject_words(&beat.primary));
+        if let Some(s) = &beat.secondary {
+            texts.extend(recipes::subject_words(s));
+        }
+        if texts
+            .iter()
+            .any(|t| typeset::is_substituted(&typeset::Voice::HEADLINE, t))
+        {
+            warnings.push(CompileWarning {
+                code: WARN_DISPLAY_SYMBOL_SUBSTITUTED.into(),
+                beat: Some(i),
+                message: "'≠' is set as 'IS NOT' on its own line in display text (heavy faces draw it as a hairline); write the words if you want a different phrasing".into(),
+            });
+        }
+    }
     // (0.23 B2a) Exploration reports each beat's template candidates; under a
     // direction seed the choices (template alternate, seeded rotations) are
     // written to `ProjectMeta.direction`.
@@ -1259,6 +1414,9 @@ fn library_delivery(
 // ---------------------------------------------------------------------------
 
 pub(crate) struct Ctx<'a> {
+    /// (0.24 V1) The backdrop family of this video (`ground`); `None` without
+    /// variety (the look's own ground, byte-identical).
+    pub family: Option<ground::Family>,
     /// (0.10) The typography emotion actually used (override/exploration
     /// included); `None` in unit-test contexts → derived from the taste.
     pub emotion: Option<typography::Emotion>,
@@ -1302,6 +1460,11 @@ pub(crate) struct Ctx<'a> {
     /// that bring a picture in as it is named read it through
     /// `speech_plan::name_time`.
     pub spoken: Vec<(String, f64)>,
+    /// (0.24 Wave 2) The end of each word of `spoken` (scene-local seconds).
+    pub spoken_ends: Vec<f64>,
+    /// (0.24 Wave 2) The spoken stresses of the beat being built (see
+    /// `speech_plan::stresses`; empty without a voice-over).
+    pub stresses: Vec<speech_plan::Stress>,
     /// (0.20) Beat index -> the reveal anchors its builder declared
     /// (`B::reveal`), recorded in `ArtRecord.reveals` by scene id.
     pub reveals: BTreeMap<usize, Vec<crate::speech::RevealAnchor>>,
@@ -1312,11 +1475,9 @@ pub(crate) struct Ctx<'a> {
     /// (0.23) Seed of this compile's direction choices: the take seed
     /// (`direction::take_seed`), or a best-of-N candidate's seed. `None`
     /// without variety: every seeded choice keeps its pre-0.23 rule.
-    #[allow(dead_code)] // read by the 0.23 rotation / alternate tasks
     pub direction_seed: Option<u64>,
     /// (0.23) Per-beat direction parameters chosen by the direction planner;
     /// a beat without an entry uses `BeatParams::default()` (the identity).
-    #[allow(dead_code)] // filled by the 0.23 direction planner
     pub beat_params: BTreeMap<usize, direction::BeatParams>,
     /// (0.23 W2d) `(variety, take, candidate)` under a direction seed: lets a
     /// take rotate its choices away from take 0's (`grammar::choose`).
@@ -1327,12 +1488,14 @@ pub(crate) struct Ctx<'a> {
     /// `ProjectMeta.direction` only under a direction seed (the template part is
     /// also what exploration reports for its `GrammarAlternate` dimension).
     pub direction_beats: BTreeMap<usize, direction::BeatDirection>,
+    /// (0.24 M9) Which beats may spend a full-frame colour field, an accent
+    /// block or a stamp (`accent_budget`).
+    pub budget: accent_budget::AccentBudget,
 }
 
 impl Ctx<'_> {
     /// (0.23) The direction parameters of beat `index` (identity when the
     /// planner set none).
-    #[allow(dead_code)] // read by the 0.23 builder tasks
     pub fn params_for(&self, index: usize) -> direction::BeatParams {
         self.beat_params.get(&index).copied().unwrap_or_default()
     }
@@ -2033,6 +2196,7 @@ pub(crate) fn base_layer(
         z_index: z,
         visible: true,
         clip: None,
+        mask: None,
         depth: None,
         layout: None,
         kind,
@@ -2078,7 +2242,17 @@ pub(crate) mod mo {
         to: [f32; 2],
         easing: Easing,
     ) -> Motion {
-        m(target, start, dur, easing, MotionOp::Move { from, to })
+        m(
+            target,
+            start,
+            dur,
+            easing,
+            MotionOp::Move {
+                from,
+                to,
+                via: None,
+            },
+        )
     }
     pub fn scale(target: &str, start: f64, dur: f64, from: f32, to: f32, easing: Easing) -> Motion {
         m(
@@ -2157,6 +2331,128 @@ pub(crate) mod mo {
             },
         ))
     }
+    /// (0.24 Wave 1) The slide of a planned entrance: from `plan.travel * u`
+    /// to rest, with a short counter-move first when the plan anticipates.
+    /// (Wave 2) A plan with `arc > 0` travels a quadratic arc: the control
+    /// point sits `arc` of the chord off its middle, perpendicular to it.
+    pub fn slide(target: &str, plan: &choreography::Plan, u: f32) -> Vec<Motion> {
+        // Millisecond-exact phases so sequential motions never overlap.
+        let (t0, dur) = (round3(plan.start), round3(plan.dur));
+        let from = [plan.travel[0] * u, plan.travel[1] * u];
+        if from == [0.0, 0.0] {
+            return Vec::new();
+        }
+        let sprung = |mut mo: Motion| {
+            mo.spring = plan.spring;
+            mo
+        };
+        let arced = |mut mo: Motion| {
+            if let MotionOp::Move { from, to, via } = &mut mo.op {
+                if plan.arc > 0.0 {
+                    let (dx, dy) = (to[0] - from[0], to[1] - from[1]);
+                    *via = Some([
+                        (from[0] + to[0]) / 2.0 - dy * plan.arc,
+                        (from[1] + to[1]) / 2.0 + dx * plan.arc,
+                    ]);
+                }
+            }
+            mo
+        };
+        match plan.anticipate {
+            Some(a) if a > 0.0 && dur > round3(a) + 0.05 => {
+                let a = round3(a);
+                let back = [
+                    from[0] * (1.0 + plan.counter),
+                    from[1] * (1.0 + plan.counter),
+                ];
+                vec![
+                    shift(target, t0, a, from, back, Easing::OutCubic),
+                    arced(sprung(shift(
+                        target,
+                        t0 + a,
+                        dur - a,
+                        back,
+                        [0.0, 0.0],
+                        plan.ease,
+                    ))),
+                ]
+            }
+            _ => vec![arced(sprung(shift(
+                target,
+                t0,
+                dur,
+                from,
+                [0.0, 0.0],
+                plan.ease,
+            )))],
+        }
+    }
+    /// (0.24 Wave 1) A planned entrance: fade in, slide with anticipation
+    /// (support / accent) or scale up through a short overshoot to rest on
+    /// the spring (lead). (Wave 2) A stressed lead rises to the look's punch
+    /// peak exactly on its word (`plan.stress_at`, tagged `stress:<onset>`).
+    pub fn arrive(target: &str, plan: &choreography::Plan, u: f32) -> Vec<Motion> {
+        let (t0, dur) = (round3(plan.start), round3(plan.dur));
+        let mut out = vec![fade(target, t0, dur * 0.7, 0.0, 1.0, plan.ease)];
+        out.extend(slide(target, plan, u));
+        if (plan.scale_from - 1.0).abs() > 1e-4 {
+            if plan.peak > 1.0 + 1e-4 {
+                let up = round3(plan.up_secs.unwrap_or(dur * 0.4)).clamp(0.04, dur - 0.1);
+                let mut rise = scale(target, t0, up, plan.scale_from, plan.peak, Easing::OutCubic);
+                if let Some(t) = plan.stress_at {
+                    rise.id = Some(format!("stress:{t:.3}"));
+                }
+                out.push(rise);
+                let mut settle = scale(target, t0 + up, dur - up, plan.peak, 1.0, Easing::OutCubic);
+                settle.spring = plan.spring;
+                out.push(settle);
+            } else {
+                let mut one = scale(target, t0, dur, plan.scale_from, 1.0, Easing::OutCubic);
+                one.spring = plan.spring;
+                out.push(one);
+            }
+        }
+        out
+    }
+    /// (0.24 Wave 1) A headline of `lines` lines comes out of its own line:
+    /// a baseline mask sweeping up with the text rising `rise` px into place.
+    pub fn reveal_lines(
+        target: &str,
+        plan: &choreography::Plan,
+        lines: usize,
+        rise: f32,
+        stagger: f64,
+    ) -> Vec<Motion> {
+        let dur = plan.dur + stagger * lines.saturating_sub(1) as f64;
+        let mut up = shift(
+            target,
+            plan.start,
+            dur,
+            [0.0, rise],
+            [0.0, 0.0],
+            Easing::OutQuint,
+        );
+        up.spring = plan.spring;
+        vec![
+            mask(target, plan.start, dur, Direction::Up, Easing::OutQuint),
+            up,
+        ]
+    }
+    /// (0.24 Wave 1) The exit: fade plus a short drift opposite to the
+    /// entrance (up), never a shrink.
+    pub fn leave(target: &str, start: f64, dur: f64, drift: f32) -> Vec<Motion> {
+        vec![
+            fade(target, start, dur, 1.0, 0.0, Easing::OutCubic),
+            shift(
+                target,
+                start,
+                dur,
+                [0.0, 0.0],
+                [0.0, -drift],
+                Easing::InCubic,
+            ),
+        ]
+    }
     pub fn expand(
         target: &str,
         start: f64,
@@ -2184,7 +2480,10 @@ pub(crate) mod mo {
 /// The scene camera for a beat's language: a push and/or track across the
 /// whole beat. `None` when the language keeps the camera still.
 pub(crate) fn beat_camera(ctx: &Ctx, plan: &BeatPlan) -> Option<Camera> {
-    let cam = plan.lang.camera;
+    let mut cam = plan.lang.camera;
+    // (0.24 M10) One slow push per beat, within the look's camera budget (3 %).
+    let budget = signature::for_look(ctx.art.as_ref().map(|(a, _)| a.look)).camera_push_max;
+    cam.push = 1.0 + (cam.push - 1.0).clamp(-budget, budget);
     let mut motions = Vec::new();
     if (cam.push - 1.0).abs() > 1e-4 {
         motions.push(CameraMotion {

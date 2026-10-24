@@ -1,0 +1,166 @@
+{
+ "version": "2.0",
+ "meta": {
+  "name": "type_styles",
+  "aspect": "16:9",
+  "duration": 10.0
+ },
+ "palette": {
+  "background": "#0B0D12",
+  "ink": "#F1EEE6",
+  "accent": "#FFB36B",
+  "muted": "#5A6070",
+  "grounds": [
+   "#1B3FE8"
+  ]
+ },
+ "fonts": {
+  "display": "cabinet_grotesk_extrabold",
+  "serif": "instrument_serif_regular",
+  "mono": "ibm_plex_mono"
+ },
+ "components": [
+  {
+   "id": "cobalt",
+   "kind": "backdrop",
+   "preset": "flat",
+   "colour": "ground1",
+   "end": 3.0
+  },
+  {
+   "id": "sky_word",
+   "kind": "title",
+   "preset": "display",
+   "text": "Sunrise",
+   "size": "xl",
+   "slot": "center",
+   "style": {
+    "fill": {
+     "kind": "image",
+     "image": "library/grounds/sky_gradient.png"
+    },
+    "case": "as_written"
+   },
+   "end": 3.0
+  },
+  {
+   "id": "gradient_word",
+   "kind": "title",
+   "preset": "display",
+   "text": "Glow",
+   "size": "xl",
+   "slot": "center",
+   "start": 3.0,
+   "end": 5.5,
+   "style": {
+    "fill": {
+     "kind": "gradient",
+     "from": "accent",
+     "to": "ink",
+     "angle_deg": 0
+    },
+    "case": "upper"
+   }
+  },
+  {
+   "id": "outline_word",
+   "kind": "kinetic_text",
+   "preset": "poster_cuts",
+   "words": [
+    "Hollow"
+   ],
+   "slot": "center",
+   "start": 5.5,
+   "end": 8.0,
+   "style": {
+    "outline": true
+   }
+  },
+  {
+   "id": "mixed_title",
+   "kind": "title",
+   "preset": "stacked",
+   "text": "Made in Studio",
+   "size": "xl",
+   "slot": "center",
+   "start": 8.0,
+   "style": {
+    "case": "as_written"
+   }
+  }
+ ],
+ "camera": [
+  {
+   "at": 0,
+   "do": "reset"
+  },
+  {
+   "at": 0.5,
+   "do": "push",
+   "to": 1.012
+  },
+  {
+   "at": 1.0,
+   "do": "push",
+   "to": 1.024
+  },
+  {
+   "at": 1.5,
+   "do": "push",
+   "to": 1.036
+  },
+  {
+   "at": 2.0,
+   "do": "push",
+   "to": 1.048
+  },
+  {
+   "at": 2.5,
+   "do": "push",
+   "to": 1.06
+  },
+  {
+   "at": 3,
+   "do": "reset"
+  },
+  {
+   "at": 3.5,
+   "do": "push",
+   "to": 1.012
+  },
+  {
+   "at": 4.0,
+   "do": "push",
+   "to": 1.024
+  },
+  {
+   "at": 4.5,
+   "do": "push",
+   "to": 1.036
+  },
+  {
+   "at": 5.0,
+   "do": "push",
+   "to": 1.048
+  },
+  {
+   "at": 8,
+   "do": "reset"
+  },
+  {
+   "at": 8.5,
+   "do": "push",
+   "to": 1.04
+  },
+  {
+   "at": 9.0,
+   "do": "push",
+   "to": 1.08
+  },
+  {
+   "at": 9.5,
+   "do": "push",
+   "to": 1.12
+  }
+ ]
+}

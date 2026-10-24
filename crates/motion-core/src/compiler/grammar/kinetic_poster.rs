@@ -14,7 +14,7 @@
 use super::{Composition, Variant};
 use crate::compiler::recipes::{self, Entrance, Slot, B};
 use crate::compiler::typeset::{text_layer, Block, Voice};
-use crate::compiler::{subject_key, wants_carry, Carry, CompileError, Ctx, Which};
+use crate::compiler::{slug, subject_key, wants_carry, Carry, CompileError, Ctx, Which};
 use crate::intent::{Relationship, Subject, SubjectKind};
 use crate::motion::kinetic::{self, KineticParams, TextRun};
 use crate::motion::language::{EmphasisMotion, HeadlineMotion};
@@ -23,6 +23,12 @@ use crate::scene::{Color, MotionOp, TextAlign};
 
 /// Longest single-line phrase (characters) revealed glyph by glyph.
 const TRACKING_MAX_CHARS: usize = 36;
+
+/// (0.24) A number that is the beat's primary is the focal element: the title
+/// is set at most this much smaller than the figure (the QA floor is 1.3).
+pub(crate) const NUMBER_OVER_TITLE: f32 = 1.5;
+/// (0.24) The figure's band as a share of the canvas height.
+const NUMBER_BAND: f32 = 0.34;
 
 pub(super) fn build(
     ctx: &mut Ctx,
@@ -63,11 +69,32 @@ pub(super) fn build(
     let gap = 0.025 * h;
     let sw = w - 2.0 * m;
     let sec = beat.secondary.as_ref();
-    let prim_h = if beat.primary.kind() == SubjectKind::Phrase {
+    // (0.24) A figure the beat is about dominates: it is set as big as the
+    // frame allows and the title becomes its support, smaller by
+    // `NUMBER_OVER_TITLE`. A carried figure keeps the old poster.
+    let number_text = (beat.primary.kind() == SubjectKind::Number
+        && is_local_subject(carries, &beat.primary, Which::Primary, plan, beat))
+    .then(|| beat.primary.display_text().map(str::to_string))
+    .flatten()
+    .filter(|t| !t.trim().is_empty());
+    let number_block = number_text.as_ref().map(|t| {
+        ctx.ts.fit_line(
+            Voice::HERO_NUMBER,
+            t,
+            sw,
+            NUMBER_BAND * h / Voice::HERO_NUMBER.line_height,
+        )
+    });
+    let prim_h = if let Some(nb) = &number_block {
+        nb.height()
+    } else if beat.primary.kind() == SubjectKind::Phrase {
         0.15 * h
     } else {
         0.16 * h
     };
+    let head_max_size = number_block
+        .as_ref()
+        .map_or(230.0 * u, |nb| nb.size / NUMBER_OVER_TITLE);
     let sec_h = sec.map_or(0.0, |s| {
         if s.kind() == SubjectKind::Phrase {
             0.11 * h
@@ -83,14 +110,34 @@ pub(super) fn build(
     let head_max_h = (bottom - top0 - reserve).clamp(0.2 * h, 0.5 * h);
 
     // ---- headline ------------------------------------------------------------
-    let head = ctx.ts.fit_block(
+    let mut head = ctx.ts.fit_block(
         Voice::HEADLINE,
         &beat.statement,
         sw,
         head_max_h,
-        230.0 * u,
+        head_max_size,
         5,
     );
+    // (0.24) The voice's size gain can set the title larger than asked: refit
+    // until the figure still dominates it.
+    if let Some(nb) = &number_block {
+        let limit = nb.size / NUMBER_OVER_TITLE;
+        let mut max_size = head_max_size;
+        for _ in 0..4 {
+            if head.size <= limit + 0.01 {
+                break;
+            }
+            max_size *= limit / head.size * 0.99;
+            head = ctx.ts.fit_block(
+                Voice::HEADLINE,
+                &beat.statement,
+                sw,
+                head_max_h,
+                max_size,
+                5,
+            );
+        }
+    }
     // Spare height is distributed above the block (poster block sits low-centre).
     let content = head.height() + deck_h + gap + prim_h + sec.map_or(0.0, |_| gap + sec_h);
     let top = top0 + ((bottom - top0) - content).max(0.0) * 0.45;
@@ -150,11 +197,7 @@ pub(super) fn build(
     let y_sec = y_prim + prim_h + gap;
 
     let is_local = |carries: &[Carry], s: &Subject, which: Which| {
-        let carried_in = carries
-            .iter()
-            .any(|c| c.open && c.key == subject_key(s) && c.last_beat + 1 == plan.index);
-        let carried_out = wants_carry(beat, which) && !plan.is_last;
-        !carried_in && !carried_out
+        is_local_subject(carries, s, which, plan, beat)
     };
     let phrase = |s: &Subject| -> Option<String> {
         (s.kind() == SubjectKind::Phrase)
@@ -193,6 +236,32 @@ pub(super) fn build(
             recipes::absorb(b, exp, 22);
         }
         (Some(_), Some(_)) => {} // replace: both runs are built with the secondary below.
+        _ if number_block.is_some() => {
+            // The figure is the focal element: the whole width, set big.
+            let slot = Slot {
+                cx: w / 2.0,
+                cy: y_prim + prim_h / 2.0,
+                w: sw,
+                h: prim_h,
+            };
+            b.focal = Some(b.id(&format!("poster.{}", slug(&subject_key(&beat.primary)))));
+            placed_line(
+                ctx,
+                b,
+                carries,
+                Which::Primary,
+                &beat.primary,
+                slot,
+                None,
+                serif_align,
+                y_prim,
+                ctx.palette.accent,
+                prim_at,
+                "poster",
+            )?;
+            rule_width = number_block.as_ref().map_or(0.0, Block::width) * 0.5;
+            rule_y = y_prim + prim_h + 4.0 * u;
+        }
         _ => {
             // Number / carried phrase: continuity-aware placement.
             let (slot, block) = subject_slot(
@@ -314,6 +383,21 @@ pub(super) fn build(
         );
     }
     Ok(())
+}
+
+/// The subject is neither carried in from the previous beat nor carried on.
+fn is_local_subject(
+    carries: &[Carry],
+    s: &Subject,
+    which: Which,
+    plan: &crate::compiler::BeatPlan,
+    beat: &crate::intent::Beat,
+) -> bool {
+    let carried_in = carries
+        .iter()
+        .any(|c| c.open && c.key == subject_key(s) && c.last_beat + 1 == plan.index);
+    let carried_out = wants_carry(beat, which) && !plan.is_last;
+    !carried_in && !carried_out
 }
 
 /// Ghost keyword behind the type and the parking slot for carried-in subjects.

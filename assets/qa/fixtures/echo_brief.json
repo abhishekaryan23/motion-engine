@@ -1,0 +1,46 @@
+{
+ "kind": "program",
+ "program": {
+  "version": "2.0",
+  "meta": {
+   "name": "fixture",
+   "duration": 3.0,
+   "brief": "make a dynamic showreel, go all out"
+  },
+  "palette": {
+   "background": "#F2EEE6",
+   "ink": "#111111",
+   "accent": "#E04A12",
+   "muted": "#6B6B6B"
+  },
+  "components": [
+   {
+    "id": "t",
+    "kind": "title",
+    "text": "Make a dynamic showreel"
+   }
+  ]
+ },
+ "fixed": {
+  "version": "2.0",
+  "meta": {
+   "name": "fixture",
+   "duration": 3.0,
+   "brief": "make a dynamic showreel, go all out"
+  },
+  "palette": {
+   "background": "#F2EEE6",
+   "ink": "#111111",
+   "accent": "#E04A12",
+   "muted": "#6B6B6B"
+  },
+  "components": [
+   {
+    "id": "t",
+    "kind": "title",
+    "text": "Every frame decides"
+   }
+  ]
+ },
+ "id": "echo_brief"
+}

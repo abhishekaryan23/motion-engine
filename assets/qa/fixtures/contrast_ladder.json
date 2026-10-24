@@ -1,0 +1,57 @@
+{
+ "kind": "rendered",
+ "note": "Black hairlines out-shout grey headline type.",
+ "program": {
+  "version": "2.0",
+  "meta": {
+   "name": "paper",
+   "aspect": "16:9",
+   "duration": 1.6
+  },
+  "palette": {
+   "background": "#F2EEE6",
+   "ink": "#111111",
+   "accent": "#FF4D00",
+   "muted": "#8A857C"
+  },
+  "components": [
+   {
+    "id": "g",
+    "kind": "backdrop"
+   },
+   {
+    "id": "head",
+    "kind": "title",
+    "text": "Up and right",
+    "slot": "top",
+    "size": "l"
+   },
+   {
+    "id": "bars",
+    "kind": "chart",
+    "chart": "bar",
+    "values": [
+     3,
+     5,
+     8,
+     13
+    ],
+    "hero": 3,
+    "slot": "bottom"
+   },
+   {
+    "id": "dot",
+    "kind": "shape",
+    "shape": "circle",
+    "size": "s",
+    "anchor": "head",
+    "mark": "marker"
+   }
+  ]
+ },
+ "before": {
+  "design_passes": true,
+  "mutate": "grey_type_black_hairline"
+ },
+ "expect_detector": "contrast_ladder"
+}

@@ -65,3 +65,14 @@ Very slow continuous motion (ghost drift, a 1.0 -> 1.02 push over 3 s) produces 
 - Evolve events are counted from motion start times, so a motion that starts but is visually imperceptible still counts.
 - A ramp-in longer than 4 sampled transitions between the hold and the spike hides the pattern; holds shorter than 1.0 s are never flagged.
 - Diffs are global means, so small local motion on a large canvas can read as static.
+
+## Anti-slop / critique (0.24)
+`motion-engine critique <scene.motion.json> [--json] [--rules path]` scores a compiled scene on 8 axes (hierarchy, type,
+colour, motion_rhythm, variety, legibility, asset_coherence, audio; 0-5 each, total rescaled to /40, audio is `n/a`
+without audio data). It reuses the layout findings and adds the slop checks of `crates/motion-core/src/slop_qa.rs`:
+`slop_stock_phrase`, `slop_emoji_bullet`, `slop_ai_palette`, `slop_uniform_entrance`, `slop_no_hold`, `slop_fx_stack`,
+`slop_repeated_grammar`, `slop_showy_transitions`, `slop_family_sprawl`. Ban lists and thresholds live in
+`assets/taste/slop.json`. Decorative layers are exempt. The scene does not record a layout grammar unless the direction
+record is present, so `slop_repeated_grammar` falls back to a layer-name/kind signature. The CLI critique does not
+render, so `text_local_contrast` is not part of it. Checks that lack input are listed as `not_measurable` (JSON). Exit
+code is always 0.

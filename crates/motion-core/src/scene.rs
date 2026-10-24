@@ -127,7 +127,7 @@ pub struct Asset {
     pub kind: AssetKind,
     /// File path; for `sprite_sequence` the directory holding the frames.
     pub path: String,
-    /// (0.11) Present iff `kind == sprite_sequence`.
+    /// (0.11) Present iff `kind == sprite_sequence` or `video` (0.24).
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub sprite: Option<SpriteSpec>,
 }
@@ -275,6 +275,22 @@ pub enum AssetKind {
     Font,
     /// (0.11) Directory of frames, see [`SpriteSpec`].
     SpriteSequence,
+    /// (0.24) A video file (`.mp4`/`.mov`/`.webm`) decoded by the renderer
+    /// with an ffmpeg pipe (no temp files). Carries a [`SpriteSpec`] for its
+    /// frame clock (`fps`, `frame_count`, `mode`; `pattern` is unused) and is
+    /// drawn by image layers exactly like a sprite sequence.
+    Video,
+}
+
+/// (0.24) File extensions a [`AssetKind::Video`] asset may have.
+pub const VIDEO_EXTENSIONS: [&str; 3] = ["mp4", "mov", "webm"];
+
+/// True when `path` has an allowed video extension (case-insensitive).
+pub fn is_video_path(path: &str) -> bool {
+    std::path::Path::new(path)
+        .extension()
+        .and_then(|e| e.to_str())
+        .is_some_and(|e| VIDEO_EXTENSIONS.iter().any(|v| v.eq_ignore_ascii_case(e)))
 }
 
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
@@ -342,6 +358,24 @@ pub enum PostKind {
     Grain { amount: f32, seed: u32 },
     /// Darkened corners: `amount` (0..=1) at the corners, smooth falloff.
     Vignette { amount: f32 },
+    /// (v2) An impact ring: a refractive ripple centred on `center` (canvas
+    /// px) whose radius is `strength × radius` px, `width` px thick,
+    /// displacing pixels up to `amplitude` px (fading as it grows) with a
+    /// slight red/blue split. Animate strength 0 → 1 over a few frames.
+    /// CPU only (the GPU post stage hands frames with it to the CPU).
+    Shockwave {
+        center: [f32; 2],
+        radius: f32,
+        width: f32,
+        amplitude: f32,
+    },
+}
+
+impl PostKind {
+    /// Effects the GPU post stage does not implement.
+    pub fn cpu_only(&self) -> bool {
+        matches!(self, PostKind::Shockwave { .. })
+    }
 }
 
 impl Scene {
@@ -490,6 +524,9 @@ pub struct Layer {
     /// Static rectangular clip on the layer's own box. Animated by MaskReveal.
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub clip: Option<ClipInset>,
+    /// (v2) Path mask in box space, see [`LayerMask`].
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub mask: Option<LayerMask>,
     /// Parallax depth factor for the scene camera (0 = infinitely far / static,
     /// 1 = subject plane, >1 = foreground). Inherited by children; absent at
     /// the top level means 1.0.
@@ -660,6 +697,104 @@ pub enum LayerKind {
         #[serde(default, skip_serializing_if = "Option::is_none")]
         fill: Option<Color>,
     },
+    /// (v2) Filled and/or stroked Bezier path. `d` is SVG path data
+    /// (`M L H V C S Q T A Z`, absolute or relative) in box space (pixels).
+    /// Animated by `morph` (shape) and `trim` (visible length).
+    Path {
+        d: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        fill: Option<Fill>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        stroke: Option<Stroke>,
+        #[serde(default, skip_serializing_if = "PathFillRule::is_nonzero")]
+        fill_rule: PathFillRule,
+        /// (v2) Elevation: soft shadows of the filled shape drawn under it,
+        /// back to front (colour alpha = strength; offset and blur in box px,
+        /// blur as a CSS blur radius).
+        #[serde(default, skip_serializing_if = "Vec::is_empty")]
+        shadows: Vec<ContactShadow>,
+    },
+    /// (v2) One prototype path drawn many times: halftone fields, dot grids.
+    /// `d` is SVG path data centred on (0, 0); each `at` entry is
+    /// `[x, y, scale]` in box space. `trim` shows the first fraction of the
+    /// instances in list order (the boundary one scaled in), so ordering the
+    /// list by distance gives a radial build.
+    Instances {
+        d: String,
+        fill: Fill,
+        at: Vec<[f32; 3]>,
+    },
+}
+
+/// (v2) A solid colour (`"#RRGGBB"`), a gradient object, or a watercolor wet-bleed wash.
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[serde(untagged)]
+pub enum Fill {
+    Solid(Color),
+    Gradient(Gradient),
+    Watercolor {
+        #[serde(rename = "watercolor")]
+        color: Color,
+        #[serde(flatten)]
+        spec: crate::brush::WatercolorSpec,
+    },
+}
+
+/// (v2) Gradient in the layer's box space (pixels). Stops are 2..=8 with
+/// `at` ascending in 0..=1; colours outside the ends pad.
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[serde(tag = "gradient", rename_all = "snake_case")]
+pub enum Gradient {
+    Linear {
+        from: [f32; 2],
+        to: [f32; 2],
+        stops: Vec<GradientStop>,
+    },
+    Radial {
+        center: [f32; 2],
+        radius: f32,
+        stops: Vec<GradientStop>,
+    },
+}
+
+impl Gradient {
+    pub fn stops(&self) -> &[GradientStop] {
+        match self {
+            Gradient::Linear { stops, .. } | Gradient::Radial { stops, .. } => stops,
+        }
+    }
+}
+
+#[derive(Debug, Clone, Copy, PartialEq, Serialize, Deserialize)]
+pub struct GradientStop {
+    pub at: f32,
+    pub color: Color,
+}
+
+/// (v2) Which regions of a self-overlapping path are inside.
+#[derive(Debug, Clone, Copy, Default, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum PathFillRule {
+    #[default]
+    Nonzero,
+    EvenOdd,
+}
+
+impl PathFillRule {
+    pub fn is_nonzero(&self) -> bool {
+        *self == PathFillRule::Nonzero
+    }
+}
+
+/// (v2) Path mask on a layer: only pixels inside `d` (SVG path data in the
+/// layer's box space, moving with the box but not with `clip_reveal`
+/// content offsets) are drawn; `invert` keeps the outside instead.
+/// Animated by `mask_morph`. Combines with `clip` (both apply).
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+pub struct LayerMask {
+    pub d: String,
+    #[serde(default, skip_serializing_if = "std::ops::Not::not")]
+    pub invert: bool,
 }
 
 impl LayerKind {
@@ -673,6 +808,8 @@ impl LayerKind {
             LayerKind::Group { .. } => "group",
             LayerKind::Texture(_) => "texture",
             LayerKind::Polyline { .. } => "polyline",
+            LayerKind::Path { .. } => "path",
+            LayerKind::Instances { .. } => "instances",
         }
     }
 }
@@ -681,6 +818,27 @@ impl LayerKind {
 pub struct Stroke {
     pub color: Color,
     pub width: f32,
+    /// Optional `p5.brush` natural media specification (pencil, charcoal, rotring, marker, spray, etc.).
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub brush: Option<crate::brush::BrushSpec>,
+}
+
+impl Stroke {
+    pub fn plain(color: Color, width: f32) -> Self {
+        Self {
+            color,
+            width,
+            brush: None,
+        }
+    }
+
+    pub fn with_brush(color: Color, width: f32, brush: crate::brush::BrushSpec) -> Self {
+        Self {
+            color,
+            width,
+            brush: Some(brush),
+        }
+    }
 }
 
 #[derive(Debug, Clone, Copy, Default, PartialEq, Eq, Serialize, Deserialize)]
@@ -887,6 +1045,25 @@ pub struct TextStyle {
     /// center text optically; absent = use the box.
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub ink: Option<InkBounds>,
+    /// (v2.2) Paint inside the glyphs instead of `color`: a gradient in the
+    /// layer's box space, or an image asset cover-fit to the box and seen
+    /// only through the glyphs (a text mask). Absent = solid `color`.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub fill: Option<TextFill>,
+    /// (v2.2) Stroke the glyph outlines at this width (pixels) with the
+    /// fill instead of filling them. Absent = filled glyphs.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub outline: Option<f32>,
+}
+
+/// (v2.2) A text layer's non-solid paint.
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum TextFill {
+    /// Gradient in the layer's box space (pixels).
+    Gradient(Gradient),
+    /// Id of an image asset, cover-fit to the layer's box.
+    Image(String),
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Serialize, Deserialize)]
@@ -994,6 +1171,107 @@ pub struct SpringSpec {
     pub mass: f32,
 }
 
+impl SpringSpec {
+    /// Critically damped, zero bounce, crisp editorial snap.
+    pub const SNAPPY: SpringSpec = SpringSpec {
+        stiffness: 320.0,
+        damping: 32.0,
+        mass: 1.0,
+    };
+
+    /// Under-damped, tactile pop, subtle overshoot.
+    pub const BOUNCY: SpringSpec = SpringSpec {
+        stiffness: 220.0,
+        damping: 14.0,
+        mass: 1.0,
+    };
+
+    /// Cinematic weight, slow graceful settling.
+    pub const HEAVY: SpringSpec = SpringSpec {
+        stiffness: 90.0,
+        damping: 28.0,
+        mass: 2.5,
+    };
+
+    /// Smooth floating settle.
+    pub const GENTLE: SpringSpec = SpringSpec {
+        stiffness: 140.0,
+        damping: 22.0,
+        mass: 1.0,
+    };
+
+    /// Computes the time `t` (seconds) after which `|x(t) - 1.0| < threshold`
+    /// and velocity `|x'(t)| < threshold`.
+    pub fn settling_duration(&self, threshold: f32) -> f64 {
+        if threshold.is_nan() || threshold <= 0.0 {
+            return 0.0;
+        }
+        let threshold = threshold as f64;
+        let (k, c, m) = (
+            self.stiffness as f64,
+            self.damping as f64,
+            (self.mass as f64).max(1e-6),
+        );
+        if k <= 0.0 {
+            return 0.0;
+        }
+        let w0 = (k / m).sqrt();
+        let zeta = c / (2.0 * (k * m).sqrt());
+
+        let (rate, amp) = if zeta < 1.0 {
+            let wd = w0 * (1.0 - zeta * zeta).max(1e-6).sqrt();
+            (
+                zeta * w0,
+                (1.0 / (1.0 - zeta * zeta).max(1e-6).sqrt()).max(w0 * w0 / wd),
+            )
+        } else if (zeta - 1.0).abs() < 1e-6 {
+            (0.5 * w0, 2.0_f64.max(w0))
+        } else {
+            let r = (zeta * zeta - 1.0).sqrt();
+            let slow_root = w0 * (zeta - r);
+            (slow_root, 2.0_f64.max(w0))
+        };
+
+        if rate <= 1e-6 {
+            return 60.0;
+        }
+
+        let t_bound = ((amp / threshold).max(1.01).ln() / rate).max(1.0);
+        let t_bound = (t_bound + 1.0).clamp(0.1, 60.0);
+
+        let dt = if zeta < 1.0 {
+            let wd = w0 * (1.0 - zeta * zeta).max(1e-6).sqrt();
+            (std::f64::consts::PI / (16.0 * wd.max(1.0))).min(0.002)
+        } else {
+            (1.0 / (16.0 * w0.max(1.0))).min(0.002)
+        };
+
+        let steps = (t_bound / dt).ceil() as usize;
+        for step in (0..=steps).rev() {
+            let t = step as f64 * dt;
+            let x = crate::easing::spring_response(t, *self);
+            let v = crate::easing::spring_velocity(t, *self);
+            if (x - 1.0).abs() >= threshold || v.abs() >= threshold {
+                let mut t_lo = t;
+                let mut t_hi = (t + dt).min(t_bound);
+                for _ in 0..24 {
+                    let t_mid = 0.5 * (t_lo + t_hi);
+                    let xm = crate::easing::spring_response(t_mid, *self);
+                    let vm = crate::easing::spring_velocity(t_mid, *self);
+                    if (xm - 1.0).abs() >= threshold || vm.abs() >= threshold {
+                        t_lo = t_mid;
+                    } else {
+                        t_hi = t_mid;
+                    }
+                }
+                return t_hi;
+            }
+        }
+
+        0.0
+    }
+}
+
 /// (0.14) A glyph's offset from its rest pose: `dx`/`dy` px, `scale`
 /// multiplier, `rotation` degrees about the glyph centre, `opacity` multiplier.
 #[derive(Debug, Clone, Copy, PartialEq, Serialize, Deserialize)]
@@ -1036,8 +1314,16 @@ pub enum GlyphOrder {
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[serde(tag = "op", rename_all = "snake_case")]
 pub enum MotionOp {
-    /// Offset (pixels) added to the layer's base (x, y).
-    Move { from: [f32; 2], to: [f32; 2] },
+    /// Offset (pixels) added to the layer's base (x, y). (0.24 Wave 2) `via`
+    /// is the control point (same offset space) of a quadratic Bezier from
+    /// `from` through `via` to `to`: the layer travels an arc instead of
+    /// the chord. Absent = the straight line.
+    Move {
+        from: [f32; 2],
+        to: [f32; 2],
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        via: Option<[f32; 2]>,
+    },
     /// Multiplier on the layer's base scale.
     Scale {
         from: f32,
@@ -1079,8 +1365,9 @@ pub enum MotionOp {
         #[serde(default, skip_serializing_if = "String::is_empty")]
         suffix: String,
     },
-    /// Polyline layers only: visible fraction of the path length, drawn from
-    /// the first point (0 = nothing, 1 = whole path).
+    /// Polyline and (v2) path / instances layers: visible fraction of the path length (instances: of the list),
+    /// drawn from the first point (0 = nothing, 1 = whole path). On a path
+    /// layer only the stroke is trimmed; the fill is not.
     Trim { from: f32, to: f32 },
     /// Moves the layer's rendered colours toward `color` by an amount that
     /// animates from `from` to `to` (each 0..=1; 0 = untouched, 1 = flat
@@ -1148,6 +1435,12 @@ pub enum MotionOp {
     /// perspective and never shears with the orbit, so a picture can swing
     /// into view from an angle and settle flat.
     Tilt { from: [f32; 2], to: [f32; 2] },
+    /// (v2) Path layers only: the shape morphs to `to` (SVG path data, box
+    /// space). Contours and segments are matched point by point (see
+    /// `path::match_paths`); chained morphs start from the previous target.
+    Morph { to: String },
+    /// (v2) Layers with a `mask` only: the mask path morphs to `to`.
+    MaskMorph { to: String },
 }
 
 impl MotionOp {
@@ -1170,6 +1463,8 @@ impl MotionOp {
             MotionOp::Pulse { .. } => Channel::Pulse,
             MotionOp::Revolve { .. } => Channel::Revolve,
             MotionOp::Tilt { .. } => Channel::Tilt,
+            MotionOp::Morph { .. } => Channel::Path,
+            MotionOp::MaskMorph { .. } => Channel::Mask,
         }
     }
 
@@ -1192,6 +1487,8 @@ impl MotionOp {
             MotionOp::Pulse { .. } => "pulse",
             MotionOp::Revolve { .. } => "revolve",
             MotionOp::Tilt { .. } => "tilt",
+            MotionOp::Morph { .. } => "morph",
+            MotionOp::MaskMorph { .. } => "mask_morph",
         }
     }
 }
@@ -1216,6 +1513,7 @@ pub enum Channel {
     Pulse,
     Revolve,
     Tilt,
+    Mask,
 }
 
 #[derive(Debug, Clone, Copy, Default, PartialEq, Eq, Serialize, Deserialize)]

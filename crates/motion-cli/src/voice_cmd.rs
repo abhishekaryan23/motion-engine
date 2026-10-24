@@ -40,6 +40,30 @@ pub enum ProvidersCmd {
         /// Provider name (only `openrouter`).
         provider: String,
     },
+    /// (P1) Connect a generation platform (`openart` or an https MCP URL):
+    /// browser sign-in, or a bearer token from stdin with `--token-stdin`.
+    Connect {
+        provider: String,
+        #[arg(long)]
+        token_stdin: bool,
+    },
+    /// (P1) List the tools a connected platform exposes (`--json`: with input schemas).
+    Tools {
+        provider: String,
+        #[arg(long)]
+        json: bool,
+    },
+    /// (P1) Call a read-only tool by name with JSON arguments (inspection).
+    Call {
+        provider: String,
+        tool: String,
+        #[arg(default_value = "{}")]
+        args: String,
+    },
+    /// (P1) Price one asset request (no spend).
+    Quote(crate::gen_providers_cmd::GenArgs),
+    /// (P1) Generate one asset: allow-list, cache, quote, caps, spend log.
+    Generate(crate::gen_providers_cmd::GenArgs),
 }
 
 #[derive(Args, Debug)]
@@ -98,6 +122,18 @@ fn require_openrouter(provider: &str) -> Result<()> {
 pub fn run_providers(cmd: ProvidersCmd) -> Result<()> {
     let path = config::default_config_path();
     match cmd {
+        ProvidersCmd::Connect {
+            provider,
+            token_stdin,
+        } => crate::gen_providers_cmd::connect(&provider, token_stdin),
+        ProvidersCmd::Tools { provider, json } => crate::gen_providers_cmd::tools(&provider, json),
+        ProvidersCmd::Call {
+            provider,
+            tool,
+            args,
+        } => crate::gen_providers_cmd::call(&provider, &tool, &args),
+        ProvidersCmd::Quote(a) => crate::gen_providers_cmd::quote(&a),
+        ProvidersCmd::Generate(a) => crate::gen_providers_cmd::run_generate(&a),
         ProvidersCmd::SetKey { provider } => {
             require_openrouter(&provider)?;
             let mut input = String::new();
@@ -109,7 +145,7 @@ pub fn run_providers(cmd: ProvidersCmd) -> Result<()> {
                 bail!("no key on stdin (pipe it in: `pbpaste | motion-engine providers set-key openrouter`)");
             }
             config::set_key(&provider, key, &path)?;
-            println!("saved {provider} key {}", config::mask(key));
+            info!("saved {provider} key {}", config::mask(key));
             println!("config: {}", path.display());
             Ok(())
         }
@@ -129,7 +165,7 @@ pub fn run_providers(cmd: ProvidersCmd) -> Result<()> {
             if let Some(w) = config::permission_warning(&path) {
                 println!("warning: {w}");
             }
-            Ok(())
+            crate::gen_providers_cmd::show()
         }
         ProvidersCmd::Test { provider } => {
             require_openrouter(&provider)?;
@@ -472,7 +508,7 @@ pub fn run_voice(args: VoiceArgs) -> Result<()> {
                 voice.voice = v.clone();
             }
         }
-        println!(
+        detail!(
             "voice: model {} voice '{}' (emotion {}, single take, offline={})",
             model.model_id(),
             voice.voice,
@@ -540,7 +576,7 @@ pub fn run_voice(args: VoiceArgs) -> Result<()> {
             } else {
                 format!("{alignment}, {:.1} s", t0.elapsed().as_secs_f64())
             };
-            println!("{}", mismatch_summary(&map, &words, n, &how));
+            detail!("{}", mismatch_summary(&map, &words, n, &how));
             heard = words;
         }
         // The paid service may be unreachable: keep the onset estimates.
@@ -552,7 +588,7 @@ pub fn run_voice(args: VoiceArgs) -> Result<()> {
     // One repair pass against the spoken lines: monotonic times, minimum word
     // length, written forms; unmatched words are reported, never invented.
     let (mut map, report) = speech::repair(&map, &lines);
-    println!("{}", repair_summary(&report));
+    detail!("{}", repair_summary(&report));
     // What was actually said, and how the times were measured (set after the
     // repair pass, which rebuilds the map without them).
     map.recognised = heard
@@ -568,12 +604,12 @@ pub fn run_voice(args: VoiceArgs) -> Result<()> {
     std::fs::write(&json_path, json + "\n")
         .with_context(|| format!("writing {}", json_path.display()))?;
 
-    println!(
+    info!(
         "{} sentences, {:.2} s | provider calls: {} | cache hits: {}",
         stats.sentences, stats.duration, stats.calls, stats.cache_hits
     );
-    println!("wrote {}", display(&wav_path));
-    println!("wrote {}", display(&json_path));
+    detail!("wrote {}", display(&wav_path));
+    detail!("wrote {}", display(&json_path));
     Ok(())
 }
 
@@ -605,7 +641,7 @@ pub fn load_speech(path: &Path, statements: &[String]) -> Result<SpeechMap> {
     let map = SpeechMap::from_json(&text)
         .with_context(|| format!("parsing speech file {}", path.display()))?;
     let (map, report) = speech::repair(&map, statements);
-    println!("{}", repair_summary(&report));
+    detail!("{}", repair_summary(&report));
     Ok(map)
 }
 

@@ -1457,12 +1457,25 @@ dependencies = [
 ]
 
 [[package]]
+name = "motion-bridge"
+version = "2.3.0"
+dependencies = [
+ "motion-core",
+ "motion-program",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
 name = "motion-cli"
-version = "0.2.0"
+version = "2.3.0"
 dependencies = [
  "anyhow",
  "clap",
+ "motion-bridge",
  "motion-core",
+ "motion-program",
+ "motion-providers",
  "motion-render",
  "motion-voice",
  "pathdiff",
@@ -1471,18 +1484,19 @@ dependencies = [
 
 [[package]]
 name = "motion-core"
-version = "0.2.0"
+version = "2.3.0"
 dependencies = [
  "jsonschema",
  "schemars",
  "serde",
  "serde_json",
  "thiserror",
+ "ttf-parser",
 ]
 
 [[package]]
 name = "motion-mcp"
-version = "0.2.0"
+version = "2.3.0"
 dependencies = [
  "anyhow",
  "clap",
@@ -1497,7 +1511,7 @@ dependencies = [
 
 [[package]]
 name = "motion-mcp-eval"
-version = "0.2.0"
+version = "2.3.0"
 dependencies = [
  "anyhow",
  "clap",
@@ -1509,8 +1523,32 @@ dependencies = [
 ]
 
 [[package]]
+name = "motion-program"
+version = "2.3.0"
+dependencies = [
+ "motion-core",
+ "motion-render",
+ "schemars",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
+name = "motion-providers"
+version = "2.3.0"
+dependencies = [
+ "anyhow",
+ "base64 0.22.1",
+ "resvg",
+ "serde",
+ "serde_json",
+ "sha2",
+ "ureq 2.12.1",
+]
+
+[[package]]
 name = "motion-render"
-version = "0.2.0"
+version = "2.3.0"
 dependencies = [
  "bytemuck",
  "cosmic-text",
@@ -1530,7 +1568,7 @@ dependencies = [
 
 [[package]]
 name = "motion-voice"
-version = "0.2.0"
+version = "2.3.0"
 dependencies = [
  "motion-core",
  "ort",
@@ -2778,7 +2816,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "32497e9a4c7b38532efcdebeef879707aa9f794296a4f0244f6f69e9bc8574bd"
 dependencies = [
  "fastrand",
- "getrandom 0.3.4",
+ "getrandom 0.4.3",
  "once_cell",
  "rustix",
  "windows-sys 0.61.2",

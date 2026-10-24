@@ -4,12 +4,12 @@
 #   scripts/mix_bench.sh
 #
 # Offline (macOS `say`, no provider call). Synthesises a test voice from
-# docs/plans/sprint_0_23/stories/sleep_review.intent.json, compiles it, plans
+# examples/bench/stories/sleep_review.intent.json, compiles it, plans
 # the audio against every bed of assets/music/catalog.json and renders the
 # video once. Voice copies are normalised to -14 / -20 / -26 LUFS. For every
 # bed x voice level x {SFX on, SFX off} it runs `motion-engine mix --stems`
 # (the voice-relative mix) and `mix --legacy --stems` (the pre-0.23 mix, the
-# recorded baseline), measures the stems (docs/plans/sprint_0_23/tools/
+# recorded baseline), measures the stems (scripts/bench/
 # stem_levels.py) and the final MP4 (ffmpeg ebur128), and writes
 # output/sprint23/mix_bench/report.json and report.md. Every stem and temp wav
 # is deleted. Exit status 1 when a voice-relative run misses a target:
@@ -53,8 +53,8 @@ done
 SECONDS=0
 cargo build --release -p motion-cli >/dev/null
 E=$ROOT/target/release/motion-engine
-TOOLS=$ROOT/docs/plans/sprint_0_23/tools
-STORY=$ROOT/docs/plans/sprint_0_23/stories/sleep_review.intent.json
+TOOLS=$ROOT/scripts/bench
+STORY=$ROOT/examples/bench/stories/sleep_review.intent.json
 MUSIC=$ROOT/assets/music
 OUT=$ROOT/output/sprint23/mix_bench
 JOBS=${MIX_BENCH_JOBS:-4}

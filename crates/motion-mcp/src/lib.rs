@@ -1,4 +1,4 @@
-//! MotionEngine as MCP tools (Sprint 0.21, `docs/plans/SPRINT_0_21_MCP_SERVER.md`).
+//! MotionEngine as MCP tools (see `docs/MCP.md`).
 //!
 //! Fat tools, thin schemas: a model writes one small story object and gets back
 //! one short answer; the engine does the multi-step work. Three profiles
@@ -32,6 +32,7 @@ pub mod schema;
 pub mod server;
 pub mod service;
 pub mod store;
+pub mod v2;
 
 pub use profile::{Profile, ServerConfig};
 pub use reply::{Fix, Reply, Status, ToolOutput};

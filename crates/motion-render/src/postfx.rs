@@ -47,6 +47,12 @@ pub fn apply_post(pixmap: &mut Pixmap, posts: &[ResolvedPost<'_>]) {
             }
             PostKind::Grain { amount, seed } => grain(pixmap, *amount, *seed, p.time, s),
             PostKind::Vignette { amount } => vignette(pixmap, *amount, s),
+            PostKind::Shockwave {
+                center,
+                radius,
+                width,
+                amplitude,
+            } => shockwave(pixmap, *center, *radius, *width, *amplitude, s),
         }
     }
 }
@@ -570,6 +576,69 @@ pub fn grain(pm: &mut Pixmap, amount: f32, seed: u32, time: f64, strength: f32) 
 
 /// Darkens by `amount * strength * smoothstep(0.45, 1.0, r)`, `r` the distance
 /// from the frame centre normalised so the corners are 1 (RGB only).
+/// Impact ring: pixels near the ring (radius `strength * radius`) are
+/// displaced radially by a derivative-of-Gaussian profile (pushed out ahead
+/// of the ring, pulled in behind it) of peak `amplitude * (1 - strength)`,
+/// red and blue sampled 15 % further / nearer for a slight split.
+/// Bilinear, edge clamped; pixels outside 3 widths are untouched.
+pub fn shockwave(
+    pm: &mut Pixmap,
+    center: [f32; 2],
+    radius: f32,
+    width: f32,
+    amplitude: f32,
+    strength: f32,
+) {
+    let (w, h) = dims(pm);
+    let r = radius * strength;
+    let amp = amplitude * (1.0 - strength);
+    if w == 0
+        || h == 0
+        || !(r.is_finite() && width.is_finite() && amp.is_finite())
+        || width <= 0.0
+        || amp == 0.0
+    {
+        return;
+    }
+    let src = pm.data().to_vec();
+    let fetch = |x: f32, y: f32, ch: usize| -> f32 {
+        let x = x.clamp(0.0, (w - 1) as f32);
+        let y = y.clamp(0.0, (h - 1) as f32);
+        let (x0, y0) = (x.floor() as usize, y.floor() as usize);
+        let (x1, y1) = ((x0 + 1).min(w - 1), (y0 + 1).min(h - 1));
+        let (fx, fy) = (x - x0 as f32, y - y0 as f32);
+        let at = |xx: usize, yy: usize| src[(yy * w + xx) * 4 + ch] as f32;
+        let top = at(x0, y0) * (1.0 - fx) + at(x1, y0) * fx;
+        let bot = at(x0, y1) * (1.0 - fx) + at(x1, y1) * fx;
+        top * (1.0 - fy) + bot * fy
+    };
+    pm.data_mut()
+        .par_chunks_mut(w * 4)
+        .enumerate()
+        .for_each(|(y, row)| {
+            let py = y as f32 + 0.5;
+            for x in 0..w {
+                let px = x as f32 + 0.5;
+                let (dx, dy) = (px - center[0], py - center[1]);
+                let d = (dx * dx + dy * dy).sqrt();
+                let u = (d - r) / width;
+                if u.abs() > 3.0 || d < 1e-3 {
+                    continue;
+                }
+                // 1.1658 normalises u·e^(-u²) to a peak of 1.
+                let m = amp * 1.1658 * u * (-u * u).exp();
+                let (nx, ny) = (dx / d, dy / d);
+                let o = &mut row[x * 4..x * 4 + 4];
+                let a = fetch(px - 0.5 - nx * m, py - 0.5 - ny * m, 3);
+                for (ch, k) in [(0usize, 1.15f32), (1, 1.0), (2, 0.85)] {
+                    let v = fetch(px - 0.5 - nx * m * k, py - 0.5 - ny * m * k, ch);
+                    o[ch] = v.min(a).round().clamp(0.0, 255.0) as u8;
+                }
+                o[3] = a.round().clamp(0.0, 255.0) as u8;
+            }
+        });
+}
+
 pub fn vignette(pm: &mut Pixmap, amount: f32, strength: f32) {
     let (w, h) = dims(pm);
     let k = (amount * strength).clamp(0.0, 1.0);

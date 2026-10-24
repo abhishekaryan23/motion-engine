@@ -1,6 +1,6 @@
 {
  "version": "0.1",
- "notes": "Curated emotion typography table (0.9). Option 1 of each emotion is canonical for an explicit emotion; exploration level 0 without --emotion keeps the 0.8 tone pairings (legacy). Every option also loads `fallback_face` for glyph fallback (₹ € digits). `substitutes`: a missing face file is replaced role-wise by its substitute (recorded in fallback_from as '<option>:<from>-><to>'); Necto Mono (Collletttivo) -> IBM Plex Mono until bundled.",
+ "notes": "Curated emotion typography table (0.9). Option 1 of each emotion is canonical for an explicit emotion; exploration level 0 without --emotion keeps the 0.8 tone pairings (legacy). Every option also loads `fallback_face` for glyph fallback (₹ € digits). `substitutes`: a missing face file is replaced role-wise by its substitute (recorded in fallback_from as '<option>:<from>-><to>'); Necto Mono (Collletttivo) -> IBM Plex Mono until bundled. Face `class` (grotesk|condensed|geometric|serif|slab|sans|mono|hand) drives the typography_style category constraint (docs/TYPOGRAPHY.md). (0.24 M8) Faces carry motion metadata: contrast, width, and x_height (x over H glyph height) + tabular_digits measured from the file (test motion_type). `pairings` = library v2 (level 1 draws only from these via `usage[genre][tone]`, filtered by use_for.temperaments); every pairing and every level>=1 emotion option must pass motion_safe (docs/TYPOGRAPHY.md).",
  "fallback_face": "font.plex_mono",
  "always_loaded": [
   "font.dm_serif",
@@ -13,6 +13,7 @@
    "id": "font.archivo_black",
    "file": "fonts/ArchivoBlack-Regular.ttf",
    "family": "Archivo Black",
+   "class": "grotesk",
    "weight": 900,
    "italic": false,
    "roles": [
@@ -30,12 +31,17 @@
     "eur": true
    },
    "readability": "display",
-   "licence": "OFL"
+   "licence": "OFL",
+   "contrast": "low",
+   "width": "normal",
+   "x_height": 0.767,
+   "tabular_digits": true
   },
   {
    "id": "font.anton",
    "file": "fonts/Anton-Regular.ttf",
    "family": "Anton",
+   "class": "condensed",
    "weight": 400,
    "italic": false,
    "roles": [
@@ -55,12 +61,17 @@
     "eur": true
    },
    "readability": "display",
-   "licence": "OFL"
+   "licence": "OFL",
+   "contrast": "low",
+   "width": "condensed",
+   "x_height": 0.853,
+   "tabular_digits": false
   },
   {
    "id": "font.bebas_neue",
    "file": "fonts/BebasNeue-Regular.ttf",
    "family": "Bebas Neue",
+   "class": "condensed",
    "weight": 400,
    "italic": false,
    "roles": [
@@ -79,12 +90,17 @@
     "eur": true
    },
    "readability": "display",
-   "licence": "OFL"
+   "licence": "OFL",
+   "contrast": "low",
+   "width": "condensed",
+   "x_height": 1.0,
+   "tabular_digits": true
   },
   {
    "id": "font.dm_serif",
    "file": "fonts/DMSerifDisplay-Regular.ttf",
    "family": "DM Serif Display",
+   "class": "serif",
    "weight": 400,
    "italic": false,
    "roles": [
@@ -104,12 +120,17 @@
     "eur": true
    },
    "readability": "display",
-   "licence": "OFL"
+   "licence": "OFL",
+   "contrast": "high",
+   "width": "normal",
+   "x_height": 0.729,
+   "tabular_digits": false
   },
   {
    "id": "font.dm_serif_italic",
    "file": "fonts/DMSerifDisplay-Italic.ttf",
    "family": "DM Serif Display",
+   "class": "serif",
    "weight": 400,
    "italic": true,
    "roles": [
@@ -128,12 +149,17 @@
     "eur": true
    },
    "readability": "display",
-   "licence": "OFL"
+   "licence": "OFL",
+   "contrast": "high",
+   "width": "normal",
+   "x_height": 0.752,
+   "tabular_digits": false
   },
   {
    "id": "font.fira_sans",
    "file": "fonts/FiraSans-Regular.ttf",
    "family": "Fira Sans",
+   "class": "sans",
    "weight": 400,
    "italic": false,
    "roles": [
@@ -149,12 +175,17 @@
     "eur": true
    },
    "readability": "text",
-   "licence": "OFL"
+   "licence": "OFL",
+   "contrast": "low",
+   "width": "normal",
+   "x_height": 0.765,
+   "tabular_digits": false
   },
   {
    "id": "font.fira_sans_semibold",
    "file": "fonts/FiraSans-SemiBold.ttf",
    "family": "Fira Sans",
+   "class": "sans",
    "weight": 600,
    "italic": false,
    "roles": [
@@ -170,12 +201,17 @@
     "eur": true
    },
    "readability": "text",
-   "licence": "OFL"
+   "licence": "OFL",
+   "contrast": "low",
+   "width": "normal",
+   "x_height": 0.766,
+   "tabular_digits": false
   },
   {
    "id": "font.space_mono",
    "file": "fonts/SpaceMono-Regular.ttf",
    "family": "Space Mono",
+   "class": "mono",
    "weight": 400,
    "italic": false,
    "roles": [
@@ -191,12 +227,17 @@
     "eur": true
    },
    "readability": "text",
-   "licence": "OFL"
+   "licence": "OFL",
+   "contrast": "low",
+   "width": "normal",
+   "x_height": 0.709,
+   "tabular_digits": true
   },
   {
    "id": "font.space_mono_bold",
    "file": "fonts/SpaceMono-Bold.ttf",
    "family": "Space Mono",
+   "class": "mono",
    "weight": 700,
    "italic": false,
    "roles": [
@@ -213,12 +254,17 @@
     "eur": true
    },
    "readability": "text",
-   "licence": "OFL"
+   "licence": "OFL",
+   "contrast": "low",
+   "width": "normal",
+   "x_height": 0.709,
+   "tabular_digits": true
   },
   {
    "id": "font.lato",
    "file": "fonts/Lato-Regular.ttf",
    "family": "Lato",
+   "class": "sans",
    "weight": 400,
    "italic": false,
    "roles": [
@@ -238,15 +284,23 @@
     "eur": true
    },
    "readability": "text",
-   "licence": "OFL"
+   "licence": "OFL",
+   "contrast": "low",
+   "width": "normal",
+   "x_height": 0.707,
+   "tabular_digits": true
   },
   {
    "id": "font.lato_bold",
    "file": "fonts/Lato-Bold.ttf",
    "family": "Lato",
+   "class": "sans",
    "weight": 700,
    "italic": false,
-   "roles": [],
+   "roles": [
+    "body",
+    "number"
+   ],
    "emotions": [],
    "coverage": {
     "latin": true,
@@ -255,12 +309,17 @@
     "eur": true
    },
    "readability": "text",
-   "licence": "OFL"
+   "licence": "OFL",
+   "contrast": "low",
+   "width": "normal",
+   "x_height": 0.71,
+   "tabular_digits": true
   },
   {
    "id": "font.plex_mono",
    "file": "fonts/IBMPlexMono-Regular.ttf",
    "family": "IBM Plex Mono",
+   "class": "mono",
    "weight": 400,
    "italic": false,
    "roles": [
@@ -283,12 +342,17 @@
     "eur": true
    },
    "readability": "text",
-   "licence": "OFL"
+   "licence": "OFL",
+   "contrast": "low",
+   "width": "normal",
+   "x_height": 0.739,
+   "tabular_digits": true
   },
   {
    "id": "font.plex_mono_medium",
    "file": "fonts/IBMPlexMono-Medium.ttf",
    "family": "IBM Plex Mono",
+   "class": "mono",
    "weight": 500,
    "italic": false,
    "roles": [
@@ -305,12 +369,17 @@
     "eur": true
    },
    "readability": "text",
-   "licence": "OFL"
+   "licence": "OFL",
+   "contrast": "low",
+   "width": "normal",
+   "x_height": 0.739,
+   "tabular_digits": true
   },
   {
    "id": "font.plex_mono_semibold",
    "file": "fonts/IBMPlexMono-SemiBold.ttf",
    "family": "IBM Plex Mono",
+   "class": "mono",
    "weight": 600,
    "italic": false,
    "roles": [
@@ -326,12 +395,17 @@
     "eur": true
    },
    "readability": "text",
-   "licence": "OFL"
+   "licence": "OFL",
+   "contrast": "low",
+   "width": "normal",
+   "x_height": 0.739,
+   "tabular_digits": true
   },
   {
    "id": "font.plex_serif_italic",
    "file": "fonts/IBMPlexSerif-Italic.ttf",
    "family": "IBM Plex Serif",
+   "class": "serif",
    "weight": 400,
    "italic": true,
    "roles": [
@@ -347,12 +421,17 @@
     "eur": true
    },
    "readability": "text",
-   "licence": "OFL"
+   "licence": "OFL",
+   "contrast": "medium",
+   "width": "normal",
+   "x_height": 0.756,
+   "tabular_digits": true
   },
   {
    "id": "font.barlow_condensed_bold",
    "file": "fonts/BarlowCondensed-Bold.ttf",
    "family": "Barlow Condensed",
+   "class": "condensed",
    "weight": 700,
    "italic": false,
    "roles": [
@@ -369,12 +448,17 @@
     "eur": true
    },
    "readability": "display",
-   "licence": "OFL"
+   "licence": "OFL",
+   "contrast": "low",
+   "width": "condensed",
+   "x_height": 0.734,
+   "tabular_digits": false
   },
   {
    "id": "font.barlow_condensed_semibold",
    "file": "fonts/BarlowCondensed-SemiBold.ttf",
    "family": "Barlow Condensed",
+   "class": "condensed",
    "weight": 600,
    "italic": false,
    "roles": [
@@ -392,12 +476,17 @@
     "eur": true
    },
    "readability": "display",
-   "licence": "OFL"
+   "licence": "OFL",
+   "contrast": "low",
+   "width": "condensed",
+   "x_height": 0.73,
+   "tabular_digits": false
   },
   {
    "id": "font.barlow_medium",
    "file": "fonts/Barlow-Medium.ttf",
    "family": "Barlow",
+   "class": "sans",
    "weight": 500,
    "italic": false,
    "roles": [
@@ -415,12 +504,17 @@
     "eur": true
    },
    "readability": "text",
-   "licence": "OFL"
+   "licence": "OFL",
+   "contrast": "low",
+   "width": "normal",
+   "x_height": 0.727,
+   "tabular_digits": false
   },
   {
    "id": "font.poppins_black",
    "file": "fonts/Poppins-Black.ttf",
    "family": "Poppins",
+   "class": "geometric",
    "weight": 900,
    "italic": false,
    "roles": [
@@ -436,12 +530,17 @@
     "eur": true
    },
    "readability": "display",
-   "licence": "OFL"
+   "licence": "OFL",
+   "contrast": "low",
+   "width": "normal",
+   "x_height": 0.797,
+   "tabular_digits": false
   },
   {
    "id": "font.poppins_extrabold",
    "file": "fonts/Poppins-ExtraBold.ttf",
    "family": "Poppins",
+   "class": "geometric",
    "weight": 800,
    "italic": false,
    "roles": [
@@ -457,12 +556,17 @@
     "eur": true
    },
    "readability": "display",
-   "licence": "OFL"
+   "licence": "OFL",
+   "contrast": "low",
+   "width": "normal",
+   "x_height": 0.796,
+   "tabular_digits": false
   },
   {
    "id": "font.poppins_bold",
    "file": "fonts/Poppins-Bold.ttf",
    "family": "Poppins",
+   "class": "geometric",
    "weight": 700,
    "italic": false,
    "roles": [
@@ -478,12 +582,17 @@
     "eur": true
    },
    "readability": "display",
-   "licence": "OFL"
+   "licence": "OFL",
+   "contrast": "low",
+   "width": "normal",
+   "x_height": 0.795,
+   "tabular_digits": false
   },
   {
    "id": "font.poppins_medium",
    "file": "fonts/Poppins-Medium.ttf",
    "family": "Poppins",
+   "class": "geometric",
    "weight": 500,
    "italic": false,
    "roles": [
@@ -500,12 +609,17 @@
     "eur": true
    },
    "readability": "text",
-   "licence": "OFL"
+   "licence": "OFL",
+   "contrast": "low",
+   "width": "normal",
+   "x_height": 0.793,
+   "tabular_digits": false
   },
   {
    "id": "font.zilla_slab_semibold_italic",
    "file": "fonts/ZillaSlab-SemiBoldItalic.ttf",
    "family": "Zilla Slab",
+   "class": "slab",
    "weight": 600,
    "italic": true,
    "roles": [
@@ -522,12 +636,17 @@
     "eur": true
    },
    "readability": "text",
-   "licence": "OFL"
+   "licence": "OFL",
+   "contrast": "medium",
+   "width": "normal",
+   "x_height": 0.691,
+   "tabular_digits": false
   },
   {
    "id": "font.zilla_slab_italic",
    "file": "fonts/ZillaSlab-Italic.ttf",
    "family": "Zilla Slab",
+   "class": "slab",
    "weight": 400,
    "italic": true,
    "roles": [
@@ -544,12 +663,17 @@
     "eur": true
    },
    "readability": "text",
-   "licence": "OFL"
+   "licence": "OFL",
+   "contrast": "medium",
+   "width": "normal",
+   "x_height": 0.685,
+   "tabular_digits": false
   },
   {
    "id": "font.zilla_slab_semibold",
    "file": "fonts/ZillaSlab-SemiBold.ttf",
    "family": "Zilla Slab",
+   "class": "slab",
    "weight": 600,
    "italic": false,
    "roles": [
@@ -567,12 +691,17 @@
     "eur": true
    },
    "readability": "text",
-   "licence": "OFL"
+   "licence": "OFL",
+   "contrast": "medium",
+   "width": "normal",
+   "x_height": 0.691,
+   "tabular_digits": false
   },
   {
    "id": "font.zilla_slab_bold",
    "file": "fonts/ZillaSlab-Bold.ttf",
    "family": "Zilla Slab",
+   "class": "slab",
    "weight": 700,
    "italic": false,
    "roles": [
@@ -591,12 +720,17 @@
     "eur": true
    },
    "readability": "display",
-   "licence": "OFL"
+   "licence": "OFL",
+   "contrast": "medium",
+   "width": "normal",
+   "x_height": 0.694,
+   "tabular_digits": false
   },
   {
    "id": "font.instrument_serif",
    "file": "fonts/InstrumentSerif-Regular.ttf",
    "family": "Instrument Serif",
+   "class": "serif",
    "weight": 400,
    "italic": false,
    "roles": [
@@ -617,12 +751,17 @@
     "eur": true
    },
    "readability": "display",
-   "licence": "OFL"
+   "licence": "OFL",
+   "contrast": "high",
+   "width": "normal",
+   "x_height": 0.708,
+   "tabular_digits": false
   },
   {
    "id": "font.instrument_serif_italic",
    "file": "fonts/InstrumentSerif-Italic.ttf",
    "family": "Instrument Serif",
+   "class": "serif",
    "weight": 400,
    "italic": true,
    "roles": [
@@ -641,12 +780,17 @@
     "eur": true
    },
    "readability": "display",
-   "licence": "OFL"
+   "licence": "OFL",
+   "contrast": "high",
+   "width": "normal",
+   "x_height": 0.717,
+   "tabular_digits": false
   },
   {
    "id": "font.zodiak_thin",
    "file": "fonts/Zodiak-Thin.otf",
    "family": "Zodiak",
+   "class": "serif",
    "weight": 100,
    "italic": false,
    "roles": [
@@ -662,12 +806,17 @@
     "eur": true
    },
    "readability": "display",
-   "licence": "FFL"
+   "licence": "FFL",
+   "contrast": "medium",
+   "width": "normal",
+   "x_height": 0.7,
+   "tabular_digits": false
   },
   {
    "id": "font.zodiak_light",
    "file": "fonts/Zodiak-Light.otf",
    "family": "Zodiak",
+   "class": "serif",
    "weight": 300,
    "italic": false,
    "roles": [
@@ -686,12 +835,17 @@
     "eur": true
    },
    "readability": "display",
-   "licence": "FFL"
+   "licence": "FFL",
+   "contrast": "medium",
+   "width": "normal",
+   "x_height": 0.704,
+   "tabular_digits": false
   },
   {
    "id": "font.zodiak_light_italic",
    "file": "fonts/Zodiak-LightItalic.otf",
    "family": "Zodiak",
+   "class": "serif",
    "weight": 300,
    "italic": true,
    "roles": [
@@ -708,12 +862,17 @@
     "eur": true
    },
    "readability": "display",
-   "licence": "FFL"
+   "licence": "FFL",
+   "contrast": "medium",
+   "width": "normal",
+   "x_height": 0.719,
+   "tabular_digits": false
   },
   {
    "id": "font.zodiak_regular",
    "file": "fonts/Zodiak-Regular.otf",
    "family": "Zodiak",
+   "class": "serif",
    "weight": 400,
    "italic": false,
    "roles": [
@@ -732,12 +891,17 @@
     "eur": true
    },
    "readability": "display",
-   "licence": "FFL"
+   "licence": "FFL",
+   "contrast": "medium",
+   "width": "normal",
+   "x_height": 0.711,
+   "tabular_digits": false
   },
   {
    "id": "font.zodiak_italic",
    "file": "fonts/Zodiak-Italic.otf",
    "family": "Zodiak",
+   "class": "serif",
    "weight": 400,
    "italic": true,
    "roles": [
@@ -760,12 +924,17 @@
     "eur": true
    },
    "readability": "display",
-   "licence": "FFL"
+   "licence": "FFL",
+   "contrast": "medium",
+   "width": "normal",
+   "x_height": 0.726,
+   "tabular_digits": false
   },
   {
    "id": "font.zodiak_bold",
    "file": "fonts/Zodiak-Bold.otf",
    "family": "Zodiak",
+   "class": "serif",
    "weight": 700,
    "italic": false,
    "roles": [
@@ -784,12 +953,17 @@
     "eur": true
    },
    "readability": "display",
-   "licence": "FFL"
+   "licence": "FFL",
+   "contrast": "medium",
+   "width": "normal",
+   "x_height": 0.721,
+   "tabular_digits": false
   },
   {
    "id": "font.satoshi_light",
    "file": "fonts/Satoshi-Light.otf",
    "family": "Satoshi",
+   "class": "sans",
    "weight": 300,
    "italic": false,
    "roles": [
@@ -806,12 +980,17 @@
     "eur": true
    },
    "readability": "text",
-   "licence": "FFL"
+   "licence": "FFL",
+   "contrast": "low",
+   "width": "normal",
+   "x_height": 0.676,
+   "tabular_digits": false
   },
   {
    "id": "font.satoshi_regular",
    "file": "fonts/Satoshi-Regular.otf",
    "family": "Satoshi",
+   "class": "sans",
    "weight": 400,
    "italic": false,
    "roles": [
@@ -832,12 +1011,17 @@
     "eur": true
    },
    "readability": "text",
-   "licence": "FFL"
+   "licence": "FFL",
+   "contrast": "low",
+   "width": "normal",
+   "x_height": 0.676,
+   "tabular_digits": false
   },
   {
    "id": "font.satoshi_medium",
    "file": "fonts/Satoshi-Medium.otf",
    "family": "Satoshi",
+   "class": "sans",
    "weight": 500,
    "italic": false,
    "roles": [
@@ -854,12 +1038,17 @@
     "eur": true
    },
    "readability": "text",
-   "licence": "FFL"
+   "licence": "FFL",
+   "contrast": "low",
+   "width": "normal",
+   "x_height": 0.676,
+   "tabular_digits": false
   },
   {
    "id": "font.satoshi_bold",
    "file": "fonts/Satoshi-Bold.otf",
    "family": "Satoshi",
+   "class": "grotesk",
    "weight": 700,
    "italic": false,
    "roles": [
@@ -875,12 +1064,17 @@
     "eur": true
    },
    "readability": "text",
-   "licence": "FFL"
+   "licence": "FFL",
+   "contrast": "low",
+   "width": "normal",
+   "x_height": 0.676,
+   "tabular_digits": false
   },
   {
    "id": "font.clash_medium",
    "file": "fonts/ClashDisplay-Medium.otf",
    "family": "Clash Display",
+   "class": "grotesk",
    "weight": 500,
    "italic": false,
    "roles": [
@@ -898,12 +1092,17 @@
     "eur": true
    },
    "readability": "display",
-   "licence": "FFL"
+   "licence": "FFL",
+   "contrast": "low",
+   "width": "normal",
+   "x_height": 0.742,
+   "tabular_digits": false
   },
   {
    "id": "font.clash_semibold",
    "file": "fonts/ClashDisplay-Semibold.otf",
    "family": "Clash Display",
+   "class": "grotesk",
    "weight": 600,
    "italic": false,
    "roles": [
@@ -920,12 +1119,17 @@
     "eur": true
    },
    "readability": "display",
-   "licence": "FFL"
+   "licence": "FFL",
+   "contrast": "low",
+   "width": "normal",
+   "x_height": 0.748,
+   "tabular_digits": false
   },
   {
    "id": "font.clash_bold",
    "file": "fonts/ClashDisplay-Bold.otf",
    "family": "Clash Display",
+   "class": "grotesk",
    "weight": 700,
    "italic": false,
    "roles": [
@@ -944,12 +1148,17 @@
     "eur": true
    },
    "readability": "display",
-   "licence": "FFL"
+   "licence": "FFL",
+   "contrast": "low",
+   "width": "normal",
+   "x_height": 0.752,
+   "tabular_digits": false
   },
   {
    "id": "font.cabinet_light",
    "file": "fonts/CabinetGrotesk-Light.otf",
    "family": "Cabinet Grotesk",
+   "class": "grotesk",
    "weight": 300,
    "italic": false,
    "roles": [
@@ -965,12 +1174,17 @@
     "eur": true
    },
    "readability": "text",
-   "licence": "FFL"
+   "licence": "FFL",
+   "contrast": "low",
+   "width": "normal",
+   "x_height": 0.713,
+   "tabular_digits": false
   },
   {
    "id": "font.cabinet_regular",
    "file": "fonts/CabinetGrotesk-Regular.otf",
    "family": "Cabinet Grotesk",
+   "class": "grotesk",
    "weight": 400,
    "italic": false,
    "roles": [
@@ -986,12 +1200,17 @@
     "eur": true
    },
    "readability": "text",
-   "licence": "FFL"
+   "licence": "FFL",
+   "contrast": "low",
+   "width": "normal",
+   "x_height": 0.716,
+   "tabular_digits": false
   },
   {
    "id": "font.cabinet_medium",
    "file": "fonts/CabinetGrotesk-Medium.otf",
    "family": "Cabinet Grotesk",
+   "class": "grotesk",
    "weight": 500,
    "italic": false,
    "roles": [
@@ -1007,12 +1226,17 @@
     "eur": true
    },
    "readability": "text",
-   "licence": "FFL"
+   "licence": "FFL",
+   "contrast": "low",
+   "width": "normal",
+   "x_height": 0.722,
+   "tabular_digits": false
   },
   {
    "id": "font.cabinet_bold",
    "file": "fonts/CabinetGrotesk-Bold.otf",
    "family": "Cabinet Grotesk",
+   "class": "grotesk",
    "weight": 700,
    "italic": false,
    "roles": [
@@ -1032,12 +1256,17 @@
     "eur": true
    },
    "readability": "display",
-   "licence": "FFL"
+   "licence": "FFL",
+   "contrast": "low",
+   "width": "normal",
+   "x_height": 0.727,
+   "tabular_digits": false
   },
   {
    "id": "font.cabinet_extrabold",
    "file": "fonts/CabinetGrotesk-Extrabold.otf",
    "family": "Cabinet Grotesk",
+   "class": "grotesk",
    "weight": 800,
    "italic": false,
    "roles": [
@@ -1055,12 +1284,17 @@
     "eur": true
    },
    "readability": "display",
-   "licence": "FFL"
+   "licence": "FFL",
+   "contrast": "low",
+   "width": "normal",
+   "x_height": 0.731,
+   "tabular_digits": false
   },
   {
    "id": "font.panchang_bold",
    "file": "fonts/Panchang-Bold.otf",
    "family": "Panchang",
+   "class": "geometric",
    "weight": 700,
    "italic": false,
    "roles": [
@@ -1078,12 +1312,17 @@
     "eur": true
    },
    "readability": "display",
-   "licence": "FFL"
+   "licence": "FFL",
+   "contrast": "low",
+   "width": "extended",
+   "x_height": 0.748,
+   "tabular_digits": false
   },
   {
    "id": "font.panchang_extrabold",
    "file": "fonts/Panchang-Extrabold.otf",
    "family": "Panchang",
+   "class": "geometric",
    "weight": 800,
    "italic": false,
    "roles": [
@@ -1101,12 +1340,17 @@
     "eur": true
    },
    "readability": "display",
-   "licence": "FFL"
+   "licence": "FFL",
+   "contrast": "low",
+   "width": "extended",
+   "x_height": 0.758,
+   "tabular_digits": false
   },
   {
    "id": "font.frantically",
    "file": "fonts/Frantically-Regular.ttf",
    "family": "Frantically",
+   "class": "hand",
    "weight": 400,
    "italic": false,
    "roles": [
@@ -1124,12 +1368,17 @@
     "eur": false
    },
    "readability": "display",
-   "licence": "1001Fonts FFC"
+   "licence": "1001Fonts FFC",
+   "contrast": "low",
+   "width": "normal",
+   "x_height": 0.786,
+   "tabular_digits": false
   },
   {
    "id": "font.sprat_light",
    "file": "fonts/Sprat-Light.otf",
    "family": null,
+   "class": "serif",
    "weight": 300,
    "italic": false,
    "roles": [
@@ -1142,12 +1391,15 @@
    ],
    "coverage": null,
    "readability": "display",
-   "licence": "OFL (Collletttivo)"
+   "licence": "OFL (Collletttivo)",
+   "contrast": "medium",
+   "width": "normal"
   },
   {
    "id": "font.sprat_regular",
    "file": "fonts/Sprat-Regular.otf",
    "family": null,
+   "class": "serif",
    "weight": 400,
    "italic": false,
    "roles": [
@@ -1160,12 +1412,15 @@
    ],
    "coverage": null,
    "readability": "display",
-   "licence": "OFL (Collletttivo)"
+   "licence": "OFL (Collletttivo)",
+   "contrast": "medium",
+   "width": "normal"
   },
   {
    "id": "font.sprat_bold",
    "file": "fonts/Sprat-Bold.otf",
    "family": null,
+   "class": "serif",
    "weight": 700,
    "italic": false,
    "roles": [
@@ -1179,12 +1434,15 @@
    ],
    "coverage": null,
    "readability": "display",
-   "licence": "OFL (Collletttivo)"
+   "licence": "OFL (Collletttivo)",
+   "contrast": "medium",
+   "width": "normal"
   },
   {
    "id": "font.necto_mono",
    "file": "fonts/NectoMono-Regular.otf",
    "family": null,
+   "class": "mono",
    "weight": 400,
    "italic": false,
    "roles": [
@@ -1204,12 +1462,15 @@
    ],
    "coverage": null,
    "readability": "text",
-   "licence": "OFL (Collletttivo)"
+   "licence": "OFL (Collletttivo)",
+   "contrast": "low",
+   "width": "normal"
   },
   {
    "id": "font.mazius_display",
    "file": "fonts/MaziusDisplay-Regular.otf",
    "family": null,
+   "class": "serif",
    "weight": 400,
    "italic": false,
    "roles": [
@@ -1223,12 +1484,15 @@
    ],
    "coverage": null,
    "readability": "display",
-   "licence": "OFL (Collletttivo)"
+   "licence": "OFL (Collletttivo)",
+   "contrast": "high",
+   "width": "normal"
   },
   {
    "id": "font.mazius_display_italic",
    "file": "fonts/MaziusDisplay-Italic.otf",
    "family": null,
+   "class": "serif",
    "weight": 400,
    "italic": true,
    "roles": [
@@ -1239,7 +1503,9 @@
    ],
    "coverage": null,
    "readability": "display",
-   "licence": "OFL (Collletttivo)"
+   "licence": "OFL (Collletttivo)",
+   "contrast": "high",
+   "width": "normal"
   }
  ],
  "legacy_pairings": {
@@ -1771,5 +2037,247 @@
  },
  "substitutes": {
   "font.necto_mono": "font.plex_mono"
+ },
+ "restricted_fallbacks_notes": "Faces whose licences forbid redistribution (assets/fonts/RESTRICTED.md) are fetched per user with scripts/fetch_fonts.sh. When such a file is missing, every loader (typography availability, validation, the text engine) reads its open fallback from the same folder instead. Scene JSON keeps the original face, so compiled output does not depend on which files exist; only the glyphs drawn do.",
+ "restricted_fallbacks": {
+  "fonts/Satoshi-Light.otf": "fonts/Lato-Regular.ttf",
+  "fonts/Satoshi-Regular.otf": "fonts/Lato-Regular.ttf",
+  "fonts/Satoshi-Medium.otf": "fonts/Lato-Regular.ttf",
+  "fonts/Satoshi-Bold.otf": "fonts/Lato-Bold.ttf",
+  "fonts/CabinetGrotesk-Light.otf": "fonts/FiraSans-Regular.ttf",
+  "fonts/CabinetGrotesk-Regular.otf": "fonts/FiraSans-Regular.ttf",
+  "fonts/CabinetGrotesk-Medium.otf": "fonts/Barlow-Medium.ttf",
+  "fonts/CabinetGrotesk-Bold.otf": "fonts/Poppins-Bold.ttf",
+  "fonts/CabinetGrotesk-Extrabold.otf": "fonts/ArchivoBlack-Regular.ttf",
+  "fonts/ClashDisplay-Medium.otf": "fonts/Poppins-Medium.ttf",
+  "fonts/ClashDisplay-Semibold.otf": "fonts/Poppins-Bold.ttf",
+  "fonts/ClashDisplay-Bold.otf": "fonts/ArchivoBlack-Regular.ttf",
+  "fonts/Panchang-Bold.otf": "fonts/Poppins-ExtraBold.ttf",
+  "fonts/Panchang-Extrabold.otf": "fonts/Poppins-Black.ttf",
+  "fonts/Zodiak-Thin.otf": "fonts/InstrumentSerif-Regular.ttf",
+  "fonts/Zodiak-Light.otf": "fonts/InstrumentSerif-Regular.ttf",
+  "fonts/Zodiak-LightItalic.otf": "fonts/InstrumentSerif-Italic.ttf",
+  "fonts/Zodiak-Regular.otf": "fonts/DMSerifDisplay-Regular.ttf",
+  "fonts/Zodiak-Italic.otf": "fonts/DMSerifDisplay-Italic.ttf",
+  "fonts/Zodiak-Bold.otf": "fonts/DMSerifDisplay-Regular.ttf",
+  "fonts/Frantically-Regular.ttf": "fonts/ZillaSlab-SemiBoldItalic.ttf"
+ },
+ "pairings": [
+  {
+   "id": "satoshi_editorial",
+   "emotion": "precision",
+   "use_for": {
+    "summary": "modern editorial, tech explainers, startups",
+    "temperaments": [
+     "restrained",
+     "editorial",
+     "precise",
+     "energetic"
+    ]
+   },
+   "roles": {
+    "display": "font.satoshi_bold",
+    "display_condensed": "font.satoshi_bold",
+    "serif_emotional": "font.instrument_serif_italic",
+    "body": "font.satoshi_medium",
+    "mono": "font.plex_mono",
+    "number": "font.lato_bold"
+   }
+  },
+  {
+   "id": "clash_cabinet",
+   "emotion": "energy",
+   "use_for": {
+    "summary": "creator/hype, announcements, product",
+    "temperaments": [
+     "editorial",
+     "precise",
+     "energetic"
+    ]
+   },
+   "roles": {
+    "display": "font.clash_semibold",
+    "display_condensed": "font.clash_semibold",
+    "serif_emotional": "font.dm_serif_italic",
+    "body": "font.cabinet_medium",
+    "mono": "font.space_mono",
+    "number": "font.archivo_black"
+   }
+  },
+  {
+   "id": "zodiak_documentary",
+   "emotion": "trust",
+   "use_for": {
+    "summary": "culture, history, long-form documentary",
+    "temperaments": [
+     "restrained",
+     "editorial",
+     "precise"
+    ]
+   },
+   "roles": {
+    "display": "font.zodiak_bold",
+    "display_condensed": "font.zodiak_bold",
+    "serif_emotional": "font.zodiak_italic",
+    "body": "font.satoshi_regular",
+    "mono": "font.plex_mono",
+    "number": "font.lato_bold"
+   }
+  },
+  {
+   "id": "slab_news",
+   "emotion": "warmth",
+   "use_for": {
+    "summary": "warm news, local stories, explainers",
+    "temperaments": [
+     "restrained",
+     "editorial",
+     "precise"
+    ]
+   },
+   "roles": {
+    "display": "font.zilla_slab_bold",
+    "display_condensed": "font.zilla_slab_bold",
+    "serif_emotional": "font.zilla_slab_semibold_italic",
+    "body": "font.lato",
+    "mono": "font.plex_mono",
+    "number": "font.lato_bold"
+   }
+  },
+  {
+   "id": "instrument_cinema",
+   "emotion": "calm",
+   "use_for": {
+    "summary": "slow cinematic, essays, luxury",
+    "temperaments": [
+     "restrained",
+     "editorial"
+    ]
+   },
+   "roles": {
+    "display": "font.instrument_serif",
+    "display_condensed": "font.barlow_condensed_semibold",
+    "serif_emotional": "font.instrument_serif_italic",
+    "body": "font.satoshi_medium",
+    "mono": "font.space_mono",
+    "number": "font.lato_bold"
+   },
+   "display_min_height_frac": 0.08
+  }
+ ],
+ "usage": {
+  "standard": {
+   "editorial": [
+    "zodiak_documentary",
+    "slab_news",
+    "satoshi_editorial",
+    "instrument_cinema"
+   ],
+   "technical": [
+    "satoshi_editorial",
+    "slab_news",
+    "clash_cabinet"
+   ],
+   "playful": [
+    "clash_cabinet",
+    "slab_news",
+    "satoshi_editorial"
+   ],
+   "classic": [
+    "satoshi_editorial",
+    "slab_news",
+    "clash_cabinet"
+   ]
+  },
+  "documentary": {
+   "editorial": [
+    "zodiak_documentary",
+    "instrument_cinema"
+   ],
+   "technical": [
+    "slab_news",
+    "satoshi_editorial"
+   ],
+   "playful": [
+    "slab_news",
+    "clash_cabinet"
+   ],
+   "classic": [
+    "zodiak_documentary",
+    "slab_news"
+   ]
+  },
+  "street": {
+   "editorial": [
+    "clash_cabinet"
+   ],
+   "technical": [
+    "clash_cabinet"
+   ],
+   "playful": [
+    "clash_cabinet"
+   ],
+   "classic": [
+    "clash_cabinet"
+   ]
+  },
+  "hype": {
+   "editorial": [
+    "clash_cabinet",
+    "satoshi_editorial"
+   ],
+   "technical": [
+    "clash_cabinet",
+    "satoshi_editorial"
+   ],
+   "playful": [
+    "clash_cabinet",
+    "satoshi_editorial"
+   ],
+   "classic": [
+    "clash_cabinet",
+    "satoshi_editorial"
+   ]
+  },
+  "studio": {
+   "editorial": [
+    "satoshi_editorial",
+    "clash_cabinet"
+   ],
+   "technical": [
+    "satoshi_editorial",
+    "clash_cabinet"
+   ],
+   "playful": [
+    "satoshi_editorial",
+    "clash_cabinet"
+   ],
+   "classic": [
+    "satoshi_editorial",
+    "clash_cabinet"
+   ]
+  },
+  "cinematic": {
+   "editorial": [
+    "instrument_cinema",
+    "satoshi_editorial",
+    "zodiak_documentary"
+   ],
+   "technical": [
+    "instrument_cinema",
+    "satoshi_editorial",
+    "zodiak_documentary"
+   ],
+   "playful": [
+    "instrument_cinema",
+    "satoshi_editorial",
+    "zodiak_documentary"
+   ],
+   "classic": [
+    "instrument_cinema",
+    "satoshi_editorial",
+    "zodiak_documentary"
+   ]
+  }
  }
 }

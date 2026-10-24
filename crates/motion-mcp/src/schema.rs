@@ -54,6 +54,9 @@ pub fn tool_defs(p: Profile, allow_scene_edits: bool) -> Vec<ToolDef> {
 /// The definition of one tool in a profile (also for tools the profile does
 /// not list, which callers should not do).
 pub fn tool_def(p: Profile, name: &'static str) -> ToolDef {
+    if p == Profile::V2 {
+        return crate::v2::tool_def(name);
+    }
     let (description, input_schema) = match name {
         profile::MAKE_VIDEO => (MAKE_VIDEO_DESC, make_video_schema(p)),
         profile::REVISE_VIDEO => (REVISE_VIDEO_DESC, revise_video_schema(p)),

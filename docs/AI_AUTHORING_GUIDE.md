@@ -15,6 +15,38 @@ Validate your JSON against the schema before you hand it over.
 
 ---
 
+## 0. The shortest path: a brief (v2)
+
+`motion-engine make --brief "..."` (MCP `make_video` with `--profile v2`) needs no JSON. Write
+direction and content in plain lines:
+- Direction steers and never appears on screen: length ("15 s"), aspect ("vertical", "16:9"),
+  energy ("dynamic", "calm"), "go all out".
+- Content is what the viewer reads: put exact on-screen words in quotes; give numbers with their
+  meaning ("31k orders in July"); one claim per line. The first line is the title when it is content.
+- The engine plans one technique per bar on the music's beats, derives claims ("UP 2.6×") instead of
+  copying your sentences, and never shows meta text. Check `qa` in the reply: `pass`, or the ids of
+  the mistake-ledger gates that still fail.
+The rest of this guide is the CreativeIntent contract, which `make --intent` also accepts.
+
+### 0b. MotionProgram: layering and plate-less sketches (v2.2)
+
+When you write a MotionProgram directly:
+- **`over: "<id>"`** on any component composites it above that component (drawn above it whatever
+  the declaration order) and exempts exactly that pair from `component_overlap`. Use it for a
+  spiral over a page, a sun behind ridges (`ridges` `over` `sun`), a doodle over a word. The target
+  must exist, be another component, share screen time, and `over` chains must not loop. Only a
+  sketch, shape, photo_stack, backdrop or field may carry `over`; type is never layered over
+  something else. Every other overlap is still a defect.
+- **Sketch `plate: false`** drops the drafting plate (border, paper ground, title bar): only the
+  strokes are drawn, on a transparent box, so the sketch can sit `over` a title, photo_stack or
+  chart. A plate-less sketch takes no `title`/`caption` (use a `title` component). Default `true`.
+- **Sketch `size`**: `s` (0.6×), `m` (default box), `l` (1.15×), `xl` (nearly the whole frame,
+  centred; element coordinates then read as frame positions).
+- **Sketch `beat_cuts`** must be ≥ 1; omit it to stagger the elements evenly over the shot.
+- Occlusion inside a sketch: later elements draw above earlier ones. For ridges that hide what is
+  behind them, give each ridge a `polygon` closed to the bottom with `wash` in the ground colour,
+  then its `spline` stroke. See `examples/v2/layered_sketch.program.json`.
+
 ## 1. File structure
 
 ```json
@@ -133,6 +165,8 @@ In `reveal`, an optional `secondary` is shown small beneath the statement. In `e
 - **phrase**: words. Use for names and short claims.
 - **number**: a figure. It is displayed exactly as written, so format it the way it should look (`"12,500"`, `"-27%"`, `"3.5 km"`).
 - **object**: a pictured thing, named as a short lowercase snake_case noun (`piggy_bank`, `alarm_clock`, `coffee_cup`, `retro_tv`). The engine looks it up in its asset library (≈ 630 objects, figures and icons across 10 families); a name with no picture is shown as text (the object's `meaning`, else the name), so concrete everyday nouns are always safe. Give `meaning` in 1–3 words.
+
+  Named library pictures (the loose pictures in `assets/library/`): `airport_toll_barrier`, `bank_fee_vault`, `building`, `capital_gains_tax_stamp`, `car_co2_penalty_stamp`, `construction_permit_scaffold`, `craftsman_house`, `electric_grid_pylon`, `employer_payroll_briefcase`, `excise_tax_stamp_barrel`, `family_walk`, `flag_australia`, `flag_canada`, `flag_france`, `flag_germany`, `flag_india`, `flag_japan`, `flag_netherlands`, `flag_norway`, `flag_nz`, `flag_singapore`, `flag_south_korea`, `flag_sweden`, `flag_switzerland`, `flag_uae`, `flag_uk`, `flag_us`, `fuel_pump_nozzle_tax`, `golden_nest_egg`, `government_revenue_stamp`, `hydro_power_turbine`, `inheritance_tax_deed`, `inherited_family_home`, `kindergarten_building`, `mortgage_vault`, `nuclear_cooling_tower`, `payroll_payslip_stack`, `pos_terminal_card`, `property_deed_stamp_toll`, `smartphone`, `stealth_tax_iceberg`, `stock_portfolio_ledger`, `subsidy_balance_scale`, `suburban_home_tax_barrier`, `superannuation_vault_piggy`, `surgery_wait_clock`, `surgical_tax_receipt`, `tax_deduction_ledger`, `telecom_5g_tower`, `terminal_luggage_trolley`, `wifi_signal`, `wind_turbine_generator`, `wooden_alphabet_blocks`, `zoning_permit_blueprint`.
 
 If `value` is missing, `meaning` is displayed instead. `meaning` also appears as a small label on the beat and is the default background keyword.
 
@@ -265,7 +299,9 @@ Data stories (prices, rates, scores per country, team or product) need no specia
 Three rules keep these stories honest; the compiler warns when they are broken, and `make_video` with `mode: check` lists the warnings before you render:
 
 1. **Every picture is named in its own beat's narration.** A flag on the intro beat whose narration never says the country (`warning[unnamed_picture]`) appears before the viewer knows why. Put the picture on the beat that names it.
-2. **A `keyword` is a word the narrator says in that beat.** Documentary stamps and street tags slam on the spoken word; a keyword the narrator never says is not stamped.
+
+**Symbols in display text.** `≠` in a headline, keyword or figure is set as `IS NOT` on its own line (`INCOME / IS NOT / WEALTH`): heavy display faces draw it as a hairline or lack it. The compiler warns `display_symbol_substituted`. Labels and mono text keep `≠`. Write `vs` never for inequality (it means contest); write the words yourself if you want a different phrasing.
+2. **A `keyword` is a word the narrator says in that beat.** Documentary stamps and street tags slam on the spoken word; a keyword the narrator never says is not stamped. With the `hype` tone every cut lands on its spoken word: a statement the narrator never says is not slammed (at most one small title opens the beat), and a keyword is slammed only on the payoff or an impact beat where it is the spoken stress and new (not a word of the statement or the figure), at most one per three beats.
 3. **The numbers on screen are the numbers said.** Write the narration to say the figure the card shows: "$127" with "a hundred and twenty-seven dollars", "4.1%" with "four point one percent". Then the figure lands on its word.
 
 ## 5. Relationship: how primary and secondary relate
@@ -367,7 +403,7 @@ Five optional style fields let you steer the whole design with a few words. The 
 |---|---|---|---|
 | `street` | music, sports, street culture, hype about places | the picture owns ~75 % of the frame, a giant stencil word behind it, tape strips, a sticker, halftone photo grounds, camera shake and colour flashes on the hits. With `"polarity": "light"` it becomes a paper poster: red web, red banner headline, object from the top and a person at the bottom | an `object` (or a delivered photo/cutout) per beat; environment photos make it richer |
 | `documentary` | explainers about money, history, science, facts (Vox style) | evidence documents on a desk: clipping with redacted lines, taped photo, a figure card with a drawn underline, a stamp and a highlighter; slow 3D camera with depth of field | numbers or `$`/`%` values in `primary`, a picture per beat |
-| `hype` | 10–20 s openers, punchy lists | every beat becomes fast hard cuts, one or two words (or the picture) slamming in, colour inversions, shake and glitch | short statements, strong keywords |
+| `hype` | 10–20 s openers, punchy lists | every beat becomes fast hard cuts, one or two words (or the picture) slamming in, colour inversions, shake and glitch | short statements the narrator says, strong keywords |
 | `studio` | creator / brand storytelling | one big cutout (best a person) over a bold colour disc on a clean studio ground; the spoken words appear large behind the subject's head as they are said (no subtitle bar) | a person picture per beat (delivered cutout) and a `narration` per beat |
 | `cinematic` | tech, science, space, big-idea trailers | a true 3D scene per beat: the camera flies in out of a blur, racks focus from a giant background word to the hero, then dollies, trucks, cranes or orbits through depth planes (glow, dust, a prop, the hero, the title, foreground bokeh) and flies through into the next beat with a zoom-blur light burst; a `collection` primary of 3–6 items becomes a turning sphere where each item comes into focus in turn | an `object` per beat (`primary`, plus a `secondary` object as the midground prop); a short `statement` |
 
@@ -470,3 +506,46 @@ If you want something "bigger", "faster" or "more dramatic", express it through 
 What happens: "40 min" appears as the hero of beat 1 and carries into beat 2, where it becomes the side that gets replaced by "6 min". Beat 3 arrives with an accent-color transition and reveals "6.7x".
 
 To compile and render your file, see `docs/CLI_CONSUMER_GUIDE.md`.
+
+## 12. MotionProgram type styles (v2.2)
+
+`title` and `kinetic_text` components take an optional `style` (schema: `TypeStyle`). Leave it out for today's look; an absent style lowers byte-identically.
+
+```json
+"style": {
+  "fill": { "kind": "image", "image": "library/grounds/sky_gradient.png" },
+  "outline": false,
+  "case": "as_written"
+}
+```
+
+- **`fill`** — `{"kind": "solid"}` (default: the component colour); `{"kind": "gradient", "from": "accent", "to": "ink", "angle_deg": 0}` (two different swatches, run across the line's measured box; 0 = left to right, 90 = top to bottom; each end is the swatch as type on that ground); `{"kind": "image", "image": "<path under assets/>"}` (a .png/.jpg/.webp cover-fit to the line's box and seen only through the glyphs). A missing image, a path with `..` or a non-raster file is a validation error. Validation looks the image up under `assets/` in the working directory and in the repository's own `assets/`; a custom `--assets` root is not consulted yet, so keep type images in the repository library.
+- **`outline: true`** — the glyphs are stroked (width 2.5 % of the font size, at least 2 px) in the fill instead of filled.
+- **`case`** — `preset` (the preset's case: label, chapter, stacked and poster cuts set capitals), `as_written`, or `upper`.
+- **Title `size: "xl"`** in a wide slot (centre, top, bottom: slot width ≥ 55 % of the frame) is a poster line: the measured line spans 66 % of the frame width (a word of 4–8 letters always spans ≥ 55 %), at most 62 % of the frame height, and never smaller than its previous size (long lines keep the full slot measure). Use it for one giant word. In narrower slots (left/right, lead/trail in 16:9) `xl` keeps its previous size inside the slot's measure.
+- **Legibility:** the contrast gate (`design.ink_contrast`) judges a gradient on its worst stop against the ground behind it, and an image fill on the median-luminance pixel the glyphs actually show. If fewer than 8 sampled glyph pixels differ from the ground, the word counts as invisible and fails. So pick an image whose tones contrast with the ground (a light sky photo on cobalt reads); an image whose tones match the ground (the same sky on a pale blue-grey ground) fails `ink_contrast`, like any low-contrast type.
+
+Example: `examples/v2/type_styles.program.json` (an image-filled word on cobalt, a gradient word, an outline word, a mixed-case title).
+
+## 13. Generated images: `assets` and `gen:` (v2.3)
+
+A MotionProgram may ask for images that do not exist yet. List them in `assets` and name them as `"gen:<id>"` in any image path field:
+
+```json
+"assets": [
+  { "id": "sea_spray", "prompt": "macro photograph of ocean spray droplets frozen mid-air over a deep teal wave, crisp, high contrast, backlit", "kind": "plate", "seed": 7 }
+],
+"components": [
+  { "id": "word", "kind": "title", "text": "Spray", "size": "xl", "slot": "center",
+    "style": { "fill": { "kind": "image", "image": "gen:sea_spray" }, "case": "upper" } },
+  { "id": "bg", "kind": "backdrop", "preset": "flat", "image": "gen:sea_spray", "image_opacity": 0.4 }
+]
+```
+
+- **`id`** lowercase letters, digits and `_`, unique. **`prompt`** 3–120 words: subject, medium, light; no on-screen words. **`seed`** is explicit: the same prompt and seed give the same image.
+- **`kind`**: `plate` (a full-frame picture: a backdrop image or an image seen through type; default aspect = the program's) or `cutout` (one isolated object on a transparent background, keyed from a magenta ground; default aspect 1:1). A cutout may go anywhere a plate goes.
+- **Where `gen:` works:** `backdrop.image` and `style.fill.image` (type). `photo_stack` places bundled library cutouts by name; `gen:` there is a validation error for now.
+- **Resolution:** `motion-engine program assets <program>` makes each image (OpenArt GPT Image 2.5 low when connected and allowed, the local MOSS server otherwise, 0 credits) and pins it in `<stem>.assets.lock.json` beside the program (provider, model, seed, prompt hash, sha256, cache path). `program render` runs it first (`--offline` only checks the lockfile). `program validate|compile|qa` read the lockfile and never call a model: a `gen:` id with no intact lockfile entry is a validation error ("run `program assets`"). Files live in the user cache (`~/.cache/motionengine/assets`), never in git; the lockfile is not committed either.
+- Changing an asset's prompt, kind, aspect or seed makes a new image on the next `program assets`.
+
+Example: `examples/v2/gen_assets.program.json` (an image-filled giant word and a backdrop plate; needs `program assets`, i.e. the MOSS server running or OpenArt connected).

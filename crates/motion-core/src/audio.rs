@@ -17,9 +17,17 @@ use crate::compiler::taste::{
     CompositionRhythm, DensityLevel, ResolvedStyleProfile, TemperamentKind, TransitionFamily,
 };
 use crate::intent::Energy;
-use crate::reference::evidence::{round_ms, Fnv64};
+use crate::reference::evidence::round_ms;
 use crate::scene::{MotionProject, Scene};
 use crate::speech::SpeechMap;
+
+mod cues;
+pub use cues::{
+    hero_land, is_count_tick, palette_file, palette_for, plan_cues, CueInputs, Palette,
+    PaletteFile, RoleLufs, SpeakingLufs, VoiceLevels, BREATH, COUNT_MAX_PER_S, COUNT_MIN_GAP,
+    COUNT_PEAK_PER_S, COUNT_SETTLE_CLEAR, FAMILY_SHARE, JITTER_DB, PEAK_CEILING_DB, SHARE_MIN_CUES,
+    SMALL_PER_BEAT, VARIETY_WINDOW,
+};
 
 pub const SFX_LIBRARY_VERSION: &str = "0.1";
 pub const SFX_CURATION_VERSION: &str = "0.1";
@@ -438,7 +446,7 @@ pub const BED_LRA_COMPRESS_LU: f64 = 10.0;
 
 /// (0.23) Where the music bed sits relative to the voice-over (dB, negative =
 /// under the voice's integrated loudness), and how it moves between those
-/// levels. The look table is [`MixLevels::for_style`]; the owner's listening
+/// levels. The look table is [`MixLevels::for_style`]; the listening
 /// pass tunes the numbers here, never the code.
 #[derive(Debug, Clone, Copy, PartialEq, Serialize, Deserialize)]
 pub struct MixLevels {
@@ -462,12 +470,12 @@ pub struct MixLevels {
 impl MixLevels {
     /// The default table (plan §3 W5a): bed 18 dB under the voice while it
     /// speaks, 10 dB under in long gaps, 4 dB under before / after the
-    /// narration, SFX at most 6 dB under.
+    /// narration, SFX at most 12 dB under (0.24 M7; was 6).
     pub const STANDARD: MixLevels = MixLevels {
         under_speech_db: -18.0,
         long_gap_db: -10.0,
         edge_db: -4.0,
-        sfx_under_speech_db: -6.0,
+        sfx_under_speech_db: -12.0,
         long_gap_s: 0.8,
         ramp_down_s: 0.15,
         ramp_up_s: 0.5,
@@ -1204,186 +1212,24 @@ pub fn plan_audio_with_speech(
         None => Vec::new(),
     };
 
-    let mut cands: Vec<Candidate> = Vec::new();
-    let mut counters = Counters::default();
-    let mut first_impact_done = false;
-
     let beats = beat_scenes(project);
-    for (i, scene) in beats.iter().copied().enumerate() {
-        let s = scene.start_seconds;
-        let enter = scene.lifecycle.map(|l| l.enter).unwrap_or(0.0);
-        let energy = beat_energy.get(i).copied().unwrap_or(Energy::Building);
-        counters.reset();
-
-        // open
-        if i == 0 {
-            if let Some(f) = open_family(temperament) {
-                cands.push(make_candidate(
-                    library,
-                    seed,
-                    scene,
-                    CueKind::Open,
-                    f,
-                    f.peak_target_db(),
-                    s + enter,
-                    &mut counters,
-                    format!("open: {} → {}", name_of(&temperament), f.as_str()),
-                ));
-            }
-        }
-
-        // handoff
-        if i >= 1 {
-            let prev_end = beats[i - 1].end_seconds();
-            let t = s + (prev_end - s).max(0.0) / 2.0;
-            if let Some((f, target)) = handoff_cue(transition) {
-                cands.push(make_candidate(
-                    library,
-                    seed,
-                    scene,
-                    CueKind::Handoff,
-                    f,
-                    target,
-                    t,
-                    &mut counters,
-                    format!("handoff: {} → {}", name_of(&transition), f.as_str()),
-                ));
-            }
-        }
-
-        // impact
-        if energy == Energy::Impact {
-            let f = impact_family(temperament, transition);
-            // (Phase 3) With a MusicPlan the hit moves to the nearest downbeat
-            // inside [handoff anchor, S + settle] (the anchor is S + enter for
-            // the first beat), so a hit can land with a snapped handoff.
-            // (0.23 W5c) The downbeats are those of the bed as it plays: the
-            // track's, shifted by the bed's start.
-            let on_beat = match (music, scene.lifecycle) {
-                (Some(_), Some(l)) => {
-                    let lo = if i >= 1 {
-                        let prev_end = beats[i - 1].end_seconds();
-                        (s + (prev_end - s).max(0.0) / 2.0).min(s + l.enter)
-                    } else {
-                        s + l.enter
-                    };
-                    nearest_downbeat(&grid, lo, s + l.settle, s + l.enter)
-                }
-                _ => None,
-            };
-            let impact_t = on_beat.unwrap_or(s + enter);
-            cands.push(make_candidate(
-                library,
-                seed,
-                scene,
-                CueKind::Impact,
-                f,
-                f.peak_target_db(),
-                impact_t,
-                &mut counters,
-                format!(
-                    "impact: {} / {} → {}{}",
-                    name_of(&temperament),
-                    name_of(&transition),
-                    f.as_str(),
-                    if on_beat.is_some() {
-                        " (on downbeat)"
-                    } else {
-                        ""
-                    }
-                ),
-            ));
-            if !first_impact_done {
-                first_impact_done = true;
-                let t = impact_t;
-                let near = cands.iter().any(|c| {
-                    c.family == SfxFamily::Subdrop && (c.time_raw - t).abs() <= 1.0 + 1e-9
-                });
-                if !near {
-                    let f = SfxFamily::Subdrop;
-                    cands.push(make_candidate(
-                        library,
-                        seed,
-                        scene,
-                        CueKind::Impact,
-                        f,
-                        f.peak_target_db(),
-                        t,
-                        &mut counters,
-                        format!("impact: first impact bed → {}", f.as_str()),
-                    ));
-                }
-            }
-        }
-
-        // (0.10 Q) Accent: with a voice-over, the beat's punch word (its first
-        // number, else the payoff word of an impact beat) gets one cue that
-        // peaks ACCENT_LEAD before the word starts — synchronised with the
-        // word without masking it.
-        if let Some(sp) = speech {
-            if let Some((word, t)) = accent_word(sp, i, energy) {
-                let (f, target) = accent_cue(project, temperament);
-                cands.push(make_candidate(
-                    library,
-                    seed,
-                    scene,
-                    CueKind::Information,
-                    f,
-                    target,
-                    t - ACCENT_LEAD,
-                    &mut counters,
-                    format!("accent: '{word}' → {}", f.as_str()),
-                ));
-            }
-        }
-
-        // information
-        if let Some((f, target)) = information_cue(temperament, density) {
-            for a in arrival_times(scene)
-                .into_iter()
-                .take(information_cap(density))
-            {
-                cands.push(make_candidate(
-                    library,
-                    seed,
-                    scene,
-                    CueKind::Information,
-                    f,
-                    target,
-                    s + a,
-                    &mut counters,
-                    format!("information: {} → {}", name_of(&temperament), f.as_str()),
-                ));
-            }
-        }
-    }
-
-    // Candidates without a sound (family missing) or outside the project drop out.
-    let mut live: Vec<AudioCue> = cands
-        .into_iter()
-        .filter_map(|c| c.cue)
-        .filter(|c| c.time >= 0.0 && c.time <= duration)
-        .collect();
-
-    // Collisions: accept in (priority desc, time asc, sound id asc).
-    live.sort_by(|a, b| {
-        b.priority
-            .cmp(&a.priority)
-            .then(a.time.total_cmp(&b.time))
-            .then(a.sound_id.cmp(&b.sound_id))
-    });
     let spacing = min_spacing(taste.rhythm);
-    let mut accepted: Vec<AudioCue> = Vec::new();
-    for c in live {
-        if !c.family.is_bed()
-            && accepted
-                .iter()
-                .any(|a| !a.family.is_bed() && (a.time - c.time).abs() < spacing - 1e-9)
-        {
-            continue;
-        }
-        accepted.push(c);
-    }
+    let accepted = cues::plan_cues(&cues::CueInputs {
+        project,
+        beats: &beats,
+        beat_energy,
+        temperament,
+        density,
+        transition,
+        library,
+        seed,
+        spacing,
+        duration,
+        speech,
+        grid: &grid,
+        has_music: music.is_some(),
+    });
+    let mut accepted = accepted;
     accepted.sort_by(|a, b| {
         a.time
             .total_cmp(&b.time)
@@ -1452,6 +1298,10 @@ fn adjust_for_speech(
     let mut dropped: Vec<usize> = Vec::new();
     for i in 0..cues.len() {
         let cue = cues[i].clone();
+        // Count ticks were placed clear of the onsets by the planner.
+        if is_count_tick(&cue) {
+            continue;
+        }
         let Some(onset) = nearest_onset(&onsets, cue.time) else {
             break;
         };
@@ -1484,6 +1334,7 @@ fn adjust_for_speech(
                         j == i
                             || dropped.contains(&j)
                             || o.family.is_bed()
+                            || is_count_tick(o)
                             || (o.time - t).abs() >= spacing - 1e-9
                     }))
         };
@@ -1569,87 +1420,6 @@ pub fn beat_scenes(project: &MotionProject) -> Vec<&Scene> {
     }
 }
 
-struct Candidate {
-    family: SfxFamily,
-    /// Unrounded time (used for the 1 s subdrop proximity rule).
-    time_raw: f64,
-    cue: Option<AudioCue>,
-}
-
-/// Per-scene ordinal counters per cue kind.
-#[derive(Default)]
-struct Counters {
-    open: u64,
-    handoff: u64,
-    information: u64,
-    impact: u64,
-}
-
-impl Counters {
-    fn reset(&mut self) {
-        *self = Counters::default();
-    }
-    fn next(&mut self, kind: CueKind) -> u64 {
-        let slot = match kind {
-            CueKind::Open => &mut self.open,
-            CueKind::Handoff => &mut self.handoff,
-            CueKind::Information => &mut self.information,
-            CueKind::Impact => &mut self.impact,
-        };
-        let v = *slot;
-        *slot += 1;
-        v
-    }
-}
-
-fn name_of<T: std::fmt::Debug>(v: &T) -> String {
-    format!("{v:?}").to_lowercase()
-}
-
 fn round1(x: f64) -> f64 {
     (x * 10.0).round() / 10.0
-}
-
-#[allow(clippy::too_many_arguments)]
-fn make_candidate(
-    library: &SfxLibrary,
-    seed: u64,
-    scene: &Scene,
-    kind: CueKind,
-    family: SfxFamily,
-    target_db: f64,
-    time: f64,
-    counters: &mut Counters,
-    reason: String,
-) -> Candidate {
-    let ordinal = counters.next(kind);
-    let sounds = library.family(family);
-    let cue = if sounds.is_empty() {
-        None
-    } else {
-        let mut h = Fnv64::default();
-        h.write(&seed.to_le_bytes());
-        h.write(scene.id.as_bytes());
-        h.write(&[0xff]);
-        h.write(kind.as_str().as_bytes());
-        h.write(&[0xff]);
-        h.write(&ordinal.to_le_bytes());
-        let idx = (h.finish() % sounds.len() as u64) as usize;
-        let sound = sounds[idx];
-        Some(AudioCue {
-            time: round_ms(time),
-            scene: scene.id.clone(),
-            kind,
-            family,
-            sound_id: sound.id.clone(),
-            gain_db: round1((target_db - sound.peak_db).clamp(MIN_GAIN_DB, MAX_GAIN_DB)),
-            priority: kind.priority(),
-            reason,
-        })
-    };
-    Candidate {
-        family,
-        time_raw: time,
-        cue,
-    }
 }

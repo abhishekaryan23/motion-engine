@@ -1,0 +1,71 @@
+{
+ "id": "beats_dropped",
+ "kind": "beats",
+ "track": [
+  "driving_pulse",
+  0.107
+ ],
+ "program": {
+  "version": "2.0",
+  "meta": {
+   "name": "fixture",
+   "duration": 2.953
+  },
+  "palette": {
+   "background": "#F2EEE6",
+   "ink": "#111111",
+   "accent": "#E04A12",
+   "muted": "#6B6B6B"
+  },
+  "components": [
+   {
+    "id": "k",
+    "kind": "kinetic_text",
+    "words": [
+     "ONE",
+     "TWO",
+     "END"
+    ],
+    "start_beat": 0,
+    "beat_cuts": 1
+   }
+  ],
+  "music": {
+   "track": "driving_pulse",
+   "start": 0.107
+  }
+ },
+ "fixed": {
+  "version": "2.0",
+  "meta": {
+   "name": "fixture",
+   "duration": 3.0,
+   "end_beat": 4
+  },
+  "palette": {
+   "background": "#F2EEE6",
+   "ink": "#111111",
+   "accent": "#E04A12",
+   "muted": "#6B6B6B"
+  },
+  "components": [
+   {
+    "id": "k",
+    "kind": "kinetic_text",
+    "words": [
+     "ONE",
+     "TWO",
+     "THREE",
+     "FOUR",
+     "END"
+    ],
+    "start_beat": 0,
+    "beat_cuts": 1
+   }
+  ],
+  "music": {
+   "track": "driving_pulse",
+   "start": 0.107
+  }
+ }
+}

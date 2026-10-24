@@ -1,0 +1,505 @@
+{
+ "version": "1",
+ "entries": [
+  {
+   "id": "echo_brief",
+   "description": "Words copied from the brief appear on screen (the prompt is direction, not script).",
+   "owner_note": "Probe prompt put 'Make a dynamic showreel' / 'GO ALL OUT' on screen.",
+   "detector": "echo_brief",
+   "fix_policy": "Drop the echoing text; the bridge re-plans the headline from the brief's meaning.",
+   "repair": "drop_echo",
+   "checks": "program",
+   "fixture": "assets/qa/fixtures/echo_brief.json"
+  },
+  {
+   "id": "echo_labels",
+   "description": "A caption repeats labels or numbers already on screen (q2, q3, q4, every, 22%).",
+   "owner_note": "board_reel captions spelled q1..q4 and +22% beside the chart that shows them.",
+   "detector": "echo_labels",
+   "fix_policy": "Captions say what the data means, never repeat it; drop echoing caption words.",
+   "repair": "drop_echo",
+   "checks": "program",
+   "fixture": "assets/qa/fixtures/echo_labels.json"
+  },
+  {
+   "id": "meta_text",
+   "description": "Technical or self-referential strings on screen (fps, bpm, track name, engine or program name).",
+   "owner_note": "'24 FPS / 126 BPM', 'DRIVING PULSE', 'BOARD REEL', 'MOTIONENGINE 2' in the corners.",
+   "detector": "meta_text",
+   "fix_policy": "Never render meta; drop the text (HUD corners included).",
+   "repair": "drop_meta",
+   "checks": "program",
+   "fixture": "assets/qa/fixtures/meta_text.json"
+  },
+  {
+   "id": "partial_typing",
+   "description": "A typing reveal is cut by the next shot or holds a partial word (overshoo, dampin, quar).",
+   "owner_note": "Captions shown half-typed at the cut.",
+   "detector": "partial_typing",
+   "fix_policy": "Per-letter delay min(0.05, 0.4·len/n); a word is whole for at least one beat.",
+   "repair": "default",
+   "checks": "scene",
+   "fixture": "assets/qa/fixtures/partial_typing.json"
+  },
+  {
+   "id": "text_clipped",
+   "description": "Text cut by the frame or a mask, or outside the 5 % title-safe inset.",
+   "owner_note": "'FLOW' and the top mono line run off the left edge.",
+   "detector": "design.text_clipped",
+   "fix_policy": "Ctx::text shifts lines into the safe area; repair: the title steps down a size.",
+   "repair": "design_system",
+   "checks": "rendered",
+   "fixture": "assets/qa/fixtures/text_clipped.json"
+  },
+  {
+   "id": "text_on_texture",
+   "description": "Text shares its value with the pattern under it (black on black halftone).",
+   "owner_note": "Black '+22%' / 'settle' merge into black dots.",
+   "detector": "design.text_on_texture",
+   "fix_policy": "Palette resolver: texture is a shade/tint of its ground (1.08-1.35:1), never the ink; dL texture-ink >= 0.45. Repair: a halftone under the type becomes a grid.",
+   "repair": "design_system",
+   "checks": "rendered",
+   "fixture": "assets/qa/fixtures/text_on_texture.json"
+  },
+  {
+   "id": "pattern_over_solid",
+   "description": "A dot field reads over or through solid shapes (grey dots on grey bars).",
+   "owner_note": "Dots visible over the bars.",
+   "detector": "design.pattern_over_solid",
+   "fix_policy": "Texture is drawn under the content it surrounds (component order); it is never cleared around it.",
+   "repair": "design_system",
+   "checks": "rendered",
+   "fixture": "assets/qa/fixtures/pattern_over_solid.json"
+  },
+  {
+   "id": "meaningless_shape",
+   "description": "Unanchored decorative circle with no relation to content.",
+   "owner_note": "Big orange/blue circles on top of the diagram.",
+   "detector": "validate.slop_meaningless_shape",
+   "fix_policy": "Static shapes must anchor (ring/underline/marker on measured bounds).",
+   "repair": "default",
+   "checks": "program",
+   "fixture": "assets/qa/fixtures/meaningless_shape.json"
+  },
+  {
+   "id": "eyebrow",
+   "description": "A small label or kicker above a hero title or a cliché line (SELECTED WORK, designer / 2026, 3-2-1-GO).",
+   "owner_note": "worlds_reel opening.",
+   "detector": "eyebrow",
+   "fix_policy": "Drop the kicker/cliché component.",
+   "repair": "drop_eyebrow",
+   "checks": "program",
+   "fixture": "assets/qa/fixtures/eyebrow.json"
+  },
+  {
+   "id": "box_behind_type",
+   "description": "A box or panel behind type that is not the content itself.",
+   "owner_note": "v1 cards and panels behind every title.",
+   "detector": "box_behind_type",
+   "fix_policy": "No decorative boxes; cards only where the box is the content (diagram cards).",
+   "repair": "default",
+   "checks": "scene",
+   "fixture": "assets/qa/fixtures/box_behind_type.json"
+  },
+  {
+   "id": "pulse_motion",
+   "description": "Flicker or pulsing to the music.",
+   "owner_note": "Shapes pulsing on every kick.",
+   "detector": "pulse_motion",
+   "fix_policy": "No pulse/shake ops in v2; beat sync is cuts and steps.",
+   "repair": "default",
+   "checks": "scene",
+   "fixture": "assets/qa/fixtures/pulse_motion.json"
+  },
+  {
+   "id": "beats_dropped",
+   "description": "Beats play after the last visual event, or the ending is not a downbeat hit.",
+   "owner_note": "board_reel froze on 'CUT.' for 3 beats while the track ran.",
+   "detector": "beat_coverage",
+   "fix_policy": "Coverage to the full duration, gap <= 1, end_beat on the final downbeat, bed fades on the hit.",
+   "repair": "default",
+   "checks": "program",
+   "fixture": "assets/qa/fixtures/beats_dropped.json"
+  },
+  {
+   "id": "static_layout",
+   "description": "Nothing visibly changes for a beat (or a near-blank frame).",
+   "owner_note": "board_reel 9-11 s, worlds_reel 5.5 / 7.5 s.",
+   "detector": "visible_change",
+   "fix_policy": "Overlap shots; something changes every beat.",
+   "repair": "default",
+   "checks": "rendered",
+   "fixture": null
+  },
+  {
+   "id": "count_unsettled",
+   "description": "A counter still ticking on a held frame, so values disagree (21% vs 22%).",
+   "owner_note": "'+21%' then '+22%' on the same bar.",
+   "detector": "count_unsettled",
+   "fix_policy": "Counts finish with the bar growth (<= 0.4 s) or show the final value.",
+   "repair": "default",
+   "checks": "scene",
+   "fixture": "assets/qa/fixtures/count_unsettled.json"
+  },
+  {
+   "id": "hairline",
+   "description": "Reference hairlines below 3:1 (read as artefacts).",
+   "owner_note": "10 % guides on the dark board.",
+   "detector": "hairline",
+   "fix_policy": "Stroke contrast >= 3:1 or no stroke (design-system session owns the colours).",
+   "repair": "default",
+   "checks": "scene",
+   "fixture": "assets/qa/fixtures/hairline.json"
+  },
+  {
+   "id": "small_composition",
+   "description": "The hero fills too little of the frame (small, centred).",
+   "owner_note": "Charts and diagrams at 10-40 % of the frame.",
+   "detector": "fill",
+   "fix_policy": "Hero area >= 45 % of the frame after the camera.",
+   "repair": "default",
+   "checks": "rendered",
+   "fixture": null
+  },
+  {
+   "id": "reveal_before_speech",
+   "description": "Text revealed before the voice says it (v1 speech-led videos).",
+   "owner_note": "v1 reels showed words early.",
+   "detector": "v1:speech_qa.reveal_before_speech",
+   "fix_policy": "v1 speech planner; v2 has no voice track yet.",
+   "repair": "v1",
+   "checks": "n/a",
+   "fixture": null
+  },
+  {
+   "id": "anticipatory_space",
+   "description": "Empty space kept for content that has not arrived yet (a band for a later row, room for a callout, a hole in a texture before its label).",
+   "owner_note": "Layout must never anticipate: reserved space for elements that haven't arrived feels staged and fake.",
+   "detector": "static:anticipatory_space (lowers the program truncated to what is visible and compares the composition centre just before each arrival; > 3% of the short side fails)",
+   "fix_policy": "Layout follows content: lay out each step from the visible elements only and spring between layouts (flip::follow); arriving elements make their room on arrival; knockouts/clearances arrive with their element.",
+   "repair": "default",
+   "checks": "program",
+   "fixture": "assets/qa/fixtures/anticipatory_space.json"
+  },
+  {
+   "id": "ink_contrast",
+   "description": "Type below its contrast band against the pixels actually behind it (7:1 under 48 px, 4.5:1 display).",
+   "owner_note": "\"The background and the text should be of contrasting colour.\"",
+   "detector": "design.ink_contrast",
+   "fix_policy": "Palette resolver derives ink per ground; layout::enforce_roles sets the role that reads on every backing the run is shown on. Repair: the run goes back to ink.",
+   "repair": "design_system",
+   "checks": "rendered",
+   "fixture": "assets/qa/fixtures/ink_contrast.json"
+  },
+  {
+   "id": "busy_under_type",
+   "description": "The ground under a run of type is busy (OKLab L std-dev > 0.06).",
+   "owner_note": "\"+21%\" half on dots.",
+   "detector": "design.busy_under_type",
+   "fix_policy": "Palette (texture <= 1.35:1) and composition: calm_focus puts a halftone's dense side away from the type, once per shot. Never a local hole. Repair: halftone -> grid.",
+   "repair": "design_system",
+   "checks": "rendered",
+   "fixture": "assets/qa/fixtures/busy_under_type.json"
+  },
+  {
+   "id": "texture_hole",
+   "description": "A texture is cut, cleared or faded around an element (a hole, a band, a ring), soft or hard.",
+   "owner_note": "\"This pattern where we are removing the background designs feels forced and breaks the scene\" (RHYTHM tiles cleared around the title; a band cleared under the curve).",
+   "detector": "design.texture_hole",
+   "fix_policy": "Never clear texture. Legibility comes from the palette (texture <= 1.35:1, ink >= 7:1); a pattern too strong for type is composed once per shot (its sparse side where the type lives) or dimmed uniformly.",
+   "repair": "default",
+   "checks": "rendered",
+   "fixture": "assets/qa/fixtures/texture_hole.json"
+  },
+  {
+   "id": "stroke_contrast",
+   "description": "A stroke or curve below 3:1 against what is behind it (black curve on black dots, faint axes).",
+   "owner_note": "Axes nearly invisible; black curve on black halftone.",
+   "detector": "design.stroke_contrast",
+   "fix_policy": "Axes and base lines are strong structure (>= 3:1) at >= 2 px; enforce_roles lifts strokes below 3:1; texture clears around curves. Repair: the component drops its colour override.",
+   "repair": "design_system",
+   "checks": "rendered",
+   "fixture": "assets/qa/fixtures/stroke_contrast.json"
+  },
+  {
+   "id": "accent_area",
+   "description": "The accent covers more than 10 % of the frame (60-30-10).",
+   "owner_note": "Design-system rule (DESIGN_COLOR_SYSTEM.md).",
+   "detector": "design.accent_area",
+   "fix_policy": "One accent, on the one highlighted thing. Repair: accent shapes step down to m, stressed words lose the accent.",
+   "repair": "design_system",
+   "checks": "rendered",
+   "fixture": "assets/qa/fixtures/accent_area.json"
+  },
+  {
+   "id": "hue_count",
+   "description": "More than 3 hue families in one video.",
+   "owner_note": "Design-system rule (DESIGN_COLOR_SYSTEM.md).",
+   "detector": "design.hue_count",
+   "fix_policy": "Palette resolver hue budget: grounds past three families become neutrals of the same lightness.",
+   "repair": "design_system",
+   "checks": "rendered",
+   "fixture": "assets/qa/fixtures/hue_count.json"
+  },
+  {
+   "id": "contrast_ladder",
+   "description": "A decorative element (texture, hairline) out-contrasts the focal type.",
+   "owner_note": "Design-system rule (DESIGN_COLOR_SYSTEM.md).",
+   "detector": "design.contrast_ladder",
+   "fix_policy": "Texture capped at 1.35:1, decorative structure at 2:1. Repair: the run goes back to ink.",
+   "repair": "design_system",
+   "checks": "rendered",
+   "fixture": "assets/qa/fixtures/contrast_ladder.json"
+  },
+  {
+   "id": "safe_inset",
+   "description": "Settled type outside the 5 % title-safe inset.",
+   "owner_note": "Design-system rule (DESIGN_COLOR_SYSTEM.md).",
+   "detector": "design.safe_inset",
+   "fix_policy": "Ctx::text shifts lines into the safe area. Repair: the title steps down a size.",
+   "repair": "design_system",
+   "checks": "rendered",
+   "fixture": "assets/qa/fixtures/safe_inset.json"
+  },
+  {
+   "id": "text_off_centre_in_container",
+   "description": "A label sits off its container's centre (cap band low, ink off x).",
+   "owner_note": "'the button text is not centred': Hold to send 13.5 px low, Sent 20.5 px low (Ctx::text clamped group-local coords). (UI_KIT_REVIEW, phone_flow/ui_promo a3e7932)",
+   "detector": "ui_gates::text_off_centre_in_container",
+   "fix_policy": "UI labels centre on the cap band (+0.5 px optical drop) and the ink x; Ctx::text never clamps (text_canvas does, top level only).",
+   "repair": "default",
+   "checks": "scene",
+   "fixture": "assets/qa/fixtures/text_off_centre_in_container.json"
+  },
+  {
+   "id": "glyph_fallback",
+   "description": "A character the type faces do not have renders as a fallback (✓ ✔ √ ✗, arrows, emoji).",
+   "owner_note": "'the sent tick is not proper': '✓' drawn by a fallback face. (UI_KIT_REVIEW, phone_flow/ui_promo a3e7932)",
+   "detector": "ui_gates::glyph_fallback",
+   "fix_policy": "Validator bans the glyphs in titles; ticks are UiState.icon: check, a vector path drawn on.",
+   "repair": "default",
+   "checks": "program",
+   "fixture": "assets/qa/fixtures/glyph_fallback.json"
+  },
+  {
+   "id": "camera_dead",
+   "description": "The camera moves but every layer is pinned, so nothing on screen moves.",
+   "owner_note": "Device group sized to the canvas was pinned by pin_grounds; the zoom-to-state never showed. (UI_KIT_REVIEW, phone_flow/ui_promo a3e7932)",
+   "detector": "ui_gates::camera_dead",
+   "fix_policy": "Device groups carry explicit depth and their hardware bounds; pin_grounds skips explicit depth.",
+   "repair": "default",
+   "checks": "scene",
+   "fixture": "assets/qa/fixtures/camera_dead.json"
+  },
+  {
+   "id": "ghost_crossfade",
+   "description": "Two UI states' content visible at once (> 15 % each).",
+   "owner_note": "'Pay' over 'Send to Mira'; old content 64 % visible when the new arrives. (UI_KIT_REVIEW, phone_flow/ui_promo a3e7932)",
+   "detector": "ui_gates::ghost_crossfade",
+   "fix_policy": "Old content leaves in 0.10 s OutCubic; new content arrives after it.",
+   "repair": "default",
+   "checks": "scene",
+   "fixture": "assets/qa/fixtures/ghost_crossfade.json"
+  },
+  {
+   "id": "muddy_state_colour",
+   "description": "A colour change passes through a dull mix (OKLCH L and chroma under both ends).",
+   "owner_note": "Dead grey at 2.07 s, navy at 6.77 s from sRGB-lerped fills. (UI_KIT_REVIEW, phone_flow/ui_promo a3e7932)",
+   "detector": "ui_gates::muddy_state_colour",
+   "fix_policy": "Colour changes are a circular reveal of the new fill from the tap, never a cross-fade or tint lerp.",
+   "repair": "default",
+   "checks": "scene",
+   "fixture": "assets/qa/fixtures/muddy_state_colour.json"
+  },
+  {
+   "id": "content_overflow",
+   "description": "Content spills outside the morphing container.",
+   "owner_note": "Content scaled from 1.06 with no mask outside the container mid-morph. (UI_KIT_REVIEW, phone_flow/ui_promo a3e7932)",
+   "detector": "ui_gates::content_overflow",
+   "fix_policy": "Content groups are masked to the container path on the same spring; enter 0.98 to 1.",
+   "repair": "default",
+   "checks": "scene",
+   "fixture": "assets/qa/fixtures/content_overflow.json"
+  },
+  {
+   "id": "tap_misses_target",
+   "description": "A tap lands outside its shape or within 0.25 h of its edge.",
+   "owner_note": "The cursor clicked outside the button (0.47 w / 0.44 h); 'Ink & grain' tapped for 'Paper cut-out'. (UI_KIT_REVIEW, phone_flow/ui_promo a3e7932)",
+   "detector": "ui_gates::tap_misses_target",
+   "fix_policy": "Taps land inside with margin, on the row the next state names, else the CTA, else clear of the label.",
+   "repair": "default",
+   "checks": "scene",
+   "fixture": "assets/qa/fixtures/tap_misses_target.json"
+  },
+  {
+   "id": "ripple_invisible",
+   "description": "A tap ripple under 3:1 on what it lands on.",
+   "owner_note": "Accent ripple on an accent button. (UI_KIT_REVIEW, phone_flow/ui_promo a3e7932)",
+   "detector": "ui_gates::ripple_invisible",
+   "fix_policy": "The ripple takes the ink role of the tapped fill.",
+   "repair": "default",
+   "checks": "scene",
+   "fixture": "assets/qa/fixtures/ripple_invisible.json"
+  },
+  {
+   "id": "ui_underfill",
+   "description": "A UI state under 15 % of the screen and under 45 % of the frame width once settled.",
+   "owner_note": "A 3.5 %-of-screen button in a giant empty phone. (UI_KIT_REVIEW, phone_flow/ui_promo a3e7932)",
+   "detector": "ui_gates::ui_underfill",
+   "fix_policy": "Real iOS sizes; the camera frames every state (62 % width in 16:9, 80 % in 9:16, 46 % beside type).",
+   "repair": "default",
+   "checks": "scene",
+   "fixture": "assets/qa/fixtures/ui_underfill.json"
+  },
+  {
+   "id": "flat_elevation",
+   "description": "A floating surface with a hairline outline, or with no shadow and under 1.3:1 on the screen.",
+   "owner_note": "Low-contrast grey sheet cut out by a 2 px hairline. (UI_KIT_REVIEW, phone_flow/ui_promo a3e7932)",
+   "detector": "ui_gates::flat_elevation",
+   "fix_policy": "White (or raised) surfaces lifted by the kit's shadow stack; no strokes on containers.",
+   "repair": "default",
+   "checks": "scene",
+   "fixture": "assets/qa/fixtures/flat_elevation.json"
+  },
+  {
+   "id": "dead_tail",
+   "description": "Over 1 s with nothing moving at the end of a UI shot.",
+   "owner_note": "A 3.3 s static tail after 'Hold to send'. (UI_KIT_REVIEW, phone_flow/ui_promo a3e7932)",
+   "detector": "ui_gates::dead_tail",
+   "fix_policy": "Every hold gets a slow monotonic 3 % push; nothing pulses.",
+   "repair": "default",
+   "checks": "scene",
+   "fixture": "assets/qa/fixtures/dead_tail.json"
+  },
+  {
+   "id": "idle_cursor",
+   "description": "The cursor visible and still for over 1 s.",
+   "owner_note": "The cursor idled 3.3 s at the end. (UI_KIT_REVIEW, phone_flow/ui_promo a3e7932)",
+   "detector": "ui_gates::idle_cursor",
+   "fix_policy": "The finger fades between distant taps and leaves 0.4 s after the last one.",
+   "repair": "default",
+   "checks": "scene",
+   "fixture": "assets/qa/fixtures/idle_cursor.json"
+  },
+  {
+   "id": "single_weight_ui",
+   "description": "UI type set in one weight only.",
+   "owner_note": "One heavy weight for everything. (UI_KIT_REVIEW, phone_flow/ui_promo a3e7932)",
+   "detector": "ui_gates::single_weight_ui",
+   "fix_policy": "One UI sans (Satoshi) in two weights: 700 titles and labels, 500 body and rows.",
+   "repair": "default",
+   "checks": "scene",
+   "fixture": "assets/qa/fixtures/single_weight_ui.json"
+  },
+  {
+   "id": "spring_truncated",
+   "description": "A spring cut before it settles to 98 %.",
+   "owner_note": "0.6 s morphs cut to 0.43 s, content springs cut, a 0.3 s press spring. (UI_KIT_REVIEW, phone_flow/ui_promo a3e7932)",
+   "detector": "ui_gates::spring_truncated",
+   "fix_policy": "Steps at least 0.45 s apart; spring durations cover their settle; holds validated against read time.",
+   "repair": "default",
+   "checks": "scene",
+   "fixture": "assets/qa/fixtures/spring_truncated.json"
+  },
+  {
+   "id": "read_time",
+   "description": "A state replaced before it can be read (0.4 s + 0.3 s a line).",
+   "owner_note": "A 4-line card shown 0.47 s; one state per beat. (UI_KIT_REVIEW, phone_flow/ui_promo a3e7932)",
+   "detector": "ui_gates::read_time",
+   "fix_policy": "Validator: every state holds its read time; beats are filled by type, not new states.",
+   "repair": "default",
+   "checks": "scene",
+   "fixture": "assets/qa/fixtures/read_time.json"
+  },
+  {
+   "id": "dead_click",
+   "description": "A tap that changes nothing within 0.5 s.",
+   "owner_note": "Beat 15 clicked and nothing happened. (UI_KIT_REVIEW, phone_flow/ui_promo a3e7932)",
+   "detector": "ui_gates::dead_click",
+   "fix_policy": "Every tap presses its target (morph, row tint) or changes state.",
+   "repair": "default",
+   "checks": "scene",
+   "fixture": "assets/qa/fixtures/dead_click.json"
+  },
+  {
+   "id": "ui_type_scale",
+   "description": "Over 4 UI type sizes, or one role at different sizes.",
+   "owner_note": "Sizes fitted per box; no scale. (UI_KIT_REVIEW, phone_flow/ui_promo a3e7932)",
+   "detector": "ui_gates::ui_type_scale",
+   "fix_policy": "Fixed pt scale 22/17/15/13 (+56 hero number), one size per role.",
+   "repair": "default",
+   "checks": "scene",
+   "fixture": "assets/qa/fixtures/ui_type_scale.json"
+  },
+  {
+   "id": "local_clamp",
+   "description": "Ctx::text moves type inside a group (frame safe-area clamp on group-local coords).",
+   "owner_note": "Labels pushed down inside buttons; also hit chart, diagram and kinetic type. (UI_KIT_REVIEW, phone_flow/ui_promo a3e7932)",
+   "detector": "unit test lower::tests::text_is_group_local",
+   "fix_policy": "Ctx::text is unclamped; Ctx::text_canvas clamps top-level type only.",
+   "repair": "default",
+   "checks": "n/a",
+   "fixture": null
+  },
+  {
+   "id": "pov_mismatch",
+   "description": "System text on the actor's device speaks from the other person's side ('Mira received') or names the actor as a third party.",
+   "owner_note": "phone_flow ended with 'Mira received EUR 24.00' on the sender's own phone. (blueprint, 2026-10-14)",
+   "detector": "flow::copy_problems via ui_gates::pov_mismatch",
+   "fix_policy": "Flows are typed (flow.kind + actor/counterparty): copy is derived from the actor's point of view ('Sent to Mira'); free-text states are validated.",
+   "repair": "default",
+   "checks": "program",
+   "fixture": "assets/qa/fixtures/pov_mismatch.json"
+  },
+  {
+   "id": "duplicate_confirmation",
+   "description": "Two success affordances at once (a tick and a confirming banner, two ticks).",
+   "owner_note": "The 'Sent' pill and the 'received' banner, two ticks together. (blueprint, 2026-10-14)",
+   "detector": "flow::copy_problems via ui_gates::duplicate_confirmation",
+   "fix_policy": "Success resolves in place: button, tick, in-app receipt. A notification only brings later news from the counterparty.",
+   "repair": "default",
+   "checks": "program",
+   "fixture": "assets/qa/fixtures/duplicate_confirmation.json"
+  },
+  {
+   "id": "empty_app_state",
+   "description": "Mid-flow, the screen holds only chrome and one floating element: the app vanished.",
+   "owner_note": "After sending, the phone showed nothing but a floating 'Sent' pill. (blueprint, 2026-10-14)",
+   "detector": "flow::copy_problems via ui_gates::empty_app_state",
+   "fix_policy": "On phones and laptops every state after the first is a card or sheet that keeps the app's context; success transforms it in place.",
+   "repair": "default",
+   "checks": "program",
+   "fixture": "assets/qa/fixtures/empty_app_state.json"
+  },
+  {
+   "id": "orphan_notification",
+   "description": "A notification repeats what the screen already shows (the amount, the same names and words).",
+   "owner_note": "The banner restated the amount and recipient already on screen. (blueprint, 2026-10-14)",
+   "detector": "flow::copy_problems via ui_gates::orphan_notification",
+   "fix_policy": "A notification carries new information (flow.reply: the counterparty's later action) or is left out.",
+   "repair": "default",
+   "checks": "program",
+   "fixture": "assets/qa/fixtures/orphan_notification.json"
+  },
+  {
+   "id": "duplicate_cutout_in_shot",
+   "description": "The same image cutout asset is stamped multiple times inside a single scene/shot.",
+   "owner_note": "WordMorph shots repeated the same cutout at top and bottom-right like clip-art stamps.",
+   "detector": "ledger::static_gates duplicate_cutout_in_shot",
+   "fix_policy": "Each image asset ID may appear at most once per scene; WordMorph pairs at most one cutout per phase.",
+   "repair": "default",
+   "checks": "scene",
+   "fixture": null
+  },
+  {
+   "id": "eyebrow_kicker",
+   "description": "Kicker text inside a component: a bento header above the grid (LAST YEAR, IN NUMBERS) or a lockup pill (EST. 2019) is an eyebrow too",
+   "owner_note": "Kicker text inside a component: a bento header above the grid (LAST YEAR, IN NUMBERS) or a lockup pill (EST. 2019) is an eyebrow too (seen in output/replicate/studio/original.mp4)",
+   "detector": "eyebrow_kicker",
+   "fix_policy": "Drop the kicker text (the bento header, the lockup badge or spec line); keep the component.",
+   "repair": "drop_eyebrow",
+   "checks": "program",
+   "fixture": "assets/qa/fixtures/eyebrow_kicker.json"
+  }
+ ]
+}

@@ -88,7 +88,63 @@ pub struct Beat {
     "if": { "properties": { "kind": { "const": "object" } }, "required": ["kind"] },
     "then": {
         "required": ["asset"],
-        "properties": { "asset": { "type": "string", "enum": ["shopping_basket"] } }
+        "properties": { "asset": { "type": "string", "enum": [
+            "airport_toll_barrier",
+            "bank_fee_vault",
+            "building",
+            "capital_gains_tax_stamp",
+            "car_co2_penalty_stamp",
+            "construction_permit_scaffold",
+            "craftsman_house",
+            "electric_grid_pylon",
+            "employer_payroll_briefcase",
+            "excise_tax_stamp_barrel",
+            "family_walk",
+            "flag_australia",
+            "flag_canada",
+            "flag_france",
+            "flag_germany",
+            "flag_india",
+            "flag_japan",
+            "flag_netherlands",
+            "flag_norway",
+            "flag_nz",
+            "flag_singapore",
+            "flag_south_korea",
+            "flag_sweden",
+            "flag_switzerland",
+            "flag_uae",
+            "flag_uk",
+            "flag_us",
+            "fuel_pump_nozzle_tax",
+            "golden_nest_egg",
+            "government_revenue_stamp",
+            "hydro_power_turbine",
+            "inheritance_tax_deed",
+            "inherited_family_home",
+            "kindergarten_building",
+            "mortgage_vault",
+            "nuclear_cooling_tower",
+            "payroll_payslip_stack",
+            "pos_terminal_card",
+            "property_deed_stamp_toll",
+            "shopping_basket",
+            "smartphone",
+            "stealth_tax_iceberg",
+            "stock_portfolio_ledger",
+            "subsidy_balance_scale",
+            "suburban_home_tax_barrier",
+            "superannuation_vault_piggy",
+            "surgery_wait_clock",
+            "surgical_tax_receipt",
+            "tax_deduction_ledger",
+            "telecom_5g_tower",
+            "terminal_luggage_trolley",
+            "wifi_signal",
+            "wind_turbine_generator",
+            "wooden_alphabet_blocks",
+            "zoning_permit_blueprint"
+        ] } }
     }
 }]))]
 pub struct Subject {
@@ -104,7 +160,8 @@ pub struct Subject {
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub meaning: Option<String>,
     /// Name of a built-in object asset. Required when kind is "object"; ignored otherwise.
-    /// Available assets: "shopping_basket".
+    /// Available assets: the bundled library pictures listed in the enum (e.g. "shopping_basket",
+    /// "golden_nest_egg", "flag_japan").
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub asset: Option<String>,
 }
